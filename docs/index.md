@@ -2,7 +2,7 @@
 
 Documentação do projeto final da disciplina **FGA0315 - Qualidade de Software 1** (2026/2, Turma T02, Profa. Cristiane Ramos), seguindo o processo de avaliação de produto da família ISO/IEC 25000 (SQuaRE).
 
-**Software avaliado:** [No Fluxo UnB](https://no-fluxo.crianex.com)
+**Software avaliado:** [No Fluxo UnB](https://no-fluxo.crianex.com) ([código-fonte](https://github.com/unb-mds/2025-1-NoFluxoUnB), GPL-3.0)
 
 **Repositório da equipe:** [FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET)
 
@@ -34,3 +34,5 @@ As Fases 2 (especificação da avaliação), 3 (projeto da avaliação) e 4 (exe
 A lista completa de integrantes está no [README do repositório](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET#equipe).
 
 ---
+
+*Versão: v0.1 (Fase 1 em elaboração) | Última atualização: 15/10/2026*

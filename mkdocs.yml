@@ -17,6 +17,10 @@ nav:
     - ODS: fase1/ODS.md
     - Uso de IA: fase1/usoDeIA.md
     - Referências: fase1/referencias.md
+  
+  - Gestão do Projeto:
+    - Visão Geral: gestaoProjeto/psm-cid.md
+
 
 theme:
   name: material

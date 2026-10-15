@@ -26,7 +26,7 @@ graph LR
     C3 --> S31[Subcaracterística 3.1]
 ```
 
-*Figura 2 - Modelo de qualidade adaptado. Fonte: elaboração da equipe, com base na ISO/IEC 25010.*
+*Figura 5 - Modelo de qualidade adaptado. Fonte: elaboração da equipe, com base na ISO/IEC 25010.*
 
 A seleção e a priorização das características estão em [Características de Qualidade](caracteristicasDeQualidade.md).
 
@@ -36,5 +36,4 @@ A seleção e a priorização das características estão em [Características d
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [hash](URL-do-commit) |
-
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/tree/828688feb645eebfcd428e11b4b9f87585253b9b) |

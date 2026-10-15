@@ -41,5 +41,4 @@ Matriz **impacto x risco**: cada característica recebe nota de 1 a 5 em cada ei
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [hash](URL-do-commit) |
-
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/tree/828688feb645eebfcd428e11b4b9f87585253b9b) |

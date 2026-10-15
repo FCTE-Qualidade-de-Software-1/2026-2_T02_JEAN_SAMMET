@@ -2,7 +2,7 @@
 
 Documentação do projeto final da disciplina **FGA0315 - Qualidade de Software 1** (2026/2, Turma T02, Profa. Cristiane Ramos), seguindo o processo de avaliação de produto da família ISO/IEC 25000 (SQuaRE).
 
-**Software avaliado:** [NOME DO SOFTWARE](URL-do-repositorio-do-software)
+**Software avaliado:** [No Fluxo UnB](https://no-fluxo.crianex.com)
 
 **Repositório da equipe:** [FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET)
 
@@ -10,7 +10,7 @@ Documentação do projeto final da disciplina **FGA0315 - Qualidade de Software 
 
 ## Resumo do projeto
 
-[2 a 3 frases para um leitor externo: qual software está sendo avaliado, por que, e o que a equipe pretende entregar.]
+O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o fluxograma do curso e a planejar a formatura a partir do histórico acadêmico. A equipe avalia a qualidade da funcionalidade "Planejar formatura", que indica o semestre previsto de formatura, as matérias críticas e a sequência de disciplinas, e entregará recomendações e ao menos uma ação de melhoria.
 
 ## Fase 1 - Estabelecer os requisitos da avaliação
 
@@ -34,5 +34,3 @@ As Fases 2 (especificação da avaliação), 3 (projeto da avaliação) e 4 (exe
 A lista completa de integrantes está no [README do repositório](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET#equipe).
 
 ---
-
-*Versão: v0.1 (Fase 1 em elaboração) | Última atualização: 15/10/2026*

@@ -34,7 +34,7 @@ Projeto final de FGA0315 - Qualidade de Software 1 (2026/2, T02).
     <td align="center" width="150px">
       <img src="https://github.com/VitorlagesNA.png" width="100px" alt="Vitor Lages Nogueira Araújo"/><br />
       <a href="https://github.com/VitorlagesNA"><b>242025054</b></a><br />
-      <a href="https://github.com/VitorlagesNA">Victor Leandro Rocha de Assis</a>
+      <a href="https://github.com/VitorlagesNA">Vitor Lages Nogueira Araújo</a>
     </td>
   </tr>
 </table>

@@ -1,18 +1,25 @@
 repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET
 repo_name: Jean Sammet
 
-site_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/
+site_url: https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/
 site_name: Jean Sammet
 site_description: Documentação Grupo 5 Jean Sammet
 site_author: Grupo 05
 
 nav:
-  - Home: index.md
+  - Início: index.md
+  - Fase 1:
+    - Propósito e Stakeholders: fase1/propositoEStakeholders.md
+    - Software Escolhido: fase1/softwareEscolhido.md
+    - Modelo de Qualidade: fase1/modeloDeQualidade.md
+    - Características de Qualidade: fase1/caracteristicasDeQualidade.md
+    - Escopo: fase1/escopo.md
+    - ODS: fase1/ODS.md
+    - Uso de IA: fase1/usoDeIA.md
+    - Referências: fase1/referencias.md
 
 theme:
   name: material
-  logo: 00_assets/imagens/logo_1.png
-  favicon: 00_assets/imagens/logo_2.png
   features:
     - navigation.instant
     - navigation.tabs

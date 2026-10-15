@@ -1,3 +1,7 @@
+# Jean Sammet - Avaliação da Qualidade de Produto de Software
+
+Projeto final de FGA0315 - Qualidade de Software 1 (2026/2, T02).
+
 ## Equipe
 
 <table>

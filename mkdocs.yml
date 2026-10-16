@@ -8,21 +8,25 @@ site_author: Grupo 05
 
 nav:
   - Início: index.md
-  - Fase 1:
-    - Propósito e Stakeholders: fase1/propositoEStakeholders.md
-    - Software Escolhido: fase1/softwareEscolhido.md
-    - Modelo de Qualidade: fase1/modeloDeQualidade.md
-    - Características de Qualidade: fase1/caracteristicasDeQualidade.md
-    - Escopo: fase1/escopo.md
-    - ODS: fase1/ODS.md
-    - Uso de IA: fase1/usoDeIA.md
-    - Referências: fase1/referencias.md
-  
-  - Fase 2:
-    - Métricas Operacionais: fase2/metricasOperacionais.md
-  
+  - Fases:
+    - Fase 1:
+        - Propósito e Stakeholders: fases/fase1/propositoEStakeholders.md
+        - Software Escolhido: fases/fase1/softwareEscolhido.md
+        - Modelo de Qualidade: fases/fase1/modeloDeQualidade.md
+        - Características de Qualidade: fases/fase1/caracteristicasDeQualidade.md
+        - Escopo: fases/fase1/escopo.md
+        - ODS: fases/fase1/ODS.md
+        - Uso de IA: fases/fase1/usoDeIA.md
+    - Fase 2:
+        - Métricas Operacionais: fases/fase2/metricasOperacionais.md
   - Gestão do Projeto:
-    - Visão Geral: gestaoProjeto/psm-cid.md
+      - Visão Geral: gestaoProjeto/psm-cid.md
+  - Equipe: equipe/equipe.md
+  - Uso de IA: usoDeIA/usoDeIA.md
+  - Referências: 
+    - Fase 1: referencias/fase1.md
+    - Fase 2: referencias/fase2.md
+    - Organização: referencias/psm.md
 
 
 theme:

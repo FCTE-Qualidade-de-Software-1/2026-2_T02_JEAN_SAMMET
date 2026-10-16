@@ -18,6 +18,9 @@ nav:
     - Uso de IA: fase1/usoDeIA.md
     - Referências: fase1/referencias.md
   
+  - Fase 2:
+    - Métricas Operacionais: fase2/metricasOperacionais.md
+  
   - Gestão do Projeto:
     - Visão Geral: gestaoProjeto/psm-cid.md
 

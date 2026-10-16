@@ -1,0 +1,14 @@
+# Python / Virtualenv
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+
+# MkDocs build output
+site/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -33,17 +33,9 @@ Esta seção estabelece a conexão do projeto com a Agenda 2030 da Organização
   * Desempenho, escalabilidade e tempo de resposta da interface web.
 * **Pertinência ao Software:** A aplicação de boas práticas de engenharia de software e arquiteturas modernas promove a inovação digital e consolida uma infraestrutura tecnológica eficiente, estável e resiliente.
 
-## 3. Referências
-
-1. **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU)**. *Sobre o nosso trabalho para alcançar os Objetivos de Desenvolvimento Sustentável*. Brasília: ONU Brasil, 2015. Disponível em: <https://brasil.un.org/pt-br/sdgs>. Acesso em: 16 out. 2026.
-2. **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU)**. *Objetivo 4: Educação de qualidade*. Disponível em: <https://brasil.un.org/pt-br/sdgs/4>. Acesso em: 16 out. 2026.
-3. **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU)**. *Objetivo 9: Indústria, inovação e infraestrutura*. Disponível em: <https://brasil.un.org/pt-br/sdgs/9>. Acesso em: 16 out. 2026.
-4. **ORGANIZAÇÃO DAS NAÇÕES UNIDAS (ONU)**. *Objetivo 11: Cidades e comunidades sustentáveis*. Disponível em: <https://brasil.un.org/pt-br/sdgs/11>. Acesso em: 16 out. 2026.
-
-
 ## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Adicionando 2 ODSs | 16/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Adicionando 2 ODSs | 16/10 | [755c71b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/755c71b53dd286fc04ae51b4d6c55bfdbc8231b0) |

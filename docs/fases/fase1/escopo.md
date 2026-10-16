@@ -44,4 +44,4 @@
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Detalhamento do escopo operacional, exclusões, limites e premissas | 16/10 | [c7a20ef](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/c7a20ef) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Detalhamento do escopo operacional, exclusões, limites e premissas | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |

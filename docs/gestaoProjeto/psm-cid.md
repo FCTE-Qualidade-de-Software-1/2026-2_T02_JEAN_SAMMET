@@ -86,19 +86,22 @@ O acompanhamento do projeto utiliza dados do repositório Git para observar a ev
 A tabela a seguir apresenta a amostragem das Issues cadastradas no repositório para a execução da Fase 1, fornecendo os dados brutos utilizados no cálculo do tempo de ciclo médio de resolução (LT<sub>médio</sub>) e na verificação da distribuição de tarefas (DTI).
 
 | ID da Issue | Título da Tarefa | Atribuído a | Estado | Data de Abertura | Data de Conclusão |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| #1 | [Título da Tarefa 1] | [Nome do Integrante A] | [Concluída / Em andamento] | [DD/MM/AAAA] | [DD/MM/AAAA ou -] |
-| #2 | [Título da Tarefa 2] | [Nome do Integrante B] | [Concluída / Em andamento] | [DD/MM/AAAA] | [DD/MM/AAAA ou -] |
-| #3 | [Título da Tarefa 3] | [Nome do Integrante C] | [Concluída / Em andamento] | [DD/MM/AAAA] | [DD/MM/AAAA ou -] |
-| #4 | [Título da Tarefa 4] | [Nome do Integrante D] | [Concluída / Em andamento] | [DD/MM/AAAA] | [DD/MM/AAAA ou -] |
+| --- | --- | --- | --- | --- | --- |
+| **#1** | Introdução e Referencial Teórico | Yasmin e Gustavo | Concluída | 15/10/2026 | 18/10/2026 |
+| **#2** | Objetivos, Questões e Métricas (GQM) | Gabriel e Giovani| Em andamento | 15/10/2026 | - |
+| **#3** | Gráfico Hierárquico GQM | Gabriel e Giovani| Aberta | 15/10/2026 | - |
+| **#4** | Configurar Gestão PSM/CID | Ana Beatriz e Victor | Em andamento | 15/10/2026 | - |
+| **#5** | Estruturar GitPage | Yasmin e Gustavo | Em andamento | 15/10/2026 | - |
+| **#6** | Compilar 1ª Versão em LaTeX | Ana Beatriz e Victor | Em andamento | 15/10/2025 | - |
+
 
 ### 4.2. Milestones
 
 O acompanhamento dos marcos do projeto é realizado diretamente na infraestrutura do repositório Git:
 
-- **Milestone Ativo:** [Link direto para o Milestone E1 no GitHub/GitLab]
-- **Prazo Limite do Marco:** [DD/MM/AAAA]
-- **Status do Progresso:** [X] de [Y] Issues concluídas (TCT = [Z]%).
+- **Milestone Ativo:** Milestone 1 (Fase 1 — Definição e Caracterização)
+- **Prazo Limite do Marco:** 18/10/2026
+- **Status do Progresso:** 1 de 6 Issues concluídas (TCT = 16,67%).
 
 ### 4.3. Burndown
 

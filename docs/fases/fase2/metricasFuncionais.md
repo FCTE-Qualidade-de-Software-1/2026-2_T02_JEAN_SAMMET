@@ -1,8 +1,8 @@
-# Especificação da Avaliação — Métricas Funcionais (Pessoa 1)
+# Especificação da Avaliação — Métricas Funcionais
 
 Este documento especifica as perguntas e métricas de **adequação funcional** para avaliar a funcionalidade _Planejar formatura_ do No Fluxo UnB, com foco no Motor 2. A avaliação procura verificar se os planos gerados são coerentes com o histórico do aluno e com as regras acadêmicas aplicáveis, sem tratar limitações documentadas como defeitos antes da execução dos testes.
 
-A estrutura segue o método **Goal-Question-Metric (GQM)** e complementa as métricas operacionais descritas em [`metricasOperacionais.md`](metricasOperacionais.md).
+A estrutura segue o método **Goal-Question-Metric (GQM)** e complementa as métricas operacionais descritas em [`Metricas Operacionais`](metricasOperacionais.md).
 
 ## 1. Contexto da avaliação
 
@@ -261,4 +261,4 @@ Todos os casos devem usar históricos sintéticos. A equipe deve guardar a vers�
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gabriel Mota](https://github.com/Gabro-MO) | Elaboração inicial das perguntas GQM, fichas de métricas funcionais e protocolo de cenários de teste. | 16/10/2026 | []() |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Elaboração inicial das perguntas GQM, fichas de métricas funcionais e protocolo de cenários de teste. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |

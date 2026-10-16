@@ -1,4 +1,3 @@
-
 # Recursos e Custos
 
 ## 1. Objetivo
@@ -30,3 +29,7 @@ Neste projeto, a análise utiliza a quantidade de Issues atribuídas a cada inte
 ## 4. Acompanhamento
 
 A distribuição das tarefas deve ser analisada com base nas Issues e em seus responsáveis. Os dados disponíveis e o estado atual das atividades podem ser consultados na página [Acompanhamento do Projeto](acompanhamento.md).
+
+| Nome do Membro | Contribuição | Data | Commit |
+| :--- | :--- | :--- | :--- |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |

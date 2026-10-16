@@ -16,4 +16,4 @@
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Referencias | 16/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Referencias | 16/10 | [2b37ced](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2b37ced72e456281e01f064c4b83ef9681fe1eeb) |

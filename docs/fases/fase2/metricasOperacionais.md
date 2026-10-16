@@ -175,7 +175,7 @@ Toda sessão de medição deve ser precedida pelo registro do ambiente de execu�
 
 ## 5. Integração com a Pessoa 1 (Qualidade Funcional)
 
-A validade da avaliação da funcionalidade *Planejar formatura* depende do cruzamento contínuo entre as métricas funcionais (Pessoa 1) e operacionais (Pessoa 2):
+A validade da avaliação da funcionalidade *Planejar formatura* depende do cruzamento contínuo entre as métricas funcionais e operacionais:
 
 | Situação de Cruzamento | O que Significa | Ação Decorrente |
 | :--- | :--- | :--- |
@@ -183,14 +183,10 @@ A validade da avaliação da funcionalidade *Planejar formatura* depende do cruz
 | **Alta Usabilidade + Plano Incorreto** | O aluno confia na interface atraente e na facilidade de navegação, mas recebe um plano que atrasará sua formatura. | Risco gravíssimo aos estudantes. Necessidade de alertas explícitos de validação até que o Motor 2 seja corrigido. |
 | **Baixa Cobertura de Testes + Regras Complexas** | O Motor 2 tem regras intrincadas de pré-requisitos, mas não possui testes unitários suficientes para validar todos os casos de borda. | Orienta diretamente a equipe na Entrega 2 a criar testes automatizados e refatorar o serviço antes de propor alterações. |
 
-A cadeia completa:
-$$\text{Objetivo GQM} \longrightarrow \text{Perguntas} \longrightarrow \text{Métricas} \longrightarrow \text{Dados Coletados} \longrightarrow \text{Interpretação e Decisão}$$
-assegura conformidade irrestrita com a norma ISO/IEC 25040 e os critérios acadêmicos do projeto.
-
 ---
 
 ## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração das perguntas GQM operacionais, fichas completas das métricas e protocolo de teste | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração das perguntas GQM operacionais, fichas completas das métricas e protocolo de teste | 16/10 | [f8219c0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f8219c0) |

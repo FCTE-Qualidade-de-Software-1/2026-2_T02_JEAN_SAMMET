@@ -24,6 +24,10 @@ nav:
     - Recursos e Custos: gestaoProjeto/recursos-custos.md
     - Desempenho do Processo: gestaoProjeto/desempenho-processo.md
     - Acompanhamento: gestaoProjeto/acompanhamento.md
+  - Critérios:
+    - Premissas Iniciais: criterios/premissasIniciais.md
+    - Fase 1: criterios/fase1.md
+    - Fase 2: criterios/fase2.md
   - Equipe: equipe/equipe.md
   - Uso de IA:
     - Fase 1: usoDeIA/fase1.md

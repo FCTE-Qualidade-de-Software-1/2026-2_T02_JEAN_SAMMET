@@ -124,7 +124,7 @@ Toda sessão de medição deve ser precedida pelo registro do ambiente de execu�
 | **Navegador e Versão** | Google Chrome v129.x (64 bits) |
 | **Resolução de Tela** | 1920 × 1080 (Full HD) em tela maximizada |
 | **Conexão de Rede** | Banda larga fixa (informar velocidade e latência média via ping) |
-| **Responsável pela Coleta** | Pessoa 2 (Artur Fernandes Galdino) |
+| **Responsável pela Coleta** | Pessoa 2 (Giovani De Oliveira Teodoro Coelho) |
 
 ### 4.2 Protocolo para Coleta de Usabilidade (MET-OP-01)
 
@@ -193,4 +193,4 @@ assegura conformidade irrestrita com a norma ISO/IEC 25040 e os critérios acad�
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Artur Fernandes Galdino](https://github.com/Gotc2607) | Elaboração das perguntas GQM operacionais, fichas completas das métricas e protocolo de teste | 16/10 | [f8219c0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f8219c0) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração das perguntas GQM operacionais, fichas completas das métricas e protocolo de teste | 16/10 | [f8219c0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f8219c0) |

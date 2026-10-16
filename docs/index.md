@@ -16,21 +16,26 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 
 | Tema | Página |
 | :--- | :--- |
-| Propósito, requisitante e partes interessadas | [Propósito e Stakeholders](fase1/propositoEStakeholders.md) |
-| Tipo de produto e descrição do software | [Software Escolhido](fase1/softwareEscolhido.md) |
-| Modelo de qualidade e diagrama | [Modelo de Qualidade](fase1/modeloDeQualidade.md) |
-| Seleção e priorização das características | [Características de Qualidade](fase1/caracteristicasDeQualidade.md) |
-| Escopo, profundidade e objetos | [Escopo](fase1/escopo.md) |
-| ODS, metas e indicadores | [ODS](fase1/ODS.md) |
-| Declaração de uso de IA | [Uso de IA](fase1/usoDeIA.md) |
-| Referências | [Referências](fase1/referencias.md) |
+| Propósito, requisitante e partes interessadas | [Propósito e Stakeholders](fases/fase1/propositoEStakeholders.md) |
+| Tipo de produto e descrição do software | [Software Escolhido](fases/fase1/softwareEscolhido.md) |
+| Modelo de qualidade e diagrama | [Modelo de Qualidade](fases/fase1/modeloDeQualidade.md) |
+| Seleção e priorização das características | [Características de Qualidade](fases/fase1/caracteristicasDeQualidade.md) |
+| Escopo, profundidade e objetos | [Escopo](fases/fase1/escopo.md) |
+| ODS, metas e indicadores | [ODS](fases/fase1/ODS.md) |
+| Declaração de uso de IA | [Uso de IA](usoDeIA/fase1.md) |
+| Referências | [Referências](referencias/fase1.md) |
 
 ## Fase 2 - Especificar a avaliação (GQM)
 
 | Tema | Página |
 | :--- | :--- |
-| Métricas Operacionais (Usabilidade, Desempenho e Manutenibilidade) | [Métricas Operacionais](fase2/metricasOperacionais.md) |
-| Métricas Funcionais (Adequação Funcional e Regras Acadêmicas) | *Em elaboração pela Pessoa 1* |
+| Métricas Funcionais (Adequação Funcional e Regras Acadêmicas) | [Métricas Funcionais](fases/fase2/metricasFuncionais.md) |
+| Métricas Operacionais (Usabilidade, Desempenho e Manutenibilidade) | [Métricas Operacionais](fases/fase2/metricasOperacionais.md) |
+| ↳ Visão Geral e Estrutura GQM | [Visão Geral](fases/fase2/operacionais/visaoGeral.md) |
+| ↳ Usabilidade | [Usabilidade](fases/fase2/operacionais/usabilidade.md) |
+| ↳ Eficiência de Desempenho | [Eficiência de Desempenho](fases/fase2/operacionais/desempenho.md) |
+| ↳ Manutenibilidade | [Manutenibilidade](fases/fase2/operacionais/manutenibilidade.md) |
+| ↳ Protocolo de Coleta e Teste | [Protocolo de Coleta e Teste](fases/fase2/operacionais/protocolo.md) |
 
 ## Fases seguintes
 

@@ -42,4 +42,6 @@ A lista completa de integrantes está no [README do repositório](https://github
 
 ---
 
-*Versão: v0.1 (Fase 1 em elaboração) | Última atualização: 15/10/2026*
+## Histórico de versão
+
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Uso de IA | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |

@@ -19,13 +19,17 @@ nav:
     - Fase 2:
         - Métricas Operacionais: fases/fase2/metricasOperacionais.md
   - Gestão do Projeto:
-      - Visão Geral: gestaoProjeto/psm-cid.md
+    - Visão Geral: gestaoProjeto/psm-cid.md
+    - Calendário e Progresso: gestaoProjeto/calendario-progresso.md
+    - Recursos e Custos: gestaoProjeto/recursos-custos.md
+    - Desempenho do Processo: gestaoProjeto/desempenho-processo.md
+    - Acompanhamento: gestaoProjeto/acompanhamento.md
   - Equipe: equipe/equipe.md
   - Uso de IA:
     - Fase 1: usoDeIA/fase1.md
     - Fase 2: usoDeIA/fase2.md
-    - psm: usoDeIA/psm.md
-  - Referências: 
+    - PSM: usoDeIA/psm.md
+  - Referências:
     - Fase 1: referencias/fase1.md
     - Fase 2: referencias/fase2.md
     - Organização: referencias/psm.md

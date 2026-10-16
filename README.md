@@ -12,9 +12,9 @@ Projeto final de FGA0315 - Qualidade de Software 1 (2026/2, T02).
       <a href="https://github.com/AnnaBeatrizAraujo">Ana Beatriz Souza Araujo</a>
     </td>
     <td align="center" width="150px">
-      <img src="https://github.com/Gotc2607.png" width="100px" alt="Artur Fernandes Galdino"/><br />
-      <a href="https://github.com/Gotc2607"><b>241010923</b></a><br />
-      <a href="https://github.com/Gotc2607">Artur Fernandes Galdino</a>
+      <img src="https://github.com/Gotc2607.png" width="100px" alt="Giovani De Oliveira Teodoro Coelho"/><br />
+      <a href="https://github.com/Gotc2607"><b>241032500</b></a><br />
+      <a href="https://github.com/Gotc2607">Giovani De Oliveira Teodoro Coelho</a>
     </td>
     <td align="center" width="150px">
       <img src="https://github.com/eii-yahs.png" width="100px" alt="Yasmim de Souza Santos"/><br />

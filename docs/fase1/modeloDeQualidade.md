@@ -4,31 +4,46 @@
 
 ## 1. Modelo base
 
-Modelo de qualidade de produto da ISO/IEC 25010 (SQuaRE). [Informar a versão utilizada: 2011 ou 2023.]
+O modelo adotado como referência é o **Modelo de Qualidade de Produto da norma ISO/IEC 25010:2011 (SQuaRE)**, complementado pelas definições métricas da **ISO/IEC 25023:2016**. A norma estrutura a qualidade interna e externa em características e subcaracterísticas mensuráveis.
 
 ## 2. Adaptações ao software
 
+Para a avaliação da funcionalidade **Planejar formatura** do No Fluxo UnB, o modelo geral foi adaptado com base no propósito da ferramenta, nos perfis de estudantes e nas necessidades dos mantenedores:
+
 | Elemento do modelo | Adaptação | Justificativa (contexto / stakeholder) |
 | :--- | :--- | :--- |
-| [característica ou subcaracterística] | [mantida / removida / renomeada / detalhada] | [por quê] |
-| [...] | [...] | [...] |
+| **Adequação funcional** | Mantida com foco em **Completude funcional** e **Correção funcional** | O núcleo do software é gerar um plano academicamente válido. Incorreções em pré-requisitos, co-requisitos ou disciplinas faltantes inviabilizam a utilidade para o estudante. |
+| **Usabilidade** | Mantida com foco em **Apreensibilidade (Learnability)** e **Operabilidade (Operability)** | A interface apresenta grafos interativos de alta densidade cognitiva. O estudante precisa conseguir localizar sua previsão de formatura e entender as matérias críticas sem suporte humano. |
+| **Eficiência de desempenho** | Mantida com foco em **Comportamento temporal (Time behaviour)** | A geração do plano não pode gerar tempos excessivos de espera na requisição à API ou travamentos na renderização do grafo de disciplinas no navegador. |
+| **Manutenibilidade** | Mantida com foco em **Testabilidade (Testability)** e **Modularidade** | Como projeto open-source e base para as melhorias da equipe na disciplina, a capacidade de testar e alterar o algoritmo do Motor 2 de forma isolada é essencial para os desenvolvedores. |
+| **Confiabilidade** | Removida do escopo prioritário | Falhas lógicas de geração de planos são tratadas diretamente como não conformidades funcionais (adequação funcional). |
+| **Segurança** | Removida do escopo de testes diretos | Autenticação e dados delegados ao Supabase; restrições contratuais impedem testes intrusivos. Privacidade é tratada via premissa de dados sintéticos. |
+| **Compatibilidade e Portabilidade** | Removidas do escopo prioritário | Foco estabelecido na versão desktop (navegadores modernos) devido a restrições de prazo e relevância. |
 
 ## 3. Representação gráfica
 
 ```mermaid
-graph LR
-    M[Modelo de Qualidade do Produto] --> C1[Característica 1]
-    M --> C2[Característica 2]
-    M --> C3[Característica 3]
-    C1 --> S11[Subcaracterística 1.1]
-    C1 --> S12[Subcaracterística 1.2]
-    C2 --> S21[Subcaracterística 2.1]
-    C3 --> S31[Subcaracterística 3.1]
+graph TD
+    M["Modelo de Qualidade do Produto (ISO/IEC 25010 adaptado)"] --> C1["Adequação Funcional"]
+    M --> C2["Usabilidade"]
+    M --> C3["Eficiência de Desempenho"]
+    M --> C4["Manutenibilidade"]
+    
+    C1 --> S11["Completude Funcional<br/>(Disciplinas obrigatórias contempladas)"]
+    C1 --> S12["Correção Funcional<br/>(Conformidade com pré/co-requisitos)"]
+    
+    C2 --> S21["Apreensibilidade<br/>(Interpretação da previsão e matérias críticas)"]
+    C2 --> S22["Operabilidade<br/>(Taxa de sucesso na execução de tarefas)"]
+    
+    C3 --> S31["Comportamento Temporal<br/>(Tempo de geração e renderização do plano)"]
+    
+    C4 --> S41["Testabilidade<br/>(Cobertura de testes automatizados do Motor 2)"]
+    C4 --> S42["Modularidade<br/>(Isolamento do serviço de planejamento)"]
 ```
 
-*Figura 6 - Modelo de qualidade adaptado. Fonte: elaboração da equipe, com base na ISO/IEC 25010.*
+*Figura 6 - Modelo de qualidade adaptado para a funcionalidade Planejar formatura. Fonte: elaboração da equipe, com base na ISO/IEC 25010.*
 
-A seleção e a priorização das características estão em [Características de Qualidade](caracteristicasDeQualidade.md).
+A seleção e a priorização detalhada das características estão em [Características de Qualidade](caracteristicasDeQualidade.md).
 
 ---
 
@@ -37,3 +52,4 @@ A seleção e a priorização das características estão em [Características d
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Definição das adaptações do modelo, subcaracterísticas e diagrama | 16/10 | [e48c91a](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e48c91a) |

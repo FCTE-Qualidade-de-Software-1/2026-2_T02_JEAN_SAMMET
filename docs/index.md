@@ -25,9 +25,16 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | Declaração de uso de IA | [Uso de IA](fase1/usoDeIA.md) |
 | Referências | [Referências](fase1/referencias.md) |
 
+## Fase 2 - Especificar a avaliação (GQM)
+
+| Tema | Página |
+| :--- | :--- |
+| Métricas Operacionais (Usabilidade, Desempenho e Manutenibilidade) | [Métricas Operacionais](fase2/metricasOperacionais.md) |
+| Métricas Funcionais (Adequação Funcional e Regras Acadêmicas) | *Em elaboração pela Pessoa 1* |
+
 ## Fases seguintes
 
-As Fases 2 (especificação da avaliação), 3 (projeto da avaliação) e 4 (execução e conclusão) serão publicadas neste site conforme forem concluídas.
+As Fases 3 (projeto da avaliação) e 4 (execução e conclusão) serão publicadas neste site conforme forem concluídas.
 
 ## Equipe
 

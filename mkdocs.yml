@@ -17,8 +17,14 @@ nav:
         - Escopo: fases/fase1/escopo.md
         - ODS: fases/fase1/ODS.md
     - Fase 2:
-        - Métricas Operacionais: fases/fase2/metricasOperacionais.md
         - Métricas Funcionais: fases/fase2/metricasFuncionais.md
+        - Métricas Operacionais:
+            - Sumário: fases/fase2/metricasOperacionais.md
+            - Visão Geral (GQM): fases/fase2/operacionais/visaoGeral.md
+            - Usabilidade: fases/fase2/operacionais/usabilidade.md
+            - Eficiência de Desempenho: fases/fase2/operacionais/desempenho.md
+            - Manutenibilidade: fases/fase2/operacionais/manutenibilidade.md
+            - Protocolo de Coleta e Teste: fases/fase2/operacionais/protocolo.md
 
   - Gestão do Projeto:
     - Visão Geral: gestaoProjeto/psm-cid.md

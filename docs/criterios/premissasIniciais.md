@@ -28,4 +28,4 @@
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da página de critérios | 16/10 | [hash](URL-do-commit) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da página de critérios | 16/10 | [353f46e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/353f46ecd1a408d3474ea0dfa157aba62daabd70) |

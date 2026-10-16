@@ -193,4 +193,4 @@ assegura conformidade irrestrita com a norma ISO/IEC 25040 e os critérios acad�
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração das perguntas GQM operacionais, fichas completas das métricas e protocolo de teste | 16/10 | [f8219c0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f8219c0) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração das perguntas GQM operacionais, fichas completas das métricas e protocolo de teste | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |

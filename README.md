@@ -8,7 +8,7 @@ Projeto final de FGA0315 - Qualidade de Software 1 (2026/2, T02).
   <tr>
     <td align="center" width="150px">
       <img src="https://github.com/AnnaBeatrizAraujo.png" width="100px" alt="Ana Beatriz Souza Araujo"/><br />
-      <a href="https://github.com/AnnaBeatrizAraujo"><b>2410125891</b></a><br />
+      <a href="https://github.com/AnnaBeatrizAraujo"><b>241025891</b></a><br />
       <a href="https://github.com/AnnaBeatrizAraujo">Ana Beatriz Souza Araujo</a>
     </td>
     <td align="center" width="150px">

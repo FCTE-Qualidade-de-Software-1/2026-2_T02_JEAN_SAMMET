@@ -112,3 +112,10 @@ O acompanhamento dos marcos do projeto é realizado diretamente na infraestrutur
 ## 5. Considerações Finais
 
 A especificação e o acompanhamento das métricas têm como finalidade apoiar a equipe no monitoramento do projeto e na identificação de oportunidades de melhoria. Os resultados observados deverão ser interpretados considerando o planejamento, o contexto e as limitações dos dados coletados.
+
+## Histórico de versão
+
+| Nome do Membro | Contribuição | Data | Commit |
+| :--- | :--- | :--- | :--- |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da pagina de Gessão do Projeto | 15/10 | [2802ef9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2802ef9469c1cff7f5ce41cc6c2f11972e9caac1) |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualizacao da pagina | 15/10 | [e2f479f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e2f479f359f3d6d70d4b4e3ddc55e29e50edb7d4) |

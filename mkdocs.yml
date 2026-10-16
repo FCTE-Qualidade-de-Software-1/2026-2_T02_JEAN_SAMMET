@@ -18,6 +18,8 @@ nav:
         - ODS: fases/fase1/ODS.md
     - Fase 2:
         - Métricas Operacionais: fases/fase2/metricasOperacionais.md
+        - Métricas Funcionais: fases/fase2/metricasFuncionais.md
+
   - Gestão do Projeto:
     - Visão Geral: gestaoProjeto/psm-cid.md
     - Calendário e Progresso: gestaoProjeto/calendario-progresso.md

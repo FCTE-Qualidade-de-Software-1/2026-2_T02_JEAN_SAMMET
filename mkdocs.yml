@@ -22,7 +22,10 @@ nav:
   - Gestão do Projeto:
       - Visão Geral: gestaoProjeto/psm-cid.md
   - Equipe: equipe/equipe.md
-  - Uso de IA: usoDeIA/usoDeIA.md
+  - Uso de IA:
+    - Fase 1: usoDeIA/fase1.md
+    - Fase 2: usoDeIA/fase2.md
+    - psm: usoDeIA/psm.md
   - Referências: 
     - Fase 1: referencias/fase1.md
     - Fase 2: referencias/fase2.md

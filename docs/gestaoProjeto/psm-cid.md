@@ -1,4 +1,3 @@
-
 # Gestão do Projeto
 
 ## 1. Introdução
@@ -26,3 +25,7 @@ Os dados utilizados nas medições são obtidos do repositório Git e devem ser 
 A equipe utilizou o modelo de inteligência artificial Gemini exclusivamente para auxílio na estruturação formal das tabelas dos Modelos de Informação do PSM/CID e para revisão gramatical da documentação.
 
 Todas as equações, definições conceituais, delimitações de população e critérios de decisão foram revisados, corrigidos e validados diretamente pelos integrantes do grupo para garantir total conformidade com o contexto do projeto.
+
+| Nome do Membro | Contribuição | Data | Commit |
+| :--- | :--- | :--- | :--- |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |

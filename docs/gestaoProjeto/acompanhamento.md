@@ -1,4 +1,3 @@
-
 # Acompanhamento do Projeto
 
 ## 1. Introdução

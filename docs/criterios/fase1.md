@@ -4,10 +4,10 @@
 | :--- | :--- | :--- | :--- |
 | F1-C1 | Propósito da avaliação e uso pretendido | Explicar por que avaliar, para quem e como os resultados apoiarão decisões específicas, identificando quem as tomará. | **Concluído** |
 | F1-C2 | Requisitante e partes interessadas | Mapear as partes interessadas, suas necessidades e critérios de sucesso, mostrando como influenciam as escolhas da avaliação. | **Concluído** |
-| F1-C3 | Tipo de produto e descrição estruturada | Descrever o tipo de produto, os principais módulos e suas relações, com diagrama de contexto/arquitetura e implicações para o que pode ser medido. | **Parcial** — os componentes e os limites estão descritos, mas a página do software não apresenta os diagramas de contexto e arquitetura. |
+| F1-C3 | Tipo de produto e descrição estruturada | Descrever o tipo de produto, os principais módulos e suas relações, com diagrama de contexto/arquitetura e implicações para o que pode ser medido. | **Concluído** |
 | F1-C4 | Modelo de qualidade | Justificar a adaptação do modelo ao contexto e aos stakeholders, com diagrama legível ligado às subcaracterísticas. | **Concluído** |
 | F1-C5 | Seleção e priorização de características | Justificar a escolha de 2 a 4 características por um método explícito de priorização e discutir trade-offs. | **Concluído** |
-| F1-C6 | Escopo, profundidade e objetos de avaliação | Delimitar o que será avaliado e excluído, justificando os cortes e explicando os limites de validade dos resultados. | **Parcial** — o fluxo de três etapas, o foco em “Planejar formatura” e os limites estão definidos; falta justificar individualmente algumas exclusões para atender plenamente ao nível excelente. |
+| F1-C6 | Escopo, profundidade e objetos de avaliação | Delimitar o que será avaliado e excluído, justificando os cortes e explicando os limites de validade dos resultados. | **Concluído** |
 | F1-C7 | ODS, metas e indicadores | Relacionar o projeto a ODS e metas pertinentes, explicando a relação e distinguindo indicadores oficiais de indicadores internos. | **Concluído** |
 | F1-C8 | Organização lógica do relatório | Ter navegação e hierarquia consistentes, narrativa clara e referências cruzadas úteis. | **Concluído** |
 | F1-C9 | Português, estilo e padronização | Apresentar redação revisada, referências completas e corretas e figuras/tabelas numeradas, legendadas, citadas e com fonte. | **Concluído** |

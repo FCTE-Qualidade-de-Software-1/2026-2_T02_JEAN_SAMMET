@@ -1,41 +1,38 @@
-# Escopo, Profundidade e Objetos de Avaliação
+# Escopo da Avaliação
 
-<!-- Critério 6. Nível máximo: racional para cada corte + limites de validade dos resultados. -->
+A avaliação se concentrará no fluxo de planejamento de formatura do No Fluxo UnB, composto por três etapas:
 
-## 1. O que será avaliado agora
+1. **Enviar o histórico (Figura 1):** o estudante envia o PDF do histórico oficial da UnB ou preenche os dados manualmente.
+2. **Visualizar o fluxograma (Figura 2):** o sistema apresenta a matriz curricular e indica a situação das disciplinas já cursadas e das que faltam.
+3. **Planejar formatura (Figura 3):** ao clicar em **“Planejar formatura”**, o sistema gera uma sequência de disciplinas prevista até a formatura. **Esta tela é o objeto central da avaliação.**
 
-| Objeto de avaliação | Característica relacionada | Profundidade |
-| :--- | :--- | :--- |
-| Interface da tela "Planejar formatura" (Frontend SvelteKit, rota `/plano-formatura`, onboarding e grafo de disciplinas) | Usabilidade (Apreensibilidade e Operabilidade) | Testes com participantes baseados em tarefas pré-definidas, gravação de sessão e registro de taxa de sucesso e erros. |
-| Requisição e renderização da geração do plano (`POST /planejamento/gerar-plano` e montagem do grafo no DOM) | Eficiência de Desempenho (Comportamento temporal) | Medição automatizada/semi-automatizada do tempo de resposta de rede e tempo de renderização no navegador com DevTools. |
-| Módulo do algoritmo de planejamento — Motor 2 (`backend/src/services/plano_formatura.service.ts`) | Manutenibilidade (Testabilidade) e Adequação Funcional | Análise estática, execução da suíte de testes automatizados com ferramenta de instrumentação e relatório de cobertura de código (ramificações e linhas). |
-| Regras de ordenação, pré-requisitos, co-requisitos e cobertura de disciplinas obrigatórias do plano | Adequação Funcional (Correção e Completude) | Execução de cenários de teste com históricos sintéticos confrontados com a matriz curricular oficial da UnB. |
+![Tela de importação do histórico, com área para enviar o PDF, botão para selecionar arquivo e opção de preenchimento manual](img/noFluxo_importar.png)
 
-## 2. O que fica fora
+*Figura 1 — Tela de importação do histórico. Fonte: captura de tela do No Fluxo UnB, outubro de 2026.*
 
-| Item excluído | Motivo |
-| :--- | :--- |
-| Testes de carga, estresse e volume em produção | A infraestrutura é mantida por terceiros e o backend impõe limite de 120 requisições por minuto por IP; testes volumosos poderiam degradar o serviço para usuários reais ou causar bloqueio do IP. |
-| Testes de segurança invasivos / penetração | Não autorizados pela mantenedora e pelos termos de uso dos provedores (Supabase e Crianex). Foco da avaliação restrito à qualidade em uso e qualidade interna do produto. |
-| Avaliação das respostas do assistente Darcy AI | Depende de chamadas externas pagas a modelos de linguagem (Maritaca e Google Gemini), sujeitas a cotas diárias e não-determinismo que inviabiliza testes reprodutíveis com baixo custo. |
-| Testes em múltiplos sistemas operacionais móveis (smartphones/tablets) | Restrição de cronograma e escopo; priorização do uso em ambiente desktop, onde o grafo interativo é prioritariamente manipulado. |
-| Históricos escolares reais de terceiros sem autorização formal | Conformidade com a Lei Geral de Proteção de Dados (LGPD); serão utilizados exclusivamente históricos sintéticos construídos pela equipe. |
+![Fluxograma do curso de Engenharia de Software, com a matriz curricular por semestre e disciplinas identificadas por situação](img/noFluxo_fluxograma.png)
 
-## 3. Limites de validade dos resultados
+*Figura 2 — Fluxograma da matriz curricular com a situação das disciplinas. Fonte: captura de tela do No Fluxo UnB, outubro de 2026.*
 
-1. **Ambiente de execução vs. Produção:** A medição de desempenho e a instrumentação de testes são realizadas em ambiente controlado (desktop local e requisições para a API em horários definidos). Variações de latência na nuvem, latência de rede externa e congestionamento momentâneo de provedores de banco de dados podem impactar os tempos observados em produção.
-2. **Amostragem de Usuários:** Os testes de usabilidade são realizados com uma amostra de conveniência de estudantes da UnB executando tarefas padronizadas. Conclusões sobre apreensibilidade são limitadas aos perfis representados na amostra.
-3. **Versão do Código:** A análise de manutenibilidade e cobertura de testes tem como referência estrita o commit `87b5475` do repositório público. A Crianex pode realizar atualizações em produção que não estejam refletidas imediatamente no branch principal do repositório público.
-4. **Matriz Curricular Alvo:** Os testes funcionais e operacionais concentram-se primariamente na matriz do curso de Engenharia de Software da FGA/UnB (matriz 6360/1). Embora os componentes do Motor 2 sejam genéricos, particularidades de regras de outros cursos não são generalizáveis a partir desta amostra.
+![Tela Planejar formatura, com previsão de formatura, semestres restantes, matérias críticas, créditos por semestre, aviso de optativas e grafo de disciplinas](img/noFluxo_planejarFormatura.png)
 
-## 4. Premissas
+*Figura 3 — Tela “Planejar formatura”. Fonte: captura de tela do No Fluxo UnB, outubro de 2026.*
 
-- **Ambiente de Hardware e Software dos Testes:**
-  - Sistema operacional: Linux / Windows / macOS em arquitetura x86_64/arm64.
-  - Navegador padrão: Google Chrome (versão estável mais recente) e Mozilla Firefox em resolução mínima de 1920×1080 (Full HD).
-  - Ambiente de desenvolvimento: Node.js versão 20.x e gerenciador de pacotes npm/pnpm para execução dos testes automatizados do repositório.
-- **Contas de Acesso:** Disponibilidade de contas de teste cadastradas no No Fluxo UnB para permitir a autenticação obrigatória da rota `/plano-formatura`.
-- **Dados de Entrada:** Históricos acadêmicos sintéticos em formato PDF (estruturados conforme o padrão gerado pelo SIGAA UnB) e dados manuais correspondentes, contendo diferentes situações curriculares (aluno iniciante, concluinte, com reprovações e com trancamentos).
+## Foco da avaliação
+
+| Característica | O que será avaliado |
+|---|---|
+| **Adequação Funcional** | Com históricos sintéticos e uma matriz curricular de referência, verificar se o plano gerado inclui as disciplinas esperadas e respeita as regras curriculares consideradas no teste. |
+| **Usabilidade** | Observar se estudantes conseguem gerar o plano e compreender a previsão de formatura, os semestres restantes, as matérias críticas e a distribuição das disciplinas. Registrar sucesso nas tarefas, erros e necessidade de ajuda. |
+| **Segurança** | Verificar de forma não invasiva o acesso ao fluxo e o tratamento observável do histórico enviado. Usar dados sintéticos, sem tentar invadir o sistema nem acessar dados de terceiros. |
+
+## Fora do escopo e limites
+
+Não serão realizados testes de penetração nem testes de carga na aplicação em produção. Também não será avaliada exaustivamente a matriz de todos os cursos, a experiência em todos os dispositivos ou a qualidade das respostas de ferramentas de IA.
+
+Os resultados funcionais valerão para os cenários e a matriz curricular testados. Os resultados de usabilidade descreverão apenas os participantes envolvidos. Verificações não invasivas de segurança não comprovam que o sistema esteja livre de vulnerabilidades.
+
+**Premissas:** serão usados históricos sintéticos; a equipe registrará a versão/data e o ambiente dos testes; e as verificações serão realizadas somente em funcionalidades e ambientes aos quais tenha acesso autorizado.
 
 ---
 
@@ -44,4 +41,4 @@
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Detalhamento do escopo operacional, exclusões, limites e premissas | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Detalhamento inicial do escopo operacional, exclusões, limites e premissas | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |

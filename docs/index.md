@@ -29,7 +29,7 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 
 | Tema | Página |
 | :--- | :--- |
-| Métricas Funcionais (Adequação Funcional e Regras Acadêmicas) | [Métricas Funcionais](fases/fase2/metricasFuncionais.md) |
+| Métricas Funcionais (Adequação Funcional e Regras Acadêmicas) | [Métricas Funcionais](fases/fase2/funcionais/visaoGeral.md) |
 | Métricas Operacionais (Usabilidade e Segurança) | [Métricas Operacionais](fases/fase2/metricasOperacionais.md) |
 | ↳ Visão Geral e Estrutura GQM | [Visão Geral](fases/fase2/operacionais/visaoGeral.md) |
 | ↳ Usabilidade | [Usabilidade](fases/fase2/operacionais/usabilidade.md) |

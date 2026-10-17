@@ -32,3 +32,4 @@ Esses indicadores descrevem a qualidade do software avaliado; não medem diretam
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Adicionando 2 ODSs | 16/10 | [755c71b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/755c71b53dd286fc04ae51b4d6c55bfdbc8231b0) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |

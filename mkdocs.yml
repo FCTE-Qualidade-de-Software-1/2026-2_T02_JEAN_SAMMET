@@ -17,7 +17,10 @@ nav:
         - Escopo: fases/fase1/escopo.md
         - ODS: fases/fase1/ODS.md
     - Fase 2:
-        - Métricas Funcionais: fases/fase2/metricasFuncionais.md
+        - Métricas Funcionais:
+            - Sumário: fases/fase2/visaoGeral.md
+            - Visão Geral (GQM): fases/fase2/funcionais/GQM.md
+            - Protocolo de Coleta e Teste: fases/fase2/funcionais/testes.md
         - Métricas Operacionais:
             - Sumário: fases/fase2/metricasOperacionais.md
             - Visão Geral (GQM): fases/fase2/operacionais/visaoGeral.md

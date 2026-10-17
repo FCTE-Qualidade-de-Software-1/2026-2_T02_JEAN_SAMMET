@@ -90,4 +90,4 @@ A avaliação de segurança orienta-se por normas consagradas:
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da especificação de segurança, fichas MET-OP-02, MET-OP-02b e MET-OP-02c e alinhamento com OWASP/LGPD | 16/10 | [91b3fa1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/91b3fa1) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da especificação de segurança, fichas MET-OP-02, MET-OP-02b e MET-OP-02c e alinhamento com OWASP/LGPD | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |

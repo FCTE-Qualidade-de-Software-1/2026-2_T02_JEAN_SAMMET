@@ -1,66 +1,18 @@
-# Especificação da Avaliação — Métricas Funcionais
+## 1. Estrutura GQM (Goal-Question-Metric)
 
-Este documento especifica as perguntas e métricas de **adequação funcional** para avaliar a funcionalidade _Planejar formatura_ do No Fluxo UnB, com foco no Motor 2. A avaliação procura verificar se os planos gerados são coerentes com o histórico do aluno e com as regras acadêmicas aplicáveis, sem tratar limitações documentadas como defeitos antes da execução dos testes.
-
-A estrutura segue o método **Goal-Question-Metric (GQM)** e complementa as métricas operacionais descritas em [`Metricas Operacionais`](metricasOperacionais.md).
-
-## 1. Contexto da avaliação
-
-### 1.1 Propósito e decisões apoiadas
-
-O No Fluxo UnB auxilia o estudante a decidir quais disciplinas cursar nos próximos semestres e quando poderá concluir o curso. Na tela _Planejar formatura_, o Motor 2 organiza disciplinas por semestre e apresenta uma previsão de formatura. Um plano com pré-requisitos ignorados, co-requisitos omitidos, disciplinas obrigatórias ausentes ou histórico interpretado incorretamente pode levar a decisões acadêmicas inadequadas e até atrasar a graduação.
-
-A avaliação funcional deve produzir evidências para:
-
-- **Alunos da UnB:** entender em que medida o plano corresponde ao histórico e à matriz curricular e quando precisa ser conferido com a coordenação do curso.
-- **Crianex e mantenedores:** localizar comportamentos que merecem correção e priorizar melhorias com base em evidências reproduzíveis.
-- **Coordenação e orientação acadêmica:** apoiar a identificação de planos incompatíveis com as regras do curso.
-- **Equipe avaliadora e requisitante acadêmica:** fundamentar a avaliação de qualidade do produto e a proposta de melhoria da etapa seguinte.
-
-O plano é uma estimativa produzida por uma heurística e o No Fluxo UnB não é uma ferramenta oficial da UnB. A avaliação não deve apresentar os resultados como garantia institucional de formatura.
-
-### 1.2 Escopo e referência de execução
-
-O objeto funcional principal é o Motor 2, localizado no código de referência como `backend/src/services/plano_formatura.service.ts`, acionado pela rota `POST /planejamento/gerar-plano`.
-
-| Item                      | Referência para a avaliação                                                                                                                                     |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Software                  | No Fluxo UnB, funcionalidade _Planejar formatura_.                                                                                                              |
-| Versão do código          | Commit de referência `87b5475`, identificado na documentação da Fase 1.                                                                                         |
-| Curso/matriz prioritários | Engenharia de Software da FGA/UnB, matriz identificada na documentação como **6360/1 ou 2017.1**, descrita como inativa no sistema observado.                   |
-| Dados de teste            | Históricos sintéticos ou dos membros da equipe e entrevistados que permitirem o uso                                                                             |
-| Entradas relevantes       | Histórico e status das disciplinas, matriz curricular, pré-requisitos, co-requisitos, equivalências, oferta de turmas e opções do onboarding.                   |
-| Saídas relevantes         | Disciplinas e semestres planejados, matérias pendentes/críticas, semestre previsto de formatura e informações de integralização disponíveis na interface.       |
-| Limite de validade        | Os resultados valem para os cenários, a matriz, os dados, a versão e o ambiente registrados. Não provam que a versão em produção é idêntica ao código avaliado. |
-
-### 1.3 Hipóteses funcionais documentadas
-
-Os itens abaixo foram registrados na Fase 1 como **hipóteses que precisam ser testadas**, não como defeitos confirmados.
-
-| Hipótese documentada                                                                                                                                                                        | Risco para a adequação funcional                                                                                                                            | Métrica/cenário relacionado    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| As respostas do onboarding sobre trabalho/estágio e objetivo aparecem no fluxo, mas, no serviço analisado, são descritas como valores padrão que não participam da seleção das disciplinas. | A opção apresentada ao aluno pode não produzir o comportamento esperado. É necessário confirmar o comportamento prometido antes de classificá-lo como erro. | `MET-FUN-06`; cenário `CT-06`. |
-| Disciplinas com matrícula em andamento são tratadas como aprovadas para planejar semestres futuros.                                                                                         | O plano pode diferir do resultado real caso o aluno seja reprovado; a avaliação deve verificar a regra documentada e a clareza do comportamento.            | `MET-FUN-04`; cenário `CT-04`. |
-| Uma lista vazia de disciplinas não alocadas não garante, por si só, que todas as obrigatórias entraram no plano.                                                                            | O plano pode omitir disciplinas pendentes sem que a ausência seja evidente.                                                                                 | `MET-FUN-03`; cenário `CT-03`. |
-| Há casos em que uma disciplina pode ser alocada sem sua co-requisitada.                                                                                                                     | O plano pode violar uma relação curricular de co-requisito.                                                                                                 | `MET-FUN-02`; cenário `CT-02`. |
-| A expansão de equivalências é descrita como uma única passagem, filtrada por curso e sem considerar a vigência.                                                                             | Equivalências encadeadas ou relacionadas a matrizes antigas podem ser aplicadas incorretamente.                                                             | `MET-FUN-05`; cenário `CT-05`. |
-| Se a consulta ao período letivo falhar, o período atual pode ser estimado pela data do sistema.                                                                                             | O plano pode começar em semestre diferente do calendário acadêmico aplicável.                                                                               | `MET-FUN-07`; cenário `CT-07`. |
-
-## 2. Estrutura GQM (Goal-Question-Metric)
-
-### 2.1 Objetivo Geral da Avaliação (Nível Conceitual)
+### 1.1 Objetivo Geral da Avaliação (Nível Conceitual)
 
 De acordo com o template formal do GQM:
 
-| Elemento GQM       | Descrição do Objetivo                                                                                                                                         |
-| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Objeto**         | A funcionalidade _Planejar formatura_ (Motor 2 e interface de planejamento) do software No Fluxo UnB.                                                         |
-| **Propósito**      | **Avaliar** a qualidade em uso e a qualidade interna do produto.                                                                                              |
-| **Foco**           | A característica de **Adequação Funcional** (em consonância com as [Métricas Operacionais](metricasOperacionais.md)). |
-| **Ponto de Vista** | Dos **estudantes de graduação da UnB** (usuários finais) e dos **mantenedores da Crianex / equipe de desenvolvimento**.                                       |
-| **Contexto**       | Execução em ambiente web desktop moderno, com dados curriculares da Engenharia de Software da FGA/UnB e histórico sintético de disciplinas.                   |
+| Elemento GQM       | Descrição do Objetivo                                                                                                                       |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Objeto**         | A funcionalidade _Planejar formatura_ (Motor 2 e interface de planejamento) do software No Fluxo UnB.                                       |
+| **Propósito**      | **Avaliar** a qualidade em uso e a qualidade interna do produto.                                                                            |
+| **Foco**           | A característica de **Adequação Funcional** (em consonância com as [Métricas Operacionais](metricasOperacionais.md)).                       |
+| **Ponto de Vista** | Dos **estudantes de graduação da UnB** (usuários finais) e dos **mantenedores da Crianex / equipe de desenvolvimento**.                     |
+| **Contexto**       | Execução em ambiente web desktop moderno, com dados curriculares da Engenharia de Software da FGA/UnB e histórico sintético de disciplinas. |
 
-### 2.2 Desdobramento em Perguntas e Métricas
+### 1.2 Desdobramento em Perguntas e Métricas
 
 ```mermaid
 graph TD
@@ -87,32 +39,13 @@ graph TD
     Q7 --> M7["MET-FUN-07: Taxa de violações de restrições de organização semestral<br/><i>Correção funcional</i>"]
 ```
 
-## 2. Priorização das características de qualidade
+## 2. Objetivo GQM e perguntas funcionais
 
-A equipe adotou a matriz **impacto × risco**, com notas de 1 a 5. O impacto considera a consequência para os alunos e mantenedores; o risco considera as limitações conhecidas, a complexidade e as evidências disponíveis.
-
-Prioridade = Impacto \* Risco
-
-| Característica candidata (ISO/IEC 25010) | Impacto | Risco | Prioridade |       Selecionada       | Justificativa resumida                                                                                                                                                                                        |
-| ---------------------------------------- | :-----: | :---: | :--------: | :---------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Adequação funcional**                  |    5    |   4   |   **20**   |           Sim           | Um plano com regras acadêmicas violadas ou disciplinas obrigatórias omitidas pode induzir o estudante a decisões erradas e atrasar a graduação. As hipóteses documentadas do Motor 2 justificam a prioridade. |
-| Usabilidade                              |    5    |   3   |     15     |           Sim           | A tela concentra grafo, semestres, previsão de formatura e matérias críticas; o estudante precisa localizar e interpretar as informações. É avaliada na seção de [Métricas Operacionais](metricasOperacionais.md). |
-| Eficiência de desempenho                 |    4    |   3   |     12     |           Sim           | O plano depende do processamento do backend e da renderização do grafo; tempos altos prejudicam o uso. É avaliada na seção de [Métricas Operacionais](metricasOperacionais.md). |
-| Manutenibilidade                         |    4    |   3   |     12     |           Sim           | O projeto é de código aberto e precisa permitir investigação, testes e correções do Motor 2. É avaliada na seção de [Métricas Operacionais](metricasOperacionais.md). |
-| Confiabilidade                           |    4    |   2   |     8      | Não, fora da prioridade | As falhas lógicas mais relevantes são avaliadas diretamente como não conformidades funcionais; a equipe restringiu o escopo prioritário.                                                                      |
-| Segurança                                |    4    |   2   |     8      | Não, fora da prioridade | Testes invasivos não estão autorizados; o escopo prioriza dados sintéticos e observação não intrusiva.                                                                                                        |
-| Compatibilidade                          |    3    |   2   |     6      | Não, fora da prioridade | Testes multiplataforma extensos foram excluídos por prazo e prioridade.                                                                                                                                       |
-| Portabilidade                            |    2    |   2   |     4      | Não, fora da prioridade | A avaliação prioriza a adequação do plano e o uso em desktop.                                                                                                                                                 |
-
-A tabela consolida a priorização já registrada em [`Caracteristicas De Qualidade`](../fase1/caracteristicasDeQualidade.md). A característica funcional será medida principalmente pelas subcaracterísticas **Correção funcional** e **Completude funcional**, conforme o [`Modelo De Qualidade`](../fase1/modeloDeQualidade.md).
-
-## 3. Objetivo GQM e perguntas funcionais
-
-### 3.1 Objetivo GQM
+### 2.1 Objetivo GQM
 
 **Analisar** a funcionalidade _Planejar formatura_ do No Fluxo UnB, **com o propósito de avaliar** sua adequação funcional, **do ponto de vista** dos alunos da UnB e dos mantenedores, **no contexto** da geração de planos para a matriz curricular de Engenharia de Software da FGA/UnB, usando históricos sintéticos e regras curriculares oficiais identificadas, para detectar violações, omissões e divergências entre as entradas do aluno e o plano gerado.
 
-### 3.2 Perguntas e métricas relacionadas
+### 2.2 Perguntas e métricas relacionadas
 
 | Identificador | Pergunta GQM                                                                                                                             | Aspecto de adequação funcional   | Métricas principais         |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------- |
@@ -124,7 +57,7 @@ A tabela consolida a priorização já registrada em [`Caracteristicas De Qualid
 | `Q-FUN-06`    | As opções do onboarding geram o comportamento que está documentado ou explicitamente prometido ao aluno?                                 | Adequação às entradas fornecidas | `MET-FUN-06`                |
 | `Q-FUN-07`    | O plano respeita as demais restrições acadêmicas verificáveis, como oferta de turmas, semestre de partida e limite de carga configurado? | Correção funcional               | `MET-FUN-07`                |
 
-## 4. Fichas completas das métricas funcionais
+## 3. Fichas completas das métricas funcionais
 
 ### Ficha `MET-FUN-01` — Taxa de violações de pré-requisitos
 
@@ -224,42 +157,8 @@ A tabela consolida a priorização já registrada em [`Caracteristicas De Qualid
 | **Critério/meta proposta**   | **Meta: 0 violações** (`TVS = 0%`) das restrições oficiais incluídas no protocolo. Violações confirmadas devem ser investigadas como possíveis erros funcionais ou de dados.                                                                                                                                                                                                                                                                |
 | **Limitações/condições**     | A documentação descreve que o motor consulta oferta de turmas e que pode estimar o período atual pela data do sistema se a consulta falhar. A disponibilidade efetiva de turmas e a regra de cálculo da carga devem ser confirmadas. Créditos e horas são unidades distintas; o teto interno informado de 480 h/semestre não equivale automaticamente ao limite de 8–32 créditos do onboarding. Se `NRS = 0`, registrar como não aplicável. |
 
-## 5. Casos de teste para a coleta
-
-Todos os casos devem usar históricos sintéticos. A equipe deve guardar a versão do software, a matriz e fonte curricular utilizadas, as entradas, o resultado esperado definido antes da execução, o plano real gerado e as evidências. O resultado esperado deve ser derivado de uma regra oficial ou de um comportamento documentado, nunca de suposição do avaliador.
-
-| ID      | Cenário/entrada sintética                                                                                                                                                                                 | Resultado esperado                                                                                                                                                                                                      | Regra/métrica verificada                             | Evidência a registrar                                                                                       |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `CT-01` | Uma disciplina obrigatória pendente possui pré-requisito identificado; preparar variações em que o pré-requisito esteja aprovado e pendente.                                                              | Quando pendente, a disciplina dependente não deve ser planejada antes da satisfação válida do pré-requisito; quando aprovado, deve ser tratada conforme a regra de ordenação.                                           | Pré-requisitos; `MET-FUN-01`.                        | Histórico, relação curricular e vigência, semestre dos componentes no plano, captura/log do resultado.      |
-| `CT-02` | Duas disciplinas pendentes possuem co-requisito oficial. Adicionar, quando aplicável, uma variação em que uma delas já esteja satisfeita.                                                                 | O plano deve respeitar a forma de satisfação do co-requisito definida pela fonte oficial.                                                                                                                               | Co-requisitos; `MET-FUN-02`.                         | Fonte da relação, status das duas disciplinas, semestre planejado para cada uma e resultado da verificação. |
-| `CT-03` | Histórico sintético deixa um conjunto conhecido de disciplinas obrigatórias pendentes.                                                                                                                    | Todas as obrigatórias aplicáveis devem constar no plano, ou qualquer exclusão precisa ter justificativa oficial documentada e ser tratada conforme a política acordada antes da coleta.                                 | Completude; `MET-FUN-03`.                            | Lista esperada, lista gerada, disciplinas omitidas e cálculo da cobertura.                                  |
-| `CT-04` | Histórico contém disciplinas aprovadas, pendentes e em andamento/matriculadas.                                                                                                                            | Disciplinas aprovadas devem ser reconhecidas conforme o estado do histórico; disciplinas em andamento devem seguir a regra explicitamente documentada pelo produto e ter o efeito registrado.                           | Tratamento do histórico; `MET-FUN-04`.               | Status de entrada, estado representado/considerado no plano, divergências e capturas.                       |
-| `CT-05` | Histórico inclui uma disciplina que, segundo fonte oficial, pode satisfazer outra por equivalência; incluir variação encadeada ou de matriz antiga apenas se houver fonte aplicável.                      | O tratamento das pendências e da disciplina equivalente deve corresponder à regra e à vigência oficiais.                                                                                                                | Equivalências; `MET-FUN-03` e `MET-FUN-05`.          | Fonte e vigência da equivalência, dados de entrada, pendências antes/depois e plano gerado.                 |
-| `CT-06` | Manter o histórico fixo e variar um campo do onboarding por execução: trabalho/estágio, objetivo e limite de créditos.                                                                                    | O resultado deve atender à expectativa documentada para cada campo. A expectativa e a propriedade comparada devem ser definidas antes do teste; não se exige diferença de disciplinas se isso não estiver especificado. | Entradas do onboarding; `MET-FUN-06`.                | Campo e valor enviados, fonte do comportamento esperado, planos comparados e conclusão por campo.           |
-| `CT-07` | Usar cenário com período letivo/oferta de turmas conhecidos e limite de créditos documentado. Se viável, executar também caso controlado de falha na consulta de período, sem causar impacto em produção. | O plano deve seguir as restrições curriculares e a unidade de carga efetivamente definida. Se o período for estimado por falha, a divergência em relação ao calendário oficial deve ser registrada.                     | Oferta, semestre de partida e limites; `MET-FUN-07`. | Calendário/oferta de referência, configuração de carga, semestre e alocações geradas, logs disponíveis.     |
-
-### 5.1 Registro padronizado por execução
-
-| Campo                                        | Valor a preencher                                                   |
-| -------------------------------------------- | ------------------------------------------------------------------- |
-| ID do caso de teste                          | `CT-__`                                                             |
-| Data e hora                                  | [preencher]                                                         |
-| Responsável pela execução                    | [preencher]                                                         |
-| Commit/versão do código                      | [preencher]                                                         |
-| Ambiente/navegador                           | [preencher]                                                         |
-| Matriz e versão da fonte oficial             | [preencher]                                                         |
-| Identificador do histórico sintético         | [preencher; sem dados pessoais reais]                               |
-| Regra e fonte documental                     | [preencher]                                                         |
-| Resultado esperado (definido antes do teste) | [preencher]                                                         |
-| Resultado observado                          | [preencher]                                                         |
-| Métrica(s) afetada(s) e cálculo              | [preencher]                                                         |
-| Evidência (captura, log, exportação)         | [caminho/link interno]                                              |
-| Classificação                                | Conforme / Não conforme / Não aplicável / Pendente de especificação |
-| Justificativa e observações                  | [preencher]                                                         |
-
-## Histórico de versão
-
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :--- | :--- |
-| [Gabriel Mota](https://github.com/Gabro-MO) | Elaboração inicial das perguntas GQM, fichas de métricas funcionais e protocolo de cenários de teste. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste de consistência do foco GQM e remoção de referências a divisões internas de pessoas | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
+| Nome do Membro                                                    | Contribuição                                                                                          | Data       | Commit                                                                                                                            |
+| :---------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------- |
+| [Gabriel Mota](https://github.com/Gabro-MO)                       | Elaboração inicial das perguntas GQM, fichas de métricas funcionais e protocolo de cenários de teste. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste de consistência do foco GQM e remoção de referências a divisões internas de pessoas            | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
+| [Gabriel Mota](https://github.com/Gabro-MO)                       | Divisão do arquivo principal em varias paginas e ajustes a estrutura                                  | 16/10/2026 | []()                                                                                                                              |

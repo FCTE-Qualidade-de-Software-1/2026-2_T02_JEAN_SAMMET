@@ -18,21 +18,36 @@ A avaliação se concentrará no fluxo de planejamento de formatura do No Fluxo 
 
 *Figura 3 — Tela “Planejar formatura”. Fonte: captura de tela do No Fluxo UnB, outubro de 2026.*
 
-## Foco da avaliação
+## O que será avaliado
 
-| Característica | O que será avaliado |
+| Característica | Objeto e profundidade da avaliação |
 |---|---|
-| **Adequação Funcional** | Com históricos sintéticos e uma matriz curricular de referência, verificar se o plano gerado inclui as disciplinas esperadas e respeita as regras curriculares consideradas no teste. |
-| **Usabilidade** | Observar se estudantes conseguem gerar o plano e compreender a previsão de formatura, os semestres restantes, as matérias críticas e a distribuição das disciplinas. Registrar sucesso nas tarefas, erros e necessidade de ajuda. |
-| **Segurança** | Verificar de forma não invasiva o acesso ao fluxo e o tratamento observável do histórico enviado. Usar dados sintéticos, sem tentar invadir o sistema nem acessar dados de terceiros. |
+| **Adequação Funcional** | Para cenários predefinidos e uma matriz curricular de referência, comparar o plano gerado com os resultados esperados e verificar se as disciplinas e a sequência respeitam as regras consideradas no teste. O envio do histórico e o fluxograma serão usados para preparar e conferir as entradas. |
+| **Usabilidade** | Solicitar a participantes que percorram o fluxo, gerem um plano e interpretem a previsão de formatura, os semestres restantes e as matérias críticas. Registrar conclusão das tarefas, erros e necessidade de ajuda. |
+| **Segurança** | Fazer verificações não invasivas do acesso ao fluxo e do tratamento observável do histórico. Quando pertinente, consultar o código público. Não serão testados acessos não autorizados nem exploradas vulnerabilidades. |
 
-## Fora do escopo e limites
+O foco funcional será um conjunto pequeno de casos controlados para o curso de Engenharia de Software, que aparece nas capturas de tela. A avaliação não pretende cobrir exaustivamente todos os cursos ou históricos possíveis. O ambiente, a versão e os dados usados serão registrados para que os resultados possam ser interpretados.
 
-Não serão realizados testes de penetração nem testes de carga na aplicação em produção. Também não será avaliada exaustivamente a matriz de todos os cursos, a experiência em todos os dispositivos ou a qualidade das respostas de ferramentas de IA.
+## O que fica fora — e por quê
 
-Os resultados funcionais valerão para os cenários e a matriz curricular testados. Os resultados de usabilidade descreverão apenas os participantes envolvidos. Verificações não invasivas de segurança não comprovam que o sistema esteja livre de vulnerabilidades.
+| Exclusão | Justificativa |
+|---|---|
+| **Testes de penetração, exploração de vulnerabilidades ou tentativa de contornar autenticação** | A equipe não dispõe de autorização explícita para realizar ataques. Essas ações podem comprometer dados ou a disponibilidade do serviço; serão feitas apenas observações e inspeções não invasivas. |
+| **Testes de carga ou estresse na aplicação em produção** | O ambiente é utilizado por terceiros e a equipe não controla sua infraestrutura. Cargas artificiais podem afetar usuários reais; portanto, esses testes não são necessários para responder às perguntas centrais. |
+| **Todos os cursos, matrizes e combinações de histórico** | A quantidade de combinações é ampla para o prazo do trabalho. Uma matriz e cenários sintéticos selecionados permitem uma avaliação repetível, mas limitam a generalização dos resultados. |
+| **Todos os navegadores, dispositivos e condições de rede** | Uma avaliação multiplataforma extensa ampliaria o esforço e dificultaria controlar as condições. Os resultados se restringirão ao ambiente registrado durante os testes. |
+| **Qualidade das respostas do chatbot e de outras funções de IA** | São funcionalidades auxiliares, dependem de componentes externos e não são necessárias para avaliar o planejamento de formatura escolhido como foco. |
+| **Históricos reais de terceiros e dados pessoais sem autorização** | O uso não é necessário para os testes e criaria riscos de privacidade. Serão usados históricos sintéticos ou dados de teste autorizados. |
+| **Auditoria formal, certificação ou conclusão de conformidade legal** | O trabalho é uma avaliação acadêmica limitada, não uma auditoria especializada; seus métodos e resultados não sustentam uma certificação. |
 
-**Premissas:** serão usados históricos sintéticos; a equipe registrará a versão/data e o ambiente dos testes; e as verificações serão realizadas somente em funcionalidades e ambientes aos quais tenha acesso autorizado.
+## Limites de validade dos resultados
+
+- **Adequação funcional:** os resultados serão válidos para os casos executados e para a matriz curricular de referência; não demonstrarão a correção de todos os cursos ou históricos.
+- **Usabilidade:** os achados descreverão os participantes e o ambiente testados. Uma amostra pequena não representa todos os estudantes da UnB.
+- **Segurança:** a ausência de problemas observados não prova ausência de vulnerabilidades, pois não haverá testes invasivos nem auditoria completa.
+- **Versão do produto:** o site em execução pode diferir do código público. A equipe registrará data, ambiente e, ao analisar o código, o commit examinado.
+
+**Premissas de execução:** serão utilizados históricos sintéticos ou autorizados; as tarefas e os resultados esperados serão definidos antes dos testes; e toda verificação será realizada em ambiente e funcionalidades de acesso autorizado.
 
 ---
 

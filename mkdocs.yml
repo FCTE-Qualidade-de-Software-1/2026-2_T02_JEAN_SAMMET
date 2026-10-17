@@ -22,8 +22,7 @@ nav:
             - Sumário: fases/fase2/metricasOperacionais.md
             - Visão Geral (GQM): fases/fase2/operacionais/visaoGeral.md
             - Usabilidade: fases/fase2/operacionais/usabilidade.md
-            - Eficiência de Desempenho: fases/fase2/operacionais/desempenho.md
-            - Manutenibilidade: fases/fase2/operacionais/manutenibilidade.md
+            - Segurança: fases/fase2/operacionais/seguranca.md
             - Protocolo de Coleta e Teste: fases/fase2/operacionais/protocolo.md
 
   - Gestão do Projeto:

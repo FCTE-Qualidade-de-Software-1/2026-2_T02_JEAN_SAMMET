@@ -1,6 +1,6 @@
 # Protocolo de Coleta e Condições de Teste
 
-Este documento estabelece o protocolo formal de coleta, medição e registro das condições experimentais para as métricas operacionais (**Usabilidade**, **Desempenho** e **Manutenibilidade**) da funcionalidade _Planejar formatura_ do No Fluxo UnB, em estrita conformidade com as diretrizes do processo **ISO/IEC 25040**.
+Este documento estabelece o protocolo formal de coleta, medição e registro das condições experimentais para as métricas operacionais (**Usabilidade** e **Segurança**) da funcionalidade _Planejar formatura_ do No Fluxo UnB, em estrita conformidade com as diretrizes do processo **ISO/IEC 25040**.
 
 ---
 
@@ -9,8 +9,8 @@ Este documento estabelece o protocolo formal de coleta, medição e registro das
 Para garantir que qualquer avaliador ou mantenedor do software possa reproduzir os testes e verificar os mesmos resultados, a coleta obedece a três princípios fundamentais:
 
 1. **Padronização de Entrada:** Uso exclusivo de históricos sintéticos controlados, sem dados pessoais reais (em conformidade com a LGPD e o [Escopo](../../fase1/escopo.md)).
-2. **Isolamento de Variáveis:** Execução dos testes em ambientes de navegador sem extensões ativas e com parâmetros de rede conhecidos.
-3. **Registro Auditável:** Toda sessão de teste gera evidências brutas (gravações de tela, logs de rede e relatórios HTML de cobertura).
+2. **Isolamento de Variáveis:** Execução dos testes de usabilidade e inspeção em ambientes de navegador sem extensões ativas e em abas anônimas.
+3. **Registro Auditável:** Toda sessão de teste gera evidências brutas (gravações de tela, planilhas de observação, dumps de armazenamento e relatórios JSON de auditoria de segurança).
 
 ---
 
@@ -59,66 +59,54 @@ O avaliador deve apresentar ao participante as seguintes instruções neutras, s
 
 ---
 
-## 4. Protocolo de Medição de Desempenho (`MET-OP-02` e `MET-OP-02b`)
+## 4. Protocolo de Auditoria de Vulnerabilidades em Dependências (`MET-OP-02`)
 
-### 4.1 Preparação do Ambiente
-1. Abrir o Google Chrome em modo de navegação anônima para desativar qualquer extensão que possa interferir no DOM ou no tráfego de rede.
-2. Abrir o DevTools (`F12`), selecionar a aba **Network** e marcar a opção **Disable cache**.
-3. Autenticar com a conta de testes e carregar o histórico sintético padrão de Engenharia de Software (aluno com aproximadamente 50% de integralização).
+### 4.1 Comandos de Execução
+No terminal da máquina de testes, clonar o repositório público no commit delimitado (`87b5475`) e executar a auditoria em ambos os módulos:
 
-### 4.2 Procedimento Experimental (10 Repetições)
-1. Clicar no botão de acionamento do planejamento.
-2. Registrar o tempo da requisição `POST /planejamento/gerar-plano` na coluna *Time* da aba Network ($T_{\text{backend}}$).
-3. Na aba **Performance**, verificar o término da pintura visual completa dos componentes do grafo no DOM ($T_{\text{total}}$).
-4. Subtrair $T_{\text{total}} - T_{\text{backend}}$ para obter o tempo de renderização do cliente ($T_{\text{frontend}}$).
-5. **Aguardar 10 segundos** antes de disparar a próxima repetição para respeitar o limite de 120 requisições por minuto por IP da infraestrutura.
-6. Repetir o procedimento até completar 10 execuções válidas.
+```bash
+# 1. Auditoria no módulo Backend
+cd /caminho/para/2025-1-NoFluxoUnB/backend
+npm audit --json > audit-backend.json
 
-### 4.3 Tabela de Coleta dos Tempos de Desempenho
+# 2. Auditoria no módulo Frontend
+cd /caminho/para/2025-1-NoFluxoUnB/frontend
+npm audit --json > audit-frontend.json
+```
 
-| Execução | $T_{\text{backend}}$ (ms) | $T_{\text{frontend}}$ (ms) | Tempo Total $TGRP$ (ms) | Status HTTP | Observações |
-| :---: | :---: | :---: | :---: | :---: | :--- |
-| **R01** | | | | 200 OK | Execução inicial |
-| **R02** | | | | 200 OK | |
-| **R03** | | | | 200 OK | |
-| **R04** | | | | 200 OK | |
-| **R05** | | | | 200 OK | |
-| **R06** | | | | 200 OK | |
-| **R07** | | | | 200 OK | |
-| **R08** | | | | 200 OK | |
-| **R09** | | | | 200 OK | |
-| **R10** | | | | 200 OK | |
-| **Mediana ($\tilde{T}$)** | | | | — | **Indicador Central (`MET-OP-02`)** |
-| **P95 / Máx ($T_{\max}$)** | | | | — | **Pior cenário observado** |
-| **Desvio Padrão ($s$)** | | | | — | **Estabilidade temporal** |
+### 4.2 Tabela de Registro de Vulnerabilidades de Dependências
+
+| Módulo Avaliado | Crítica (10 pts) | Alta (5 pts) | Moderada (2 pts) | Baixa (1 pt) | Índice de Risco Ponderado ($IRP$) | Status de Julgamento |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Backend** (`backend/`) | [preencher] | [preencher] | [preencher] | [preencher] | [cálculo] | [Excelente / Aceitável / Crítico] |
+| **Frontend** (`frontend/`) | [preencher] | [preencher] | [preencher] | [preencher] | [cálculo] | [Excelente / Aceitável / Crítico] |
+| **Consolidado Geral** | [total] | [total] | [total] | [total] | [total] | **Resultado Global `MET-OP-02`** |
 
 ---
 
-## 5. Protocolo de Instrumentação de Manutenibilidade (`MET-OP-03` e `MET-OP-03b`)
+## 5. Protocolo de Inspeção de Armazenamento e Controle de Acesso (`MET-OP-02b` e `MET-OP-02c`)
 
-### 5.1 Comandos de Execução
-No terminal da máquina de testes, executar:
+### 5.1 Inspeção de Armazenamento do Cliente (`MET-OP-02b`)
+1. Abrir o navegador em modo de navegação anônima sem extensões.
+2. Autenticar na aplicação e realizar o fluxo completo de upload de histórico acadêmico sintético e geração do plano.
+3. Abrir o DevTools (`F12`), acessar a aba **Application** (ou **Storage** no Firefox).
+4. Inspecionar:
+   - `Local Storage`: verificar se existem chaves com objetos serializados contendo notas, IRA, matrícula ou matérias cursadas.
+   - `Session Storage`: verificar os artefatos voláteis criados durante a sessão.
+   - `Cookies`: checar se cookies de sessão possuem as diretivas de proteção `HttpOnly` e `Secure`.
+5. Salvar a árvore de chaves inspecionadas e registrar a contagem de chaves com dados em texto claro ($GED\text{-}C$).
+
+### 5.2 Validação de Controle de Acesso a Rotas Protegidas (`MET-OP-02c`)
+Executar no terminal 10 requisições simuladas sem token de autorização contra o endpoint de geração de planejamento:
 
 ```bash
-# 1. Acessar o subdiretório do backend no commit 87b5475
-cd /caminho/para/2025-1-NoFluxoUnB/backend
-
-# 2. Assegurar dependências instaladas (Node 20.x)
-npm install
-
-# 3. Executar a suíte de testes com cobertura isolada no serviço do Motor 2
-npm run test -- --coverage --collectCoverageFrom="src/services/plano_formatura.service.ts"
+# Teste de chamada não autenticada ao endpoint de planejamento
+curl -i -X POST "https://no-fluxo.crianex.com/api/planejamento/gerar-plano" \
+     -H "Content-Type: application/json" \
+     -d '{"matriculaCurricular": "6360/1", "disciplinasConcluidas": []}'
 ```
 
-### 5.2 Tabela de Registro da Cobertura de Código
-
-| Componente Instrumentado | Total de Linhas | Linhas Cobertas | % Linhas (`MET-OP-03b`) | Total de Branches | Branches Cobertos | % Branches (`MET-OP-03`) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `src/services/plano_formatura.service.ts` | [preencher] | [preencher] | [%] | [preencher] | [preencher] | [%] |
-
-### 5.3 Evidência Comprobatória
-- Salvar a captura de tela do terminal com o relatório em texto tabular gerado.
-- Exportar o arquivo HTML gerado pelo Istanbul/c8 em `coverage/lcov-report/src/services/plano_formatura.service.ts.html` para inspeção visual detalhada das linhas não cobertas.
+Registrar na planilha de teste se a resposta retornada foi estritamente **HTTP 401 Unauthorized** ou **HTTP 403 Forbidden** (Taxa de Bloqueio $TBR = 100\%$).
 
 ---
 
@@ -127,4 +115,4 @@ npm run test -- --coverage --collectCoverageFrom="src/services/plano_formatura.s
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração dos protocolos experimentais de usabilidade, desempenho e manutenibilidade | 16/10 | [f2910c5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f2910c5) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste do protocolo experimental para Usabilidade e Segurança | 16/10 | [91b3fa1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/91b3fa1) |

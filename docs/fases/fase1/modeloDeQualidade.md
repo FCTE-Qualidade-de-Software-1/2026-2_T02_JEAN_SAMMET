@@ -14,10 +14,10 @@ Para a avaliação da funcionalidade **Planejar formatura** do No Fluxo UnB, o m
 | :--- | :--- | :--- |
 | **Adequação funcional** | Mantida com foco em **Completude funcional** e **Correção funcional** | O núcleo do software é gerar um plano academicamente válido. Incorreções em pré-requisitos, co-requisitos ou disciplinas faltantes inviabilizam a utilidade para o estudante. |
 | **Usabilidade** | Mantida com foco em **Apreensibilidade (Learnability)** e **Operabilidade (Operability)** | A interface apresenta grafos interativos de alta densidade cognitiva. O estudante precisa conseguir localizar sua previsão de formatura e entender as matérias críticas sem suporte humano. |
-| **Eficiência de desempenho** | Mantida com foco em **Comportamento temporal (Time behaviour)** | A geração do plano não pode gerar tempos excessivos de espera na requisição à API ou travamentos na renderização do grafo de disciplinas no navegador. |
-| **Manutenibilidade** | Mantida com foco em **Testabilidade (Testability)** e **Modularidade** | Como projeto open-source e base para as melhorias da equipe na disciplina, a capacidade de testar e alterar o algoritmo do Motor 2 de forma isolada é essencial para os desenvolvedores. |
+| **Segurança** | Mantida com foco em **Confidencialidade** e **Autenticidade / Controle de Acesso** | O software manipula dados acadêmicos sensíveis (histórico oficial, matrícula, notas e reprovações) extraídos no navegador e persistidos no Supabase. É crítico avaliar a proteção contra vazamentos no cliente e vulnerabilidades em dependências. |
+| **Eficiência de desempenho** | Removida do escopo prioritário | O planejamento curricular é uma atividade analítica e assíncrona; variações normais de latência de rede não inviabilizam o propósito do software. |
+| **Manutenibilidade** | Removida do escopo prioritário | Priorizou-se a experiência do usuário final e o resguardo legal da privacidade sobre a análise interna do código. |
 | **Confiabilidade** | Removida do escopo prioritário | Falhas lógicas de geração de planos são tratadas diretamente como não conformidades funcionais (adequação funcional). |
-| **Segurança** | Removida do escopo de testes diretos | Autenticação e dados delegados ao Supabase; restrições contratuais impedem testes intrusivos. Privacidade é tratada via premissa de dados sintéticos. |
 | **Compatibilidade e Portabilidade** | Removidas do escopo prioritário | Foco estabelecido na versão desktop (navegadores modernos) devido a restrições de prazo e relevância. |
 
 ## 3. Representação gráfica
@@ -26,8 +26,7 @@ Para a avaliação da funcionalidade **Planejar formatura** do No Fluxo UnB, o m
 graph TD
     M["Modelo de Qualidade do Produto (ISO/IEC 25010 adaptado)"] --> C1["Adequação Funcional"]
     M --> C2["Usabilidade"]
-    M --> C3["Eficiência de Desempenho"]
-    M --> C4["Manutenibilidade"]
+    M --> C3["Segurança"]
     
     C1 --> S11["Completude Funcional<br/>(Disciplinas obrigatórias contempladas)"]
     C1 --> S12["Correção Funcional<br/>(Conformidade com pré/co-requisitos)"]
@@ -35,10 +34,8 @@ graph TD
     C2 --> S21["Apreensibilidade<br/>(Interpretação da previsão e matérias críticas)"]
     C2 --> S22["Operabilidade<br/>(Taxa de sucesso na execução de tarefas)"]
     
-    C3 --> S31["Comportamento Temporal<br/>(Tempo de geração e renderização do plano)"]
-    
-    C4 --> S41["Testabilidade<br/>(Cobertura de testes automatizados do Motor 2)"]
-    C4 --> S42["Modularidade<br/>(Isolamento do serviço de planejamento)"]
+    C3 --> S31["Confidencialidade<br/>(Proteção contra vazamento de dados no cliente)"]
+    C3 --> S32["Autenticidade e Controle de Acesso<br/>(Validação de rotas protegidas e vulnerabilidades)"]
 ```
 
 *Figura 6 - Modelo de qualidade adaptado para a funcionalidade Planejar formatura. Fonte: elaboração da equipe, com base na ISO/IEC 25010.*
@@ -53,3 +50,4 @@ A seleção e a priorização detalhada das características estão em [Caracter
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Definição das adaptações do modelo, subcaracterísticas e diagrama | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste do modelo adaptado para Adequação Funcional, Usabilidade e Segurança | 16/10 | [91b3fa1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/91b3fa1) |

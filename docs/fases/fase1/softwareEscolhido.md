@@ -3,162 +3,126 @@
 ## 1. Identificação
 
 | Item | Descrição |
-| :--- | :--- |
-| Nome | No Fluxo UnB (NoFluxo, "by Crianex") |
-| Endereço | [no-fluxo.crianex.com](https://no-fluxo.crianex.com) |
-| Descrição oficial | "Visualize, monte e personalize fluxogramas de qualquer curso com o poder da IA. Mais agilidade para estudar, entender e avançar." |
-| Repositório | [unb-mds/2025-1-NoFluxoUnB](https://github.com/unb-mds/2025-1-NoFluxoUnB) |
-| Licença | GPL-3.0 |
-| Origem e mantenedora | Nasceu como projeto de estudantes da FGA na disciplina Métodos de Desenvolvimento de Software (2025/1). Hoje é um produto da Crianex, gratuito para o estudante. |
-| Versão avaliada | Código de referência: commit `87b5475` (14/10/2026). Acesso ao site em outubro/2026. A versão em produção pode diferir do código, então cada teste registrará data e hora. |
-| Tecnologias | Frontend: SvelteKit 2, Svelte 5, TypeScript e Tailwind 4, publicado como site estático com PWA. Backend: Node 20, Express 4 e TypeScript. Dados e autenticação: Supabase (PostgreSQL). IA: serviço Python (FastAPI) com modelos Sabiá (Maritaca) e embeddings Gemini (Google). Operação: Docker, K3s e GitHub Actions. |
+|---|---|
+| **Nome** | No Fluxo UnB / NoFluxoUNB |
+| **Tipo de produto** | Aplicação web de apoio ao planejamento acadêmico |
+| **Site** | [no-fluxo.crianex.com](https://no-fluxo.crianex.com) |
+| **Repositório analisado** | [unb-mds/2025-1-NoFluxoUNB](https://github.com/unb-mds/2025-1-NoFluxoUNB) |
+| **Finalidade** | Apresentar a matriz curricular em um fluxograma interativo e apoiar o estudante na visualização das disciplinas cursadas e no planejamento até a formatura. |
 
-Fonte: README, `CONTRIBUTING.md` e base de conhecimento (`docs/kb`) do repositório do software.
+O No Fluxo UnB é acessado pelo navegador. O estudante seleciona o curso, informa seu histórico acadêmico por PDF ou manualmente, visualiza o fluxograma e pode solicitar um plano de formatura. Esta avaliação se concentra nesse fluxo, principalmente no resultado da opção **“Planejar formatura”**. A descrição funcional geral é compatível com o README público do projeto; a organização do repositório também apresenta diretórios para frontend, backend, agente, scripts e migrações do Supabase ([repositório oficial](https://github.com/unb-mds/2025-1-NoFluxoUNB)).
 
-## 2. Tipo de produto
+## 2. Recorte do produto
 
-**Classificação:** aplicação web de apoio ao planejamento acadêmico, com cliente executado no navegador (PWA), API própria e recurso de inteligência artificial (assistente Darcy).
+Embora o No Fluxo UnB ofereça outras funcionalidades, esta avaliação examina o fluxo que leva da entrada do histórico ao planejamento de formatura. A tela **“Planejar formatura”** é o objeto central; as etapas anteriores serão consideradas para preparar a entrada e interpretar a saída. As telas estão documentadas em [Escopo](escopo.md).
 
-**Justificativa:** o software é acessado por URL, sem instalação. Ele recebe o histórico acadêmico do aluno e devolve o fluxograma do curso e um plano de formatura. Não é biblioteca nem API pública: o usuário final interage por interface gráfica. O próprio projeto informa que o software complementa a orientação humana e não é ferramenta oficial da UnB.
-
-## 3. Descrição estruturada
+## 3. Descrição estruturada do produto
 
 ### 3.1 Fluxo de uso avaliado
 
-O fluxo escolhido para esta avaliação tem três passos:
+1. **Enviar o histórico:** o estudante envia um PDF ou informa os dados manualmente.
+2. **Visualizar o fluxograma:** o sistema apresenta a matriz do curso e a situação das disciplinas.
+3. **Planejar formatura:** o sistema gera uma previsão de disciplinas por semestre até a formatura.
 
-1. **Enviar o histórico** (Figura 1): o aluno envia o PDF do histórico oficial da UnB ou preenche os dados manualmente.
-2. **Visualizar o fluxograma** (Figura 2): o sistema monta toda a grade da matriz curricular do aluno, com o que já foi cursado e o que falta.
-3. **Planejar formatura** (Figura 3): ao clicar no botão "Planejar formatura", o sistema gera a sequência de matérias até a formatura. **Esta tela é o objeto central da avaliação.**
-
-A tela de planejamento (rota `/plano-formatura`) exige **conta real**: o modo anônimo do site não dá acesso a ela. Isso define o ambiente de teste da Fase 3.
-
-![Tela Importar histórico, com área para arrastar o PDF do histórico oficial da UnB, botão Selecionar arquivo e opção Preencha manualmente](img/noFluxo_importar.png)
-
-*Figura 1 - Tela de importação do histórico. Fonte: captura de tela do No Fluxo UnB, outubro/2026.*
-
-![Fluxograma do curso de Engenharia de Software por semestre, com disciplinas coloridas por status: aprovado, matriculado, disponível, reprovado e bloqueado](img/noFluxo_fluxograma.png)
-
-*Figura 2 - Fluxograma da matriz curricular com o status de cada disciplina. Fonte: captura de tela do No Fluxo UnB, outubro/2026.*
-
-![Tela Planejar formatura, com semestre previsto de formatura, semestres restantes, matérias críticas, controle de créditos por semestre, aviso de optativas e grafo de disciplinas por semestre](img/noFluxo_planejarFormatura.png)
-
-*Figura 3 - Tela "Planejar formatura". Fonte: captura de tela do No Fluxo UnB, outubro/2026.*
+O estudante interage pela interface web. O frontend apresenta o fluxograma e os resultados; os serviços da aplicação processam solicitações e dependem dos dados curriculares e dos serviços de suporte utilizados pelo produto. Recursos auxiliares, como funções de IA, não são o foco principal deste estudo.
 
 ### 3.2 Módulos
 
-| Módulo | Responsabilidade | Evidência |
-| :--- | :--- | :--- |
-| Importação de histórico | Extrai os dados do PDF no próprio navegador (PDF.js), casa as disciplinas com o catálogo e persiste o resultado para contas reais. Oferece também o preenchimento manual. | Figura 1; `frontend/src/lib/services/upload.service.ts` |
-| Fluxograma da matriz curricular | Exibe as disciplinas por semestre com status (aprovado, matriculado, disponível, reprovado, bloqueado), equivalências, optativas e módulo livre. Permite trocar de matriz, reenviar o histórico e capturar a tela. | Figura 2 |
-| Planejamento de formatura (Motor 2) | Gera o plano semestre a semestre até a formatura. Mostra semestre previsto, semestres restantes, matérias críticas, dificuldade estimada e percentual integralizado, em um grafo interativo com dependências. | Figura 3; `backend/src/services/plano_formatura.service.ts` |
-| Assistente Darcy (IA) | Painel de chat da tela de planejamento e botão "Escolher com o Darcy AI" para sugerir optativas. Sujeito a login e a cota diária. | Figura 3; `PlannerChatPanel.svelte` |
-| Coleta de dados acadêmicos | Scrapers em Python coletam estruturas curriculares, pré e co-requisitos, equivalências, turmas e calendário do SIGAA e alimentam o Supabase. | `DBA/scraping/`; workflows `scrape_*.yml` |
+| Módulo identificado no repositório | Responsabilidade geral | Relação com a avaliação |
+|---|---|---|
+| **Frontend web** ([`frontend/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/frontend)) | Interface no navegador para seleção de curso, entrada do histórico, visualização do fluxograma e planejamento. | Principal ponto de observação nos testes de usabilidade e nas verificações funcionais. |
+| **Backend** ([`backend/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/backend)) | Serviços e regras utilizados pela interface para processar solicitações. A documentação da equipe o identifica como backend TypeScript/Node.js. | Pode auxiliar na investigação de divergências do plano, quando o código relevante estiver disponível. |
+| **Dados e autenticação** ([`supabase/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/supabase)) | Migrações e estrutura relacionada aos serviços de dados do Supabase. | Pertinente à inspeção não invasiva de controles de acesso e tratamento de dados; não será feita exploração de segurança. |
+| **Agente/integrações auxiliares** ([`mcp_agent/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/mcp_agent)) | Componentes auxiliares associados a recursos de agente/IA. | Fora do foco central, exceto quando uma dependência for necessária para compreender um comportamento observado. |
+| **Scripts** ([`scripts/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/scripts)) | Rotinas de apoio, incluindo processamento ou atualização de dados conforme a implementação pública. | Os dados curriculares usados nos testes precisam ter origem e referência conhecidas. |
 
-### 3.3 Interfaces
+A tabela descreve os diretórios e as responsabilidades gerais visíveis no repositório; não afirma que todos os módulos participam de cada execução do planejamento.
 
-- **Entrada:** PDF do histórico oficial (máx. 10 MB) ou formulário manual. Na tela de planejamento, o aluno informa se trabalha ou estagia, seu objetivo (velocidade ou equilíbrio) e o limite de créditos por semestre (de 8 a 32).
-- **Saída:** painéis de resumo (formatura, semestres, críticas), controle de créditos ou horas e grafo com zoom.
-- **API interna:** a tela chama `POST /planejamento/gerar-plano` com o currículo, as disciplinas concluídas, o semestre atual e o limite de créditos.
-- **Serviços externos:** Supabase (login, banco), Maritaca (modelos Sabiá) e Google (embeddings), usados pelo assistente Darcy.
+### 3.3 Interfaces e dependências
 
-### 3.4 Dependências e restrições
+| Interface ou dependência | Interação | Limite relevante |
+|---|---|---|
+| **Navegador ↔ frontend** | O estudante envia ou informa o histórico, navega pelo fluxograma e solicita o plano. | É a interface principal para observar as tarefas e os resultados. |
+| **Frontend ↔ serviços de aplicação** | A interface envia solicitações e apresenta as respostas recebidas. | A avaliação externa consegue observar entradas e saídas, mas não inferir todos os estados internos apenas pela interface. |
+| **Serviços ↔ dados curriculares e persistência** | O planejamento depende de informações curriculares e, em funções pertinentes, de serviços de dados/autenticação. | Os resultados serão comparados apenas com dados de referência definidos pela equipe. |
+| **Recursos de IA e serviços externos** | Podem oferecer funcionalidades auxiliares do produto. | A avaliação da qualidade das respostas de IA e de serviços externos não faz parte do escopo. |
 
-- O resultado depende do **histórico enviado** e da **matriz curricular** salva nele. O exemplo capturado usa a matriz 6360/1 - 2017.1 de Engenharia de Software, exibida como **INATIVA**; o sistema mantém a matriz do histórico mesmo quando inativa.
-- O PDF **não é enviado** ao servidor: a extração ocorre no navegador. Os dados acadêmicos extraídos são enviados ao banco e, para contas reais, ficam armazenados. São dados pessoais.
-- A qualidade do plano depende do catálogo (matrizes, pré-requisitos, equivalências, turmas), que vem dos scrapers do SIGAA.
-- O backend aplica limite de 120 requisições por minuto por IP e aceita corpo de até 2 MB na geração do plano. O assistente tem cota diária por usuário.
-- A equipe do software declara que a leitura do código não comprova o que está implantado em produção.
+## 4. Diagrama de contexto
 
-### 3.5 Diagrama de contexto
+O diagrama mostra o produto como uma caixa única e suas principais interações externas. As conexões representam o contexto funcional da avaliação, não um mapa completo de tráfego ou implantação.
 
 ```mermaid
-graph LR
-    A["Aluno da UnB"] -->|"1. envia"| B["Importação do histórico"]
-    H["Histórico oficial em PDF"] -.-> B
-    B --> C["Fluxograma da matriz curricular"]
-    C -->|"2. Planejar formatura (conta real)"| D["Plano de formatura"]
-    D -->|"opcional"| E["Darcy AI - sugestão de optativas"]
-    E --> D
-    D -->|"3. consulta"| A
+flowchart LR
+    E["Estudante"]
+    N["No Fluxo UnB<br/>Aplicação web"]
+    D["Dados curriculares<br/>e serviços de dados"]
+    IA["Recursos auxiliares<br/>de IA"]
+
+    E -->|"Histórico (PDF ou dados manuais) e ações"| N
+    N -->|"Fluxograma e plano de formatura"| E
+    D <-->|"Dados necessários ao fluxo"| N
+    N -.->|"Quando acionados"| IA
 ```
 
-*Figura 4 - Diagrama de contexto do fluxo avaliado. Fonte: elaboração da equipe.*
+*Figura 4 — Diagrama de contexto do No Fluxo UnB. Fonte: elaboração da equipe com base no fluxo observado e na documentação pública do projeto.*
 
-### 3.6 Arquitetura
+## 5. Diagrama de arquitetura lógica
+
+A arquitetura abaixo organiza os componentes documentados por responsabilidade. As setas indicam relações conceituais; não devem ser interpretadas como confirmação da topologia de produção ou de todas as chamadas realizadas pelo sistema.
 
 ```mermaid
-graph TB
-    subgraph Cliente["Navegador do aluno"]
-        FE["Frontend SvelteKit (PWA)<br/>leitura do PDF com PDF.js"]
+flowchart TB
+    U["Estudante"]
+    subgraph APRES["Camada de apresentação"]
+        FE["Frontend web<br/>navegador e interface"]
     end
-    subgraph Servicos["Servicos do projeto"]
-        API["API Express / TypeScript<br/>Motor 2 - plano de formatura"]
-        AG["Darcy - servico Python FastAPI"]
+    subgraph SERV["Serviços da aplicação"]
+        BE["Backend<br/>API e regras da aplicação"]
+        AG["Agente / integrações auxiliares"]
     end
-    subgraph Plataforma["Plataforma de dados"]
-        SB[("Supabase<br/>Auth e PostgreSQL")]
+    subgraph DADOS["Dados e suporte"]
+        DB["Supabase / serviços de dados"]
+        CUR["Fontes e scripts de dados curriculares"]
     end
-    subgraph Externos["Provedores externos"]
-        MA["Maritaca - modelos Sabia"]
-        GE["Google - embeddings Gemini"]
-        SG["SIGAA UnB - paginas publicas"]
-    end
-    SJ["Scrapers Python<br/>GitHub Actions"]
-    FE -->|"login e consultas"| SB
-    FE -->|"gerar-plano"| API
-    API --> SB
-    API --> AG
-    API --> MA
-    AG --> MA
-    AG --> GE
-    AG --> SB
-    SJ --> SG
-    SJ --> SB
+    EXT["Serviços externos de IA"]
+
+    U <--> FE
+    FE <--> BE
+    BE <--> DB
+    CUR -->|"Preparação/atualização conceitual"| DB
+    BE -.->|"Se necessário"| AG
+    AG -.-> EXT
 ```
 
-*Figura 5 - Arquitetura do No Fluxo UnB. Fonte: elaboração da equipe, com base na documentação e no código do repositório (commit `87b5475`).*
+*Figura 5 — Visão lógica simplificada dos componentes. Fonte: elaboração da equipe a partir da estrutura pública do repositório; relações internas devem ser confirmadas para a versão efetivamente executada.*
 
-### 3.7 Como o plano de formatura é gerado
+## 6. Implicações para a avaliação
 
-1. Ao entrar na tela, o aluno responde ao onboarding (trabalha ou estagia, objetivo e limite de créditos).
-2. O frontend chama `POST /planejamento/gerar-plano`. O backend valida o login, lê o histórico, a matriz, os pré e co-requisitos, as equivalências e a oferta de turmas do período.
-3. O Motor 2 calcula uma prioridade para cada disciplina pendente: obrigatórias, dependentes diretos e transitivos e disciplinas atrasadas pontuam mais. Em seguida, distribui as disciplinas por semestre de forma gulosa, respeitando pré-requisitos, horas e dificuldade, com teto interno de 480 h por semestre. Optativas e complementares entram como espaços (slots) de carga horária.
-4. A resposta traz o semestre em curso, os semestres futuros, a formatura estimada e o resumo de integralização. Disciplinas em que o aluno está matriculado são tratadas como aprovadas para planejar os semestres seguintes.
+| Característica | O que é possível observar | O que não será possível concluir com este recorte |
+|---|---|---|
+| **Adequação Funcional** | Comparar planos gerados para cenários controlados com uma matriz curricular e resultados esperados definidos previamente. | Que todos os planos, cursos, históricos ou combinações possíveis estão corretos. |
+| **Usabilidade** | Observar se participantes conseguem completar tarefas no fluxo e interpretar as informações da tela de planejamento. | Que os resultados representam todos os estudantes da UnB ou todos os dispositivos. |
+| **Segurança** | Fazer inspeção não invasiva do fluxo e dos controles observáveis, usando dados sintéticos e código público quando pertinente. | Que o sistema está livre de vulnerabilidades ou que passou por uma auditoria de segurança. |
 
-### 3.8 Limitações conhecidas
+## 7. Restrições de execução
 
-Pontos observados no código e na documentação do projeto. Cada um é uma **hipótese a ser testada** nas Fases 2 a 4, não um defeito confirmado.
+- A equipe usará dados sintéticos ou dados de teste autorizados, sem expor históricos de terceiros.
+- Não serão realizados testes de invasão, tentativas de contornar autenticação ou testes de carga na aplicação em produção.
+- A versão do site e o código público podem divergir; quando houver inspeção do código, a equipe registrará o commit e a data analisados.
 
-| Observação | Por que importa para a avaliação |
-| :--- | :--- |
-| O onboarding pergunta se o aluno trabalha e qual é seu objetivo, e envia as respostas ao backend. No serviço do Motor 2, esses campos aparecem apenas como valores padrão e não entram na seleção das disciplinas. | Funcionalidade que pode não ter efeito no plano (adequação funcional). |
-| Matrícula em andamento conta como aprovação nos semestres futuros. | O plano pode ficar incorreto se o aluno reprovar; vale checar se isso fica claro na interface. |
-| Se a lista de disciplinas não alocadas vier vazia, isso não prova que todas as obrigatórias entraram no plano. | O plano pode omitir disciplinas sem aviso. |
-| Em alguns casos, uma disciplina pode ser alocada sem a sua co-requisitada. | Possível violação de regra da matriz. |
-| A expansão de equivalências é feita em uma única passada e filtrada por curso, sem considerar a vigência. | Casos de equivalência encadeada ou de matriz antiga podem sair errados. |
-| Se a consulta ao período letivo falhar, o período atual é estimado pela data do sistema. | O semestre de partida do plano pode divergir do calendário oficial. |
-| A dificuldade ("Dif.") de cada disciplina vem de avaliações e pode usar modelo de linguagem. | O rótulo exibido pode variar e não ser reprodutível. |
+## 8. Limitações conhecidas
 
-Fonte: `docs/kb/subsystems/backend-api-and-motor2.md` e `backend/src/services/plano_formatura.service.ts`, commit `87b5475`.
-
-## 4. Implicações para a avaliação
-
-Quadro preliminar, a ser refinado em [Escopo](escopo.md) e nas Fases 2 e 3.
-
-| Dá para medir agora | Não dá para medir agora (e por quê) |
-| :--- | :--- |
-| Correção do plano gerado em relação à matriz oficial (pré-requisitos, co-requisitos, horas, formatura estimada), com conta e históricos de teste. | Capacidade e carga em produção: a infraestrutura é de terceiros e há limite de requisições; testes de carga não são autorizados. |
-| Desempenho percebido no navegador (tempo de geração e de renderização do plano), com poucas repetições. | Segurança por teste intrusivo: não autorizado. Fica restrita à leitura do código e à observação passiva. |
-| Manutenibilidade por análise estática do código público (GPL-3.0), incluindo o Motor 2 e os mais de 140 arquivos de teste do repositório. | Respostas do Darcy de forma reprodutível: dependem de modelo de linguagem, cota diária e custo. |
-| Compatibilidade com navegadores e tamanhos de tela, e acessibilidade básica. | Históricos reais de outros alunos: exigem consentimento e proteção de dados pessoais. |
-| Confronto entre o que o onboarding promete e o que o plano faz com as respostas. | Garantir que a produção executa exatamente o código do repositório. |
+1. **Representatividade:** os testes cobrirão cenários escolhidos pela equipe, não todas as matrizes curriculares da UnB.
+2. **Dependências externas:** falhas ou mudanças em serviços de terceiros podem influenciar o comportamento observado e não serão atribuídas automaticamente ao código do produto.
+3. **Visibilidade interna:** a observação pela interface não revela todos os cálculos e estados internos; conclusões sobre o algoritmo exigem evidência adicional no código ou em testes controlados.
+4. **Segurança:** uma inspeção limitada identifica apenas aspectos observáveis e não substitui teste de penetração ou auditoria especializada.
 
 ---
 
 ## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :--- | :--- |
+|---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Preenchimento com os dados do No Fluxo UnB | 15/10 | [559e7a9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/559e7a94f159c2caeb4dc9d5996ba9392d0862ac) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |

@@ -20,3 +20,4 @@ Aqui dividimos o uso de IA para todos os integrantes do grupo
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Uso de IA | 16/10 | [01ff8c0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/01ff8c068acf9852cc2864b581c2cfdf57f3c98c) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da tabela de declaração por integrante | 16/10 | [0c2d9f6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0c2d9f6fde47aac27495fd2db2f1bc4ddf610677) |
 | [Gabriel Mota](https://github.com/Gabro-MO) | Adição do meu uso de IA | 18/10 | [Preencher]() |
+| [Ana Beatriz Souza Araujo](https://github.com/AnnaBeatrizAraujo) | Atualização da declaração de uso de inteligência artificial | 18/10 | [3316e1f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3316e1f059c4d039606cb813ef5fa96c00d5d17e) |

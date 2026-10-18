@@ -12,12 +12,12 @@ A tabela a seguir apresenta a amostragem das Issues cadastradas no repositório 
 
 | ID da Issue | Título da Tarefa | Atribuído a | Estado | Data de Abertura | Data de Conclusão |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **#1** | Introdução e Referencial Teórico | Yasmin e Gustavo | Concluída | 15/10/2026 | 18/10/2026 |
-| **#2** | Objetivos, Questões e Métricas (GQM) | Gabriel e Giovani | Em andamento | 15/10/2026 | - |
-| **#3** | Gráfico Hierárquico GQM | Gabriel e Giovani | Aberta | 15/10/2026 | - |
-| **#4** | Configurar Gestão PSM/CID | Ana Beatriz e Victor | Em andamento | 15/10/2026 | - |
-| **#5** | Estruturar GitPage | Yasmin e Gustavo | Em andamento | 15/10/2026 | - |
-| **#6** | Compilar 1ª Versão em LaTeX | Ana Beatriz e Victor | Em andamento | 15/10/2025 | - |
+| [**#1**](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/1) | Introdução e Referencial Teórico | Yasmin e Gustavo | Em andamento | 15/10/2026 | |
+| [**#2**](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/2) | Objetivos, Questões e Métricas (GQM) | Gabriel e Giovani | Concluída | 15/10/2026 | 18/10/2026 |
+| [**#3**](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/3) | Gráfico Hierárquico GQM | Gabriel e Giovani | Concluída | 15/10/2026 | 18/10/2026 |
+| [**#4**](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/4) | Configurar Gestão PSM/CID | Ana Beatriz e Victor | Concluída | 15/10/2026 | 18/10/2026|
+| [**#5**](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/5) | Estruturar GitPage | Yasmin e Gustavo | Concluída | 15/10/2026 | 18/10/2026 |
+| [**#6**](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/6) | Compilar 1ª Versão em LaTeX | Ana Beatriz e Victor | Em andamento | 15/10/2025 | - |
 
 Os dados devem ser atualizados conforme o estado real das Issues no repositório.
 
@@ -25,9 +25,9 @@ Os dados devem ser atualizados conforme o estado real das Issues no repositório
 
 O acompanhamento dos marcos do projeto é realizado diretamente na infraestrutura do repositório Git.
 
-- **Milestone Ativo:** Milestone 1 (Fase 1 — Definição e Caracterização).
+- **Milestone Ativo:** [Milestone 1 (Entrega 1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/milestone/1).
 - **Prazo Limite do Marco:** 18/10/2026.
-- **Status do Progresso:** 1 de 6 Issues concluídas (TCT = 16,67%).
+- **Status do Progresso:** 4 de 6 Issues concluídas (TCT = 66,67%).
 
 A Taxa de Conclusão de Tarefas (TCT) é calculada pela razão entre o número de Issues concluídas e o total de Issues planejadas, multiplicada por 100.
 
@@ -55,3 +55,4 @@ Os resultados observados deverão ser interpretados considerando o planejamento,
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização da página | 15/10/2026 | [e2f479f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e2f479f359f3d6d70d4b4e3ddc55e29e50edb7d4) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização das tabelas de Issues e Milestones | 16/10/2026 | [b67ec2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b67ec2c61c4df05d6c193b73a98f3b8eeaac7c32) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Organização da seção Gestão do Projeto | 16/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização do progresso das issues | 18/10/2026 | |

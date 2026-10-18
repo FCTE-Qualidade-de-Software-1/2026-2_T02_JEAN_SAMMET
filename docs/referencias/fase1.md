@@ -1,6 +1,6 @@
-# Referencias fase 1
+# Referências fase 1
 
-## Caracteristicas de Qualidade
+## Características de Qualidade
 
 - INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25010**: Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - System and software quality models. Geneva: ISO, [ano da versão usada].
 
@@ -31,5 +31,5 @@
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Referencias | 16/10 | [2b37ced](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2b37ced72e456281e01f064c4b83ef9681fe1eeb) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da página de Referências | 16/10 | [2b37ced](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2b37ced72e456281e01f064c4b83ef9681fe1eeb) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Referencias da ODS | 16/10 | [755c71b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/755c71b53dd286fc04ae51b4d6c55bfdbc8231b0) |

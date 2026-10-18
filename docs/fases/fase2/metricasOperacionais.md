@@ -6,7 +6,7 @@ Para garantir legibilidade, profundidade técnica e facilidade de consulta, a do
 
 ---
 
-## 📑 Navegação pelas Páginas da Fase 2 (Operacionais)
+## Navegação pelas Páginas da Fase 2 (Operacionais)
 
 | Seção / Página | Foco e Conteúdo Principal | Métricas Relacionadas |
 | :--- | :--- | :---: |
@@ -17,7 +17,7 @@ Para garantir legibilidade, profundidade técnica e facilidade de consulta, a do
 
 ---
 
-## 🎯 Resumo da Estrutura GQM Operacional
+## Resumo da Estrutura GQM Operacional
 
 ```mermaid
 graph TD
@@ -36,9 +36,15 @@ graph TD
 
 ---
 
-## 🔗 Integração com as Métricas Funcionais
+## Integração com as Métricas Funcionais
 
-As métricas operacionais complementam diretamente as métricas de adequação funcional ([Métricas Funcionais](metricasFuncionais.md)). A correlação entre a proteção dos dados dos estudantes, a clareza da interface e a conformidade do plano com as regras acadêmicas da UnB assegura a validade global da avaliação segundo o processo **ISO/IEC 25040**.
+As métricas operacionais complementam diretamente as métricas de adequação funcional ([Métricas Funcionais](funcionais/visaoGeral.md)). A correlação entre a proteção dos dados dos estudantes, a clareza da interface e a conformidade do plano com as regras acadêmicas da UnB assegura a validade global da avaliação segundo o processo **ISO/IEC 25040**.
+
+---
+
+## Referências Bibliográficas
+
+As referências metodológicas, normativas técnicas (ISO/IEC e ISO 9241), diretrizes de segurança (OWASP) e legislação de proteção de dados (LGPD) que fundamentam a especificação destas métricas encontram-se compiladas em [Referências da Fase 2](../../referencias/fase2.md).
 
 ---
 
@@ -49,3 +55,5 @@ As métricas operacionais complementam diretamente as métricas de adequação f
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Modularização das páginas operacionais em subdocumentos especializados e estruturação do índice geral | 16/10 | [f8219c0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f8219c0) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste do sumário de métricas operacionais para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de emojis nos títulos e correção de link relativo para métricas funcionais | 18/10 | [6686c04](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6686c04) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de seção com vínculo para as referências bibliográficas da Fase 2 | 18/10 | [6686c04](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6686c04) |

@@ -13,9 +13,9 @@ A definição das métricas operacionais decorre diretamente dos artefatos conso
    - **Mantenedores do Software (Crianex):** necessitam de evidências objetivas sobre a facilidade de uso da interface e a resiliência de segurança contra vulnerabilidades em dependências e requisições desprotegidas.
    - **Equipe Avaliadora:** necessita de indicadores reprodutíveis para fundamentar a escolha e implementação da ação de melhoria na Entrega 2.
 2. **Priorização de Características ([Características de Qualidade](../../fase1/caracteristicasDeQualidade.md)):**
-   - *Adequação Funcional:* Prioridade 1 (Pontuação: 20) — avaliada em [Métricas Funcionais](../metricasFuncionais.md).
-   - *Usabilidade:* Prioridade 2 (Pontuação: 16) — foco em Operabilidade e Apreensibilidade.
-   - *Segurança:* Prioridade 3 (Pontuação: 12) — foco em Confidencialidade, Integridade de Dependências e Controle de Acesso.
+   - *Adequação Funcional:* Prioridade 1 (Pontuação: 20) — avaliada em [Métricas Funcionais](../funcionais/visaoGeral.md).
+   - *Segurança:* Prioridade 2 (Pontuação: 15) — foco em Confidencialidade, Integridade de Dependências e Controle de Acesso.
+   - *Usabilidade:* Prioridade 3 (Pontuação: 12) — foco em Operabilidade e Apreensibilidade.
 3. **Escopo e Limites Operacionais ([Escopo](../../fase1/escopo.md)):**
    - Objetos delimitados na interface SvelteKit (`/plano-formatura`), no armazenamento do cliente (`localStorage`), nos endpoints protegidos (`POST /planejamento/gerar-plano`) e nas dependências de software via SCA (`npm audit`).
    - Exclusão de testes de invasão destrutivos e uso exclusivo de históricos acadêmicos sintéticos.
@@ -24,7 +24,7 @@ A definição das métricas operacionais decorre diretamente dos artefatos conso
 
 ## 2. Hipóteses Operacionais Documentadas
 
-Com base nas limitações técnicas conhecidas levantadas na Fase 1 ([Software Escolhido](../../fase1/softwareEscolhido.md#38-limitacoes-conhecidas)), formularam-se as seguintes hipóteses a serem testadas:
+Com base nas limitações técnicas conhecidas levantadas na Fase 1 ([Software Escolhido](../../fase1/softwareEscolhido.md#8-limitacoes-conhecidas)), formularam-se as seguintes hipóteses a serem testadas:
 
 | ID | Característica | Hipótese Documentada | Risco Associado | Métrica Relacionada |
 | :---: | :--- | :--- | :--- | :---: |
@@ -83,7 +83,7 @@ Para assegurar clareza, profundidade técnica e facilidade de leitura, a especif
 
 ## 5. Integração com as Métricas Funcionais
 
-A avaliação do No Fluxo UnB adota uma abordagem holística, cruzando os achados operacionais com os funcionais ([Métricas Funcionais](../metricasFuncionais.md)):
+A avaliação do No Fluxo UnB adota uma abordagem holística, cruzando os achados operacionais com os funcionais ([Métricas Funcionais](../funcionais/visaoGeral.md)):
 
 ```mermaid
 graph LR
@@ -97,6 +97,12 @@ graph LR
 
 ---
 
+## 6. Referências Bibliográficas
+
+As referências metodológicas (GQM), normativas técnicas internacionais (ISO/IEC 25010, ISO/IEC 25023, ISO/IEC 25040, ISO 9241-11), diretrizes de segurança (OWASP Top 10) e legislação de proteção de dados (LGPD) que sustentam esta especificação estão consolidadas na página de [Referências da Fase 2](../../../referencias/fase2.md).
+
+---
+
 ## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
@@ -104,3 +110,5 @@ graph LR
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da visão geral, modelo GQM operacional, hipóteses e matriz de rastreabilidade | 16/10 | [b4e71a0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b4e71a0) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste da estrutura GQM operacional para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Alinhamento da prioridade e pontuação com a Fase 1 e correção de links relativos | 18/10 | [6686c04](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6686c04) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de seção com vínculo para as referências bibliográficas da Fase 2 | 18/10 | [6686c04](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6686c04) |

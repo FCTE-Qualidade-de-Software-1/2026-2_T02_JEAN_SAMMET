@@ -14,6 +14,7 @@ Para garantir legibilidade, profundidade técnica e facilidade de consulta, a do
 | **[2. Métricas de Usabilidade](operacionais/usabilidade.md)** | Avaliação da facilidade de compreensão e uso por estudantes da UnB, definição das tarefas $T_1$, $T_2$ e $T_3$, fichas metodológicas e critérios ergonômicos da ISO 9241-11. | `MET-OP-01`<br>`MET-OP-01b` |
 | **[3. Métricas de Segurança](operacionais/seguranca.md)** | Análise de composição de software (SCA via `npm audit`), inspeção de armazenamento do cliente (`localStorage`), validação de bloqueio em rotas protegidas e conformidade com LGPD/OWASP. | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
 | **[4. Protocolo de Coleta e Condições de Teste](operacionais/protocolo.md)** | Ficha padronizada de ambiente de hardware e software, roteiro detalhado para condução dos testes com alunos, comandos de auditoria e testes de chamadas não autenticadas. | Todas |
+| **[5. Referências](operacionais/referencias.md)** | Referências bibliográficas, normas técnicas (ISO/IEC, ISO 9241), frameworks de segurança (OWASP) e legislação de proteção de dados (LGPD). | Todas |
 
 ---
 
@@ -44,7 +45,7 @@ As métricas operacionais complementam diretamente as métricas de adequação f
 
 ## Referências Bibliográficas
 
-As referências metodológicas, normativas técnicas (ISO/IEC e ISO 9241), diretrizes de segurança (OWASP) e legislação de proteção de dados (LGPD) que fundamentam a especificação destas métricas encontram-se compiladas em [Referências da Fase 2](../../referencias/fase2.md).
+As referências metodológicas, normativas técnicas (ISO/IEC e ISO 9241), diretrizes de segurança (OWASP) e legislação de proteção de dados (LGPD) que fundamentam a especificação destas métricas encontram-se detalhadas em [Referências das Métricas Operacionais](operacionais/referencias.md) e consolidadas na página geral de [Referências da Fase 2](../../referencias/fase2.md).
 
 ---
 

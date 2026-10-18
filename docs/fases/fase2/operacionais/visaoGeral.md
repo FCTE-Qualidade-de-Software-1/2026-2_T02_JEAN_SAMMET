@@ -78,6 +78,7 @@ Para assegurar clareza, profundidade técnica e facilidade de leitura, a especif
 1. **[Métricas de Usabilidade](usabilidade.md):** detalhamento das tarefas-chave de usuário ($T_1$, $T_2$, $T_3$), métricas `MET-OP-01` e `MET-OP-01b`, análise de barreiras de affordance e critérios ergonômicos da ISO 9241-11.
 2. **[Métricas de Segurança](seguranca.md):** auditoria de dependências via SCA (`MET-OP-02`), inspeção de persistência no navegador (`MET-OP-02b`), testes de controle de acesso a endpoints (`MET-OP-02c`) e alinhamento com OWASP Top 10 e LGPD.
 3. **[Protocolo de Coleta e Teste](protocolo.md):** fichas padronizadas de registro de ambiente, roteiro experimental para sessões de usabilidade, procedimentos de inspeção de storage e execução do `npm audit`.
+4. **[Referências](referencias.md):** compilação padronizada de todas as referências bibliográficas, normas internacionais (ISO/IEC e ISO 9241), diretrizes do OWASP Top 10 e legislação de privacidade (LGPD).
 
 ---
 
@@ -99,7 +100,7 @@ graph LR
 
 ## 6. Referências Bibliográficas
 
-As referências metodológicas (GQM), normativas técnicas internacionais (ISO/IEC 25010, ISO/IEC 25023, ISO/IEC 25040, ISO 9241-11), diretrizes de segurança (OWASP Top 10) e legislação de proteção de dados (LGPD) que sustentam esta especificação estão consolidadas na página de [Referências da Fase 2](../../../referencias/fase2.md).
+As referências metodológicas (GQM), normativas técnicas internacionais (ISO/IEC 25010, ISO/IEC 25023, ISO/IEC 25040, ISO 9241-11), diretrizes de segurança (OWASP Top 10) e legislação de proteção de dados (LGPD) que sustentam esta especificação estão detalhadas em [Referências das Métricas Operacionais](referencias.md) e consolidadas na página geral de [Referências da Fase 2](../../../referencias/fase2.md).
 
 ---
 

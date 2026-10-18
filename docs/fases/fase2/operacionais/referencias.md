@@ -32,6 +32,10 @@ NO FLUXO UNB. **No Fluxo UnB**. Crianex, [s. d.]. Disponível em: <https://no-fl
 
 UNIVERSIDADE DE BRASÍLIA (UnB). **Projeto Pedagógico do Curso de Bacharelado em Engenharia de Software**. Faculdade UnB Gama (FGA). Matriz Curricular 6360/1 (Fluxo 2017.1). Brasília: UnB/FGA, 2017. Disponível em: <https://fga.unb.br/software/ppc>. Acesso em: 18 out. 2026.
 
+---
+
+## Histórico de versão
+
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Adição das referências bibliográficas para as métricas operacionais | 18/10/2026 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |

@@ -4,7 +4,7 @@ Aqui quebramos o uso de ia para todos os integrantes do grupo
 ## 2. Declaração por integrante
 
 | Integrante | Ferramenta | Tarefa | Como conferiu / Ajustou |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | [Ana Beatriz Souza Araujo](https://github.com/AnnaBeatrizAraujo) | [preencher] | [preencher] | [preencher] |
 | [Gabriel Mota Oliveira](https://github.com/Gabro-MO) | [preencher] | [preencher] | [preencher] | [preencher] |
 | [Gustavo Gomes Fornaciari](https://github.com/gugofo) | Claude | Organização do Repositório e Melhoria no texto | A IA criou pastas desnecessárias e que eu não havia pedido, ajustei para que ficasse como eu desejada. Alem disso, utilizei ela para melhorar e organizar meus pensamentos de como desenvolver o projeto na fase 1, fazendo ela organizar e deixar de maneira mais coerente oque eu tinha em mente |

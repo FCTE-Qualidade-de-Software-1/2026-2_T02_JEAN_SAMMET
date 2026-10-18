@@ -12,4 +12,4 @@
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Referencias | 16/10 | [2b37ced](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2b37ced72e456281e01f064c4b83ef9681fe1eeb) |
-| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Adição das referêcias | 18/10 | |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Adição das referências bibliográficas do PSM/CID | 18/10 | [5621c69](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/5621c69fca27b6b1175c4203285c143b59d17bd6) |

@@ -21,6 +21,7 @@ nav:
             - Sumário: fases/fase2/funcionais/visaoGeral.md
             - Visão Geral (GQM): fases/fase2/funcionais/GQM.md
             - Protocolo de Coleta e Teste: fases/fase2/funcionais/testes.md
+            - Referências: fases/fase2/funcionais/referencias.md
         - Métricas Operacionais:
             - Sumário: fases/fase2/metricasOperacionais.md
             - Visão Geral (GQM): fases/fase2/operacionais/visaoGeral.md
@@ -39,10 +40,7 @@ nav:
     - Fase 1: criterios/fase1.md
     - Fase 2: criterios/fase2.md
   - Equipe: equipe/equipe.md
-  - Uso de IA:
-    - Fase 1: usoDeIA/fase1.md
-    - Fase 2: usoDeIA/fase2.md
-    - PSM: usoDeIA/psm.md
+  - Uso de IA: usoDeIA/IA.md
   - Referências:
     - Fase 1: referencias/fase1.md
     - Fase 2: referencias/fase2.md

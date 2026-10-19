@@ -1,0 +1,2509 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação Grupo 5 Jean Sammet">
+      
+      
+        <meta name="author" content="Grupo 05">
+      
+      
+        <link rel="canonical" href="https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/fases/fase2/operacionais/seguranca/">
+      
+      
+        <link rel="prev" href="../usabilidade/">
+      
+      
+        <link rel="next" href="../protocolo/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Segurança - Jean Sammet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#metricas-de-seguranca" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Jean Sammet" class="md-header__button md-logo" aria-label="Jean Sammet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jean Sammet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Segurança
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Modo Noturno"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo Noturno" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Modo Claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jean Sammet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../metodologia/visaoGeral/" class="md-tabs__link">
+          
+  
+  
+  Metodologia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../fase1/propositoEStakeholders/" class="md-tabs__link">
+          
+  
+  
+  Fases
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../gestaoProjeto/psm-cid/" class="md-tabs__link">
+          
+  
+  
+  Gestão do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../criterios/premissasIniciais/" class="md-tabs__link">
+          
+  
+  
+  Critérios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../equipe/equipe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Equipe
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../usoDeIA/IA/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Uso de IA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../referencias/fase1/" class="md-tabs__link">
+          
+  
+  
+  Referências
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Jean Sammet" class="md-nav__button md-logo" aria-label="Jean Sammet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jean Sammet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jean Sammet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodologia
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metodologia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/visaoGeral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/processoSquare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processo de Avaliação (SQuaRE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/fluxoDeTrabalho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização e Fluxo de Trabalho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/elaboracaoArtigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elaboração do Artigo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/propositoEStakeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito e Stakeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/softwareEscolhido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Escolhido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/modeloDeQualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/caracteristicasDeQualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Características de Qualidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/escopo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/ODS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ODS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Funcionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Funcionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionais/visaoGeral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionais/GQM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral (GQM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionais/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo de Coleta e Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funcionais/referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metricasOperacionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visaoGeral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral (GQM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-caracteristica-e-subcaracteristicas-avaliadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Característica e Subcaracterísticas Avaliadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-questao-gqm-e-hipotese-associada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Questão GQM e Hipótese Associada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Questão GQM e Hipótese Associada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questao-gqm-q-op-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questão GQM: Q-OP-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipotese-operacional-h-op-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese Operacional: H-OP-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fichas-completas-das-metricas-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Fichas Completas das Métricas de Segurança
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Fichas Completas das Métricas de Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ficha-da-metrica-principal-met-op-02-densidade-de-vulnerabilidades-conhecidas-em-dependencias-dvcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficha da Métrica Principal: MET-OP-02 — Densidade de Vulnerabilidades Conhecidas em Dependências (DVCD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ficha-da-metrica-complementar-met-op-02b-grau-de-exposicao-de-dados-pessoais-no-cliente-ged-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficha da Métrica Complementar: MET-OP-02b — Grau de Exposição de Dados Pessoais no Cliente (GED-C)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ficha-da-metrica-complementar-met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autenticadas-tbr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficha da Métrica Complementar: MET-OP-02c — Taxa de Bloqueio de Requisições Não Autenticadas (TBR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-alinhamento-com-padroes-de-seguranca-da-informacao-e-lgpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Alinhamento com Padrões de Segurança da Informação e LGPD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protocolo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo de Coleta e Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/psm-cid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/calendario-progresso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendário e Progresso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/recursos-custos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos e Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/desempenho-processo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desempenho do Processo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/acompanhamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acompanhamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critérios
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Critérios
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/premissasIniciais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Premissas Iniciais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../equipe/equipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../usoDeIA/IA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referências
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../referencias/fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../referencias/fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../referencias/psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-caracteristica-e-subcaracteristicas-avaliadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Característica e Subcaracterísticas Avaliadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-questao-gqm-e-hipotese-associada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Questão GQM e Hipótese Associada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Questão GQM e Hipótese Associada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questao-gqm-q-op-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questão GQM: Q-OP-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipotese-operacional-h-op-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese Operacional: H-OP-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fichas-completas-das-metricas-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Fichas Completas das Métricas de Segurança
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Fichas Completas das Métricas de Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ficha-da-metrica-principal-met-op-02-densidade-de-vulnerabilidades-conhecidas-em-dependencias-dvcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficha da Métrica Principal: MET-OP-02 — Densidade de Vulnerabilidades Conhecidas em Dependências (DVCD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ficha-da-metrica-complementar-met-op-02b-grau-de-exposicao-de-dados-pessoais-no-cliente-ged-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficha da Métrica Complementar: MET-OP-02b — Grau de Exposição de Dados Pessoais no Cliente (GED-C)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ficha-da-metrica-complementar-met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autenticadas-tbr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficha da Métrica Complementar: MET-OP-02c — Taxa de Bloqueio de Requisições Não Autenticadas (TBR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-alinhamento-com-padroes-de-seguranca-da-informacao-e-lgpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Alinhamento com Padrões de Segurança da Informação e LGPD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="metricas-de-seguranca">Métricas de Segurança<a class="headerlink" href="#metricas-de-seguranca" title="Permanent link">&para;</a></h1>
+<p>Este documento detalha a especificação das perguntas, hipóteses e métricas de <strong>Segurança</strong> para a funcionalidade <em>Planejar formatura</em> do No Fluxo UnB, focando na proteção da privacidade dos dados acadêmicos dos estudantes, no controle de acesso a rotas de serviço e na integridade da cadeia de suprimentos de software.</p>
+<hr />
+<h2 id="1-caracteristica-e-subcaracteristicas-avaliadas">1. Característica e Subcaracterísticas Avaliadas<a class="headerlink" href="#1-caracteristica-e-subcaracteristicas-avaliadas" title="Permanent link">&para;</a></h2>
+<p>Conforme o <a href="../../../fase1/modeloDeQualidade/">Modelo de Qualidade</a> fundamentado na norma <strong>ISO/IEC 25010:2011</strong>, a característica de <strong>Segurança</strong> é avaliada por meio de três subcaracterísticas essenciais para a operação do software:</p>
+<ol>
+<li><strong>Confidencialidade (<em>Confidentiality</em>):</strong> grau em que o software garante que dados acadêmicos e identificadores pessoais dos alunos (matrícula, notas, histórico escolar e reprovações) sejam acessíveis exclusivamente por partes autorizadas, prevenindo exposição indevida no ambiente do cliente (<em>browser storage</em>).</li>
+<li><strong>Autenticidade e Controle de Acesso (<em>Authenticity and Access Control</em>):</strong> grau em que a identidade de usuários ou sessões pode ser comprovada e as requisições a serviços de processamento (<code>POST /planejamento/gerar-plano</code>) são estritamente restritas a sujeitos autenticados, rejeitando chamadas anônimas.</li>
+<li><strong>Integridade da Cadeia de Dependências (<em>Software Supply Chain Integrity</em>):</strong> grau em que os componentes de terceiros e bibliotecas de código aberto que compõem o frontend e backend estão livres de vulnerabilidades conhecidas e exploráveis (CVEs documentadas).</li>
+</ol>
+<hr />
+<h2 id="2-questao-gqm-e-hipotese-associada">2. Questão GQM e Hipótese Associada<a class="headerlink" href="#2-questao-gqm-e-hipotese-associada" title="Permanent link">&para;</a></h2>
+<h3 id="questao-gqm-q-op-02">Questão GQM: <code>Q-OP-02</code><a class="headerlink" href="#questao-gqm-q-op-02" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>"A funcionalidade de planejamento de formatura resguarda adequadamente a confidencialidade dos dados acadêmicos e restringe o acesso aos seus serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?"</strong></p>
+</blockquote>
+<h3 id="hipotese-operacional-h-op-02">Hipótese Operacional: <code>H-OP-02</code><a class="headerlink" href="#hipotese-operacional-h-op-02" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Hipótese:</strong> O software manipula históricos acadêmicos com informações pessoais sensíveis no navegador e se comunica com serviços externos e de banco de dados (Supabase); a retenção não volátil de dados de históricos no armazenamento do cliente (<code>localStorage</code>) e a existência de bibliotecas desatualizadas na árvore de dependências do npm podem expor o sistema a vulnerabilidades conhecidas de severidade moderada a alta.</p>
+</blockquote>
+<hr />
+<h2 id="3-fichas-completas-das-metricas-de-seguranca">3. Fichas Completas das Métricas de Segurança<a class="headerlink" href="#3-fichas-completas-das-metricas-de-seguranca" title="Permanent link">&para;</a></h2>
+<h3 id="ficha-da-metrica-principal-met-op-02-densidade-de-vulnerabilidades-conhecidas-em-dependencias-dvcd">Ficha da Métrica Principal: <code>MET-OP-02</code> — Densidade de Vulnerabilidades Conhecidas em Dependências (DVCD)<a class="headerlink" href="#ficha-da-metrica-principal-met-op-02-densidade-de-vulnerabilidades-conhecidas-em-dependencias-dvcd" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Especificação Metodológica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;"><code>MET-OP-02</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome da Métrica</strong></td>
+<td style="text-align: left;">Densidade de Vulnerabilidades Conhecidas em Dependências (DVCD)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Característica / Subcaracterística</strong></td>
+<td style="text-align: left;">Segurança — Integridade da Cadeia de Dependências (<em>Supply Chain Integrity</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pergunta GQM Relacionada</strong></td>
+<td style="text-align: left;"><code>Q-OP-02</code>: A funcionalidade de planejamento resguarda o acesso contra vulnerabilidades conhecidas?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1. Definição</strong></td>
+<td style="text-align: left;">Quantidade absoluta e ponderada de vulnerabilidades de segurança publicamente conhecidas (registradas na base nacional de vulnerabilidades / CVE) presentes na árvore de dependências diretas e transitivas do frontend e do backend, identificadas via Software Composition Analysis (SCA). Unidade: contagem inteira de CVEs por nível de severidade (<em>Critical</em>, <em>High</em>, <em>Moderate</em>, <em>Low</em>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Procedimento de Cálculo</strong></td>
+<td style="text-align: left;">Executa-se a auditoria automatizada de pacotes em ambos os módulos (<code>frontend/</code> e <code>backend/</code>). O índice de risco ponderado da aplicação ($IRP$) é computado por:<br><br>$$IRP = (10 \times N_{\text{crítica}}) + (5 \times N_{\text{alta}}) + (2 \times N_{\text{moderada}}) + (1 \times N_{\text{baixa}})$$<br>Onde $N_s$ representa o número de vulnerabilidades encontradas no nível de severidade $s$.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Fonte dos Dados</strong></td>
+<td style="text-align: left;">Relatórios automatizados gerados em formato JSON pelo utilitário oficial <code>npm audit --json</code> executado sobre os arquivos de manifesto <code>package.json</code> e de lockfile <code>package-lock.json</code> no commit de referência <code>87b5475</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Procedimento de Coleta</strong></td>
+<td style="text-align: left;">1. Clonar o repositório público no commit delimitado.<br>2. Navegar separadamente aos diretórios <code>frontend</code> e <code>backend</code>.<br>3. Executar o comando <code>npm audit --json &gt; audit-report.json</code>.<br>4. Parsear os relatórios identificando os identificadores GHSA/CVE, pacotes afetados, severidade e disponibilidade de correção sem quebra de API (<em>breaking changes</em>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Critérios de Interpretação e Níveis de Julgamento</strong></td>
+<td style="text-align: left;">- <strong>Nível Excelente:</strong> $N_{\text{crítica}} = 0$, $N_{\text{alta}} = 0$ e $IRP \le 5$. Ausência de vulnerabilidades de alto impacto explorável.<br>- <strong>Nível Aceitável:</strong> $N_{\text{crítica}} = 0$, $N_{\text{alta}} \le 2$ (desde que restritas a dependências de desenvolvimento sem exposição em runtime de produção) e $IRP \le 20$.<br>- <strong>Nível Crítico / Inaceitável:</strong> $N_{\text{crítica}} \ge 1$ ou $N_{\text{alta}} &gt; 2$ em dependências de produção. Indica exposição grave a vetores como execução remota de código (RCE), Prototype Pollution ou negação de serviço via dependência.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="ficha-da-metrica-complementar-met-op-02b-grau-de-exposicao-de-dados-pessoais-no-cliente-ged-c">Ficha da Métrica Complementar: <code>MET-OP-02b</code> — Grau de Exposição de Dados Pessoais no Cliente (GED-C)<a class="headerlink" href="#ficha-da-metrica-complementar-met-op-02b-grau-de-exposicao-de-dados-pessoais-no-cliente-ged-c" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Especificação Metodológica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;"><code>MET-OP-02b</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome da Métrica</strong></td>
+<td style="text-align: left;">Grau de Exposição de Dados Pessoais no Cliente (GED-C)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Característica / Subcaracterística</strong></td>
+<td style="text-align: left;">Segurança — Confidencialidade (<em>Confidentiality</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pergunta GQM Relacionada</strong></td>
+<td style="text-align: left;"><code>Q-OP-02</code>: A funcionalidade de planejamento resguarda adequadamente a confidencialidade dos dados acadêmicos?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1. Definição</strong></td>
+<td style="text-align: left;">Mede a presença e persistência indevida de dados pessoais identificáveis (PII) e informações acadêmicas confidenciais (número de matrícula, nome do estudante, IRA, histórico de notas e reprovações) armazenados em texto claro em mecanismos de persistência do navegador (<code>localStorage</code>, <code>sessionStorage</code> ou cookies desprovidos da flag <code>HttpOnly</code>). Unidade: contagem de chaves/atributos sensíveis retidos sem criptografia.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Procedimento de Cálculo</strong></td>
+<td style="text-align: left;">$$GED\text{-}C = \sum_{k \in S_{\text{armazenamento}}} \mathbb{I}(\text{contém_dado_sensível_em_claro}(k))$$<br>Onde $S_{\text{armazenamento}}$ é o conjunto de todas as chaves persistidas no navegador após o fluxo completo de upload de histórico e geração do plano, e $\mathbb{I}$ é a função indicadora que assume valor 1 caso o valor contenha PII desprotegida e 0 caso contrário.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Fonte dos Dados</strong></td>
+<td style="text-align: left;">Inspeção via console de desenvolvimento do navegador (painel <em>Application</em> do Chrome DevTools / Storage do Firefox Developer Edition) após a execução do fluxo padrão de uso com histórico sintético.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Procedimento de Coleta</strong></td>
+<td style="text-align: left;">1. Iniciar sessão em aba anônima e autenticar no No Fluxo UnB.<br>2. Realizar o upload do histórico acadêmico sintético e gerar o planejamento curricular.<br>3. Acessar <em>DevTools &gt; Application &gt; Storage</em> e inspecionar os namespaces <code>Local Storage</code>, <code>Session Storage</code> e <code>Cookies</code>.<br>4. Inspecionar o conteúdo de cada chave serializada e verificar se constam dados acadêmicos brutos persistidos além do token de autenticação de sessão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Critérios de Interpretação e Níveis de Julgamento</strong></td>
+<td style="text-align: left;">- <strong>Nível Conforme (Desejável):</strong> $GED\text{-}C = 0$. Nenhum dado acadêmico sensível (notas, matrícula, histórico completo) permanece persistido em texto claro no armazenamento permanente do cliente; apenas tokens temporários ou preferências de interface são retidos.<br>- <strong>Nível Não Conforme (Crítico):</strong> $GED\text{-}C \ge 1$. Existência de histórico acadêmico ou matrícula retida em texto claro no <code>localStorage</code>, violando princípios de minimização de dados e segurança da informação previstos na LGPD.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="ficha-da-metrica-complementar-met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autenticadas-tbr">Ficha da Métrica Complementar: <code>MET-OP-02c</code> — Taxa de Bloqueio de Requisições Não Autenticadas (TBR)<a class="headerlink" href="#ficha-da-metrica-complementar-met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autenticadas-tbr" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Especificação Metodológica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;"><code>MET-OP-02c</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome da Métrica</strong></td>
+<td style="text-align: left;">Taxa de Bloqueio de Requisições Não Autenticadas (TBR)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Característica / Subcaracterística</strong></td>
+<td style="text-align: left;">Segurança — Autenticidade e Controle de Acesso (<em>Access Control</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pergunta GQM Relacionada</strong></td>
+<td style="text-align: left;"><code>Q-OP-02</code>: As chamadas aos serviços de planejamento restringem adequadamente o acesso não autorizado?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1. Definição</strong></td>
+<td style="text-align: left;">Percentual de requisições de teste enviadas aos endpoints protegidos da funcionalidade de planejamento (<code>POST /planejamento/gerar-plano</code> e rotas correlatas de persistência) sem credencial de autenticação (cabeçalho <code>Authorization: Bearer &lt;token&gt;</code> ausente ou com token JWT inválido/expirado) que são terminantemente rejeitadas pelo backend com status HTTP 401 (<em>Unauthorized</em>) ou 403 (<em>Forbidden</em>). Unidade: percentual (%).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Procedimento de Cálculo</strong></td>
+<td style="text-align: left;">$$TBR = \left( \frac{N_{\text{bloqueios_corretos}}}{N_{\text{requisicoes_teste_invalidas}}} \right) \times 100$$<br>Onde:<br>- $N_{\text{bloqueios_corretos}}$: total de tentativas que retornaram status HTTP 401 ou 403 sem processamento do payload.<br>- $N_{\text{requisicoes_teste_invalidas}}$: total de requisições enviadas nos cenários de teste não autorizados (amostra de controle com $N \ge 10$ variações de headers).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Fonte dos Dados</strong></td>
+<td style="text-align: left;">Logs de respostas HTTP obtidos via requisições de teste controladas e não destrutivas executadas via <code>curl</code> ou Postman contra o endpoint da API.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Procedimento de Coleta</strong></td>
+<td style="text-align: left;">1. Formular payload padrão de planejamento de formatura.<br>2. Disparar chamadas variando os cenários: (a) ausência completa de header <code>Authorization</code>, (b) header com token malformado, (c) token expirado e (d) token assinado com chave espúria.<br>3. Registrar o status HTTP retornado e a presença ou ausência de dados de resposta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Critérios de Interpretação e Níveis de Julgamento</strong></td>
+<td style="text-align: left;">- <strong>Nível Conforme (Mandatório):</strong> $TBR = 100\%$. Todas as requisições não autenticadas ou inválidas são bloqueadas imediatamente, impedindo consumo indevido de processamento do algoritmo do Motor 2.<br>- <strong>Nível Crítico (Falha Grave):</strong> $TBR &lt; 100\%$. Qualquer cenário em que a rota processe os dados ou retorne código HTTP 200/500 sem autenticação válida é considerado vulnerabilidade crítica de controle de acesso (Broken Access Control - OWASP Top 10).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-alinhamento-com-padroes-de-seguranca-da-informacao-e-lgpd">4. Alinhamento com Padrões de Segurança da Informação e LGPD<a class="headerlink" href="#4-alinhamento-com-padroes-de-seguranca-da-informacao-e-lgpd" title="Permanent link">&para;</a></h2>
+<p>A avaliação de segurança orienta-se por normas consagradas:</p>
+<ol>
+<li><strong>OWASP Top 10 (2021):</strong></li>
+<li><strong>A01:2021 — Broken Access Control:</strong> coberto pela métrica <code>MET-OP-02c</code>, prevenindo que endpoints que exigem contexto de estudante autenticado possam ser acionados arbitrariamente.</li>
+<li><strong>A06:2021 — Vulnerable and Outdated Components:</strong> coberto pela métrica <code>MET-OP-02</code>, verificando se a árvore de pacotes de terceiros introduz brechas exploráveis.</li>
+<li><strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD):</strong></li>
+<li><strong>Princípio da Segurança e da Prevenção (Art. 6º, incisos VII e VIII):</strong> coberto pela métrica <code>MET-OP-02b</code>, mitigando o risco de que computadores de uso compartilhado em laboratórios da UnB retenham históricos e notas de estudantes anteriores em caches locais do navegador.</li>
+</ol>
+<hr />
+<h2 id="historico-de-versao">Histórico de versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nome do Membro</th>
+<th style="text-align: left;">Contribuição</th>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Commit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/Gotc2607">Giovani De Oliveira Teodoro Coelho</a></td>
+<td style="text-align: left;">Elaboração da especificação de segurança, fichas MET-OP-02, MET-OP-02b e MET-OP-02c e alinhamento com OWASP/LGPD</td>
+<td style="text-align: left;">16/10</td>
+<td style="text-align: left;"><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc">3584382</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

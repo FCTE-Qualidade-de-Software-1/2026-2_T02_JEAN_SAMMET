@@ -12,4 +12,4 @@
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Equipe | 16/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao das tarefas realizadas | 18/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao das tarefas realizadas | 18/10 | [75bf5ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/75bf5ba83e184dfae7fd2fb06cb3de3554ef19e2) |

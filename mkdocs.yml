@@ -8,6 +8,11 @@ site_author: Grupo 05
 
 nav:
   - Início: index.md
+  - Metodologia:
+    - Visão Geral: metodologia/visaoGeral.md
+    - Processo de Avaliação (SQuaRE): metodologia/processoSquare.md
+    - Organização e Fluxo de Trabalho: metodologia/fluxoDeTrabalho.md
+    - Elaboração do Artigo: metodologia/elaboracaoArtigo.md
   - Fases:
     - Fase 1:
         - Propósito e Stakeholders: fases/fase1/propositoEStakeholders.md

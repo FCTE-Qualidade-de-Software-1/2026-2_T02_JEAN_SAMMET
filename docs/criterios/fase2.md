@@ -23,4 +23,4 @@
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da página de critérios | 16/10 | [353f46e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/353f46ecd1a408d3474ea0dfa157aba62daabd70) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao da tabela | 16/10 | [516cc9f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/516cc9fb50634d1729db19c96a2c9883c676f5bd) |
-| [Gabriel Mota](https://github.com/Gabro-MO) | Atualizacao da tabela de CAs da fase 2| 18/10 | []() |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Atualizacao da tabela de CAs da fase 2| 18/10 | [d3ca47c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d3ca47cee00a782a6347cb5c63405300a4525bbb) |

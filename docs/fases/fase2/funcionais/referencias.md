@@ -17,4 +17,4 @@ NO FLUXO UNB. **No Fluxo UnB**. Crianex, [s. d.]. Disponível em: <https://no-fl
 
 | Nome do Membro                                                    | Contribuição                                                                                          | Data       | Commit                                                                                                                            |
 | :---------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| [Gabriel Mota](https://github.com/Gabro-MO)                       | Adição das referencias para as metricas funcionais | 18/10/2026 | [Preencher]() |
+| [Gabriel Mota](https://github.com/Gabro-MO)                       | Adição das referencias para as metricas funcionais | 18/10/2026 | [4501889](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/4501889183c10315ccbd9137c958afcbaf5b7767) |

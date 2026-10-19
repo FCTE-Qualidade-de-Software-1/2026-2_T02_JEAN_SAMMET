@@ -21,13 +21,14 @@ nav:
             - Sumário: fases/fase2/funcionais/visaoGeral.md
             - Visão Geral (GQM): fases/fase2/funcionais/GQM.md
             - Protocolo de Coleta e Teste: fases/fase2/funcionais/testes.md
-            - Referências: fases/fase2/funcionais/referencia.md
+            - Referências: fases/fase2/funcionais/referencias.md
         - Métricas Operacionais:
             - Sumário: fases/fase2/metricasOperacionais.md
             - Visão Geral (GQM): fases/fase2/operacionais/visaoGeral.md
             - Usabilidade: fases/fase2/operacionais/usabilidade.md
             - Segurança: fases/fase2/operacionais/seguranca.md
             - Protocolo de Coleta e Teste: fases/fase2/operacionais/protocolo.md
+            - Referências: fases/fase2/operacionais/referencias.md
 
   - Gestão do Projeto:
     - Visão Geral: gestaoProjeto/psm-cid.md

@@ -13,9 +13,9 @@ A definição das métricas operacionais decorre diretamente dos artefatos conso
    - **Mantenedores do Software (Crianex):** necessitam de evidências objetivas sobre a facilidade de uso da interface e a resiliência de segurança contra vulnerabilidades em dependências e requisições desprotegidas.
    - **Equipe Avaliadora:** necessita de indicadores reprodutíveis para fundamentar a escolha e implementação da ação de melhoria na Entrega 2.
 2. **Priorização de Características ([Características de Qualidade](../../fase1/caracteristicasDeQualidade.md)):**
-   - *Adequação Funcional:* Prioridade 1 (Pontuação: 20) — avaliada em [Métricas Funcionais](../metricasFuncionais.md).
-   - *Usabilidade:* Prioridade 2 (Pontuação: 16) — foco em Operabilidade e Apreensibilidade.
-   - *Segurança:* Prioridade 3 (Pontuação: 12) — foco em Confidencialidade, Integridade de Dependências e Controle de Acesso.
+   - *Adequação Funcional:* Prioridade 1 (Pontuação: 20) — avaliada em [Métricas Funcionais](../funcionais/visaoGeral.md).
+   - *Segurança:* Prioridade 2 (Pontuação: 15) — foco em Confidencialidade, Integridade de Dependências e Controle de Acesso.
+   - *Usabilidade:* Prioridade 3 (Pontuação: 12) — foco em Operabilidade e Apreensibilidade.
 3. **Escopo e Limites Operacionais ([Escopo](../../fase1/escopo.md)):**
    - Objetos delimitados na interface SvelteKit (`/plano-formatura`), no armazenamento do cliente (`localStorage`), nos endpoints protegidos (`POST /planejamento/gerar-plano`) e nas dependências de software via SCA (`npm audit`).
    - Exclusão de testes de invasão destrutivos e uso exclusivo de históricos acadêmicos sintéticos.
@@ -24,7 +24,7 @@ A definição das métricas operacionais decorre diretamente dos artefatos conso
 
 ## 2. Hipóteses Operacionais Documentadas
 
-Com base nas limitações técnicas conhecidas levantadas na Fase 1 ([Software Escolhido](../../fase1/softwareEscolhido.md#38-limitacoes-conhecidas)), formularam-se as seguintes hipóteses a serem testadas:
+Com base nas limitações técnicas conhecidas levantadas na Fase 1 ([Software Escolhido](../../fase1/softwareEscolhido.md#8-limitacoes-conhecidas)), formularam-se as seguintes hipóteses a serem testadas:
 
 | ID | Característica | Hipótese Documentada | Risco Associado | Métrica Relacionada |
 | :---: | :--- | :--- | :--- | :---: |
@@ -78,12 +78,13 @@ Para assegurar clareza, profundidade técnica e facilidade de leitura, a especif
 1. **[Métricas de Usabilidade](usabilidade.md):** detalhamento das tarefas-chave de usuário ($T_1$, $T_2$, $T_3$), métricas `MET-OP-01` e `MET-OP-01b`, análise de barreiras de affordance e critérios ergonômicos da ISO 9241-11.
 2. **[Métricas de Segurança](seguranca.md):** auditoria de dependências via SCA (`MET-OP-02`), inspeção de persistência no navegador (`MET-OP-02b`), testes de controle de acesso a endpoints (`MET-OP-02c`) e alinhamento com OWASP Top 10 e LGPD.
 3. **[Protocolo de Coleta e Teste](protocolo.md):** fichas padronizadas de registro de ambiente, roteiro experimental para sessões de usabilidade, procedimentos de inspeção de storage e execução do `npm audit`.
+4. **[Referências](referencias.md):** compilação padronizada de todas as referências bibliográficas, normas internacionais (ISO/IEC e ISO 9241), diretrizes do OWASP Top 10 e legislação de privacidade (LGPD).
 
 ---
 
 ## 5. Integração com as Métricas Funcionais
 
-A avaliação do No Fluxo UnB adota uma abordagem holística, cruzando os achados operacionais com os funcionais ([Métricas Funcionais](../metricasFuncionais.md)):
+A avaliação do No Fluxo UnB adota uma abordagem holística, cruzando os achados operacionais com os funcionais ([Métricas Funcionais](../funcionais/visaoGeral.md)):
 
 ```mermaid
 graph LR
@@ -97,6 +98,12 @@ graph LR
 
 ---
 
+## 6. Referências Bibliográficas
+
+As referências metodológicas (GQM), normativas técnicas internacionais (ISO/IEC 25010, ISO/IEC 25023, ISO/IEC 25040, ISO 9241-11), diretrizes de segurança (OWASP Top 10) e legislação de proteção de dados (LGPD) que sustentam esta especificação estão detalhadas em [Referências das Métricas Operacionais](referencias.md) e consolidadas na página geral de [Referências da Fase 2](../../../referencias/fase2.md).
+
+---
+
 ## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
@@ -104,3 +111,4 @@ graph LR
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da visão geral, modelo GQM operacional, hipóteses e matriz de rastreabilidade | 16/10 | [b4e71a0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b4e71a0) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste da estrutura GQM operacional para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Alinhamento da prioridade e pontuação com a Fase 1, correção de links relativos e inclusão das referências operacionais | 18/10 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |

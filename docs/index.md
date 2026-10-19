@@ -22,7 +22,7 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | Seleção e priorização das características | [Características de Qualidade](fases/fase1/caracteristicasDeQualidade.md) |
 | Escopo, profundidade e objetos | [Escopo](fases/fase1/escopo.md) |
 | ODS, metas e indicadores | [ODS](fases/fase1/ODS.md) |
-| Declaração de uso de IA | [Uso de IA](usoDeIA/fase1.md) |
+| Declaração de uso de IA | [Uso de IA](usoDeIA/IA.md) |
 | Referências | [Referências](referencias/fase1.md) |
 
 ## Fase 2 - Especificar a avaliação (GQM)

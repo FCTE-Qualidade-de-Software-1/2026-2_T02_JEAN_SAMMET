@@ -22,19 +22,18 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | Seleção e priorização das características | [Características de Qualidade](fases/fase1/caracteristicasDeQualidade.md) |
 | Escopo, profundidade e objetos | [Escopo](fases/fase1/escopo.md) |
 | ODS, metas e indicadores | [ODS](fases/fase1/ODS.md) |
-| Declaração de uso de IA | [Uso de IA](usoDeIA/fase1.md) |
+| Declaração de uso de IA | [Uso de IA](usoDeIA/IA.md) |
 | Referências | [Referências](referencias/fase1.md) |
 
 ## Fase 2 - Especificar a avaliação (GQM)
 
 | Tema | Página |
 | :--- | :--- |
-| Métricas Funcionais (Adequação Funcional e Regras Acadêmicas) | [Métricas Funcionais](fases/fase2/metricasFuncionais.md) |
-| Métricas Operacionais (Usabilidade, Desempenho e Manutenibilidade) | [Métricas Operacionais](fases/fase2/metricasOperacionais.md) |
+| Métricas Funcionais (Adequação Funcional e Regras Acadêmicas) | [Métricas Funcionais](fases/fase2/funcionais/visaoGeral.md) |
+| Métricas Operacionais (Usabilidade e Segurança) | [Métricas Operacionais](fases/fase2/metricasOperacionais.md) |
 | ↳ Visão Geral e Estrutura GQM | [Visão Geral](fases/fase2/operacionais/visaoGeral.md) |
 | ↳ Usabilidade | [Usabilidade](fases/fase2/operacionais/usabilidade.md) |
-| ↳ Eficiência de Desempenho | [Eficiência de Desempenho](fases/fase2/operacionais/desempenho.md) |
-| ↳ Manutenibilidade | [Manutenibilidade](fases/fase2/operacionais/manutenibilidade.md) |
+| ↳ Segurança | [Segurança](fases/fase2/operacionais/seguranca.md) |
 | ↳ Protocolo de Coleta e Teste | [Protocolo de Coleta e Teste](fases/fase2/operacionais/protocolo.md) |
 
 ## Fases seguintes

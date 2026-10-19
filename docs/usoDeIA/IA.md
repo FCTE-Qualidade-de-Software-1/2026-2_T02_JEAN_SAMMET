@@ -9,7 +9,14 @@ Aqui dividimos o uso de IA para todos os integrantes do grupo
 | [Gabriel Mota Oliveira](https://github.com/Gabro-MO) | ChatGPT | Esqueleto dos texto, correção gramatical e montagem do codigo `mermaid` para o GQM | A IA muitas vezes queria preencher as partes do texto que estavam em branco com informações sem fontes ou que não faziam sentido para o contexto de qualidade, atualizei esses trechos removendo o que não havia embasamento e aquilo que não condizia a materia |
 | [Giovani de Oliveira Teodoro Coelho](https://github.com/Gotc2607) | ChatGPT / Gemini (Google) | Estruturação das hipóteses e métricas operacionais (Usabilidade e Segurança) no modelo GQM, diagramação em Mermaid, apoio na redação dos protocolos de teste e revisão ortográfica. | Ajustei a consistência das prioridades e pontuações com a Fase 1, corrigi fórmulas matemáticas de acordo com as normas ISO/IEC 25023 e ISO 9241-11, eliminei links quebrados e ajustei os procedimentos de coleta para garantir conformidade ética com a LGPD e o escopo não invasivo. |
 | [Gustavo Gomes Fornaciari](https://github.com/gugofo) | Claude | Organização do Repositório e Melhoria no texto | A IA criou pastas desnecessárias e que eu não havia pedido, ajustei para que ficasse como eu desejada. Alem disso, utilizei ela para melhorar e organizar meus pensamentos de como desenvolver o projeto na fase 1, fazendo ela organizar e deixar de maneira mais coerente oque eu tinha em mente |
-| [Victor Leandro Rocha de Assis](https://github.com/VitorlagesNA) | [preencher] | [preencher] | [preencher] |
+| [Vitor Lages Nogueira Araújo](https://github.com/VitorlagesNA) | Gemini (Google) | # Declaração de Uso de Inteligência Artificia
+Estruturação Metodológica do PSM/CID: Apoio na definição das categorias de acompanhamento de projeto (Calendário e Progresso, Recursos e Custos, e Desempenho de Processos) e na criação de diagramas de cronograma (Gantt/Mermaid).
+Organização de Issues e Milestones: Auxílio no direcionamento da estruturação das tarefas no GitHub para atender aos critérios de rastreabilidade da disciplina.
+ Revisão e Padronização de Texto: Suporte na formatação e refinamento da documentação técnica e das seções do relatório.
+
+## Validação Humana
+Todo o conteúdo gerado pela ferramenta foi rigorosamente analisado, testado e ajustado pela equipe do projeto para garantir a precisão conceitual, a aderência à norma SQuaRE e o alinhamento com as diretrizes exigidas pela professora Cristiane Ramos.
+
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | [preencher] | [preencher] | [preencher] |
 
 ---

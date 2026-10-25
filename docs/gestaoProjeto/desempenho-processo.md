@@ -6,6 +6,8 @@ Esta categoria acompanha o tempo necessário para concluir as Issues e identific
 
 A análise permite verificar se as demandas estão sendo resolvidas dentro do tempo esperado e se existem tarefas que precisam de acompanhamento.
 
+**Origem das medidas.** Desempenho do Processo é uma categoria de informação do PSM (McGARRY et al., 2001), e o tempo de ciclo é uma das medidas descritas no framework CID (PSM, 2021). Os limites de dois e três dias são critérios definidos pela equipe. Os dados vêm das datas de criação, conclusão e atividade das Issues no GitHub.
+
 ## 2. Modelo de Informação do PSM
 
 | Elemento do Modelo PSM | Especificação Aplicada à Equipe |
@@ -23,7 +25,7 @@ A análise permite verificar se as demandas estão sendo resolvidas dentro do te
 - O tempo de ciclo deve ser calculado apenas para Issues concluídas, utilizando a diferença entre as datas de conclusão e criação.
 - Para calcular o tempo médio de ciclo, somar os tempos de ciclo das Issues concluídas no período e dividir pela quantidade dessas Issues.
 - O tempo sem atividade deve ser acompanhado apenas para Issues ainda abertas.
-- Para evitar diferenças de interpretação, a equipe deve definir quais eventos contam como atividade, como comentários, alterações de status ou atualizações relevantes.
+- Para o cálculo do TSA, contam como atividade os seguintes eventos na Issue: comentário, commit ou Pull Request vinculado, mudança de status ou de coluna no quadro do Projeto e mudança de responsável. Edições de título ou de rótulo e eventos gerados por automação não contam. Tatividade é a data e hora do evento mais recente entre os que contam.
 - Os limites de dois e três dias são critérios internos definidos pela equipe. Recomenda-se registrar o período de referência utilizado na análise.
 - Se não houver Issues concluídas no período, o tempo médio de ciclo deverá ser registrado como não aplicável.
 
@@ -34,3 +36,4 @@ A amostra das Issues e suas datas de abertura e conclusão está disponível na 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
+| [Gustavo Fornaciaro](https://github.com/GUGOFO) | Declaracao da origem da métrica | 25/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |

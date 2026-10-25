@@ -28,7 +28,7 @@ Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](
 
 | ID | Característica | Hipótese Documentada | Questão GQM | Métricas de Teste | Critério de Validação da Hipótese |
 | :---: | :--- | :--- | :---: | :--- | :--- |
-| **H-OP-01** | Usabilidade | A alta densidade de nós e painéis simultâneos causa hesitação ou exige auxílio para identificar a previsão de formatura e matérias críticas. | `Q-OP-01` | `MET-OP-01` (TSRT)<br>`MET-OP-01b` (TCA) | **Confirmada** se $TSRT_{\text{global}} < 85\%$ ou se $TCA_j > 10\%$ em qualquer tarefa $T_j$. |
+| **H-OP-01** | Usabilidade | A tela `/plano-formatura` concentra violações heurísticas (densidade excessiva de nós, feedback insuficiente de recálculo e terminologia ambígua), comprometendo a facilidade de uso e a apreensão das saídas. | `Q-OP-01` | `MET-OP-01` (TCH)<br>`MET-OP-01b` (ISVH) | **Confirmada** se $TCH < 85\%$ ou se for identificada qualquer violação heurística de severidade maior ou catastrófica ($N_{\text{maior}} \ge 1$ ou $N_{\text{catastrófico}} \ge 1$). |
 | **H-OP-02** | Segurança | O processamento no navegador com retenção em `localStorage` e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. | `Q-OP-02` | `MET-OP-02` (DVCD)<br>`MET-OP-02b` (GED-C)<br>`MET-OP-02c` (TBR) | **Confirmada** se $IRP > 5$, $GED\text{-}C \ge 1$ chave sensível ou $TBR < 100\%$. |
 
 ---
@@ -47,7 +47,7 @@ Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](
 
 ### 3.2 Questões de Medição (Nível Operacional)
 
-- **`Q-OP-01` (Usabilidade):** Os estudantes realizam as tarefas essenciais na tela de planejamento com autonomia, sem necessidade de assistência externa?
+- **`Q-OP-01` (Usabilidade):** A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?
 - **`Q-OP-02` (Segurança):** O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?
 
 ### 3.3 Árvore GQM com Hipóteses Operacionais
@@ -56,14 +56,14 @@ Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](
 graph TD
     Goal["Objetivo GQM Operacional:<br/>Avaliar Usabilidade e Segurança da funcionalidade Planejar Formatura"]
 
-    Goal --> H1["<b>Hipótese H-OP-01</b>:<br/>Densidade de nós e painéis gera hesitação e necessidade de auxílio"]
+    Goal --> H1["<b>Hipótese H-OP-01</b>:<br/>Violações heurísticas comprometem a operabilidade e a apreensão"]
     Goal --> H2["<b>Hipótese H-OP-02</b>:<br/>Retenção de dados no cliente e dependências desatualizadas geram vulnerabilidades"]
 
-    H1 --> Q1["Q-OP-01: Os estudantes realizam as tarefas essenciais com autonomia?"]
+    H1 --> Q1["Q-OP-01: A interface atende às heurísticas ergonômicas de usabilidade?"]
     H2 --> Q2["Q-OP-02: O sistema resguarda a confidencialidade e restringe o acesso contra vulnerabilidades?"]
 
-    Q1 --> M1["MET-OP-01: Taxa de Sucesso na Realização de Tarefas (TSRT)<br/><i>Usabilidade / Operabilidade</i>"]
-    Q1 --> M1b["MET-OP-01b: Taxa de Conclusão com Assistência (TCA)<br/><i>Usabilidade / Apreensibilidade</i>"]
+    Q1 --> M1["MET-OP-01: Taxa de Conformidade Heurística (TCH)<br/><i>Usabilidade / Operabilidade</i>"]
+    Q1 --> M1b["MET-OP-01b: Índice de Severidade de Violações Heurísticas (ISVH)<br/><i>Usabilidade / Apreensibilidade</i>"]
 
     Q2 --> M2["MET-OP-02: Densidade de Vulnerabilidades Conhecidas (DVCD)<br/><i>Segurança / Integridade de Dependências</i>"]
     Q2 --> M2b["MET-OP-02b: Grau de Exposição de Dados no Cliente (GED-C)<br/><i>Segurança / Confidencialidade</i>"]
@@ -76,9 +76,9 @@ graph TD
 
 | Seção / Página | Foco e Conteúdo Principal | Hipótese | Métricas |
 | :--- | :--- | :---: | :---: |
-| **[1. Métricas de Usabilidade](usabilidade.md)** | Tarefas ($T_1, T_2, T_3$), operabilidade, apreensibilidade e critérios ISO 9241-11. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
+| **[1. Métricas de Usabilidade](usabilidade.md)** | Checklist heurístico (Nielsen), tarefas de referência ($T_1, T_2, T_3$), operabilidade e apreensibilidade. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
 | **[2. Métricas de Segurança](seguranca.md)** | Auditoria SCA, persistência no cliente, controle de acesso e conformidade OWASP/LGPD. | `H-OP-02` | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
-| **[3. Protocolo de Coleta e Teste](protocolo.md)** | Fichas de ambiente, roteiro de usabilidade, inspeção de storage e execução do `npm audit`. | `H-OP-01`<br>`H-OP-02` | Todas |
+| **[3. Protocolo de Coleta e Teste](protocolo.md)** | Roteiro de inspeção heurística da equipe, fichas de ambiente, storage e `npm audit`. | `H-OP-01`<br>`H-OP-02` | Todas |
 | **[4. Referências](referencias.md)** | Referências metodológicas, normas técnicas (ISO/IEC e ISO 9241), OWASP e LGPD. | — | Todas |
 
 ---
@@ -106,6 +106,6 @@ graph LR
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da visão geral, modelo GQM operacional, hipóteses e matriz de rastreabilidade | 16/10 | [b4e71a0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b4e71a0) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste da estrutura GQM operacional para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Alinhamento da prioridade e pontuação com a Fase 1, correção de links relativos e inclusão das referências operacionais | 18/10 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com GQM e ISO 25010 | 24/10 | [corrente] |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com GQM e ISO 25010 | 24/10 | [b31d87e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b31d87e) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Atualização de Usabilidade para Avaliação Heurística de Nielsen (TCH e ISVH) e inclusão na árvore GQM | 25/10 | [corrente] |
 

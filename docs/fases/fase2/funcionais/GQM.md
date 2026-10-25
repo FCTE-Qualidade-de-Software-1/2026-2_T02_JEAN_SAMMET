@@ -8,7 +8,7 @@ De acordo com o template formal do GQM:
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Objeto**         | A funcionalidade _Planejar formatura_ (Motor 2 e interface de planejamento) do software No Fluxo UnB.                                       |
 | **Propósito**      | **Avaliar** a qualidade em uso e a qualidade interna do produto.                                                                            |
-| **Foco**           | A característica de **Adequação Funcional** (em consonância com as [Métricas Operacionais](metricasOperacionais.md)).                       |
+| **Foco**           | A característica de **Adequação Funcional** (em consonância com as [Métricas Operacionais](../metricasOperacionais.md)).                       |
 | **Ponto de Vista** | Dos **estudantes de graduação da UnB** (usuários finais) e dos **mantenedores da Crianex / equipe de desenvolvimento**.                     |
 | **Contexto**       | Execução em ambiente web desktop moderno, com dados curriculares da Engenharia de Software da FGA/UnB e histórico sintético de disciplinas. |
 

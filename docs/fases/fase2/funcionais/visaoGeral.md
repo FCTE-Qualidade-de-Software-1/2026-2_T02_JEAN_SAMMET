@@ -2,7 +2,7 @@
 
 Este documento especifica as perguntas e métricas de **adequação funcional** para avaliar a funcionalidade _Planejar formatura_ do No Fluxo UnB, com foco no Motor 2. A avaliação procura verificar se os planos gerados são coerentes com o histórico do aluno e com as regras acadêmicas aplicáveis, sem tratar limitações documentadas como defeitos antes da execução dos testes.
 
-A estrutura segue o método **Goal-Question-Metric (GQM)** e complementa as métricas operacionais descritas em [`Metricas Operacionais`](metricasOperacionais.md).
+A estrutura segue o método **Goal-Question-Metric (GQM)** e complementa as métricas operacionais descritas em [`Metricas Operacionais`](../metricasOperacionais.md).
 
 ## 1. Contexto da avaliação
 

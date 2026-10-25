@@ -28,7 +28,7 @@ As pontuações são uma priorização preliminar da equipe e não resultados me
 | :---: | :--- | :--- | :--- |
 | 1 | Adequação funcional | ISO/IEC 25010 | O No Fluxo UnB auxilia o estudante a visualizar a estrutura curricular e organizar disciplinas futuras. A avaliação verificará se as informações e funções do fluxo selecionado correspondem aos dados de entrada e às regras curriculares usadas como referência. Um resultado incorreto pode levar a decisões acadêmicas inadequadas. |
 | 2 | Segurança | ISO/IEC 25010 | O fluxo pode envolver autenticação e dados acadêmicos pessoais. A avaliação será limitada a verificações não invasivas e à inspeção do comportamento observável e da documentação/código público, sem tentativa de invasão, exploração de vulnerabilidades ou acesso a dados de terceiros. |
-| 3 | Usabilidade | ISO/IEC 25010 | O estudante precisa localizar informações, compreender os estados das disciplinas e concluir tarefas do fluxo de planejamento. A avaliação observará se tarefas predefinidas podem ser realizadas com clareza, sem ajuda indevida e com poucos erros, por participantes voluntários. |
+| 3 | Usabilidade | ISO/IEC 25010 | O estudante precisa localizar informações, compreender os estados das disciplinas e concluir tarefas do fluxo de planejamento. A avaliação inspecionará se as tarefas predefinidas atendem a critérios ergonômicos e heurísticas de usabilidade, pela equipe avaliadora. |
 
 ## 4. Trade-offs e características não selecionadas
 

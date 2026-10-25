@@ -11,9 +11,9 @@ Para garantir legibilidade, profundidade técnica e facilidade de consulta, a do
 | Seção / Página | Foco e Conteúdo Principal | Hipótese Relacionada | Métricas Relacionadas |
 | :--- | :--- | :---: | :---: |
 | **[1. Visão Geral e Estrutura GQM](operacionais/visaoGeral.md)** | Contexto da Fase 1, stakeholders, Objetivo GQM, hipóteses operacionais e árvore hierárquica completa. | `H-OP-01`<br>`H-OP-02` | Todas |
-| **[2. Métricas de Usabilidade](operacionais/usabilidade.md)** | Facilidade de compreensão e uso por estudantes da UnB, tarefas $T_1$, $T_2$ e $T_3$ e critérios ISO 9241-11. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
+| **[2. Métricas de Usabilidade](operacionais/usabilidade.md)** | Inspeção heurística de Nielsen (checklist ergonômico), tarefas de referência $T_1, T_2, T_3$ e ISO 9241-11. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
 | **[3. Métricas de Segurança](operacionais/seguranca.md)** | Auditoria SCA (`npm audit`), persistência no cliente (`localStorage`), bloqueio em rotas e conformidade LGPD/OWASP. | `H-OP-02` | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
-| **[4. Protocolo de Coleta e Condições de Teste](operacionais/protocolo.md)** | Ficha de ambiente, roteiro detalhado para sessões com alunos e comandos de auditoria/inspeção. | `H-OP-01`<br>`H-OP-02` | Todas |
+| **[4. Protocolo de Coleta e Condições de Teste](operacionais/protocolo.md)** | Roteiro de inspeção heurística da equipe, fichas de ambiente e comandos de auditoria/inspeção. | `H-OP-01`<br>`H-OP-02` | Todas |
 | **[5. Referências](operacionais/referencias.md)** | Normas técnicas (ISO/IEC, ISO 9241), frameworks de segurança (OWASP), LGPD e metodologia GQM. | — | Todas |
 
 ---
@@ -24,14 +24,14 @@ Para garantir legibilidade, profundidade técnica e facilidade de consulta, a do
 graph TD
     Goal["Objetivo GQM Operacional:<br/>Avaliar Usabilidade e Segurança da funcionalidade Planejar Formatura"]
     
-    Goal --> H1["<b>Hipótese H-OP-01</b>:<br/>Densidade de nós e painéis gera hesitação e necessidade de auxílio"]
+    Goal --> H1["<b>Hipótese H-OP-01</b>:<br/>Violações heurísticas comprometem a operabilidade e a apreensão"]
     Goal --> H2["<b>Hipótese H-OP-02</b>:<br/>Retenção de dados no cliente e dependências desatualizadas geram vulnerabilidades"]
     
-    H1 --> Q1["Q-OP-01: Os estudantes realizam as tarefas essenciais com autonomia?"]
+    H1 --> Q1["Q-OP-01: A interface atende às heurísticas ergonômicas de usabilidade?"]
     H2 --> Q2["Q-OP-02: O sistema resguarda a confidencialidade e restringe o acesso contra vulnerabilidades?"]
     
-    Q1 --> M1["MET-OP-01: Taxa de Sucesso na Realização de Tarefas (TSRT)"]
-    Q1 --> M1b["MET-OP-01b: Taxa de Conclusão com Assistência (TCA)"]
+    Q1 --> M1["MET-OP-01: Taxa de Conformidade Heurística (TCH)"]
+    Q1 --> M1b["MET-OP-01b: Índice de Severidade de Violações Heurísticas (ISVH)"]
     
     Q2 --> M2["MET-OP-02: Densidade de Vulnerabilidades Conhecidas (DVCD)"]
     Q2 --> M2b["MET-OP-02b: Grau de Exposição de Dados no Cliente (GED-C)"]

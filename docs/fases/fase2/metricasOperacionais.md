@@ -8,24 +8,27 @@ Para garantir legibilidade, profundidade técnica e facilidade de consulta, a do
 
 ## Navegação pelas Páginas da Fase 2 (Operacionais)
 
-| Seção / Página | Foco e Conteúdo Principal | Métricas Relacionadas |
-| :--- | :--- | :---: |
-| **[1. Visão Geral e Estrutura GQM](operacionais/visaoGeral.md)** | Contexto da Fase 1, stakeholders, formulação formal do Objetivo GQM, hipóteses operacionais e árvore hierárquica completa em diagrama Mermaid. | Todas |
-| **[2. Métricas de Usabilidade](operacionais/usabilidade.md)** | Avaliação da facilidade de compreensão e uso por estudantes da UnB, definição das tarefas $T_1$, $T_2$ e $T_3$, fichas metodológicas e critérios ergonômicos da ISO 9241-11. | `MET-OP-01`<br>`MET-OP-01b` |
-| **[3. Métricas de Segurança](operacionais/seguranca.md)** | Análise de composição de software (SCA via `npm audit`), inspeção de armazenamento do cliente (`localStorage`), validação de bloqueio em rotas protegidas e conformidade com LGPD/OWASP. | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
-| **[4. Protocolo de Coleta e Condições de Teste](operacionais/protocolo.md)** | Ficha padronizada de ambiente de hardware e software, roteiro detalhado para condução dos testes com alunos, comandos de auditoria e testes de chamadas não autenticadas. | Todas |
-| **[5. Referências](operacionais/referencias.md)** | Referências bibliográficas, normas técnicas (ISO/IEC, ISO 9241), frameworks de segurança (OWASP) e legislação de proteção de dados (LGPD). | Todas |
+| Seção / Página | Foco e Conteúdo Principal | Hipótese Relacionada | Métricas Relacionadas |
+| :--- | :--- | :---: | :---: |
+| **[1. Visão Geral e Estrutura GQM](operacionais/visaoGeral.md)** | Contexto da Fase 1, stakeholders, Objetivo GQM, hipóteses operacionais e árvore hierárquica completa. | `H-OP-01`<br>`H-OP-02` | Todas |
+| **[2. Métricas de Usabilidade](operacionais/usabilidade.md)** | Facilidade de compreensão e uso por estudantes da UnB, tarefas $T_1$, $T_2$ e $T_3$ e critérios ISO 9241-11. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
+| **[3. Métricas de Segurança](operacionais/seguranca.md)** | Auditoria SCA (`npm audit`), persistência no cliente (`localStorage`), bloqueio em rotas e conformidade LGPD/OWASP. | `H-OP-02` | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
+| **[4. Protocolo de Coleta e Condições de Teste](operacionais/protocolo.md)** | Ficha de ambiente, roteiro detalhado para sessões com alunos e comandos de auditoria/inspeção. | `H-OP-01`<br>`H-OP-02` | Todas |
+| **[5. Referências](operacionais/referencias.md)** | Normas técnicas (ISO/IEC, ISO 9241), frameworks de segurança (OWASP), LGPD e metodologia GQM. | — | Todas |
 
 ---
 
-## Resumo da Estrutura GQM Operacional
+## Resumo da Estrutura GQM com Hipóteses
 
 ```mermaid
 graph TD
     Goal["Objetivo GQM Operacional:<br/>Avaliar Usabilidade e Segurança da funcionalidade Planejar Formatura"]
     
-    Goal --> Q1["Q-OP-01: Os estudantes realizam as tarefas essenciais com autonomia?"]
-    Goal --> Q2["Q-OP-02: O sistema resguarda a confidencialidade e restringe o acesso contra vulnerabilidades?"]
+    Goal --> H1["<b>Hipótese H-OP-01</b>:<br/>Densidade de nós e painéis gera hesitação e necessidade de auxílio"]
+    Goal --> H2["<b>Hipótese H-OP-02</b>:<br/>Retenção de dados no cliente e dependências desatualizadas geram vulnerabilidades"]
+    
+    H1 --> Q1["Q-OP-01: Os estudantes realizam as tarefas essenciais com autonomia?"]
+    H2 --> Q2["Q-OP-02: O sistema resguarda a confidencialidade e restringe o acesso contra vulnerabilidades?"]
     
     Q1 --> M1["MET-OP-01: Taxa de Sucesso na Realização de Tarefas (TSRT)"]
     Q1 --> M1b["MET-OP-01b: Taxa de Conclusão com Assistência (TCA)"]
@@ -57,3 +60,5 @@ As referências metodológicas, normativas técnicas (ISO/IEC e ISO 9241), diret
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste do sumário de métricas operacionais para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de emojis nos títulos, correção de links relativos e inclusão das referências operacionais | 18/10 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão das hipóteses operacionais na tabela de navegação e na árvore GQM | 24/10 | [corrente] |
+

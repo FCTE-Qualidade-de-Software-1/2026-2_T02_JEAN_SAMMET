@@ -1,35 +1,35 @@
 # Visão Geral e Estrutura GQM — Métricas Operacionais
 
-Documento introdutório da avaliação de **Métricas Operacionais** da funcionalidade _Planejar formatura_ do No Fluxo UnB, abrangendo as características de **Usabilidade** e **Segurança**.
+Documento introdutório da avaliação de **Métricas Operacionais** da funcionalidade _Planejar formatura_ do No Fluxo UnB, cobrindo **Usabilidade** e **Segurança**.
 
 ---
 
 ## 1. Contexto e Rastreabilidade com a Fase 1
 
-A definição das métricas operacionais decorre diretamente dos artefatos consolidados na Fase 1 do projeto:
+As métricas operacionais derivam das definições da Fase 1:
 
-1. **Perfis de Usuários e Partes Interessadas ([Propósito e Stakeholders](../../fase1/propositoEStakeholders.md)):**
-   - **Alunos de Graduação da UnB:** necessitam de uma interface inteligível para compreender a estimativa de formatura e ajustar sua carga semestral com autonomia, além da garantia de que seus dados acadêmicos sensíveis (histórico, notas, matrícula) não sejam expostos indevidamente.
-   - **Mantenedores do Software (Crianex):** necessitam de evidências objetivas sobre a facilidade de uso da interface e a resiliência de segurança contra vulnerabilidades em dependências e requisições desprotegidas.
-   - **Equipe Avaliadora:** necessita de indicadores reprodutíveis para fundamentar a escolha e implementação da ação de melhoria na Entrega 2.
-2. **Priorização de Características ([Características de Qualidade](../../fase1/caracteristicasDeQualidade.md)):**
-   - *Adequação Funcional:* Prioridade 1 (Pontuação: 20) — avaliada em [Métricas Funcionais](../funcionais/visaoGeral.md).
-   - *Segurança:* Prioridade 2 (Pontuação: 15) — foco em Confidencialidade, Integridade de Dependências e Controle de Acesso.
-   - *Usabilidade:* Prioridade 3 (Pontuação: 12) — foco em Operabilidade e Apreensibilidade.
-3. **Escopo e Limites Operacionais ([Escopo](../../fase1/escopo.md)):**
-   - Objetos delimitados na interface SvelteKit (`/plano-formatura`), no armazenamento do cliente (`localStorage`), nos endpoints protegidos (`POST /planejamento/gerar-plano`) e nas dependências de software via SCA (`npm audit`).
-   - Exclusão de testes de invasão destrutivos e uso exclusivo de históricos acadêmicos sintéticos.
+- **Partes Interessadas ([Propósito e Stakeholders](../../fase1/propositoEStakeholders.md)):**
+  - *Estudantes:* precisam de interface clara para entender a formatura estimada e autonomia para ajustar créditos, com proteção aos seus dados pessoais.
+  - *Mantenedores (Crianex):* necessitam de indicadores sobre facilidade de uso e segurança contra vulnerabilidades em dependências ou rotas desprotegidas.
+  - *Equipe avaliadora:* requer evidências reprodutíveis para embasar melhorias na Fase 4.
+- **Priorização ([Características de Qualidade](../../fase1/caracteristicasDeQualidade.md)):**
+  - *Adequação Funcional:* Prioridade 1 (20 pts) — avaliada em [Métricas Funcionais](../funcionais/visaoGeral.md).
+  - *Segurança:* Prioridade 2 (15 pts) — Confidencialidade, Integridade de Dependências e Controle de Acesso.
+  - *Usabilidade:* Prioridade 3 (12 pts) — Operabilidade e Apreensibilidade.
+- **Escopo e Limites ([Escopo](../../fase1/escopo.md)):**
+  - Foco na interface SvelteKit (`/plano-formatura`), armazenamento no cliente (`localStorage`), endpoint `POST /planejamento/gerar-plano` e dependências via SCA (`npm audit`).
+  - Exclui testes invasivos/destrutivos; uso exclusivo de dados sintéticos.
 
 ---
 
-## 2. Hipóteses Operacionais Documentadas
+## 2. Hipóteses Operacionais e Matriz de Validação
 
-Com base nas limitações técnicas conhecidas levantadas na Fase 1 ([Software Escolhido](../../fase1/softwareEscolhido.md#8-limitacoes-conhecidas)), formularam-se as seguintes hipóteses a serem testadas:
+Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](../../fase1/softwareEscolhido.md#8-limitacoes-conhecidas)):
 
-| ID | Característica | Hipótese Documentada | Risco Associado | Métrica Relacionada |
-| :---: | :--- | :--- | :--- | :---: |
-| **H-OP-01** | Usabilidade | A interface concentra alta densidade de nós e painéis simultâneos, fazendo com que estudantes tenham hesitação ou necessitem de auxílio externo para identificar a previsão de formatura e as matérias críticas. | O aluno pode interpretar incorretamente seu planejamento ou desistir de utilizar a ferramenta. | `MET-OP-01`<br>`MET-OP-01b` |
-| **H-OP-02** | Segurança | O software processa históricos acadêmicos com dados sensíveis no navegador e se comunica com o backend e serviços de autenticação; a retenção não volátil de dados no armazenamento cliente e a presença de dependências desatualizadas podem expor o sistema a vulnerabilidades conhecidas e vazamento de dados. | Violação de princípios da LGPD e exposição do sistema a exploits conhecidos em dependências externas. | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
+| ID | Característica | Hipótese Documentada | Questão GQM | Métricas de Teste | Critério de Validação da Hipótese |
+| :---: | :--- | :--- | :---: | :--- | :--- |
+| **H-OP-01** | Usabilidade | A alta densidade de nós e painéis simultâneos causa hesitação ou exige auxílio para identificar a previsão de formatura e matérias críticas. | `Q-OP-01` | `MET-OP-01` (TSRT)<br>`MET-OP-01b` (TCA) | **Confirmada** se $TSRT_{\text{global}} < 85\%$ ou se $TCA_j > 10\%$ em qualquer tarefa $T_j$. |
+| **H-OP-02** | Segurança | O processamento no navegador com retenção em `localStorage` e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. | `Q-OP-02` | `MET-OP-02` (DVCD)<br>`MET-OP-02b` (GED-C)<br>`MET-OP-02c` (TBR) | **Confirmada** se $IRP > 5$, $GED\text{-}C \ge 1$ chave sensível ou $TBR < 100\%$. |
 
 ---
 
@@ -37,29 +37,30 @@ Com base nas limitações técnicas conhecidas levantadas na Fase 1 ([Software E
 
 ### 3.1 Objetivo Geral de Medição (Nível Conceitual)
 
-Formulado rigorosamente no template estruturado do GQM:
-
 | Elemento GQM | Especificação Formal |
 | :--- | :--- |
 | **Objeto** | A funcionalidade _Planejar formatura_ (interface web, armazenamento cliente e dependências) do No Fluxo UnB. |
-| **Propósito** | **Avaliar** a qualidade em uso e a segurança da informação do produto de software. |
-| **Foco de Qualidade** | As características de **Usabilidade** e **Segurança** (norma ISO/IEC 25010). |
-| **Ponto de Vista** | Dos **estudantes de graduação da UnB** (usuários finais) e da **equipe técnica / mantenedores**. |
-| **Contexto** | Execução em ambiente web desktop controlado, utilizando o currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e auditoria estática de código. |
+| **Propósito** | **Avaliar** |
+| **Foco de Qualidade** | **Usabilidade** e **Segurança** (ISO/IEC 25010). |
+| **Ponto de Vista** | **Estudantes de graduação da UnB** (usuários) e **equipe técnica / mantenedores**. |
+| **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e auditoria estática de código. |
 
 ### 3.2 Questões de Medição (Nível Operacional)
 
-- **`Q-OP-01` (Usabilidade):** Os estudantes conseguem realizar as tarefas essenciais na tela de planejamento com autonomia, sem necessidade de assistência externa?
-- **`Q-OP-02` (Segurança):** A funcionalidade de planejamento de formatura resguarda adequadamente a confidencialidade dos dados acadêmicos e restringe o acesso aos seus serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?
+- **`Q-OP-01` (Usabilidade):** Os estudantes realizam as tarefas essenciais na tela de planejamento com autonomia, sem necessidade de assistência externa?
+- **`Q-OP-02` (Segurança):** O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?
 
-### 3.3 Árvore GQM Operacional
+### 3.3 Árvore GQM com Hipóteses Operacionais
 
 ```mermaid
 graph TD
     Goal["Objetivo GQM Operacional:<br/>Avaliar Usabilidade e Segurança da funcionalidade Planejar Formatura"]
 
-    Goal --> Q1["Q-OP-01: Os estudantes realizam as tarefas essenciais com autonomia?"]
-    Goal --> Q2["Q-OP-02: O sistema resguarda a confidencialidade e restringe o acesso contra vulnerabilidades?"]
+    Goal --> H1["<b>Hipótese H-OP-01</b>:<br/>Densidade de nós e painéis gera hesitação e necessidade de auxílio"]
+    Goal --> H2["<b>Hipótese H-OP-02</b>:<br/>Retenção de dados no cliente e dependências desatualizadas geram vulnerabilidades"]
+
+    H1 --> Q1["Q-OP-01: Os estudantes realizam as tarefas essenciais com autonomia?"]
+    H2 --> Q2["Q-OP-02: O sistema resguarda a confidencialidade e restringe o acesso contra vulnerabilidades?"]
 
     Q1 --> M1["MET-OP-01: Taxa de Sucesso na Realização de Tarefas (TSRT)<br/><i>Usabilidade / Operabilidade</i>"]
     Q1 --> M1b["MET-OP-01b: Taxa de Conclusão com Assistência (TCA)<br/><i>Usabilidade / Apreensibilidade</i>"]
@@ -71,36 +72,30 @@ graph TD
 
 ---
 
-## 4. Divisão e Organização das Páginas da Fase 2
+## 4. Organização das Páginas Operacionais
 
-Para assegurar clareza, profundidade técnica e facilidade de leitura, a especificação das métricas operacionais foi subdividida nos seguintes documentos especializados:
-
-1. **[Métricas de Usabilidade](usabilidade.md):** detalhamento das tarefas-chave de usuário ($T_1$, $T_2$, $T_3$), métricas `MET-OP-01` e `MET-OP-01b`, análise de barreiras de affordance e critérios ergonômicos da ISO 9241-11.
-2. **[Métricas de Segurança](seguranca.md):** auditoria de dependências via SCA (`MET-OP-02`), inspeção de persistência no navegador (`MET-OP-02b`), testes de controle de acesso a endpoints (`MET-OP-02c`) e alinhamento com OWASP Top 10 e LGPD.
-3. **[Protocolo de Coleta e Teste](protocolo.md):** fichas padronizadas de registro de ambiente, roteiro experimental para sessões de usabilidade, procedimentos de inspeção de storage e execução do `npm audit`.
-4. **[Referências](referencias.md):** compilação padronizada de todas as referências bibliográficas, normas internacionais (ISO/IEC e ISO 9241), diretrizes do OWASP Top 10 e legislação de privacidade (LGPD).
+| Seção / Página | Foco e Conteúdo Principal | Hipótese | Métricas |
+| :--- | :--- | :---: | :---: |
+| **[1. Métricas de Usabilidade](usabilidade.md)** | Tarefas ($T_1, T_2, T_3$), operabilidade, apreensibilidade e critérios ISO 9241-11. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
+| **[2. Métricas de Segurança](seguranca.md)** | Auditoria SCA, persistência no cliente, controle de acesso e conformidade OWASP/LGPD. | `H-OP-02` | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
+| **[3. Protocolo de Coleta e Teste](protocolo.md)** | Fichas de ambiente, roteiro de usabilidade, inspeção de storage e execução do `npm audit`. | `H-OP-01`<br>`H-OP-02` | Todas |
+| **[4. Referências](referencias.md)** | Referências metodológicas, normas técnicas (ISO/IEC e ISO 9241), OWASP e LGPD. | — | Todas |
 
 ---
 
 ## 5. Integração com as Métricas Funcionais
 
-A avaliação do No Fluxo UnB adota uma abordagem holística, cruzando os achados operacionais com os funcionais ([Métricas Funcionais](../funcionais/visaoGeral.md)):
+A avaliação adota abordagem holística, cruzando dados operacionais e funcionais ([Métricas Funcionais](../funcionais/visaoGeral.md)):
 
 ```mermaid
 graph LR
-    OP["Métricas Operacionais<br/>Usabilidade e Segurança da Informação"] <-->|"Validação Cruzada"| FN["Métricas Funcionais<br/>Pré-requisitos, Co-requisitos e Matriz"]
-    OP --> DEC["Decisões de Melhoria (Fase 4)<br/>Interface intuitiva, dados protegidos e regras válidas"]
+    OP["Métricas Operacionais<br/>Usabilidade e Segurança"] <-->|"Validação Cruzada"| FN["Métricas Funcionais<br/>Regras Curriculares e Algoritmo"]
+    OP --> DEC["Decisões de Melhoria (Fase 4)<br/>Interface intuitiva, dados seguros e planos válidos"]
     FN --> DEC
 ```
 
-- **Relação Usabilidade × Adequação Funcional:** Uma interface perfeitamente inteligível não traz benefício real se o algoritmo gerar planos curriculares com violações de regras; inversamente, um plano matematicamente correto cuja interface seja incompreensível causará confusão ou abandono pelo estudante.
-- **Relação Segurança × Confiabilidade:** Proteger os dados acadêmicos contra exposição indevida no navegador e garantir que as dependências não contenham vulnerabilidades críticas assegura a conformidade ética e jurídica (LGPD) indispensável para a adoção institucional da ferramenta.
-
----
-
-## 6. Referências Bibliográficas
-
-As referências metodológicas (GQM), normativas técnicas internacionais (ISO/IEC 25010, ISO/IEC 25023, ISO/IEC 25040, ISO 9241-11), diretrizes de segurança (OWASP Top 10) e legislação de proteção de dados (LGPD) que sustentam esta especificação estão detalhadas em [Referências das Métricas Operacionais](referencias.md) e consolidadas na página geral de [Referências da Fase 2](../../../referencias/fase2.md).
+- **Usabilidade × Adequação Funcional:** Interface intuitiva não compensa planos curriculares incorretos; da mesma forma, um plano correto não tem utilidade se a interface for incompreensível.
+- **Segurança × Confiabilidade:** Proteger dados contra exposição indevida e eliminar vulnerabilidades em dependências garante a conformidade ética e jurídica (LGPD) essencial para a ferramenta.
 
 ---
 
@@ -112,3 +107,5 @@ As referências metodológicas (GQM), normativas técnicas internacionais (ISO/I
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste da estrutura GQM operacional para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Alinhamento da prioridade e pontuação com a Fase 1, correção de links relativos e inclusão das referências operacionais | 18/10 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com GQM e ISO 25010 | 24/10 | [corrente] |
+

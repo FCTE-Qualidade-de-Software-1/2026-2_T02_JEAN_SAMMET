@@ -42,7 +42,7 @@ Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](
 | **Objeto** | A funcionalidade _Planejar formatura_ (interface web, armazenamento cliente e dependências) do No Fluxo UnB. |
 | **Propósito** | **Avaliar** |
 | **Foco de Qualidade** | **Usabilidade** e **Segurança** (ISO/IEC 25010). |
-| **Ponto de Vista** | **Estudantes de graduação da UnB** (usuários) e **equipe técnica / mantenedores**. |
+| **Ponto de Vista** | **equipe de desenvolvedores**. |
 | **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e auditoria estática de código. |
 
 ### 3.2 Questões de Medição (Nível Operacional)

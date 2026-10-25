@@ -41,6 +41,7 @@ nav:
     - Recursos e Custos: gestaoProjeto/recursos-custos.md
     - Desempenho do Processo: gestaoProjeto/desempenho-processo.md
     - Acompanhamento: gestaoProjeto/acompanhamento.md
+    - Painel Automático: gestaoProjeto/painel.md
   - Critérios:
     - Premissas Iniciais: criterios/premissasIniciais.md
     - Fase 1: criterios/fase1.md

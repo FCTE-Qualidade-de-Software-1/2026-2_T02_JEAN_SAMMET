@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-Esta categoria avalia o esforço de pessoal em horas dedicado ao desenvolvimento das atividades e estima o custo financeiro equivalente do projeto [1-3]. A medição busca monitorar a aderência das horas reais ao planejamento inicial e calcular a valoração econômica de referência do trabalho realizado pela equipe.
+Esta categoria avalia o esforço de pessoal em horas dedicado ao desenvolvimento das atividades e estima o custo financeiro equivalente do projeto. A medição busca monitorar a aderência das horas reais ao planejamento inicial e calcular a valoração econômica de referência do trabalho realizado pela equipe.
 
 Neste projeto, a análise utiliza o registro de horas dedicadas por tarefa e o valor didático de referência da hora profissional (R$ 50,00/h) para modelar o custo equivalente.
 

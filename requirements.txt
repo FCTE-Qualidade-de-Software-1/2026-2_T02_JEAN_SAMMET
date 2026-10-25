@@ -1,3 +1,5 @@
 mkdocs<2
 mkdocs-material
 pymdown-extensions
+matplotlib
+tzdata

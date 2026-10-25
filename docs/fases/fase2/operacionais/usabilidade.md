@@ -90,6 +90,6 @@ A inspeção heurística orienta-se pela verificação das 10 Heurísticas de Ni
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da especificação de usabilidade, tarefas padronizadas, fichas MET-OP-01 e MET-OP-01b | 16/10 | [c821ea3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/c821ea3) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de referências a divisões internas de pessoas e padronização documental | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com GQM e ISO 9241-11 | 24/10 | [b31d87e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b31d87e) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Substituição de testes com participantes externos por Avaliação Heurística interna de Nielsen (TCH e ISVH) | 25/10 | [corrente] |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Substituição de testes com participantes externos por Avaliação Heurística interna de Nielsen (TCH e ISVH) | 25/10 | [8330fa6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8330fa6ce8a670d083d8718eada13606616f064c) |
 
 

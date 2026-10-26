@@ -1,53 +1,38 @@
-# Especificação da Avaliação — Métricas Funcionais
+# Especificação da avaliação — Métricas funcionais
 
-Este documento especifica as perguntas e métricas de **adequação funcional** para avaliar a funcionalidade _Planejar formatura_ do No Fluxo UnB, com foco no Motor 2. A avaliação procura verificar se os planos gerados são coerentes com o histórico do aluno e com as regras acadêmicas aplicáveis, sem tratar limitações documentadas como defeitos antes da execução dos testes.
+A avaliação usa o método **Goal-Question-Metric (GQM)** para verificar a adequação funcional de *Planejar formatura*, com foco no Motor 2. Os critérios e métricas estão detalhados em [GQM](GQM.md), e os cenários de coleta em [Protocolo de testes](testes.md).
 
-A estrutura segue o método **Goal-Question-Metric (GQM)** e complementa as métricas operacionais descritas em [`Metricas Operacionais`](metricasOperacionais.md).
+O objetivo é identificar planos que contrariem regras curriculares, omitam disciplinas ou interpretem incorretamente o histórico e as opções informadas. Os resultados apoiam estudantes, coordenação acadêmica, equipe responsável pelo produto e avaliadores. Como o plano é uma estimativa e o No Fluxo UnB não é ferramenta oficial da UnB, a avaliação **não garante a formatura**.
 
-## 1. Contexto da avaliação
+## 1. Escopo e referência
 
-### 1.1 Propósito e decisões apoiadas
+| Item | Definição |
+|---|---|
+| **Objeto** | Motor 2, em `backend/src/services/plano_formatura.service.ts`, chamado por `POST /planejamento/gerar-plano`. |
+| **Versão** | Commit de referência `87b5475`, conforme documentação da Fase 1. |
+| **Matriz prioritária** | Engenharia de Software da FGA/UnB, identificada como `6360/1` ou `2017.1` e descrita como inativa no sistema observado. Confirmar a matriz aplicável antes da coleta. |
+| **Dados** | Históricos sintéticos ou dados autorizados e anonimizados. |
+| **Entradas** | Histórico e status das disciplinas, matriz, pré/co-requisitos, equivalências, oferta de turmas e opções do onboarding. |
+| **Saídas** | Disciplinas e semestres planejados, pendências/críticas, previsão de formatura e informações de integralização exibidas. |
+| **Validade** | Conclusões limitadas aos cenários, dados, matriz, ambiente e versão registrados; o commit não comprova equivalência com a versão em produção. |
 
-O No Fluxo UnB auxilia o estudante a decidir quais disciplinas cursar nos próximos semestres e quando poderá concluir o curso. Na tela _Planejar formatura_, o Motor 2 organiza disciplinas por semestre e apresenta uma previsão de formatura. Um plano com pré-requisitos ignorados, co-requisitos omitidos, disciplinas obrigatórias ausentes ou histórico interpretado incorretamente pode levar a decisões acadêmicas inadequadas e até atrasar a graduação.
+## 2. Hipóteses a verificar
 
-A avaliação funcional deve produzir evidências para:
+Os itens a seguir são hipóteses registradas na Fase 1, não defeitos confirmados.
 
-- **Alunos da UnB:** entender em que medida o plano corresponde ao histórico e à matriz curricular e quando precisa ser conferido com a coordenação do curso.
-- **Crianex e mantenedores:** localizar comportamentos que merecem correção e priorizar melhorias com base em evidências reproduzíveis.
-- **Coordenação e orientação acadêmica:** apoiar a identificação de planos incompatíveis com as regras do curso.
-- **Equipe avaliadora e requisitante acadêmica:** fundamentar a avaliação de qualidade do produto e a proposta de melhoria da etapa seguinte.
+| Hipótese | Risco e verificação | Referência |
+|---|---|---|
+| Trabalho/estágio e objetivo do onboarding podem não influenciar a seleção de disciplinas. | Confirmar o comportamento documentado antes de classificar uma diferença ou ausência de efeito como falha. | `MET-FUN-06` / `CT-06` |
+| Disciplinas em andamento podem ser tratadas como aprovadas para semestres futuros. | Conferir a regra documentada e registrar o efeito no plano. | `MET-FUN-04` / `CT-04` |
+| Uma lista vazia de disciplinas não alocadas pode coexistir com obrigatórias omitidas. | Comparar o plano com a lista completa de obrigatórias pendentes. | `MET-FUN-03` / `CT-03` |
+| Uma disciplina pode ser alocada sem a co-requisitada. | Conferir os pares e a regra de satisfação oficial. | `MET-FUN-02` / `CT-02` |
+| Equivalências podem ser expandidas em uma passagem e sem considerar a vigência. | Testar apenas relações e vigências respaldadas por fonte oficial. | `MET-FUN-05` / `CT-05` |
+| Falha na consulta do período letivo pode levar à estimativa pela data do sistema. | Comparar o semestre usado com o calendário oficial. | `MET-FUN-07` / `CT-07` |
 
-O plano é uma estimativa produzida por uma heurística e o No Fluxo UnB não é uma ferramenta oficial da UnB. A avaliação não deve apresentar os resultados como garantia institucional de formatura.
+## Histórico de versão
 
-### 1.2 Escopo e referência de execução
-
-O objeto funcional principal é o Motor 2, localizado no código de referência como `backend/src/services/plano_formatura.service.ts`, acionado pela rota `POST /planejamento/gerar-plano`.
-
-| Item                      | Referência para a avaliação                                                                                                                                     |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Software                  | No Fluxo UnB, funcionalidade _Planejar formatura_.                                                                                                              |
-| Versão do código          | Commit de referência `87b5475`, identificado na documentação da Fase 1.                                                                                         |
-| Curso/matriz prioritários | Engenharia de Software da FGA/UnB, matriz identificada na documentação como **6360/1 ou 2017.1**, descrita como inativa no sistema observado.                   |
-| Dados de teste            | Históricos sintéticos ou dos membros da equipe e entrevistados que permitirem o uso                                                                             |
-| Entradas relevantes       | Histórico e status das disciplinas, matriz curricular, pré-requisitos, co-requisitos, equivalências, oferta de turmas e opções do onboarding.                   |
-| Saídas relevantes         | Disciplinas e semestres planejados, matérias pendentes/críticas, semestre previsto de formatura e informações de integralização disponíveis na interface.       |
-| Limite de validade        | Os resultados valem para os cenários, a matriz, os dados, a versão e o ambiente registrados. Não provam que a versão em produção é idêntica ao código avaliado. |
-
-### 1.3 Hipóteses funcionais documentadas
-
-Os itens abaixo foram registrados na Fase 1 como **hipóteses que precisam ser testadas**, não como defeitos confirmados.
-
-| Hipótese documentada                                                                                                                                                                        | Risco para a adequação funcional                                                                                                                            | Métrica/cenário relacionado    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| As respostas do onboarding sobre trabalho/estágio e objetivo aparecem no fluxo, mas, no serviço analisado, são descritas como valores padrão que não participam da seleção das disciplinas. | A opção apresentada ao aluno pode não produzir o comportamento esperado. É necessário confirmar o comportamento prometido antes de classificá-lo como erro. | `MET-FUN-06`; cenário `CT-06`. |
-| Disciplinas com matrícula em andamento são tratadas como aprovadas para planejar semestres futuros.                                                                                         | O plano pode diferir do resultado real caso o aluno seja reprovado; a avaliação deve verificar a regra documentada e a clareza do comportamento.            | `MET-FUN-04`; cenário `CT-04`. |
-| Uma lista vazia de disciplinas não alocadas não garante, por si só, que todas as obrigatórias entraram no plano.                                                                            | O plano pode omitir disciplinas pendentes sem que a ausência seja evidente.                                                                                 | `MET-FUN-03`; cenário `CT-03`. |
-| Há casos em que uma disciplina pode ser alocada sem sua co-requisitada.                                                                                                                     | O plano pode violar uma relação curricular de co-requisito.                                                                                                 | `MET-FUN-02`; cenário `CT-02`. |
-| A expansão de equivalências é descrita como uma única passagem, filtrada por curso e sem considerar a vigência.                                                                             | Equivalências encadeadas ou relacionadas a matrizes antigas podem ser aplicadas incorretamente.                                                             | `MET-FUN-05`; cenário `CT-05`. |
-| Se a consulta ao período letivo falhar, o período atual pode ser estimado pela data do sistema.                                                                                             | O plano pode começar em semestre diferente do calendário acadêmico aplicável.                                                                               | `MET-FUN-07`; cenário `CT-07`. |
-
-| Nome do Membro                                                    | Contribuição                                                                                          | Data       | Commit                                                                                                                            |
-| :---------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| [Gabriel Mota](https://github.com/Gabro-MO)                       | Elaboração inicial das perguntas GQM, fichas de métricas funcionais e protocolo de cenários de teste. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste de consistência do foco GQM e remoção de referências a divisões internas de pessoas            | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
-| [Gabriel Mota](https://github.com/Gabro-MO)                       | Divisão do arquivo principal em varias paginas e ajustes a estrutura                                  | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a)                                                                                                                              |
+| Membro | Contribuição | Data | Commit |
+|---|---|---|---|
+| [Gabriel Mota](https://github.com/Gabro-MO) | Perguntas GQM, fichas de métricas e cenários iniciais. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Revisão do foco GQM e dos papéis da equipe. | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |

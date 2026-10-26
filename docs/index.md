@@ -12,6 +12,15 @@ Documentação do projeto final da disciplina **FGA0315 - Qualidade de Software 
 
 O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o fluxograma do curso e a planejar a formatura a partir do histórico acadêmico. A equipe avalia a qualidade da funcionalidade "Planejar formatura", que indica o semestre previsto de formatura, as matérias críticas e a sequência de disciplinas, e entregará recomendações e ao menos uma ação de melhoria.
 
+## Metodologia
+
+| Tema | Página |
+| :--- | :--- |
+| Metodologia escolhida e normas SQuaRE utilizadas | [Visão Geral](metodologia/visaoGeral.md) |
+| Fases do processo de avaliação (ISO/IEC 25040) | [Processo de Avaliação](metodologia/processoSquare.md) |
+| Ciclo de trabalho, convenções e tratamento dos dados | [Organização e Fluxo de Trabalho](metodologia/fluxoDeTrabalho.md) |
+| Estrutura e produção do artigo | [Elaboração do Artigo](metodologia/elaboracaoArtigo.md) |
+
 ## Fase 1 - Estabelecer os requisitos da avaliação
 
 | Tema | Página |
@@ -22,7 +31,7 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | Seleção e priorização das características | [Características de Qualidade](fases/fase1/caracteristicasDeQualidade.md) |
 | Escopo, profundidade e objetos | [Escopo](fases/fase1/escopo.md) |
 | ODS, metas e indicadores | [ODS](fases/fase1/ODS.md) |
-| Declaração de uso de IA | [Uso de IA](usoDeIA/fase1.md) |
+| Declaração de uso de IA | [Uso de IA](usoDeIA/IA.md) |
 | Referências | [Referências](referencias/fase1.md) |
 
 ## Fase 2 - Especificar a avaliação (GQM)

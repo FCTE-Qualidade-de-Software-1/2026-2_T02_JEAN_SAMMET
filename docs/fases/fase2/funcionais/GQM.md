@@ -10,7 +10,13 @@
 | **Ponto de vista** | Estudantes e equipe responsável pelo produto. |
 | **Contexto** | Aplicação web, matriz de Engenharia de Software da FGA/UnB e históricos sintéticos, com regras curriculares oficiais como referência. |
 
-**Objetivo GQM:** verificar se os planos respeitam as regras acadêmicas e refletem corretamente o histórico e as opções informadas pelo estudante, identificando violações, omissões e divergências.
+| Elemento GQM       | Descrição do Objetivo                                                                                                                       |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Objeto**         | A funcionalidade _Planejar formatura_ do software No Fluxo UnB.                                       |
+| **Propósito**      | **Avaliar** a produto.                                                                            |
+| **Foco**           |  **Adequação Funcional**              |
+| **Ponto de Vista** | Dos **estudantes de graduação da UnB** e da **equipe de desenvolvimento**.                     |
+| **Contexto**       | Execução em ambiente web desktop moderno, com dados curriculares da Engenharia de Software da FGA/UnB e histórico sintético de disciplinas. |
 
 ## 2. Diagrama GQM
 

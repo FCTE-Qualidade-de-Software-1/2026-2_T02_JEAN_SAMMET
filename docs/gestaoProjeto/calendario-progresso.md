@@ -4,6 +4,8 @@
 
 Esta categoria acompanha o cumprimento do cronograma planejado e a conclusão das tarefas comprometidas no Milestone ativo. A medição permite identificar atrasos e orientar a redistribuição das pendências prioritárias.
 
+**Origem das medidas.** Calendário e Progresso é uma das categorias de informação do PSM (McGARRY et al., 2001), e o burndown e a comparação entre tarefas comprometidas e concluídas são medidas descritas no framework CID (PSM, 2021). A TCT expressa essa comparação em percentual. Os limites de 100% e 75% são critérios definidos pela equipe. Os dados vêm das Issues e do Milestone do repositório no GitHub.
+
 ## 2. Modelo de Informação do PSM
 
 | Elemento do Modelo PSM | Especificação Aplicada à Equipe |
@@ -30,3 +32,4 @@ Os dados atuais do Milestone e o progresso das tarefas podem ser consultados na 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
+| [Gustavo Fornaciaro](https://github.com/GUGOFO) | Declaracao da origem da métrica | 25/10/2026 | [792b187](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/792b187ac98c876b47b42606e9c15a4f0e4ddf41) |

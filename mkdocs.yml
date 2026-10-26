@@ -8,6 +8,11 @@ site_author: Grupo 05
 
 nav:
   - Início: index.md
+  - Metodologia:
+    - Visão Geral: metodologia/visaoGeral.md
+    - Processo de Avaliação (SQuaRE): metodologia/processoSquare.md
+    - Organização e Fluxo de Trabalho: metodologia/fluxoDeTrabalho.md
+    - Elaboração do Artigo: metodologia/elaboracaoArtigo.md
   - Fases:
     - Fase 1:
         - Propósito e Stakeholders: fases/fase1/propositoEStakeholders.md
@@ -21,13 +26,14 @@ nav:
             - Sumário: fases/fase2/funcionais/visaoGeral.md
             - Visão Geral (GQM): fases/fase2/funcionais/GQM.md
             - Protocolo de Coleta e Teste: fases/fase2/funcionais/testes.md
-            - Referências: fases/fase2/funcionais/referencia.md
+            - Referências: fases/fase2/funcionais/referencias.md
         - Métricas Operacionais:
             - Sumário: fases/fase2/metricasOperacionais.md
             - Visão Geral (GQM): fases/fase2/operacionais/visaoGeral.md
             - Usabilidade: fases/fase2/operacionais/usabilidade.md
             - Segurança: fases/fase2/operacionais/seguranca.md
             - Protocolo de Coleta e Teste: fases/fase2/operacionais/protocolo.md
+            - Referências: fases/fase2/operacionais/referencias.md
 
   - Gestão do Projeto:
     - Visão Geral: gestaoProjeto/psm-cid.md
@@ -35,6 +41,7 @@ nav:
     - Recursos e Custos: gestaoProjeto/recursos-custos.md
     - Desempenho do Processo: gestaoProjeto/desempenho-processo.md
     - Acompanhamento: gestaoProjeto/acompanhamento.md
+    - Painel Automático: gestaoProjeto/painel.md
   - Critérios:
     - Premissas Iniciais: criterios/premissasIniciais.md
     - Fase 1: criterios/fase1.md

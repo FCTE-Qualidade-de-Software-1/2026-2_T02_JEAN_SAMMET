@@ -12,3 +12,6 @@ site/
 # OS files
 .DS_Store
 Thumbs.db
+
+docs/gestaoProjeto/dados/
+docs/gestaoProjeto/painel.md

@@ -1,105 +1,89 @@
 # Estrutura do Artigo
 
+Estrutura da 1ª versão do artigo (Entrega 1), um relato de experiência, com o conteúdo de cada seção e a página da GitPage de onde ele vem. O texto completo está em `latex/main.tex`.
+
 ---
 
 ## Título
 
-## Autores e afiliação
+Avaliação da Qualidade do Planejamento de Formatura do No Fluxo UnB: Requisitos e Especificação segundo a ISO/IEC 25040
+
+## Autores, afiliação e contato
+
+- Ana Beatriz Souza Araujo, Giovani De Oliveira Teodoro Coelho, Yasmim de Souza Santos, Gabriel Mota Oliveira, Gustavo Gomes Fornaciari e Vitor Lages Nogueira Araújo
+- Faculdade de Ciências e Tecnologias em Engenharia (FCTE), Universidade de Brasília (UnB)
+- E-mail institucional de cada autor (matrícula@aluno.unb.br) no `\email{}` do modelo SBC
 
 ## Abstract
 
 ## Resumo
 
-- Contexto e objeto da avaliação
-- Objetivo
-- Método (SQuaRE, GQM e PSM/CID)
-- Produtos obtidos
-- Contribuição
+- Contexto e objeto: fluxo de planejamento de formatura do No Fluxo UnB
+- Método: processo da ISO/IEC 25040 (SQuaRE) e GQM
+- O que foi feito nas Fases 1 e 2: requisitos, modelo adaptado da ISO/IEC 25010, pontos do Motor 2 a testar, 2 objetivos, 9 questões e 12 métricas
 
 ---
 
 ## 1. Introdução
 
-- Contexto
-- Problema e motivação
-- Objeto da avaliação: No Fluxo UnB e o fluxo de planejamento de formatura (envio do histórico, renderização inicial do fluxograma atual e tela "Planejar formatura")
-- Objetivo geral e objetivos específicos
-- Abordagem adotada
-- Contribuição esperada
-- Link do repositório e versão submetida
+- Contexto e problema: planos incorretos podem atrasar a graduação; o histórico pode conter dados pessoais
+- Objeto: envio do histórico, fluxograma e tela "Planejar formatura" (objeto central)
+- Objetivo geral e objetivos específicos (i) a (iv); esta versão cobre (i) e (ii)
+- Relato de experiência; links do repositório e da GitPage
 - Organização do artigo
 
-## 2. Referencial Teórico
+## 2. Referencial Teórico e Trabalhos Relacionados
 
-### 2.1 Qualidade de produto de software e a família SQuaRE
+Seção sem subseções.
 
-### 2.2 Modelo de qualidade da ISO/IEC 25010
+- Um parágrafo sobre a SQuaRE: divisões, normas usadas e as três características da ISO/IEC 25010
+- Trabalhos relacionados: Puspaningrum et al. (2017), Calabrese et al. (2018) e Carvalho (2016), e a diferença deste trabalho
 
-- Adequação Funcional
-- Segurança
-- Usabilidade
+## 3. Metodologia
 
-### 2.3 Processo de avaliação da ISO/IEC 25040
+Seção sem subseções. Origem: [Processo de Avaliação](../docs/metodologia/processoSquare.md)
 
-### 2.4 Método GQM
+- Processo da ISO/IEC 25040 em quatro fases e GQM; Fases 1 e 2 na Entrega 1
+- Passo a passo breve de cada fase (Fases 3 e 4 previstas para a Entrega 2)
+- Ferramentas usadas
+- Detalhamento completo no repositório Git
 
-### 2.5 Medição para gestão de projetos: PSM/CID
+## 4. Resultados
 
-### 2.6 Trabalhos relacionados (opcional)
+### 4.1 Fase 1: requisitos da avaliação
 
-## 3. Metodologia de Desenvolvimento do Projeto
+- Propósito e as quatro partes interessadas, em poucas linhas
+- Descrição do produto, uma figura de tela, diagrama de contexto e uma linha sobre o ODS 4
+- Seis pontos do Motor 2 registrados na análise do código, tratados como hipóteses
+- Priorização por impacto e risco (só a ordem e a primeira colocada) junto com o modelo adaptado e sua figura
+- Escopo, exclusões e limites de validade, condensados
+- Origem: páginas da [Fase 1](../docs/fases/fase1/propositoEStakeholders.md)
 
-### 3.1 Processo adotado
+### 4.2 Fase 2: especificação da avaliação
 
-### 3.2 Organização da equipe, ferramentas e artefatos
+- Objetivos (tabela), gráfico GQM, questões e hipóteses (tabela), métricas com a questão de cada uma (tabela)
+- Coleta prevista e critérios de julgamento (tabela de níveis)
+- Revisões pelas quais a especificação passou
+- Origem: [Métricas Funcionais](../docs/fases/fase2/funcionais/visaoGeral.md) e [Métricas Operacionais](../docs/fases/fase2/metricasOperacionais.md)
 
-### 3.3 Gestão do projeto com PSM/CID
+## 5. Considerações Parciais
 
-- Calendário e Progresso
-- Recursos e Custos
-- Desempenho dos Processos
-- Medições, interpretação e decisões de gestão
-
-### 3.4 Rastreabilidade dos dados e aspectos éticos
-
-## 4. Fase 1 - Estabelecimento dos Requisitos da Avaliação
-
-### 4.1 Propósito da avaliação e uso pretendido
-
-### 4.2 Requisitante e partes interessadas
-
-### 4.3 Tipo de produto e descrição do software
-
-### 4.4 Modelo de qualidade adaptado
-
-### 4.5 Seleção e priorização das características
-
-### 4.6 Escopo, profundidade e objetos de avaliação
-
-### 4.7 Relação com os ODS
-
-## 5. Fase 2 - Especificação da Avaliação
-
-### 5.1 Rastreabilidade entre as Fases 1 e 2
-
-### 5.2 Objetivos de medição - nível conceitual
-
-### 5.3 Questões e hipóteses - nível operacional
-
-### 5.4 Métricas - nível quantitativo
-
-### 5.5 Níveis de pontuação e critérios de julgamento
-
-### 5.6 Gráfico GQM
-
-## 6. Considerações Parciais
+- O que foi encontrado nas Fases 1 e 2 e próximos passos da Entrega 2
 
 ---
 
 ## Declaração de Uso de Inteligência Artificial
 
+- Uma frase por integrante: ferramenta, tarefa e como conferiu, com base em [Uso de IA](../docs/usoDeIA/IA.md)
+
 ## Disponibilidade dos Dados
+
+- Link do repositório
 
 ## Referências
 
+- Arquivo `latex/referencias.bib`
+
 ## Apêndice A - Tabela de Contribuição
+
+- Integrante, matrícula, atividades realizadas e percentual de esforço, com base em [Equipe](../docs/equipe/equipe.md)

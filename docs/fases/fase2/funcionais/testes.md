@@ -1,38 +1,37 @@
-## 5. Casos de teste para a coleta
+# Protocolo de coleta — Métricas funcionais
 
-Todos os casos devem usar históricos sintéticos. A equipe deve guardar a versão do software, a matriz e fonte curricular utilizadas, as entradas, o resultado esperado definido antes da execução, o plano real gerado e as evidências. O resultado esperado deve ser derivado de uma regra oficial ou de um comportamento documentado, nunca de suposição do avaliador.
+Todos os casos usam históricos sintéticos. Antes de executar, definir o resultado esperado com base em regra oficial ou comportamento documentado. Registrar versão/commit, matriz e fonte curricular, entradas, plano gerado, cálculo e evidências. Uma hipótese não confirmada não deve ser classificada automaticamente como defeito.
 
-| ID      | Cenário/entrada sintética                                                                                                                                                                                 | Resultado esperado                                                                                                                                                                                                      | Regra/métrica verificada                             | Evidência a registrar                                                                                       |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `CT-01` | Uma disciplina obrigatória pendente possui pré-requisito identificado; preparar variações em que o pré-requisito esteja aprovado e pendente.                                                              | Quando pendente, a disciplina dependente não deve ser planejada antes da satisfação válida do pré-requisito; quando aprovado, deve ser tratada conforme a regra de ordenação.                                           | Pré-requisitos; `MET-FUN-01`.                        | Histórico, relação curricular e vigência, semestre dos componentes no plano, captura/log do resultado.      |
-| `CT-02` | Duas disciplinas pendentes possuem co-requisito oficial. Adicionar, quando aplicável, uma variação em que uma delas já esteja satisfeita.                                                                 | O plano deve respeitar a forma de satisfação do co-requisito definida pela fonte oficial.                                                                                                                               | Co-requisitos; `MET-FUN-02`.                         | Fonte da relação, status das duas disciplinas, semestre planejado para cada uma e resultado da verificação. |
-| `CT-03` | Histórico sintético deixa um conjunto conhecido de disciplinas obrigatórias pendentes.                                                                                                                    | Todas as obrigatórias aplicáveis devem constar no plano, ou qualquer exclusão precisa ter justificativa oficial documentada e ser tratada conforme a política acordada antes da coleta.                                 | Completude; `MET-FUN-03`.                            | Lista esperada, lista gerada, disciplinas omitidas e cálculo da cobertura.                                  |
-| `CT-04` | Histórico contém disciplinas aprovadas, pendentes e em andamento/matriculadas.                                                                                                                            | Disciplinas aprovadas devem ser reconhecidas conforme o estado do histórico; disciplinas em andamento devem seguir a regra explicitamente documentada pelo produto e ter o efeito registrado.                           | Tratamento do histórico; `MET-FUN-04`.               | Status de entrada, estado representado/considerado no plano, divergências e capturas.                       |
-| `CT-05` | Histórico inclui uma disciplina que, segundo fonte oficial, pode satisfazer outra por equivalência; incluir variação encadeada ou de matriz antiga apenas se houver fonte aplicável.                      | O tratamento das pendências e da disciplina equivalente deve corresponder à regra e à vigência oficiais.                                                                                                                | Equivalências; `MET-FUN-03` e `MET-FUN-05`.          | Fonte e vigência da equivalência, dados de entrada, pendências antes/depois e plano gerado.                 |
-| `CT-06` | Manter o histórico fixo e variar um campo do onboarding por execução: trabalho/estágio, objetivo e limite de créditos.                                                                                    | O resultado deve atender à expectativa documentada para cada campo. A expectativa e a propriedade comparada devem ser definidas antes do teste; não se exige diferença de disciplinas se isso não estiver especificado. | Entradas do onboarding; `MET-FUN-06`.                | Campo e valor enviados, fonte do comportamento esperado, planos comparados e conclusão por campo.           |
-| `CT-07` | Usar cenário com período letivo/oferta de turmas conhecidos e limite de créditos documentado. Se viável, executar também caso controlado de falha na consulta de período, sem causar impacto em produção. | O plano deve seguir as restrições curriculares e a unidade de carga efetivamente definida. Se o período for estimado por falha, a divergência em relação ao calendário oficial deve ser registrada.                     | Oferta, semestre de partida e limites; `MET-FUN-07`. | Calendário/oferta de referência, configuração de carga, semestre e alocações geradas, logs disponíveis.     |
+## 1. Casos de teste
 
-### 5.1 Registro padronizado por execução
+| ID | Cenário | Resultado esperado | Métrica | Evidência |
+|---|---|---|---|---|
+| `CT-01` | Disciplina pendente com pré-requisito aprovado ou pendente. | A dependente não deve preceder a satisfação válida do requisito. | `MET-FUN-01` | Fonte e vigência da regra, histórico, semestres no plano e captura/log. |
+| `CT-02` | Par de co-requisitos pendentes; variar quando um já estiver satisfeito. | A alocação segue a regra oficial de satisfação simultânea ou prévia. | `MET-FUN-02` | Fonte, status e semestre de cada disciplina, resultado da verificação. |
+| `CT-03` | Histórico com conjunto conhecido de obrigatórias pendentes. | Todas devem constar no plano, salvo exclusão justificada por regra oficial e política definida previamente. | `MET-FUN-03` | Lista esperada/gerada, omissões, justificativas e cobertura calculada. |
+| `CT-04` | Histórico com disciplinas aprovadas, pendentes e em andamento. | O tratamento de cada status corresponde à regra documentada. | `MET-FUN-04` | Status de entrada, estado observado, divergências e capturas. |
+| `CT-05` | Disciplina satisfeita por equivalência oficial; testar casos encadeados ou de matriz antiga apenas se houver fonte aplicável. | Pendências e disciplina substituta são tratadas conforme a equivalência e vigência. | `MET-FUN-03`, `MET-FUN-05` | Fonte/vigência, entradas, pendências antes/depois e plano. |
+| `CT-06` | Manter o histórico fixo e variar trabalho/estágio, objetivo e limite de créditos, um campo por vez. | Cada efeito corresponde ao comportamento documentado; não exigir mudança na seleção de disciplinas sem essa expectativa. | `MET-FUN-06` | Campo/valor, fonte do comportamento, planos comparados e conclusão. |
+| `CT-07` | Oferta e período letivo conhecidos; validar o limite de carga. Se seguro e viável, simular falha na consulta ao período fora da produção. | Alocações respeitam as restrições documentadas; eventual semestre estimado é comparado ao calendário oficial. | `MET-FUN-07` | Calendário/oferta, limite, semestres, alocações e logs. |
 
-| Campo                                        | Valor a preencher                                                   |
-| -------------------------------------------- | ------------------------------------------------------------------- |
-| ID do caso de teste                          | `CT-__`                                                             |
-| Data e hora                                  | [preencher]                                                         |
-| Responsável pela execução                    | [preencher]                                                         |
-| Commit/versão do código                      | [preencher]                                                         |
-| Ambiente/navegador                           | [preencher]                                                         |
-| Matriz e versão da fonte oficial             | [preencher]                                                         |
-| Identificador do histórico sintético         | [preencher; sem dados pessoais reais]                               |
-| Regra e fonte documental                     | [preencher]                                                         |
-| Resultado esperado (definido antes do teste) | [preencher]                                                         |
-| Resultado observado                          | [preencher]                                                         |
-| Métrica(s) afetada(s) e cálculo              | [preencher]                                                         |
-| Evidência (captura, log, exportação)         | [caminho/link interno]                                              |
-| Classificação                                | Conforme / Não conforme / Não aplicável / Pendente de especificação |
-| Justificativa e observações                  | [preencher]                                                         |
+## 2. Registro de execução
 
-| Nome do Membro                                                    | Contribuição                                                                                          | Data       | Commit                                                                                                                            |
-| :---------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| [Gabriel Mota](https://github.com/Gabro-MO)                       | Elaboração inicial das perguntas GQM, fichas de métricas funcionais e protocolo de cenários de teste. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste de consistência do foco GQM e remoção de referências a divisões internas de pessoas            | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
-| [Gabriel Mota](https://github.com/Gabro-MO)                       | Divisão do arquivo principal em varias paginas e ajustes a estrutura                                  | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a)                                                                                                                                 |
+| Campo | Registro |
+|---|---|
+| Caso, data/hora e responsável | `CT-__`; [preencher] |
+| Commit/versão e ambiente | [preencher] |
+| Matriz, versão da fonte e regra | [preencher] |
+| Identificador do histórico sintético | [preencher; sem dados pessoais reais] |
+| Resultado esperado (pré-definido) | [preencher] |
+| Resultado observado | [preencher] |
+| Métrica(s) e cálculo | [preencher] |
+| Evidência (captura, log ou exportação) | [caminho/link interno] |
+| Classificação e justificativa | Conforme / Não conforme / Não aplicável / Pendente de especificação; [observações] |
+
+## Histórico de versão
+
+| Membro | Contribuição | Data | Commit |
+|---|---|---|---|
+| [Gabriel Mota](https://github.com/Gabro-MO) | Perguntas GQM, métricas e cenários iniciais. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Revisão do foco GQM e dos papéis da equipe. | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |

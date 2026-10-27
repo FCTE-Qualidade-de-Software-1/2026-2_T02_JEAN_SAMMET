@@ -304,10 +304,9 @@ Fonte: elaboração da equipe.}
 \label{fig:gqm}
 \end{figure}
 
-As hipóteses funcionais da Tabela~\ref{tab:questoes} vêm da análise do Motor 2: seis
-são os pontos registrados, e a de Q-FUN-01 espera que os pré-requisitos sejam
-respeitados, já que a análise não registrou falha nessa regra. As hipóteses
-operacionais vêm das limitações levantadas na Fase 1.
+As hipóteses da Tabela~\ref{tab:questoes} são riscos a verificar, e não defeitos
+confirmados: as funcionais, H-FUN-01 a H-FUN-07, são verificadas pelos casos de teste
+CT-01 a CT-07, e as operacionais vêm das limitações levantadas na Fase 1.
 
 \begin{table}[!ht]
 \centering
@@ -318,13 +317,13 @@ operacionais vêm das limitações levantadas na Fase 1.
 \begin{tabular}{|I{1.6cm}|L{6.0cm}|L{6.4cm}|}
 \hline
 \textbf{ID} & \textbf{Questão} & \textbf{Hipótese} \\ \hline
-Q-FUN-01 & O plano respeita os pré-requisitos oficiais das disciplinas? & O plano respeita os pré-requisitos oficiais, já que a análise do Motor 2 não registrou falha nessa regra. \\ \hline
-Q-FUN-02 & O plano respeita as regras oficiais de co-requisitos? & Há casos em que uma disciplina pode ser alocada sem sua co-requisitada. \\ \hline
-Q-FUN-03 & O plano contempla as disciplinas obrigatórias ainda pendentes, considerando aprovações, equivalências e exceções válidas? & Uma lista vazia de disciplinas não alocadas não garante, por si só, que todas as obrigatórias entraram no plano. \\ \hline
-Q-FUN-04 & O sistema interpreta o histórico acadêmico e o status das disciplinas de acordo com as regras documentadas? & Disciplinas com matrícula em andamento são tratadas como aprovadas para planejar semestres futuros. \\ \hline
-Q-FUN-05 & As equivalências são aplicadas conforme a fonte curricular oficial e a vigência pertinente? & A expansão de equivalências é feita em uma única passagem, filtrada por curso e sem considerar a vigência. \\ \hline
-Q-FUN-06 & As opções do \textit{onboarding} geram o comportamento documentado ou explicitamente prometido ao aluno? & As respostas sobre trabalho ou estágio e sobre o objetivo aparecem no fluxo, mas são valores padrão que não participam da seleção das disciplinas. \\ \hline
-Q-FUN-07 & O plano respeita as demais restrições acadêmicas verificáveis, como oferta de turmas, semestre de partida e limite de carga configurado? & Se a consulta ao período letivo falhar, o período atual pode ser estimado pela data do sistema. \\ \hline
+Q-FUN-01 & O plano respeita os pré-requisitos oficiais? & H-FUN-01: o plano pode posicionar uma disciplina antes de o pré-requisito ser satisfeito segundo a fonte oficial. \\ \hline
+Q-FUN-02 & O plano respeita os co-requisitos oficiais? & H-FUN-02: disciplinas co-requisitadas podem ser distribuídas sem atender à regra de satisfação simultânea ou prévia aplicável. \\ \hline
+Q-FUN-03 & Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas? & H-FUN-03: o plano pode omitir obrigatórias pendentes mesmo quando a lista de disciplinas não alocadas está vazia. \\ \hline
+Q-FUN-04 & O histórico e os status são interpretados conforme as regras documentadas? & H-FUN-04: o motor pode tratar disciplinas em andamento como aprovadas no planejamento futuro. \\ \hline
+Q-FUN-05 & As equivalências respeitam a fonte curricular e sua vigência? & H-FUN-05: a expansão das equivalências pode ignorar relações encadeadas ou a vigência aplicável. \\ \hline
+Q-FUN-06 & O \textit{onboarding} produz o comportamento documentado ou prometido? & H-FUN-06: as opções de trabalho ou estágio e de objetivo podem não produzir o efeito especificado. \\ \hline
+Q-FUN-07 & O plano respeita oferta, semestre inicial e limites de carga verificáveis? & H-FUN-07: se a consulta do período letivo falhar, o semestre estimado pela data do sistema pode divergir do calendário oficial e afetar o plano. \\ \hline
 Q-OP-01 & A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma? & H-OP-01: a tela concentra violações heurísticas (densidade excessiva de nós, \textit{feedback} insuficiente de recálculo e terminologia ambígua), comprometendo a facilidade de uso e a apreensão das saídas. \\ \hline
 Q-OP-02 & O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas? & H-OP-02: o processamento no navegador com retenção em \texttt{localStorage} e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. \\ \hline
 \end{tabular}

@@ -22,319 +22,134 @@ Requisitos e Especificação segundo a ISO/IEC 25040}
   Gustavo Gomes Fornaciari\inst{1}, Vitor Lages Nogueira Araújo\inst{1}}
 
 \address{Faculdade de Ciências e Tecnologias em Engenharia (FCTE)\\
-  Universidade de Brasília (UnB) -- Brasília, DF -- Brasil}
+  Universidade de Brasília (UnB) -- Brasília, DF -- Brasil
+  \email{241025891@aluno.unb.br, 241032500@aluno.unb.br}\\
+  \footnotesize\texttt{241040860@aluno.unb.br, 241011081@aluno.unb.br}\\
+  \footnotesize\texttt{241032519@aluno.unb.br, 242025054@aluno.unb.br}}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-Students at the University of Brasília (UnB) use web tools to understand their
-curriculum and plan the courses they still need to take. This paper reports the
-first stage of a quality evaluation of the graduation planning flow of No Fluxo
-UnB, which receives the student's academic transcript, renders the current
-curriculum flowchart and generates a semester-by-semester plan until graduation.
-The evaluation follows the ISO/IEC 25040 evaluation process of the SQuaRE family,
-uses the Goal-Question-Metric (GQM) method to specify the measures and applies
-PSM/CID measures to manage the project. This version covers Phases 1 and 2: the
-evaluation requirements, a quality model adapted from ISO/IEC 25010 focused on
-Functional Suitability, Security and Usability, and the specification of two
-measurement goals, nine questions and twelve metrics with judgment criteria.
+This experience report describes the first stage of a quality evaluation of the
+graduation planning flow of No Fluxo UnB, a web tool that helps University of
+Brasília (UnB) students plan the courses they still need to take. Following the
+ISO/IEC 25040 evaluation process and the Goal-Question-Metric (GQM) method, the team
+defined the evaluation requirements, adapted the ISO/IEC 25010 quality model to
+Functional Suitability, Security and Usability, recorded points of the planning
+engine to be tested, and specified two measurement goals, nine questions and twelve
+metrics with judgment criteria.
 \end{abstract}
 
 \begin{resumo}
-Estudantes da Universidade de Brasília (UnB) usam ferramentas web para entender a
-matriz curricular e planejar as disciplinas que ainda precisam cursar. Este artigo
-relata a primeira etapa da avaliação da qualidade do fluxo de planejamento de
-formatura do No Fluxo UnB, que recebe o histórico acadêmico do estudante,
-apresenta o fluxograma atual do curso e gera um plano de disciplinas por semestre
-até a formatura. A avaliação segue o processo da ISO/IEC 25040, da família SQuaRE,
-usa o método Goal-Question-Metric (GQM) para especificar as medidas e aplica
-medidas do PSM/CID na gestão do projeto. Esta versão cobre as Fases 1 e 2: os
-requisitos da avaliação, um modelo de qualidade adaptado da ISO/IEC 25010 com foco
-em Adequação Funcional, Segurança e Usabilidade, e a especificação de dois
-objetivos de medição, nove questões e doze métricas com critérios de julgamento.
+Este relato de experiência descreve a primeira etapa da avaliação da qualidade do
+fluxo de planejamento de formatura do No Fluxo UnB, ferramenta web que ajuda
+estudantes da Universidade de Brasília (UnB) a planejar as disciplinas que ainda
+precisam cursar. Seguindo o processo da ISO/IEC 25040 e o método Goal-Question-Metric
+(GQM), a equipe definiu os requisitos da avaliação, adaptou o modelo de qualidade da
+ISO/IEC 25010 para Adequação Funcional, Segurança e Usabilidade, registrou pontos do
+motor de planejamento a serem testados e especificou dois objetivos de medição, nove
+questões e doze métricas com critérios de julgamento.
 \end{resumo}
 
 \section{Introdução}\label{sec:introducao}
 
 O No Fluxo UnB é uma aplicação web que apresenta a matriz curricular em um
-fluxograma interativo e apoia o estudante da Universidade de Brasília (UnB) na
-visualização das disciplinas cursadas e no planejamento até a formatura
-\cite{nofluxo2026site,nofluxo2026repo}. A ferramenta auxilia o estudante a decidir
-quais disciplinas cursar nos próximos semestres e quando poderá concluir o curso.
-Um plano com pré-requisitos ignorados, co-requisitos omitidos, disciplinas
-obrigatórias ausentes ou histórico interpretado incorretamente pode levar a
-decisões acadêmicas inadequadas e até atrasar a graduação. Além disso, o histórico
-acadêmico enviado pode conter informações pessoais.
+fluxograma interativo e ajuda o estudante da Universidade de Brasília (UnB) a
+planejar as disciplinas até a formatura \cite{nofluxo2026site,nofluxo2026repo}. Um
+plano com pré-requisitos ignorados, disciplinas obrigatórias ausentes ou histórico
+interpretado incorretamente pode levar a decisões acadêmicas inadequadas e atrasar a
+graduação, e o histórico enviado pode conter dados pessoais. Este trabalho avalia o
+fluxo de planejamento de formatura, composto pelo envio do histórico, pelo
+fluxograma e pela tela ``Planejar formatura'', objeto central da avaliação, que gera
+as disciplinas por semestre e uma previsão de formatura.
 
-Este trabalho avalia o fluxo de planejamento de formatura da aplicação, composto pelo envio do
-histórico acadêmico, pela renderização inicial do fluxograma atual e pela tela
-``Planejar formatura'', que gera uma sequência de disciplinas por semestre e uma
-previsão de formatura. Essa tela é o objeto central da avaliação.
+O objetivo geral é avaliar a qualidade desse fluxo segundo a Adequação Funcional, a
+Segurança e a Usabilidade da ISO/IEC 25010 \cite{iso25010}. Os objetivos específicos
+são: (i) estabelecer os requisitos da avaliação; (ii) especificá-la com objetivos,
+questões, hipóteses, métricas e critérios de julgamento; (iii) projetá-la e
+executá-la; e (iv) executar ao menos uma ação de melhoria. Esta versão cobre (i) e
+(ii), que correspondem às Fases 1 e 2.
 
-O objetivo geral é avaliar a qualidade desse fluxo segundo as características
-Adequação Funcional, Segurança e Usabilidade do modelo de qualidade da ISO/IEC
-25010 \cite{iso25010}. Os objetivos específicos são: (i) estabelecer os requisitos
-da avaliação, isto é, propósito, partes interessadas, modelo de qualidade e escopo;
-(ii) especificar a avaliação com objetivos, questões, hipóteses, métricas e
-critérios de julgamento; (iii) projetar e executar a avaliação; e (iv) propor e
-executar ao menos uma ação de melhoria com base nos resultados. Esta primeira versão
-do artigo cobre os objetivos (i) e (ii), que correspondem às Fases 1 e 2 do processo
-de avaliação.
+Este artigo é um relato de experiência sobre como a equipe conduziu a avaliação, com
+o processo da ISO/IEC 25040 \cite{iso25040} e o método GQM \cite{basili1994gqm}, e
+sobre o que encontrou em cada fase. Os documentos e os dados estão no
+repositório\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET}}
+e na página de
+documentação\footnote{\url{https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/}}
+da equipe. A Seção~\ref{sec:referencial} apresenta o referencial teórico e os
+trabalhos relacionados; a Seção~\ref{sec:metodologia}, a metodologia; a
+Seção~\ref{sec:resultados}, os resultados; a Seção~\ref{sec:conclusao}, as
+considerações parciais; e o Apêndice~\ref{ap:contribuicao}, a contribuição de cada
+integrante.
 
-A abordagem segue o processo de avaliação da família SQuaRE, descrito na ISO/IEC
-25040 \cite{iso25040}, usa o método Goal-Question-Metric (GQM)
-\cite{basili1994gqm} para derivar as métricas e aplica medidas do PSM/CID
-\cite{mcgarry2001psm,psm2021cid} para acompanhar a execução do projeto. Ao final,
-a equipe entregará recomendações e ao menos uma ação de melhoria. Os documentos, os
-dados e os procedimentos estão no
-repositório da
-equipe\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET}}
-e na sua página de
-documentação\footnote{\url{https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/}}.
-
-O restante do artigo está organizado da seguinte forma: a
-Seção~\ref{sec:referencial} apresenta o referencial teórico; a
-Seção~\ref{sec:metodologia}, a metodologia de desenvolvimento do projeto; as
-Seções~\ref{sec:fase1} e~\ref{sec:fase2} descrevem as Fases 1 e 2; a
-Seção~\ref{sec:conclusao} traz as considerações parciais; e o
-Apêndice~\ref{ap:contribuicao} apresenta a contribuição de cada integrante.
-
-\section{Referencial Teórico}\label{sec:referencial}
-
-\subsection{Qualidade de produto de software e a família SQuaRE}\label{sec:square}
+\section{Referencial Teórico e Trabalhos Relacionados}\label{sec:referencial}
 
 A família ISO/IEC 25000, conhecida como SQuaRE (\textit{Systems and software
 Quality Requirements and Evaluation}), reúne normas para especificar e avaliar a
-qualidade de sistemas e produtos de software \cite{iso25000}. Ela é organizada em cinco divisões principais: gestão
-da qualidade (2500n), modelo de qualidade (2501n), medição da qualidade (2502n),
-requisitos de qualidade (2503n) e avaliação da qualidade (2504n), além de uma
-divisão de extensão. Neste trabalho são usadas a ISO/IEC 25010, que define o modelo
-de qualidade; a ISO/IEC 25020 e a ISO/IEC 25023, que tratam da estrutura de medição e
-das medidas de qualidade de produto \cite{iso25020,iso25023}; a ISO/IEC 25030,
-sobre requisitos de qualidade \cite{iso25030}; e a ISO/IEC 25040, que descreve o
-processo de avaliação.
+qualidade de produtos de software \cite{iso25000}. Neste trabalho, a ISO/IEC 25010
+fornece o modelo de qualidade, a ISO/IEC 25030 orienta os requisitos, a ISO/IEC 25020
+e a ISO/IEC 25023 tratam da medição \cite{iso25030,iso25020,iso25023} e a ISO/IEC
+25040 descreve o processo de avaliação. Das oito características da ISO/IEC
+25010:2011 \cite{iso25010}, três interessam aqui: a Adequação Funcional, que trata de
+as funções atenderem às necessidades declaradas e implícitas; a Segurança, que trata
+da proteção de informações e dados conforme o nível de autorização; e a Usabilidade,
+que trata do uso do produto com eficácia, eficiência e satisfação.
 
-\subsection{Modelo de qualidade da ISO/IEC 25010}\label{sec:iso25010}
+\cite{puspaningrum2017functional} mediram a adequação funcional de um sistema
+acadêmico com a ISO/IEC 25010 e o GQM, do ponto de vista dos docentes, e obtiveram
+resultados mais objetivos do que com a norma isolada.
+\cite{calabrese2018assistant} avaliaram a Segurança da ISO/IEC 25010 com métricas
+definidas pelo GQM em três estudos de caso. \cite{carvalho2016sigaa} avaliou a
+usabilidade do módulo de alunos do SIGAA com um questionário e as heurísticas de
+Nielsen e encontrou muitas violações. Este trabalho também combina a ISO/IEC 25010,
+o GQM e as heurísticas de Nielsen em um sistema acadêmico, mas avalia uma ferramenta
+de planejamento de formatura, trata as três características no mesmo processo e mede
+a adequação funcional com casos de teste, e não pela percepção dos usuários.
 
-O modelo de qualidade de produto da ISO/IEC 25010:2011 organiza a qualidade em oito
-características: adequação funcional, eficiência de desempenho, compatibilidade,
-usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade, cada uma
-dividida em subcaracterísticas \cite{iso25010}. Três delas são relevantes para este
-trabalho. A Adequação Funcional é o grau em que o produto fornece funções que
-atendem às necessidades declaradas e implícitas quando usado nas condições
-especificadas, e se divide em completude, correção e aptidão funcional. A Segurança
-é o grau em que o produto protege informações e dados, de modo que pessoas e
-sistemas tenham acesso apenas no nível adequado à sua autorização; suas
-subcaracterísticas são confidencialidade, integridade, não repúdio,
-responsabilização e autenticidade. A Usabilidade é o grau em que o produto pode ser
-usado por usuários específicos para atingir objetivos com eficácia, eficiência e
-satisfação em um contexto de uso, e inclui, entre outras, apreensibilidade e
-operabilidade.
+\section{Metodologia}\label{sec:metodologia}
 
-\subsection{Processo de avaliação da ISO/IEC 25040}\label{sec:iso25040}
+A avaliação segue o processo da ISO/IEC 25040 \cite{iso25040}, organizado na
+disciplina em quatro fases, e usa o GQM \cite{basili1994gqm}, que desdobra objetivos
+de medição em questões e métricas. As Fases 1 e 2 compõem a Entrega 1, relatada aqui,
+e as Fases 3 e 4, a Entrega 2. O detalhamento completo de cada fase está no
+repositório Git do projeto.
 
-A ISO/IEC 25040 define o processo de avaliação da qualidade de produto em cinco
-atividades: estabelecer os requisitos da avaliação, especificar, projetar, executar
-e concluir a avaliação \cite{iso25040}. Na primeira, definem-se o propósito, os
-requisitos de qualidade, as partes do produto incluídas e o rigor da avaliação. Na
-segunda, selecionam-se as medidas de qualidade e definem-se os critérios de decisão
-para as medidas e para a avaliação. A terceira produz o plano de avaliação; a quarta
-realiza as medições e aplica os critérios de decisão; e a quinta revisa os
-resultados, produz o relatório e trata os dados da avaliação. A especificação deve
-ser detalhada o bastante para que a avaliação seja repetível e reprodutível. Na
-disciplina em que este trabalho foi desenvolvido, a conclusão é agrupada com a
-execução, o que resulta em quatro fases.
+Na Fase 1, a equipe definiu o propósito e as partes interessadas, descreveu o produto
+a partir da aplicação e do código público (\textit{commit} 87b5475), adaptou o modelo
+da ISO/IEC 25010 com apoio da ISO/IEC 25030, priorizou as características por impacto
+e risco e delimitou o escopo. Na Fase 2, aplicou o GQM, com a ISO/IEC 25023 e a
+ISO/IEC 25020 como referência, em métricas funcionais e operacionais, cada uma com
+ficha (definição, cálculo, fonte, coleta e critério de interpretação) e protocolo de
+coleta. Na Fase 3 será elaborado o plano de avaliação e, na Fase 4, as medições serão
+executadas e ao menos uma ação de melhoria será realizada.
 
-\subsection{Método GQM}\label{sec:gqm}
+A equipe usou o GitHub, o MkDocs Material para a página de documentação, o Mermaid
+para os diagramas e o LaTeX no Overleaf para o artigo. Os protocolos preveem
+históricos sintéticos, o Google Chrome e suas ferramentas de desenvolvedor, o
+\texttt{npm audit}, requisições com \texttt{curl} ou Postman e um \textit{checklist}
+das heurísticas de Nielsen, sempre com verificações não invasivas.
 
-O GQM é uma abordagem orientada a objetivos para definir medições: em vez de partir
-das medidas disponíveis, parte-se do que se deseja saber \cite{basili1994gqm}. O
-modelo tem três níveis. No nível conceitual, o objetivo de medição é descrito por um
-modelo estruturado que informa o objeto analisado, o propósito, o foco de qualidade,
-o ponto de vista e o contexto. No nível operacional, o objetivo é refinado em
-questões que caracterizam o objeto em relação ao foco, cada uma acompanhada de uma
-hipótese, isto é, a resposta esperada que orienta a interpretação dos resultados.
-No nível quantitativo, associam-se a cada questão métricas que permitem respondê-la
-de forma objetiva \cite{solingen1999gqm}. As métricas devem ser simples, objetivas,
-fáceis de coletar e válidas, ou seja, devem medir o que se pretende medir.
+\section{Resultados}\label{sec:resultados}
 
-\subsection{Medição para gestão de projetos: PSM/CID}\label{sec:psm}
+\subsection{Fase 1: requisitos da avaliação}\label{sec:fase1}
 
-O PSM (\textit{Practical Software and Systems Measurement}) é uma abordagem de
-medição dirigida por necessidades de informação e ligada à gestão de projetos
-\cite{mcgarry2001psm}. Seu modelo de informação, alinhado à ISO/IEC/IEEE 15939
-\cite{iso15939}, liga uma necessidade de informação a um conceito mensurável e às
-entidades e atributos medidos. Medidas básicas são obtidas por um método de
-medição, combinadas em medidas derivadas por uma função de medição e transformadas
-em indicadores por um modelo de análise com critérios de decisão. O PSM organiza as
-necessidades de informação em categorias como calendário e progresso, recursos e
-custos, tamanho e estabilidade, qualidade do produto e desempenho do processo. O
-\textit{framework} PSM/CID adapta essa abordagem ao desenvolvimento contínuo e
-iterativo, com uma tabela de categorias, conceitos mensuráveis e medidas e com
-especificações de medidas como \textit{burndown}, comprometido versus concluído,
-tempo de ciclo e velocidade da equipe \cite{psm2021cid}.
+O propósito definido foi produzir evidências sobre a adequação funcional, a
+segurança observável e a usabilidade do fluxo, para identificar divergências
+funcionais, problemas de acesso ou de exposição de dados e dificuldades de uso, sem
+certificar o software. Foram identificadas quatro partes interessadas: os estudantes
+da UnB, usuários finais; os mantenedores do No Fluxo UnB; a professora da disciplina,
+requisitante da avaliação; e a equipe avaliadora.
 
-\section{Metodologia de Desenvolvimento do Projeto}\label{sec:metodologia}
-
-A equipe adotou uma metodologia composta e adaptada para este projeto, orientada
-pela família SQuaRE, que combina três abordagens estabelecidas: o processo da
-ISO/IEC 25040 conduz a avaliação do produto, o GQM especifica as métricas da Fase 2
-e o PSM/CID mede a gestão do próprio projeto. As duas frentes de medição usam o
-modelo de informação da ISO/IEC/IEEE 15939, no qual também se apoia a estrutura de
-medição da ISO/IEC 25020, o que permite tratar com os mesmos conceitos a avaliação
-do produto e a gestão da equipe. A forma de integrar as abordagens e o fluxo de
-trabalho descrito a seguir são adaptações da equipe, e não partes das referências
-citadas.
-
-\subsection{Processo adotado}\label{sec:processo}
-
-As quatro fases do processo de avaliação foram distribuídas entre as entregas da
-disciplina: a Entrega 1, em 26/10/2026, cobre as Fases 1 e 2, e a Entrega 2 cobre as
-Fases 3 e 4, incluindo a ação de melhoria. Cada entrega é tratada como um ciclo
-iterativo, que começa com o planejamento das tarefas, segue com a execução e a
-revisão por outro integrante, termina com a integração ao repositório e é
-acompanhado pelas medições do PSM/CID, cujos resultados orientam o ajuste do ciclo
-seguinte.
-
-\subsection{Organização da equipe, ferramentas e artefatos}\label{sec:organizacao}
-
-A equipe é formada por seis integrantes. Em cada entrega, o trabalho é dividido em
-frentes registradas como \textit{Issues} no GitHub e associadas a um
-\textit{Milestone}. Na Entrega 1, as frentes foram introdução e referencial teórico,
-objetivos, questões e métricas GQM, gráfico GQM, gestão com PSM/CID, estruturação
-da página de documentação e compilação da versão em LaTeX, cada uma sob
-responsabilidade de uma dupla. O fluxo adotado prevê que cada tarefa seja
-desenvolvida em uma \textit{branch} própria e integrada à \textit{branch} principal
-por \textit{Pull Request}, com revisão de um integrante diferente do autor. A página
-de documentação é construída
-com MkDocs Material e publicada automaticamente a cada atualização da
-\textit{branch} principal; os diagramas são versionados em Mermaid, e o artigo é
-escrito em LaTeX com o modelo da SBC.
-
-\subsection{Gestão do projeto com PSM/CID}\label{sec:gestao}
-
-A gestão do projeto usa três categorias de informação do PSM \cite{mcgarry2001psm}
-exigidas pela disciplina, com dados extraídos do repositório Git
-(Tabela~\ref{tab:psm}). O \textit{burndown}, a comparação entre tarefas
-comprometidas e concluídas e o tempo de ciclo são medidas descritas no
-\textit{framework} CID \cite{psm2021cid}. Os limites dos critérios de decisão foram
-definidos pela equipe, e o valor de R\$~50,00 por hora é uma referência didática, já
-que o projeto não envolve orçamento financeiro real.
-
-\begin{table}[!ht]
-\centering
-\caption{Medidas PSM/CID usadas na gestão do projeto. Fonte: elaboração da equipe.}
-\label{tab:psm}
-\footnotesize
-\begin{tabular}{|L{2.2cm}|L{3.0cm}|L{3.6cm}|L{4.4cm}|}
-\hline
-\textbf{Categoria} & \textbf{Necessidade de informação} & \textbf{Medida derivada} & \textbf{Critério de decisão} \\ \hline
-Calendário e Progresso & A equipe cumpre o cronograma do \textit{Milestone}? & $TCT = N_{conc} / N_{plan} \times 100$ & Meta de 100\% no prazo; se $TCT < 75\%$ a 24 horas do prazo, reatribuir as pendências prioritárias. \\ \hline
-Recursos e Custos & O esforço em horas e o custo equivalente estão alinhados com o planejamento inicial? & $E_r = \sum H_r$; $V_e = |E_r - E_e| / E_e \times 100$; $C = E \times V_h$, com $V_h$ = R\$~50,00/h & Manter $V_e \leq 10\%$; se $V_e > 20\%$, revisar os critérios de estimativa e reavaliar o planejamento. \\ \hline
-Desempenho do Processo & As tarefas são concluídas no tempo esperado? & Tempo de ciclo $TC = T_{\mbox{\scriptsize conclusão}} - T_{\mbox{\scriptsize criação}}$; tempo sem atividade $TSA$ & Meta de $TC$ médio de até 2 dias; verificar \textit{Issues} abertas sem atividade há mais de 3 dias. \\ \hline
-\end{tabular}
-\end{table}
-
-O esforço realizado é consolidado ao final do \textit{Milestone} por consenso
-retroativo da equipe. No tempo sem atividade, contam como atividade comentários,
-\textit{commits} ou \textit{Pull Requests} vinculados, mudanças de status ou de
-coluna e mudanças de responsável, mas não edições de título ou de rótulo nem eventos
-de automação. As medidas de Calendário e Progresso e de Desempenho do Processo
-também são calculadas por \textit{scripts} do repositório a cada publicação da
-página de documentação.
-
-No \textit{Milestone} 1, com prazo em 18/10/2026, as seis \textit{Issues}
-planejadas foram concluídas no prazo, com $TCT = 100\%$. O esforço realizado foi de
-20,0 horas, ante 21,0 horas estimadas ($V_e = 4{,}76\%$, dentro do limite de 10\%),
-o que equivale a um custo de R\$~1.000,00, ante R\$~1.050,00 estimados. O tempo
-médio de ciclo foi de 3,0 dias, acima da meta de 2,0 dias, e o $TSA$ foi de 0,0 dia,
-abaixo do alerta de 3,0 dias. O \textit{burndown} do marco permanece em seis
-\textit{Issues} restantes até 17/10 e cai a zero em 18/10, o que reflete um
-desenvolvimento em lote, com as demandas encerradas formalmente na data limite. A
-equipe registrou quatro decisões de gestão: considerar o \textit{Milestone} 1
-concluído; manter na Fase 2 a consolidação do esforço por consenso retroativo;
-acompanhar com mais detalhe as datas de início, andamento e conclusão das
-\textit{Issues}, para que o registro do progresso não dependa do fechamento
-concentrado das tarefas; e manter atualizados no repositório o estado, os
-responsáveis, as datas e as atividades das \textit{Issues}.
-
-\subsection{Rastreabilidade dos dados e aspectos éticos}\label{sec:rastreabilidade}
-
-Os dados de coleta e de consolidação e os procedimentos de cálculo da avaliação
-serão versionados no repositório, de modo que cada número apresentado possa ser
-conferido, e cada arquivo de dados identificará a métrica, a data, o ambiente e a
-versão do software avaliado. Os testes funcionais usam históricos sintéticos ou
-autorizados, sem dados de terceiros. A usabilidade é avaliada por inspeção
-heurística feita pela própria equipe, sem participantes externos; eventuais
-entrevistas só são gravadas com o consentimento dos participantes, identificados por
-códigos, e as condições de acesso às gravações são definidas antes da coleta. As
-verificações de segurança são não invasivas e não destrutivas: não há tentativas de
-explorar vulnerabilidades ou de contornar a autenticação no sistema em produção.
-
-\section{Fase 1: Estabelecimento dos Requisitos da Avaliação}\label{sec:fase1}
-
-A Fase 1 define os requisitos que precisam estar estabelecidos antes da escolha das
-métricas: o propósito da avaliação, as partes interessadas, a descrição do produto,
-o modelo de qualidade, as características priorizadas e o escopo.
-
-\subsection{Propósito da avaliação e uso pretendido}\label{sec:proposito}
-
-O No Fluxo UnB auxilia estudantes a consultar a estrutura curricular e a organizar
-disciplinas futuras, e informações incompletas ou incorretas podem confundir o
-estudante e influenciar seu planejamento. A avaliação tem o propósito de produzir
-evidências sobre a adequação funcional, a segurança observável e a usabilidade do
-fluxo de planejamento de formatura, para apoiar três decisões: identificar
-divergências funcionais que merecem correção ou investigação, a partir de casos de
-teste com resultados esperados e observados; identificar problemas observáveis de
-acesso ou de exposição de dados, a partir de verificações não invasivas; e
-identificar dificuldades no uso do fluxo, a partir da inspeção das tarefas
-predefinidas segundo critérios ergonômicos e heurísticas de usabilidade. Os
-resultados serão usados pela equipe avaliadora e, se compartilhados, pelos
-mantenedores. A avaliação não certifica o software nem substitui a conferência das
-regras acadêmicas com as fontes oficiais da UnB.
-
-\subsection{Requisitante e partes interessadas}\label{sec:stakeholders}
-
-A requisitante da avaliação é a professora da disciplina de Qualidade de Software 1.
-A Tabela~\ref{tab:stakeholders} resume as partes interessadas, suas necessidades e a
-forma como influenciam a avaliação.
-
-\begin{table}[!ht]
-\centering
-\caption{Partes interessadas na avaliação. Fonte: elaboração da equipe.}
-\label{tab:stakeholders}
-\footnotesize
-\begin{tabular}{|L{2.6cm}|L{2.3cm}|L{4.0cm}|L{4.3cm}|}
-\hline
-\textbf{Parte interessada} & \textbf{Papel} & \textbf{Necessidades} & \textbf{Influência na avaliação} \\ \hline
-Estudantes da UnB & Usuários finais & Informações compreensíveis, funções adequadas e tratamento responsável dos dados & Orientam os casos funcionais e as tarefas de usabilidade \\ \hline
-Mantenedores do No Fluxo UnB & Responsáveis técnicos pelo produto & Evidências claras e recomendações acionáveis & Delimitam o que pode ser inspecionado no código público; não se presume participação direta \\ \hline
-Profa. Cristiane Ramos & Requisitante e avaliadora acadêmica & Processo documentado, justificativas e rastreabilidade & Define os critérios acadêmicos a cumprir \\ \hline
-Equipe avaliadora & Planeja e executa a avaliação & Procedimentos viáveis, dados rastreáveis e conclusões justificadas & Define amostra, método e limites de execução \\ \hline
-\end{tabular}
-\end{table}
-
-Foram considerados três perfis de estudante como cenários de avaliação: quem está
-conhecendo a matriz curricular e precisa localizar as disciplinas relevantes; quem
-já cursou parte da matriz e precisa distinguir o que foi concluído do que falta
-planejar; e quem tem disciplinas pendentes ou equivalências e precisa interpretar o
-plano sem supor que o sistema substitui a confirmação oficial.
-
-\subsection{Tipo de produto e descrição do software}\label{sec:produto}
-
-O No Fluxo UnB é uma aplicação web de apoio ao planejamento acadêmico, acessada pelo
-navegador. O estudante seleciona o curso, informa o histórico acadêmico por PDF ou
-manualmente, visualiza o fluxograma com a situação das disciplinas e pode solicitar
-um plano de formatura (Figura~\ref{fig:planejar}). O repositório público
-\cite{nofluxo2026repo}, analisado no \textit{commit} 87b5475, organiza o produto em
-um \textit{frontend} web, um \textit{backend} em TypeScript/Node.js, migrações e
-serviços de dados e autenticação do Supabase, componentes auxiliares de agente e IA
-e \textit{scripts} de dados curriculares. Na tela avaliada, o plano é gerado por um
-serviço do \textit{backend}, chamado de Motor 2, acionado pela rota
-\texttt{POST /planejamento/gerar-plano}. A Figura~\ref{fig:contexto} mostra as
-interações do produto com o estudante, os serviços de dados e os recursos de IA.
+O No Fluxo UnB é uma aplicação web (Figura~\ref{fig:planejar}): o estudante informa
+o histórico por PDF ou manualmente, visualiza o fluxograma e solicita o plano de
+formatura. No \textit{commit} 87b5475, o repositório \cite{nofluxo2026repo} tem um
+\textit{frontend} web, um \textit{backend} em TypeScript/Node.js, serviços do
+Supabase, componentes de IA e \textit{scripts} de dados curriculares; o plano é
+gerado pelo Motor 2, um serviço do \textit{backend} acionado pela rota
+\texttt{POST /planejamento/gerar-plano} (Figura~\ref{fig:contexto}). O produto se
+relaciona de forma indireta com o ODS 4, Educação de Qualidade \cite{onu2015agenda}.
 
 \begin{figure}[!ht]
 \centering
@@ -368,29 +183,21 @@ outubro de 2026.}
 \end{minipage}
 \end{figure}
 
-Pela interface, é possível comparar planos gerados para cenários controlados com
-resultados esperados, inspecionar as tarefas do fluxo segundo heurísticas de
-usabilidade e inspecionar, de forma não invasiva, o armazenamento do navegador e as
-respostas dos serviços. Não é possível, com esse recorte, concluir que todos os
-planos, cursos e históricos estão corretos, que os resultados representam todos os
-estudantes da UnB ou que o sistema está livre de vulnerabilidades.
+Na análise do Motor 2, a equipe registrou seis pontos que podem gerar planos
+incorretos, tratados como hipóteses a testar e não como defeitos confirmados
+(Tabela~\ref{tab:questoes}): disciplinas em andamento são tratadas como aprovadas;
+uma lista vazia de disciplinas não alocadas não garante que todas as obrigatórias
+entraram no plano; uma disciplina pode ser alocada sem sua co-requisitada; as
+equivalências são expandidas em uma única passagem, sem considerar a vigência; as
+respostas do \textit{onboarding} sobre trabalho e objetivo não participam da seleção
+das disciplinas; e, se a consulta ao período letivo falhar, o período pode ser
+estimado pela data do sistema.
 
-\subsection{Modelo de qualidade adaptado}\label{sec:modelo}
-
-O modelo adotado é o modelo de qualidade de produto da ISO/IEC 25010:2011
-\cite{iso25010}, restrito a três características: Adequação Funcional, Usabilidade
-e Segurança (Figura~\ref{fig:modelo}). As subcaracterísticas detalham o que será
-observado em cada característica e não são características principais adicionais.
-Na Adequação Funcional, a completude e a correção funcional verificam se o plano
-contempla as disciplinas esperadas e se a sequência é consistente com as regras
-curriculares usadas como referência, o que atende à necessidade do estudante de
-planejar sua trajetória acadêmica. Na Usabilidade, a apreensibilidade e a
-operabilidade verificam se o estudante consegue entender as informações
-apresentadas e usar a tela para gerar e interpretar o plano, incluindo os semestres
-previstos e as matérias críticas. Na Segurança, a confidencialidade e a
-autenticidade orientam a observação não invasiva do acesso ao fluxo e do tratamento
-do histórico acadêmico enviado, relevante porque o histórico pode conter
-informações pessoais; essa inspeção não comprovará a ausência de vulnerabilidades.
+Na priorização por impacto e risco, cada característica recebeu notas de 1 a 5, e a
+prioridade foi o produto das notas. A Adequação Funcional ficou em primeiro lugar,
+porque um plano incorreto pode levar a decisões acadêmicas inadequadas, seguida da
+Segurança e da Usabilidade. O modelo adaptado restringe a ISO/IEC 25010:2011 a essas
+três características e às subcaracterísticas observadas (Figura~\ref{fig:modelo}).
 
 \begin{figure}[!ht]
 \centering
@@ -416,140 +223,22 @@ elaboração da equipe com base na ISO/IEC 25010:2011.}
 \label{fig:modelo}
 \end{figure}
 
-\subsection{Seleção e priorização das características}\label{sec:priorizacao}
+O escopo cobre o envio do histórico, o fluxograma e a tela ``Planejar formatura'',
+com casos controlados do curso de Engenharia de Software. Ficam de fora os testes de
+penetração e de carga em produção, outros cursos e navegadores, as funções de IA e os
+históricos reais de terceiros, e os resultados valerão apenas para os casos e o
+ambiente registrados.
 
-A priorização usou uma matriz de impacto e risco, com notas de 1 a 5 em cada eixo e
-prioridade dada pelo produto das notas (Tabela~\ref{tab:priorizacao}). O impacto é
-a consequência para o estudante caso a característica apresente problemas, e o
-risco é uma estimativa inicial da possibilidade de problemas no fluxo avaliado,
-considerando a complexidade do sistema e o que pode ser verificado no código e na
-aplicação. As pontuações são uma priorização preliminar da equipe, e não resultados
-medidos, e devem ser revistas se a inspeção inicial ou as medições das próximas
-fases trouxerem evidências novas.
+\subsection{Fase 2: especificação da avaliação}\label{sec:fase2}
 
-\begin{table}[!ht]
-\centering
-\caption{Priorização das características candidatas por impacto e risco. Fonte:
-elaboração da equipe.}
-\label{tab:priorizacao}
-\footnotesize
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Característica (ISO/IEC 25010)} & \textbf{Impacto (1--5)} & \textbf{Risco (1--5)} & \textbf{Pontuação} & \textbf{Selecionada} \\ \hline
-Adequação funcional & 5 & 4 & 20 & Sim \\ \hline
-Segurança & 5 & 3 & 15 & Sim \\ \hline
-Usabilidade & 4 & 3 & 12 & Sim \\ \hline
-Eficiência de desempenho & 3 & 3 & 9 & Não \\ \hline
-Confiabilidade & 4 & 2 & 8 & Não \\ \hline
-Compatibilidade & 2 & 2 & 4 & Não \\ \hline
-Manutenibilidade & 3 & 1 & 3 & Não \\ \hline
-\end{tabular}
-\end{table}
-
-A Adequação Funcional ficou em
-primeiro lugar porque um resultado incorreto pode levar a decisões acadêmicas
-inadequadas; a Segurança, em segundo, porque o fluxo pode envolver autenticação e
-dados acadêmicos pessoais; e a Usabilidade, em terceiro, porque o estudante precisa
-localizar informações, compreender os estados das disciplinas e concluir as tarefas
-do fluxo. Entre as não selecionadas, a Eficiência de desempenho ficou fora do foco
-para manter o trabalho executável no prazo, sem testes de carga ou estresse em
-produção; os erros de conteúdo ligados à Confiabilidade serão tratados
-principalmente na Adequação Funcional, sem que as duas sejam consideradas
-equivalentes; a Compatibilidade exigiria testes extensivos em vários navegadores,
-sistemas e dispositivos; e a análise aprofundada de arquitetura e de cobertura de
-código, ligada à Manutenibilidade, não é necessária para responder às perguntas
-centrais da avaliação.
-
-\subsection{Escopo, profundidade e objetos de avaliação}\label{sec:escopo}
-
-A avaliação se concentra nas três etapas do fluxo de planejamento de formatura: o
-envio do histórico, por PDF do histórico oficial da UnB ou por preenchimento manual;
-a visualização do fluxograma, com a matriz curricular e a situação das disciplinas
-cursadas e das que faltam; e a tela ``Planejar formatura'', que gera a sequência de
-disciplinas prevista até a formatura e é o objeto central da avaliação. Na
-Adequação Funcional, para cenários predefinidos e uma matriz curricular de
-referência, o plano gerado é comparado com os resultados esperados, verificando se
-as disciplinas e a sequência respeitam as regras consideradas no teste, com um
-conjunto pequeno de casos controlados para o curso de Engenharia de Software. Na
-Usabilidade, a equipe avaliadora inspeciona as tarefas predefinidas do fluxo segundo
-critérios ergonômicos e heurísticas de usabilidade. Na Segurança, são feitas
-verificações não invasivas do acesso ao fluxo e do tratamento observável do
-histórico, com consulta ao código público quando pertinente.
-
-Ficam fora do escopo os testes de penetração, a exploração de vulnerabilidades e as
-tentativas de contornar a autenticação, porque a equipe não tem autorização
-explícita para ataques; os testes de carga ou estresse em produção, porque o
-ambiente é usado por terceiros; todos os cursos, matrizes, históricos, navegadores e
-dispositivos, pelo esforço e pela dificuldade de controlar as condições; as funções
-de IA, como o \textit{chatbot}, que são auxiliares e dependem de componentes
-externos; os históricos reais de terceiros, que criariam riscos de privacidade; e a
-auditoria formal ou a certificação, já que o trabalho é uma avaliação acadêmica
-limitada.
-
-Quanto à profundidade, os resultados funcionais valerão para os casos executados e
-para a matriz de referência; os achados de usabilidade, para a inspeção feita no
-ambiente registrado; e, na segurança, a ausência de problemas observados não prova a
-ausência de vulnerabilidades. Como o site em execução pode diferir do código
-público, a equipe registrará a data, o ambiente e o \textit{commit} examinado, e as
-tarefas e os resultados esperados serão definidos antes dos testes.
-
-\subsection{Relação com os ODS}\label{sec:ods}
-
-O No Fluxo UnB se relaciona de forma indireta com o ODS 4, Educação de Qualidade
-\cite{onu2015agenda}: a ferramenta pode ajudar o estudante a compreender seu
-percurso acadêmico, mas não substitui a orientação da coordenação nem garante, por
-si só, melhores resultados educacionais. A Meta 4.3 trata do acesso igualitário à
-educação técnica, profissional e superior de qualidade, e seu indicador oficial
-4.3.1 acompanha a participação de jovens e adultos em educação e formação formal e
-não formal nos 12 meses anteriores, por sexo \cite{unstats2026sdg4}; esse indicador
-contextualiza o tema, mas não pode ser medido com os dados e métodos deste trabalho.
-A Meta 4.4, sobre competências técnicas e profissionais, tem relação apenas
-contextual com a formação universitária. Por isso, a avaliação usa indicadores
-internos do produto, que não medem o progresso oficial do ODS 4: na Adequação
-Funcional, a proporção de casos de teste em que as informações e funções observadas
-correspondem ao resultado esperado; na Usabilidade, a conformidade da interface com
-o \textit{checklist} heurístico e a severidade das violações; e, na Segurança, a
-quantidade de verificações não invasivas executadas, com resultado e evidência
-documentados.
-
-\section{Fase 2: Especificação da Avaliação}\label{sec:fase2}
-
-A Fase 2 especifica a avaliação com o método GQM, tendo a ISO/IEC 25023 e a ISO/IEC
-25020 como referência para as medidas de qualidade \cite{iso25023,iso25020}. Foram
-definidos dois objetivos de medição, um de Adequação Funcional e um operacional, de
-Usabilidade e Segurança, que reúnem nove questões e doze métricas. As fichas
-completas das métricas estão na página de documentação.
-
-\subsection{Rastreabilidade entre as Fases 1 e 2}\label{sec:rastreabilidade12}
-
-Cada objetivo deriva de uma característica priorizada na Fase 1. O objetivo
-funcional cobre a Adequação Funcional (prioridade 1, com 20 pontos), com as
-subcaracterísticas completude e correção funcional. O objetivo operacional cobre a
-Segurança (prioridade 2, com 15 pontos), com confidencialidade, autenticidade e
-controle de acesso e integridade da cadeia de dependências, e a Usabilidade
-(prioridade 3, com 12 pontos), com operabilidade e apreensibilidade. Os objetivos
-também atendem às partes interessadas: estudantes, que precisam de uma interface
-clara e de proteção aos seus dados; mantenedores, que precisam de indicadores sobre
-o que corrigir; e a equipe avaliadora, que precisa de evidências reprodutíveis.
-
-O escopo da Fase 1 delimita os objetos. Na Adequação Funcional, o objeto é o Motor
-2, implementado em \texttt{plano\_formatura.service.ts} e acionado pela rota
-\texttt{POST /planejamento/gerar-plano}, tendo como referência o \textit{commit}
-87b5475 e a matriz 6360/1 (fluxo 2017.1) de Engenharia de Software da FGA/UnB. Na
-Usabilidade e na Segurança, os objetos são a interface \texttt{/plano-formatura}, o
-armazenamento no navegador, a mesma rota e as dependências do projeto. As hipóteses
-vêm das limitações registradas na Fase 1 e são tratadas
-como hipóteses a testar, e não como defeitos confirmados.
-
-\subsection{Objetivos de medição: nível conceitual}\label{sec:objetivos}
-
-A Tabela~\ref{tab:objetivos} descreve os dois objetivos no modelo do GQM. No formato
-completo, o objetivo funcional é: analisar a funcionalidade ``Planejar formatura''
-do No Fluxo UnB, com o propósito de avaliar sua adequação funcional, do ponto de
-vista dos alunos da UnB e dos mantenedores, no contexto da geração de planos para a
-matriz curricular de Engenharia de Software da FGA/UnB, usando históricos sintéticos
-e regras curriculares oficiais identificadas, para detectar violações, omissões e
-divergências entre as entradas do aluno e o plano gerado.
+A Fase 2 resultou em dois objetivos de medição, derivados das características e das
+partes interessadas da Fase 1 (Tabela~\ref{tab:objetivos}): um de Adequação
+Funcional, sobre o Motor 2, e um de Usabilidade e Segurança, sobre a interface, o
+armazenamento no navegador e as dependências. Eles se desdobram em nove questões e
+doze métricas (Figura~\ref{fig:gqm}). Durante a fase, as métricas operacionais,
+esboçadas também para desempenho e manutenibilidade, foram ajustadas para Usabilidade
+e Segurança e, após os ajustes apontados pela professora, a Usabilidade passou de
+testes com participantes para uma inspeção heurística da equipe.
 
 \begin{table}[!ht]
 \centering
@@ -566,126 +255,6 @@ Ponto de vista & Estudantes de graduação da UnB e mantenedores do No Fluxo UnB
 Contexto & Ambiente web \textit{desktop}, dados curriculares de Engenharia de Software da FGA/UnB e histórico sintético & Ambiente web \textit{desktop} controlado, currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e auditoria estática de código \\ \hline
 \end{tabular}
 \end{table}
-
-\subsection{Questões e hipóteses: nível operacional}\label{sec:questoes}
-
-As questões refinam os objetivos no nível operacional (Tabela~\ref{tab:questoes}).
-As hipóteses funcionais se ligam às questões pelas métricas e pelos cenários de
-teste correspondentes, e as operacionais, H-OP-01 e H-OP-02, foram formuladas a
-partir das limitações conhecidas levantadas na Fase 1.
-
-\begin{table}[!ht]
-\centering
-\caption{Questões GQM e hipóteses associadas. Fonte: elaboração da equipe.}
-\label{tab:questoes}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{|I{1.6cm}|L{6.0cm}|L{6.4cm}|}
-\hline
-\textbf{ID} & \textbf{Questão} & \textbf{Hipótese} \\ \hline
-Q-FUN-01 & O plano respeita os pré-requisitos oficiais das disciplinas? & -- \\ \hline
-Q-FUN-02 & O plano respeita as regras oficiais de co-requisitos? & Há casos em que uma disciplina pode ser alocada sem sua co-requisitada. \\ \hline
-Q-FUN-03 & O plano contempla as disciplinas obrigatórias ainda pendentes, considerando aprovações, equivalências e exceções válidas? & Uma lista vazia de disciplinas não alocadas não garante, por si só, que todas as obrigatórias entraram no plano. \\ \hline
-Q-FUN-04 & O sistema interpreta o histórico acadêmico e o status das disciplinas de acordo com as regras documentadas? & Disciplinas com matrícula em andamento são tratadas como aprovadas para planejar semestres futuros. \\ \hline
-Q-FUN-05 & As equivalências são aplicadas conforme a fonte curricular oficial e a vigência pertinente? & A expansão de equivalências é feita em uma única passagem, filtrada por curso e sem considerar a vigência. \\ \hline
-Q-FUN-06 & As opções do \textit{onboarding} geram o comportamento documentado ou explicitamente prometido ao aluno? & As respostas sobre trabalho ou estágio e sobre o objetivo aparecem no fluxo, mas são valores padrão que não participam da seleção das disciplinas. \\ \hline
-Q-FUN-07 & O plano respeita as demais restrições acadêmicas verificáveis, como oferta de turmas, semestre de partida e limite de carga configurado? & Se a consulta ao período letivo falhar, o período atual pode ser estimado pela data do sistema. \\ \hline
-Q-OP-01 & A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma? & H-OP-01: a tela concentra violações heurísticas (densidade excessiva de nós, \textit{feedback} insuficiente de recálculo e terminologia ambígua), comprometendo a facilidade de uso e a apreensão das saídas. \\ \hline
-Q-OP-02 & O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas? & H-OP-02: o processamento no navegador com retenção em \texttt{localStorage} e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. \\ \hline
-\end{tabular}
-\end{table}
-
-\subsection{Métricas: nível quantitativo}\label{sec:metricas}
-
-A Tabela~\ref{tab:metricas} lista as doze métricas, a subcaracterística que cada uma
-mede e seu cálculo. No índice de risco ponderado ($IRP$) da DVCD, $N_{cr}$,
-$N_{al}$, $N_{mo}$ e $N_{ba}$ são as vulnerabilidades conhecidas de severidade
-crítica, alta, moderada e baixa; no ISVH, $N_{ca}$, $N_{ma}$, $N_{me}$ e $N_{co}$
-são as violações heurísticas catastróficas, maiores, menores e cosméticas.
-
-\begin{table}[!ht]
-\centering
-\caption{Métricas da avaliação. Fonte: elaboração da equipe.}
-\label{tab:metricas}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{|I{2.1cm}|L{4.5cm}|L{2.9cm}|L{4.2cm}|}
-\hline
-\textbf{ID} & \textbf{Métrica} & \textbf{Subcaracterística} & \textbf{Cálculo} \\ \hline
-MET-FUN-01 & Taxa de violações de pré-requisitos (TVP) & Correção funcional & $TVP = NVP / NRP \times 100$ \\ \hline
-MET-FUN-02 & Taxa de violações de co-requisitos (TVC) & Correção funcional & $TVC = NVC / NRC \times 100$ \\ \hline
-MET-FUN-03 & Cobertura de disciplinas obrigatórias pendentes (CDO) & Completude funcional & $CDO = DPC / DOP \times 100$ \\ \hline
-MET-FUN-04 & Taxa de divergências no tratamento do histórico (TDH) & Correção funcional & $TDH = NDH / NVH \times 100$ \\ \hline
-MET-FUN-05 & Taxa de aplicação incorreta de equivalências (TAE) & Correção e completude funcional & $TAE = NEI / NRE \times 100$ \\ \hline
-MET-FUN-06 & Conformidade do comportamento do plano com as opções do \textit{onboarding} (COO) & Adequação às entradas fornecidas & $COO = NEC / NEV \times 100$ \\ \hline
-MET-FUN-07 & Taxa de violações de restrições de organização semestral (TVS) & Correção funcional & $TVS = NVS / NRS \times 100$ \\ \hline
-MET-OP-01 & Taxa de Conformidade Heurística (TCH) & Operabilidade & $TCH = N_{conf} / N_{itens} \times 100$, com $N_{itens} = 10$ \\ \hline
-MET-OP-01b & Índice de Severidade de Violações Heurísticas (ISVH) & Apreensibilidade & $ISVH = 4N_{ca} + 3N_{ma} + 2N_{me} + N_{co}$ \\ \hline
-MET-OP-02 & Densidade de Vulnerabilidades Conhecidas em Dependências (DVCD) & Integridade da cadeia de dependências & $IRP = 10N_{cr} + 5N_{al} + 2N_{mo} + N_{ba}$ \\ \hline
-MET-OP-02b & Grau de Exposição de Dados no Cliente (GED-C) & Confidencialidade & Número de chaves do armazenamento do navegador com dado acadêmico sensível em texto claro \\ \hline
-MET-OP-02c & Taxa de Bloqueio em Rotas Não Autenticadas (TBR) & Autenticidade e controle de acesso & $TBR = N_{bloq} / N_{req} \times 100$ \\ \hline
-\end{tabular}
-\end{table}
-
-Os dados funcionais vêm de sete casos de teste com históricos sintéticos (CT-01 a
-CT-07), nos quais o resultado esperado é definido antes da execução a partir de uma
-regra oficial ou de um comportamento documentado.
-Na Usabilidade, a inspeção heurística, baseada nas heurísticas de Nielsen e na ISO
-9241-11 \cite{nielsen1994heuristics,iso9241}, é feita pela própria equipe: dois ou
-mais avaliadores percorrem a tela \texttt{/plano-formatura} em três tarefas de
-referência (localizar a previsão de formatura, interpretar as matérias críticas e
-ajustar o limite de créditos) e avaliam um \textit{checklist} de dez itens,
-atribuindo a cada não conformidade uma severidade de 1 (cosmético) a 4
-(catastrófico) e resolvendo as divergências em uma sessão de consenso. Na
-Segurança, as dependências do \textit{frontend} e do \textit{backend} são auditadas
-com \texttt{npm audit} no \textit{commit} 87b5475, o armazenamento do navegador é
-inspecionado após a geração do plano, e são enviadas à rota de geração do plano ao
-menos dez requisições sem credencial válida. Essas métricas se alinham às
-categorias A01 (\textit{Broken Access Control}) e A06 (\textit{Vulnerable and
-Outdated Components}) do OWASP Top 10 \cite{owasp2021top10} e à LGPD
-\cite{brasil2018lgpd}.
-
-\subsection{Níveis de pontuação e critérios de julgamento}\label{sec:julgamento}
-
-Para as métricas funcionais, as metas são zero violações em TVP, TVC, TAE e TVS
-nos cenários válidos, zero divergências não justificadas em TDH e 100\% em CDO e
-COO. Toda violação confirmada
-exige a investigação do algoritmo, dos dados curriculares e das premissas do
-cenário. Cada execução é classificada como conforme, não conforme, não aplicável ou
-pendente de especificação; uma métrica cujo denominador seja zero é registrada como
-não aplicável, e um campo do \textit{onboarding} sem comportamento esperado
-documentado é registrado como lacuna de especificação, e não como sucesso.
-
-As métricas operacionais têm níveis de julgamento próprios
-(Tabela~\ref{tab:niveis}). Os critérios de decisão das hipóteses combinam essas
-medidas: H-OP-01 é confirmada se $TCH < 85\%$ ou se houver ao menos uma violação de
-severidade maior ou catastrófica; H-OP-02 é confirmada se $IRP > 5$, se
-$GED\mbox{-}C \geq 1$ ou se $TBR < 100\%$.
-
-\begin{table}[!ht]
-\centering
-\caption{Níveis de julgamento das métricas operacionais. Fonte: elaboração da
-equipe.}
-\label{tab:niveis}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{|L{1.3cm}|L{3.9cm}|L{4.6cm}|L{4.0cm}|}
-\hline
-\textbf{Métrica} & \textbf{Excelente ou conforme} & \textbf{Aceitável} & \textbf{Crítico ou não conforme} \\ \hline
-TCH & $TCH \geq 85\%$ & $70\% \leq TCH < 85\%$ & $TCH < 70\%$ \\ \hline
-ISVH & $N_{ca} = 0$, $N_{ma} = 0$ e $ISVH \leq 5$ & $N_{ca} = 0$, $N_{ma} \leq 1$ e $ISVH \leq 12$ & $N_{ca} \geq 1$, $N_{ma} > 1$ ou $ISVH > 12$ \\ \hline
-DVCD & $N_{cr} = 0$, $N_{al} = 0$ e $IRP \leq 5$ & $N_{cr} = 0$, $N_{al} \leq 2$ (apenas em dependências de desenvolvimento) e $IRP \leq 20$ & $N_{cr} \geq 1$ ou $N_{al} > 2$ em produção \\ \hline
-GED-C & $GED\mbox{-}C = 0$ & -- & $GED\mbox{-}C \geq 1$ \\ \hline
-TBR & $TBR = 100\%$ & -- & $TBR < 100\%$ \\ \hline
-\end{tabular}
-\end{table}
-
-\subsection{Gráfico GQM}\label{sec:graficogqm}
-
-A Figura~\ref{fig:gqm} mostra o gráfico GQM com os três níveis: os dois objetivos
-no nível conceitual, as nove questões no nível operacional e as doze métricas no
-nível quantitativo. A métrica MET-FUN-05 responde a duas questões, Q-FUN-03 e
-Q-FUN-05.
 
 \begin{figure}[!ht]
 \centering
@@ -735,42 +304,113 @@ Fonte: elaboração da equipe.}
 \label{fig:gqm}
 \end{figure}
 
+As hipóteses funcionais da Tabela~\ref{tab:questoes} são os pontos registrados na
+análise do Motor 2, e as operacionais vêm das limitações levantadas na Fase 1.
+
+\begin{table}[!ht]
+\centering
+\caption{Questões GQM e hipóteses associadas. Fonte: elaboração da equipe.}
+\label{tab:questoes}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|I{1.6cm}|L{6.0cm}|L{6.4cm}|}
+\hline
+\textbf{ID} & \textbf{Questão} & \textbf{Hipótese} \\ \hline
+Q-FUN-01 & O plano respeita os pré-requisitos oficiais das disciplinas? & -- \\ \hline
+Q-FUN-02 & O plano respeita as regras oficiais de co-requisitos? & Há casos em que uma disciplina pode ser alocada sem sua co-requisitada. \\ \hline
+Q-FUN-03 & O plano contempla as disciplinas obrigatórias ainda pendentes, considerando aprovações, equivalências e exceções válidas? & Uma lista vazia de disciplinas não alocadas não garante, por si só, que todas as obrigatórias entraram no plano. \\ \hline
+Q-FUN-04 & O sistema interpreta o histórico acadêmico e o status das disciplinas de acordo com as regras documentadas? & Disciplinas com matrícula em andamento são tratadas como aprovadas para planejar semestres futuros. \\ \hline
+Q-FUN-05 & As equivalências são aplicadas conforme a fonte curricular oficial e a vigência pertinente? & A expansão de equivalências é feita em uma única passagem, filtrada por curso e sem considerar a vigência. \\ \hline
+Q-FUN-06 & As opções do \textit{onboarding} geram o comportamento documentado ou explicitamente prometido ao aluno? & As respostas sobre trabalho ou estágio e sobre o objetivo aparecem no fluxo, mas são valores padrão que não participam da seleção das disciplinas. \\ \hline
+Q-FUN-07 & O plano respeita as demais restrições acadêmicas verificáveis, como oferta de turmas, semestre de partida e limite de carga configurado? & Se a consulta ao período letivo falhar, o período atual pode ser estimado pela data do sistema. \\ \hline
+Q-OP-01 & A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma? & H-OP-01: a tela concentra violações heurísticas (densidade excessiva de nós, \textit{feedback} insuficiente de recálculo e terminologia ambígua), comprometendo a facilidade de uso e a apreensão das saídas. \\ \hline
+Q-OP-02 & O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas? & H-OP-02: o processamento no navegador com retenção em \texttt{localStorage} e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. \\ \hline
+\end{tabular}
+\end{table}
+
+A Tabela~\ref{tab:metricas} relaciona cada métrica à sua questão. No $IRP$,
+$N_{cr}$, $N_{al}$, $N_{mo}$ e $N_{ba}$ contam vulnerabilidades críticas, altas,
+moderadas e baixas; no ISVH, $N_{ca}$, $N_{ma}$, $N_{me}$ e $N_{co}$ contam violações
+catastróficas, maiores, menores e cosméticas.
+
+\begin{table}[!ht]
+\centering
+\caption{Métricas da avaliação. Fonte: elaboração da equipe.}
+\label{tab:metricas}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|I{2.15cm}|I{1.6cm}|L{3.25cm}|L{2.6cm}|L{3.6cm}|}
+\hline
+\textbf{ID} & \textbf{Questão} & \textbf{Métrica} & \textbf{Subcaracterística} & \textbf{Cálculo} \\ \hline
+MET-FUN-01 & Q-FUN-01 & Taxa de violações de pré-requisitos (TVP) & Correção funcional & $TVP = NVP / NRP \times 100$ \\ \hline
+MET-FUN-02 & Q-FUN-02 & Taxa de violações de co-requisitos (TVC) & Correção funcional & $TVC = NVC / NRC \times 100$ \\ \hline
+MET-FUN-03 & Q-FUN-03 & Cobertura de disciplinas obrigatórias pendentes (CDO) & Completude funcional & $CDO = DPC / DOP \times 100$ \\ \hline
+MET-FUN-04 & Q-FUN-04 & Taxa de divergências no tratamento do histórico (TDH) & Correção funcional & $TDH = NDH / NVH \times 100$ \\ \hline
+MET-FUN-05 & Q-FUN-03 e Q-FUN-05 & Taxa de aplicação incorreta de equivalências (TAE) & Correção e completude funcional & $TAE = NEI / NRE \times 100$ \\ \hline
+MET-FUN-06 & Q-FUN-06 & Conformidade do comportamento do plano com as opções do \textit{onboarding} (COO) & Adequação às entradas fornecidas & $COO = NEC / NEV \times 100$ \\ \hline
+MET-FUN-07 & Q-FUN-07 & Taxa de violações de restrições de organização semestral (TVS) & Correção funcional & $TVS = NVS / NRS \times 100$ \\ \hline
+MET-OP-01 & Q-OP-01 & Taxa de Conformidade Heurística (TCH) & Operabilidade & $TCH = N_{conf} / N_{itens} \times 100$, com $N_{itens} = 10$ \\ \hline
+MET-OP-01b & Q-OP-01 & Índice de Severidade de Violações Heurísticas (ISVH) & Apreensibilidade & $ISVH = 4N_{ca} + 3N_{ma} + 2N_{me} + N_{co}$ \\ \hline
+MET-OP-02 & Q-OP-02 & Densidade de Vulnerabilidades Conhecidas em Dependências (DVCD) & Integridade da cadeia de dependências & $IRP = 10N_{cr} + 5N_{al} + 2N_{mo} + N_{ba}$ \\ \hline
+MET-OP-02b & Q-OP-02 & Grau de Exposição de Dados no Cliente (GED-C) & Confidencialidade & Número de chaves do armazenamento do navegador com dado acadêmico sensível em texto claro \\ \hline
+MET-OP-02c & Q-OP-02 & Taxa de Bloqueio em Rotas Não Autenticadas (TBR) & Autenticidade e controle de acesso & $TBR = N_{bloq} / N_{req} \times 100$ \\ \hline
+\end{tabular}
+\end{table}
+
+Os dados funcionais virão de sete casos de teste com históricos sintéticos e
+resultado esperado definido antes da execução. Na Usabilidade, dois ou mais
+avaliadores aplicam um \textit{checklist} de dez itens baseado nas heurísticas de
+Nielsen e na ISO 9241-11 \cite{nielsen1994heuristics,iso9241} em três tarefas da
+tela, com severidade de 1 a 4. Na Segurança, as dependências são auditadas com
+\texttt{npm audit}, o armazenamento do navegador é inspecionado e são enviadas ao
+menos dez requisições sem credencial válida, em linha com o OWASP Top 10
+\cite{owasp2021top10} e a LGPD \cite{brasil2018lgpd}.
+
+As metas funcionais são zero violações em TVP, TVC, TAE e TVS, zero divergências não
+justificadas em TDH e 100\% em CDO e COO, e cada execução é classificada como
+conforme, não conforme, não aplicável ou pendente de especificação. As métricas
+operacionais têm níveis próprios (Tabela~\ref{tab:niveis}). H-OP-01 é confirmada se
+$TCH < 85\%$ ou se houver violação maior ou catastrófica, e H-OP-02, se $IRP > 5$,
+$GED\mbox{-}C \geq 1$ ou $TBR < 100\%$.
+
+\begin{table}[!ht]
+\centering
+\caption{Níveis de julgamento das métricas operacionais. Fonte: elaboração da
+equipe.}
+\label{tab:niveis}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|L{1.3cm}|L{3.9cm}|L{4.6cm}|L{4.0cm}|}
+\hline
+\textbf{Métrica} & \textbf{Excelente ou conforme} & \textbf{Aceitável} & \textbf{Crítico ou não conforme} \\ \hline
+TCH & $TCH \geq 85\%$ & $70\% \leq TCH < 85\%$ & $TCH < 70\%$ \\ \hline
+ISVH & $N_{ca} = 0$, $N_{ma} = 0$ e $ISVH \leq 5$ & $N_{ca} = 0$, $N_{ma} \leq 1$ e $ISVH \leq 12$ & $N_{ca} \geq 1$, $N_{ma} > 1$ ou $ISVH > 12$ \\ \hline
+DVCD & $N_{cr} = 0$, $N_{al} = 0$ e $IRP \leq 5$ & $N_{cr} = 0$, $N_{al} \leq 2$ (apenas em dependências de desenvolvimento) e $IRP \leq 20$ & $N_{cr} \geq 1$ ou $N_{al} > 2$ em produção \\ \hline
+GED-C & $GED\mbox{-}C = 0$ & -- & $GED\mbox{-}C \geq 1$ \\ \hline
+TBR & $TBR = 100\%$ & -- & $TBR < 100\%$ \\ \hline
+\end{tabular}
+\end{table}
+
 \section{Considerações Parciais}\label{sec:conclusao}
 
-Esta primeira versão do artigo reúne os produtos da Entrega 1: na Fase 1, o
-propósito, as partes interessadas, o modelo de qualidade adaptado da ISO/IEC 25010,
-a priorização por impacto e risco e o escopo; na Fase 2, a especificação com o GQM
-em dois objetivos, nove questões e doze métricas, com níveis de julgamento e
-protocolos de coleta.
-
-Os próximos passos correspondem à Entrega 2. Na Fase 3, a equipe elaborará o plano
-de avaliação, com o método, as instruções para o avaliador, os recursos, o ambiente
-e o cronograma alinhado à Fase 4. Na Fase 4, as medições serão comparadas aos
-níveis de pontuação para responder às questões e aos objetivos, e a conclusão
-incluirá a versão final deste artigo e a execução de ao menos uma ação de melhoria.
+Nas Fases 1 e 2, a equipe definiu os requisitos da avaliação, adaptou a ISO/IEC 25010
+a três características, registrou seis pontos do Motor 2 que podem afetar a correção
+dos planos e especificou dois objetivos, nove questões e doze métricas. Na Entrega 2,
+a equipe elaborará o plano de avaliação, executará as medições, testará as hipóteses
+e realizará ao menos uma ação de melhoria.
 
 \section*{Declaração de Uso de Inteligência Artificial}
 
-A equipe usou ferramentas de IA generativa em tarefas de apoio. Ana Beatriz Souza Araujo usou o
-Gemini (Google) para organizar os modelos de informação do PSM/CID, formatar tabelas
-e revisar a ortografia, e conferiu as fórmulas, os critérios de decisão e os
-conceitos com base na literatura do PSM. Gabriel Mota Oliveira usou o ChatGPT para
-esboçar textos, revisar a gramática e montar o código Mermaid do GQM, e removeu
-trechos sem embasamento ou fora do contexto da disciplina. Giovani De Oliveira
-Teodoro Coelho usou o ChatGPT e o Gemini para estruturar hipóteses e métricas
-operacionais, diagramar em Mermaid, apoiar a redação dos protocolos de teste e
-revisar a ortografia, e ajustou prioridades, fórmulas e procedimentos à Fase 1, às
-normas ISO/IEC 25023 e ISO 9241-11 e à LGPD. Gustavo Gomes Fornaciari usou o Claude
-(Anthropic) para organizar o repositório e melhorar textos da Fase 1, e desfez
-pastas criadas sem necessidade e ajustou o conteúdo ao que havia planejado. Vitor
-Lages Nogueira Araújo usou o Gemini (Google) para apoiar a estruturação do modelo
-PSM/CID, criar o cronograma em Gantt/Mermaid e organizar \textit{Issues} e
-\textit{Milestones} no GitHub, e revisou criticamente as sugestões, adaptou os
-fluxos ao escopo real do projeto e validou a conformidade com as diretrizes da
-disciplina. Yasmim de Souza Santos usou o Claude (Anthropic) na organização do
-artigo e na tradução de Markdown para LaTeX, como apoio na construção inicial do
-artigo, organizando as ideias necessárias e traduzindo para LaTeX o artigo feito em
-Markdown.
+Ana Beatriz Souza Araujo usou o Gemini para formatar tabelas e revisar textos, e
+conferiu fórmulas e critérios na literatura. Gabriel Mota Oliveira usou o ChatGPT
+para esboçar textos e o código Mermaid do GQM, e removeu trechos sem embasamento.
+Giovani De Oliveira Teodoro Coelho usou o ChatGPT e o Gemini para estruturar as
+métricas operacionais e os protocolos de teste, e os ajustou à Fase 1, às normas e à
+LGPD. Gustavo Gomes Fornaciari usou o Claude para organizar o repositório e os textos
+da Fase 1, e desfez as pastas criadas sem necessidade. Vitor Lages Nogueira Araújo
+usou o Gemini para criar o cronograma e organizar as \textit{Issues}, e adaptou as
+sugestões ao escopo do projeto. Yasmim de Souza Santos usou o Claude para organizar o
+artigo e traduzi-lo de Markdown para LaTeX.
 
 \section*{Disponibilidade dos Dados}
 
@@ -793,12 +433,12 @@ igualmente entre os seis integrantes (valores arredondados). Fonte: elaboração
 equipe.}
 \label{tab:contribuicao}
 \footnotesize
-\begin{tabular}{|L{3.6cm}|p{1.6cm}|L{6.2cm}|>{\centering\arraybackslash}p{1.4cm}|}
+\begin{tabular}{|L{3.0cm}|p{1.6cm}|L{7.3cm}|>{\centering\arraybackslash}p{1.3cm}|}
 \hline
 \textbf{Integrante} & \textbf{Matrícula} & \textbf{Atividades realizadas} & \textbf{Esforço (\%)} \\ \hline
-Ana Beatriz Souza Araujo & 241025891 & Acompanhamento da gestão do projeto e documentação dessas informações. Também organizou a seção de gestão do projeto, incluindo métricas PSM/CID, acompanhamento de \textit{Issues} e atualização do histórico de versionamento. & 16,67 \\ \hline
+Ana Beatriz Souza Araujo & 241025891 & Acompanhamento da gestão do projeto e documentação dessas informações. Também organizou a seção de gestão do projeto, incluindo o acompanhamento de \textit{Issues} e a atualização do histórico de versionamento. & 16,67 \\ \hline
 Giovani De Oliveira Teodoro Coelho & 241032500 & Elaboração e refinamento das métricas operacionais, com ajustes relacionados à usabilidade, segurança e adequação funcional. Também modularizou a documentação da Fase 2, padronizou referências bibliográficas e contribuiu para o registro do uso de IA. & 16,67 \\ \hline
-Yasmim de Souza Santos & 241040860 & Criação do \textit{template} do artigo científico e definição de uma estrutura inicial para sua elaboração. Também reuniu referências bibliográficas de base para orientar a produção do artigo do projeto. & 16,67 \\ \hline
+Yasmim de Souza Santos & 241040860 & Criação do \textit{template} do artigo científico e definição de uma estrutura inicial para sua elaboração. Também reuniu referências bibliográficas de base para orientar a produção do artigo do projeto. Depois, elaborou o artigo completo em LaTeX a partir da documentação do repositório, com os diagramas do modelo de qualidade, de contexto e do GQM, e o reestruturou conforme o retorno da professora, com trabalhos relacionados, metodologia e resultados das Fases 1 e 2. & 16,67 \\ \hline
 Gabriel Mota Oliveira & 241011081 & Elaboração inicial das perguntas GQM, das fichas de métricas funcionais e do protocolo de cenários de teste. Também estruturou e dividiu páginas da documentação, adicionou referências para as métricas funcionais e contribuiu para a documentação das métricas operacionais e dos critérios de avaliação da Fase 2. & 16,67 \\ \hline
 Gustavo Gomes Fornaciari & 241032519 & Organização e estruturação inicial do repositório, configuração do MkDocs e divisão da documentação em páginas. Responsável pela conclusão da Fase 1, incluindo a documentação do software escolhido, propósito e \textit{stakeholders}, escopo, modelo e características de qualidade, além da página de ODS e da manutenção dos critérios e históricos de versionamento. & 16,67 \\ \hline
 Vitor Lages Nogueira Araújo & 242025054 & Criação e organização de \textit{Issues} e \textit{Milestones} para acompanhar as atividades e o progresso do projeto. Também realizou atualizações no README, contribuindo para a identificação dos integrantes e a apresentação inicial do repositório. & 16,67 \\ \hline

@@ -1,0 +1,142 @@
+{
+  "marco": {
+    "numero": 1,
+    "titulo": "Entrega 1",
+    "estado": "closed",
+    "prazo": "2026-10-19T02:59:59+00:00",
+    "encerrado_em": "2026-10-26T17:21:36+00:00"
+  },
+  "referencia": "2026-10-26T17:21:36+00:00",
+  "inicio_da_linha_de_base": "2026-10-15T14:46:01+00:00",
+  "tct": {
+    "planejadas": 6,
+    "concluidas": 6,
+    "adicionadas": 0,
+    "adicionadas_concluidas": 0,
+    "tct": 100.0
+  },
+  "ciclo": {
+    "itens": [
+      {
+        "numero": 1,
+        "titulo": "[Artigo] Escrever Introdução e Referencial Teórico",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/1",
+        "aberta_em": "2026-10-15T14:45:03+00:00",
+        "concluida_em": "2026-10-19T02:24:06+00:00",
+        "dias": 3.485451388888889
+      },
+      {
+        "numero": 2,
+        "titulo": "[GQM] Definir Objetivos, Questões e Métricas (Fase 1 e 2)",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/2",
+        "aberta_em": "2026-10-15T14:47:13+00:00",
+        "concluida_em": "2026-10-18T22:32:23+00:00",
+        "dias": 3.3230324074074074
+      },
+      {
+        "numero": 3,
+        "titulo": "[GQM] Desenhar o Gráfico Hierárquico GQM",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/3",
+        "aberta_em": "2026-10-15T14:48:29+00:00",
+        "concluida_em": "2026-10-18T22:32:23+00:00",
+        "dias": 3.3221527777777777
+      },
+      {
+        "numero": 4,
+        "titulo": "[PSM] Configurar a Gestão de Projeto e Métricas PSM/CID",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/4",
+        "aberta_em": "2026-10-15T14:49:20+00:00",
+        "concluida_em": "2026-10-18T21:44:31+00:00",
+        "dias": 3.2883217592592593
+      },
+      {
+        "numero": 5,
+        "titulo": "[GitPage] Estruturar e Atualizar a GitPage da Equipe (Fase 1 e 2)",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/5",
+        "aberta_em": "2026-10-15T14:50:32+00:00",
+        "concluida_em": "2026-10-18T21:06:12+00:00",
+        "dias": 3.26087962962963
+      },
+      {
+        "numero": 6,
+        "titulo": "[Artigo] Compilar a 1ª Versão do Artigo em LaTeX e Tabela de Contribuição",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/6",
+        "aberta_em": "2026-10-15T14:51:59+00:00",
+        "concluida_em": "2026-10-19T01:51:48+00:00",
+        "dias": 3.4582060185185184
+      }
+    ],
+    "media_dias": 3.3563406635802466
+  },
+  "tsa": {
+    "itens": [],
+    "maior_dias": null
+  },
+  "burndown": [
+    {
+      "dia": "2026-10-15",
+      "restantes": 6,
+      "ideal": 6.0
+    },
+    {
+      "dia": "2026-10-16",
+      "restantes": 6,
+      "ideal": 4.0
+    },
+    {
+      "dia": "2026-10-17",
+      "restantes": 6,
+      "ideal": 2.0
+    },
+    {
+      "dia": "2026-10-18",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-19",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-20",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-21",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-22",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-23",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-24",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-25",
+      "restantes": 0,
+      "ideal": 0.0
+    },
+    {
+      "dia": "2026-10-26",
+      "restantes": 0,
+      "ideal": 0.0
+    }
+  ],
+  "situacoes": {
+    "tct": "Meta atingida",
+    "ciclo": "Acima da meta de até 2,0 dias",
+    "tsa": "Não aplicável (nenhuma Issue aberta)"
+  }
+}

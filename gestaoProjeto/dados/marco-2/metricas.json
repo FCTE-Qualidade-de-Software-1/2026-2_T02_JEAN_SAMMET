@@ -1,0 +1,258 @@
+{
+  "marco": {
+    "numero": 2,
+    "titulo": "Entrega 2",
+    "estado": "open",
+    "prazo": "2026-11-19T02:59:59+00:00",
+    "encerrado_em": null
+  },
+  "referencia": "2026-10-31T14:59:53.371299+00:00",
+  "inicio_da_linha_de_base": "2026-10-15T15:01:35+00:00",
+  "tct": {
+    "planejadas": 6,
+    "concluidas": 1,
+    "adicionadas": 0,
+    "adicionadas_concluidas": 0,
+    "tct": 16.666666666666664
+  },
+  "ciclo": {
+    "itens": [
+      {
+        "numero": 9,
+        "titulo": "[Análise] Processar Métricas e Responder às Questões GQM",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/9",
+        "aberta_em": "2026-10-15T15:03:39+00:00",
+        "concluida_em": "2026-10-18T22:32:24+00:00",
+        "dias": 3.3116319444444446
+      }
+    ],
+    "media_dias": 3.3116319444444446
+  },
+  "tsa": {
+    "itens": [
+      {
+        "numero": 7,
+        "titulo": "[Avaliação] Definir Plano de Avaliação e Ambiente de Testes (Fase 3)",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/7",
+        "ultima_atividade": "2026-10-15T17:06:21+00:00",
+        "dias": 15.912180223368056,
+        "acima_do_limite": true
+      },
+      {
+        "numero": 8,
+        "titulo": "[Avaliação] Executar Testes e Coletar Dados Brutos (Fase 4)",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/8",
+        "ultima_atividade": "2026-10-15T17:06:23+00:00",
+        "dias": 15.912157075219907,
+        "acima_do_limite": true
+      },
+      {
+        "numero": 10,
+        "titulo": "[Melhoria] Identificar Oportunidades e Executar a Ação de Melhoria",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/10",
+        "ultima_atividade": "2026-10-15T17:06:27+00:00",
+        "dias": 15.91211077892361,
+        "acima_do_limite": true
+      },
+      {
+        "numero": 11,
+        "titulo": "[Artigo] Concluir a 2ª Versão do Artigo (Resultados e Conclusão)",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/11",
+        "ultima_atividade": "2026-10-16T15:12:03+00:00",
+        "dias": 14.991555223368055,
+        "acima_do_limite": true
+      },
+      {
+        "numero": 12,
+        "titulo": "[GitPage] Finalizar a GitPage e Garantir a Rastreabilidade Total",
+        "url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/12",
+        "ultima_atividade": "2026-10-15T17:06:29+00:00",
+        "dias": 15.912087630775464,
+        "acima_do_limite": true
+      }
+    ],
+    "maior_dias": 15.912180223368056
+  },
+  "burndown": [
+    {
+      "dia": "2026-10-15",
+      "restantes": 6,
+      "ideal": 6.0
+    },
+    {
+      "dia": "2026-10-16",
+      "restantes": 6,
+      "ideal": 5.823529411764706
+    },
+    {
+      "dia": "2026-10-17",
+      "restantes": 6,
+      "ideal": 5.647058823529411
+    },
+    {
+      "dia": "2026-10-18",
+      "restantes": 5,
+      "ideal": 5.470588235294118
+    },
+    {
+      "dia": "2026-10-19",
+      "restantes": 5,
+      "ideal": 5.294117647058823
+    },
+    {
+      "dia": "2026-10-20",
+      "restantes": 5,
+      "ideal": 5.117647058823529
+    },
+    {
+      "dia": "2026-10-21",
+      "restantes": 5,
+      "ideal": 4.9411764705882355
+    },
+    {
+      "dia": "2026-10-22",
+      "restantes": 5,
+      "ideal": 4.764705882352942
+    },
+    {
+      "dia": "2026-10-23",
+      "restantes": 5,
+      "ideal": 4.588235294117647
+    },
+    {
+      "dia": "2026-10-24",
+      "restantes": 5,
+      "ideal": 4.411764705882353
+    },
+    {
+      "dia": "2026-10-25",
+      "restantes": 5,
+      "ideal": 4.235294117647058
+    },
+    {
+      "dia": "2026-10-26",
+      "restantes": 5,
+      "ideal": 4.0588235294117645
+    },
+    {
+      "dia": "2026-10-27",
+      "restantes": 5,
+      "ideal": 3.88235294117647
+    },
+    {
+      "dia": "2026-10-28",
+      "restantes": 5,
+      "ideal": 3.7058823529411766
+    },
+    {
+      "dia": "2026-10-29",
+      "restantes": 5,
+      "ideal": 3.5294117647058822
+    },
+    {
+      "dia": "2026-10-30",
+      "restantes": 5,
+      "ideal": 3.3529411764705883
+    },
+    {
+      "dia": "2026-10-31",
+      "restantes": 5,
+      "ideal": 3.1764705882352944
+    },
+    {
+      "dia": "2026-11-01",
+      "restantes": null,
+      "ideal": 3.0
+    },
+    {
+      "dia": "2026-11-02",
+      "restantes": null,
+      "ideal": 2.8235294117647056
+    },
+    {
+      "dia": "2026-11-03",
+      "restantes": null,
+      "ideal": 2.6470588235294117
+    },
+    {
+      "dia": "2026-11-04",
+      "restantes": null,
+      "ideal": 2.4705882352941178
+    },
+    {
+      "dia": "2026-11-05",
+      "restantes": null,
+      "ideal": 2.2941176470588234
+    },
+    {
+      "dia": "2026-11-06",
+      "restantes": null,
+      "ideal": 2.117647058823529
+    },
+    {
+      "dia": "2026-11-07",
+      "restantes": null,
+      "ideal": 1.941176470588235
+    },
+    {
+      "dia": "2026-11-08",
+      "restantes": null,
+      "ideal": 1.764705882352941
+    },
+    {
+      "dia": "2026-11-09",
+      "restantes": null,
+      "ideal": 1.5882352941176467
+    },
+    {
+      "dia": "2026-11-10",
+      "restantes": null,
+      "ideal": 1.4117647058823533
+    },
+    {
+      "dia": "2026-11-11",
+      "restantes": null,
+      "ideal": 1.235294117647059
+    },
+    {
+      "dia": "2026-11-12",
+      "restantes": null,
+      "ideal": 1.058823529411765
+    },
+    {
+      "dia": "2026-11-13",
+      "restantes": null,
+      "ideal": 0.8823529411764708
+    },
+    {
+      "dia": "2026-11-14",
+      "restantes": null,
+      "ideal": 0.7058823529411766
+    },
+    {
+      "dia": "2026-11-15",
+      "restantes": null,
+      "ideal": 0.5294117647058825
+    },
+    {
+      "dia": "2026-11-16",
+      "restantes": null,
+      "ideal": 0.3529411764705883
+    },
+    {
+      "dia": "2026-11-17",
+      "restantes": null,
+      "ideal": 0.17647058823529416
+    },
+    {
+      "dia": "2026-11-18",
+      "restantes": null,
+      "ideal": 0.0
+    }
+  ],
+  "situacoes": {
+    "tct": "Em andamento",
+    "ciclo": "Acima da meta de até 2,0 dias",
+    "tsa": "Alerta: 5 Issue(s) parada(s) acima do limite"
+  }
+}

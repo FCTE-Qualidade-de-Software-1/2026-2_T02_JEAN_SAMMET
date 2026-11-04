@@ -5,7 +5,11 @@ from .calculo_burndown import calcular_burndown
 from .calculo_ciclo import calcular_ciclo
 from .calculo_tct import calcular_tct
 from .calculo_tsa import calcular_tsa
-from .configuracao import JANELA_LINHA_DE_BASE_HORAS, LIMITE_TSA_DIAS
+from .configuracao import (
+    DATAS_FINAIS_BURNDOWN,
+    JANELA_LINHA_DE_BASE_HORAS,
+    LIMITE_TSA_DIAS,
+)
 from .leitura_issues import listar_issues
 from .linha_de_base import definir_linha_de_base
 from .modelos import Marco
@@ -20,7 +24,14 @@ def processar_marco(cliente, repositorio: str, marco: Marco, agora: datetime) ->
     tct = calcular_tct(base.planejadas, base.adicionadas, referencia)
     ciclo = calcular_ciclo(issues, referencia)
     tsa = calcular_tsa(issues, referencia, LIMITE_TSA_DIAS)
-    burndown = calcular_burndown(base.planejadas, base.inicio, marco.prazo, referencia)
+    burndown = calcular_burndown(
+        base.planejadas,
+        base.inicio,
+        marco.prazo,
+        referencia,
+        encerrado=marco.estado == "closed",
+        data_fim=DATAS_FINAIS_BURNDOWN.get(marco.numero),
+    )
     return ResultadoMarco(
         marco=marco,
         referencia=referencia,

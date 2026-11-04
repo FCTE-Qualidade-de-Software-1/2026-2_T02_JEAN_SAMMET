@@ -1,3 +1,4 @@
+from datetime import date
 import os
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -10,6 +11,9 @@ HORAS_ALERTA_PRAZO = 24.0
 META_CICLO_DIAS = 2.0
 LIMITE_TSA_DIAS = 3.0
 JANELA_LINHA_DE_BASE_HORAS = float(os.environ.get("JANELA_LINHA_DE_BASE_HORAS", "48"))
+
+# Prazo final do Burndown da Entrega 2, conforme o cronograma da disciplina.
+DATAS_FINAIS_BURNDOWN = {2: date(2026, 11, 22)}
 
 ROTULO_SEM_ATIVIDADE = "sem-atividade"
 COR_ROTULO_SEM_ATIVIDADE = "d93f0b"

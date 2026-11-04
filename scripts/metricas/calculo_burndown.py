@@ -13,13 +13,23 @@ class PontoBurndown:
     ideal: float | None
 
 
-def ultimo_dia_do_grafico(prazo: datetime | None, referencia: datetime, primeiro: date) -> date:
+def ultimo_dia_do_grafico(
+    prazo: datetime | None,
+    referencia: datetime,
+    primeiro: date,
+    encerrado: bool = False,
+    data_fim: date | None = None,
+) -> date:
+    dia_referencia = dia_local(referencia)
+    if data_fim is not None:
+        # Mantém o eixo até o prazo configurado, mesmo quando ele ainda é futuro.
+        return max(data_fim, primeiro)
     if prazo is None:
-        return max(dia_local(referencia), primeiro)
-    ultimo = dia_local(prazo)
-    if referencia > prazo:
-        ultimo = max(ultimo, dia_local(referencia))
-    return max(ultimo, primeiro)
+        return max(dia_referencia, primeiro)
+    dia_prazo = dia_local(prazo)
+    if encerrado:
+        return max(min(dia_prazo, dia_referencia), primeiro)
+    return max(dia_prazo, dia_referencia, primeiro)
 
 
 def valor_ideal(total: int, deslocamento: int, duracao: int | None) -> float | None:
@@ -42,12 +52,16 @@ def calcular_burndown(
     inicio: datetime | None,
     prazo: datetime | None,
     referencia: datetime,
+    encerrado: bool = False,
+    data_fim: date | None = None,
 ) -> tuple[PontoBurndown, ...]:
     if inicio is None or not planejadas:
         return ()
     primeiro = dia_local(inicio)
-    dias = sequencia_de_dias(primeiro, ultimo_dia_do_grafico(prazo, referencia, primeiro))
-    duracao = (dia_local(prazo) - primeiro).days if prazo is not None else None
+    ultimo = ultimo_dia_do_grafico(prazo, referencia, primeiro, encerrado, data_fim)
+    dias = sequencia_de_dias(primeiro, ultimo)
+    fim_planejado = data_fim or (dia_local(prazo) if prazo is not None else None)
+    duracao = (fim_planejado - primeiro).days if fim_planejado is not None else None
     return tuple(
         PontoBurndown(
             dia=dia,

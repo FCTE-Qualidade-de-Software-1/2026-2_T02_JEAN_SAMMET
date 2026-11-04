@@ -1,16 +1,30 @@
 from . import formatacao
-from .configuracao import JANELA_LINHA_DE_BASE_HORAS, LIMITE_TSA_DIAS
+from .configuracao import (
+    DATAS_FINAIS_BURNDOWN,
+    JANELA_LINHA_DE_BASE_HORAS,
+    LIMITE_TSA_DIAS,
+)
 from .renderizacao_marco import renderizar_marco
 from .resultado_marco import ResultadoMarco
 
 
 def ordenar_marcos(resultados: list[ResultadoMarco]) -> list[ResultadoMarco]:
-    return sorted(resultados, key=lambda r: (r.marco.estado == "closed", -r.marco.numero))
+    return sorted(resultados, key=lambda resultado: resultado.marco.numero)
 
 
 def renderizar_metodologia() -> str:
     janela = formatacao.decimal(JANELA_LINHA_DE_BASE_HORAS, 0)
     limite = formatacao.decimal(LIMITE_TSA_DIAS, 0)
+    datas_finais = ", ".join(
+        f"Milestone #{numero}: {data_fim.strftime('%d/%m/%Y')}"
+        for numero, data_fim in sorted(DATAS_FINAIS_BURNDOWN.items())
+    )
+    descricao_burndown = (
+        f"**Burndown:** data final configurada para {datas_finais}; a linha ideal segue até essa data, "
+        "enquanto a linha real é exibida até a data de referência da coleta. "
+        "Nos demais Milestones encerrados, o gráfico termina no prazo ou, se o marco foi encerrado antes, na data do encerramento. "
+        "Milestones ainda abertos sem data final específica continuam até o prazo ou a data de referência, o que for mais distante."
+    )
     itens = [
         "**Fonte:** API do GitHub (Milestones, Issues, responsáveis e linha do tempo de cada Issue).",
         "**Frequência:** atualização em alterações de Issues e Milestones, comentários em Issues, "
@@ -27,6 +41,7 @@ def renderizar_metodologia() -> str:
         f"**Alerta de tarefa parada:** Issues abertas acima de {limite} dias sem atividade recebem o rótulo "
         "`sem-atividade`, removido quando voltam a ter movimento.",
         "**Prazo:** fim do dia da data limite do Milestone, no horário de Brasília.",
+        descricao_burndown,
         "**Dados manuais:** esforço, custo equivalente, decisões e registros históricos são mantidos no "
         "arquivo-fonte `scripts/metricas/acompanhamento.md` e incorporados a esta página durante a geração.",
         "**Definições:** consulte [Gestão do Projeto](psm-cid.md), [Calendário e Progresso](calendario-progresso.md), "

@@ -4,10 +4,11 @@ Executar na raiz do repositório:
 python3 -m unittest discover -s testes -t . -p 'teste_*.py' -v
 """
 import unittest
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from scripts.metricas.avaliacao import avaliar_ciclo, avaliar_tct, avaliar_tsa
 from scripts.metricas.calculo_burndown import calcular_burndown, contar_restantes, valor_ideal
+from scripts.metricas.configuracao import DATAS_FINAIS_BURNDOWN
 from scripts.metricas.calculo_ciclo import calcular_ciclo, ResultadoCiclo
 from scripts.metricas.calculo_tct import calcular_tct, ResultadoTct
 from scripts.metricas.calculo_tsa import calcular_tsa, ultima_atividade, ResultadoTsa
@@ -18,7 +19,7 @@ from scripts.metricas.linha_de_base import definir_linha_de_base
 from scripts.metricas.leitura_issues import converter_issue
 from scripts.metricas.modelos import Evento, Issue, Marco
 from scripts.metricas.renderizacao_issues import renderizar_issues
-from scripts.metricas.renderizacao_painel import renderizar_painel
+from scripts.metricas.renderizacao_painel import ordenar_marcos, renderizar_painel
 from scripts.metricas.resultado_marco import ResultadoMarco
 from scripts.metricas.tabelas_markdown import escapar, tabela, link_da_issue
 from scripts.metricas.tempo import ler_instante, dia_local, dias_entre, sequencia_de_dias
@@ -207,6 +208,9 @@ class TesteEstadoEIndicadores(unittest.TestCase):
 
 
 class TesteBurndownERegrasDeAvaliacao(unittest.TestCase):
+    def test_data_final_configurada_da_entrega_2_e_22_de_novembro(self):
+        self.assertEqual(DATAS_FINAIS_BURNDOWN, {2: date(2026, 11, 22)})
+
     def test_valor_ideal_comeca_no_total_e_termina_em_zero(self):
         self.assertEqual(valor_ideal(6, 0, 3), 6)
         self.assertEqual(valor_ideal(6, 3, 3), 0)
@@ -224,6 +228,42 @@ class TesteBurndownERegrasDeAvaliacao(unittest.TestCase):
         self.assertGreaterEqual(len(resultado), 3)
         self.assertEqual(resultado[0].restantes, 2)
         self.assertEqual(resultado[-1].restantes, 1)
+
+    def test_burndown_de_marco_encerrado_termina_no_prazo(self):
+        tarefa = issue(1, aberta=instante(15), fechada=instante(20))
+        resultado = calcular_burndown(
+            (tarefa,), instante(15), instante(18, 23), instante(22), encerrado=True
+        )
+        self.assertEqual(resultado[-1].dia.isoformat(), "2026-10-18")
+        self.assertEqual(resultado[-1].restantes, 1)
+
+    def test_burndown_entrega_2_projeta_linha_ideal_ate_22_de_novembro(self):
+        tarefa = issue(1, aberta=instante(15))
+        referencia = datetime(2026, 11, 4, 12, tzinfo=UTC)
+        resultado = calcular_burndown(
+            (tarefa,),
+            instante(15),
+            datetime(2026, 11, 22, 23, tzinfo=UTC),
+            referencia,
+            data_fim=date(2026, 11, 22),
+        )
+        self.assertEqual(resultado[-1].dia.isoformat(), "2026-11-22")
+        self.assertIsNone(resultado[-1].restantes)
+        self.assertEqual(resultado[-1].ideal, 0.0)
+
+    def test_burndown_configurado_nao_ultrapassa_data_final_apos_o_prazo(self):
+        tarefa = issue(1, aberta=instante(15))
+        referencia = datetime(2026, 11, 24, 12, tzinfo=UTC)
+        resultado = calcular_burndown(
+            (tarefa,),
+            instante(15),
+            datetime(2026, 11, 22, 23, tzinfo=UTC),
+            referencia,
+            data_fim=date(2026, 11, 22),
+        )
+        self.assertEqual(resultado[-1].dia.isoformat(), "2026-11-22")
+        self.assertEqual(resultado[-1].restantes, 1)
+        self.assertEqual(resultado[-1].ideal, 0.0)
 
     def test_avaliacao_tct_nao_aplicavel(self):
         self.assertEqual(avaliar_tct(ResultadoTct(0, 0, 0, 0, None), None, instante(18)),
@@ -304,6 +344,36 @@ class TesteLeituraEExibicaoDeIssues(unittest.TestCase):
             situacao_tsa="Conforme",
         )
         self.assertIn("Não atribuído", renderizar_issues(sem_responsavel))
+
+    def test_ordena_entregas_pelo_numero_do_milestone(self):
+        def resultado_de(numero: int, titulo: str, estado: str) -> ResultadoMarco:
+            marco_teste = Marco(
+                numero=numero,
+                titulo=titulo,
+                url=f"https://github.com/exemplo/repo/milestone/{numero}",
+                estado=estado,
+                criado_em=instante(15),
+                prazo=instante(18, 23),
+                encerrado_em=instante(20) if estado == "closed" else None,
+            )
+            return ResultadoMarco(
+                marco=marco_teste,
+                referencia=instante(20),
+                inicio=None,
+                issues=(),
+                tct=ResultadoTct(0, 0, 0, 0, None),
+                ciclo=ResultadoCiclo((), None),
+                tsa=ResultadoTsa((), None),
+                burndown=(),
+                situacao_tct="Não aplicável",
+                situacao_ciclo="Não aplicável",
+                situacao_tsa="Não aplicável",
+            )
+
+        entrega_2 = resultado_de(2, "Entrega 2", "open")
+        entrega_1 = resultado_de(1, "Entrega 1", "closed")
+        ordenados = ordenar_marcos([entrega_2, entrega_1])
+        self.assertEqual([item.marco.titulo for item in ordenados], ["Entrega 1", "Entrega 2"])
 
     def test_painel_incorpora_conteudo_manual(self):
         texto = renderizar_painel([], "dados", "## Decisões\n\nManter o registro manual.")

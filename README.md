@@ -38,3 +38,9 @@ Projeto final de FGA0315 - Qualidade de Software 1 (2026/2, T02).
     </td>
   </tr>
 </table>
+
+## Acompanhamento automático
+
+A página **Acompanhamento do Projeto** é gerada pelo script `python -m scripts.metricas` a partir das Issues, dos responsáveis, dos Milestones e do histórico de atividades no GitHub. O workflow atualiza a página quando há alterações relevantes no repositório e também por uma rotina diária.
+
+As informações que não existem na API do GitHub — como horas estimadas e realizadas, custo equivalente, decisões gerenciais e registros históricos — são mantidas em `scripts/metricas/acompanhamento.md`. Esse arquivo é incorporado automaticamente ao painel; portanto, atualize-o quando esses dados manuais mudarem, sem editar diretamente `docs/gestaoProjeto/painel.md`, que é sobrescrito pelo gerador.

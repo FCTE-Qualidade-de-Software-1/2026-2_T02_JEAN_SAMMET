@@ -8,9 +8,9 @@ Cada entrega da disciplina é um ciclo. O ciclo da Entrega 1 cobre as Fases 1 e 
 
 O ciclo começa pelo planejamento, quando a equipe abre o Milestone da entrega e uma Issue para cada tarefa, com seus responsáveis. Esse conjunto inicial de Issues é a linha de base do Milestone. Na execução, cada tarefa é desenvolvida em uma branch própria, produzindo as páginas da GitPage, os dados e as seções do artigo. Ao terminar, o autor abre um Pull Request e pede a revisão de outro integrante, que usa os critérios da seção 3. Depois da revisão, o Pull Request é integrado à `main`, e a GitPage é publicada a partir dela.
 
-Ao longo do ciclo, a equipe calcula os indicadores de Calendário e Progresso, Recursos e Custos e Desempenho do Processo, registrados em [Acompanhamento](../gestaoProjeto/acompanhamento.md). Quando os critérios de decisão do PSM indicam algum problema, a equipe toma a decisão de gestão correspondente, como redistribuir tarefas ou replanejar, e registra isso nas Issues e nas páginas de [Gestão do Projeto](../gestaoProjeto/psm-cid.md). Esse ajuste alimenta o planejamento do ciclo seguinte.
+Ao longo do ciclo, a equipe calcula os indicadores de Calendário e Progresso, Recursos e Custos e Desempenho do Processo, registrados em [Acompanhamento do Projeto](../gestaoProjeto/painel.md). Quando os critérios de decisão do PSM indicam algum problema, a equipe toma a decisão de gestão correspondente, como redistribuir tarefas ou replanejar, e registra isso nas Issues e nas páginas de [Gestão do Projeto](../gestaoProjeto/psm-cid.md). Esse ajuste alimenta o planejamento do ciclo seguinte.
 
-O trabalho de cada entrega é dividido em frentes, cada uma com responsáveis registrados nas Issues. Na Entrega 1, as frentes foram introdução e referencial teórico, GQM, gráfico GQM, gestão PSM/CID, GitPage e versão em LaTeX, como mostra a página de [Acompanhamento](../gestaoProjeto/acompanhamento.md).
+O trabalho de cada entrega é dividido em frentes, cada uma com responsáveis registrados nas Issues. Na Entrega 1, as frentes foram introdução e referencial teórico, GQM, gráfico GQM, gestão PSM/CID, GitPage e versão em LaTeX, como mostra a página de [Acompanhamento do Projeto](../gestaoProjeto/painel.md).
 
 ## 2. Convenções do repositório
 

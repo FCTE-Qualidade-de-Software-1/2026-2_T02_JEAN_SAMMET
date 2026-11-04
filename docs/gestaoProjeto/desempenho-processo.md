@@ -31,7 +31,7 @@ A análise permite verificar se as demandas estão sendo resolvidas dentro do te
 
 ## 4. Acompanhamento
 
-A amostra das Issues e suas datas de abertura e conclusão está disponível na página [Acompanhamento do Projeto](acompanhamento.md).
+A amostra das Issues e suas datas de abertura e conclusão está disponível na página [Acompanhamento do Projeto](painel.md).
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |

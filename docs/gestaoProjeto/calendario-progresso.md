@@ -27,7 +27,7 @@ Esta categoria acompanha o cumprimento do cronograma planejado e a conclusão da
 
 ## 4. Acompanhamento
 
-Os dados atuais do Milestone e o progresso das tarefas podem ser consultados na página [Acompanhamento do Projeto](acompanhamento.md).
+Os dados atuais do Milestone e o progresso das tarefas podem ser consultados na página [Acompanhamento do Projeto](painel.md).
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |

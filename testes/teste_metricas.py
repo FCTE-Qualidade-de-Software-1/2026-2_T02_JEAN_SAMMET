@@ -15,7 +15,11 @@ from scripts.metricas.conversao_evento import ator_e_automacao, converter_evento
 from scripts.metricas.estado_issue import esta_aberta_em, concluida_em
 from scripts.metricas.formatacao import decimal, percentual, dias, data
 from scripts.metricas.linha_de_base import definir_linha_de_base
+from scripts.metricas.leitura_issues import converter_issue
 from scripts.metricas.modelos import Evento, Issue, Marco
+from scripts.metricas.renderizacao_issues import renderizar_issues
+from scripts.metricas.renderizacao_painel import renderizar_painel
+from scripts.metricas.resultado_marco import ResultadoMarco
 from scripts.metricas.tabelas_markdown import escapar, tabela, link_da_issue
 from scripts.metricas.tempo import ler_instante, dia_local, dias_entre, sequencia_de_dias
 
@@ -240,6 +244,72 @@ class TesteBurndownERegrasDeAvaliacao(unittest.TestCase):
 
     def test_avaliacao_tsa_sem_issues_abertas(self):
         self.assertEqual(avaliar_tsa(ResultadoTsa((), None)), "Não aplicável (nenhuma Issue aberta)")
+
+
+class TesteLeituraEExibicaoDeIssues(unittest.TestCase):
+    def test_converter_issue_le_responsaveis_do_github(self):
+        resultado = converter_issue(
+            {
+                "number": 12,
+                "title": "Documentar resultados",
+                "html_url": "https://github.com/exemplo/repo/issues/12",
+                "created_at": "2026-10-15T12:00:00Z",
+                "closed_at": None,
+                "labels": [],
+                "assignees": [{"login": "ana"}, {"login": "gugofo"}],
+            },
+            (),
+        )
+        self.assertEqual(resultado.responsaveis, ("ana", "gugofo"))
+
+    def test_tabela_de_issues_mostra_responsaveis_estado_e_datas(self):
+        tarefa = Issue(
+            numero=7,
+            titulo="Preparar relatório",
+            url="https://github.com/exemplo/repo/issues/7",
+            aberta_em=instante(15),
+            fechada_em=None,
+            rotulos=(),
+            eventos=(),
+            responsaveis=("gugofo",),
+        )
+        resultado = ResultadoMarco(
+            marco=marco(),
+            referencia=instante(18),
+            inicio=instante(15),
+            issues=(tarefa,),
+            tct=ResultadoTct(1, 0, 0, 0, 0.0),
+            ciclo=ResultadoCiclo((), None),
+            tsa=ResultadoTsa((), 3.0),
+            burndown=(),
+            situacao_tct="Em andamento",
+            situacao_ciclo="Não aplicável",
+            situacao_tsa="Conforme",
+        )
+        texto = renderizar_issues(resultado)
+        self.assertIn("[@gugofo](https://github.com/gugofo)", texto)
+        self.assertIn("Aberta", texto)
+        self.assertIn("15/10/2026", texto)
+        sem_responsavel = ResultadoMarco(
+            marco=marco(),
+            referencia=instante(18),
+            inicio=None,
+            issues=(issue(8),),
+            tct=ResultadoTct(1, 0, 0, 0, 0.0),
+            ciclo=ResultadoCiclo((), None),
+            tsa=ResultadoTsa((), 3.0),
+            burndown=(),
+            situacao_tct="Em andamento",
+            situacao_ciclo="Não aplicável",
+            situacao_tsa="Conforme",
+        )
+        self.assertIn("Não atribuído", renderizar_issues(sem_responsavel))
+
+    def test_painel_incorpora_conteudo_manual(self):
+        texto = renderizar_painel([], "dados", "## Decisões\n\nManter o registro manual.")
+        self.assertIn("# Acompanhamento do Projeto", texto)
+        self.assertIn("## Decisões", texto)
+        self.assertIn("Manter o registro manual.", texto)
 
 
 class TesteTabelasMarkdown(unittest.TestCase):

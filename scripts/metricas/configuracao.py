@@ -35,3 +35,4 @@ EVENTOS_DE_ATIVIDADE = frozenset(
 
 DIRETORIO_DADOS = Path("docs/gestaoProjeto/dados")
 ARQUIVO_PAINEL = Path("docs/gestaoProjeto/painel.md")
+ARQUIVO_CONTEUDO_MANUAL = Path("scripts/metricas/acompanhamento.md")

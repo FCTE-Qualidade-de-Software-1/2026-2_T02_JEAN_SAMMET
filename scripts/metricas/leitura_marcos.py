@@ -13,6 +13,7 @@ def converter_marco(bruto: dict) -> Marco:
         criado_em=ler_instante(bruto["created_at"]),
         prazo=prazo,
         encerrado_em=encerrado_em,
+        descricao=bruto.get("description") or "",
     )
 
 

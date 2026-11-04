@@ -16,7 +16,12 @@ def renderizar_calendario(resultado: ResultadoMarco, numero_figura: int, prefixo
             ["Situação da meta do grupo", resultado.situacao_tct],
         ],
     )
-    partes = ["### Calendário e Progresso", parametros]
+    partes = [
+        "### Calendário e Progresso",
+        "**Indicador:** Taxa de Conclusão de Tarefas (TCT).  \n"
+        "**Fórmula:** TCT = (N<sub>conc</sub> / N<sub>planejado</sub>) × 100.",
+        parametros,
+    ]
     if resultado.burndown:
         titulo = resultado.marco.titulo
         imagem = f"{prefixo_imagem}/marco-{resultado.marco.numero}/burndown.png"

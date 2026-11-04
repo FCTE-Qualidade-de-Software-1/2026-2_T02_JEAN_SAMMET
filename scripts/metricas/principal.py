@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 from .cliente_github import ClienteGithub
-from .configuracao import ARQUIVO_PAINEL, DIRETORIO_DADOS
+from .configuracao import ARQUIVO_CONTEUDO_MANUAL, ARQUIVO_PAINEL, DIRETORIO_DADOS
 from .execucao import executar
 from .formatacao import dias, percentual
 from .tempo import instante_atual
@@ -15,6 +15,10 @@ def ler_argumentos(argumentos: list[str] | None):
     analisador.add_argument("--repositorio", default=os.environ.get("GITHUB_REPOSITORY"))
     analisador.add_argument("--dados", type=Path, default=DIRETORIO_DADOS)
     analisador.add_argument("--painel", type=Path, default=ARQUIVO_PAINEL)
+    analisador.add_argument(
+        "--conteudo-manual", type=Path, default=ARQUIVO_CONTEUDO_MANUAL,
+        help="Arquivo Markdown com dados manuais incorporados ao painel.",
+    )
     analisador.add_argument("--aplicar-rotulos", action="store_true")
     return analisador.parse_args(argumentos)
 
@@ -40,6 +44,7 @@ def principal(argumentos: list[str] | None = None) -> int:
         parametros.repositorio,
         parametros.dados,
         parametros.painel,
+        parametros.conteudo_manual,
         parametros.aplicar_rotulos,
         instante_atual(),
     )

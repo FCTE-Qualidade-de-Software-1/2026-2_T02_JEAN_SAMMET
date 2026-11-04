@@ -66,7 +66,7 @@ O custo é uma estimativa didática e não representa uma despesa financeira efe
 
 ## 4. Acompanhamento
 
-Os resultados de esforço em horas e custo financeiro equivalente do Milestone 1 podem ser consultados na página [Acompanhamento do Projeto](acompanhamento.md).
+Os resultados de esforço em horas e custo financeiro equivalente do Milestone 1 podem ser consultados na página [Acompanhamento do Projeto](painel.md).
 
 ### Histórico de contribuições
 

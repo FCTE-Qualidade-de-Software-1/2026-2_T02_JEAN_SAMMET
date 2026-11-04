@@ -20,6 +20,11 @@ def converter_issue(bruto: dict, eventos) -> Issue:
         fechada_em=fechada_em,
         rotulos=rotulos,
         eventos=eventos,
+        responsaveis=tuple(
+            responsavel["login"]
+            for responsavel in (bruto.get("assignees") or [])
+            if responsavel.get("login")
+        ),
     )
 
 

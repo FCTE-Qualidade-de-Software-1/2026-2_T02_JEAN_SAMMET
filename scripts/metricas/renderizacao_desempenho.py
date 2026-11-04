@@ -6,7 +6,13 @@ from .tabelas_markdown import link_da_issue, tabela
 
 def renderizar_ciclo(resultado: ResultadoMarco) -> str:
     meta = formatacao.dias(META_CICLO_DIAS)
-    partes = [f"**Tempo de Ciclo (TC).** Meta do grupo: média de até {meta}."]
+    partes = [
+        f"**Tempo de Ciclo (TC).** Meta do grupo: média de até {meta}.  \n"
+        "**Fórmulas:** TC = Data de Conclusão − Data de Criação; "
+        "TC<sub>médio</sub> = soma dos tempos de ciclo / número de Issues concluídas. "
+        "TC representa o intervalo entre a abertura e a conclusão de uma Issue; "
+        "TC<sub>médio</sub> representa a média dos tempos de ciclo das Issues concluídas."
+    ]
     if resultado.ciclo.itens:
         linhas = [
             [
@@ -30,7 +36,12 @@ def renderizar_ciclo(resultado: ResultadoMarco) -> str:
 
 def renderizar_tsa(resultado: ResultadoMarco) -> str:
     limite = formatacao.dias(LIMITE_TSA_DIAS)
-    partes = [f"**Tempo sem Atividade (TSA).** Alerta para Issues abertas acima de {limite}."]
+    partes = [
+        f"**Tempo sem Atividade (TSA).** Alerta para Issues abertas acima de {limite}.  \n"
+        "**Fórmula:** TSA = Data de Referência − Data da Última Atividade. "
+        "O TSA representa o tempo transcorrido desde a última atividade registrada, "
+        "considerando a data de referência adotada."
+    ]
     if resultado.tsa.itens:
         linhas = [
             [

@@ -1,5 +1,6 @@
 from . import formatacao
 from .renderizacao_calendario import renderizar_calendario
+from .renderizacao_issues import renderizar_issues
 from .renderizacao_desempenho import renderizar_desempenho
 from .resultado_marco import ResultadoMarco
 
@@ -13,12 +14,15 @@ def renderizar_cabecalho(resultado: ResultadoMarco) -> str:
         f"Data de referência dos cálculos: {formatacao.data_hora(resultado.referencia)}. "
         f"[Ver Milestone no GitHub]({marco.url}).",
     ]
+    if marco.descricao.strip():
+        linhas.append(marco.descricao.strip())
     return "\n\n".join(linhas)
 
 
 def renderizar_marco(resultado: ResultadoMarco, numero_figura: int, prefixo_imagem: str) -> str:
     partes = [
         renderizar_cabecalho(resultado),
+        renderizar_issues(resultado),
         renderizar_calendario(resultado, numero_figura, prefixo_imagem),
         renderizar_desempenho(resultado),
     ]

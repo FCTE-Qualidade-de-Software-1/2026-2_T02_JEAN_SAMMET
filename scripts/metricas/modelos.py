@@ -19,6 +19,7 @@ class Issue:
     fechada_em: datetime | None
     rotulos: tuple[str, ...]
     eventos: tuple[Evento, ...]
+    responsaveis: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -30,3 +31,4 @@ class Marco:
     criado_em: datetime
     prazo: datetime | None
     encerrado_em: datetime | None
+    descricao: str = ""

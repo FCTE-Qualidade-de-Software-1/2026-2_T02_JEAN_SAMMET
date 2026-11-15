@@ -1,0 +1,2 @@
+data,identificador,tipo,matriz,entrada_confirmada,controle,valor_observado,resultado_observado,evidencia,limitacao
+2026-11-15,PILOTO-CREDITO-01,observacao_exploratoria,6360/1 - 2017.1,nao_confirmada,"controle de creditos; exibicao em horas", "24 creditos / 360h como referencia; captura intermediaria em 14 creditos / 210h", "controle e recálculo foram observados; plano final nao foi gerado pelas preferencias", "../../../docs/fases/fase3/img/controle-creditos.png", "observacao de piloto; nao e execucao formal de CT-01 a CT-07 e nao compoe denominador de metricas"

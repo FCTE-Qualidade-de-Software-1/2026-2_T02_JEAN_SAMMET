@@ -1,0 +1,932 @@
+{
+  "versao_schema": "1.0",
+  "entrada_id": "H0",
+  "descricao": "Histórico acadêmico oficial SIGAA/UnB normalizado e sanitizado para avaliação funcional do sistema No Fluxo UnB.",
+  "origem": {
+    "sistema": "SIGAA - Universidade de Brasília",
+    "tipo_documento": "Histórico Escolar",
+    "data_emissao": "2026-11-15",
+    "arquivo_fonte_original": "Arquivo original não versionado por conter dados pessoais.",
+    "arquivo_derivado_sanitizado": "testes/evidencias/funcionais/H0_sanitizado.pdf",
+    "metodo": "Extração estruturada das tabelas do histórico; conferência visual das páginas renderizadas; remoção real de dados pessoais do PDF derivado."
+  },
+  "privacidade": {
+    "identificadores_pessoais_incluidos": false,
+    "campos_removidos": [
+      "nome do discente",
+      "matrícula",
+      "data de nascimento",
+      "número de documento",
+      "CPF",
+      "local/nacionalidade de nascimento",
+      "índices acadêmicos pessoais",
+      "código de autenticação do documento"
+    ],
+    "notas_e_credenciais": "Não incluídas. O original não deve ser versionado."
+  },
+  "vinculo_academico": {
+    "curso": "Engenharia de Software",
+    "unidade": "FCTE/UnB",
+    "grau": "Bacharelado",
+    "turno": "Diurno",
+    "matriz": "6360/1",
+    "versao_matriz": "2017.1",
+    "periodo_letivo_atual_informado": "6",
+    "periodo_letivo_mais_recente": "2026.2"
+  },
+  "resumo_carga_horaria": {
+    "obrigatorias": {
+      "exigido_h": 2580,
+      "integralizado_h": 1530,
+      "pendente_h": 1050
+    },
+    "optativas": {
+      "exigido_h": 900,
+      "integralizado_h": 480,
+      "pendente_h": 420
+    },
+    "complementares": {
+      "exigido_h": 0,
+      "integralizado_h": 0,
+      "pendente_h": 0
+    },
+    "total": {
+      "exigido_h": 3480,
+      "integralizado_h": 2010,
+      "pendente_h": 1470
+    }
+  },
+  "resumo_registros": {
+    "componentes_curriculares_com_status": 41,
+    "aprovados": 33,
+    "matriculados": 7,
+    "trancados": 1,
+    "registros_informativos_nao_curriculares": 1,
+    "equivalencias_obrigatorias_concluidas": 5,
+    "equivalencias_obrigatorias_em_andamento": 2
+  },
+  "registros_academicos": [
+    {
+      "codigo": "CIC0004",
+      "nome": "ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES",
+      "periodo_letivo": "2024.1",
+      "carga_horaria": 90,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "*",
+      "significado_marcador": "Componente optativo",
+      "pagina_origem": 1
+    },
+    {
+      "codigo": "FGA0161",
+      "nome": "ENGENHARIA E AMBIENTE",
+      "periodo_letivo": "2024.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 2
+    },
+    {
+      "codigo": "FGA0163",
+      "nome": "INTRODUÇÃO À ENGENHARIA",
+      "periodo_letivo": "2024.1",
+      "carga_horaria": 30,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 2
+    },
+    {
+      "codigo": "FGA0168",
+      "nome": "DESENHO INDUSTRIAL ASSISTIDO POR COMPUTADOR",
+      "periodo_letivo": "2024.1",
+      "carga_horaria": 90,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 3
+    },
+    {
+      "codigo": "MAT0025",
+      "nome": "CÁLCULO 1",
+      "periodo_letivo": "2024.1",
+      "carga_horaria": 90,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 4
+    },
+    {
+      "codigo": "FGA0084",
+      "nome": "DESENVOLVIMENTO DE SOFTWARE",
+      "periodo_letivo": "2024.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "*",
+      "significado_marcador": "Componente optativo",
+      "pagina_origem": 4
+    },
+    {
+      "codigo": "FGA0157",
+      "nome": "PROBABILIDADE E ESTATÍSTICA APLICADO A ENGENHARIA",
+      "periodo_letivo": "2024.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 5
+    },
+    {
+      "codigo": "IFD0171",
+      "nome": "FISICA 1",
+      "periodo_letivo": "2024.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 6
+    },
+    {
+      "codigo": "IFD0173",
+      "nome": "FISICA 1 EXPERIMENTAL",
+      "periodo_letivo": "2024.2",
+      "carga_horaria": 30,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 6
+    },
+    {
+      "codigo": "MAT0026",
+      "nome": "CÁLCULO 2",
+      "periodo_letivo": "2024.2",
+      "carga_horaria": 90,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 7
+    },
+    {
+      "codigo": "MAT0031",
+      "nome": "INTRODUCAO A ALGEBRA LINEAR",
+      "periodo_letivo": "2024.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 8
+    },
+    {
+      "codigo": "FGA0071",
+      "nome": "PRÁTICA DE ELETRÔNICA DIGITAL 1",
+      "periodo_letivo": "2025.1",
+      "carga_horaria": 30,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "*",
+      "significado_marcador": "Componente optativo",
+      "pagina_origem": 9
+    },
+    {
+      "codigo": "FGA0073",
+      "nome": "TEORIA DE ELETRÔNICA DIGITAL 1",
+      "periodo_letivo": "2025.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "*",
+      "significado_marcador": "Componente optativo",
+      "pagina_origem": 10
+    },
+    {
+      "codigo": "FGA0085",
+      "nome": "MATEMÁTICA DISCRETA 1",
+      "periodo_letivo": "2025.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "*",
+      "significado_marcador": "Componente optativo",
+      "pagina_origem": 10
+    },
+    {
+      "codigo": "FGA0133",
+      "nome": "ENGENHARIA ECONÔMICA",
+      "periodo_letivo": "2025.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 11
+    },
+    {
+      "codigo": "FGA0158",
+      "nome": "ORIENTAÇÃO A OBJETOS",
+      "periodo_letivo": "2025.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 11
+    },
+    {
+      "codigo": "FGA0164",
+      "nome": "HUMANIDADES E CIDADANIA",
+      "periodo_letivo": "2025.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 12
+    },
+    {
+      "codigo": "MAT0027",
+      "nome": "CÁLCULO 3",
+      "periodo_letivo": "2025.1",
+      "carga_horaria": 90,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "*",
+      "significado_marcador": "Componente optativo",
+      "pagina_origem": 13
+    },
+    {
+      "codigo": "FGA0034",
+      "nome": "TÓPICOS ESPECIAIS EM MATEMÁTICA APLICADA",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "*",
+      "significado_marcador": "Componente optativo",
+      "pagina_origem": 14
+    },
+    {
+      "codigo": "FGA0108",
+      "nome": "MATEMÁTICA DISCRETA 2",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 14
+    },
+    {
+      "codigo": "FGA0142",
+      "nome": "FUNDAMENTOS DE ARQUITETURA DE COMPUTADORES",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 14
+    },
+    {
+      "codigo": "FGA0146",
+      "nome": "ESTRUTURAS DE DADOS 1",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "e",
+      "significado_marcador": "Componente equivalente a obrigatório",
+      "pagina_origem": 14
+    },
+    {
+      "codigo": "FGA0160",
+      "nome": "MÉTODOS NUMÉRICOS PARA ENGENHARIA",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 15
+    },
+    {
+      "codigo": "FGA0307",
+      "nome": "GESTÃO DA PRODUÇÃO E QUALIDADE",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "e",
+      "significado_marcador": "Componente equivalente a obrigatório",
+      "pagina_origem": 15
+    },
+    {
+      "codigo": "FGA0312",
+      "nome": "MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "e",
+      "significado_marcador": "Componente equivalente a obrigatório",
+      "pagina_origem": 15
+    },
+    {
+      "codigo": "FCTE0008",
+      "nome": "MONITORIA EM ESTRUTURAS DE DADOS 1",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 30,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "#",
+      "significado_marcador": "Componente eletivo",
+      "pagina_origem": 15
+    },
+    {
+      "codigo": "FGA0003",
+      "nome": "COMPILADORES 1",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 16
+    },
+    {
+      "codigo": "FGA0030",
+      "nome": "ESTRUTURAS DE DADOS 2",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 16
+    },
+    {
+      "codigo": "FGA0137",
+      "nome": "SISTEMAS DE BANCO DE DADOS 1",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 17
+    },
+    {
+      "codigo": "FGA0170",
+      "nome": "FUNDAMENTOS DE SISTEMAS OPERACIONAIS",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 18
+    },
+    {
+      "codigo": "FGA0173",
+      "nome": "INTERAÇÃO HUMANO COMPUTADOR",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 18
+    },
+    {
+      "codigo": "FGA0313",
+      "nome": "REQUISITOS DE SOFTWARE",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "e",
+      "significado_marcador": "Componente equivalente a obrigatório",
+      "pagina_origem": 19
+    },
+    {
+      "codigo": "FGA0314",
+      "nome": "TESTES DE SOFTWARE",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 60,
+      "situacao_original": "APROVADO(A)",
+      "situacao_normalizada": "APROVADO",
+      "marcador_sigaa": "e",
+      "significado_marcador": "Componente equivalente a obrigatório",
+      "pagina_origem": 19
+    },
+    {
+      "codigo": "DSC0172",
+      "nome": "VIGILÂNCIA EPIDEMIOLÓGICA PARTICIPATIVA",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 30,
+      "situacao_original": "MATRICULADO(A)",
+      "situacao_normalizada": "MATRICULADO",
+      "marcador_sigaa": "#",
+      "significado_marcador": "Componente eletivo",
+      "pagina_origem": 19
+    },
+    {
+      "codigo": "FGA0060",
+      "nome": "SISTEMAS DE BANCO DE DADOS 2",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 60,
+      "situacao_original": "TRANCADO",
+      "situacao_normalizada": "TRANCADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 20
+    },
+    {
+      "codigo": "FGA0109",
+      "nome": "FUNDAMENTOS DE SISTEMAS EMBARCADOS",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 60,
+      "situacao_original": "MATRICULADO(A)",
+      "situacao_normalizada": "MATRICULADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 20
+    },
+    {
+      "codigo": "FGA0208",
+      "nome": "ARQUITETURA E DESENHO DE SOFTWARE",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 60,
+      "situacao_original": "MATRICULADO(A)",
+      "situacao_normalizada": "MATRICULADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 21
+    },
+    {
+      "codigo": "FGA0210",
+      "nome": "PARADIGMAS DE PROGRAMAÇÃO",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 60,
+      "situacao_original": "MATRICULADO(A)",
+      "situacao_normalizada": "MATRICULADO",
+      "marcador_sigaa": null,
+      "significado_marcador": "Sem marcador especial na legenda do SIGAA",
+      "pagina_origem": 22
+    },
+    {
+      "codigo": "FGA0303",
+      "nome": "PROJETO INTEGRADOR DE ENGENHARIA 1",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 60,
+      "situacao_original": "MATRICULADO(A)",
+      "situacao_normalizada": "MATRICULADO",
+      "marcador_sigaa": "e",
+      "significado_marcador": "Componente equivalente a obrigatório",
+      "pagina_origem": 22
+    },
+    {
+      "codigo": "FGA0315",
+      "nome": "QUALIDADE DE SOFTWARE 1",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 60,
+      "situacao_original": "MATRICULADO(A)",
+      "situacao_normalizada": "MATRICULADO",
+      "marcador_sigaa": "e",
+      "significado_marcador": "Componente equivalente a obrigatório",
+      "pagina_origem": 22
+    },
+    {
+      "codigo": "FGA0413",
+      "nome": "MONITORIA EM ORIENTAÇÃO A OBJETOS",
+      "periodo_letivo": "2026.2",
+      "carga_horaria": 30,
+      "situacao_original": "MATRICULADO(A)",
+      "situacao_normalizada": "MATRICULADO",
+      "marcador_sigaa": "#",
+      "significado_marcador": "Componente eletivo",
+      "pagina_origem": 22
+    }
+  ],
+  "registros_informativos": [
+    {
+      "codigo": "ENADE",
+      "descricao": "INGRESSANTE REGULAR: NÃO HABILITADO AO ENADE 2024 EM RAZÃO DA NATUREZA",
+      "periodo_letivo": "2024.1",
+      "carga_horaria": 0,
+      "situacao_original": "--",
+      "pagina_origem": 1,
+      "natureza": "registro informativo, não é disciplina curricular"
+    }
+  ],
+  "equivalencias_obrigatorias_concluidas": [
+    {
+      "obrigatoria_destino": "FGA0147",
+      "nome_destino": "ESTRUTURA DE DADOS E ALGORITMOS",
+      "componente_aproveitado": "FGA0146",
+      "nome_aproveitado": "ESTRUTURAS DE DADOS 1",
+      "carga_horaria": 60,
+      "situacao": "APROVADO",
+      "periodo_letivo": "2025.2",
+      "evidencia_sigaa": "Cumpriu FGA0147 através de FGA0146",
+      "classificacao": "equivalencia concluida"
+    },
+    {
+      "obrigatoria_destino": "FGA0184",
+      "nome_destino": "GESTÃO DA PRODUÇÃO E QUALIDADE",
+      "componente_aproveitado": "FGA0307",
+      "nome_aproveitado": "GESTÃO DA PRODUÇÃO E QUALIDADE",
+      "carga_horaria": 60,
+      "situacao": "APROVADO",
+      "periodo_letivo": "2025.2",
+      "evidencia_sigaa": "Cumpriu FGA0184 através de FGA0307",
+      "classificacao": "equivalencia concluida"
+    },
+    {
+      "obrigatoria_destino": "FGA0138",
+      "nome_destino": "MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE",
+      "componente_aproveitado": "FGA0312",
+      "nome_aproveitado": "MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE",
+      "carga_horaria": 60,
+      "situacao": "APROVADO",
+      "periodo_letivo": "2025.2",
+      "evidencia_sigaa": "Cumpriu FGA0138 através de FGA0312",
+      "classificacao": "equivalencia concluida"
+    },
+    {
+      "obrigatoria_destino": "FGA0172",
+      "nome_destino": "REQUISITOS DE SOFTWARE",
+      "componente_aproveitado": "FGA0313",
+      "nome_aproveitado": "REQUISITOS DE SOFTWARE",
+      "carga_horaria": 60,
+      "situacao": "APROVADO",
+      "periodo_letivo": "2026.1",
+      "evidencia_sigaa": "Cumpriu FGA0172 através de FGA0313",
+      "classificacao": "equivalencia concluida"
+    },
+    {
+      "obrigatoria_destino": "FGA0238",
+      "nome_destino": "TESTES DE SOFTWARE",
+      "componente_aproveitado": "FGA0314",
+      "nome_aproveitado": "TESTES DE SOFTWARE",
+      "carga_horaria": 60,
+      "situacao": "APROVADO",
+      "periodo_letivo": "2026.1",
+      "evidencia_sigaa": "Cumpriu FGA0238 através de FGA0314",
+      "classificacao": "equivalencia concluida"
+    }
+  ],
+  "equivalencias_obrigatorias_em_andamento": [
+    {
+      "obrigatoria_destino": "FGA0150",
+      "nome_destino": "PROJETO INTEGRADOR DE ENGENHARIA 1",
+      "componente_aproveitado": "FGA0303",
+      "nome_aproveitado": "PROJETO INTEGRADOR DE ENGENHARIA 1",
+      "carga_horaria": 60,
+      "situacao": "MATRICULADO",
+      "periodo_letivo": "2026.2",
+      "evidencia_sigaa": "Marcador e (equivalente a obrigatório); status Matriculado; destino permanece na lista de pendências",
+      "classificacao": "equivalencia em andamento; não cumprida"
+    },
+    {
+      "obrigatoria_destino": "FGA0278",
+      "nome_destino": "QUALIDADE DE SOFTWARE 1",
+      "componente_aproveitado": "FGA0315",
+      "nome_aproveitado": "QUALIDADE DE SOFTWARE 1",
+      "carga_horaria": 60,
+      "situacao": "MATRICULADO",
+      "periodo_letivo": "2026.2",
+      "evidencia_sigaa": "Marcador e (equivalente a obrigatório); status Matriculado; destino permanece na lista de pendências",
+      "classificacao": "equivalencia em andamento; não cumprida"
+    }
+  ],
+  "obrigacoes_pendentes_sigaa": {
+    "quantidade_informada_pelo_sigaa": 17,
+    "disciplinas_obrigatorias_pendentes": [
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0150",
+        "nome": "PROJETO INTEGRADOR DE ENGENHARIA 1",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0060",
+        "nome": "SISTEMAS DE BANCO DE DADOS 2",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0278",
+        "nome": "QUALIDADE DE SOFTWARE 1",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0208",
+        "nome": "ARQUITETURA E DESENHO DE SOFTWARE",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0211",
+        "nome": "FUNDAMENTOS DE REDES DE COMPUTADORES",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0210",
+        "nome": "PARADIGMAS DE PROGRAMAÇÃO",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0244",
+        "nome": "PROGRAMAÇÃO PARA SISTEMAS PARALELOS E DISTRIBUÍDOS",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0109",
+        "nome": "FUNDAMENTOS DE SISTEMAS EMBARCADOS",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0240",
+        "nome": "GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE SOFTWARE",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0021",
+        "nome": "ESTÁGIO SUPERVISIONADO",
+        "carga_horaria": 210,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0206",
+        "nome": "ENGENHARIA DE PRODUTO DE SOFTWARE",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0009",
+        "nome": "TRABALHO DE CONCLUSÃO DE CURSO 1",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0250",
+        "nome": "PROJETO INTEGRADOR DE ENGENHARIA 2",
+        "carga_horaria": 90,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0011",
+        "nome": "TRABALHO DE CONCLUSÃO DE CURSO 2",
+        "carga_horaria": 90,
+        "pagina_origem": 24
+      }
+    ],
+    "quantidade_disciplinas_obrigatorias_pendentes": 14,
+    "cadeias_de_seletividade_pendentes": [
+      {
+        "tipo": "cadeia_de_seletividade",
+        "codigo": null,
+        "nome": "Cadeia 6 da matriz 6360/1 (carga mínima)",
+        "carga_horaria": 60,
+        "pagina_origem": 25
+      },
+      {
+        "tipo": "cadeia_de_seletividade",
+        "codigo": null,
+        "nome": "Cadeia 7 da matriz 6360/1 (carga mínima)",
+        "carga_horaria": 60,
+        "pagina_origem": 25
+      }
+    ],
+    "enade_pendente": {
+      "tipo": "requisito_nao_curricular",
+      "codigo": "ENADE",
+      "nome": "ENADE concluinte pendente",
+      "carga_horaria": 0,
+      "pagina_origem": 25
+    },
+    "itens_pendentes_discriminados": [
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0150",
+        "nome": "PROJETO INTEGRADOR DE ENGENHARIA 1",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0060",
+        "nome": "SISTEMAS DE BANCO DE DADOS 2",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0278",
+        "nome": "QUALIDADE DE SOFTWARE 1",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0208",
+        "nome": "ARQUITETURA E DESENHO DE SOFTWARE",
+        "carga_horaria": 60,
+        "pagina_origem": 23
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0211",
+        "nome": "FUNDAMENTOS DE REDES DE COMPUTADORES",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0210",
+        "nome": "PARADIGMAS DE PROGRAMAÇÃO",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0244",
+        "nome": "PROGRAMAÇÃO PARA SISTEMAS PARALELOS E DISTRIBUÍDOS",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0109",
+        "nome": "FUNDAMENTOS DE SISTEMAS EMBARCADOS",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0240",
+        "nome": "GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE SOFTWARE",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0021",
+        "nome": "ESTÁGIO SUPERVISIONADO",
+        "carga_horaria": 210,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0206",
+        "nome": "ENGENHARIA DE PRODUTO DE SOFTWARE",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0009",
+        "nome": "TRABALHO DE CONCLUSÃO DE CURSO 1",
+        "carga_horaria": 60,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0250",
+        "nome": "PROJETO INTEGRADOR DE ENGENHARIA 2",
+        "carga_horaria": 90,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "disciplina_obrigatoria",
+        "codigo": "FGA0011",
+        "nome": "TRABALHO DE CONCLUSÃO DE CURSO 2",
+        "carga_horaria": 90,
+        "pagina_origem": 24
+      },
+      {
+        "tipo": "cadeia_de_seletividade",
+        "codigo": null,
+        "nome": "Cadeia 6 da matriz 6360/1 (carga mínima)",
+        "carga_horaria": 60,
+        "pagina_origem": 25
+      },
+      {
+        "tipo": "cadeia_de_seletividade",
+        "codigo": null,
+        "nome": "Cadeia 7 da matriz 6360/1 (carga mínima)",
+        "carga_horaria": 60,
+        "pagina_origem": 25
+      },
+      {
+        "tipo": "requisito_nao_curricular",
+        "codigo": "ENADE",
+        "nome": "ENADE concluinte pendente",
+        "carga_horaria": 0,
+        "pagina_origem": 25
+      }
+    ],
+    "carga_disciplinas_pendentes_listadas_h": 1050,
+    "carga_cadeias_listadas_h": 120,
+    "soma_carga_das_14_disciplinas_pendentes_h": 1050,
+    "carga_das_duas_cadeias_seletividade_h": 120,
+    "carga_obrigatoria_pendente_no_resumo_h": 1050,
+    "divergencia_entre_disciplinas_e_resumo_h": 0,
+    "nota": "As 14 disciplinas obrigatórias pendentes somam 1.050h, exatamente o valor do quadro-resumo de obrigatórias pendentes. As duas cadeias de seletividade (120h no total) são registradas separadamente, pois não são disciplinas obrigatórias do denominador de CDO; ENADE é requisito não curricular de 0h."
+  },
+  "referencias_curriculares_para_ct": {
+    "ct01": [
+      {
+        "dependente": "FGA0211",
+        "prerequisito": "FGA0170",
+        "situacao_prerequisito_no_H0": "APROVADO",
+        "periodo_prerequisito": "2026.1",
+        "situacao_dependente_no_H0": "PENDENTE_NO_QUADRO_DE_OBRIGATORIAS",
+        "usar_na_medicao": "Somente se FGA0211 aparecer em plano gerado."
+      },
+      {
+        "dependente": "MAT0026",
+        "prerequisito": "MAT0025 OU MAT0024",
+        "situacao_prerequisito_no_H0": "MAT0025 APROVADO",
+        "periodo_prerequisito": "2024.1",
+        "situacao_dependente_no_H0": "APROVADO",
+        "usar_na_medicao": "Contexto histórico; não tratar como verificação de ordenação futura."
+      }
+    ],
+    "ct02": {
+      "par_co_requisitado": [
+        "FGA0072",
+        "FGA0074"
+      ],
+      "status_no_H0": "Nenhum dos dois componentes aparece nos registros do histórico.",
+      "pre_requisitos_da_regra": "ENE0277 OU (FGA0073 E FGA0071)",
+      "pre_requisitos_presentes_e_aprovados_no_H0": [
+        "FGA0073",
+        "FGA0071"
+      ],
+      "condicao": "Medir apenas se o planejador permitir selecionar explicitamente o par; não criar registros de aprovação para FGA0072/FGA0074."
+    },
+    "ct03": {
+      "denominador_candidato_disciplinas": 14,
+      "fora_do_denominador_da_metricas_de_disciplinas": [
+        "duas cadeias de seletividade (60h cada)",
+        "ENADE concluinte (0h)"
+      ],
+      "tratamento_de_status": "TRANCADO e MATRICULADO não são aprovação concluída; permanecerão pendentes até regra de projeção documentada."
+    },
+    "ct05": {
+      "equivalencias_concluidas": 5,
+      "equivalencias_em_andamento": 2,
+      "regra": "Somente as cinco equivalências com status APROVADO e declaração explícita Cumpriu no SIGAA contam como satisfeitas; as duas equivalências matriculadas não contam como concluídas."
+    }
+  },
+  "carga_extensionista": [
+    {
+      "codigo": "FGA0312",
+      "periodo_letivo": "2025.2",
+      "carga_horaria": 30
+    },
+    {
+      "codigo": "FGA0313",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 30
+    },
+    {
+      "codigo": "FGA0314",
+      "periodo_letivo": "2026.1",
+      "carga_horaria": 30
+    }
+  ],
+  "nota_avaliacao": "Este arquivo descreve a entrada H0. Não representa execução do sistema avaliado, saída de plano, nem resultado de MET-FUN. As métricas que dependem do plano gerado permanecem pendentes até coleta observável."
+}

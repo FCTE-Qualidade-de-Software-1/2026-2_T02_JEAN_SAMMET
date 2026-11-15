@@ -1,0 +1,9 @@
+Tentativa de pré-condição de acesso à aplicação — 2026-11-15T08:47:57-03:00
+Alvo: https://no-fluxo.crianex.com/plano-formatura
+Resultado: BLOQUEADO NO AMBIENTE DE EXECUÇÃO
+Comando de verificação de conectividade: curl -I -L --max-time 15 --silent --show-error https://no-fluxo.crianex.com/plano-formatura
+Erro observado: curl: (6) Could not resolve host: no-fluxo.crianex.com
+Código de saída: 6
+Consulta de navegação: URL não acessível neste ambiente.
+Interpretação: o nome do host não foi resolvido no ambiente utilizado para esta coleta. Nenhuma requisição funcional chegou ao servidor; nenhum H0 foi submetido; nenhum plano foi gerado.
+Limite: este resultado descreve somente o ambiente e o instante da tentativa. Não demonstra indisponibilidade geral, falha de segurança ou defeito funcional do produto. CT-01 a CT-07 permanecem sem execução observável.

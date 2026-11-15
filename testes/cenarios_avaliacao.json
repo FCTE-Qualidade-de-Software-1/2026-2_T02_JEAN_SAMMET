@@ -1,0 +1,213 @@
+{
+  "versao_schema": "4.0",
+  "descricao": "Plano de cenários com uma única entrada acadêmica real, autorizada e sanitizada (H0). Nenhum histórico sintético, nova aprovação ou equivalência foi fabricado.",
+  "entrada": {
+    "id": "H0",
+    "origem": "Histórico oficial SIGAA/UnB emitido em 15/11/2026, fornecido e autorizado pelo usuário.",
+    "arquivo_dados_sanitizados": "testes/referencias/h0_sanitizado.json",
+    "arquivo_registros_csv": "testes/evidencias/funcionais/h0_registros.csv",
+    "evidencia_documental": "testes/evidencias/funcionais/H0_sanitizado.pdf",
+    "arquivo_original": "Mantido fora do repositório.",
+    "matriz_referencia": "6360/1 — 2017.1",
+    "periodo_letivo_mais_recente": "2026.2",
+    "registros_academicos": 41,
+    "status": {
+      "aprovado": 33,
+      "matriculado": 7,
+      "trancado": 1
+    },
+    "equivalencias_obrigatorias_concluidas": 5,
+    "equivalencias_obrigatorias_em_andamento": 2,
+    "disciplinas_obrigatorias_pendentes": 14,
+    "outras_exigencias_pendentes": [
+      "Cadeia de Seletividade 6",
+      "Cadeia de Seletividade 7",
+      "ENADE concluinte"
+    ],
+    "estado": "Entrada normalizada e conferida; importação no produto ainda não validada."
+  },
+  "referencia_curricular": "testes/referencias/estrutura_6360_1.json",
+  "dados_h0": "testes/referencias/h0_sanitizado.json",
+  "cenarios": [
+    {
+      "id": "C0",
+      "nome": "Base",
+      "entrada": "H0",
+      "limite_creditos": 24,
+      "horas_exibidas_a_conferir": 360,
+      "demais_preferencias": "Registrar antes da execução trabalho/estágio, objetivo e semestre selecionados. Não assumir que 24 créditos seja o valor padrão até conferir a interface."
+    },
+    {
+      "id": "C1",
+      "nome": "Carga menor",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": {
+        "limite_creditos": 20,
+        "horas_esperadas": 300
+      },
+      "pre_condicao": "Confirmar que o controle aceita 20 créditos; restaurar C0 depois."
+    },
+    {
+      "id": "C2",
+      "nome": "Carga maior",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": {
+        "limite_creditos": 32,
+        "horas_esperadas": 480
+      },
+      "pre_condicao": "Confirmar que o controle aceita 32 créditos e não ultrapassa o máximo curricular de 480h por período; restaurar C0 depois."
+    },
+    {
+      "id": "C3",
+      "nome": "Trabalho/estágio",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Alternar a resposta de trabalho/estágio",
+      "limite": "Registrar seleção e efeito observado. Julgar efeito algorítmico apenas se houver requisito ou texto de produto que descreva o comportamento esperado."
+    },
+    {
+      "id": "C4",
+      "nome": "Objetivo",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Alternar velocidade/equilíbrio",
+      "limite": "Registrar seleção e efeito observado. Não presumir que o conjunto de disciplinas deve mudar sem especificação."
+    },
+    {
+      "id": "C5",
+      "nome": "Quantidade de matérias",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Comparar as opções de 4, 6 e 8 matérias, mantendo trabalho e objetivo fixos",
+      "horas_exibidas_a_conferir": {
+        "4": 240,
+        "6": 360,
+        "8": 480
+      },
+      "limite": "Conferir a associação exibida pelo onboarding; o comportamento algorítmico requer saída observável.",
+      "variantes": [
+        {
+          "id": "C5-4",
+          "quantidade_materias": 4,
+          "carga_alvo_horas": 240
+        },
+        {
+          "id": "C5-6",
+          "quantidade_materias": 6,
+          "carga_alvo_horas": 360
+        },
+        {
+          "id": "C5-8",
+          "quantidade_materias": 8,
+          "carga_alvo_horas": 480
+        }
+      ],
+      "observacao_execucao": "As três variantes foram avaliadas em 15/11/2026; ver execucoes.csv e verificacoes_funcionais.csv."
+    }
+  ],
+  "casos": [
+    {
+      "id": "CT-01",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-01",
+      "entrada_h0": "FGA0170 aprovado em 2026.1; FGA0211 consta entre as obrigatórias pendentes. MAT0025 aprovado e MAT0026 aprovado em 2024.2; esta segunda relação é contexto histórico, não teste de ordenação futura.",
+      "objeto": "Verificar no plano se FGA0211, quando alocada, respeita o pré-requisito FGA0170.",
+      "resultado_esperado": "Nenhuma dependente antecede o cumprimento válido do pré-requisito.",
+      "sem_saida": "Sem plano gerado, nenhuma relação entra no denominador.",
+      "resultado_observado": "FGA0170 (concluída) antecede FGA0211; FGA0009 no semestre 9 antecede FGA0011 no semestre 10, sem conclusão prévia de ambas. A segunda relação foi observada na interface, mas não há fonte curricular oficial transcrita no pacote."
+    },
+    {
+      "id": "CT-02",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-02",
+      "entrada_h0": "FGA0071 e FGA0073 estão aprovadas; FGA0072 e FGA0074 não aparecem no histórico.",
+      "objeto": "Verificar seleção e alocação simultânea do par FGA0072/FGA0074, se o planejador permitir selecionar optativas.",
+      "resultado_esperado": "Se ambas forem selecionadas e estiverem pendentes, devem respeitar a regra de co-requisito; as duas relações dirigidas devem ser conferidas.",
+      "sem_saida": "Não criar aprovações nem presumir que o planejador permite selecionar o par.",
+      "resultado_observado": "FGA0074 no semestre 7 e FGA0072 no semestre 8; co-requisito recíproco violado."
+    },
+    {
+      "id": "CT-03",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-03",
+      "entrada_h0": "14 disciplinas obrigatórias pendentes, totalizando 1.050h; duas cadeias de seletividade e ENADE ficam em registros separados.",
+      "objeto": "Cruzar as 14 disciplinas obrigatórias pendentes com o plano completo.",
+      "resultado_esperado": "As 14 disciplinas pendentes devem ser contempladas no plano ou ter justificativa curricular/oferta verificável.",
+      "denominador_candidato": 14,
+      "sem_saida": "DPC permanece desconhecido até obter todos os semestres e a lista de não alocadas.",
+      "resultado_observado": "13/14 disciplinas obrigatórias apresentadas; FGA0206 omitida. O avaliador relata também ausência de FGA0242 ou FGA0171 como pré-requisito alternativo."
+    },
+    {
+      "id": "CT-04",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-04",
+      "entrada_h0": "41 registros: 33 APROVADO, 7 MATRICULADO e 1 TRANCADO.",
+      "objeto": "Comparar a interpretação do sistema para cada registro do histórico.",
+      "resultado_esperado": "MATRICULADO não equivale a aprovação acadêmica concluída; TRANCADO não equivale a aprovação; APROVADO deve ser reconhecido como concluído. Projeção futura só pode ser julgada conforme política documentada.",
+      "sem_saida": "A distribuição no documento é linha de base, não resultado da importação do produto.",
+      "resultado_observado": "Importação concluída e dados considerados compatíveis com H0; tela exibe 39 obrigatórias, 25 concluídas, 14 pendentes e 7 optativas."
+    },
+    {
+      "id": "CT-05",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-05",
+      "entrada_h0": "Cinco equivalências explicitamente declaradas como cumpridas pelo SIGAA e duas equivalências com status MATRICULADO em 2026.2.",
+      "objeto": "Verificar reconhecimento das cinco equivalências concluídas e tratamento das duas equivalências em andamento.",
+      "resultado_esperado": "As cinco aprovadas satisfazem as obrigatórias de destino; as duas matriculadas não podem ser tratadas como já concluídas.",
+      "sem_saida": "A ocorrência de MAT0138 não é presumida em H0; usar as equivalências que realmente constam no documento.",
+      "resultado_observado": "As sete relações de equivalência de H0 foram contabilizadas como corretamente tratadas (7/7; TAE=0%), conforme consolidação solicitada pelo avaliador. A captura apresenta diretamente FGA0147 e FGA0172 sem duplicação e sem permanência da obrigatória original nas pendências. As demais cinco classificações estão registradas em CT-05-criterio-7de7.md; duas relações em andamento permanecem corretamente não concluídas."
+    },
+    {
+      "id": "CT-06",
+      "cenarios": [
+        "C3",
+        "C4",
+        "C5-4",
+        "C5-6",
+        "C5-8"
+      ],
+      "metrica": "MET-FUN-06",
+      "entrada_h0": "H0 fixo em todas as variações; conferir as opções de trabalho/estágio, objetivo e quantidade de matérias.",
+      "objeto": "Comparar representação das opções e efeitos documentados.",
+      "resultado_esperado": "Para C5, confirmar a associação apresentada para 4/6/8 matérias (240/360/480h). Para trabalho/estágio e objetivo, julgar efeito apenas com expectativa previamente documentada.",
+      "sem_saida": "Opção selecionável, por si só, não comprova o efeito no plano.",
+      "resultado_observado": "C5-4: 300h no semestre 9 para alvo 240h; C5-6: 390h para alvo 360h; C5-8: 540h para alvo 480h (imagem pendente). C3 e C4 inconclusivos: sem mudança visual identificável."
+    },
+    {
+      "id": "CT-07",
+      "cenarios": [
+        "C5-4",
+        "C5-6",
+        "C5-8"
+      ],
+      "metrica": "MET-FUN-07",
+      "entrada_h0": "H0 fixo; variantes de C5: alvo 240h (4 matérias), 360h (6 matérias) e 480h (8 matérias).",
+      "objeto": "Verificar carga efetiva por semestre, separando período atual e períodos futuros.",
+      "resultado_esperado": "A carga alocada deve respeitar o alvo do cenário e não exceder o máximo curricular de 480h por período; distinguir a divergência do alvo do cenário do limite global.",
+      "sem_saida": "A terceira captura está pendente, mas a composição e a soma foram informadas pelo avaliador e estão registradas em LEMBRETE-CT-07-06-480h.md.",
+      "resultado_observado": "Semestre 9: 300h para alvo 240h; 390h para alvo 360h; 540h para alvo 480h. A terceira observação foi informada pelo avaliador; captura pendente."
+    }
+  ],
+  "regras_execucao": [
+    "Usar somente os registros de H0; não alterar aprovações, reprovações, matrícula, trancamento ou equivalências.",
+    "Não tratar MATRICULADO ou TRANCADO como aprovação concluída.",
+    "Manter separadas as 14 disciplinas obrigatórias pendentes, as duas cadeias de seletividade e o requisito ENADE.",
+    "Restaurar C0 após cada variação e alterar somente uma opção por vez.",
+    "Registrar versão do produto, data/hora, navegador, viewport, resultado esperado, resultado observado e evidência sanitizada.",
+    "Não registrar nome, matrícula, CPF, nascimento, índices acadêmicos, credenciais ou tokens.",
+    "A ausência de acesso ao produto não é evidência de defeito do produto; classificar execução como bloqueada/inconclusiva.",
+    "Os cenários representam variações da mesma entrada, não estudantes ou históricos independentes."
+  ]
+}

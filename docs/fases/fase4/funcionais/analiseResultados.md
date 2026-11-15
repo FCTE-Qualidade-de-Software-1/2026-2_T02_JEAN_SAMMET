@@ -107,4 +107,4 @@ As três variantes foram julgadas não conformes frente aos alvos de carga selec
 
 | Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| Gabriel Mota | Consolidação das observações CT-01 a CT-07, cálculo e respostas GQM | 15/11/2026 | Não commitado |
+| Gabriel Mota | Consolidação das observações CT-01 a CT-07, cálculo e respostas GQM | 15/11/2026 | [1bc6aca](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/1bc6acac9640bf2f81bd53039c24ab5507f88b92) |

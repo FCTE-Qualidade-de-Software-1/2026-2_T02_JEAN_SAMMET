@@ -64,4 +64,4 @@ Não versionar o PDF original, nome, matrícula, CPF, nascimento, documento, ín
 
 | Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| Gabriel Mota | Consolidação dos dados brutos e evidências da avaliação funcional | 15/11/2026 | Não commitado |
+| Gabriel Mota | Consolidação dos dados brutos e evidências da avaliação funcional | 15/11/2026 | [dcfdb1a](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/dcfdb1a07e1511a2ac831844012889753ad837d4)  |

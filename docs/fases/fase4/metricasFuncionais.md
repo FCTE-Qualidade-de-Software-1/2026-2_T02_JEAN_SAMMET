@@ -44,4 +44,4 @@ A execução funcional foi reportada para CT-01 a CT-07. Há resultados conforme
 
 | Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| Gabriel Mota | Consolidação dos resultados de CT-01 a CT-07 | 15/11/2026 | Não commitado |
+| Gabriel Mota | Consolidação dos resultados de CT-01 a CT-07 | 15/11/2026 | [f469332](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f4693325fd9642696269942bb29aed671f0d8778) |

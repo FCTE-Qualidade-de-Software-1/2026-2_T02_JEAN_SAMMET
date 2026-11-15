@@ -114,4 +114,4 @@ A avaliação usa um histórico autorizado e configurações distintas; não rep
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gabriel Mota](https://github.com/Gabro-MO) | Normalização de H0, sanitização da evidência e adequação dos cenários à entrada real | 15/11/2026 | Não commitado |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Normalização de H0, sanitização da evidência e adequação dos cenários à entrada real | 15/11/2026 | [b07997f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b07997f34eb1a595571e3e5abd3cc4e15002949b) |

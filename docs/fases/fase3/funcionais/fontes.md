@@ -59,4 +59,4 @@ A linha de base inclui 41 registros de componentes curriculares: 33 aprovados, 7
 
 | Nome do Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| [Gabriel Mota](https://github.com/Gabro-MO) | Vinculação das regras às equivalências e pendências observadas em H0 | 15/11/2026 | Não commitado |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Vinculação das regras às equivalências e pendências observadas em H0 | 15/11/2026 | [c972eab](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/c972eabf8458093451576237d0f79a5c80875cf2) |

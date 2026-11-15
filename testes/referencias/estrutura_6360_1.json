@@ -1,0 +1,277 @@
+{
+  "fonte": "SIGAA/UnB — relatório da estrutura curricular e consulta pública",
+  "url": "https://sigaa.unb.br/sigaa/public/curso/curriculo.jsf?id=414924&lc=pt_BR",
+  "consulta": "2026-11-15",
+  "curriculo": "6360/1",
+  "vigencia_curriculo": "2017.1",
+  "relatorio_sha256": "288c22be63e1c6d4243f87d2be3d63632bd07895c275afcaa4df6dc42a0361a7",
+  "limites_horas": {
+    "total_minimo": 3480,
+    "obrigatorias": 2580,
+    "optativas_minimo": 900,
+    "periodo_minimo": 240,
+    "periodo_maximo": 480,
+    "eletivos_maximo": 360
+  },
+  "obrigatorias": [
+    {
+      "codigo": "FGA0161",
+      "nome": "ENGENHARIA E AMBIENTE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0163",
+      "nome": "INTRODUÇÃO À ENGENHARIA",
+      "carga_horaria": 30
+    },
+    {
+      "codigo": "FGA0168",
+      "nome": "DESENHO INDUSTRIAL ASSISTIDO POR COMPUTADOR",
+      "carga_horaria": 90
+    },
+    {
+      "codigo": "MAT0025",
+      "nome": "CÁLCULO 1",
+      "carga_horaria": 90
+    },
+    {
+      "codigo": "FGA0157",
+      "nome": "PROBABILIDADE E ESTATÍSTICA APLICADO A ENGENHARIA",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "IFD0171",
+      "nome": "FISICA 1",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "IFD0173",
+      "nome": "FISICA 1 EXPERIMENTAL",
+      "carga_horaria": 30
+    },
+    {
+      "codigo": "MAT0026",
+      "nome": "CÁLCULO 2",
+      "carga_horaria": 90
+    },
+    {
+      "codigo": "MAT0031",
+      "nome": "INTRODUCAO A ALGEBRA LINEAR",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0133",
+      "nome": "ENGENHARIA ECONÔMICA",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0158",
+      "nome": "ORIENTAÇÃO A OBJETOS",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0160",
+      "nome": "MÉTODOS NUMÉRICOS PARA ENGENHARIA",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0164",
+      "nome": "HUMANIDADES E CIDADANIA",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0108",
+      "nome": "MATEMÁTICA DISCRETA 2",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0138",
+      "nome": "MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0142",
+      "nome": "FUNDAMENTOS DE ARQUITETURA DE COMPUTADORES",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0147",
+      "nome": "ESTRUTURA DE DADOS E ALGORITMOS",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0150",
+      "nome": "PROJETO INTEGRADOR DE ENGENHARIA 1",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0184",
+      "nome": "GESTÃO DA PRODUÇÃO E QUALIDADE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0003",
+      "nome": "COMPILADORES 1",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0030",
+      "nome": "ESTRUTURAS DE DADOS 2",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0137",
+      "nome": "SISTEMAS DE BANCO DE DADOS 1",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0170",
+      "nome": "FUNDAMENTOS DE SISTEMAS OPERACIONAIS",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0172",
+      "nome": "REQUISITOS DE SOFTWARE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0173",
+      "nome": "INTERAÇÃO HUMANO COMPUTADOR",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0060",
+      "nome": "SISTEMAS DE BANCO DE DADOS 2",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0208",
+      "nome": "ARQUITETURA E DESENHO DE SOFTWARE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0211",
+      "nome": "FUNDAMENTOS DE REDES DE COMPUTADORES",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0238",
+      "nome": "TESTES DE SOFTWARE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0278",
+      "nome": "QUALIDADE DE SOFTWARE 1",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0109",
+      "nome": "FUNDAMENTOS DE SISTEMAS EMBARCADOS",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0210",
+      "nome": "PARADIGMAS DE PROGRAMAÇÃO",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0244",
+      "nome": "PROGRAMAÇÃO PARA SISTEMAS PARALELOS E DISTRIBUÍDOS",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0021",
+      "nome": "ESTÁGIO SUPERVISIONADO",
+      "carga_horaria": 210
+    },
+    {
+      "codigo": "FGA0206",
+      "nome": "ENGENHARIA DE PRODUTO DE SOFTWARE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0240",
+      "nome": "GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE SOFTWARE",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0009",
+      "nome": "TRABALHO DE CONCLUSÃO DE CURSO 1",
+      "carga_horaria": 60
+    },
+    {
+      "codigo": "FGA0250",
+      "nome": "PROJETO INTEGRADOR DE ENGENHARIA 2",
+      "carga_horaria": 90
+    },
+    {
+      "codigo": "FGA0011",
+      "nome": "TRABALHO DE CONCLUSÃO DE CURSO 2",
+      "carga_horaria": 90
+    }
+  ],
+  "regras_consultadas": [
+    {
+      "codigo": "FGA0211",
+      "pre_requisito": "FGA0170",
+      "inicio_vigencia_pre": "2019-08-01",
+      "co_requisito_exibido": null
+    },
+    {
+      "codigo": "MAT0026",
+      "pre_requisito": "MAT0025 OU MAT0024",
+      "inicio_vigencia_pre": "2021-11-07",
+      "equivalencia": "MAT0138",
+      "inicio_vigencia_equivalencia": "2021-11-07",
+      "aplicabilidade_equivalencia": "Regra geral ativa, MAT0026 vinculado à matriz 6360/1; nenhuma exceção específica exibida para MAT0026 na consulta."
+    },
+    {
+      "codigo": "IFD0173",
+      "pre_requisito_exibido": null,
+      "co_requisito_exibido": null,
+      "limite": "Ausência de co-requisito neste componente não generaliza para a matriz"
+    },
+    {
+      "codigo": "FGA0072",
+      "nome": "PRÁTICA DE ELETRÔNICA DIGITAL 2",
+      "carga_horaria": 30,
+      "tipo_na_matriz": "OPTATIVO",
+      "pre_requisito": "ENE0277 OU (FGA0073 E FGA0071)",
+      "co_requisito": "FGA0074",
+      "inicio_vigencia_co": "2019-08-01"
+    },
+    {
+      "codigo": "FGA0074",
+      "nome": "TEORIA DE ELETRÔNICA DIGITAL 2",
+      "carga_horaria": 60,
+      "tipo_na_matriz": "OPTATIVO",
+      "pre_requisito": "ENE0277 OU (FGA0073 E FGA0071)",
+      "co_requisito": "FGA0072",
+      "inicio_vigencia_co": "2019-08-01"
+    },
+    {
+      "codigo": "MAT0138",
+      "nome": "CÁLCULO 2 - SEMIPRESENCIAL",
+      "carga_horaria": 90,
+      "pre_requisito": "MAT0025 OU MAT0137",
+      "equivalencia": "MAT0026",
+      "inicio_vigencia_equivalencia": "2019-08-01"
+    },
+    {
+      "codigo": "ENE0277",
+      "nome": "SISTEMAS DIGITAIS 1",
+      "carga_horaria": 90,
+      "tipo_na_matriz": "OPTATIVO",
+      "uso": "Aprovação de entrada para isolar o co-requisito em CT-02; não julgar o histórico anterior deste componente."
+    }
+  ],
+  "limites": "Lista de obrigatórias; cadeias de seletividade, oferta e regras das optativas não integralmente verificadas.",
+  "evidencias_publicas": [
+    "docs/fases/fase3/img/regra-correquisito.png",
+    "docs/fases/fase3/img/catalogo-equivalente.png",
+    "docs/fases/fase3/img/matriz-sigaa.png",
+    "docs/fases/fase3/img/regra-correquisito-teoria.png",
+    "docs/fases/fase3/img/equivalencia-mat0138.png",
+    "docs/fases/fase3/img/regra-calculo2.png"
+  ]
+}

@@ -21,11 +21,13 @@ A avaliação não certificará o software nem substituirá a conferência das r
 | :--- | :--- | :--- |
 | Identificar divergências funcionais que merecem correção ou investigação | Equipe avaliadora e, se compartilhado, mantenedores | Casos de teste, resultados esperados e observados |
 | Identificar problemas observáveis de acesso ou exposição de dados | Equipe avaliadora e, se compartilhado, mantenedores | Lista de verificações não invasivas com evidências e limitações |
-| Identificar dificuldades no uso do fluxo escolhido | Equipe avaliadora e, se compartilhado, mantenedores | Sucesso nas tarefas, erros e pedidos de ajuda |
+| Identificar possíveis dificuldades no uso do fluxo escolhido | Equipe avaliadora e, se compartilhado, mantenedores | Checklist heurístico preenchido, descrição dos problemas, severidades e evidências das situações observadas |
+
+A [inspeção heurística da equipe](../fase2/operacionais/usabilidade.md) apoiará recomendações de interface, sem medir diretamente a aprendizagem ou o desempenho dos estudantes.
 
 ## 2. Requisitante e partes interessadas
 
-## 2.1 Perfis de usuários considerados
+### 2.1 Perfis de usuários considerados
 
 | Perfil | Necessidade relevante para esta avaliação |
 | :--- | :--- |
@@ -35,7 +37,7 @@ A avaliação não certificará o software nem substituirá a conferência das r
 
 Esses perfis são cenários de avaliação, não uma afirmação de que todos foram entrevistados ou participaram dos testes.
 
-## 2.2 StakeHolders
+### 2.2 Partes interessadas
 
 | Stakeholder | Papel | Necessidades/expectativas | Influência na avaliação |
 | :--- | :--- | :--- | :--- |
@@ -54,3 +56,4 @@ Esses perfis são cenários de avaliação, não uma afirmação de que todos fo
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Preenchimento com os dados do No Fluxo UnB | 15/10 | [559e7a9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/559e7a94f159c2caeb4dc9d5996ba9392d0862ac) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização das evidências de usabilidade | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |

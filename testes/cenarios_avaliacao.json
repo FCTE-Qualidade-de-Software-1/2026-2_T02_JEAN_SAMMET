@@ -1,0 +1,210 @@
+{
+  "versao_schema": "4.0",
+  "descricao": "Cenários de avaliação com o histórico oficial autorizado H0; variações mantêm a mesma entrada acadêmica.",
+  "entrada": {
+    "id": "H0",
+    "origem": "Histórico oficial SIGAA/UnB fornecido e autorizado pelo usuário.",
+    "arquivo_dados_sanitizados": "testes/referencias/h0_sanitizado.json",
+    "arquivo_registros_csv": "testes/evidencias/funcionais/h0_registros.csv",
+    "arquivo_original": "Mantido fora do repositório.",
+    "matriz_referencia": "6360/1 — 2017.1",
+    "registros_academicos": 44,
+    "componentes_distintos": 42,
+    "status": {
+      "aprovado": 37,
+      "matriculado": 7,
+      "trancado": 0
+    },
+    "equivalencias_obrigatorias_concluidas": 6,
+    "equivalencias_obrigatorias_em_andamento": 2,
+    "disciplinas_obrigatorias_pendentes": 15,
+    "estado": "Entrada conferida; coleta do produto pendente."
+  },
+  "referencia_curricular": "testes/referencias/estrutura_6360_1.json",
+  "dados_h0": "testes/referencias/h0_sanitizado.json",
+  "cenarios": [
+    {
+      "id": "C0",
+      "nome": "Base",
+      "entrada": "H0",
+      "limite_creditos": 24,
+      "horas_exibidas_a_conferir": 360,
+      "demais_preferencias": "Registrar antes da execução trabalho/estágio, objetivo e semestre selecionados. Não assumir que 24 créditos seja o valor padrão até conferir a interface."
+    },
+    {
+      "id": "C1",
+      "nome": "Carga menor",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": {
+        "limite_creditos": 20,
+        "horas_esperadas": 300
+      },
+      "pre_condicao": "Confirmar que o controle aceita 20 créditos; restaurar C0 depois."
+    },
+    {
+      "id": "C2",
+      "nome": "Carga maior",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": {
+        "limite_creditos": 32,
+        "horas_esperadas": 480
+      },
+      "pre_condicao": "Confirmar que o controle aceita 32 créditos e não ultrapassa o máximo curricular de 480h por período; restaurar C0 depois."
+    },
+    {
+      "id": "C3",
+      "nome": "Trabalho/estágio",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Alternar a resposta de trabalho/estágio",
+      "limite": "Registrar seleção e efeito observado. Julgar efeito algorítmico apenas se houver requisito ou texto de produto que descreva o comportamento esperado."
+    },
+    {
+      "id": "C4",
+      "nome": "Objetivo",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Alternar velocidade/equilíbrio",
+      "limite": "Registrar seleção e efeito observado. Não presumir que o conjunto de disciplinas deve mudar sem especificação."
+    },
+    {
+      "id": "C5",
+      "nome": "Quantidade de matérias",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Comparar as opções de 4, 6 e 8 matérias, mantendo trabalho e objetivo fixos",
+      "horas_exibidas_a_conferir": {
+        "4": 240,
+        "6": 360,
+        "8": 480
+      },
+      "limite": "Conferir a associação exibida pelo onboarding; o comportamento algorítmico requer saída observável.",
+      "variantes": [
+        {
+          "id": "C5-4",
+          "quantidade_materias": 4,
+          "carga_alvo_horas": 240
+        },
+        {
+          "id": "C5-6",
+          "quantidade_materias": 6,
+          "carga_alvo_horas": 360
+        },
+        {
+          "id": "C5-8",
+          "quantidade_materias": 8,
+          "carga_alvo_horas": 480
+        }
+      ]
+    }
+  ],
+  "casos": [
+    {
+      "id": "CT-01",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-01",
+      "objeto": "Verificar no plano se FGA0211, quando alocada, respeita o pré-requisito FGA0170.",
+      "resultado_esperado": "Nenhuma dependente antecede o cumprimento válido do pré-requisito.",
+      "sem_saida": "Sem observação do produto para H0, não atribuir aprovação, falha ou valor zero.",
+      "entrada_h0": "FGA0170 está MATRICULADO em 2026.2; FGA0211 está pendente.",
+      "estado_execucao": "Pendente"
+    },
+    {
+      "id": "CT-02",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-02",
+      "objeto": "Verificar as relações dirigidas de co-requisito, com satisfação simultânea ou prévia conforme a regra aplicável.",
+      "resultado_esperado": "Se ambas forem selecionadas e estiverem pendentes, devem respeitar a regra de co-requisito; as duas relações dirigidas devem ser conferidas.",
+      "sem_saida": "Sem observação do produto para H0, não atribuir aprovação, falha ou valor zero.",
+      "estado_execucao": "Pendente"
+    },
+    {
+      "id": "CT-03",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-03",
+      "objeto": "Cruzar as 15 disciplinas obrigatórias pendentes com o plano completo.",
+      "resultado_esperado": "As 15 pendências são contempladas ou possuem exclusão previamente justificada por regra.",
+      "sem_saida": "Sem observação do produto para H0, não atribuir aprovação, falha ou valor zero.",
+      "entrada_h0": "15 obrigatórias pendentes, 1.110h.",
+      "denominador_candidato": 15,
+      "estado_execucao": "Pendente"
+    },
+    {
+      "id": "CT-04",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-04",
+      "objeto": "Comparar a interpretação do sistema para cada registro do histórico.",
+      "resultado_esperado": "MATRICULADO não equivale a aprovação acadêmica concluída; TRANCADO não equivale a aprovação; APROVADO deve ser reconhecido como concluído. Projeção futura só pode ser julgada conforme política documentada.",
+      "sem_saida": "Sem observação do produto para H0, não atribuir aprovação, falha ou valor zero.",
+      "entrada_h0": "44 registros: 37 aprovados e 7 matriculados; registro_id inclui o período.",
+      "estado_execucao": "Pendente"
+    },
+    {
+      "id": "CT-05",
+      "cenarios": [
+        "C0"
+      ],
+      "metrica": "MET-FUN-05",
+      "objeto": "Conferir seis equivalências concluídas e duas em andamento.",
+      "resultado_esperado": "Seis relações satisfazem suas obrigações; duas matriculadas permanecem não concluídas.",
+      "sem_saida": "Sem observação do produto para H0, não atribuir aprovação, falha ou valor zero.",
+      "entrada_h0": "6 equivalências concluídas e 2 em andamento.",
+      "estado_execucao": "Pendente"
+    },
+    {
+      "id": "CT-06",
+      "cenarios": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5-4",
+        "C5-6",
+        "C5-8"
+      ],
+      "metrica": "MET-FUN-06",
+      "objeto": "Comparar representação das opções e efeitos documentados.",
+      "resultado_esperado": "Para C5, confirmar a associação apresentada para 4/6/8 matérias (240/360/480h). Para trabalho/estágio e objetivo, julgar efeito apenas com expectativa previamente documentada.",
+      "sem_saida": "Sem observação do produto para H0, não atribuir aprovação, falha ou valor zero.",
+      "estado_execucao": "Pendente"
+    },
+    {
+      "id": "CT-07",
+      "cenarios": [
+        "C0",
+        "C1",
+        "C2",
+        "C5-4",
+        "C5-6",
+        "C5-8"
+      ],
+      "metrica": "MET-FUN-07",
+      "objeto": "Verificar carga efetiva por semestre, separando período atual e períodos futuros.",
+      "resultado_esperado": "Respeitar o limite obrigatório documentado e o máximo curricular de 480h; carga apenas sugerida não gera julgamento de limite rígido.",
+      "sem_saida": "Sem observação do produto para H0, não atribuir aprovação, falha ou valor zero.",
+      "estado_execucao": "Pendente"
+    }
+  ],
+  "regras_execucao": [
+    "Usar somente os registros de H0; não alterar aprovações, reprovações, matrícula, trancamento ou equivalências.",
+    "Não tratar MATRICULADO ou TRANCADO como aprovação concluída.",
+    "Restaurar C0 após cada variação e alterar somente uma opção por vez.",
+    "Registrar versão do produto, data/hora, navegador, viewport, resultado esperado, resultado observado e evidência sanitizada.",
+    "Não registrar nome, matrícula, CPF, nascimento, índices acadêmicos, credenciais ou tokens.",
+    "A ausência de acesso ao produto não é evidência de defeito do produto; classificar execução como bloqueada/inconclusiva.",
+    "Os cenários representam variações da mesma entrada, não estudantes ou históricos independentes.",
+    "Identificar registros por código e período; não descartar ocorrências repetidas."
+  ],
+  "resultados_execucao": "testes/evidencias/funcionais/verificacoes_funcionais.csv"
+}

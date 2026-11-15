@@ -101,14 +101,14 @@ flowchart TB
 | Característica | O que é possível observar | O que não será possível concluir com este recorte |
 |---|---|---|
 | **Adequação Funcional** | Comparar planos gerados para cenários controlados com uma matriz curricular e resultados esperados definidos previamente. | Que todos os planos, cursos, históricos ou combinações possíveis estão corretos. |
-| **Usabilidade** | Observar se participantes conseguem completar tarefas no fluxo e interpretar as informações da tela de planejamento. | Que os resultados representam todos os estudantes da UnB ou todos os dispositivos. |
-| **Segurança** | Fazer inspeção não invasiva do fluxo e dos controles observáveis, usando dados sintéticos e código público quando pertinente. | Que o sistema está livre de vulnerabilidades ou que passou por uma auditoria de segurança. |
+| **Usabilidade** | Inspecionar possíveis dificuldades de operação e compreensão nas tarefas de referência, aplicando o checklist heurístico da equipe. | Que a inspeção mede diretamente o desempenho ou a aprendizagem de estudantes, ou que os resultados representam todos os usuários e dispositivos. |
+| **Segurança** | Fazer inspeção não invasiva do fluxo e dos controles observáveis, usando histórico autorizado, evidências sanitizadas e código público quando disponível. | Que o sistema está livre de vulnerabilidades ou que passou por uma auditoria de segurança. |
 
 ## 7. Restrições de execução
 
 - A equipe usará dados sintéticos ou dados de teste autorizados, sem expor históricos de terceiros.
 - Não serão realizados testes de invasão, tentativas de contornar autenticação ou testes de carga na aplicação em produção.
-- A versão do site e o código público podem divergir; quando houver inspeção do código, a equipe registrará o commit e a data analisados.
+- O código público pode diferir do site. Serão registrados URL, data/hora, ambiente e commit examinado. Se a versão implantada não puder ser confirmada, essa limitação será declarada.
 
 ## 8. Limitações conhecidas
 
@@ -126,3 +126,4 @@ flowchart TB
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Preenchimento com os dados do No Fluxo UnB | 15/10 | [559e7a9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/559e7a94f159c2caeb4dc9d5996ba9392d0862ac) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da usabilidade e do registro da versão | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |

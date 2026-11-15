@@ -1,0 +1,12 @@
+ID,Heuristica,O que avalia,Conforme (1=Sim, 0=Nao),Severidade (1-4),Anotacoes
+1,Visibilidade do status do sistema,"O sistema deve manter os usuários informados sobre o que está acontecendo por meio de feedback apropriado e em tempo razoável.",1,,"Feedback de recálculo perceptível durante a interação."
+2,Compatibilidade do sistema com o mundo real,"A linguagem deve ser familiar ao usuário, com palavras e conceitos do dia a dia, seguindo convenções do mundo real.",1,,"Terminologia compreensível para o contexto discente."
+3,Controle e liberdade do usuário,"Fornecer ""saídas de emergência"" claras (desfazer/refazer) para usuários que escolhem funções por engano.",0,3,"Falta de mecanismo direto para desfazer ou resetar alterações de créditos sem recarregar a página."
+4,Consistência e padrões,"Usuários não devem ter que adivinhar se palavras, situações ou ações diferentes significam a mesma coisa.",1,,"Padrão de cores e nós coerente com o restante da ferramenta."
+5,Prevenção de erros,"Um design cuidadoso que previne a ocorrência de problemas antes mesmo que eles aconteçam.",1,,"Controle de créditos limita entradas arbitrárias."
+6,Reconhecimento em vez de memorização,"Minimizar a carga de memória do usuário tornando objetos, ações e opções visíveis ou facilmente recuperáveis.",1,,"Informações essenciais de formatura visíveis sem sobrecarga de cálculo mental."
+7,Flexibilidade e eficiência de uso,"Aceleradores e atalhos invisíveis para novatos, mas que aceleram a interação para usuários experientes.",1,,"Navegação e visualização do grafo atendem de forma satisfatória."
+8,Estética e design minimalista,"As interfaces não devem conter informações irrelevantes ou raramente necessárias.",1,,"Layout limpo e organizado no percurso das tarefas principais."
+9,Ajuda para reconhecer, diagnosticar e recuperar de erros,"Mensagens de erro devem ser expressas em linguagem simples, indicando o problema e sugerindo uma solução.",0,2,"Mensagens insuficientes ou genéricas em casos de conflitos ou incompatibilidades curriculares."
+10,Ajuda e documentação,"Mesmo que o ideal seja usar sem documentação, pode ser necessário fornecer ajuda fácil de pesquisar e focada nas tarefas.",0,1,"Carência de tooltips ou pequenas legendas contextuais explicando regras do motor de planejamento."
+

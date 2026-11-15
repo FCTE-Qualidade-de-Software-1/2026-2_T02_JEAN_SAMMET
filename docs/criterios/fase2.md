@@ -5,8 +5,8 @@
 | F2-C1 | Definição de objetivos de medição | Objetivos perfeitamente definidos no template estruturado do GQM. | **Concluído** |
 | F2-C2 | Definição de questões | Questões claras que cobrem os atributos do foco de qualidade, sem serem apenas as métricas em forma de pergunta. | **Concluído** |
 | F2-C3 | Definição de hipóteses | Hipóteses claras para todas as questões. | **Concluído** |
-| F2-C4 | Seleção de métricas | Métricas que respondem diretamente a todas as questões e são Concluídoples, objetivas e válidas. | **Concluído** |
-| F2-C5 | Níveis de pontuação e critérios de julgamento | Níveis claros para todas as métricas e critérios de julgamento explícitos e detalhados sobre como interpretar os resultados. | **Concluído** |
+| F2-C4 | Seleção de métricas | Métricas que respondem diretamente a todas as questões e são simples, objetivas e válidas. | **Concluído** |
+| F2-C5 | Níveis de pontuação e critérios de julgamento | Níveis claros para todas as métricas e critérios de julgamento explícitos e detalhados sobre como interpretar os resultados. | **Documentado** — [Regras operacionais](../fases/fase2/operacionais/visaoGeral.md#22-regra-de-julgamento-conjunto) e [funcionais](../fases/fase2/funcionais/GQM.md#31-regras-de-referencia-e-julgamento); casos sem referência ficam pendentes. |
 | F2-C6 | Gráfico GQM | Diagrama completo e preciso da hierarquia de objetivos, questões e métricas, contemplando todos os objetivos. | **Concluído** |
 | F2-C7 | Organização lógica do relatório | Sumário funcionando, hierarquia consistente, narrativa clara e referências cruzadas completas. | **Concluído** |
 | F2-C8 | Português, estilo e padronização | Redação impecável, referências conferidas, e figuras e tabelas com legenda, fonte e chamada no texto. | **Concluído** |
@@ -24,3 +24,4 @@
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da página de critérios | 16/10 | [353f46e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/353f46ecd1a408d3474ea0dfa157aba62daabd70) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao da tabela | 16/10 | [516cc9f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/516cc9fb50634d1729db19c96a2c9883c676f5bd) |
 | [Gabriel Mota](https://github.com/Gabro-MO) | Atualizacao da tabela de CAs da fase 2| 18/10 | [d3ca47c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d3ca47cee00a782a6347cb5c63405300a4525bbb) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização dos critérios e links de julgamento | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |

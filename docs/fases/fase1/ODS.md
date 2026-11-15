@@ -18,11 +18,13 @@ A **Meta 4.4**, voltada ao aumento de competências técnicas e profissionais re
 
 Os itens abaixo são **indicadores internos da avaliação do produto**, não indicadores oficiais da ONU:
 
-- **Adequação funcional:** proporção de casos de teste em que as informações e funções observadas correspondem ao resultado esperado.
-- **Usabilidade:** proporção de tarefas concluídas com sucesso pelos participantes e quantidade de erros ou pedidos de ajuda observados.
-- **Segurança:** quantidade de verificações não invasivas executadas, com resultado e evidência documentados. O número de verificações aprovadas não prova ausência de vulnerabilidades.
+| Característica | Indicadores internos | Definições na Fase 2 |
+|---|---|---|
+| **Adequação Funcional** | Violações de regras curriculares, cobertura de obrigatórias, tratamento do histórico, equivalências e opções do onboarding (`MET-FUN-01` a `07`). | [GQM funcional](../fase2/funcionais/GQM.md) |
+| **Usabilidade** | Conformidade do checklist heurístico (TCH) e severidade dos problemas encontrados pela equipe (ISVH). | [Usabilidade](../fase2/operacionais/usabilidade.md) |
+| **Segurança** | Vulnerabilidades conhecidas nas dependências examinadas (IRP), chaves com dados pessoais em claro (GED-C) e bloqueio de chamadas de teste ao serviço (TBR). | [Segurança](../fase2/operacionais/seguranca.md) |
 
-Esses indicadores descrevem a qualidade do software avaliado; não medem diretamente o progresso oficial do ODS 4.
+Esses indicadores avaliam aspectos do produto, não o progresso oficial do ODS 4. Seus resultados se restringem à cobertura e às condições dos testes.
 
 ---
 
@@ -33,3 +35,4 @@ Esses indicadores descrevem a qualidade do software avaliado; não medem diretam
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Adicionando 2 ODSs | 16/10 | [755c71b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/755c71b53dd286fc04ae51b4d6c55bfdbc8231b0) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento dos indicadores ao GQM | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |

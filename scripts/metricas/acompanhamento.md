@@ -53,6 +53,18 @@ Considerando seis integrantes, o esforço médio foi de 3,5 horas por membro na 
 
 Para fins exclusivamente didáticos, foi adotado o valor de R$ 50,00 por hora profissional. Com esse parâmetro, o custo financeiro equivalente estimado foi de R$ 1.050,00, enquanto o custo equivalente ao esforço realizado foi de R$ 1.000,00. Esses valores não representam necessariamente despesas financeiras efetivamente incorridas pelo grupo.
 
+## Esforço adicional — Fase 3 (em andamento)
+
+A estimativa inicial e o realizado da Entrega 1 acima permanecem preservados. Em 15/11, Gustavo informou aproximadamente **7,0h adicionais** dedicadas à análise, revisão e preparação da Fase 3. O apontamento é retrospectivo e parcial; não representa o total da equipe.
+
+| Registro | Integrante | Atividade / Issue | Horas adicionais realizadas | Custo didático equivalente | Fonte |
+|---|---|---|---|---|---|
+| F3-GUGOFO-20261115-01 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Preparação da Fase 3 / [#7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/7) | ≈ 7,0h | ≈ R$ 350,00 | Declaração do integrante em 15/11 |
+
+`Custo adicional = 7,0h × R$ 50,00/h = R$ 350,00`. É uma referência didática, sem despesa financeira efetiva. Os dados estruturados ficam em `scripts/metricas/registros_esforco.json` e esta seção é mantida manualmente no arquivo-fonte do painel; não há cálculo automático das horas pelo GitHub.
+
+As **23h** do cronograma da avaliação são uma estimativa proposta para atividades das Fases 3 e 4. Não são horas já realizadas, não substituem a linha de base inicial e não serão somadas às 7h como trabalho executado. A variação percentual da Fase 3 será julgada quando houver tarefas concluídas, estimativas comparáveis e apontamentos completos. Atualizar este registro cumulativo sem somá-lo novamente a cada revisão.
+
 ## Registro Histórico da Entrega 1 — Fase 1: Definição e Caracterização
 
 O [Milestone 1 (Entrega 1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/milestone/1) corresponde à Fase 1 — Definição e Caracterização, com prazo limite em **18/10/2026**. A entrega foi encerrada dentro do período planejado. O estado atual das Issues, os responsáveis cadastrados no GitHub, as datas, os indicadores e o gráfico de Burndown são apresentados na seção automática do Milestone 1.
@@ -103,3 +115,4 @@ Os resultados observados deverão ser interpretados considerando o planejamento,
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Organização da seção Gestão do Projeto | 16/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização do progresso das Issues | 18/10/2026 | [d2b77cf](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d2b77cf6bb91436494b004f225c771eed33ba46f) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização da conclusão das Issues | 18/10/2026 | [0e35ba5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e35ba589c078941f61ef6b425882fe07b0e9dff) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro separado das horas adicionais da Fase 3 | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |

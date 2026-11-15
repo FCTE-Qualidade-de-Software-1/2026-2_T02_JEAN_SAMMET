@@ -62,12 +62,6 @@ O custo é uma estimativa didática e não representa uma despesa financeira efe
 - Os limites de 10% e 20% são critérios internos de acompanhamento definidos pela equipe. Eles não representam limites universais do PSM.
 - A faixa de equilíbrio individual permite observar diferenças de esforço entre os integrantes. Sua interpretação deve considerar a distribuição de responsabilidades e a complexidade das tarefas.
 
----
-
-## 4. Acompanhamento
-
-Os resultados de esforço em horas e custo financeiro equivalente do Milestone 1 podem ser consultados na página [Acompanhamento do Projeto](painel.md).
-
 ### Histórico de contribuições
 
 | Nome do membro | Contribuição | Data | Commit |

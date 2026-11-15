@@ -1,84 +1,71 @@
 # Métricas de Segurança
 
-Especificação de perguntas, hipóteses e métricas de **Segurança** para a funcionalidade _Planejar formatura_ do No Fluxo UnB, focando em privacidade de dados acadêmicos, controle de acesso e dependências de software.
+Avaliação do armazenamento de dados acadêmicos, da identificação e do acesso aos serviços de *Planejar formatura*. A análise de dependências complementa as verificações do [modelo da Fase 1](../../fase1/modeloDeQualidade.md).
 
----
+## 1. Questão e hipótese
 
-## 1. Subcaracterísticas Avaliadas (ISO/IEC 25010)
+- **Q-OP-02:** O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado?
+- **H-OP-02:** Dependências vulneráveis, retenção de dados em claro ou falhas de controle de acesso podem comprometer os dados e serviços examinados.
 
-1. **Confidencialidade (_Confidentiality_):** proteção de dados acadêmicos e identificadores dos alunos (matrícula, notas, histórico), prevenindo exposição indevida no navegador (*browser storage*).
-2. **Autenticidade e Controle de Acesso (_Access Control_):** restrição de endpoints de processamento (`POST /planejamento/gerar-plano`) exclusivamente a usuários autenticados, rejeitando chamadas anônimas.
-3. **Integridade da Cadeia de Dependências (_Supply Chain Integrity_):** ausência de vulnerabilidades conhecidas (CVEs) em pacotes de terceiros no frontend e backend.
+Confidencialidade e autenticidade são as subcaracterísticas em foco. A inspeção de dependências é evidência complementar; não constitui uma subcaracterística adicional.
 
----
+## 2. Fichas das métricas
 
-## 2. Questão GQM e Hipótese Associada
-
-- **Questão `Q-OP-02`:** A funcionalidade resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?
-- **Hipótese `H-OP-02`:** O processamento no navegador com retenção em `localStorage` e dependências desatualizadas no npm podem expor dados sensíveis e vulnerabilidades de severidade moderada a alta.
-
----
-
-## 3. Fichas das Métricas de Segurança
-
-### `MET-OP-02` — Densidade de Vulnerabilidades em Dependências (DVCD)
+### `MET-OP-02` — Índice de Risco Ponderado de Dependências (IRP)
 
 | Campo | Especificação |
-| :--- | :--- |
-| **Identificador** | `MET-OP-02` |
-| **Nome** | Densidade de Vulnerabilidades Conhecidas em Dependências (DVCD) |
-| **Característica** | Segurança — Integridade da Cadeia de Dependências |
-| **Questão GQM** | `Q-OP-02`: O sistema resguarda o acesso contra vulnerabilidades conhecidas? |
-| **Hipótese Relacionada** | **`H-OP-02`**: A presença de dependências desatualizadas no npm expõe o sistema a vulnerabilidades conhecidas. |
-| **Definição** | Quantidade e risco ponderado de CVEs conhecidas nas dependências diretas e transitivas (frontend e backend), via Software Composition Analysis (SCA). |
-| **Cálculo** | Índice de Risco Ponderado ($IRP$):<br>$$IRP = (10 \times N_{\text{crítica}}) + (5 \times N_{\text{alta}}) + (2 \times N_{\text{moderada}}) + (1 \times N_{\text{baixa}})$$<br>Onde $N_s$ é a quantidade de vulnerabilidades na severidade $s$. |
-| **Fonte** | Relatórios gerados por `npm audit --json` nos arquivos `package.json` e `package-lock.json` no commit `87b5475`. |
-| **Coleta** | 1. Executar `npm audit --json` separadamente em `frontend/` e `backend/`.<br>2. Extrair identificadores GHSA/CVE, pacotes afetados e severidade.<br>3. Computar o $IRP$ por módulo e consolidado. |
-| **Níveis de Julgamento** | - **Excelente:** $N_{\text{crítica}} = 0$, $N_{\text{alta}} = 0$ e $IRP \le 5$ (refuta `H-OP-02`).<br>- **Aceitável:** $N_{\text{crítica}} = 0$, $N_{\text{alta}} \le 2$ (apenas devDependencies) e $IRP \le 20$.<br>- **Crítico:** $N_{\text{crítica}} \ge 1$ ou $N_{\text{alta}} > 2$ em produção (**confirma `H-OP-02`**; risco de RCE, Prototype Pollution, etc.). |
+|---|---|
+| **Característica** | Segurança — evidência complementar de riscos nos componentes. |
+| **Questão e hipótese** | `Q-OP-02` e `H-OP-02`, componente dependências. |
+| **Definição e unidade** | Soma ponderada dos achados de vulnerabilidade por severidade; unidade: pontos. |
+| **Cálculo** | `IRP = 10 × Ncritica + 5 × Nalta + 2 × Nmoderada + Nbaixa`. Cada achado é identificado por componente, versão e aviso GHSA/CVE ou identificador da ferramenta, sem duplicatas dentro da mesma coleta. Não somar totais de ferramentas com coberturas sobrepostas. |
+| **Fontes e cobertura** | Retire.js nos scripts públicos do cliente. Quando disponíveis, `npm audit --json` nos manifestos de frontend e backend do commit `87b5475`, com resultados separados. Registrar componentes e versões reconhecidos e a base de vulnerabilidades consultada. |
+| **Coleta** | Preservar relatório bruto e inventário. Separar achados de produção e desenvolvimento quando essa distinção for verificável. Contagens agregadas de pacotes do npm não substituem a relação dos achados. |
+| **Excelente** | Nenhuma crítica ou alta e `IRP ≤ 5`. |
+| **Aceitável** | Fora da faixa Excelente: nenhuma crítica, até duas altas exclusivamente de desenvolvimento e `IRP ≤ 20`. |
+| **Crítico** | Demais resultados válidos, incluindo crítica, alta em produção, mais de duas altas ou `IRP > 20`. |
+| **Inconclusivo** | Relatório ausente, erro de ferramenta, cobertura não demonstrada ou dados insuficientes para aplicar as faixas. Nunca assumir zero por ausência de arquivo. |
 
----
+As faixas e os pesos são critérios da equipe. Aplicar as faixas na ordem apresentada. Componentes não examinados, inclusive o backend em uma coleta apenas do cliente, permanecem sem avaliação. Achados de alta severidade sem classificação verificável de produção/desenvolvimento não permitem declarar a faixa Aceitável.
 
 ### `MET-OP-02b` — Grau de Exposição de Dados no Cliente (GED-C)
 
 | Campo | Especificação |
-| :--- | :--- |
-| **Identificador** | `MET-OP-02b` |
-| **Nome** | Grau de Exposição de Dados Pessoais no Cliente (GED-C) |
-| **Característica** | Segurança — Confidencialidade |
-| **Questão GQM** | `Q-OP-02`: O sistema resguarda a confidencialidade dos dados acadêmicos? |
-| **Hipótese Relacionada** | **`H-OP-02`**: A retenção não volátil de dados de histórico em `localStorage` expõe dados acadêmicos a vazamento local. |
-| **Definição** | Quantidade de dados pessoais identificáveis (matrícula, IRA, notas, reprovações) armazenados em texto claro em mecanismos de persistência do navegador (`localStorage`, `sessionStorage` ou cookies sem flag `HttpOnly`). |
-| **Cálculo** | $$GED\text{-}C = \sum_{k \in S_{\text{storage}}} \mathbb{I}(\text{contém\_dado\_sensível\_em\_claro}(k))$$<br>Onde $\mathbb{I}$ assume 1 se a chave persistida contiver dado sensível desprotegido e 0 caso contrário. |
-| **Fonte** | Painel DevTools (*Application > Storage*) após fluxo de upload de histórico e geração do plano. |
-| **Coleta** | 1. Autenticar em aba anônima e enviar histórico sintético.<br>2. Gerar o planejamento de formatura.<br>3. Inspecionar `Local Storage`, `Session Storage` e `Cookies`.<br>4. Contabilizar chaves com dados acadêmicos brutos em texto claro. |
-| **Níveis de Julgamento** | - **Conforme (Desejável):** $GED\text{-}C = 0$ (refuta `H-OP-02`; dados acadêmicos não persistem em texto claro).<br>- **Não Conforme (Crítico):** $GED\text{-}C \ge 1$ (**confirma `H-OP-02`**; histórico ou matrícula em texto claro no `localStorage`, violando a LGPD). |
+|---|---|
+| **Característica** | Segurança — confidencialidade. |
+| **Questão e hipótese** | `Q-OP-02` e `H-OP-02`, componente armazenamento. |
+| **Definição e unidade** | Número de chaves com identificadores ou dados acadêmicos em texto claro nos mecanismos inspecionados; unidade: chaves. |
+| **Cálculo** | `GED-C = quantidade de chaves com matrícula, nome, notas, IRA ou histórico em claro`. Cada chave conta uma vez, identificada pelo mecanismo e origem. |
+| **Fonte** | DevTools: `localStorage`, `sessionStorage` e cookies após carregar o histórico autorizado e gerar o plano. |
+| **Coleta** | Registrar estado do fluxo, origem, chaves, tipo de conteúdo e evidências sanitizadas, sem valores pessoais. Inspecionar cookies no painel Application; registrar `HttpOnly` e `Secure` separadamente. Essas flags não tornam o conteúdo cifrado. |
+| **Conforme** | `GED-C = 0`, com inspeção completa dos mecanismos previstos. |
+| **Não conforme** | `GED-C ≥ 1`, com conteúdo e estado do fluxo comprovados. |
+| **Inconclusivo** | Fluxo não concluído, mecanismos não inspecionados ou evidência insuficiente. |
 
----
+O resultado descreve o armazenamento observado; não comprova confidencialidade integral nem conformidade legal.
 
-### `MET-OP-02c` — Taxa de Bloqueio em Rotas Não Autenticadas (TBR)
+### `MET-OP-02c` — Taxa de Bloqueio de Requisições Não Autorizadas (TBR)
 
 | Campo | Especificação |
-| :--- | :--- |
-| **Identificador** | `MET-OP-02c` |
-| **Nome** | Taxa de Bloqueio de Requisições Não Autenticadas (TBR) |
-| **Característica** | Segurança — Autenticidade e Controle de Acesso |
-| **Questão GQM** | `Q-OP-02`: As chamadas aos serviços de planejamento restringem o acesso não autorizado? |
-| **Hipótese Relacionada** | **`H-OP-02`**: Falhas de autenticação em endpoints protegidos permitem chamadas anônimas que consomem serviços indevidamente. |
-| **Definição** | Percentual de requisições de teste sem credencial válida enviadas ao endpoint `POST /planejamento/gerar-plano` que são bloqueadas com HTTP 401 ou 403. |
-| **Cálculo** | $$TBR = \left( \frac{N_{\text{bloqueios\_corretos}}}{N_{\text{requisicoes\_teste\_invalidas}}} \right) \times 100$$ |
-| **Fonte** | Respostas HTTP obtidas em testes não destrutivos via `curl` ou Postman ($N \ge 10$ variações de headers). |
-| **Coleta** | 1. Enviar requisições variando: (a) sem header `Authorization`, (b) token malformado, (c) token expirado e (d) assinatura inválida.<br>2. Registrar códigos de status e corpos de resposta. |
-| **Níveis de Julgamento** | - **Conforme (Mandatório):** $TBR = 100\%$ (todas as chamadas sem autorização são rejeitadas com 401/403; refuta vulnerabilidade de rota).<br>- **Crítico (Falha Grave):** $TBR < 100\%$ (rota processa payload ou retorna 200/500 sem autenticação; **confirma `H-OP-02`** e violação OWASP A01). |
+|---|---|
+| **Característica** | Segurança — autenticidade e controle de acesso. |
+| **Questão e hipótese** | `Q-OP-02` e `H-OP-02`, componente acesso. |
+| **Definição e unidade** | Percentual de chamadas negativas válidas bloqueadas com HTTP 401/403; unidade: percentual. |
+| **Pré-condições** | Confirmar requisito de proteção, URL, método e payload. Verificar uma chamada positiva autorizada ao mesmo serviço, em ambiente autorizado. A rota `POST /planejamento/gerar-plano` é referência a confirmar, não prova da URL implantada. |
+| **Cálculo** | `TBR = (Nbloqueadas / Nvalidas) × 100`. `Nvalidas` inclui chamadas ao serviço validado que permitam observar bloqueio ou execução indevida. Informar também total planejado, válido e inconclusivo. Se `Nvalidas = 0`, não calcular a taxa. |
+| **Coleta** | Planejar ao menos dez casos negativos. Registrar data, alvo, status, cabeçalhos relevantes, resposta e comportamento observado. Para testar expiração ou papel insuficiente, usar credenciais de teste que isolem essa condição. |
+| **Conforme** | `TBR = 100%`, com toda a bateria prevista concluída e válida. |
+| **Não conforme** | Pelo menos uma chamada válida executa ação ou acessa dado que exigia autorização, sem a permissão necessária. Um HTTP 200 isolado não comprova esse acesso. |
+| **Inconclusivo** | HTTP 404/405, erro de conexão, HTTP 500 sem evidência de acesso ou outro retorno que não permita avaliar o controle. `TBR = 100%` em apenas parte da bateria não autoriza aprovação global. |
+| **Não aplicável** | O requisito documentado permite acesso público ao serviço e não há operação protegida no recorte. Justificar. |
 
----
+## 3. Resposta à questão e julgamento da hipótese
 
-## 4. Alinhamento com OWASP Top 10 e LGPD
+Aplicar a [regra conjunta](visaoGeral.md#22-regra-de-julgamento-conjunto). Um resultado favorável de storage ou dependências não encerra a avaliação dos demais componentes. Ausência de achados significa apenas que a hipótese não foi corroborada naquele recorte.
 
-1. **OWASP Top 10 (2021):**
-   - **A01 — Broken Access Control:** validado por `MET-OP-02c` para impedir chamadas anônimas aos serviços de planejamento.
-   - **A06 — Vulnerable and Outdated Components:** coberto por `MET-OP-02` via auditoria de pacotes npm.
-2. **LGPD (Lei nº 13.709/2018):**
-   - **Segurança e Prevenção (Art. 6º, VII e VIII):** endereçado por `MET-OP-02b`, mitigando riscos de vazamento de dados acadêmicos em computadores compartilhados.
+## 4. Referências de segurança
+
+As verificações usam OWASP Top 10:2021 como referência: A01 para controle de acesso e A06 para componentes vulneráveis. Os cuidados com dados pessoais seguem os limites do [escopo](../../fase1/escopo.md). As definições e fontes estão nas [referências operacionais](referencias.md); os testes não constituem auditoria de conformidade legal.
 
 ---
 
@@ -88,4 +75,4 @@ Especificação de perguntas, hipóteses e métricas de **Segurança** para a fu
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da especificação de segurança, fichas MET-OP-02, MET-OP-02b e MET-OP-02c e alinhamento com OWASP/LGPD | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com ISO 25010, OWASP e LGPD | 24/10 | [corrente] |
-
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Correção das métricas, faixas e resultados inconclusivos de segurança | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |

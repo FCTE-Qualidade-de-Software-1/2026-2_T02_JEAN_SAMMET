@@ -1,23 +1,26 @@
 # Cronograma e riscos
 
-## 1. Sequência proposta
+## 1. Cronograma da entrega
 
-As horas abaixo são estimativas de planejamento, não esforço já realizado. As datas serão associadas ao prazo oficial confirmado da E2; há divergência anterior entre Milestone e burndown que precisa ser resolvida.
+O prazo da E2 é **22/11**, conforme alteração da professora informada por Gustavo. O burndown já utiliza essa data. O vencimento do Milestone no GitHub deve acompanhar o mesmo prazo.
 
-| Ordem | Atividade | Dependência | Responsável | Esforço estimado |
+As datas intermediárias abaixo são metas de execução propostas. As horas são estimativas; não representam esforço realizado.
+
+| Data-alvo | Atividade | Dependência | Responsável | Estimativa |
 |---|---|---|---|---|
-| 1 | Conferir fontes, entrada H0 e cenários no site | — | Gustavo, proposta a confirmar | 2h |
-| 2 | Concluir piloto com histórico autorizado e ajustar roteiro | 1 | Gustavo, proposta a confirmar | 2h |
-| 3 | Executar CT-01 a CT-07 nos casos liberados | 2 e fontes de cada CT | Frente funcional, nomes a definir | 4h |
-| 4 | Duas inspeções heurísticas e consenso | 2 | Dois avaliadores a definir; mediação proposta: Giovani | 4h |
-| 5 | SCA, storage e API válida | 2 e pré-condições por método | Giovani, conforme plano anterior; confirmar | 4h |
-| 6 | Consolidar dados e responder GQM | 3–5 | Equipe | 3h |
-| 7 | Executar e verificar melhoria; atualizar artigo | 6 | Equipe | 4h |
+| 15/11 | Conferir fontes, H0 e cenários | — | Gustavo | 2h |
+| 15/11 | Piloto de viabilidade concluído e roteiro ajustado | Conferência da entrada | Gustavo; Giovani nos instrumentos de segurança | 2h |
+| 16–18/11 | Executar CT-01 a CT-07 nos casos liberados | Piloto e fontes de cada CT | Gabriel | 4h |
+| 16–18/11 | Duas inspeções heurísticas e consenso | Piloto; dupla identificada | Gustavo e Gabriel | 4h |
+| 16–18/11 | SCA, storage e API | Pré-condições de cada método | Giovani | 4h |
+| 19/11 | Consolidar dados e responder GQM | Coletas válidas | Gustavo, com revisão dos responsáveis | 3h |
+| 20–21/11 | Executar/verificar melhoria e atualizar artigo | Análise dos resultados | Equipe; consolidação por Gustavo | 4h |
+| 22/11 | Revisar e entregar | Evidências, análise e artigo revisados | Equipe | Incluída nas atividades anteriores |
 | **Total** | | | | **23h** |
 
-Gustavo informou aproximadamente **7h já realizadas** na preparação da Fase 3. Esse apontamento parcial está no [PSM — Recursos e Custos](../../../gestaoProjeto/painel.md#esforco-adicional-fase-3-em-andamento), separado das estimativas e dos registros anteriores. Não significa que a preparação esteja concluída.
+Gustavo informou aproximadamente **7h já realizadas** na preparação da Fase 3. O apontamento parcial está no [PSM — Recursos e Custos](../../../gestaoProjeto/painel.md#esforco-adicional-fase-3-em-andamento), separado das estimativas e dos registros anteriores. Não somar essas 7h às 23h para obter uma previsão: as grandezas descrevem esforço realizado e planejado, respectivamente.
 
-As atividades 3–7 são da Fase 4. Registrar horas reais e decisões no PSM/CID durante a execução. Atribuições propostas não significam que os integrantes já aceitaram as tarefas.
+Gabriel nos testes funcionais, Giovani na segurança e Gustavo na revisão/consolidação foram confirmados pelo responsável pelo planejamento. A dupla de usabilidade será Gustavo e Gabriel, em inspeções independentes antes do consenso. As coletas, o julgamento e a melhoria pertencem à Fase 4; registrar horas reais e decisões no PSM/CID durante sua execução.
 
 ## 2. Riscos e contingências
 
@@ -39,3 +42,4 @@ As atividades 3–7 são da Fase 4. Registrar horas reais e decisões no PSM/CID
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração do cronograma em 5 etapas, cálculo de esforço, grafo de precedências e matriz de riscos operacionais | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Revisão da sequência, esforço e contingências sem pressupor execução | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento do prazo de 22/11, responsáveis e metas de execução | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |

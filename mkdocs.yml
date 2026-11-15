@@ -53,6 +53,7 @@ nav:
             - Sumário: fases/fase4/metricasFuncionais.md
             - Dados Brutos e Evidências: fases/fase4/funcionais/dadosBrutos.md
             - Análise e Julgamento: fases/fase4/funcionais/analiseResultados.md
+            - Evidências da Execução Anterior: fases/fase4/funcionais/execucaoAnterior.md
         - Métricas Operacionais:
             - Sumário: fases/fase4/metricasOperacionais.md
             - Dados Brutos e Evidências: fases/fase4/operacionais/dadosBrutos.md

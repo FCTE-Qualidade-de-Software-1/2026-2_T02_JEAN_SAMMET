@@ -1,0 +1,73 @@
+{
+  "storage": [
+    {
+      "mecanismo": "localStorage",
+      "itens": [
+        {
+          "chave": "nofluxo_user",
+          "tamanho": 18647,
+          "campos": [
+            "idUser",
+            "email",
+            "nomeCompleto",
+            "dadosFluxograma",
+            "optativasManuais",
+            "cargaHorariaIntegralizada",
+            "token",
+            "isAdmin",
+            "adminRole",
+            "adminScopes"
+          ]
+        },
+        {
+          "chave": "nofluxo:release-vista:55",
+          "tamanho": 9,
+          "campos": []
+        }
+      ]
+    },
+    {
+      "mecanismo": "sessionStorage",
+      "itens": [
+        {
+          "chave": "sveltekit:snapshot",
+          "tamanho": 2
+        },
+        {
+          "chave": "sveltekit:scroll",
+          "tamanho": 333
+        }
+      ]
+    }
+  ],
+  "cookies": [
+    {
+      "nome": "sb-auth-token.1",
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    },
+    {
+      "nome": "sb-auth-token-flows-code-verifier",
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    },
+    {
+      "nome": "sb-auth-token-flow-[id]-code-verifier",
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    },
+    {
+      "nome": "sb-auth-token.0",
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "tipo_coleta": "piloto",
+  "estado": "H0 carregado e plano gerado",
+  "origem": "https://no-fluxo.crianex.com",
+  "limite": "Somente viabilidade da inspeção. Não é coleta completa dos três estados nem cálculo de GED-C. Valores não exportados."
+}

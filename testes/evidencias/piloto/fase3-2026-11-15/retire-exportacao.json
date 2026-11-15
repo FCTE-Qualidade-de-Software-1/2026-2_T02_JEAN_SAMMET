@@ -1,0 +1,27 @@
+{
+  "version": "6.1.1",
+  "start": "2026-11-15T20:54:04.618Z",
+  "data": [
+    {
+      "file": "TYrZqVzP.js",
+      "results": [
+        {
+          "version": "5.4.624",
+          "component": "pdf.js",
+          "npmname": "pdfjs-dist",
+          "detection": "filecontent",
+          "licenses": [
+            "Apache-2.0"
+          ]
+        }
+      ]
+    }
+  ],
+  "messages": [],
+  "errors": [],
+  "time": 1.241,
+  "vulnerabilityRepositories": [
+    "https://raw.githubusercontent.com/RetireJS/retire.js/master/repository/jsrepository-v5.json"
+  ],
+  "nota_exportacao": "Somente os caminhos locais foram reduzidos ao nome do arquivo. Relatório original e scripts mantidos fora do Git; hash original em cobertura-sca.json."
+}

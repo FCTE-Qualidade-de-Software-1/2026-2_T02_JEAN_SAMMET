@@ -1,58 +1,61 @@
 # Piloto e verificação de prontidão
 
-## 1. Inspeção exploratória de 15/11
+## 1. Entrada e fluxo verificados em 15/11
 
-Foi acessada a conta de teste disponibilizada pelo usuário no Chrome, em `no-fluxo.crianex.com`. O fluxo observado foi **Meu Fluxograma → Planejar formatura → Preferências**, percorrendo as três etapas sem concluir a geração de um novo plano pelas preferências.
+O histórico oficial **H0** foi enviado manualmente por Gustavo à conta de teste. A tela mostrou **Processamento concluído**, matriz 6360/1 e semestre 2026.2. O resumo apresentou 39 obrigatórias, 24 concluídas, 15 pendentes e 2.130h/3.480h integralizadas, compatíveis com a referência sanitizada. Esses totais não substituem a conferência individual dos 44 registros e das 8 equivalências na Fase 4.
 
-| Item | Observação | Efeito no plano de avaliação |
+![Importação do histórico oficial concluída](img/importacao-h0.png)
+
+*Figura 1 — Resumo de H0 aceito. Fonte: No Fluxo, 15/11. Recorte sem identificação, índices acadêmicos ou nome do arquivo.*
+
+O fluxo **Visualizar fluxograma → Planejar formatura → Preferências** foi acessado; o assistente de três etapas e o plano gerado ficaram observáveis. Foram aceitas as configurações **24 créditos/360h**, **20/300h** e **32/480h**, com recálculo. A base foi restaurada para **24/360h**, sem indicador de recálculo pendente. Isso confirma a operação dos controles, sem julgar a correção de todas as alocações.
+
+![Carga menor verificada no piloto](img/creditos-20.jpg)
+
+*Figura 2 — Controle em 20 créditos/300h após o recálculo. Fonte: No Fluxo, 15/11.*
+
+![Carga maior verificada no piloto](img/creditos-32.jpg)
+
+*Figura 3 — Controle em 32 créditos/480h após o recálculo. Fonte: No Fluxo, 15/11.*
+
+![Carga-base restaurada](img/creditos-24.jpg)
+
+*Figura 4 — Controle restaurado para 24 créditos/360h. Fonte: No Fluxo, 15/11.*
+
+## 2. Condições para encerrar o preparo
+
+| Frente | Verificação do piloto | Encaminhamento para a Fase 4 |
 |---|---|---|
-| Matriz | 6360/1 — 2017.1 identificada na interface. | Usar a mesma referência curricular nos casos. |
-| Planejamento | Previsão, semestres restantes, matérias críticas e disciplinas em curso/futuras estão disponíveis. | Há informações observáveis para T1/T2 e para registrar a saída funcional. |
-| Créditos | Exibidos controle deslizante, campo numérico e alternância Créditos/Horas; 24 créditos aparecem como 360h. | Conferir entrada, valor convertido e recálculo em CT-06/CT-07 e T3. Foi observado recálculo, mas a restauração visual ainda não foi validada com captura consistente. |
-| Preferências | Trabalho/estágio; opções de 4/6/8 matérias, aproximadamente 240/360/480h; velocidade/equilíbrio; interesses opcionais. | Executar cenários pareados, alterando apenas um campo. Não inventar o efeito algorítmico de cada escolha. |
-| Optativas | Existe aviso sobre horas reservadas sem disciplinas escolhidas. | Registrar reservas separadas da cobertura de obrigatórias. |
-| Regras oficiais | Foram consultados os detalhes de FGA0211, MAT0026 e IFD0173 no SIGAA público. | Exemplos fundamentam o roteiro; não representam todas as relações da matriz. |
+| Entrada e planejamento | H0 aceito; plano e controles acessíveis; C1/C2 aceitos e base restaurada | Gabriel confere CT-01 a CT-07 por unidade e registra cobertura. |
+| Usabilidade | Tarefas e checklist disponíveis; dupla Gustavo/Gabriel definida | Alinhar severidade e realizar duas inspeções independentes antes do consenso. |
+| Ambiente | Viewport, zoom, hardware, sessão e estimativas de rede registrados | Cada avaliador registra seu ambiente; a versão do servidor permanece desconhecida. |
+| SCA | Retire.js 6.1.1 executado sobre 129 scripts estáticos carregados; pdf.js 5.4.624 reconhecido | Giovani registra cobertura e limitações. O reconhecimento de um componente não cobre todas as dependências nem o backend. |
+| Storage | Acesso a localStorage, sessionStorage e cookies confirmado; somente metadados exportados | Giovani coleta os três estados e classifica as chaves sem publicar valores pessoais. |
+| API | POST real do planejamento retornou 200; mesma chamada sem Authorization retornou 401 | Giovani repete o controle e executa somente casos cujas pré-condições estejam atendidas. A bateria completa ainda não foi coletada. |
 
-A sessão continha dados pessoais fornecidos para referência. Nenhum histórico pessoal, token, plano individual ou resultado acadêmico foi incluído nos arquivos do projeto. A única captura publicada dessa sessão foi recortada para mostrar somente o controle de créditos. Esta inspeção não produz notas TCH/ISVH, indicadores de segurança ou resultados funcionais definitivos.
+**Fase 3 concluída no escopo de preparação:** procedimentos, recursos, responsáveis e viabilidade básica verificados. A conclusão não significa aprovação das métricas nem cobertura integral dos casos. Condições ausentes permanecem Sem cobertura/Inconclusivo na Fase 4; não preencher resultados automaticamente.
 
-## 2. Verificações de prontidão
+O prazo é **22/11**. As **23h** continuam como estimativa de planejamento e as **7h** informadas por Gustavo como esforço realizado parcial no PSM. Não foram acrescentadas horas reais sem novo apontamento.
 
-| Verificação | Situação | Condição para prosseguir |
-|---|---|---|
-| PDF sintético | Rejeitado no teste relatado pelo usuário | Arquivos retirados; usar histórico oficial autorizado. Evidência na seção 4. |
-| CT-01 e registro do plano | Pendente | Conferir relações disponíveis no histórico autorizado. Aplicar C0 e declarar as relações efetivamente cobertas; C1–C5 alteram apenas configurações do mesmo histórico. |
-| Mudança e reversão de créditos | Parcial | Alteração e recálculo observados; a leitura de acessibilidade voltou a 24, mas a captura ficou defasada. Repetir a verificação visual antes da coleta formal. |
-| Storage | Pendente | Inspecionar os estados antes/depois de carregar o histórico autorizado e gerar o plano. |
-| SCA | Pendente | Confirmar scanner, relatório bruto e inventário dos componentes reconhecidos. |
-| API | Pendente | Identificar URL, método, requisito e chamada positiva válida antes da bateria negativa. |
+## 3. Evidências e limites
 
-Durante a exploração, a automação do Chrome perdeu acesso ao conteúdo da página após recarregar. Não foi possível atribuir a causa ao site; essa interrupção não conta como falha do produto. A rota da API permanece não confirmada. O retorno posteriormente fornecido pelo usuário exige um histórico gerado pelo SIGAA/UnB. O código de referência também não pôde ser recuperado publicamente nesta consulta.
+Os registros sanitizados do piloto ficam em `testes/evidencias/piloto/fase3-2026-11-15/`: ambiente, créditos, API, metadados de storage, inventário dos scripts, cobertura e relatório do scanner. PDF, tokens, payload acadêmico e valores de armazenamento não foram incluídos nos arquivos versionados.
 
-O plano está preparado para revisão, mas o piloto completo ainda não foi concluído. Os registros anteriores da Fase 4 precisam ser reavaliados pelos critérios corrigidos da Fase 2; não devem preencher automaticamente estas pendências.
+A chamada observada é `POST https://api-nofluxo.crianex.com/planejamento/gerar-plano`, com token direto em Authorization, sem prefixo Bearer. O corpo possui `curriculo_completo`, `codigos_concluidos`, `semestre_atual` e `limite_creditos`. A verificação sem Authorization preservou método, corpo e User-ID. Não se calculou TBR a partir desse único teste.
 
-## 3. Complemento do preparo
+O scanner foi validado conforme sua [documentação oficial](https://github.com/RetireJS/retire.js/blob/master/node/README.md). Seu relatório reconheceu pdf.js 5.4.624 sem achados reportados para esse componente. Isso não equivale a IRP global igual a zero: dependências não reconhecidas, outros fluxos e backend não estão cobertos.
 
-- **Fontes:** confirmado o par FGA0072/FGA0074 e a carga/equivalência de MAT0138. Capturas em [Fontes e regras](funcionais/fontes.md).
-- **Entrada:** o PDF sintético foi rejeitado no teste relatado pelo usuário; os arquivos foram retirados. O histórico oficial autorizado H0 passa a ser a entrada, com cenários C0–C5 definidos no roteiro; os perfis fictícios foram removidos.
-- **Instrumentos:** onze testes locais verificam ausência de relatório, duplicatas, altas em produção/desenvolvimento, controle positivo, HTTP 405 e cobertura parcial. Nenhum desses testes envia chamadas ao No Fluxo.
-- **Limitação da sessão:** após a navegação, a barra de endereço e o conteúdo acessível divergiram; houve falha de captura e perda de janela durante a tentativa de avançar no reenvio. A importação não foi concluída nem houve confirmação de substituição do histórico. Não atribuir essa interrupção ao produto.
-- **Acesso separado:** uma sessão nova no navegador de apoio redirecionou para login. Ela não compartilha a autenticação do Chrome e não foi usada para criar conta ou transferir credenciais.
+C0–C5 mantêm H0 fixo. A seleção do par de optativas de CT-02 deve ser confirmada antes de sua coleta; se indisponível, registrar Sem cobertura. As regras oficiais estão em [Fontes e regras](funcionais/fontes.md). Interpretações de carga sugerida, oferta/calendário e políticas sem fonte não serão convertidas em defeitos.
 
-![Controle de créditos observado durante a exploração](img/controle-creditos.png)
-
-*Figura 1 — Recorte do controle em um estado intermediário: 14 créditos/210h. Fonte: No Fluxo, 15/11. A imagem documenta o instrumento de entrada; não comprova o resultado correto do plano nem a restauração final. Dados acadêmicos e identificação ficaram fora do recorte.*
-
-**Situação:** preparação documental e instrumentos revisados; liberação da coleta ainda condicionada ao piloto com histórico oficial autorizado, inspeção de storage/SCA e validação da chamada da API. Responsáveis e datas da equipe continuam como proposta, não como aceite confirmado.
+As falhas anteriores de controle do Chrome foram superadas pela conexão da extensão. As capturas recuperadas de Gabriel permanecem em [Execução anterior](../fase4/funcionais/execucaoAnterior.md), separadas dos resultados de H0.
 
 ## 4. Rejeição do PDF de teste
 
-Em 15/11, o usuário informou que o PDF sintético enviado foi rejeitado e forneceu a captura abaixo. A mensagem orienta baixar e enviar o histórico gerado no SIGAA/UnB. Os PDFs sintéticos foram retirados do projeto e dos entregáveis locais.
+O PDF sintético enviado no teste relatado por Gustavo foi rejeitado. O importador exige o histórico oficial gerado pelo SIGAA/UnB. Os arquivos sintéticos foram retirados; H0 foi aceito e é a entrada adotada.
 
-![Mensagem de rejeição do PDF de teste pelo No Fluxo](img/rejeicao-pdf-teste.png)
+![Rejeição do PDF de teste](img/rejeicao-pdf-teste.png)
 
-*Figura 2 — Rejeição da entrada preparada para o piloto. Fonte: captura fornecida por Gustavo, 15/11. A captura não identifica qual dos arquivos preparados foi enviado.*
-
-O retorno comprova que o arquivo enviado não foi aceito. Não demonstra falha do planejamento nem impossibilidade de toda entrada sintética. Para este trabalho, o caminho dos PDFs sintéticos foi descartado. Usar o histórico oficial já autorizado e declarar os cenários sem entrada viável; editar disciplinas somente se houver recurso suportado pelo sistema. Esta evidência não gera nota para as doze métricas.
+*Figura 5 — Captura fornecida por Gustavo, 15/11. Comprova a rejeição dessa entrada, sem gerar nota para as métricas.*
 
 ---
 
@@ -61,4 +64,5 @@ O retorno comprova que o arquivo enviado não foi aceito. Não demonstra falha d
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro da exploração do fluxo e das pendências do piloto sintético | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro do piloto com H0, responsáveis e condições restantes de prontidão | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |

@@ -1,47 +1,21 @@
-# Execução e Conclusão da Avaliação — Métricas Funcionais (Fase 4)
+# Execução e Conclusão — Métricas Funcionais
 
-Esta página centraliza a avaliação de **Adequação Funcional** de *Planejar formatura* do No Fluxo UnB, conforme o [GQM da Fase 2](../fase2/funcionais/GQM.md) e o [roteiro da Fase 3](../fase3/funcionais/roteiro.md).
+As capturas recuperadas estão em [Execução anterior](funcionais/execucaoAnterior.md), com entrada e limites identificados. Não preenchem os resultados de H0 automaticamente.
 
-## 1. Documentação da Fase 4
+A avaliação utiliza o histórico oficial autorizado **H0** e os cenários C0–C5.
 
-| Página | Conteúdo |
-|---|---|
-| [Dados brutos e evidências](funcionais/dadosBrutos.md) | H0 sanitizado, capturas, CSVs e limitações da coleta. |
-| [Análise dos resultados e julgamento](funcionais/analiseResultados.md) | Cálculos, critérios, respostas GQM e julgamento das hipóteses. |
+- [Dados brutos e evidências](funcionais/dadosBrutos.md): base acadêmica e arquivos de coleta.
+- [Análise dos resultados](funcionais/analiseResultados.md): métricas, julgamento e processamento.
 
-## 2. Resultado das métricas funcionais
+H0 define 15 obrigatórias pendentes, 44 registros com status e oito relações de equivalência. Esses números organizam a conferência; não demonstram atendimento pelo produto. As sete métricas aguardam execução/conferência com essa entrada antes de receber percentuais finais.
 
-| Métrica | Fórmula aplicada | Resultado | Meta | Julgamento |
-|---|---|---:|---:|---|
-| `MET-FUN-01` — TVP | 0/2 | **0,00%** | 0% | Conforme, com ressalva de fonte para a relação FGA0009→FGA0011 |
-| `MET-FUN-02` — TVC | 2/2 | **100,00%** | 0% | Não conforme |
-| `MET-FUN-03` — CDO | 13/14 | **92,86%** | 100% | Não conforme; FGA0206 omitida |
-| `MET-FUN-04` — TDH | 0/41 | **0,00%** | 0% | Conforme |
-| `MET-FUN-05` — TAE | 7/7 | **100,00%** | 0% | Conforme |
-| `MET-FUN-06` — COO | 0/3 | **0,00%** | 100% | Não conforme; C3/C4 inconclusivos |
-| `MET-FUN-07` — TVS | 3/3 | **100,00%** | 0% por tipo | Não conforme para o alvo de carga do cenário |
-
-## 3. Pontos de atenção
-
-- CT-02: FGA0074 (semestre 7) e FGA0072 (semestre 8) violam o co-requisito recíproco.
-- CT-03: 13 das 14 obrigatórias pendentes foram contempladas; FGA0206 ficou de fora.
-- CT-06/CT-07: as variantes de 240h, 360h e 480h divergiram dos alvos. As cargas reportadas no semestre 9 foram 300h, 390h e 540h. A captura de 480h está pendente.
-- C3 (trabalho/estágio) e C4 (velocidade/equilíbrio) permanecem inconclusivos porque não houve mudança visual identificável e não há efeito algorítmico suficientemente especificado.
-
-## 4. Processamento reproduzível
-
-```bash
-python3 scripts/metricas_funcionais.py
-python3 scripts/metricas_funcionais.py --json
-python3 -m unittest testes.teste_metricas_funcionais testes.teste_h0_sanitizado
-```
-
-## 5. Conclusão
-
-A execução funcional foi reportada para CT-01 a CT-07. Há resultados conformes em pré-requisitos (nos pares observados) e tratamento do histórico, e não conformidades em co-requisitos, cobertura de obrigatórias e cargas-alvo do planejamento. As opções de trabalho/estágio e velocidade/equilíbrio não puderam ser julgadas.
+---
 
 ## Histórico de versão
 
 | Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| Gabriel Mota | Consolidação dos resultados de CT-01 a CT-07 | 15/11/2026 | [f469332](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f4693325fd9642696269942bb29aed671f0d8778) |
+| Gabriel Mota | Consolidação dos resultados de CT-01 a CT-07 | 15/11 | [f469332](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f4693325fd9642696269942bb29aed671f0d8778) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da avaliação pelo histórico oficial H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Recuperação das observações e capturas funcionais | 15/11 | [289a2a0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/289a2a02674594fc05aed55ad7c8177ca8154bdd) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento ao H0 e preservação das evidências anteriores com cobertura identificada | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |

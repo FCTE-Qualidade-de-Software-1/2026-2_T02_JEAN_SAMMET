@@ -28,9 +28,13 @@ Não usar ausência de dados como zero. Preservar também falhas e repetições,
 
 ## 3. Prontidão para a coleta
 
-A proposta está documentada, mas a coleta definitiva depende de conferir a entrada do histórico oficial autorizado e a viabilidade das variações planejadas, os avaliadores, o ambiente e o cronograma. O par de co-requisitos e a equivalente foram confirmados no SIGAA; falta validar sua entrada no site. A TBR aguarda identificação e validação da rota protegida. A entrada H0 é mantida nos cenários C0–C5; casos que exijam condições ausentes terão cobertura limitada, sem inventar novos históricos. As demais lacunas estão registradas por caso.
+**Fase 3 concluída no escopo de preparação**, com viabilidade básica verificada no [piloto](piloto.md#2-condicoes-para-encerrar-o-preparo): H0 aceito, planejamento acessível, cargas 20/24/32 créditos operáveis, base restaurada, ambiente registrado e instrumentos de segurança exercitados. A identificação da versão do servidor permanece desconhecida; o cliente tem inventário de URLs e hashes dos scripts observados.
 
-Na inspeção exploratória foi usada a sessão disponibilizada pelo usuário, que já continha dados pessoais. Esses dados e o PDF do histórico não integram os artefatos versionados nem a massa de medição. Após a rejeição do PDF sintético no piloto, a coleta usará o histórico oficial autorizado, com evidências sanitizadas. Cenários que não puderem ser reproduzidos terão a limitação declarada.
+O prazo é **22/11**. Gabriel executará os testes funcionais; Giovani, os de segurança; Gustavo fará a revisão/consolidação. Gustavo e Gabriel realizarão duas inspeções independentes de usabilidade. Metas e estimativas estão no [cronograma](operacionais/cronogramaERiscos.md).
+
+A coleta completa, os percentuais e as respostas GQM ficam na Fase 4. Cada caso exige sua regra, entrada e evidência; dados ou credenciais indisponíveis significam cobertura limitada, sem fabricar casos ou resultados. A SCA fica restrita aos componentes efetivamente reconhecidos; storage exige três estados; TBR exige casos negativos válidos além do controle positivo.
+
+C0–C5 mantêm H0 fixo. As capturas de entrada incompatível foram preservadas como [Execução anterior](../fase4/funcionais/execucaoAnterior.md). PDF, identificação, credenciais e planos individuais completos ficam fora do repositório; publicar somente referências e evidências sanitizadas.
 
 ---
 
@@ -39,4 +43,5 @@ Na inspeção exploratória foi usada a sessão disponibilizada pelo usuário, q
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Organização do plano integrado e dos critérios de prontidão | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização dos responsáveis e das condições de prontidão | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |

@@ -1,0 +1,19 @@
+{
+  "tipo_coleta": "piloto",
+  "ferramenta": "Retire.js",
+  "versao": "6.1.1",
+  "scripts_estaticos_observados": 129,
+  "scripts_exportados": 129,
+  "componentes_reconhecidos": [
+    {
+      "componente": "pdf.js",
+      "versao": "5.4.624"
+    }
+  ],
+  "base": [
+    "https://raw.githubusercontent.com/RetireJS/retire.js/master/repository/jsrepository-v5.json"
+  ],
+  "sha256_relatorio_original": "cec36a459d3c393c3828ec7760d5a818e36e3ba8b4d3a5492086c72528a21f10",
+  "escopo": "Scripts estáticos já carregados no cliente da sessão observada; exclui extensões, backend, scripts não carregados e dependências não reconhecidas.",
+  "julgamento_irp": "Não calculado no piloto. A ausência de achados para um componente reconhecido não atesta todos os componentes do sistema."
+}

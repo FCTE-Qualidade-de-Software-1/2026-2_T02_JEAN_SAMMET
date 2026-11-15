@@ -1,0 +1,34 @@
+{
+  "tipo_coleta": "piloto",
+  "entrada_id": "H0",
+  "sequencia": [
+    {
+      "creditos": 24,
+      "horas": 360
+    },
+    {
+      "creditos": 20,
+      "horas": 300
+    },
+    {
+      "creditos": 24,
+      "horas": 360
+    },
+    {
+      "creditos": 32,
+      "horas": 480
+    },
+    {
+      "creditos": 24,
+      "horas": 360
+    }
+  ],
+  "recalculo_apos_mudanca": "Iniciado e concluído; controle e plano disponíveis após cada alteração.",
+  "estado_final": "24 créditos/360h; sem indicador de recálculo",
+  "evidencias": [
+    "docs/fases/fase3/img/creditos-20.jpg",
+    "docs/fases/fase3/img/creditos-24.jpg",
+    "docs/fases/fase3/img/creditos-32.jpg"
+  ],
+  "limite": "Valida a operação do controle e a restauração. Não comprova correção de todos os semestres, preferências ou métricas funcionais."
+}

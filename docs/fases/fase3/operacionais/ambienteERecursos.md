@@ -9,11 +9,15 @@
 | Navegador instalado | Google Chrome 157.0.8103.52 |
 | Sistema | macOS 27.0.1, arquitetura arm64 |
 | Sessão | Conta de teste já autenticada, em perfil normal do Chrome |
-| Extensão de automação | Instalada pelo usuário; interferências não foram quantificadas |
-| Hardware, viewport e zoom | Ainda não registrados integralmente; conferir antes da coleta formal |
-| Versão implantada | Desconhecida; não associar automaticamente ao commit `87b5475` |
+| Extensão de automação | ChatGPT conectada ao Chrome; acesso à aba e inspeção técnica validados |
+| Hardware | Apple M5, 16 GB de memória; modelo Mac17,3 |
+| Viewport e zoom | 1470 × 779 CSS px; zoom 100%; DPR 2 |
+| Tela reportada | 1470 × 956 CSS px; não confundir com resolução física do painel |
+| Rede reportada | Online; effectiveType 4g, RTT estimado 100 ms e downlink estimado 10 Mb/s; não é teste de velocidade |
+| Identificação do cliente | Inventário de 129 scripts estáticos com URL e SHA-256 no piloto |
+| Versão do servidor | Não identificada; não associar automaticamente a um commit |
 
-Esta ficha descreve a exploração, não uma configuração certificada. Antes da coleta formal, registrar versões, resolução, viewport, zoom, extensões, rede e condições de sessão. Manter as mesmas condições nos cenários pareados; qualquer mudança deve constar no registro.
+Esta ficha registra as condições observadas no piloto. Cada avaliador deve registrar seu próprio ambiente antes da coleta formal. Manter as mesmas condições nos cenários pareados; qualquer mudança deve constar no registro.
 
 ## 2. Dados para a avaliação
 
@@ -24,14 +28,16 @@ A entrada prevista passa a ser o **histórico oficial já fornecido e autorizado
 ## 3. Preparação da entrada
 
 1. Usar o histórico oficial autorizado e conferir os códigos e status reconhecidos pelo sistema, sem versionar o documento.
-2. Identificar quais casos funcionais podem ser verificados com esse histórico. Recalcular a lista esperada de pendências a partir da entrada real; não existe denominador fixo para essa entrada.
-3. Verificar se existe edição de disciplinas/status suportada pelo produto. Somente se esse recurso for confirmado, executar variações controladas por ele; não preparar novos PDFs sintéticos.
+2. Identificar quais casos funcionais podem ser verificados com esse histórico. Conferir a importação contra a referência sanitizada de H0: 44 registros acadêmicos, 15 obrigatórias pendentes e 8 relações de equivalência (6 concluídas e 2 em andamento). Esses universos são específicos de H0; não são resultados medidos no produto.
+3. Aplicar C0–C5 mantendo H0 fixo e alterando somente as configurações previstas no roteiro. Edição de disciplinas/status fica fora desses cenários; só poderá integrar uma ampliação documentada após confirmar suporte no produto.
 4. Casos que exijam dados indisponíveis permanecem pendentes ou inconclusivos, com a cobertura declarada. Não apresentar as configurações de uso como históricos acadêmicos diferentes.
 5. Nas comparações de preferências, manter o histórico fixo, registrar mudanças e verificar a restauração. Sanitizar capturas antes de publicar.
 
+O histórico oficial foi aceito no piloto. Os arquivos de referência e os modelos permanecem separados dos resultados de execução.
+
 ## 4. Ferramentas
 
-Chrome e DevTools para interface, tráfego e storage; Retire.js ou scanner equivalente documentado para cliente; `npm audit` apenas quando os manifestos estiverem disponíveis. Exportar o relatório bruto e o inventário da SCA.
+Chrome/extensão e inspeção técnica para interface, tráfego e storage; Retire.js 6.1.1 validado sobre 129 scripts estáticos carregados no cliente; `npm audit` apenas quando os manifestos estiverem disponíveis. Exportar o relatório e o inventário da SCA. O piloto reconheceu pdf.js 5.4.624; a cobertura não corresponde a todas as dependências. Os registros sanitizados estão em `testes/evidencias/piloto/fase3-2026-11-15/`.
 
 Os instrumentos `testes/analisador_sca_irp.py` e `testes/teste_controle_acesso_tbr.py` foram corrigidos e verificados com testes locais. Ambos apuram relatórios revisados; não executam scanner nem requisições. Usar os modelos `sca.json` e `tbr.json` em `testes/modelos_coleta/`. A cobertura, o relatório bruto e as evidências devem existir antes do cálculo. Dados ausentes produzem Inconclusivo; a TBR exige controle positivo e não interpreta HTTP 405 como acesso indevido. Essas verificações do instrumento não são resultados do No Fluxo.
 
@@ -44,4 +50,5 @@ Os instrumentos `testes/analisador_sca_irp.py` e `testes/teste_controle_acesso_t
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Especificação de hardware, software, isolamento, massa sintética LGPD e matriz de papéis | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro do ambiente observado e preparação dos perfis sintéticos | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Substituição da massa fictícia por entrada autorizada e configurações de uso | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Consolidação do preparo com H0, piloto e rastreabilidade das evidências | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |

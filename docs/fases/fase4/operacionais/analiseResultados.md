@@ -83,7 +83,43 @@ O confronto dos dados experimentais contra os critérios formais de validação 
 
 ---
 
-## 4. Integração e Validação Cruzada com Métricas Funcionais
+## 4. Comparação com os Critérios GQM e Resposta Formal às Questões de Medição
+
+Em estrita consonância com o método **Goal-Question-Metric (GQM)** e as atividades de encerramento da **ISO/IEC 25040**, os valores medidos empiricamente são comparados contra a grade de decisão para responder de maneira conclusiva às questões formuladas na Fase 2:
+
+### 4.1 Tabela Comparativa: Valores Medidos vs. Critérios de Julgamento GQM
+
+| Questão GQM | Métrica | Valor Obtido na Avaliação | Critérios de Julgamento GQM (Fase 2) | Nível Atingido |
+| :---: | :---: | :---: | :--- | :---: |
+| **`Q-OP-01`** | **`MET-OP-01` (TCH)** | **`70,0%`** | • Excelente: $TCH \ge 85\%$<br>• **Aceitável: $70\% \le TCH < 85\%$**<br>• Crítico: $TCH < 70\%$ | **Aceitável** |
+| **`Q-OP-01`** | **`MET-OP-01b` (ISVH)** | **`6 pts`** | • Excelente: $N_{\text{cat}} = 0, N_{\text{maior}} = 0, ISVH \le 5$<br>• **Aceitável: $N_{\text{cat}} = 0, N_{\text{maior}} \le 1, ISVH \le 12$**<br>• Crítico: $N_{\text{cat}} \ge 1, N_{\text{maior}} > 1$ ou $ISVH > 12$ | **Aceitável** |
+| **`Q-OP-02`** | **`MET-OP-02` (DVCD/IRP)** | **`0 pts`** | • **Excelente: $N_{\text{crít}} = 0, N_{\text{alta}} = 0, IRP \le 5$**<br>• Aceitável: $N_{\text{crít}} = 0, N_{\text{alta}} \le 2, IRP \le 20$<br>• Crítico: $N_{\text{crít}} \ge 1$ ou $N_{\text{alta}} > 2$ | **Excelente** |
+| **`Q-OP-02`** | **`MET-OP-02b` (GED-C)** | **`0 chaves`** | • **Conforme (Desejável): $GED\text{-}C = 0$**<br>• Não Conforme (Crítico): $GED\text{-}C \ge 1$ | **Conforme** |
+| **`Q-OP-02`** | **`MET-OP-02c` (TBR)** | **`0,0%`** | • Conforme (Mandatório): $TBR = 100\%$<br>• **Crítico (Falha Grave): $TBR < 100\%$** | **Não Conforme** |
+
+---
+
+### 4.2 Resposta Formal à Questão `Q-OP-01` (Usabilidade)
+
+> **Questão `Q-OP-01`:** *A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?*
+
+**Resposta Formal:**  
+**Sim, em nível aceitável, com ressalvas funcionais específicas.**  
+A avaliação empírica demonstrou que a interface atende a **70,0% das heurísticas ergonômicas de Nielsen (`MET-OP-01`)**, sustentando um Índice de Severidade de **6 pontos (`MET-OP-01b`)**, sem nenhuma violação catastrófica. O estudante consegue navegar satisfatoriamente pelas tarefas de localizar a estimativa de formatura ($T_1$) e interpretar o fluxo curricular ($T_2$). No entanto, a ferramenta apresenta deficiência relevante na **liberdade e controle do usuário** (Item 3, severidade 3), decorrente da ausência de botões para desfazer alterações ou restaurar configurações padrão ao manipular o controle de créditos ($T_3$), além de carência de legendas contextuais de auxílio (Item 10). Essas deficiências não impedem a operação básica, mas confirmam a hipótese $H\text{-}OP\text{-}01$ e fundamentam a necessidade da ação de melhoria proposta.
+
+---
+
+### 4.3 Resposta Formal à Questão `Q-OP-02` (Segurança)
+
+> **Questão `Q-OP-02`:** *O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?*
+
+**Resposta Formal:**  
+**Sim para confidencialidade e integridade cliente; inconclusivo/não conforme para a rota REST direta.**  
+A avaliação comprovou que a aplicação **resguarda integralmente a confidencialidade dos dados discentes no navegador**, apresentando **$GED\text{-}C = 0$ chaves sensíveis em texto claro no `localStorage` (`MET-OP-02b`)**, em estrito cumprimento às diretrizes da LGPD. Ademais, a análise de composição estática de software via Retire.js resultou em **$IRP = 0$ (`MET-OP-02`)**, atestando a ausência de componentes JavaScript desatualizados com vulnerabilidades conhecidas na entrega cliente. Por outro lado, para a métrica de controle de acesso (`MET-OP-02c`), a suíte de testes negativos obteve **$TBR = 0{,}0\%$**, visto que todas as requisições disparadas contra a rota de API foram interceptadas pelo servidor com `HTTP 405 Method Not Allowed`, em vez de processadas pelas regras de autenticação da aplicação (HTTP 401/403), indicando que o serviço não está exposto para consumo REST público desprotegido.
+
+---
+
+## 5. Integração e Validação Cruzada com Métricas Funcionais
 
 A integração dos achados operacionais com as medições de Adequação Funcional revela uma correlação essencial:
 - **Usabilidade × Funcionalidade:** O motor curricular gera a distribuição de semestres com boa precisão lógica, porém a interface falha em dar **liberdade de reversão ao estudante** ($TCH = 70{,}0\%$, Item 3 com severidade 3). Caso o aluno simule uma carga horária reduzida e deseje retornar ao plano inicial, ele é forçado a recarregar a página, gerando fricção desnecessária.

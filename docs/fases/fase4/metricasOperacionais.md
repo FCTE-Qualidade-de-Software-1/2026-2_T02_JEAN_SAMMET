@@ -11,7 +11,7 @@ Toda a avaliação foi realizada sob a abordagem **estritamente Caixa-Preta (*Bl
 | Seção / Página | Conteúdo e Foco Principal | Métricas Relacionadas |
 | :--- | :--- | :---: |
 | **[1. Dados Brutos e Evidências](operacionais/dadosBrutos.md)** | Catálogo completo dos registros experimentais, planilhas CSV, relatórios de auditoria e logs de rede coletados. | Todas |
-| **[2. Análise dos Resultados e Julgamento](operacionais/analiseResultados.md)** | Comparação dos valores obtidos contra os níveis de pontuação da Fase 2, validação empírica de $H\text{-}OP\text{-}01$ e $H\text{-}OP\text{-}02$ e cruzamento com métricas funcionais. | Todas |
+| **[2. Análise dos Resultados e Julgamento](operacionais/analiseResultados.md)** | Cálculo dos valores obtidos, confronto com a grade GQM da Fase 2, resposta formal às questões de medição (Q-OP-01 e Q-OP-02) e validação das hipóteses operacionais. | Todas |
 | **[3. Ação de Melhoria](operacionais/acaoMelhoria.md)** | Especificação técnica e prototipação da melhoria concreta priorizada (Implementação de botão de reversão de estado e controle do usuário). | `MET-OP-01`<br>`MET-OP-01b` |
 
 ---

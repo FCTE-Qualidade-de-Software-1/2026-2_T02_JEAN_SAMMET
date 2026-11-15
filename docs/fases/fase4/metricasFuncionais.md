@@ -1,55 +1,47 @@
 # Execução e Conclusão da Avaliação — Métricas Funcionais (Fase 4)
 
-> **Estado da avaliação: coleta formal pendente.** O piloto documentado em 15/11/2026 não concluiu a geração de um plano pelas preferências. O histórico oficial autorizado `H0` é mantido fora do repositório e não está presente neste pacote. Assim, não há base para calcular as sete métricas funcionais nem para confirmar/refutar as hipóteses. A observação exploratória disponível está preservada como evidência de piloto, sem ser contabilizada como teste funcional.
+Esta página centraliza a avaliação de **Adequação Funcional** de *Planejar formatura* do No Fluxo UnB, conforme o [GQM da Fase 2](../fase2/funcionais/GQM.md) e o [roteiro da Fase 3](../fase3/funcionais/roteiro.md).
 
-Esta página centraliza a execução e a conclusão da avaliação de **Adequação Funcional** da funcionalidade *Planejar formatura* do No Fluxo UnB, seguindo o objetivo, as métricas e as regras de julgamento definidos na [Fase 2 — GQM](../fase2/funcionais/GQM.md) e os casos do [roteiro funcional da Fase 3](../fase3/funcionais/roteiro.md).
+## 1. Documentação da Fase 4
 
-## 1. Navegação pelas páginas da Fase 4
+| Página | Conteúdo |
+|---|---|
+| [Dados brutos e evidências](funcionais/dadosBrutos.md) | H0 sanitizado, capturas, CSVs e limitações da coleta. |
+| [Análise dos resultados e julgamento](funcionais/analiseResultados.md) | Cálculos, critérios, respostas GQM e julgamento das hipóteses. |
 
-| Seção / Página | Conteúdo | Métricas |
-| :--- | :--- | :---: |
-| [Dados brutos e evidências](funcionais/dadosBrutos.md) | Fontes, registros do piloto, arquivos de coleta, lacunas e regras de preservação. | Todas |
-| [Análise dos resultados e julgamento](funcionais/analiseResultados.md) | Fórmulas, cobertura, comparação com as metas da Fase 2, validação das hipóteses e respostas formais às questões GQM. | Todas |
+## 2. Resultado das métricas funcionais
 
-## 2. Quadro de situação das métricas
+| Métrica | Fórmula aplicada | Resultado | Meta | Julgamento |
+|---|---|---:|---:|---|
+| `MET-FUN-01` — TVP | 0/2 | **0,00%** | 0% | Conforme, com ressalva de fonte para a relação FGA0009→FGA0011 |
+| `MET-FUN-02` — TVC | 2/2 | **100,00%** | 0% | Não conforme |
+| `MET-FUN-03` — CDO | 13/14 | **92,86%** | 100% | Não conforme; FGA0206 omitida |
+| `MET-FUN-04` — TDH | 0/41 | **0,00%** | 0% | Conforme |
+| `MET-FUN-05` — TAE | 7/7 | **100,00%** | 0% | Conforme |
+| `MET-FUN-06` — COO | 0/3 | **0,00%** | 100% | Não conforme; C3/C4 inconclusivos |
+| `MET-FUN-07` — TVS | 3/3 | **100,00%** | 0% por tipo | Não conforme para o alvo de carga do cenário |
 
-| Métrica | Nome | Caso | Valor obtido | Situação nesta versão |
-| :---: | :--- | :---: | :---: | :---: |
-| `MET-FUN-01` | Violações de pré-requisitos (TVP) | `CT-01` | Não calculável | **Pendente de execução** |
-| `MET-FUN-02` | Violações de co-requisitos (TVC) | `CT-02` | Não calculável | **Pendente de execução** |
-| `MET-FUN-03` | Cobertura de obrigatórias pendentes (CDO) | `CT-03` | Não calculável | **Pendente de execução** |
-| `MET-FUN-04` | Divergências no tratamento do histórico (TDH) | `CT-04` | Não calculável | **Pendente de execução** |
-| `MET-FUN-05` | Aplicação incorreta de equivalências (TAE) | `CT-05` | Não calculável | **Pendente de execução** |
-| `MET-FUN-06` | Conformidade das opções do onboarding (COO) | `CT-06` | Não calculável | **Pendente de especificação e execução** |
-| `MET-FUN-07` | Violações de restrições semestrais (TVS) | `CT-07` | Não calculável | **Pendente de execução** |
+## 3. Pontos de atenção
 
-**Não calculável não significa 0%.** Nenhuma linha formal foi registrada em `verificacoes_funcionais.csv`; portanto, os denominadores válidos são inexistentes. A métrica `MET-FUN-06` também depende de expectativas verificáveis para os efeitos de cada opção do onboarding. A consulta às regras curriculares oficiais não substitui a comparação entre histórico, plano esperado e plano efetivamente gerado.
-
-## 3. Síntese do estado da avaliação
-
-1. **Planejamento e fontes:** a matriz 6360/1 — 2017.1, exemplos de pré-requisito, co-requisito e equivalência e limites curriculares estão documentados na Fase 3. Esses registros definem referências, mas não comprovam como o motor tratou o histórico.
-2. **Evidência parcial:** o piloto observou controles de preferência e recálculo visual. A captura preservada mostra um estado intermediário de 14 créditos/210h; ela não comprova a saída final, a cobertura de disciplinas ou a conformidade de uma regra curricular.
-3. **Coleta formal:** os arquivos de execução e verificação foram preparados, mas permanecem sem linhas de teste. Não foi possível inferir numeradores e denominadores para `CT-01` a `CT-07`.
-4. **Conclusão:** a adequação funcional ainda não pode ser classificada como Conforme ou Não conforme. As respostas formais às questões GQM e os motivos de pendência estão na [análise dos resultados](funcionais/analiseResultados.md).
+- CT-02: FGA0074 (semestre 7) e FGA0072 (semestre 8) violam o co-requisito recíproco.
+- CT-03: 13 das 14 obrigatórias pendentes foram contempladas; FGA0206 ficou de fora.
+- CT-06/CT-07: as variantes de 240h, 360h e 480h divergiram dos alvos. As cargas reportadas no semestre 9 foram 300h, 390h e 540h. A captura de 480h está pendente.
+- C3 (trabalho/estágio) e C4 (velocidade/equilíbrio) permanecem inconclusivos porque não houve mudança visual identificável e não há efeito algorítmico suficientemente especificado.
 
 ## 4. Processamento reproduzível
 
-Após preencher os registros sanitizados, processar a coleta com:
-
 ```bash
 python3 scripts/metricas_funcionais.py
+python3 scripts/metricas_funcionais.py --json
+python3 -m unittest testes.teste_metricas_funcionais testes.teste_h0_sanitizado
 ```
 
-Para usar outro arquivo:
+## 5. Conclusão
 
-```bash
-python3 scripts/metricas_funcionais.py --csv caminho/para/verificacoes_funcionais.csv
-```
-
-O script calcula as taxas de falha ou cobertura segundo a direção de cada métrica, apresenta a contagem válida e a cobertura, julga `MET-FUN-07` separadamente por tipo de restrição e consolida as respostas de `Q-FUN-01` a `Q-FUN-07`. Denominador zero gera pendência, nunca conformidade.
+A execução funcional foi reportada para CT-01 a CT-07. Há resultados conformes em pré-requisitos (nos pares observados) e tratamento do histórico, e não conformidades em co-requisitos, cobertura de obrigatórias e cargas-alvo do planejamento. As opções de trabalho/estágio e velocidade/equilíbrio não puderam ser julgadas.
 
 ## Histórico de versão
 
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :--- | :--- |
-| [Gabriel Mota](https://github.com/Gabro-MO) | Consolidação da execução e do julgamento das métricas funcionais na Fase 4, com rastreabilidade dos dados ainda pendentes | 15/11/2026 | Não commitado |
+| Membro | Contribuição | Data | Commit |
+|---|---|---|---|
+| Gabriel Mota | Consolidação dos resultados de CT-01 a CT-07 | 15/11/2026 | Não commitado |

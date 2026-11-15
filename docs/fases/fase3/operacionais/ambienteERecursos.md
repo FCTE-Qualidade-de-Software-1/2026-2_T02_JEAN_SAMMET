@@ -43,4 +43,4 @@ Os instrumentos `testes/analisador_sca_irp.py` e `testes/teste_controle_acesso_t
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Especificação de hardware, software, isolamento, massa sintética LGPD e matriz de papéis | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro do ambiente observado e preparação dos perfis sintéticos | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Substituição da massa fictícia por entrada autorizada e configurações de uso | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Substituição da massa fictícia por entrada autorizada e configurações de uso | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |

@@ -115,4 +115,4 @@ Os resultados observados deverão ser interpretados considerando o planejamento,
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Organização da seção Gestão do Projeto | 16/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização do progresso das Issues | 18/10/2026 | [d2b77cf](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d2b77cf6bb91436494b004f225c771eed33ba46f) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização da conclusão das Issues | 18/10/2026 | [0e35ba5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e35ba589c078941f61ef6b425882fe07b0e9dff) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro separado das horas adicionais da Fase 3 | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro separado das horas adicionais da Fase 3 | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |

@@ -30,4 +30,4 @@ Verificar os instrumentos localmente com `python3 -m unittest testes.teste_instr
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação dos modelos de coleta | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Instruções dos instrumentos e modelos de segurança | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Instruções dos instrumentos e modelos de segurança | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |

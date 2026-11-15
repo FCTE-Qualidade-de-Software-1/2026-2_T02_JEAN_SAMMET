@@ -49,6 +49,10 @@ nav:
             - Cronograma e Riscos: fases/fase3/operacionais/cronogramaERiscos.md
             - Rastreabilidade: fases/fase3/operacionais/rastreabilidade.md
     - Fase 4:
+        - Métricas Funcionais:
+            - Sumário: fases/fase4/metricasFuncionais.md
+            - Dados Brutos e Evidências: fases/fase4/funcionais/dadosBrutos.md
+            - Análise e Julgamento: fases/fase4/funcionais/analiseResultados.md
         - Métricas Operacionais:
             - Sumário: fases/fase4/metricasOperacionais.md
             - Dados Brutos e Evidências: fases/fase4/operacionais/dadosBrutos.md

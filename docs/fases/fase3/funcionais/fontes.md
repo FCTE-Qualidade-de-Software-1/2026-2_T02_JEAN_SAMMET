@@ -29,7 +29,7 @@ Essas consultas verificam exemplos, não todos os pré/co-requisitos do curso. P
 
 ## 3. Lacunas
 
-- **Co-requisitos:** par FGA0072/FGA0074 confirmado no complemento abaixo. Falta validar a seleção explícita dessas optativas no planejador.
+- **Co-requisitos:** par FGA0072/FGA0074 confirmado no complemento abaixo. A seleção/alocação desse par foi reportada na coleta funcional; consultar as evidências da Fase 4, sem tratá-la como repetição do piloto operacional.
 - **Equivalências:** MAT0138/MAT0026 conferidas no complemento abaixo. Falta validar o reconhecimento do código na entrada; não presumir equivalência transitiva.
 - **Oferta e calendário:** registrar o período real da coleta e a oferta oficial. Sem isso, a parte correspondente de CT-07 fica pendente.
 - **Onboarding:** a interface mostra carga sugerida e objetivo; o efeito algorítmico exato de trabalho e objetivo ainda precisa de requisito identificável.
@@ -60,9 +60,29 @@ A busca do cadastro é reproduzível em **SIGAA público → Graduação → Com
 
 *Figura 3 — Código, nome e carga da equivalente. Fonte: SIGAA/UnB, captura de 15/11.*
 
+## 6. Entrada acadêmica H0
+
+H0 é o histórico oficial SIGAA/UnB autorizado, emitido em 15/11/2026. O documento original fica fora do repositório; os dados mínimos estão em `testes/referencias/h0_sanitizado.json` e nos CSVs `h0_*.csv`.
+
+H0 contém **44 registros acadêmicos: 37 aprovados e 7 matriculados**, correspondentes a 42 códigos distintos. DSC0172 e FGA0413 aparecem em dois períodos diferentes e são preservadas como ocorrências separadas. Não há registro atual com status Trancado na tabela de componentes cursados/cursando.
+
+São **seis equivalências concluídas** (FGA0302→FGA0161, FGA0146→FGA0147, FGA0307→FGA0184, FGA0312→FGA0138, FGA0313→FGA0172 e FGA0314→FGA0238) e **duas em andamento** (FGA0303→FGA0150 e FGA0315→FGA0278).
+
+O quadro do SIGAA contém **15 disciplinas obrigatórias pendentes, totalizando 1.110h**. Duas cadeias de seletividade de 60h e ENADE concluinte são exigências separadas, fora do denominador da CDO. Das 39 obrigatórias, 24 estão satisfeitas por aprovação ou equivalência concluída.
+
+FGA0170 está matriculada em 2026.2; FGA0211 e FGA0060 estão pendentes. A anotação administrativa de trancamento de FGA0161 nas observações não representa um status atual de FGA0060.
+
+A carga declarada é de 2.130h integralizadas e 1.350h pendentes: 1.470h/1.110h de obrigatórias e 660h/240h de optativas. Ocorrências repetidas não devem ser somadas como novas obrigações.
+
+As declarações do SIGAA definem o resultado acadêmico esperado. Elas não demonstram o reconhecimento pelo No Fluxo: essa comparação será registrada na Fase 4.
+
+---
+
 ## Histórico de versão
 
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :--- | :--- |
+| Membro | Contribuição | Data | Commit |
+|---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das fontes curriculares e das pendências por regra | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Confirmação de co-requisitos e equivalência com capturas oficiais | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Vinculação das regras às equivalências e pendências observadas em H0 | 15/11 | [c972eab](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/c972eabf8458093451576237d0f79a5c80875cf2) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da avaliação pelo histórico oficial H0 | 15/11 | Não commitado |

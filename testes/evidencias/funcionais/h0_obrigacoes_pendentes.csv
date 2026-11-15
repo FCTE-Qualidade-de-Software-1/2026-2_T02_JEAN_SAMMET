@@ -1,0 +1,19 @@
+entrada_id,tipo_obrigacao,codigo,nome,carga_horaria_h,situacao_na_entrada,pagina_origem,observacao
+H0,disciplina_obrigatoria,FGA0150,PROJETO INTEGRADOR DE ENGENHARIA 1,60,MATRICULADO_EM_EQUIVALENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0170,FUNDAMENTOS DE SISTEMAS OPERACIONAIS,60,MATRICULADO,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0211,FUNDAMENTOS DE REDES DE COMPUTADORES,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0060,SISTEMAS DE BANCO DE DADOS 2,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0278,QUALIDADE DE SOFTWARE 1,60,MATRICULADO_EM_EQUIVALENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0208,ARQUITETURA E DESENHO DE SOFTWARE,60,MATRICULADO,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0210,PARADIGMAS DE PROGRAMAÇÃO,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0244,PROGRAMAÇÃO PARA SISTEMAS PARALELOS E DISTRIBUÍDOS,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0109,FUNDAMENTOS DE SISTEMAS EMBARCADOS,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0206,ENGENHARIA DE PRODUTO DE SOFTWARE,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0021,ESTÁGIO SUPERVISIONADO,210,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0240,GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE SOFTWARE,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0009,TRABALHO DE CONCLUSÃO DE CURSO 1,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0250,PROJETO INTEGRADOR DE ENGENHARIA 2,90,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,disciplina_obrigatoria,FGA0011,TRABALHO DE CONCLUSÃO DE CURSO 2,90,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,cadeia_de_seletividade,CADEIA-6,Cadeia de Seletividade 6,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,cadeia_de_seletividade,CADEIA-7,Cadeia de Seletividade 7,60,PENDENTE,3,Obrigação da entrada; não é resultado do plano.
+H0,requisito_nao_curricular,ENADE,ENADE concluinte pendente,0,PENDENTE,3,Obrigação da entrada; não é resultado do plano.

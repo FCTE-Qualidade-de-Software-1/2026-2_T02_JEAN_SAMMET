@@ -1,0 +1,9 @@
+entrada_id,obrigatoria_destino,nome_destino,componente_aproveitado,nome_aproveitado,carga_horaria_h,status_historico,periodo_letivo,classificacao,evidencia_sigaa
+H0,FGA0161,ENGENHARIA E AMBIENTE,FGA0302,ENGENHARIA E AMBIENTE,60,APROVADO,2025.1,equivalencia concluida,Cumpriu FGA0161 através de FGA0302; página 3
+H0,FGA0184,GESTÃO DA PRODUÇÃO E QUALIDADE,FGA0307,GESTÃO DA PRODUÇÃO E QUALIDADE,60,APROVADO,2025.2,equivalencia concluida,Cumpriu FGA0184 através de FGA0307; página 3
+H0,FGA0147,ESTRUTURA DE DADOS E ALGORITMOS,FGA0146,ESTRUTURAS DE DADOS 1,60,APROVADO,2025.2,equivalencia concluida,Cumpriu FGA0147 através de FGA0146; página 3
+H0,FGA0138,MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE,FGA0312,MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE,60,APROVADO,2025.2,equivalencia concluida,Cumpriu FGA0138 através de FGA0312; página 4
+H0,FGA0172,REQUISITOS DE SOFTWARE,FGA0313,REQUISITOS DE SOFTWARE,60,APROVADO,2026.1,equivalencia concluida,Cumpriu FGA0172 através de FGA0313; página 4
+H0,FGA0238,TESTES DE SOFTWARE,FGA0314,TESTES DE SOFTWARE,60,APROVADO,2026.1,equivalencia concluida,Cumpriu FGA0238 através de FGA0314; página 4
+H0,FGA0150,PROJETO INTEGRADOR DE ENGENHARIA 1,FGA0303,PROJETO INTEGRADOR DE ENGENHARIA 1,60,MATRICULADO,2026.2,equivalencia em andamento; não cumprida,FGA0150: Matriculado em Equivalente; página 3
+H0,FGA0278,QUALIDADE DE SOFTWARE 1,FGA0315,QUALIDADE DE SOFTWARE 1,60,MATRICULADO,2026.2,equivalencia em andamento; não cumprida,FGA0278: Matriculado em Equivalente; página 3

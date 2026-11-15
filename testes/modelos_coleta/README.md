@@ -1,6 +1,6 @@
 # Modelos de coleta
 
-Copiar os modelos para uma pasta identificada por execução em `testes/evidencias/`. Usar `tipo_coleta` para separar piloto e coleta definitiva. Usar `entrada_id = H0` e `cenario_id = C0` a `C5` para distinguir o histórico da configuração aplicada. Cabeçalhos não são resultados: campos sem medição permanecem vazios, não zero.
+Copiar os modelos para uma pasta identificada por execução em `testes/evidencias/`. Usar `tipo_coleta` para separar piloto e coleta definitiva. Usar `entrada_id = H0` e `cenario_id = C0` a `C5` para distinguir o histórico da configuração aplicada. Cabeçalhos não são resultados: campos sem medição permanecem vazios, não zero. A entrada real H0 está normalizada em `testes/referencias/h0_sanitizado.json`; use `testes/evidencias/funcionais/h0_registros.csv` para conferir a importação.
 
 - `execucoes.csv`: contexto, esperado/observado, cálculo e julgamento por caso.
 - `verificacoes_funcionais.csv`: uma linha por disciplina ou relação examinada.
@@ -25,9 +25,32 @@ Os comandos apenas apuram registros, não executam scanner ou chamadas HTTP; imp
 
 Verificar os instrumentos localmente com `python3 -m unittest testes.teste_instrumentos_seguranca`. Fixtures de teste não constituem resultados do No Fluxo.
 
+## Processamento das métricas funcionais
+
+Na coleta da Fase 4, manter uma cópia dos modelos em `testes/evidencias/funcionais/`. Preencher `verificacoes_funcionais.csv` com uma linha por unidade verificada e usar `conforme=1` ou `conforme=0` somente com regra e evidência rastreáveis. Deixar em branco quando a execução não tiver sido concluída; usar `NA` somente quando a regra conhecida não se aplicar e justificar em `observacao`; usar `INCONCLUSIVO` quando houver falha de coleta.
+
+Executar o processador a partir da raiz do repositório:
+
+```bash
+python3 scripts/metricas_funcionais.py
+python3 scripts/metricas_funcionais.py --json
+python3 -m unittest testes.teste_metricas_funcionais
+```
+
+O processador usa somente as verificações efetivamente registradas e não trata ausência de denominador como 0%.
+
+Para evitar percentuais inflados por coleta incompleta, registrar exatamente uma linha rastreável por unidade de referência nas métricas com universo conhecido em H0:
+
+- `MET-FUN-03`: uma linha para cada uma das 15 obrigatórias pendentes; preencher `disciplina` com o código do componente.
+- `MET-FUN-04`: uma linha para cada um dos 44 registros com status do histórico; preencher `disciplina` e `registro_id` no formato `código@período`, sem descartar ocorrências repetidas.
+- `MET-FUN-05`: uma linha para cada uma das 8 equivalências (6 concluídas e 2 em andamento); preencher `relacao` no formato `componente_aproveitado->obrigatoria_destino`, sem espaços.
+
+As unidades esperadas estão em `testes/evidencias/funcionais/unidades_esperadas_h0.csv`; são um checklist, não resultado de execução. O processador obtém esses universos de `testes/referencias/h0_sanitizado.json`. Se faltar uma unidade, houver duplicidade ou existir item sem classificação, o percentual final dessas métricas permanece pendente/inconclusivo. Os denominadores de referência continuam visíveis (15, 44 e 8), mas isso não significa que a comparação com o produto tenha sido executada. Para `MET-FUN-01`, `MET-FUN-02`, `MET-FUN-06` e `MET-FUN-07`, registrar todas as relações/opções/restrições aplicáveis ao cenário e justificar explicitamente qualquer `NA`.
+
 ## Histórico de versão
 
-| Nome do Membro | Contribuição | Data | Commit |
-| :--- | :--- | :--- | :--- |
+| Membro | Contribuição | Data | Commit |
+|---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação dos modelos de coleta | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Instruções dos instrumentos e modelos de segurança | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização dos modelos de coleta para H0 | 15/11 | Não commitado |

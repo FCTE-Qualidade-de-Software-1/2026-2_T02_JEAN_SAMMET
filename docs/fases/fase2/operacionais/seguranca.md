@@ -36,8 +36,8 @@ As faixas e os pesos são critérios da equipe. Aplicar as faixas na ordem apres
 | **Questão e hipótese** | `Q-OP-02` e `H-OP-02`, componente armazenamento. |
 | **Definição e unidade** | Número de chaves com identificadores ou dados acadêmicos em texto claro nos mecanismos inspecionados; unidade: chaves. |
 | **Cálculo** | `GED-C = quantidade de chaves com matrícula, nome, notas, IRA ou histórico em claro`. Cada chave conta uma vez, identificada pelo mecanismo e origem. |
-| **Fonte** | DevTools: `localStorage`, `sessionStorage` e cookies após carregar o histórico sintético e gerar o plano. |
-| **Coleta** | Registrar estado do fluxo, origem, chaves, conteúdo sintético e evidências. Inspecionar cookies no painel Application; registrar `HttpOnly` e `Secure` separadamente. Essas flags não tornam o conteúdo cifrado. |
+| **Fonte** | DevTools: `localStorage`, `sessionStorage` e cookies após carregar o histórico autorizado e gerar o plano. |
+| **Coleta** | Registrar estado do fluxo, origem, chaves, tipo de conteúdo e evidências sanitizadas, sem valores pessoais. Inspecionar cookies no painel Application; registrar `HttpOnly` e `Secure` separadamente. Essas flags não tornam o conteúdo cifrado. |
 | **Conforme** | `GED-C = 0`, com inspeção completa dos mecanismos previstos. |
 | **Não conforme** | `GED-C ≥ 1`, com conteúdo e estado do fluxo comprovados. |
 | **Inconclusivo** | Fluxo não concluído, mecanismos não inspecionados ou evidência insuficiente. |

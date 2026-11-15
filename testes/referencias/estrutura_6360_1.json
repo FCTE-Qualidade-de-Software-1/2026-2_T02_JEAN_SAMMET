@@ -223,14 +223,55 @@
       "inicio_vigencia_pre": "2021-11-07",
       "equivalencia": "MAT0138",
       "inicio_vigencia_equivalencia": "2021-11-07",
-      "aplicabilidade_equivalencia": "Conferir exceções específicas antes do CT-05"
+      "aplicabilidade_equivalencia": "Regra geral ativa, MAT0026 vinculado à matriz 6360/1; nenhuma exceção específica exibida para MAT0026 na consulta."
     },
     {
       "codigo": "IFD0173",
       "pre_requisito_exibido": null,
       "co_requisito_exibido": null,
       "limite": "Ausência de co-requisito neste componente não generaliza para a matriz"
+    },
+    {
+      "codigo": "FGA0072",
+      "nome": "PRÁTICA DE ELETRÔNICA DIGITAL 2",
+      "carga_horaria": 30,
+      "tipo_na_matriz": "OPTATIVO",
+      "pre_requisito": "ENE0277 OU (FGA0073 E FGA0071)",
+      "co_requisito": "FGA0074",
+      "inicio_vigencia_co": "2019-08-01"
+    },
+    {
+      "codigo": "FGA0074",
+      "nome": "TEORIA DE ELETRÔNICA DIGITAL 2",
+      "carga_horaria": 60,
+      "tipo_na_matriz": "OPTATIVO",
+      "pre_requisito": "ENE0277 OU (FGA0073 E FGA0071)",
+      "co_requisito": "FGA0072",
+      "inicio_vigencia_co": "2019-08-01"
+    },
+    {
+      "codigo": "MAT0138",
+      "nome": "CÁLCULO 2 - SEMIPRESENCIAL",
+      "carga_horaria": 90,
+      "pre_requisito": "MAT0025 OU MAT0137",
+      "equivalencia": "MAT0026",
+      "inicio_vigencia_equivalencia": "2019-08-01"
+    },
+    {
+      "codigo": "ENE0277",
+      "nome": "SISTEMAS DIGITAIS 1",
+      "carga_horaria": 90,
+      "tipo_na_matriz": "OPTATIVO",
+      "uso": "Aprovação de entrada para isolar o co-requisito em CT-02; não julgar o histórico anterior deste componente."
     }
   ],
-  "limites": "Lista de obrigatórias; cadeias de seletividade, oferta e regras das optativas não integralmente verificadas."
+  "limites": "Lista de obrigatórias; cadeias de seletividade, oferta e regras das optativas não integralmente verificadas.",
+  "evidencias_publicas": [
+    "docs/fases/fase3/img/regra-correquisito.png",
+    "docs/fases/fase3/img/catalogo-equivalente.png",
+    "docs/fases/fase3/img/matriz-sigaa.png",
+    "docs/fases/fase3/img/regra-correquisito-teoria.png",
+    "docs/fases/fase3/img/equivalencia-mat0138.png",
+    "docs/fases/fase3/img/regra-calculo2.png"
+  ]
 }

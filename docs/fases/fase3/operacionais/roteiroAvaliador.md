@@ -6,7 +6,7 @@ Conferir [ambiente e massa](ambienteERecursos.md), registrar responsável e exec
 
 ## 2. Usabilidade
 
-1. Carregar o perfil sintético validado e abrir **Planejar formatura**.
+1. Conferir o histórico oficial autorizado carregado e abrir **Planejar formatura**.
 2. **T1:** localizar a previsão e os semestres restantes; registrar onde aparecem e eventuais dificuldades.
 3. **T2:** localizar matérias críticas e explicações; verificar termos, cores, legendas e relação com o grafo.
 4. **T3:** anotar o crédito inicial, alterar de 24 para um valor permitido, observar recálculo e tentar retornar ao valor inicial. Conferir também unidade Horas/Créditos e prevenção de entradas inválidas, sem presumir os limites do campo.
@@ -15,7 +15,7 @@ Conferir [ambiente e massa](ambienteERecursos.md), registrar responsável e exec
 ## 3. Segurança
 
 1. **SCA:** registrar inventário, ferramenta, base e relatório bruto; extrair achados e calcular IRP, com cobertura explícita.
-2. **Storage:** capturar os três estados definidos no [método](metodos.md), contar chaves com dados sintéticos em claro e preservar evidências sem tokens.
+2. **Storage:** capturar os três estados definidos no [método](metodos.md), contar chaves com dados pessoais/acadêmicos em claro, sem publicar seus valores e preservar evidências sem tokens.
 3. **API:** observar a chamada positiva real no Network, validar operação protegida e só então executar a matriz negativa. Registrar status e comportamento, distinguindo erro de execução e acesso indevido.
 
 ## 4. Encerramento

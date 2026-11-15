@@ -1,1 +1,1 @@
-execucao_id,avaliador,perfil,tarefa,item,conforme,severidade,descricao,evidencia,justificativa_consenso
+execucao_id,avaliador,entrada_id,cenario_id,tarefa,item,conforme,severidade,descricao,evidencia,justificativa_consenso

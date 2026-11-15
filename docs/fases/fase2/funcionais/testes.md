@@ -1,6 +1,6 @@
 # Protocolo de coleta — Métricas funcionais
 
-Todos os casos usam históricos sintéticos. Antes de executar, definir o resultado esperado com base em regra oficial ou comportamento documentado. Registrar versão/commit, matriz e fonte curricular, entradas, plano gerado, cálculo e evidências. Uma hipótese não confirmada não deve ser classificada automaticamente como defeito.
+Os casos usam o histórico oficial autorizado H0 e os cenários C0–C5 definidos no [roteiro da Fase 3](../../fase3/funcionais/roteiro.md). Condições ausentes na entrada serão declaradas como não cobertas, sem fabricar outros históricos. Antes de executar, definir o resultado esperado com base em regra oficial ou comportamento documentado. Registrar versão/commit, matriz e fonte curricular, entradas, plano gerado, cálculo e evidências. Uma hipótese não confirmada não deve ser classificada automaticamente como defeito.
 
 A [regra de julgamento do GQM](GQM.md#31-regras-de-referencia-e-julgamento) define as fontes necessárias. Sem regra identificada, o caso permanece Pendente de especificação; erro de coleta é Inconclusivo.
 
@@ -23,7 +23,7 @@ A [regra de julgamento do GQM](GQM.md#31-regras-de-referencia-e-julgamento) defi
 | Caso, data/hora e responsável | `CT-__`; [preencher] |
 | Commit/versão e ambiente | [preencher] |
 | Matriz, versão da fonte e regra | [preencher] |
-| Identificador do histórico sintético | [preencher; sem dados pessoais reais] |
+| Entrada e cenário | H0 / C__; [identificadores, sem dados pessoais] |
 | Resultado esperado (pré-definido) | [preencher] |
 | Resultado observado | [preencher] |
 | Métrica(s) e cálculo | [preencher] |
@@ -38,3 +38,4 @@ A [regra de julgamento do GQM](GQM.md#31-regras-de-referencia-e-julgamento) defi
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Revisão do foco GQM e dos papéis da equipe. | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento dos estados de execução às regras do GQM | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da entrada autorizada e das condições de avaliação | 15/11 | Não commitado |

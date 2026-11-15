@@ -12,7 +12,7 @@
 | Interface operável | Q-OP-01 | TCH | T1–T3 e checklist | Folhas individuais e consenso |
 | Problemas de uso identificados | Q-OP-01 | ISVH | Classificação de severidade | Descrição, evidência e justificativa |
 | Riscos em componentes conhecidos | Q-OP-02 | IRP | SCA e inventário | Relatório bruto, achados e cobertura |
-| Proteção dos dados no cliente | Q-OP-02 | GED-C | Inspeção em três estados | Chaves sintéticas e mecanismo inspecionado |
+| Proteção dos dados no cliente | Q-OP-02 | GED-C | Inspeção em três estados | Chaves/mecanismos inspecionados, com valores pessoais ocultados |
 | Acesso restrito quando exigido | Q-OP-02 | TBR | Chamada positiva e bateria negativa | Requisito, alvo validado, respostas e comportamento |
 
 Os procedimentos funcionais estão no [roteiro](../funcionais/roteiro.md); os operacionais, nos [métodos](metodos.md). Os modelos ficam em `testes/modelos_coleta/`. Cada execução deve apontar o arquivo efetivo, não apenas a pasta prevista. As metas e a agregação permanecem na Fase 2.

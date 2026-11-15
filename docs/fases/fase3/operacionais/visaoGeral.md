@@ -7,7 +7,7 @@ A avaliação observa a interface `/plano-formatura`, os componentes cliente rec
 ## 2. Critérios de entrada
 
 1. Conta de teste e ambiente registrados; autorização para os testes de API informada pelo usuário.
-2. Perfil sintético carregado e conferido, com forma de entrada documentada.
+2. Histórico oficial autorizado carregado e conferido, com dados e forma de entrada registrados sem exposição pública.
 3. Dois avaliadores de usabilidade identificados e alinhados quanto ao checklist e à severidade.
 4. Ferramentas e evidências previstas por métrica. Para API, requisito, rota e chamada positiva validados.
 
@@ -17,11 +17,11 @@ Critérios específicos podem liberar uma frente sem liberar as demais. A explor
 
 Cada medida tem coleta válida, evidência e cálculo ou uma pendência justificada. Usabilidade exige folhas individuais e consenso. Segurança exige cobertura e limitações explícitas; arquivo ausente e HTTP 405 não são resultados favoráveis nem prova de vulnerabilidade.
 
-O julgamento conjunto segue a [Fase 2](../../fase2/operacionais/visaoGeral.md#22-regra-de-julgamento-conjunto). A conclusão da fase inclui revisar resultados e executar uma melhoria verificável na Fase 4; não confundir sua proposta com implementação comprovada.
+O julgamento conjunto segue a [Fase 2](../../fase2/operacionais/visaoGeral.md#22-regra-de-julgamento-conjunto). Na Fase 3, concluir os procedimentos e verificar sua viabilidade no piloto. Julgar resultados e executar/verificar uma melhoria pertencem à Fase 4; não confundir proposta com implementação comprovada.
 
 ## 4. Preservação
 
-Os modelos de registro estão em `testes/modelos_coleta/`. Na coleta definitiva, criar pastas por execução em `testes/evidencias/`, com identificador, perfil e data. Não publicar dados pessoais, cookies de sessão ou tokens. Guardar registros do piloto separados da coleta formal.
+Os modelos de registro estão em `testes/modelos_coleta/`. Na coleta definitiva, criar pastas por execução em `testes/evidencias/`, com identificador, entrada/cenário e data. Não publicar dados pessoais, cookies de sessão ou tokens. Guardar registros do piloto separados da coleta formal.
 
 ---
 

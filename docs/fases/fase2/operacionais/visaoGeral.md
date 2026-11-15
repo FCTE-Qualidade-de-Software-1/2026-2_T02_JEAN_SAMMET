@@ -18,7 +18,7 @@ As métricas operacionais derivam das definições da Fase 1:
   - *Usabilidade:* Prioridade 3 (12 pts) — Operabilidade e Apreensibilidade.
 - **Escopo e Limites ([Escopo](../../fase1/escopo.md)):**
   - Foco na interface SvelteKit (`/plano-formatura`), armazenamento no cliente (`localStorage`), endpoint `POST /planejamento/gerar-plano` e dependências via Retire.js no cliente e, quando disponíveis, manifestos públicos via `npm audit`.
-  - Exclui testes invasivos/destrutivos; uso exclusivo de dados sintéticos.
+  - Exclui testes invasivos/destrutivos; uso de dados autorizados, com evidências sanitizadas.
 
 ---
 
@@ -56,7 +56,7 @@ H-OP-02 é confirmada no componente com IRP válido acima de 5 ou classificado C
 | **Propósito** | **Avaliar** |
 | **Foco de Qualidade** | **Usabilidade** e **Segurança** (ISO/IEC 25010). |
 | **Ponto de Vista** | **equipe de desenvolvedores**. |
-| **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e inspeção dos componentes disponíveis. |
+| **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, histórico oficial autorizado e inspeção dos componentes disponíveis. |
 
 ### 3.2 Questões de Medição (Nível Operacional)
 

@@ -1,5 +1,7 @@
 # Ação de Melhoria — Métricas Operacionais (Fase 4)
 
+> **Registros anteriores, pendentes de revalidação.** Esta página foi elaborada antes do plano revisado. Seus resultados e conclusões não demonstram execução dos cenários H0/C0–C5. Reaplicar os [critérios da Fase 2](../../fase2/operacionais/seguranca.md) e conferir as [pendências do piloto](../../fase3/piloto.md): HTTP 405 não prova acesso indevido; contagens zero não demonstram cobertura nem conformidade legal. A melhoria descrita precisa ter sua implementação verificada.
+
 Este documento especifica a **Ação de Melhoria concreta** decorrente da avaliação prática de qualidade segundo o processo **ISO/IEC 25040:2011/2024**, priorizada a partir dos dados brutos e do julgamento das métricas operacionais na Fase 4.
 
 ---
@@ -95,4 +97,4 @@ Esta Ação de Melhoria cumpre diretamente os requisitos da **ISO/IEC 25040 (Ati
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da ação de melhoria de usabilidade, prototipação em SvelteKit e projeção de impacto nas métricas | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
-
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Identificação dos resultados anteriores como pendentes de revalidação | 15/11 | Não commitado |

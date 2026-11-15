@@ -6,9 +6,9 @@ Protocolo de medição e registro das condições experimentais para as métrica
 
 ## 1. Diretrizes de Reprodutibilidade
 
-1. **Dados Sintéticos:** histórico acadêmico fictício sem dados pessoais reais (em conformidade com a LGPD e o [Escopo](../../fase1/escopo.md)).
-2. **Isolamento:** testes executados em abas anônimas e sem extensões de navegador ativas.
-3. **Registro Auditável:** geração de planilhas de observação, dumps de armazenamento e relatórios JSON de auditoria.
+1. **Entrada autorizada:** histórico oficial H0, conforme o [plano da Fase 3](../../fase3/planoAvaliacao.md). Manter PDF e dados pessoais fora do repositório; publicar somente evidências sanitizadas. Isso não constitui conclusão de conformidade legal.
+2. **Controle do ambiente:** registrar o perfil do navegador, autenticação, extensões e condições efetivas; manter as mesmas condições nas comparações. A exploração ocorreu em perfil normal, não em sessão anônima certificada.
+3. **Registro Auditável:** geração de planilhas de observação, registros sanitizados de armazenamento e relatórios JSON de auditoria.
 
 ---
 
@@ -20,10 +20,10 @@ Protocolo de medição e registro das condições experimentais para as métrica
 | **Commit / Instância** | Commit do código/manifesto e URL da instância, registrados separadamente; declarar se a versão implantada for desconhecida |
 | **Hardware** | Processador, Memória RAM e Arquitetura |
 | **Sistema Operacional** | Linux Ubuntu (22.04 LTS+) / Windows 11 / macOS |
-| **Navegador** | Google Chrome (versão estável mais recente, 64 bits) |
-| **Resolução** | 1920 × 1080 (Full HD, maximizado) |
+| **Navegador** | Google Chrome; registrar versão efetivamente utilizada |
+| **Resolução** | Registrar resolução, viewport e zoom efetivamente utilizados; não presumir Full HD |
 | **Rede** | Banda larga fixa (registrar ping e taxas de download/upload) |
-| **Avaliador** | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) |
+| **Avaliador** | Registrar responsável por execução; usabilidade exige dois avaliadores e consenso |
 
 ---
 
@@ -32,28 +32,28 @@ Protocolo de medição e registro das condições experimentais para as métrica
 A inspeção é realizada diretamente pela equipe avaliadora, dispensando o recrutamento de voluntários externos. Os avaliadores aplicam o checklist ergonômico de 10 itens baseado nas Heurísticas de Nielsen e consolidam consensualmente os resultados.
 
 ### 3.1 Procedimento de Inspeção Interna
-1. **Preparação:** Abrir a aplicação No Fluxo UnB no ambiente controlado com o histórico sintético carregado.
-2. **Inspeção Individual:** Cada avaliador percorre a tela `/plano-formatura` executando as tarefas de referência ($T_1$: localizar previsão, $T_2$: interpretar críticas, $T_3$: ajustar créditos).
+1. **Preparação:** Abrir a aplicação No Fluxo UnB no ambiente controlado com o histórico autorizado carregado.
+2. **Inspeção Individual:** Cada avaliador percorre a tela `/plano-formatura` executando as tarefas de referência (`T1`: localizar previsão, `T2`: interpretar críticas, `T3`: ajustar créditos).
 3. **Avaliação por Item:** Para cada um dos 10 itens do checklist, registrar:
    - **Situação:** Conforme (1) ou Não Conforme (0).
    - **Severidade da Violação (se Não Conforme):** 1 (Cosmético), 2 (Menor), 3 (Maior) ou 4 (Catastrófico).
-4. **Sessão de Consenso:** Os avaliadores debatem divergências e fecham as pontuações consolidadas da `MET-OP-01` ($TCH$) e `MET-OP-01b` ($ISVH$).
+4. **Sessão de Consenso:** Os avaliadores debatem divergências e fecham as pontuações consolidadas da `MET-OP-01` (`TCH`) e `MET-OP-01b` (`ISVH`).
 
 ### 3.2 Planilha de Registro de Inspeção Heurística
 
 | Item (#) | Heurística Avaliada | Tarefa | Conforme? (1/0) | Severidade (1–4) | Problema Identificado / Evidência `H-OP-01` |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-| **01** | Visibilidade do estado | $T_3$ | [1 / 0] | [— / 1–4] | [Feedback visual ao alterar créditos] |
-| **02** | Correspondência com o mundo real | $T_2$ | [1 / 0] | [— / 1–4] | [Clareza da expressão "matérias críticas"] |
-| **03** | Controle e liberdade do usuário | $T_3$ | [1 / 0] | [— / 1–4] | [Facilidade para desfazer ou resetar] |
-| **04** | Consistência e padrões | $T_1, T_2$ | [1 / 0] | [— / 1–4] | [Padrão de cores e formas dos nós] |
-| **05** | Prevenção de erros | $T_3$ | [1 / 0] | [— / 1–4] | [Validação de limites no input de créditos] |
-| **06** | Reconhecimento em vez de memorização | $T_1$ | [1 / 0] | [— / 1–4] | [Destaque visual do card de formatura] |
-| **07** | Flexibilidade e eficiência de uso | $T_1, T_2$ | [1 / 0] | [— / 1–4] | [Zoom, arrasto e atalhos de visualização] |
-| **08** | Design estético e minimalista | $T_1, T_2$ | [1 / 0] | [— / 1–4] | [Poluição visual e nós sobrepostos] |
-| **09** | Auxílio no diagnóstico e correção de erros | $T_3$ | [1 / 0] | [— / 1–4] | [Alertas de incompatibilidade curricular] |
-| **10** | Ajuda e documentação | $T_2$ | [1 / 0] | [— / 1–4] | [Tooltips explicativos sobre regras do plano] |
-| **Consolidado** | **Taxa $TCH$ e Índice $ISVH$** | — | **[Total]/10** | **Soma $ISVH$** | **Status: [Excelente / Aceitável / Crítico]** |
+| **01** | Visibilidade do estado | `T3` | [1 / 0] | [— / 1–4] | [Feedback visual ao alterar créditos] |
+| **02** | Correspondência com o mundo real | `T2` | [1 / 0] | [— / 1–4] | [Clareza da expressão "matérias críticas"] |
+| **03** | Controle e liberdade do usuário | `T3` | [1 / 0] | [— / 1–4] | [Facilidade para desfazer ou resetar] |
+| **04** | Consistência e padrões | `T1, T2` | [1 / 0] | [— / 1–4] | [Padrão de cores e formas dos nós] |
+| **05** | Prevenção de erros | `T3` | [1 / 0] | [— / 1–4] | [Validação de limites no input de créditos] |
+| **06** | Reconhecimento em vez de memorização | `T1` | [1 / 0] | [— / 1–4] | [Destaque visual do card de formatura] |
+| **07** | Flexibilidade e eficiência de uso | `T1, T2` | [1 / 0] | [— / 1–4] | [Zoom, arrasto e atalhos de visualização] |
+| **08** | Design estético e minimalista | `T1, T2` | [1 / 0] | [— / 1–4] | [Poluição visual e nós sobrepostos] |
+| **09** | Auxílio no diagnóstico e correção de erros | `T3` | [1 / 0] | [— / 1–4] | [Alertas de incompatibilidade curricular] |
+| **10** | Ajuda e documentação | `T2` | [1 / 0] | [— / 1–4] | [Tooltips explicativos sobre regras do plano] |
+| **Consolidado** | **Taxa `TCH` e Índice `ISVH`** | — | **[Total]/10** | **Soma `ISVH`** | **Status: [Excelente / Aceitável / Crítico]** |
 
 ---
 
@@ -88,9 +88,9 @@ Retire.js cobre as bibliotecas reconhecidas no cliente; não substitui a auditor
 
 ### 5.1 Armazenamento no cliente
 
-1. Em sessão limpa, carregar o histórico sintético e gerar o plano; autenticar se o fluxo exigir.
+1. Em sessão limpa, carregar o histórico autorizado e gerar o plano; autenticar se o fluxo exigir.
 2. Inspecionar `localStorage`, `sessionStorage` e cookies em **DevTools > Application**.
-3. Registrar chaves e valores sintéticos com evidências. Verificar `HttpOnly` e `Secure` no painel de cookies; não usar `document.cookie` para concluir sobre cookies HttpOnly.
+3. Registrar origem, mecanismo, chaves e tipo de conteúdo com evidências sanitizadas; não publicar valores pessoais ou tokens. Verificar `HttpOnly` e `Secure` no painel de cookies; não usar `document.cookie` para concluir sobre cookies HttpOnly.
 4. Contar as chaves com dados pessoais ou acadêmicos em claro. Se o fluxo ou a inspeção estiver incompleto, registrar Inconclusivo.
 
 ### 5.2 Controle de acesso

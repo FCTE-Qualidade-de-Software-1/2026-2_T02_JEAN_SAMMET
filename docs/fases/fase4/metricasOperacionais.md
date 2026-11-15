@@ -1,5 +1,7 @@
 # Execução e Conclusão da Avaliação — Métricas Operacionais (Fase 4)
 
+> **Registros anteriores, pendentes de revalidação.** Esta página foi elaborada antes do plano revisado. Seus resultados e conclusões não demonstram execução dos cenários H0/C0–C5. Reaplicar os [critérios da Fase 2](../fase2/operacionais/seguranca.md) e conferir as [pendências do piloto](../fase3/piloto.md): HTTP 405 não prova acesso indevido; contagens zero não demonstram cobertura nem conformidade legal. A melhoria descrita precisa ter sua implementação verificada.
+
 Este documento centraliza e sintetiza os resultados da **Fase 4 — Executar e Concluir a Avaliação** do processo **ISO/IEC 25040:2011/2024**, apresentando os **dados brutos coletados**, a **análise comparativa com os critérios de julgamento da Fase 2**, a **validação das hipóteses operacionais** e a **ação de melhoria proposta**.
 
 Toda a avaliação foi realizada sob a abordagem **estritamente Caixa-Preta (*Black-Box Testing*)** sobre a aplicação pública em produção `https://no-fluxo.crianex.com`, sem necessidade de acesso ao código-fonte interno.
@@ -41,4 +43,4 @@ Toda a avaliação foi realizada sob a abordagem **estritamente Caixa-Preta (*Bl
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da página principal da Fase 4 para métricas operacionais e consolidação dos resultados | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
-
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Identificação dos resultados anteriores como pendentes de revalidação | 15/11 | Não commitado |

@@ -8,7 +8,7 @@
 | **Propósito** | Avaliar a adequação funcional dos planos gerados. |
 | **Foco** | Correção e completude funcional. |
 | **Ponto de vista** | Estudantes e equipe responsável pelo produto. |
-| **Contexto** | Aplicação web, matriz de Engenharia de Software da FGA/UnB e históricos sintéticos, com regras curriculares oficiais como referência. |
+| **Contexto** | Aplicação web, matriz de Engenharia de Software da FGA/UnB e histórico oficial autorizado, mantido fora do repositório, com regras curriculares oficiais como referência. |
 
 ## 2. Diagrama GQM
 
@@ -72,7 +72,7 @@ As hipóteses devem ser verificadas pelos cenários `CT-01` a `CT-07`, respectiv
 
 No plano da Fase 3, cada CT deve apontar a fonte, a regra e o resultado esperado antes da execução. Sem referência suficiente, registrar **Pendente de especificação**, sem presumir sucesso ou defeito.
 
-Com dados válidos, classificar como Conforme quando a meta da ficha for atendida e Não conforme quando houver divergência comprovada. Usar Não aplicável apenas quando a regra conhecida não se aplicar ao cenário; falha de coleta é Inconclusivo. Informar cobertura e casos pendentes ao responder cada questão. Uma questão com várias métricas só recebe resposta favorável se todas as aplicáveis atenderem às metas.
+Com dados válidos, classificar como Conforme quando a meta da ficha for atendida e Não conforme quando houver divergência comprovada. Usar Não aplicável apenas quando a regra conhecida não se aplicar ao cenário; falha de coleta é Inconclusivo. Informar cobertura e casos pendentes ao responder cada questão. Denominador zero não significa aprovação: usar Não aplicável somente quando uma regra conhecida não se aplicar à entrada; falta de cenário, referência ou evidência permanece sem avaliação, pendente ou inconclusiva, conforme a causa. Uma questão com várias métricas só recebe resposta favorável se todas as aplicáveis atenderem às metas.
 
 ## 4. Definição das métricas
 
@@ -80,15 +80,15 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 
 - **Definição:** percentual de relações aplicáveis violadas — a disciplina dependente é planejada antes de o pré-requisito ser satisfeito, sem equivalência ou exceção válida.
 - **Cálculo:** `TVP = (NVP / NRP) × 100`. `NVP` = relações violadas; `NRP` = relações aplicáveis verificadas. Registrar também `NVP`.
-- **Dados e coleta:** matriz oficial versionada, regras, histórico sintético e plano gerado. Comparar a situação do pré-requisito com o semestre da disciplina dependente (`CT-01`).
-- **Meta e condições:** `TVP = 0%`. Só avaliar relações respaldadas por fonte identificável; se `NRP = 0`, registrar como não aplicável.
+- **Dados e coleta:** matriz oficial versionada, regras, histórico autorizado e plano gerado. Comparar a situação do pré-requisito com o semestre da disciplina dependente (`CT-01`).
+- **Meta e condições:** `TVP = 0%`. Só avaliar relações respaldadas por fonte identificável; se `NRP = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1.
 
 ### `MET-FUN-02` — Violações de co-requisitos
 
 - **Definição:** percentual de relações de co-requisito não atendidas conforme a regra curricular, considerando se a satisfação deve ocorrer simultaneamente ou pode ser prévia.
 - **Cálculo:** `TVC = (NVC / NRC) × 100`. `NVC` = relações violadas; `NRC` = relações aplicáveis verificadas. Registrar também `NVC`.
-- **Dados e coleta:** co-requisitos da matriz oficial, histórico sintético e plano por semestre; testar pares pendentes e, quando aplicável, casos em que uma disciplina já foi concluída (`CT-02`).
-- **Meta e condições:** `TVC = 0%`. A regra deve vir de fonte oficial; se `NRC = 0`, registrar como não aplicável. A hipótese de falha documentada ainda precisa ser testada.
+- **Dados e coleta:** co-requisitos da matriz oficial, histórico autorizado e plano por semestre; testar pares pendentes e, quando aplicável, casos em que uma disciplina já foi concluída (`CT-02`).
+- **Meta e condições:** `TVC = 0%`. A regra deve vir de fonte oficial; se `NRC = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1. A hipótese de falha documentada ainda precisa ser testada.
 
 ### `MET-FUN-03` — Cobertura de disciplinas obrigatórias pendentes
 
@@ -101,19 +101,19 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 
 - **Definição:** percentual de verificações em que o estado considerado pelo plano diverge do esperado para disciplinas aprovadas, pendentes ou em andamento.
 - **Cálculo:** `TDH = (NDH / NVH) × 100`. `NDH` = divergências confirmadas; `NVH` = verificações válidas de status.
-- **Dados e coleta:** histórico sintético, regras documentadas e plano/interface; comparar o estado esperado e o observado (`CT-04`).
-- **Meta e condições:** `TDH = 0%` de divergências não justificadas. A documentação informa que disciplinas em andamento são consideradas aprovadas no planejamento futuro; registrar esse comportamento sem classificá-lo automaticamente como defeito. Se `NVH = 0`, registrar como não aplicável.
+- **Dados e coleta:** histórico autorizado, regras documentadas e plano/interface; comparar o estado esperado e o observado (`CT-04`).
+- **Meta e condições:** `TDH = 0%` de divergências não justificadas. Confirmar a política de projeção de disciplinas em andamento antes do julgamento; não confundir aprovação projetada com aprovação acadêmica real nem presumir defeito sem regra identificada. Se `NVH = 0`, registrar como não aplicável.
 
 ### `MET-FUN-05` — Aplicação incorreta de equivalências
 
 - **Definição:** percentual de verificações em que a disciplina satisfeita, a substituta ou o efeito nas pendências diverge da equivalência oficial válida para a matriz e sua vigência.
 - **Cálculo:** `TAE = (NEI / NRE) × 100`. `NEI` = aplicações incorretas; `NRE` = relações aplicáveis verificadas.
 - **Dados e coleta:** fonte oficial de equivalências, matriz/vigência, histórico e plano; testar casos diretos e casos encadeados ou entre matrizes apenas quando houver respaldo documental (`CT-05`).
-- **Meta e condições:** `TAE = 0%`. Sem fonte oficial versionada, a avaliação fica pendente de especificação; se `NRE = 0`, registrar como não aplicável. A hipótese de expansão em uma única passagem orienta os testes, mas não substitui a regra oficial.
+- **Meta e condições:** `TAE = 0%`. Sem fonte oficial versionada, a avaliação fica pendente de especificação; se `NRE = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1. A hipótese de expansão em uma única passagem orienta os testes, mas não substitui a regra oficial.
 
 ### `MET-FUN-06` — Conformidade das opções do onboarding
 
-- **Definição:** percentual de expectativas verificáveis atendidas para as opções de trabalho/estágio, objetivo do planejamento e limite de créditos (8 a 32), conforme o comportamento documentado.
+- **Definição:** percentual de expectativas verificáveis atendidas para as opções de trabalho/estágio, objetivo do planejamento e limite de créditos oferecido pela interface, com valores aceitos confirmados no piloto.
 - **Cálculo:** `COO = (NEC / NEV) × 100`. `NEC` = expectativas atendidas; `NEV` = expectativas previamente especificadas e testadas.
 - **Dados e coleta:** requisitos e textos da interface, código da versão avaliada e planos de cenários pareados. Manter o histórico fixo e alterar uma opção por vez (`CT-06`).
 - **Meta e condições:** `COO = 100%`. Não presumir que toda opção deva alterar as disciplinas selecionadas; comparar o efeito documentado. Não comparar diretamente créditos com o limite interno de 480 horas por semestre. Campo sem comportamento esperado é lacuna de especificação; se `NEV = 0`, manter a métrica pendente.
@@ -123,7 +123,7 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Definição:** percentual de verificações que violam restrições documentadas, como oferta de disciplinas, semestre inicial e limite de carga.
 - **Cálculo:** `TVS = (NVS / NRS) × 100`. `NVS` = violações confirmadas; `NRS` = verificações válidas. Calcular por tipo de restrição quando as unidades ou fontes diferirem.
 - **Dados e coleta:** calendário e oferta oficiais, limite informado, histórico e plano; comparar cada alocação com a regra aplicável (`CT-07`). Se a consulta ao período letivo falhar, conferir o semestre estimado contra o calendário oficial.
-- **Meta e condições:** `TVS = 0%`. Confirmar a fonte e a forma de aferição da carga. Créditos e horas não são equivalentes sem conversão documentada; se `NRS = 0`, registrar como não aplicável.
+- **Meta e condições:** `TVS = 0%`. Confirmar a fonte e a forma de aferição da carga. Créditos e horas não são equivalentes sem conversão documentada; se `NRS = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1.
 
 ## Histórico de versão
 
@@ -133,3 +133,4 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Consistência do foco GQM e revisão de referências a papéis da equipe. | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção do objetivo duplicado e definição das referências para julgamento | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da entrada autorizada e das condições de avaliação | 15/11 | Não commitado |

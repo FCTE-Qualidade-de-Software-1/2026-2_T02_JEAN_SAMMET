@@ -1,5 +1,7 @@
 # Catálogo de Dados Brutos e Evidências da Avaliação (Fase 4)
 
+> **Registros anteriores, pendentes de revalidação.** Esta página foi elaborada antes do plano revisado. Seus resultados e conclusões não demonstram execução dos cenários H0/C0–C5. Reaplicar os [critérios da Fase 2](../../fase2/operacionais/seguranca.md) e conferir as [pendências do piloto](../../fase3/piloto.md): HTTP 405 não prova acesso indevido; contagens zero não demonstram cobertura nem conformidade legal. A melhoria descrita precisa ter sua implementação verificada.
+
 Este documento cataloga, descreve e disponibiliza os **dados brutos coletados** durante a execução prática da avaliação das métricas operacionais, assegurando a **rastreabilidade, auditabilidade e reprodutibilidade** exigidas pela **ISO/IEC 25040:2011/2024** e pela Premissa 5 do projeto.
 
 Todos os dados brutos encontram-se versionados no repositório oficial na pasta `testes/evidencias/`.
@@ -106,3 +108,4 @@ Execução automatizada da suíte de 10 requisições negativas não autenticada
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Catálogo e documentação completa dos dados brutos das avaliações de Usabilidade e Segurança | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Identificação dos resultados anteriores como pendentes de revalidação | 15/11 | Não commitado |

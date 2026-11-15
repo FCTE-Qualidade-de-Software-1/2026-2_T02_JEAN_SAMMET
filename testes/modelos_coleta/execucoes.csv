@@ -1,1 +1,1 @@
-execucao_id,tipo_coleta,caso,perfil,responsavel,data_hora_fuso,url,versao_conhecida,navegador,sistema,viewport,zoom,fonte_regra,resultado_esperado,resultado_observado,evidencia,numerador,denominador,valor,classificacao,justificativa
+execucao_id,tipo_coleta,caso,entrada_id,cenario_id,responsavel,data_hora_fuso,url,versao_conhecida,navegador,sistema,viewport,zoom,fonte_regra,resultado_esperado,resultado_observado,evidencia,numerador,denominador,valor,classificacao,justificativa

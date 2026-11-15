@@ -6,14 +6,16 @@ As horas abaixo são estimativas de planejamento, não esforço já realizado. A
 
 | Ordem | Atividade | Dependência | Responsável | Esforço estimado |
 |---|---|---|---|---|
-| 1 | Conferir fontes, perfis e entrada no site | — | Gustavo, proposta a confirmar | 2h |
-| 2 | Concluir piloto sintético e ajustar roteiro | 1 | Gustavo, proposta a confirmar | 2h |
+| 1 | Conferir fontes, entrada H0 e cenários no site | — | Gustavo, proposta a confirmar | 2h |
+| 2 | Concluir piloto com histórico autorizado e ajustar roteiro | 1 | Gustavo, proposta a confirmar | 2h |
 | 3 | Executar CT-01 a CT-07 nos casos liberados | 2 e fontes de cada CT | Frente funcional, nomes a definir | 4h |
 | 4 | Duas inspeções heurísticas e consenso | 2 | Dois avaliadores a definir; mediação proposta: Giovani | 4h |
 | 5 | SCA, storage e API válida | 2 e pré-condições por método | Giovani, conforme plano anterior; confirmar | 4h |
 | 6 | Consolidar dados e responder GQM | 3–5 | Equipe | 3h |
 | 7 | Executar e verificar melhoria; atualizar artigo | 6 | Equipe | 4h |
 | **Total** | | | | **23h** |
+
+Gustavo informou aproximadamente **7h já realizadas** na preparação da Fase 3. Esse apontamento parcial está no [PSM — Recursos e Custos](../../../gestaoProjeto/painel.md#esforco-adicional-fase-3-em-andamento), separado das estimativas e dos registros anteriores. Não significa que a preparação esteja concluída.
 
 As atividades 3–7 são da Fase 4. Registrar horas reais e decisões no PSM/CID durante a execução. Atribuições propostas não significam que os integrantes já aceitaram as tarefas.
 
@@ -24,7 +26,7 @@ As atividades 3–7 são da Fase 4. Registrar horas reais e decisões no PSM/CID
 | Site indisponível ou automação interrompida | Registrar a interrupção, tentar novamente depois e manter o caso inconclusivo. Não trocar por build local sem identificar a nova versão e o ambiente. |
 | Regra curricular ausente | Manter o caso pendente; não usar o comportamento do produto como única referência do resultado correto. |
 | Mudança na produção | Separar execuções por data/versão verificável; preservar a evidência observada. |
-| Perfil não aceito pelo importador | Validar preenchimento manual ou preparar PDF totalmente sintético; não renomear JSON como PDF. |
+| Perfil não aceito pelo importador | Usar histórico oficial autorizado; só variar disciplinas por edição suportada pelo site, se confirmada. Declarar os casos sem entrada viável. |
 | Divergência de severidade | Comparar evidências e justificar consenso; não descartar folhas individuais. |
 | Scanner ou script sem dados válidos | Corrigir instrumento ou apurar manualmente com conferência. Ausência não equivale a zero. |
 | Dados pessoais em evidência | Sanitizar antes de versionar; não publicar histórico pessoal nem credenciais. |

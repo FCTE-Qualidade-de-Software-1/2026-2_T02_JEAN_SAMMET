@@ -1,0 +1,17 @@
+[
+  {
+    "id": "F3-GUGOFO-20261115-01",
+    "data_registro": "2026-11-15",
+    "integrante": "Gustavo Fornaciari",
+    "github": "https://github.com/GUGOFO",
+    "fase": 3,
+    "issue": 7,
+    "horas_adicionais_realizadas": 7.0,
+    "aproximado": true,
+    "metodo": "Declaração retrospectiva do integrante nesta revisão; não cronometrada automaticamente",
+    "atividades": "Análise, revisão e preparação da Fase 3",
+    "valor_didatico_hora": 50.0,
+    "custo_equivalente": 350.0,
+    "limites": "Parcial de Gustavo; não representa todo o esforço da equipe nem conclusão da fase. Não somar novamente em atualizações cumulativas deste registro."
+  }
+]

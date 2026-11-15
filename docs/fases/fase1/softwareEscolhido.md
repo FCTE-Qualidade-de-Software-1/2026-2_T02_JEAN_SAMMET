@@ -102,7 +102,7 @@ flowchart TB
 |---|---|---|
 | **Adequação Funcional** | Comparar planos gerados para cenários controlados com uma matriz curricular e resultados esperados definidos previamente. | Que todos os planos, cursos, históricos ou combinações possíveis estão corretos. |
 | **Usabilidade** | Inspecionar possíveis dificuldades de operação e compreensão nas tarefas de referência, aplicando o checklist heurístico da equipe. | Que a inspeção mede diretamente o desempenho ou a aprendizagem de estudantes, ou que os resultados representam todos os usuários e dispositivos. |
-| **Segurança** | Fazer inspeção não invasiva do fluxo e dos controles observáveis, usando dados sintéticos e código público quando pertinente. | Que o sistema está livre de vulnerabilidades ou que passou por uma auditoria de segurança. |
+| **Segurança** | Fazer inspeção não invasiva do fluxo e dos controles observáveis, usando histórico autorizado, evidências sanitizadas e código público quando disponível. | Que o sistema está livre de vulnerabilidades ou que passou por uma auditoria de segurança. |
 
 ## 7. Restrições de execução
 

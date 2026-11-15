@@ -44,7 +44,7 @@ A inspeção heurística orienta-se pela verificação das 10 Heurísticas de Ni
 | **Definição** | Percentual de itens de verificação ergonômica atendidos satisfatoriamente pela interface `/plano-formatura` no checklist padronizado de inspeção. Unidade: percentual (%). |
 | **Cálculo** | `TCH = (Nconformes / Nitens) × 100`, com `Nitens = 10`. Usar os itens consolidados pelo protocolo. |
 | **Fonte** | Checklist padronizado de inspeção heurística preenchido consensualmente pelos avaliadores da equipe. |
-| **Coleta** | 1. Executar a aplicação com histórico sintético carregado.<br>2. Dois ou mais avaliadores inspecionam a interface executando os fluxos `T1`, `T2` e `T3`.<br>3. Avaliar cada item do checklist como Conforme (1) ou Não Conforme (0).<br>4. Consolidar os resultados em sessão de alinhamento e calcular a taxa final. |
+| **Coleta** | 1. Executar a aplicação com histórico autorizado carregado.<br>2. Dois ou mais avaliadores inspecionam a interface executando os fluxos `T1`, `T2` e `T3`.<br>3. Avaliar cada item do checklist como Conforme (1) ou Não Conforme (0).<br>4. Consolidar os resultados em sessão de alinhamento e calcular a taxa final. |
 | **Níveis de Julgamento** | - **Excelente:** `TCH ≥ 85%`.<br>- **Aceitável:** `70% ≤ TCH < 85%` (interface operável, com fricções pontuais de design).<br>- **Crítico:** `TCH < 70%`. |
 
 ---

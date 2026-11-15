@@ -1,0 +1,132 @@
+{
+  "versao_schema": "3.0",
+  "descricao": "Plano de cenários com o mesmo histórico oficial autorizado. Não contém dados acadêmicos pessoais, históricos fictícios ou resultados.",
+  "entrada": {
+    "id": "H0",
+    "origem": "Histórico oficial SIGAA/UnB já fornecido e autorizado pelo usuário",
+    "armazenamento": "Fora do repositório",
+    "matriz_referencia": "6360/1 — 2017.1",
+    "estado": "Conferência de importação e piloto pendentes"
+  },
+  "referencia_curricular": "testes/referencias/estrutura_6360_1.json",
+  "cenarios": [
+    {
+      "id": "C0",
+      "nome": "Base",
+      "entrada": "H0",
+      "limite_creditos": 24,
+      "horas_exibidas_a_conferir": 360,
+      "demais_preferencias": "Registrar os valores selecionados antes das variações"
+    },
+    {
+      "id": "C1",
+      "nome": "Carga menor",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": {
+        "limite_creditos": 20
+      },
+      "pre_condicao": "Confirmar valor aceito pelo controle no piloto"
+    },
+    {
+      "id": "C2",
+      "nome": "Carga maior",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": {
+        "limite_creditos": 32
+      },
+      "pre_condicao": "Confirmar valor aceito pelo controle no piloto"
+    },
+    {
+      "id": "C3",
+      "nome": "Trabalho/estágio",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Alternar a resposta de trabalho/estágio",
+      "limite": "Julgar efeito algorítmico somente quando especificado"
+    },
+    {
+      "id": "C4",
+      "nome": "Objetivo",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Alternar velocidade/equilíbrio",
+      "limite": "Julgar efeito algorítmico somente quando especificado"
+    },
+    {
+      "id": "C5",
+      "nome": "Quantidade de matérias",
+      "entrada": "H0",
+      "base": "C0",
+      "alterar_somente": "Comparar opções de 4/6/8 matérias, mantendo trabalho e objetivo fixos"
+    }
+  ],
+  "casos": [
+    {
+      "id": "CT-01",
+      "cenarios": [
+        "C0"
+      ],
+      "objeto": "Pré-requisitos pertinentes à entrada e ao plano",
+      "sem_dados": "Sem relações verificáveis, não calcular TVP"
+    },
+    {
+      "id": "CT-02",
+      "cenarios": [
+        "C0"
+      ],
+      "objeto": "Co-requisitos de par efetivamente presente/selecionado",
+      "sem_dados": "Declarar sem cobertura; seleção de optativas depende de recurso confirmado"
+    },
+    {
+      "id": "CT-03",
+      "cenarios": [
+        "C0"
+      ],
+      "objeto": "Diferença entre obrigatórias oficiais e satisfeitas na entrada real",
+      "denominador": "Quantidade efetiva de pendências, sem valor fixo"
+    },
+    {
+      "id": "CT-04",
+      "cenarios": [
+        "C0"
+      ],
+      "objeto": "Status presentes no histórico; comparação documento/interface/plano",
+      "sem_dados": "Informar categorias ausentes e política não especificada"
+    },
+    {
+      "id": "CT-05",
+      "cenarios": [
+        "C0"
+      ],
+      "objeto": "Equivalências efetivamente presentes e oficialmente confirmadas",
+      "sem_dados": "Declarar sem cobertura; não inventar aprovação"
+    },
+    {
+      "id": "CT-06",
+      "cenarios": [
+        "C0",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "objeto": "Preferências e expectativas especificadas"
+    },
+    {
+      "id": "CT-07",
+      "cenarios": [
+        "C0",
+        "C1",
+        "C2"
+      ],
+      "objeto": "Cargas e limites por semestre; oferta condicionada a fonte"
+    }
+  ],
+  "regras_execucao": [
+    "Não alterar registros acadêmicos para simular outros perfis sem recurso suportado e validado.",
+    "Restaurar C0 após cada variação.",
+    "Não publicar o PDF, matrícula, notas ou credenciais.",
+    "Os cenários não representam execuções concluídas nem estudantes distintos."
+  ]
+}

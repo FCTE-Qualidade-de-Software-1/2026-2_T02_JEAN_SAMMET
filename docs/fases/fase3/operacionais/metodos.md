@@ -2,7 +2,7 @@
 
 ## 1. Usabilidade — TCH e ISVH
 
-Dois avaliadores da equipe percorrem T1–T3 independentemente, com a mesma massa e ambiente, e preenchem os dez itens do [checklist da Fase 2](../../fase2/operacionais/usabilidade.md). Para cada violação, registrar descrição, tarefa, severidade 1–4 e evidência. Depois, consolidar em consenso, preservando notas individuais e justificativas de divergência.
+Dois avaliadores da equipe percorrem T1–T3 independentemente, com a mesma entrada autorizada e ambiente, e preenchem os dez itens do [checklist da Fase 2](../../fase2/operacionais/usabilidade.md). Para cada violação, registrar descrição, tarefa, severidade 1–4 e evidência. Depois, consolidar em consenso, preservando notas individuais e justificativas de divergência.
 
 `TCH = itens conformes / 10 × 100`. `ISVH = 4 × Ncatastrofico + 3 × Nmaior + 2 × Nmenor + Ncosmetico`. Os limites são os da Fase 2; não atribuir uma nota final a partir de uma única exploração.
 
@@ -14,13 +14,13 @@ Inspecionar os scripts efetivamente carregados no cliente, com Retire.js e inven
 
 ## 3. Armazenamento — GED-C
 
-Inspecionar `localStorage`, `sessionStorage` e cookies em três estados: sessão inicial, após carregar o perfil e após gerar o plano. Registrar origem, mecanismo, chave, conteúdo sintético e evidência. Contar cada chave com dado pessoal/acadêmico em claro uma vez. Verificar flags no painel de cookies, sem publicar seus valores de autenticação.
+Inspecionar `localStorage`, `sessionStorage` e cookies em três estados: sessão inicial, após carregar o histórico autorizado e após gerar o plano. Registrar origem, mecanismo, chave, tipo de conteúdo e evidência sanitizada. Identificar cada chave pela origem, mecanismo e nome; no consolidado, contar a mesma chave uma vez, mesmo se aparecer em vários estados. Contar apenas chaves com dado pessoal/acadêmico em claro, sem copiar os valores pessoais para a documentação. Verificar flags no painel de cookies, sem publicar seus valores de autenticação.
 
 `GED-C = quantidade de chaves com dados em claro`. Uma coleta parcial não pode receber Conforme. As flags de cookie não demonstram criptografia do conteúdo nem conformidade legal.
 
 ## 4. Acesso — TBR
 
-Primeiro observar no DevTools a chamada real usada ao gerar o plano. Confirmar a operação protegida, domínio, método, payload e chamada positiva autorizada. Somente depois executar os casos negativos, com conta e dados de teste.
+Primeiro observar no DevTools a chamada real usada ao gerar o plano. Confirmar a operação protegida, domínio, método, payload e chamada positiva autorizada. Somente depois executar os casos negativos, com a conta autorizada. Se a operação exigir dados acadêmicos, restringir o payload ao mínimo necessário já autorizado e não publicar seus valores.
 
 | Caso | Condição | Cuidados para validar o teste |
 |---|---|---|

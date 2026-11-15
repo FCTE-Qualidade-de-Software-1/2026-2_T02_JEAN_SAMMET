@@ -1,102 +1,110 @@
 # Análise dos Resultados e Julgamento — Métricas Funcionais (Fase 4)
 
-> **Conclusão desta versão: inconclusiva por ausência de execução formal.** As regras e os critérios estão definidos na Fase 2, mas não há linhas de verificação funcional na coleta da Fase 4 e o piloto não gerou um plano completo. Não calcular percentuais com denominador inexistente nem interpretar ausência de registro como resultado igual a zero.
-
 ## 1. Método de processamento
 
-A unidade de análise é a relação, disciplina pendente, verificação de status, equivalência, expectativa ou restrição efetivamente examinada no respectivo caso. Só compõem o denominador os registros com `conforme=1` ou `conforme=0`, evidência rastreável e fonte/regra identificada. Registros em branco, pendentes, não aplicáveis ou sem evidência são informados como cobertura ausente e não entram no cálculo.
+A avaliação segue as fórmulas e metas do [GQM da Fase 2](../../fase2/funcionais/GQM.md) e o [roteiro da Fase 3](../../fase3/funcionais/roteiro.md). Os resultados foram transcritos das análises de execução informadas pelo avaliador e das capturas mantidas em `testes/evidencias/funcionais/execucao-2026-11-15/`.
 
-As fórmulas e metas reproduzem o [GQM da Fase 2](../../fase2/funcionais/GQM.md). Para métricas de erro, `conforme=0` representa uma violação; para métricas de cobertura/conformidade, `conforme=1` representa uma unidade atendida. `MET-FUN-07` é calculada por tipo de restrição quando a fonte ou a unidade de aferição diferir.
+Para métricas de violação, `conforme=0` representa uma violação; para cobertura/conformidade, `conforme=1` representa atendimento. Só entram no cálculo linhas com classificação, identificação da unidade, regra/fonte e referência de evidência. `INCONCLUSIVO` não entra no denominador. Para os universos fixos de H0 (14 obrigatórias, 41 componentes e 7 equivalências), o processador exige uma linha válida por unidade para emitir percentual final.
 
-## 2. Cálculo e confronto das sete métricas
+A execução foi realizada no ambiente do avaliador. O registro anterior de falha DNS em `tentativa_acesso_aplicacao.log` é uma tentativa de pré-condição de outra execução e não invalida as capturas funcionais posteriormente fornecidas. Horário/fuso, navegador, sistema, viewport, zoom e versão do produto não foram informados; esses campos permanecem em branco/sem identificação no CSV, sem inferência.
 
-| Métrica | Fórmula | Meta da Fase 2 | Evidência válida nesta versão | Resultado / julgamento |
-| :---: | :--- | :---: | :---: | :--- |
-| `MET-FUN-01` — TVP | `(NVP / NRP) × 100` | `0%` | `NRP`: não disponível | **Não calculado — pendente de CT-01** |
-| `MET-FUN-02` — TVC | `(NVC / NRC) × 100` | `0%` | `NRC`: não disponível | **Não calculado — pendente de CT-02** |
-| `MET-FUN-03` — CDO | `(DPC / DOP) × 100` | `100%` | `DOP` e `DPC`: não disponíveis | **Não calculado — pendente de CT-03** |
-| `MET-FUN-04` — TDH | `(NDH / NVH) × 100` | `0%` | `NVH`: não disponível | **Não calculado — pendente de CT-04** |
-| `MET-FUN-05` — TAE | `(NEI / NRE) × 100` | `0%` | `NRE`: não disponível | **Não calculado — pendente de CT-05** |
-| `MET-FUN-06` — COO | `(NEC / NEV) × 100` | `100%` | `NEV`: não disponível; expectativas parciais | **Não calculado — pendente de especificação e CT-06** |
-| `MET-FUN-07` — TVS | `(NVS / NRS) × 100`, por tipo | `0%` | `NRS`: não disponível | **Não calculado — pendente de CT-07** |
+## 2. Linha de base H0
 
-Não há numerador igual a zero a reportar: os numeradores também não foram observados. Um denominador igual a zero ou ausente não representa aprovação e não autoriza classificar a métrica como Não aplicável, salvo quando a regra conhecida efetivamente não se aplica à entrada. Na situação atual, a falta do histórico carregado e do plano final é pendência de execução/coleta.
+| Fato | Valor | Uso |
+|---|---:|---|
+| Componentes curriculares com status | 46 | Universo de CT-04 |
+| Aprovados / matriculados / trancados | 33 / 7 / 1 | Estados esperados na importação |
+| Equivalências concluídas | 5 | Parte do universo CT-05 |
+| Equivalências em andamento | 2 | Não podem ser tratadas como concluídas |
+| Disciplinas obrigatórias pendentes | 14 (1.050h) | Denominador de CT-03 |
+| Cadeias de seletividade | 2 | Fora do denominador de CT-03 |
+| ENADE concluinte | 1 requisito | Fora do denominador de CT-03 |
 
-### 2.1 Evidência parcial do piloto
+As cinco equivalências concluídas são FGA0146→FGA0147, FGA0307→FGA0184, FGA0312→FGA0138, FGA0313→FGA0172 e FGA0314→FGA0238. As duas relações em andamento são FGA0303→FGA0150 e FGA0315→FGA0278. As últimas permanecem pendentes enquanto o status de origem for `MATRICULADO`.
 
-A exploração de 15/11 identificou a matriz 6360/1, as opções de carga e o recálculo visual do controle de créditos. A captura preservada mostra um valor intermediário de 14 créditos/210h, enquanto 24 créditos/360h foi registrado como referência no piloto. Como a execução não gerou um plano final e não registrou as alocações por semestre, a observação não fornece numerador ou denominador para `MET-FUN-06` ou `MET-FUN-07`. Tampouco permite inferir as métricas de pré-requisito, co-requisito, cobertura, status ou equivalência.
+## 3. Resultados consolidados
 
-## 3. Validação das hipóteses funcionais
+| Métrica | Cálculo observado | Resultado | Meta | Julgamento |
+|---|---:|---:|---:|---|
+| `MET-FUN-01` - TVP | 0/2 | **0,00%** | 0% | **Conforme** |
+| `MET-FUN-02` - TVC | 2/2 | **100,00%** | 0% | **Não conforme** |
+| `MET-FUN-03` - CDO | 13/14 | **92,86%** | 100% | **Não conforme** |
+| `MET-FUN-04` - TDH | 0/46 | **0,00%** | 0% | **Conforme** |
+| `MET-FUN-05` - TAE | 7/7  | **100,00%** | 0% | **Conforme** |
+| `MET-FUN-06` - COO | -/3 | -- | -- | **Inconclusivo** |
+| `MET-FUN-07` - TVS | 3/3 | **100,00%** | 0% por tipo | **Não conforme** |
 
-| Hipótese | Caso / métrica | Evidência exigida | Estado nesta versão | Veredito |
-| :---: | :--- | :--- | :--- | :--- |
-| `H-FUN-01` | `CT-01` / `MET-FUN-01` | Relações de pré-requisito presentes em `H0`, fonte/vigência e semestres do plano completo. | Plano final não gerado; sem relações observadas. | **Não avaliada** |
-| `H-FUN-02` | `CT-02` / `MET-FUN-02` | Par co-requisitado aplicável à entrada e alocação no plano. | Seleção do par no planejador ainda não confirmada. | **Não avaliada** |
-| `H-FUN-03` | `CT-03` / `MET-FUN-03` | Lista de obrigatórias satisfeitas e pendentes em `H0`, cruzada com todos os semestres do plano. | `H0` não está disponível no pacote e não há plano final. | **Não avaliada** |
-| `H-FUN-04` | `CT-04` / `MET-FUN-04` | Status reais presentes na entrada e tratamento observado para cada categoria. | Importação e saída não registradas. | **Não avaliada** |
-| `H-FUN-05` | `CT-05` / `MET-FUN-05`; impacto em `CT-03` | Equivalência presente em `H0`, regra oficial e efeito sobre pendências. | A equivalência MAT0138/MAT0026 foi consultada na fonte, mas sua ocorrência na entrada não foi confirmada. | **Não avaliada** |
-| `H-FUN-06` | `CT-06` / `MET-FUN-06` | Expectativa verificável por opção, valores aceitos e comparação pareada. | Opções foram observadas; efeitos de trabalho/estágio e objetivo carecem de especificação identificável. | **Pendente de especificação e execução** |
-| `H-FUN-07` | `CT-07` / `MET-FUN-07` | Cargas alocadas por semestre, limites e calendário/oferta para o período. | Apenas controle e recálculo visual observados; sem plano final ou calendário de coleta. | **Não avaliada** |
+OBS.: A `MET-FUN-06` foi colocada como inconclusiva devido ao ausencia de resposta visivel do sistema ao testa-lá e explicações documentadas
 
-As hipóteses são riscos a verificar, não defeitos presumidos. A ausência de teste não confirma nem refuta qualquer hipótese.
+### 3.1 CT-01 — Pré-requisitos
+
+As duas sequências observadas foram consideradas válidas na análise fornecida:
+
+- `FGA0170 → FGA0211`: FGA0170 já estava concluída no H0; o produto alocou FGA0170 no semestre 5 e FGA0211 no semestre 6.
+- `FGA0009 → FGA0011`: nenhuma das duas estava concluída na entrada; o produto alocou FGA0009 no semestre 9 e FGA0011 no semestre 10.
+
+Assim, `NVP=0`, `NRP=2` e `TVP=0%`.
+
+### 3.2 CT-02 — Co-requisitos
+
+A captura `CT-02-TED2-PED2.png` mostra FGA0074 no semestre 7 e FGA0072 no semestre 8, apesar de serem co-requisitos recíprocos. As duas direções da relação foram registradas como violadas: `NVC=2`, `NRC=2`, `TVC=100%`. O resultado não atende à meta de 0%.
+
+### 3.3 CT-03 — Cobertura de obrigatórias
+
+Das 14 obrigatórias pendentes de H0, 13 aparecem no plano. FGA0206 foi omitida. Percebe que o pré-requisito alternativo FGA0242 ou FGA0171 não foi apresentado; essa relação não foi adicionada ao denominador de disciplinas obrigatórias, que continua sendo 14. Logo, `DPC=13`, `DOP=14` e `CDO=(13/14)×100=92,86%`, abaixo da meta de 100%.
+
+### 3.4 CT-04 — Tratamento do histórico
+
+A importação foi concluída e verificou-se que os dados reconhecidos correspondem ao esperado em H0. A captura apresenta 39 obrigatórias, 25 concluídas, 14 pendentes e 7 optativas. .
+
+### 3.5 CT-05 — Equivalências
+
+A captura disponível apresenta FGA0147 e FGA0172 reconhecidas com indicação de equivalência/conclusão. A análise fornecida informa que a obrigatória equivalente foi reconhecida, deixou de aparecer como pendente e não houve duplicação. Essas duas relações foram registradas como conformes.
+
+### 3.6 CT-06 — Onboarding
+
+As três variantes de quantidade de matérias foram julgadas não conformes frente ao alvo informado pelo cenário:
+
+| Variante | Alvo | Composição relatada no 9º semestre | Carga observada | Desvio |
+|---|---:|---|---:|---:|
+| 4 matérias (`C5-4`) | 240h | 210h + 90h | 300h | +60h |
+| 6 matérias (`C5-6`) | 360h | 210h + 3×60h | 390h | +30h |
+| 8 matérias (`C5-8`) | 480h | 210h + 90h + 4×60h | 540h | +60h |
+
+Para as três expectativas verificáveis, `NEC=0`, `NEV=3` e `COO=0%`. Os efeitos das opções de trabalho/estágio (`C3`) e velocidade/equilíbrio (`C4`) foram classificados como inconclusivos, porque as capturas Antes/Depois não mostram mudança visual identificável e o protocolo não define um efeito algorítmico obrigatório para essas preferências. Esses dois registros não entram no denominador de COO.
+
+### 3.7 CT-07 — Restrições semestrais
+
+As três variantes foram julgadas não conformes frente aos alvos de carga selecionados: 300h para 240h, 390h para 360h e 540h para 480h. Assim, `NVS=3`, `NRS=3` e `TVS=100%` para o tipo **alvo de carga do cenário**.
+
+É importante distinguir o alvo de cada cenário da faixa global da matriz (mínimo 240h e máximo 480h por período). As saídas de 300h e 390h estão dentro da faixa global 240–480h; sua não conformidade decorre da divergência em relação aos alvos de 240h e 360h informados para as variantes. A saída de 540h, além de exceder o alvo de 480h, ultrapassa o máximo curricular em 60h. A especificação deve deixar explícito se a carga selecionada no onboarding é limite rígido, alvo exato ou apenas preferência. A captura do cenário 480h continua pendente.
 
 ## 4. Respostas formais às questões GQM
 
-| Questão | Métricas | Estado consolidado |
-| :---: | :--- | :--- |
-| `Q-FUN-01` — O plano respeita os pré-requisitos oficiais? | `MET-FUN-01` | **Pendente de execução** |
-| `Q-FUN-02` — O plano respeita os co-requisitos oficiais? | `MET-FUN-02` | **Pendente de execução** |
-| `Q-FUN-03` — Todas as obrigatórias pendentes aplicáveis são contempladas? | `MET-FUN-03`, `MET-FUN-05` | **Pendente de execução** |
-| `Q-FUN-04` — O histórico e os status são interpretados conforme as regras documentadas? | `MET-FUN-04` | **Pendente de execução** |
-| `Q-FUN-05` — As equivalências respeitam a fonte curricular e sua vigência? | `MET-FUN-05` | **Pendente de execução** |
-| `Q-FUN-06` — O onboarding produz o comportamento documentado ou prometido? | `MET-FUN-06` | **Pendente de especificação e execução** |
-| `Q-FUN-07` — O plano respeita oferta, semestre inicial e limites de carga verificáveis? | `MET-FUN-07` | **Pendente de execução** |
+| Questão | Resultado | Resposta baseada na execução |
+|---|---|---|
+| `Q-FUN-01` — O plano respeita os pré-requisitos oficiais? | **Conforme no escopo observado** | As duas sequências fornecidas foram respeitadas (FGA0170/FGA0211 e FGA0009/FGA0011). A segunda ainda precisa de fonte curricular oficial/vigência anexada. |
+| `Q-FUN-02` — O plano respeita os co-requisitos oficiais? | **Não conforme** | FGA0074 e FGA0072 foram distribuídas nos semestres 7 e 8, violando o co-requisito recíproco. |
+| `Q-FUN-03` — Todas as obrigatórias pendentes aplicáveis são contempladas? | **Não conforme — resultado parcial** | A cobertura foi 13/14; FGA0206 foi omitida. |
+| `Q-FUN-04` — O histórico e os status são interpretados conforme as regras? | **Conforme no escopo conferido** | O avaliador informou correspondência dos dados importados com H0; a captura confirma processamento concluído e totais agregados. |
+| `Q-FUN-05` — As equivalências respeitam a fonte curricular e sua vigência? | **Conforme no escopo conferido** | As duas relações visíveis foram reconhecidas corretamente |
+| `Q-FUN-06` — O onboarding produz o comportamento documentado ou prometido? | **Inconlusivo** | As variantes 240h, 360h e 480h divergiram dos alvos. Trabalho/estágio e velocidade/equilíbrio permanecem inconclusivos. |
+| `Q-FUN-07` — O plano respeita oferta, semestre inicial e limites de carga verificáveis? | **Não conforme no escopo de carga** | Os três planos ultrapassaram os alvos de carga do cenário; o caso 480h também ultrapassa o máximo global. Oferta/calendário não foi avaliada por falta de evidência específica. |
 
-### 4.1 Resposta formal a `Q-FUN-01`
+## 5. Julgamento das hipóteses
 
-**Não é possível concluir nesta versão.** Não há plano completo nem relações de pré-requisito extraídas da entrada `H0` para comparar com os semestres planejados. As regras oficiais de FGA0211 e MAT0026 documentam exemplos de referência, mas não demonstram que essas relações estejam presentes no histórico autorizado nem como o motor as tratou. A questão permanece pendente até a execução de `CT-01`.
-
-### 4.2 Resposta formal a `Q-FUN-02`
-
-**Não é possível concluir nesta versão.** O par FGA0072/FGA0074 e suas regras foram identificados no SIGAA, mas a presença do par na entrada e a possibilidade de seleção no planejador ainda não foram verificadas. Sem uma relação aplicável e um plano observado, não há denominador para `TVC`; a questão permanece pendente até `CT-02`.
-
-### 4.3 Resposta formal a `Q-FUN-03`
-
-**Não é possível concluir nesta versão.** A matriz de referência lista 39 componentes obrigatórios no recorte documentado, mas o conjunto de pendências depende do histórico real e das equivalências válidas nele presentes. A lista esperada não foi calculada para `H0` e o plano final não foi gerado. `MET-FUN-03` e o efeito de `MET-FUN-05` sobre as pendências permanecem sem mensuração; isso não significa cobertura de 100% nem ausência de omissões.
-
-### 4.4 Resposta formal a `Q-FUN-04`
-
-**Não é possível concluir nesta versão.** Não há comparação registrada entre os status de entrada, a interpretação do sistema e o tratamento no plano. Em particular, não se pode afirmar que disciplinas em andamento foram tratadas como aprovadas, nem que foram tratadas corretamente. A política para projeção de conclusão deve ser identificada e comparada em `CT-04`.
-
-### 4.5 Resposta formal a `Q-FUN-05`
-
-**Não é possível concluir nesta versão.** A equivalência MAT0138/MAT0026 foi confirmada na referência curricular, mas não há evidência de que MAT0138 ocorra em `H0` nem de como o motor atualiza as pendências. Não se presume equivalência transitiva. A questão permanece pendente até um caso aplicável e documentado em `CT-05`.
-
-### 4.6 Resposta formal a `Q-FUN-06`
-
-**Não é possível concluir nesta versão.** O piloto observou opções de trabalho/estágio, quantidade de matérias e objetivo, mas não foram registrados pares de planos com uma opção alterada por vez. Além disso, o efeito algorítmico esperado de trabalho/estágio e objetivo ainda não tem especificação identificável. A `COO` não deve considerar como erro a ausência de uma mudança que não tenha sido prometida. A questão depende da especificação e da execução de `CT-06`.
-
-### 4.7 Resposta formal a `Q-FUN-07`
-
-**Não é possível concluir nesta versão.** O piloto observou 24 créditos/360h como referência e recálculo do controle, mas não registrou a carga de cada semestre no plano gerado. Também faltam evidências do calendário e da oferta do período avaliado. A conversão apresentada no controle não substitui a conferência das alocações e do limite curricular de 480h. A questão permanece pendente até `CT-07`.
-
-## 5. Rastreabilidade das issues
-
-| Issue | Entrega relacionada | Situação comprovável nesta versão |
-| :--- | :--- | :--- |
-| [#27 — Executar Testes e Coletar Dados Brutos (Fase 4)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/27) | Preservar logs, capturas e formulários de execução. | **Parcial:** a observação exploratória do piloto está registrada; `CT-01` a `CT-07` ainda não têm execução formal nem plano final como evidência. |
-| [#28 — Processar Métricas e Responder às Questões GQM](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/28) | Calcular resultados, comparar critérios e responder às questões. | **Estrutura e processamento preparados; resultado empírico pendente:** fórmulas, processador e respostas formais estão documentados, mas não existem numeradores/denominadores para calcular valores reais. |
-
-## 6. Próximas condições para encerramento
-
-1. Confirmar a importação do histórico oficial autorizado `H0` sem copiar seus dados pessoais para o repositório.
-2. Concluir a geração do plano no cenário `C0` e preservar uma captura/log sanitizado do plano completo.
-3. Executar `CT-01` a `CT-07` apenas nas condições previstas no roteiro; declarar casos sem cobertura quando a ocorrência ou o recurso não existir.
-4. Resolver a expectativa documentada de `CT-06` e obter calendário/oferta para as verificações correspondentes de `CT-07`.
-5. Preencher os CSVs, executar o processador, revisar as saídas e substituir esta análise somente quando houver evidência válida. Manter histórico das execuções e não sobrescrever dados brutos.
+| Hipótese | Julgamento | Fundamentação |
+|---|---|---|
+| `H-FUN-01` — possível violação de pré-requisitos | **Não observada nos pares testados** | As duas sequências fornecidas foram respeitadas. A relação FGA0009→FGA0011 ainda carece de fonte curricular oficial no pacote. |
+| `H-FUN-02` — possível violação de co-requisitos | **Comprovada no caso testado** | FGA0074 e FGA0072 aparecem em semestres diferentes. |
+| `H-FUN-03` — possível omissão de obrigatória pendente | **Comprovada** | FGA0206 foi omitida; cobertura de 13/14. |
+| `H-FUN-04` — possível interpretação incorreta de status | **Não observada na execução reportada** | Os dados importados foram considerados compatíveis com H0; TDH=0% no universo conferido. |
+| `H-FUN-05` — possível aplicação incorreta de equivalências | **Não observada na execução reportada** | As duas relações visíveis foram tratadas corretamente; cobertura total ainda é 2/7. |
+| `H-FUN-06` — possível desconformidade das opções do onboarding | **Comprovada para C5; C3/C4 inconclusivos** | As três variantes de carga ultrapassaram o alvo configurado. Os efeitos das preferências não foram observáveis. |
+| `H-FUN-07` — possível violação de restrições semestrais | **Comprovada no escopo de carga** | Os três alvos foram excedidos; 540h também excede o máximo curricular de 480h. Falta a captura do cenário de 480h e a especificação do significado dos alvos. |
 
 ## Histórico de versão
 
 | Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| [Gabriel Mota](https://github.com/Gabro-MO) | Cálculo reprodutível, confronto GQM e respostas formais das métricas funcionais | 15/11/2026 | Não commitado |
+| Gabriel Mota | Consolidação das observações CT-01 a CT-07, cálculo e respostas GQM | 15/11/2026 | Não commitado |

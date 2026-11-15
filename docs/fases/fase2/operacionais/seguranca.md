@@ -75,4 +75,4 @@ As verificações usam OWASP Top 10:2021 como referência: A01 para controle de 
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da especificação de segurança, fichas MET-OP-02, MET-OP-02b e MET-OP-02c e alinhamento com OWASP/LGPD | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com ISO 25010, OWASP e LGPD | 24/10 | [corrente] |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Correção das métricas, faixas e resultados inconclusivos de segurança | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Correção das métricas, faixas e resultados inconclusivos de segurança | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |

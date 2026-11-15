@@ -35,6 +35,11 @@ nav:
             - Protocolo de Coleta e Teste: fases/fase2/operacionais/protocolo.md
             - Referências: fases/fase2/operacionais/referencias.md
     - Fase 3:
+        - Plano Integrado: fases/fase3/planoAvaliacao.md
+        - Métricas Funcionais:
+            - Roteiro de Avaliação: fases/fase3/funcionais/roteiro.md
+            - Fontes e Regras: fases/fase3/funcionais/fontes.md
+        - Piloto e Prontidão: fases/fase3/piloto.md
         - Métricas Operacionais:
             - Sumário: fases/fase3/metricasOperacionais.md
             - Visão Geral: fases/fase3/operacionais/visaoGeral.md

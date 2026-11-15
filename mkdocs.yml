@@ -34,6 +34,30 @@ nav:
             - Segurança: fases/fase2/operacionais/seguranca.md
             - Protocolo de Coleta e Teste: fases/fase2/operacionais/protocolo.md
             - Referências: fases/fase2/operacionais/referencias.md
+    - Fase 3:
+        - Plano Integrado: fases/fase3/planoAvaliacao.md
+        - Métricas Funcionais:
+            - Roteiro de Avaliação: fases/fase3/funcionais/roteiro.md
+            - Fontes e Regras: fases/fase3/funcionais/fontes.md
+        - Piloto e Prontidão: fases/fase3/piloto.md
+        - Métricas Operacionais:
+            - Sumário: fases/fase3/metricasOperacionais.md
+            - Visão Geral: fases/fase3/operacionais/visaoGeral.md
+            - Métodos de Avaliação: fases/fase3/operacionais/metodos.md
+            - Recursos e Massa de Dados: fases/fase3/operacionais/ambienteERecursos.md
+            - Roteiro do Avaliador: fases/fase3/operacionais/roteiroAvaliador.md
+            - Cronograma e Riscos: fases/fase3/operacionais/cronogramaERiscos.md
+            - Rastreabilidade: fases/fase3/operacionais/rastreabilidade.md
+    - Fase 4:
+        - Métricas Funcionais:
+            - Sumário: fases/fase4/metricasFuncionais.md
+            - Dados Brutos e Evidências: fases/fase4/funcionais/dadosBrutos.md
+            - Análise e Julgamento: fases/fase4/funcionais/analiseResultados.md
+        - Métricas Operacionais:
+            - Sumário: fases/fase4/metricasOperacionais.md
+            - Dados Brutos e Evidências: fases/fase4/operacionais/dadosBrutos.md
+            - Análise e Julgamento: fases/fase4/operacionais/analiseResultados.md
+            - Ação de Melhoria: fases/fase4/operacionais/acaoMelhoria.md
 
   - Gestão do Projeto:
     - Visão Geral: gestaoProjeto/psm-cid.md
@@ -50,6 +74,7 @@ nav:
   - Referências:
     - Fase 1: referencias/fase1.md
     - Fase 2: referencias/fase2.md
+    - Fase 3: referencias/fase3.md
     - Organização: referencias/psm.md
 
 

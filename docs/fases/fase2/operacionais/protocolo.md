@@ -17,7 +17,7 @@ Protocolo de medição e registro das condições experimentais para as métrica
 | Parâmetro | Especificação / Valor de Referência |
 | :--- | :--- |
 | **Data e Horário** | Registrar data e faixa horária (horário de Brasília) |
-| **Commit / Instância** | Commit `87b5475` / `no-fluxo.crianex.com` |
+| **Commit / Instância** | Commit do código/manifesto e URL da instância, registrados separadamente; declarar se a versão implantada for desconhecida |
 | **Hardware** | Processador, Memória RAM e Arquitetura |
 | **Sistema Operacional** | Linux Ubuntu (22.04 LTS+) / Windows 11 / macOS |
 | **Navegador** | Google Chrome (versão estável mais recente, 64 bits) |
@@ -59,50 +59,48 @@ A inspeção é realizada diretamente pela equipe avaliadora, dispensando o recr
 
 ## 4. Protocolo de Auditoria de Dependências — Teste da Hipótese `H-OP-02` (`MET-OP-02`)
 
-### 4.1 Comandos de Execução
-No commit `87b5475`, executar a auditoria em ambos os módulos:
+### 4.1 Método e cobertura
+
+1. No cliente, usar Retire.js nos scripts carregados pela aplicação. Preservar os arquivos ou seu inventário com URLs e hashes, versão da ferramenta, base consultada e saída integral.
+2. Quando disponíveis, auditar os manifestos públicos do commit de referência separadamente:
 
 ```bash
-# Backend
-cd /caminho/para/2025-1-NoFluxoUnB/backend
-npm audit --json > audit-backend.json
-
-# Frontend
-cd /caminho/para/2025-1-NoFluxoUnB/frontend
-npm audit --json > audit-frontend.json
+# Executar no diretório do módulo, com package.json e lockfile disponíveis.
+npm audit --json > audit-modulo.json
 ```
 
-### 4.2 Registro de Vulnerabilidades
+3. Registrar achados por componente, versão, aviso e severidade, sem duplicatas. Separar produção/desenvolvimento quando verificável. Não somar resultados sobrepostos de npm e Retire.js.
+4. Calcular o IRP conforme a [ficha de segurança](seguranca.md). Arquivo ausente ou erro da ferramenta gera Inconclusivo, nunca zero.
 
-| Módulo | Crítica (10 pts) | Alta (5 pts) | Moderada (2 pts) | Baixa (1 pt) | $IRP$ | Status (Validação `H-OP-02`) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Backend** (`backend/`) | [preencher] | [preencher] | [preencher] | [preencher] | [cálculo] | [Excelente / Aceitável / Crítico] |
-| **Frontend** (`frontend/`) | [preencher] | [preencher] | [preencher] | [preencher] | [cálculo] | [Excelente / Aceitável / Crítico] |
-| **Consolidado** | [total] | [total] | [total] | [total] | [total] | **Resultado Global `MET-OP-02`** |
+Retire.js cobre as bibliotecas reconhecidas no cliente; não substitui a auditoria dos manifestos de frontend e backend. Essa alternativa reduz a cobertura originalmente prevista. Registrar a mudança e deixar explícitos os componentes não examinados, sem extrapolar um resultado favorável para todo o produto.
 
----
+### 4.2 Registro da coleta
 
-## 5. Inspeção de Armazenamento e Acesso — Teste da Hipótese `H-OP-02` (`MET-OP-02b` e `MET-OP-02c`)
+| Campo | Registro obrigatório |
+|---|---|
+| Alvo e versão | URL/data da instância ou commit do manifesto |
+| Ferramenta e base | Nome, versão, comando e data da base de vulnerabilidades |
+| Cobertura | Arquivos, componentes e versões reconhecidos; partes não examinadas |
+| Achados | Componente, versão, aviso, severidade e produção/desenvolvimento |
+| Evidência e resultado | Caminho do relatório bruto, contagens por severidade, IRP e classificação |
 
-### 5.1 Armazenamento no Cliente (`MET-OP-02b`)
-1. Autenticar em aba anônima e enviar o histórico sintético para gerar o plano.
-2. No DevTools (`F12`), acessar **Application > Storage**.
-3. Inspecionar:
-   - `Local Storage`: verificar persistência de notas, IRA, matrícula ou disciplinas.
-   - `Session Storage`: verificar dados de sessão.
-   - `Cookies`: checar presença de flags `HttpOnly` e `Secure`.
-4. Contabilizar chaves com dados sensíveis em texto claro ($GED\text{-}C$).
+## 5. Armazenamento e acesso (`MET-OP-02b` e `MET-OP-02c`)
 
-### 5.2 Controle de Acesso a Rotas Protegidas (`MET-OP-02c`)
-Disparar chamadas sem token contra o endpoint de planejamento:
+### 5.1 Armazenamento no cliente
 
-```bash
-curl -i -X POST "https://no-fluxo.crianex.com/api/planejamento/gerar-plano" \
-     -H "Content-Type: application/json" \
-     -d '{"matriculaCurricular": "6360/1", "disciplinasConcluidas": []}'
-```
+1. Em sessão limpa, carregar o histórico sintético e gerar o plano; autenticar se o fluxo exigir.
+2. Inspecionar `localStorage`, `sessionStorage` e cookies em **DevTools > Application**.
+3. Registrar chaves e valores sintéticos com evidências. Verificar `HttpOnly` e `Secure` no painel de cookies; não usar `document.cookie` para concluir sobre cookies HttpOnly.
+4. Contar as chaves com dados pessoais ou acadêmicos em claro. Se o fluxo ou a inspeção estiver incompleto, registrar Inconclusivo.
 
-Registrar se o retorno foi estritamente **HTTP 401 Unauthorized** ou **HTTP 403 Forbidden** ($TBR = 100\%$).
+### 5.2 Controle de acesso
+
+1. Confirmar o requisito de proteção e obter URL, método e payload a partir do fluxo normal. Validar uma chamada positiva autorizada no mesmo serviço.
+2. Em ambiente autorizado, executar os casos negativos da Fase 3 e registrar respostas e comportamento. Usar credenciais de teste adequadas para isolar expiração e permissões.
+3. Classificar cada caso: bloqueio 401/403, acesso indevido comprovado ou Inconclusivo. Erros 404/405, de conexão ou de servidor não demonstram falha de autenticação.
+4. Calcular TBR apenas com casos válidos; informar casos planejados, válidos e inconclusivos. Só aprovar com toda a bateria concluída e válida.
+
+As regras completas estão na [ficha da TBR](seguranca.md#met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autorizadas-tbr). Registrar Não aplicável se o requisito permitir acesso público e não houver operação protegida no recorte.
 
 ---
 
@@ -114,4 +112,4 @@ Registrar se o retorno foi estritamente **HTTP 401 Unauthorized** ou **HTTP 403 
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste do protocolo experimental para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo fidelidade ao protocolo experimental ISO 25040 | 24/10 | [b31d87e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b31d87e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Substituição do protocolo com voluntários externos por Inspeção Heurística interna de Nielsen | 25/10 | [8330fa6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8330fa6ce8a670d083d8718eada13606616f064c) |
-
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da cobertura SCA e da validade dos testes de acesso | 15/11 | Não commitado |

@@ -24,4 +24,4 @@ Situação dos critérios da Fase 1 e links para as evidências.
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da página de critérios | 16/10 | [353f46e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/353f46ecd1a408d3474ea0dfa157aba62daabd70) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao da tabela | 16/10 | [516cc9f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/516cc9fb50634d1729db19c96a2c9883c676f5bd) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização dos critérios e links para evidências | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização dos critérios e links para evidências | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |

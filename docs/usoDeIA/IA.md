@@ -24,4 +24,4 @@ Aqui dividimos o uso de IA para todos os integrantes do grupo
 | [Ana Beatriz Souza Araujo](https://github.com/AnnaBeatrizAraujo) | Atualização da declaração de uso de inteligência artificial | 18/10 | [3316e1f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3316e1f059c4d039606cb813ef5fa96c00d5d17e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Adição da declaração de uso de inteligência artificial | 18/10 | [Preencher]() |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Atualização da declaração para a execução das Fases 3 e 4 operacionais | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da declaração de uso de IA | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da declaração de uso de IA | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |

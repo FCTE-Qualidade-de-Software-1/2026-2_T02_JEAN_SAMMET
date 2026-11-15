@@ -14,10 +14,10 @@ As métricas operacionais derivam das definições da Fase 1:
   - *Equipe avaliadora:* requer evidências reprodutíveis para embasar melhorias na Fase 4.
 - **Priorização ([Características de Qualidade](../../fase1/caracteristicasDeQualidade.md)):**
   - *Adequação Funcional:* Prioridade 1 (20 pts) — avaliada em [Métricas Funcionais](../funcionais/visaoGeral.md).
-  - *Segurança:* Prioridade 2 (15 pts) — Confidencialidade, Integridade de Dependências e Controle de Acesso.
+  - *Segurança:* Prioridade 2 (15 pts) — Confidencialidade e autenticidade, com inspeção complementar de dependências.
   - *Usabilidade:* Prioridade 3 (12 pts) — Operabilidade e Apreensibilidade.
 - **Escopo e Limites ([Escopo](../../fase1/escopo.md)):**
-  - Foco na interface SvelteKit (`/plano-formatura`), armazenamento no cliente (`localStorage`), endpoint `POST /planejamento/gerar-plano` e dependências via SCA (`npm audit`).
+  - Foco na interface SvelteKit (`/plano-formatura`), armazenamento no cliente (`localStorage`), endpoint `POST /planejamento/gerar-plano` e dependências via Retire.js no cliente e, quando disponíveis, manifestos públicos via `npm audit`.
   - Exclui testes invasivos/destrutivos; uso exclusivo de dados sintéticos.
 
 ---
@@ -28,8 +28,21 @@ Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](
 
 | ID | Característica | Hipótese Documentada | Questão GQM | Métricas de Teste | Critério de Validação da Hipótese |
 | :---: | :--- | :--- | :---: | :--- | :--- |
-| **H-OP-01** | Usabilidade | A tela `/plano-formatura` concentra violações heurísticas (densidade excessiva de nós, feedback insuficiente de recálculo e terminologia ambígua), comprometendo a facilidade de uso e a apreensão das saídas. | `Q-OP-01` | `MET-OP-01` (TCH)<br>`MET-OP-01b` (ISVH) | **Confirmada** se $TCH < 85\%$ ou se for identificada qualquer violação heurística de severidade maior ou catastrófica ($N_{\text{maior}} \ge 1$ ou $N_{\text{catastrófico}} \ge 1$). |
-| **H-OP-02** | Segurança | O processamento no navegador com retenção em `localStorage` e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. | `Q-OP-02` | `MET-OP-02` (DVCD)<br>`MET-OP-02b` (GED-C)<br>`MET-OP-02c` (TBR) | **Confirmada** se $IRP > 5$, $GED\text{-}C \ge 1$ chave sensível ou $TBR < 100\%$. |
+| **H-OP-01** | Usabilidade | A interface apresenta violações heurísticas relevantes nas tarefas avaliadas. | `Q-OP-01` | TCH e ISVH | Confirmada no recorte se `TCH < 85%` ou houver violação maior/catastrófica; caso contrário, não corroborada, com coleta completa. |
+| **H-OP-02** | Segurança | Dependências vulneráveis, retenção de dados em claro ou falhas de controle de acesso podem comprometer os dados e serviços examinados. | `Q-OP-02` | IRP, GED-C e TBR | Julgar os componentes separadamente e aplicar a regra conjunta abaixo. |
+
+### 2.1 Qualidade dos dados
+
+Dados ausentes, erros de coleta e testes que não alcançam o serviço esperado são inconclusivos. Itens sem requisito aplicável recebem Não aplicável, com justificativa. Nenhum desses estados equivale a aprovação.
+
+### 2.2 Regra de julgamento conjunto
+
+| Questão | Regra de resposta |
+|---|---|
+| **Q-OP-01** | Classificar TCH e ISVH pelas fichas e adotar o pior nível. Usar Inconclusivo se a coleta não cumprir o protocolo. H-OP-01 pode ser confirmada mesmo no nível Aceitável, pois seu limiar é mais exigente. |
+| **Q-OP-02** | Há ressalva de segurança se algum componente estiver fora da meta; indicar qual. Só responder favoravelmente quando todos os componentes aplicáveis tiverem dados válidos e atenderem às metas: IRP Excelente, GED-C Conforme e TBR Conforme. Se houver componentes inconclusivos, a resposta global permanece parcial. |
+
+H-OP-02 é confirmada no componente com IRP válido acima de 5 ou classificado Crítico, GED-C não conforme ou acesso indevido comprovado. Os demais componentes continuam com seus próprios estados. Sem esses achados e com cobertura completa, registrar **não corroborada no escopo avaliado**; com lacunas, registrar **inconclusiva**. Não usar uma medida favorável para refutar toda a hipótese.
 
 ---
 
@@ -43,12 +56,12 @@ Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](
 | **Propósito** | **Avaliar** |
 | **Foco de Qualidade** | **Usabilidade** e **Segurança** (ISO/IEC 25010). |
 | **Ponto de Vista** | **equipe de desenvolvedores**. |
-| **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e auditoria estática de código. |
+| **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e inspeção dos componentes disponíveis. |
 
 ### 3.2 Questões de Medição (Nível Operacional)
 
 - **`Q-OP-01` (Usabilidade):** A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?
-- **`Q-OP-02` (Segurança):** O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?
+- **`Q-OP-02` (Segurança):** O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado?
 
 ### 3.3 Árvore GQM com Hipóteses Operacionais
 
@@ -57,7 +70,7 @@ graph TD
     Goal["Objetivo GQM Operacional:<br/>Avaliar Usabilidade e Segurança da funcionalidade Planejar Formatura"]
 
     Goal --> H1["<b>Hipótese H-OP-01</b>:<br/>Violações heurísticas comprometem a operabilidade e a apreensão"]
-    Goal --> H2["<b>Hipótese H-OP-02</b>:<br/>Retenção de dados no cliente e dependências desatualizadas geram vulnerabilidades"]
+    Goal --> H2["<b>Hipótese H-OP-02</b>:<br/>Dependências, armazenamento e acesso podem comprometer dados e serviços"]
 
     H1 --> Q1["Q-OP-01: A interface atende às heurísticas ergonômicas de usabilidade?"]
     H2 --> Q2["Q-OP-02: O sistema resguarda a confidencialidade e restringe o acesso contra vulnerabilidades?"]
@@ -65,7 +78,7 @@ graph TD
     Q1 --> M1["MET-OP-01: Taxa de Conformidade Heurística (TCH)<br/><i>Usabilidade / Operabilidade</i>"]
     Q1 --> M1b["MET-OP-01b: Índice de Severidade de Violações Heurísticas (ISVH)<br/><i>Usabilidade / Apreensibilidade</i>"]
 
-    Q2 --> M2["MET-OP-02: Densidade de Vulnerabilidades Conhecidas (DVCD)<br/><i>Segurança / Integridade de Dependências</i>"]
+    Q2 --> M2["MET-OP-02: Índice de Risco Ponderado de Dependências (IRP)<br/><i>Segurança / Evidência complementar</i>"]
     Q2 --> M2b["MET-OP-02b: Grau de Exposição de Dados no Cliente (GED-C)<br/><i>Segurança / Confidencialidade</i>"]
     Q2 --> M2c["MET-OP-02c: Taxa de Bloqueio em Rotas Não Autenticadas (TBR)<br/><i>Segurança / Controle de Acesso</i>"]
 ```
@@ -77,8 +90,8 @@ graph TD
 | Seção / Página | Foco e Conteúdo Principal | Hipótese | Métricas |
 | :--- | :--- | :---: | :---: |
 | **[1. Métricas de Usabilidade](usabilidade.md)** | Checklist heurístico (Nielsen), tarefas de referência ($T_1, T_2, T_3$), operabilidade e apreensibilidade. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
-| **[2. Métricas de Segurança](seguranca.md)** | Auditoria SCA, persistência no cliente, controle de acesso e conformidade OWASP/LGPD. | `H-OP-02` | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
-| **[3. Protocolo de Coleta e Teste](protocolo.md)** | Roteiro de inspeção heurística da equipe, fichas de ambiente, storage e `npm audit`. | `H-OP-01`<br>`H-OP-02` | Todas |
+| **[2. Métricas de Segurança](seguranca.md)** | Auditoria SCA, persistência no cliente, controle de acesso e referências OWASP e proteção de dados. | `H-OP-02` | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
+| **[3. Protocolo de Coleta e Teste](protocolo.md)** | Roteiro de inspeção heurística da equipe, fichas de ambiente, storage e SCA. | `H-OP-01`<br>`H-OP-02` | Todas |
 | **[4. Referências](referencias.md)** | Referências metodológicas, normas técnicas (ISO/IEC e ISO 9241), OWASP e LGPD. | — | Todas |
 
 ---
@@ -95,7 +108,7 @@ graph LR
 ```
 
 - **Usabilidade × Adequação Funcional:** Interface intuitiva não compensa planos curriculares incorretos; da mesma forma, um plano correto não tem utilidade se a interface for incompreensível.
-- **Segurança × Confiabilidade:** Proteger dados contra exposição indevida e eliminar vulnerabilidades em dependências garante a conformidade ética e jurídica (LGPD) essencial para a ferramenta.
+- **Segurança × Confiabilidade:** Relacionar achados de dependências e acesso aos riscos do fluxo, sem inferir confiabilidade ou conformidade legal apenas dessas medidas.
 
 ---
 
@@ -108,4 +121,4 @@ graph LR
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste da estrutura GQM operacional para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com GQM e ISO 25010 | 24/10 | [b31d87e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b31d87e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Atualização de Usabilidade para Avaliação Heurística de Nielsen (TCH e ISVH) e inclusão na árvore GQM | 25/10 | [8330fa6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8330fa6ce8a670d083d8718eada13606616f064c) |
-
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento das hipóteses e das regras de julgamento conjunto | 15/11 | Não commitado |

@@ -10,14 +10,6 @@
 | **Ponto de vista** | Estudantes e equipe responsável pelo produto. |
 | **Contexto** | Aplicação web, matriz de Engenharia de Software da FGA/UnB e históricos sintéticos, com regras curriculares oficiais como referência. |
 
-| Elemento GQM       | Descrição do Objetivo                                                                                                                       |
-| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Objeto**         | A funcionalidade _Planejar formatura_ do software No Fluxo UnB.                                       |
-| **Propósito**      | **Avaliar** a produto.                                                                            |
-| **Foco**           |  **Adequação Funcional**              |
-| **Ponto de Vista** | Dos **estudantes de graduação da UnB** e da **equipe de desenvolvimento**.                     |
-| **Contexto**       | Execução em ambiente web desktop moderno, com dados curriculares da Engenharia de Software da FGA/UnB e histórico sintético de disciplinas. |
-
 ## 2. Diagrama GQM
 
 O diagrama explicita a relação entre o objetivo, as hipóteses que orientam a avaliação, as perguntas e as métricas usadas para respondê-las.
@@ -68,6 +60,19 @@ As hipóteses são riscos a verificar, não defeitos confirmados. Os resultados 
 | `Q-FUN-07` — O plano respeita oferta, semestre inicial e limites de carga verificáveis? | `H-FUN-07`: se a consulta do período letivo falhar, o semestre estimado pela data do sistema pode divergir do calendário oficial e afetar o plano. | `MET-FUN-07` |
 
 As hipóteses devem ser verificadas pelos cenários `CT-01` a `CT-07`, respectivamente. Para `H-FUN-05`, considerar também as evidências coletadas em `CT-03`. Quando a regra oficial ou o comportamento esperado não estiver documentado, registrar a lacuna de especificação, sem presumir sucesso ou defeito.
+
+### 3.1 Regras de referência e julgamento
+
+| Verificação | Referência necessária antes da coleta |
+|---|---|
+| Pré/co-requisitos e obrigatórias | Documento curricular aplicável, matriz, vigência e trecho com a regra da disciplina. |
+| Histórico e equivalências | Regra dos status e tabela oficial de equivalências, com vigência e disciplinas envolvidas. |
+| Onboarding | Texto da interface ou requisito que descreva o efeito esperado de cada opção; identificar a versão. O código ajuda a explicar o observado, mas não define sozinho o comportamento correto. |
+| Restrições semestrais | Calendário e oferta oficiais, limite documentado e conversão entre créditos e horas, quando necessária. |
+
+No plano da Fase 3, cada CT deve apontar a fonte, a regra e o resultado esperado antes da execução. Sem referência suficiente, registrar **Pendente de especificação**, sem presumir sucesso ou defeito.
+
+Com dados válidos, classificar como Conforme quando a meta da ficha for atendida e Não conforme quando houver divergência comprovada. Usar Não aplicável apenas quando a regra conhecida não se aplicar ao cenário; falha de coleta é Inconclusivo. Informar cobertura e casos pendentes ao responder cada questão. Uma questão com várias métricas só recebe resposta favorável se todas as aplicáveis atenderem às metas.
 
 ## 4. Definição das métricas
 
@@ -127,3 +132,4 @@ As hipóteses devem ser verificadas pelos cenários `CT-01` a `CT-07`, respectiv
 | [Gabriel Mota](https://github.com/Gabro-MO) | Perguntas GQM, métricas e cenários iniciais. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Consistência do foco GQM e revisão de referências a papéis da equipe. | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção do objetivo duplicado e definição das referências para julgamento | 15/11 | Não commitado |

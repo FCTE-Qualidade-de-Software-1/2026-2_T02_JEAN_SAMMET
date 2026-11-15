@@ -1,0 +1,19 @@
+{
+  "ferramenta": "Retire.js v6.1.1",
+  "data_auditoria": "2026-11-14T19:57:52Z",
+  "alvo": "https://no-fluxo.crianex.com/plano-formatura",
+  "metodo": "Software Composition Analysis (SCA) em Caixa-Preta (Client-side)",
+  "metricas": {
+    "N_critica": 0,
+    "N_alta": 0,
+    "N_moderada": 0,
+    "N_baixa": 0,
+    "IRP": 0
+  },
+  "julgamento": {
+    "status": "Excelente",
+    "interpretacao": "Nenhuma vulnerabilidade conhecida (CVE) foi detectada nas bibliotecas JavaScript servidas no cliente pelo No Fluxo UnB. Refuta a hipótese H-OP-02 no que tange a dependências expostas no navegador."
+  },
+  "detalhes": []
+}
+

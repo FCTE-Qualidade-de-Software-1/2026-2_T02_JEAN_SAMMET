@@ -1,0 +1,30 @@
+{
+  "ferramenta": "Google Chrome DevTools (Application > Storage)",
+  "data_auditoria": "2026-11-14T19:50:00Z",
+  "url_inspecionada": "https://no-fluxo.crianex.com/plano-formatura",
+  "metodo": "Inspeção de Armazenamento no Cliente em Caixa-Preta",
+  "avaliador": "Giovani De Oliveira Teodoro Coelho",
+  "chaves_local_storage": [
+    {
+      "chave": "theme",
+      "valor": "dark",
+      "contem_dado_sensivel": false,
+      "descricao": "Preferência estética de tema visual da interface."
+    }
+  ],
+  "chaves_session_storage": [],
+  "cookies": [
+    {
+      "dominio": "no-fluxo.crianex.com",
+      "flags_seguranca": "HttpOnly e Secure ativos quando presentes"
+    }
+  ],
+  "metrica_ged_c": {
+    "total_chaves_analisadas": 1,
+    "chaves_com_dados_pessoais_em_claro": 0,
+    "valor_calculado": 0,
+    "status": "Conforme (Desejável)",
+    "interpretacao": "GED-C = 0. Não foram identificados dados pessoais de estudantes (matrícula, notas, IRA ou nomes) persistidos indevidamente em texto claro em mecanismos de armazenamento do navegador, atendendo à LGPD."
+  }
+}
+

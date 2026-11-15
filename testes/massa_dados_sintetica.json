@@ -1,0 +1,59 @@
+{
+  "versao_schema": "1.0",
+  "descricao": "Massa de teste sintética para avaliação de métricas operacionais segundo a ISO/IEC 25040",
+  "em_conformidade_com_lgpd": true,
+  "perfis": [
+    {
+      "id": "P1",
+      "tipo": "Fluxo Regular",
+      "matricula": "990000001",
+      "nome": "Estudante Sintético Alpha",
+      "curso": "Engenharia de Software",
+      "codigo_curriculo": "6360/1",
+      "ira_simulado": 3.85,
+      "semestre_atual": 5,
+      "creditos_concluidos": 104,
+      "disciplinas_concluidas": [
+        { "codigo": "FGA0168", "nome": "ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES", "mencao": "MS", "creditos": 6 },
+        { "codigo": "FGA0169", "nome": "DESENHO INDUSTRIAL ASSISTIDO POR COMPUTADOR", "mencao": "SS", "creditos": 4 },
+        { "codigo": "FGA0170", "nome": "ENGENHARIA E AMBIENTE", "mencao": "MS", "creditos": 4 },
+        { "codigo": "MAT0025", "nome": "CÁLCULO 1", "mencao": "MM", "creditos": 6 },
+        { "codigo": "FGA0157", "nome": "ORIENTAÇÃO A OBJETOS", "mencao": "SS", "creditos": 4 },
+        { "codigo": "FGA0158", "nome": "ESTRUTURAS DE DADOS", "mencao": "MS", "creditos": 4 },
+        { "codigo": "FGA0173", "nome": "REQUISITOS DE SOFTWARE", "mencao": "SS", "creditos": 4 },
+        { "codigo": "FGA0184", "nome": "ENGENHARIA DE PRODUTO DE SOFTWARE", "mencao": "MS", "creditos": 4 }
+      ],
+      "parametros_planejamento": {
+        "limite_creditos_semestre": 24,
+        "priorizar_obrigatorias": true,
+        "incluir_optativas": false
+      }
+    },
+    {
+      "id": "P2",
+      "tipo": "Cenário de Estresse / Matérias Críticas",
+      "matricula": "990000002",
+      "nome": "Estudante Sintético Beta",
+      "curso": "Engenharia de Software",
+      "codigo_curriculo": "6360/1",
+      "ira_simulado": 2.70,
+      "semestre_atual": 7,
+      "creditos_concluidos": 130,
+      "reprovacoes_sinteticas": [
+        { "codigo": "MAT0025", "nome": "CÁLCULO 1", "semestre": "2023.1", "mencao": "SR" },
+        { "codigo": "FGA0173", "nome": "REQUISITOS DE SOFTWARE", "semestre": "2024.1", "mencao": "II" }
+      ],
+      "disciplinas_concluidas": [
+        { "codigo": "FGA0168", "nome": "ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES", "mencao": "MS", "creditos": 6 },
+        { "codigo": "FGA0157", "nome": "ORIENTAÇÃO A OBJETOS", "mencao": "MM", "creditos": 4 },
+        { "codigo": "FGA0158", "nome": "ESTRUTURAS DE DADOS", "mencao": "MM", "creditos": 4 }
+      ],
+      "parametros_planejamento": {
+        "limite_creditos_semestre": 18,
+        "priorizar_obrigatorias": true,
+        "incluir_optativas": true
+      }
+    }
+  ]
+}
+

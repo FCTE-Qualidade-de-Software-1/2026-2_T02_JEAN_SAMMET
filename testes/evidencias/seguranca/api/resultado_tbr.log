@@ -1,0 +1,14 @@
+Alvo: https://no-fluxo.crianex.com/api/planejamento/gerar-plano
+TBR: 0.0%
+Status: Não Conforme (Crítico)
+
+REQ-01: HTTP 405 | Bloqueado: False | Disparo direto sem cabeçalho Authorization
+REQ-02: HTTP 405 | Bloqueado: False | Cabeçalho presente com string vazia
+REQ-03: HTTP 405 | Bloqueado: False | Esquema Basic em endpoint Bearer
+REQ-04: HTTP 405 | Bloqueado: False | Palavra Bearer sem token anexado
+REQ-05: HTTP 405 | Bloqueado: False | String alfanumérica arbitrária fora do formato JWT
+REQ-06: HTTP 405 | Bloqueado: False | JWT estruturado com assinatura adulterada
+REQ-07: HTTP 405 | Bloqueado: False | JWT com expiração retroativa (exp: 1000000000)
+REQ-08: HTTP 405 | Bloqueado: False | Tentativa de bypass com algoritmo none
+REQ-09: HTTP 405 | Bloqueado: False | Token simulando perfil convidado/sem permissão
+REQ-10: HTTP 405 | Bloqueado: False | Requisição anônima com Origin externa não autorizada

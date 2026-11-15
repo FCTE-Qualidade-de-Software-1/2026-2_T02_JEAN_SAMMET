@@ -13,4 +13,4 @@ Datas em ISO 8601 com fuso, por exemplo `2026-11-15T10:00:00-03:00`. Campos com 
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação dos modelos de coleta | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação dos modelos de coleta | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |

@@ -30,4 +30,4 @@ Os modelos de registro estão em `testes/modelos_coleta/`. Na coleta definitiva,
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Criação da visão geral do plano de avaliação operacional, critérios de entrada/saída e governança | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Revisão do escopo e dos critérios operacionais de entrada e saída | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Revisão do escopo e dos critérios operacionais de entrada e saída | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |

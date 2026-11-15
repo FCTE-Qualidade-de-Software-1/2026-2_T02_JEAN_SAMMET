@@ -23,8 +23,8 @@ A avaliação se concentrará no fluxo de planejamento de formatura do No Fluxo 
 | Característica | Objeto e profundidade da avaliação |
 |---|---|
 | **Adequação Funcional** | Para cenários predefinidos e uma matriz curricular de referência, comparar o plano gerado com os resultados esperados e verificar se as disciplinas e a sequência respeitam as regras consideradas no teste. O envio do histórico e o fluxograma serão usados para preparar e conferir as entradas. |
-| **Usabilidade** | Solicitar a participantes que percorram o fluxo, gerem um plano e interpretem a previsão de formatura, os semestres restantes e as matérias críticas. Registrar conclusão das tarefas, erros e necessidade de ajuda. |
-| **Segurança** | Fazer verificações não invasivas do acesso ao fluxo e do tratamento observável do histórico. Quando pertinente, consultar o código público. Não serão testados acessos não autorizados nem exploradas vulnerabilidades. |
+| **Usabilidade** | A equipe aplicará o checklist heurístico nas tarefas de localizar a previsão de formatura, interpretar matérias críticas e ajustar créditos. Serão registrados problemas, severidades e evidências, conforme o protocolo da Fase 2. |
+| **Segurança** | Inspecionar armazenamento no navegador, identificação, acesso e dependências. Verificações sem credencial válida ficam restritas a ambiente autorizado, com rota, método e requisito de proteção identificados, sem exploração nem acesso a dados de terceiros. |
 
 O foco funcional será um conjunto pequeno de casos controlados para o curso de Engenharia de Software, que aparece nas capturas de tela. A avaliação não pretende cobrir exaustivamente todos os cursos ou históricos possíveis. O ambiente, a versão e os dados usados serão registrados para que os resultados possam ser interpretados.
 
@@ -43,9 +43,11 @@ O foco funcional será um conjunto pequeno de casos controlados para o curso de 
 ## Limites de validade dos resultados
 
 - **Adequação funcional:** os resultados serão válidos para os casos executados e para a matriz curricular de referência; não demonstrarão a correção de todos os cursos ou históricos.
-- **Usabilidade:** os achados descreverão os participantes e o ambiente testados. Uma amostra pequena não representa todos os estudantes da UnB.
-- **Segurança:** a ausência de problemas observados não prova ausência de vulnerabilidades, pois não haverá testes invasivos nem auditoria completa.
-- **Versão do produto:** o site em execução pode diferir do código público. A equipe registrará data, ambiente e, ao analisar o código, o commit examinado.
+- **Usabilidade:** os achados se limitam à inspeção da equipe nas tarefas e no ambiente registrados. Não medem diretamente aprendizagem, desempenho ou satisfação dos estudantes.
+- **Segurança:** os resultados se limitam aos componentes, rotas e mecanismos inspecionados. Ausência de achados não comprova segurança integral nem conformidade legal. Erros de execução e cobertura insuficiente devem ser registrados como limitações ou resultados inconclusivos.
+- **Versão do produto:** o commit `87b5475` é a referência do código público e não comprova a versão em produção. Serão registrados URL, data/hora, ambiente e commit dos arquivos examinados. Se a versão implantada for desconhecida, essa limitação será declarada.
+
+Os procedimentos detalhados devem respeitar essas fronteiras e manter a ligação com o [GQM funcional](../fase2/funcionais/GQM.md), as [métricas de usabilidade](../fase2/operacionais/usabilidade.md) e as [métricas de segurança](../fase2/operacionais/seguranca.md).
 
 **Premissas de execução:** serão utilizados históricos sintéticos ou autorizados; as tarefas e os resultados esperados serão definidos antes dos testes; e toda verificação será realizada em ambiente e funcionalidades de acesso autorizado.
 
@@ -58,3 +60,4 @@ O foco funcional será um conjunto pequeno de casos controlados para o curso de 
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Detalhamento inicial do escopo operacional, exclusões, limites e premissas | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização do método e dos limites da avaliação | 15/11 | Não commitado |

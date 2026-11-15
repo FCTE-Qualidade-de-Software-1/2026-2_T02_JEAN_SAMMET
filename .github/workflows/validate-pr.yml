@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  issues: read
 
 jobs:
   validate:
@@ -26,6 +27,12 @@ jobs:
 
       - name: Executar testes
         run: python -m unittest discover -s testes -t . -p 'teste_*.py' -v
+
+      - name: Gerar painel PSM (somente leitura)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python -m scripts.metricas
 
       - name: Compilar documentação
         run: python -m mkdocs build --strict --site-dir /tmp/mkdocs-pr

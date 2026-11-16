@@ -6,14 +6,16 @@
 
 | Integrante | Matrícula | Contribuição percentual |
 | --- | --- | ---: |
-| [Ana Beatriz Souza Araujo](https://github.com/AnnaBeatrizAraujo) | 241025891 | 16,66% |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | 241032500 | 16,66% |
-| [Yasmim de Souza Santos](https://github.com/eii-yahs) | 241040860 | 16,66% |
-| [Gabriel Mota Oliveira](https://github.com/Gabro-MO) | 241011081 | 16,66% |
+| [Ana Beatriz Souza Araujo](https://github.com/AnnaBeatrizAraujo) | 241025891 | 16,67% |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | 241032500 | 16,67% |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | 241040860 | 16,67% |
+| [Gabriel Mota Oliveira](https://github.com/Gabro-MO) | 241011081 | 16,67% |
 | [Gustavo Gomes Fornaciari](https://github.com/gugofo) | 241032519 | 16,66% |
 | [Vitor Lages Nogueira Araújo](https://github.com/VitorlagesNA) | 242025054 | 16,66% |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
+**Total: 100%.** Distribuição igualitária com ajuste de arredondamento na apresentação dos percentuais; os valores não representam novos apontamentos de horas.
 
 ## Contribuições registradas
 
@@ -37,3 +39,4 @@
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Equipe | 16/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao das tarefas realizadas | 18/10 | [75bf5ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/75bf5ba83e184dfae7fd2fb06cb3de3554ef19e2) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ajuste de arredondamento das contribuições para totalizar 100% | 16/11 | Não commitado |

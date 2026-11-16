@@ -12,7 +12,8 @@ O plano prepara a coleta das sete métricas funcionais e cinco operacionais da [
 | [Fontes curriculares](funcionais/fontes.md) | Matriz 6360/1, regras verificadas e lacunas |
 | [Plano operacional](metricasOperacionais.md) | Usabilidade, dependências, armazenamento e acesso |
 | [Ambiente e dados](operacionais/ambienteERecursos.md) | Conta de teste, histórico autorizado e cenários planejados |
-| [Rastreabilidade](operacionais/rastreabilidade.md) | Questão, métrica, procedimento e evidência |
+| [Cronograma de avaliação](cronograma.md) | Datas-alvo, atividades, responsáveis e dependências até 22/11 |
+| [Matriz de rastreabilidade](operacionais/rastreabilidade.md) | Necessidades, questões, hipóteses, métricas, metas, procedimentos e registros previstos |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
@@ -48,3 +49,5 @@ C0–C5 mantêm H0 fixo. As capturas de Gabriel, identificadas pela equipe como 
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização dos responsáveis e das condições de prontidão | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização das referências após remoção do cronograma operacional | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização do acesso à matriz integrada de rastreabilidade da Fase 3 | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do cronograma de avaliação no plano integrado | 16/11 | Não commitado |

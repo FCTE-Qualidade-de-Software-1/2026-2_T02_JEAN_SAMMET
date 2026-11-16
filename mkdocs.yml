@@ -36,6 +36,8 @@ nav:
             - Referências: fases/fase2/operacionais/referencias.md
     - Fase 3:
         - Plano Integrado: fases/fase3/planoAvaliacao.md
+        - Cronograma de Avaliação: fases/fase3/cronograma.md
+        - Matriz de Rastreabilidade: fases/fase3/operacionais/rastreabilidade.md
         - Métricas Funcionais:
             - Roteiro de Avaliação: fases/fase3/funcionais/roteiro.md
             - Fontes e Regras: fases/fase3/funcionais/fontes.md
@@ -45,7 +47,6 @@ nav:
             - Métodos de Avaliação: fases/fase3/operacionais/metodos.md
             - Recursos e Massa de Dados: fases/fase3/operacionais/ambienteERecursos.md
             - Roteiro do Avaliador: fases/fase3/operacionais/roteiroAvaliador.md
-            - Rastreabilidade: fases/fase3/operacionais/rastreabilidade.md
     - Fase 4:
         - Rastreabilidade Completa: fases/fase4/rastreabilidade.md
         - Conclusão da Avaliação: fases/fase4/conclusao.md
@@ -67,9 +68,13 @@ nav:
     - Desempenho do Processo: gestaoProjeto/desempenho-processo.md
     - Acompanhamento do Projeto: gestaoProjeto/painel.md
   - Critérios:
-    - Premissas Iniciais: criterios/premissasIniciais.md
+    - Visão Geral: criterios/index.md
+    - Premissas e Entregas: criterios/premissasIniciais.md
     - Fase 1: criterios/fase1.md
     - Fase 2: criterios/fase2.md
+    - Fase 3: criterios/fase3.md
+    - Fase 4: criterios/fase4.md
+    - Avaliação Geral: criterios/gerais.md
   - Equipe: equipe/equipe.md
   - Uso de IA: usoDeIA/IA.md
   - Referências:

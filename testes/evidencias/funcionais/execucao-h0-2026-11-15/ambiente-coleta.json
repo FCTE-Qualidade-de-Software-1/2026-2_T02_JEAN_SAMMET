@@ -1,0 +1,29 @@
+{
+  "data_hora_utc": "2026-11-16T00:26:03.449Z",
+  "viewport_css": {
+    "clientHeight": 779,
+    "clientWidth": 1470,
+    "pageX": 0,
+    "pageY": 0
+  },
+  "visual_viewport_css": {
+    "clientHeight": 779,
+    "clientWidth": 1470,
+    "offsetX": 0,
+    "offsetY": 0,
+    "pageX": 0,
+    "pageY": 0,
+    "scale": 1,
+    "zoom": 1
+  },
+  "navegador": "Chrome 157.0.8103.52",
+  "sistema": "macOS 27.0.1 arm64",
+  "hardware": "Apple M5, 16GB",
+  "entrada_id": "H0",
+  "base_final": {
+    "creditos": 24,
+    "par_optativas_adicionais": false
+  },
+  "versao_servidor": "não identificada",
+  "limite": "Ficha observada ao encerrar; não identifica versões anteriores do servidor."
+}

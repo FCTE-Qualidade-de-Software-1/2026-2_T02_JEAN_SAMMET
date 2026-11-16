@@ -1,0 +1,48 @@
+{
+  "casos_planejados": [
+    {
+      "id": "REQ-01",
+      "condicao": "Authorization ausente"
+    },
+    {
+      "id": "REQ-02",
+      "condicao": "Authorization vazio"
+    },
+    {
+      "id": "REQ-03",
+      "condicao": "Authorization Basic sem credencial JWT"
+    },
+    {
+      "id": "REQ-04",
+      "condicao": "Bearer sem token"
+    },
+    {
+      "id": "REQ-05",
+      "condicao": "Token malformado"
+    },
+    {
+      "id": "REQ-06",
+      "condicao": "JWT válido na estrutura com assinatura adulterada"
+    },
+    {
+      "id": "REQ-07",
+      "condicao": "Token de teste expirado, com assinatura válida",
+      "precondicao": "indisponível"
+    },
+    {
+      "id": "REQ-08",
+      "condicao": "JWT sem assinatura, alg none"
+    },
+    {
+      "id": "REQ-09",
+      "condicao": "Usuário autenticado sem papel suficiente",
+      "precondicao": "indisponível"
+    },
+    {
+      "id": "REQ-10",
+      "condicao": "Token de teste revogado",
+      "precondicao": "indisponível"
+    }
+  ],
+  "controle_adicional": "Bearer com token válido apenas para conhecer formato aceito; não é chamada negativa."
+}

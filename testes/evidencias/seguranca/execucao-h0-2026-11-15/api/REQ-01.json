@@ -1,0 +1,16 @@
+{
+  "id": "REQ-01",
+  "data_hora_utc": "2026-11-16T00:11:39.638Z",
+  "status_http": 401,
+  "campos_resposta": [
+    "error"
+  ],
+  "metodo": "POST",
+  "mesmo_payload": true,
+  "user_id_preservado": true,
+  "authorization": "ausente",
+  "payload_sha256": "c8ca36b7a346d64fd0b70429546049b59955016ff6abcb4797048d486b8601d8",
+  "condicao_validada": true,
+  "execucao_indevida_comprovada": false,
+  "cabecalho_observado": true
+}

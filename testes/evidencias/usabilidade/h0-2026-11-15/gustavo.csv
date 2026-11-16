@@ -1,0 +1,11 @@
+execucao_id,avaliador,entrada_id,cenario_id,tarefa,item,conforme,severidade,descricao,evidencia,justificativa_consenso
+USAB-H0-2026-11-15,Gustavo,H0,C0,T3,1,1,,Mensagens de geração/recálculo presentes.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T2,2,0,2,“Críticas/estratégicas” sem definição clara nas áreas examinadas do planejamento.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T3,3,1,,Carga alterada e restaurada sem recarregar.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T1;T2,4,1,,Padrões consistentes nos cartões e estados do plano observado.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T3,5,1,,-1 ajustado para 8; 100 ajustado para 32 créditos.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T1,6,1,,Previsão e semestres restantes em destaque.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T1;T2,7,1,,Zoom e navegação funcionaram em H0.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T1;T2,8,1,,Sem sobreposição impeditiva no ambiente examinado.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T3,9,0,2,Correção dos créditos inválidos sem explicar ajuste/faixa; aviso de optativas orienta resolução.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,
+USAB-H0-2026-11-15,Gustavo,H0,C0,T2,10,1,,Orientações de carga e optativas; a lacuna do termo críticas foi registrada no item 2.,docs/fases/fase4/operacionais/avaliacaoUsabilidade.md#2-resultados-por-item,

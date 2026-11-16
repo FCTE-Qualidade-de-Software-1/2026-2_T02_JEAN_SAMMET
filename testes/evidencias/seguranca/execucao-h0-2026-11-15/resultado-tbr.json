@@ -1,0 +1,9 @@
+{
+  "status": "Inconclusivo",
+  "tbr": 100.0,
+  "planejados": 10,
+  "validos": 7,
+  "bloqueados": 7,
+  "inconclusivos": 3,
+  "motivo": "404/405/erros e respostas sem prova de execução indevida não demonstram acesso; cobertura parcial não aprova a bateria."
+}

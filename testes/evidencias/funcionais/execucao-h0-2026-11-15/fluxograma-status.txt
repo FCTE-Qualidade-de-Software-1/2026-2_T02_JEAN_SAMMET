@@ -1,0 +1,55 @@
+						54 button MAT0025 CÁLCULO 1, 6 créditos, Aprovado
+						60 button FGA0161 ENGENHARIA E AMBIENTE, 4 créditos, Aprovado, concluída por equivalência
+						67 button FGA0168 DESENHO INDUSTRIAL ASSISTIDO POR COMPUTADOR, 6 créditos, Aprovado
+						73 button FGA0163 INTRODUÇÃO À ENGENHARIA, 2 créditos, Aprovado
+						78 button CIC0004 ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES, 6 créditos, Aprovado, optatória
+						87 button MAT0026 CÁLCULO 2, 6 créditos, Aprovado, pré-requisitos cumpridos
+						94 button MAT0031 INTRODUCAO A ALGEBRA LINEAR, 4 créditos, Aprovado
+						100 button FGA0157 PROBABILIDADE E ESTATÍSTICA APLICADO A ENGENHARIA, 4 créditos, Aprovado, pré-requisitos cumpridos
+						107 button IFD0171 FISICA 1, 4 créditos, Aprovado
+						113 button IFD0173 FISICA 1 EXPERIMENTAL, 2 créditos, Aprovado
+						119 button DSC0172 VIGILÂNCIA EPIDEMIOLÓGICA PARTICIPATIVA, 2 créditos, Aprovado, módulo livre
+						125 button FGA0166 ELEMENTOS E MÉTODOS EM ELETRÔNICA, 4 créditos, Aprovado, optativa
+						133 button FGA0133 ENGENHARIA ECONÔMICA, 4 créditos, Aprovado
+						139 button FGA0160 MÉTODOS NUMÉRICOS PARA ENGENHARIA, 4 créditos, Aprovado, pré-requisitos cumpridos
+						145 button FGA0158 ORIENTAÇÃO A OBJETOS, 4 créditos, Aprovado, pré-requisitos cumpridos
+						152 button FGA0164 HUMANIDADES E CIDADANIA, 4 créditos, Aprovado
+						158 button FGA0085 MATEMÁTICA DISCRETA 1, 4 créditos, Aprovado, optatória
+						165 button MAT0027 CÁLCULO 3, 6 créditos, Aprovado, pré-requisitos cumpridos, optativa
+						173 button MAT0374 MONITORIA EM CÁLCULO 2, 2 créditos, Aprovado, módulo livre
+						181 button FGA0147 ESTRUTURA DE DADOS E ALGORITMOS, 4 créditos, Aprovado, pré-requisitos cumpridos, concluída por equivalência
+						189 button FGA0142 FUNDAMENTOS DE ARQUITETURA DE COMPUTADORES, 4 créditos, Aprovado, pré-requisitos cumpridos
+						196 button FGA0184 GESTÃO DA PRODUÇÃO E QUALIDADE, 4 créditos, Aprovado, pré-requisitos cumpridos, concluída por equivalência
+						204 button FGA0150 PROJETO INTEGRADOR DE ENGENHARIA 1, 4 créditos, Matriculado
+						210 button FGA0138 MÉTODOS DE DESENVOLVIMENTO DE SOFTWARE, 4 créditos, Aprovado, pré-requisitos cumpridos, concluída por equivalência
+						218 button FGA0108 MATEMÁTICA DISCRETA 2, 4 créditos, Aprovado, pré-requisitos cumpridos
+						225 button FGA0034 TÓPICOS ESPECIAIS EM MATEMÁTICA APLICADA, 4 créditos, Aprovado, pré-requisitos cumpridos, optativa
+						232 button FGA0071 PRÁTICA DE ELETRÔNICA DIGITAL 1, 2 créditos, Aprovado, pré-requisitos cumpridos, optativa
+						240 button FGA0073 TEORIA DE ELETRÔNICA DIGITAL 1, 4 créditos, Aprovado, pré-requisitos cumpridos, optativa
+						248 button FGA0265 ECONOMIA DE ENERGIA, 4 créditos, Aprovado, pré-requisitos cumpridos, optativa
+						256 button FGA0413 MONITORIA EM ORIENTAÇÃO A OBJETOS, 2 créditos, Aprovado, módulo livre
+						264 button FGA0172 REQUISITOS DE SOFTWARE, 4 créditos, Aprovado, pré-requisitos cumpridos, concluída por equivalência
+						272 button FGA0137 SISTEMAS DE BANCO DE DADOS 1, 4 créditos, Aprovado, pré-requisitos cumpridos
+						279 button FGA0003 COMPILADORES 1, 4 créditos, Aprovado, pré-requisitos cumpridos
+						286 button FGA0030 ESTRUTURAS DE DADOS 2, 4 créditos, Aprovado, pré-requisitos cumpridos
+						293 button FGA0173 INTERAÇÃO HUMANO COMPUTADOR, 4 créditos, Aprovado, pré-requisitos cumpridos
+						300 button FGA0170 FUNDAMENTOS DE SISTEMAS OPERACIONAIS, 4 créditos, Matriculado, pré-requisitos cumpridos
+						307 button DSC0172 VIGILÂNCIA EPIDEMIOLÓGICA PARTICIPATIVA, 2 créditos, Aprovado, módulo livre
+						313 button FGA0413 MONITORIA EM ORIENTAÇÃO A OBJETOS, 2 créditos, Aprovado, módulo livre
+						321 button FGA0208 ARQUITETURA E DESENHO DE SOFTWARE, 4 créditos, Matriculado, pré-requisitos cumpridos
+						328 button FGA0238 TESTES DE SOFTWARE, 4 créditos, Aprovado, pré-requisitos cumpridos, concluída por equivalência
+						336 button FGA0060 SISTEMAS DE BANCO DE DADOS 2, 4 créditos, Disponível, pré-requisitos cumpridos
+						342 button FGA0211 FUNDAMENTOS DE REDES DE COMPUTADORES, 4 créditos, Bloqueado, pré-requisitos pendentes
+						349 button FGA0278 QUALIDADE DE SOFTWARE 1, 4 créditos, Matriculado, pré-requisitos cumpridos
+						356 button CEM0051 PROMOÇÃO DA SAÚDE 3, 4 créditos, Matriculado, módulo livre
+						362 button FGA0124 PROJETO DE ALGORITMOS, 4 créditos, Matriculado, pré-requisitos cumpridos, optativa
+						369 button FGA0274 PRODUTIVIDADE E PROFISSIONALISMO EM ENGENHARIA DE SOFTWARE, 4 créditos, Matriculado, pré-requisitos pendentes, optativa
+						378 button FGA0109 FUNDAMENTOS DE SISTEMAS EMBARCADOS, 4 créditos, Bloqueado, pré-requisitos pendentes
+						384 button FGA0210 PARADIGMAS DE PROGRAMAÇÃO, 4 créditos, Disponível, pré-requisitos cumpridos
+						390 button FGA0244 PROGRAMAÇÃO PARA SISTEMAS PARALELOS E DISTRIBUÍDOS, 4 créditos, Bloqueado, pré-requisitos pendentes
+						398 button FGA0206 ENGENHARIA DE PRODUTO DE SOFTWARE, 4 créditos, Bloqueado, pré-requisitos pendentes
+						405 button FGA0021 ESTÁGIO SUPERVISIONADO, 14 créditos, Disponível
+						410 button FGA0240 GERÊNCIA DE CONFIGURAÇÃO E EVOLUÇÃO DE SOFTWARE, 4 créditos, Disponível, pré-requisitos cumpridos
+						418 button FGA0009 TRABALHO DE CONCLUSÃO DE CURSO 1, 4 créditos, Disponível
+						424 button FGA0250 PROJETO INTEGRADOR DE ENGENHARIA 2, 6 créditos, Bloqueado, pré-requisitos pendentes
+						432 button FGA0011 TRABALHO DE CONCLUSÃO DE CURSO 2, 6 créditos, Bloqueado, pré-requisitos pendentes

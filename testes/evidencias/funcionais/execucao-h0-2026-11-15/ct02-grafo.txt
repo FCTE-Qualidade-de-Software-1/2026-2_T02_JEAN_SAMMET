@@ -1,0 +1,27 @@
+						56 text Semestre 6 (Em Curso)
+						60 text CEM0051 60h
+						65 text FGA0124 60h
+						70 text FGA0170 60h
+						75 text FGA0208 60h
+						80 text FGA0274 60h
+						85 text FGA0150 60h
+						90 text FGA0278 60h
+						94 text Semestre 7 (2027.1) — Recomendado
+						257 text FGA0072
+						258 text opt.
+						259 text 30h
+						267 text FGA0074
+						268 text opt.
+						269 text 60h
+						98 text FGA0211 60h
+						106 text FGA0060 60h
+						112 text FGA0109 60h
+						118 text FGA0210 60h
+						137 text Semestre 8 (2027.2) — Estimado
+						141 text FGA0244 60h
+						277 text FGA0240 60h
+						149 text FGA0250 90h
+						157 text FGA0021 210h
+						285 text FGA0009 60h
+						164 text Semestre 9 (2028.1) — Estimado
+						168 text FGA0011 90h

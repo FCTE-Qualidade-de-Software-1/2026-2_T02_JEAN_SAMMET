@@ -1,94 +1,26 @@
-# Ação de Melhoria — Métricas Operacionais (Fase 4)
+# Encaminhamento de melhoria
 
-> **Registros anteriores, pendentes de revalidação.** Esta página foi elaborada antes do plano revisado. Seus resultados e conclusões não demonstram execução dos cenários H0/C0–C5. Reaplicar os [critérios da Fase 2](../../fase2/operacionais/seguranca.md) e conferir as [pendências do piloto](../../fase3/piloto.md): HTTP 405 não prova acesso indevido; contagens zero não demonstram cobertura nem conformidade legal. A melhoria descrita precisa ter sua implementação verificada.
+Os achados atuais orientam as prioridades abaixo. **Nenhuma alteração no produto foi implementada ou verificada nesta etapa.** Os passos realizados foram coleta e apuração; executar e comparar uma melhoria exige uma versão identificada do produto.
 
-Este documento especifica a **Ação de Melhoria concreta** decorrente da avaliação prática de qualidade segundo o processo **ISO/IEC 25040:2011/2024**, priorizada a partir dos dados brutos e do julgamento das métricas operacionais na Fase 4.
+| Prioridade proposta | Achado | Verificação necessária após alteração |
+|---|---|---|
+| Revisar persistência de dados no cliente | GED-C=3, com campos pessoais em localStorage e cookies codificados | Repetir os três estados, verificar chaves/conteúdo e efeitos funcionais sem publicar valores |
+| Corrigir completude do planejamento | FGA0206 omitida em H0; CDO=14/15 | Repetir CT-03 e casos de pré-requisitos, garantindo cobertura sem regressões |
+| Melhorar explicações de termos e validação de créditos | Itens 2 e 9 confirmados no consenso da equipe | Repetir T2/T3 e comparar TCH/ISVH após a alteração |
 
----
+## Critérios para verificar as melhorias
 
-## 1. Justificativa e Origem da Melhoria
+**Persistência de dados:** identificar quais informações precisam permanecer no cliente e por quanto tempo. Depois da alteração, repetir os mesmos três estados e apurar GED-C, verificando também se importação, sessão e geração do plano continuam operáveis. A redução da contagem só demonstra melhoria se mantiver a funcionalidade e respeitar o critério de dados legíveis definido na Fase 2.
 
-A análise comparativa na Fase 4 demonstrou que, embora a aplicação alcance o nível Aceitável de usabilidade ($TCH = 70{,}0\%$), a principal fricção ergonômica reside no **Item 3 do Checklist de Nielsen (Controle e Liberdade do Usuário)**, classificado com **Severidade 3 (Maior)**:
+**Completude curricular:** confrontar novamente as 15 obrigatórias de H0 com o plano completo. A meta é CDO=100%, com FGA0206 contemplada conforme a regra aplicável e sem retirar outras obrigatórias ou gerar duplicações. Uma nova restrição identificada deve ser documentada e julgada, não usada para excluir a disciplina sem justificativa.
 
-> **Problema Diagnosticado:** Ao alterar os parâmetros de créditos por semestre na tela `/plano-formatura`, a interface recalcula a projeção curricular sem oferecer ao estudante uma forma direta de reverter a ação. Para retornar ao plano original de formatura, o usuário é obrigado a recarregar a página inteira (`F5`) ou lembrar mentalmente o valor padrão anterior.
+**Clareza da interface:** acrescentar explicação acessível dos termos críticas/estratégicas e informar a faixa permitida ao ajustar créditos inválidos. Gustavo e Gabriel devem repetir T2/T3 e consolidar o checklist, comparando TCH/ISVH antes e depois. Uma melhora é demonstrada pela nova inspeção; ainda não há resultado posterior à alteração.
 
-Esse atrito viola o princípio ergonômico da "saída de emergência" (ISO 9241-11 e Nielsen), gerando insegurança na exploração de diferentes cenários de formatura.
+## Situação da proposta
 
----
+As evidências atuais definem a linha de base. A próxima execução deve identificar a versão alterada, preservar o mesmo histórico e registrar o que mudou. Até isso ocorrer, não se afirma que as propostas foram implementadas nem que elevaram os indicadores.
 
-## 2. Especificação Técnica da Melhoria Proposta
-
-A proposta consiste em introduzir um **mecanismo reativo de reversão de estado (*Reset / Undo*)** diretamente no painel de controle de créditos da tela de planejamento.
-
-```mermaid
-flowchart LR
-    A["Estado Padrão<br/>(24 créditos)"] -->|"Usuário altera para 16 créditos"| B["Estado Customizado<br/>(Plano Recalculado)"]
-    B -->|"Botão 'Restaurar Padrão' ativado"| C["Clique em 'Restaurar Padrão'"]
-    C -->|"Restaura Store Svelte"| A
-```
-
-### 2.1 Especificação do Componente no Frontend (SvelteKit)
-
-No componente de controle de parâmetros da tela `/plano-formatura`, sugere-se a adição de um botão de ação com escuta reativa:
-
-```svelte
-<!-- Componente: ControleCreditos.svelte -->
-<script lang="ts">
-  import { RotateCcw } from 'lucide-svelte';
-  
-  export let limiteCreditosPadrao: number = 24;
-  export let limiteCreditosAtual: number;
-  export let onRestaurarPadrao: () => void;
-
-  $: foiModificado = limiteCreditosAtual !== limiteCreditosPadrao;
-</script>
-
-<div class="flex items-center gap-4 p-3 bg-card rounded-lg border">
-  <div class="flex-1">
-    <label for="creditos" class="text-sm font-medium">
-      Limite de Créditos por Semestre
-    </label>
-    <input 
-      id="creditos" 
-      type="number" 
-      bind:value={limiteCreditosAtual}
-      min="4" 
-      max="36"
-      class="input input-bordered w-full mt-1"
-    />
-  </div>
-
-  {#if foiModificado}
-    <button 
-      type="button"
-      class="btn btn-outline btn-sm flex items-center gap-1.5 self-end"
-      on:click={onRestaurarPadrao}
-      title="Restaurar valor padrão inicial (24 créditos)"
-    >
-      <RotateCcw class="w-4 h-4" />
-      <span>Restaurar Padrão</span>
-    </button>
-  {/if}
-</div>
-```
-
----
-
-## 3. Impacto Estimado nas Métricas de Usabilidade
-
-A implementação desta melhoria simples e não intrusiva eleva substancialmente a qualidade ergonômica da funcionalidade:
-
-| Métrica de Usabilidade | Valor Atual (Antes da Melhoria) | Valor Projetado (Após a Melhoria) | Ganho Qualitativo Obtido |
-| :--- | :---: | :---: | :--- |
-| **`MET-OP-01` (TCH)** | **`70,0%`** (Aceitável) | **`80,0%`** (Aceitável Elevado) | O Item 3 passa de 0 para 1 (+1 item conforme no checklist). |
-| **`MET-OP-01b` (ISVH)** | **`6 pontos`** (Aceitável) | **`3 pontos`** (**`EXCELENTE`**) | **Eliminação de 100% das falhas maiores ($N_{\text{maior}} = 0$)**, promovendo o índice $ISVH$ para a faixa de **Excelência** ($\le 5$). |
-| **Hipótese $H\text{-}OP\text{-}01$** | Confirmada com severidade maior | Risco ergonômico mitigado | Elimina a principal causa de atrito de navegação relatada pelos discentes. |
-
----
-
-## 4. Rastreabilidade com o Artigo Científico e Entregas
-
-Esta Ação de Melhoria cumpre diretamente os requisitos da **ISO/IEC 25040 (Atividade 4: Concluir a Avaliação)** e da **Entrega 2 da disciplina**, compondo a seção de **Discussão de Melhorias e Trabalhos Futuros** da versão final do artigo científico.
+A proposta anterior de botão de reversão fica no [histórico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/blob/7a74d9e0809e91d60a36a88559b357bfe171f37e/docs/fases/fase4/operacionais/acaoMelhoria.md). Na inspeção atual foi possível restaurar a carga sem recarregar; a prioridade deve seguir os resultados consolidados da equipe.
 
 ---
 
@@ -98,3 +30,6 @@ Esta Ação de Melhoria cumpre diretamente os requisitos da **ISO/IEC 25040 (Ati
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da ação de melhoria de usabilidade, prototipação em SvelteKit e projeção de impacto nas métricas | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Identificação dos resultados anteriores como pendentes de revalidação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Detalhamento dos critérios de verificação das melhorias propostas | 15/11 | Não commitado |

@@ -33,7 +33,7 @@ Na coleta formal, observar novamente a chamada real usada ao gerar o plano. Conf
 | REQ-01 | Sem Authorization | Preservar método e payload válidos |
 | REQ-02 | Authorization vazio | Diferenciar header vazio de ausente |
 | REQ-03 | Prefixo inesperado, como Basic | Serviço observado recebe token direto em Authorization |
-| REQ-04 | Bearer acrescido ao token de teste válido | Caso de formato inesperado no mecanismo observado, distinto do prefixo Basic; confirmar contrato antes de julgar |
+| REQ-04 | Bearer sem token | Não há credencial JWT; Bearer acompanhado de token válido não é chamada negativa por si só |
 | REQ-05 | Token malformado | Registrar resposta, sem reutilizar credencial pessoal |
 | REQ-06 | Assinatura inválida | Token de teste com estrutura apropriada |
 | REQ-07 | Token expirado | Credencial de teste cuja assinatura seja verificável; assinatura falsa não isola expiração |
@@ -53,4 +53,5 @@ A bateria acima é proposta. Antes da coleta, confirmar o contrato do mecanismo,
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Especificação detalhada dos métodos de Usabilidade (Nielsen) e Segurança (SCA, Storage e Matriz de 10 testes de API) | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento dos métodos aos critérios e à validade das coletas | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro da viabilidade de SCA/storage/API e adequação da bateria ao token observado | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro da viabilidade de SCA/storage/API e adequação da bateria ao token observado | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Adequação do caso sem token à bateria executada | 15/11 | Não commitado |

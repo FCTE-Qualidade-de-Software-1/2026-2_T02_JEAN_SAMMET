@@ -1,0 +1,12 @@
+{
+  "escopo": "Cliente na tela de planejamento após reimportação e geração de H0; 100 scripts estáticos observados. Sem backend ou inventário integral de dependências.",
+  "ferramenta": "Retire.js 6.1.1 --verbose",
+  "base_vulnerabilidades": "https://raw.githubusercontent.com/RetireJS/retire.js/master/repository/jsrepository-v5.json",
+  "cobertura_confirmada": false,
+  "relatorio_bruto": "sca/retire-cliente.json",
+  "inventario": [],
+  "achados": [],
+  "inventario_arquivos": "sca/inventario-scripts.json",
+  "sha256_relatorio_bruto": "21ef0d19ef392d1cb0341a449e344b021b1332a3dfc4d23cc1b92403ff57de12",
+  "limite": "O scanner não reconheceu componente/versão nesta amostra; não é evidência de IRP=0. O inventário de arquivos não substitui o de componentes."
+}

@@ -1,131 +1,96 @@
-# Análise dos Resultados e Julgamento da Qualidade (Fase 4)
+# Análise dos resultados e julgamento da qualidade — Métricas operacionais
 
-> **Registros anteriores, pendentes de revalidação.** Esta página foi elaborada antes do plano revisado. Seus resultados e conclusões não demonstram execução dos cenários H0/C0–C5. Reaplicar os [critérios da Fase 2](../../fase2/operacionais/seguranca.md) e conferir as [pendências do piloto](../../fase3/piloto.md): HTTP 405 não prova acesso indevido; contagens zero não demonstram cobertura nem conformidade legal. A melhoria descrita precisa ter sua implementação verificada.
+A avaliação compara os dados de H0 com as fichas e a regra conjunta da [Fase 2](../../fase2/operacionais/visaoGeral.md). Os [dados brutos](dadosBrutos.md) identificam a origem e a cobertura de cada medida; a [avaliação de usabilidade](avaliacaoUsabilidade.md) apresenta os dez itens e o consenso de Gustavo e Gabriel.
 
-Este documento realiza a **análise comparativa dos dados brutos contra os critérios de pontuação e níveis de julgamento** definidos na Fase 2 ([Métricas Operacionais](../../fase2/metricasOperacionais.md)), concluindo com o **julgamento formal da qualidade** e a **validação empírica das hipóteses operacionais** segundo o processo **ISO/IEC 25040:2011/2024**.
+## 1. Julgamento das métricas de usabilidade
 
----
+### 1.1 TCH — Taxa de Conformidade Heurística
 
-## 1. Julgamento das Métricas de Usabilidade
+O consenso registrou **oito itens conformes em dez**: `TCH = (8/10) × 100 = 80%`. Pela ficha, Excelente exige pelo menos 85%; Aceitável corresponde a valores de 70% até menos de 85%. O resultado é **Aceitável**.
 
-### 1.1 `MET-OP-01` — Taxa de Conformidade Heurística (TCH)
+Os itens não conformes foram a clareza dos termos “críticas/estratégicas” e a explicação do ajuste de créditos inválidos. As tarefas permaneceram executáveis, mas essas lacunas podem gerar dúvidas durante a interpretação e a configuração do plano.
 
-* **Fórmula de Cálculo:**
-  $$TCH = \left( \frac{N_{\text{itens\_conformes}}}{N_{\text{total\_itens}}} \right) \times 100 = \left( \frac{7}{10} \right) \times 100 = \mathbf{70{,}0\%}$$
-* **Confronto com os Níveis de Julgamento da Fase 2:**
-  * *Excelente:* $TCH \ge 85\%$
-  * *Aceitável:* $70\% \le TCH < 85\%$
-  * *Crítico:* $TCH < 70\%$
-* **Julgamento:** **`ACEITÁVEL`**
-* **Interpretação:** A interface da rota `/plano-formatura` atinge o patamar limítrofe de aceitabilidade. Sete das dez heurísticas clássicas de Nielsen foram atendidas, garantindo operabilidade básica e permitindo que o estudante navegue e interprete o fluxo, ainda que com fricções de usabilidade em funções específicas.
+### 1.2 ISVH — Índice de Severidade de Violações Heurísticas
 
----
+Foram consolidados **dois problemas menores, ambos de severidade 2**, sem problemas maiores ou catastróficos: `ISVH = (4 × 0) + (3 × 0) + (2 × 2) + (1 × 0) = 4`.
 
-### 1.2 `MET-OP-01b` — Índice de Severidade de Violações Heurísticas (ISVH)
+O resultado é **Excelente**, pois não há problema maior/catastrófico e a soma é menor ou igual a 5. Cada problema é contado uma vez no consenso, sem duplicá-lo por ter sido identificado pelos dois avaliadores. O nível de ISVH não elimina as não conformidades do checklist.
 
-* **Fórmula de Cálculo:**
-  $$ISVH = (4 \times N_{\text{catastrófico}}) + (3 \times N_{\text{maior}}) + (2 \times N_{\text{menor}}) + (1 \times N_{\text{cosmético}})$$
-  $$ISVH = (4 \times 0) + (3 \times 1) + (2 \times 1) + (1 \times 1) = 0 + 3 + 2 + 1 = \mathbf{6\text{ pontos}}$$
-* **Confronto com os Níveis de Julgamento da Fase 2:**
-  * *Excelente:* $N_{\text{catastrófico}} = 0$, $N_{\text{maior}} = 0$ e $ISVH \le 5$
-  * *Aceitável:* $N_{\text{catastrófico}} = 0$, $N_{\text{maior}} \le 1$ e $ISVH \le 12$
-  * *Crítico:* $N_{\text{catastrófico}} \ge 1$ ou $N_{\text{maior}} > 1$ ou $ISVH > 12$
-* **Julgamento:** **`ACEITÁVEL`**
-* **Interpretação:** A ausência de falhas catastróficas ($N_{\text{catastrófico}} = 0$) e a presença de apenas uma violação de severidade maior ($N_{\text{maior}} = 1$) mantêm o índice global em 6 pontos, dentro do limite de aceitabilidade ($\le 12$). Contudo, o Item 3 (falta de botão de desfazer/resetar) representa a maior barreira ergonômica observada na ferramenta.
+## 2. Julgamento das métricas de segurança
 
----
+### 2.1 IRP — Índice de Risco Ponderado de Dependências
 
-## 2. Julgamento das Métricas de Segurança
+A análise dos **100 scripts do cliente** não reconheceu componentes com suas versões. Sem inventário verificável, não há base para contar vulnerabilidades nem calcular um IRP representativo. O julgamento é **Inconclusivo**.
 
-### 2.1 `MET-OP-02` — Vulnerabilidades em Dependências (DVCD / IRP)
+Um relatório sem componentes reconhecidos não equivale a ausência de vulnerabilidades. É necessário obter componentes/versões verificáveis, dentro do escopo acessível, e reaplicar a análise. Dependências do servidor não foram avaliadas.
 
-* **Fórmula de Cálculo:**
-  $$IRP = (10 \times 0) + (5 \times 0) + (2 \times 0) + (1 \times 0) = \mathbf{0\text{ pontos}}$$
-* **Confronto com os Níveis de Julgamento da Fase 2:**
-  * *Excelente:* $N_{\text{crítica}} = 0$, $N_{\text{alta}} = 0$ e $IRP \le 5$
-  * *Aceitável:* $N_{\text{crítica}} = 0$, $N_{\text{alta}} \le 2$ e $IRP \le 20$
-  * *Crítico:* $N_{\text{crítica}} \ge 1$ ou $N_{\text{alta}} > 2$
-* **Julgamento:** **`EXCELENTE`**
-* **Interpretação:** A auditoria via Retire.js sobre os pacotes compilados em produção não detectou nenhuma biblioteca JavaScript de terceiros com vulnerabilidades públicas catalogadas (CVEs), evidenciando alta integridade na cadeia de componentes entregues ao navegador.
+### 2.2 GED-C — Grau de Exposição de Dados no Cliente
 
----
+Foram identificadas **três chaves com dados pessoais legíveis**: `nofluxo_user` no localStorage e dois fragmentos de cookie, `sb-auth-token.0` e `sb-auth-token.1`. A apuração usa a união por origem, mecanismo e chave nos três estados, sem contar novamente uma chave presente em mais de um estado.
 
-### 2.2 `MET-OP-02b` — Grau de Exposição de Dados Pessoais no Cliente (GED-C)
+Assim, `GED-C = 3`, contra a meta de zero, resultando em **Não conforme**. A presença de Secure/SameSite ou a codificação base64 dos cookies não muda a constatação de legibilidade. O resultado descreve o armazenamento observado; não estabelece, isoladamente, uma conclusão de conformidade legal.
 
-* **Fórmula de Cálculo:**
-  $$GED\text{-}C = \mathbf{0\text{ chaves sensíveis}}$$
-* **Confronto com os Níveis de Julgamento da Fase 2:**
-  * *Conforme (Desejável):* $GED\text{-}C = 0$
-  * *Não Conforme (Crítico):* $GED\text{-}C \ge 1$
-* **Julgamento:** **`CONFORME (DESEJÁVEL)`**
-* **Interpretação:** A aplicação não retém dados acadêmicos ou identificadores dos estudantes (matrícula, notas, IRA) em texto claro no `localStorage` ou `sessionStorage`, mantendo apenas preferências cosméticas de interface (`theme: "dark"`). Cumpre integralmente os requisitos da LGPD para proteção da privacidade em repouso.
+### 2.3 TBR — Taxa de Bloqueio em Rotas Não Autenticadas
 
----
+O controle positivo alcançou a rota real de geração do plano com **HTTP 200**. Das dez condições negativas previstas, sete foram executadas com a condição de teste validada; todas retornaram **HTTP 401**: `TBR executada = (7/7) × 100 = 100%`.
 
-### 2.3 `MET-OP-02c` — Taxa de Bloqueio em Rotas Não Autenticadas (TBR)
+Esse percentual é favorável **nas sete chamadas executadas**, mas a bateria permanece **Inconclusiva**, pois faltam condições isoladas de token expirado com assinatura válida, papel insuficiente e token revogado. As três condições ausentes não foram contadas como bloqueios nem substituídas por tokens apenas malformados.
 
-* **Fórmula de Cálculo:**
-  $$TBR = \left( \frac{N_{\text{respostas\_401\_ou\_403}}}{10} \right) \times 100 = \left( \frac{0}{10} \right) \times 100 = \mathbf{0{,}0\%}$$
-* **Confronto com os Níveis de Julgamento da Fase 2:**
-  * *Conforme (Mandatório):* $TBR = 100\%$ (Bloqueio estrito com 401 ou 403)
-  * *Crítico (Falha Grave):* $TBR < 100\%$
-* **Julgamento:** **`NÃO CONFORME (CRÍTICO)`**
-* **Interpretação:** As requisições enviadas ao endpoint responderam com `HTTP 405 Method Not Allowed`. Sob a ótica estrita da especificação da Fase 2 (que exigia respostas específicas de autorização HTTP 401/403), a métrica é julgada como Não Conforme. Essa constatação evidencia que a camada de borda (Nginx) rejeita o verbo antes de avaliar o token, ou que o serviço de planejamento é consumido internamente sem exposição de rota REST pública direta.
+## 3. Quadro de resumo
 
----
+A coluna de meta explicita o nível desejado definido pelas faixas da Fase 2. Em TCH, ISVH e IRP, a referência é **Excelente**; um resultado pode ser classificado como Aceitável sem atingir esse nível.
 
-## 3. Validação das Hipóteses Operacionais
+| Métrica | Cálculo / resultado | Meta / critério da Fase 2 | Julgamento | Cobertura |
+|---|---|---|---|---|
+| **MET-OP-01 — TCH** | 8/10 = **80%** | ≥ 85% (Excelente); Aceitável: 70% ≤ TCH < 85% | **Aceitável** | Dez itens; avaliações de Gustavo/Gabriel e consenso |
+| **MET-OP-01b — ISVH** | 2 × 2 = **4** | ≤ 5 pontos, sem problemas maiores ou catastróficos (Excelente) | **Excelente** | Dois problemas menores consolidados |
+| **MET-OP-02 — IRP** | **Sem valor calculável** | ≤ 5 pontos, sem vulnerabilidades críticas ou altas (Excelente); requer inventário verificável | **Inconclusivo** | 100 scripts examinados, sem componente/versão reconhecido |
+| **MET-OP-02b — GED-C** | União dos estados = **3 chaves** | 0 chaves com dados pessoais legíveis | **Não conforme** | Três estados; localStorage, sessionStorage e cookies |
+| **MET-OP-02c — TBR** | 7/7 = **100% no recorte** | 100% de bloqueio, com toda a bateria prevista válida e concluída | **Inconclusivo para a bateria** | Sete de dez condições executadas; três sem cobertura |
 
-O confronto dos dados experimentais contra os critérios formais de validação definidos na Fase 2 consolida o seguinte resultado:
+## 4. Respostas formais às questões GQM
 
-| Hipótese | Enunciado Documentado na Fase 2 | Critério Formal de Validação | Resultado Empírico | Veredito |
-| :---: | :--- | :--- | :--- | :---: |
-| **`H-OP-01`** | A tela `/plano-formatura` concentra violações heurísticas, comprometendo a facilidade de uso e a apreensão das saídas. | **Confirmada** se $TCH < 85\%$ ou se for identificada qualquer violação com severidade maior ou catastrófica ($N_{\text{maior}} \ge 1$ ou $N_{\text{catastrófico}} \ge 1$). | $TCH = 70{,}0\%$ ($< 85\%$) e $N_{\text{maior}} = 1$ no Item 3 (Controle do usuário). | **`CONFIRMADA`** |
-| **`H-OP-02`** | O processamento no navegador com retenção em `localStorage` e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. | **Confirmada** se $IRP > 5$, $GED\text{-}C \ge 1$ chave sensível ou $TBR < 100\%$. | $IRP = 0$, $GED\text{-}C = 0$, mas $TBR = 0{,}0\%$ ($< 100\%$). | **`CONFIRMADA PARCIALMENTE`** |
+### Q-OP-01 — A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?
 
----
+**Resposta: sim, em nível Aceitável, com ressalvas.** A interface atendeu a oito dos dez itens e apresentou dois problemas menores. Pelo pior nível entre TCH (Aceitável) e ISVH (Excelente), o julgamento conjunto é **Aceitável**.
 
-## 4. Comparação com os Critérios GQM e Resposta Formal às Questões de Medição
+A equipe conseguiu localizar a previsão e operar os controles avaliados. As melhorias devem explicar a terminologia das matérias críticas/estratégicas e o motivo/faixa do ajuste de créditos. O resultado vale para H0, desktop e tarefas T1–T3; não representa um estudo com todos os perfis de estudantes.
 
-Em estrita consonância com o método **Goal-Question-Metric (GQM)** e as atividades de encerramento da **ISO/IEC 25040**, os valores medidos empiricamente são comparados contra a grade de decisão para responder de maneira conclusiva às questões formuladas na Fase 2:
+### Q-OP-02 — O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado?
 
-### 4.1 Tabela Comparativa: Valores Medidos vs. Critérios de Julgamento GQM
+**Resposta: há uma ressalva comprovada de armazenamento, e a avaliação global permanece parcial.** GED-C=3 não atende à meta. As sete chamadas negativas executadas foram bloqueadas, mas expiração, revogação e papel insuficiente ainda não foram verificados. O risco de dependências permanece inconclusivo pela falta de componentes e versões reconhecidos.
 
-| Questão GQM | Métrica | Valor Obtido na Avaliação | Critérios de Julgamento GQM (Fase 2) | Nível Atingido |
-| :---: | :---: | :---: | :--- | :---: |
-| **`Q-OP-01`** | **`MET-OP-01` (TCH)** | **`70,0%`** | • Excelente: $TCH \ge 85\%$<br>• **Aceitável: $70\% \le TCH < 85\%$**<br>• Crítico: $TCH < 70\%$ | **Aceitável** |
-| **`Q-OP-01`** | **`MET-OP-01b` (ISVH)** | **`6 pts`** | • Excelente: $N_{\text{cat}} = 0, N_{\text{maior}} = 0, ISVH \le 5$<br>• **Aceitável: $N_{\text{cat}} = 0, N_{\text{maior}} \le 1, ISVH \le 12$**<br>• Crítico: $N_{\text{cat}} \ge 1, N_{\text{maior}} > 1$ ou $ISVH > 12$ | **Aceitável** |
-| **`Q-OP-02`** | **`MET-OP-02` (DVCD/IRP)** | **`0 pts`** | • **Excelente: $N_{\text{crít}} = 0, N_{\text{alta}} = 0, IRP \le 5$**<br>• Aceitável: $N_{\text{crít}} = 0, N_{\text{alta}} \le 2, IRP \le 20$<br>• Crítico: $N_{\text{crít}} \ge 1$ ou $N_{\text{alta}} > 2$ | **Excelente** |
-| **`Q-OP-02`** | **`MET-OP-02b` (GED-C)** | **`0 chaves`** | • **Conforme (Desejável): $GED\text{-}C = 0$**<br>• Não Conforme (Crítico): $GED\text{-}C \ge 1$ | **Conforme** |
-| **`Q-OP-02`** | **`MET-OP-02c` (TBR)** | **`0,0%`** | • Conforme (Mandatório): $TBR = 100\%$<br>• **Crítico (Falha Grave): $TBR < 100\%$** | **Não Conforme** |
+Portanto, os dados não permitem declarar segurança global conforme. Também não demonstram acesso indevido nos sete casos executados. Cada conclusão é limitada ao componente efetivamente medido.
 
----
+## 5. Julgamento das hipóteses operacionais
 
-### 4.2 Resposta Formal à Questão `Q-OP-01` (Usabilidade)
+| Hipótese | Critério aplicável | Resultado | Julgamento |
+|---|---|---|---|
+| **H-OP-01 — Violações heurísticas relevantes nas tarefas avaliadas** | TCH < 85% ou presença de problema maior/catastrófico | TCH=80%; dois problemas menores; nenhum maior/catastrófico | **Corroborada no recorte**, pelo limiar de TCH |
+| **H-OP-02 — Dependências, armazenamento ou controle de acesso podem comprometer dados/serviços** | Julgar os componentes separadamente; GED-C fora da meta corrobora o componente de armazenamento | GED-C=3; IRP e bateria TBR inconclusivos | **Corroborada no componente de armazenamento; resposta global parcial** |
 
-> **Questão `Q-OP-01`:** *A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?*
+H-OP-01 pode ser corroborada mesmo com usabilidade Aceitável: a hipótese utiliza o limiar de 85%, enquanto a faixa Aceitável começa em 70%. Não há contradição entre os dois julgamentos.
 
-**Resposta Formal:**  
-**Sim, em nível aceitável, com ressalvas funcionais específicas.**  
-A avaliação empírica demonstrou que a interface atende a **70,0% das heurísticas ergonômicas de Nielsen (`MET-OP-01`)**, sustentando um Índice de Severidade de **6 pontos (`MET-OP-01b`)**, sem nenhuma violação catastrófica. O estudante consegue navegar satisfatoriamente pelas tarefas de localizar a estimativa de formatura ($T_1$) e interpretar o fluxo curricular ($T_2$). No entanto, a ferramenta apresenta deficiência relevante na **liberdade e controle do usuário** (Item 3, severidade 3), decorrente da ausência de botões para desfazer alterações ou restaurar configurações padrão ao manipular o controle de créditos ($T_3$), além de carência de legendas contextuais de auxílio (Item 10). Essas deficiências não impedem a operação básica, mas confirmam a hipótese $H\text{-}OP\text{-}01$ e fundamentam a necessidade da ação de melhoria proposta.
+## 6. Síntese do julgamento da qualidade
 
----
+| Dimensão | Síntese | Encaminhamento |
+|---|---|---|
+| **Usabilidade** | **Aceitável**, com dois problemas menores confirmados no consenso | Esclarecer termos e explicar o ajuste de créditos; repetir T2/T3 após alteração |
+| **Segurança** | **Com ressalva comprovada e cobertura parcial** | Revisar persistência de dados; obter inventário de dependências e completar as três condições de acesso |
+| **Integração com a avaliação funcional** | A operação da interface não garante a completude curricular: FGA0206 foi omitida | Investigar a omissão e repetir o cruzamento de obrigatórias, além de conferir as métricas operacionais |
 
-### 4.3 Resposta Formal à Questão `Q-OP-02` (Segurança)
+A qualidade avaliada exige ações tanto sobre **completude do planejamento** quanto sobre **persistência de dados e clareza da interface**. Não se atribuiu uma nota média ao produto: um resultado favorável de usabilidade ou de bloqueio de chamadas não anula a falha funcional nem a exposição encontrada no cliente.
 
-> **Questão `Q-OP-02`:** *O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas?*
+As [ações de melhoria](acaoMelhoria.md) são propostas fundamentadas nos achados. A implementação no produto e a medição posterior ainda precisam ser realizadas para demonstrar ganho de qualidade.
 
-**Resposta Formal:**  
-**Sim para confidencialidade e integridade cliente; inconclusivo/não conforme para a rota REST direta.**  
-A avaliação comprovou que a aplicação **resguarda integralmente a confidencialidade dos dados discentes no navegador**, apresentando **$GED\text{-}C = 0$ chaves sensíveis em texto claro no `localStorage` (`MET-OP-02b`)**, em estrito cumprimento às diretrizes da LGPD. Ademais, a análise de composição estática de software via Retire.js resultou em **$IRP = 0$ (`MET-OP-02`)**, atestando a ausência de componentes JavaScript desatualizados com vulnerabilidades conhecidas na entrega cliente. Por outro lado, para a métrica de controle de acesso (`MET-OP-02c`), a suíte de testes negativos obteve **$TBR = 0{,}0\%$**, visto que todas as requisições disparadas contra a rota de API foram interceptadas pelo servidor com `HTTP 405 Method Not Allowed`, em vez de processadas pelas regras de autenticação da aplicação (HTTP 401/403), indicando que o serviço não está exposto para consumo REST público desprotegido.
+## 7. Reprocessamento e condições restantes
 
----
+```bash
+python3 testes/analisador_sca_irp.py testes/evidencias/seguranca/execucao-h0-2026-11-15/sca.json
+python3 testes/teste_controle_acesso_tbr.py testes/evidencias/seguranca/execucao-h0-2026-11-15/tbr.json
+```
 
-## 5. Integração e Validação Cruzada com Métricas Funcionais
-
-A integração dos achados operacionais com as medições de Adequação Funcional revela uma correlação essencial:
-- **Usabilidade × Funcionalidade:** O motor curricular gera a distribuição de semestres com boa precisão lógica, porém a interface falha em dar **liberdade de reversão ao estudante** ($TCH = 70{,}0\%$, Item 3 com severidade 3). Caso o aluno simule uma carga horária reduzida e deseje retornar ao plano inicial, ele é forçado a recarregar a página, gerando fricção desnecessária.
-- **Conclusão Integrada:** A melhoria mais urgente para a ferramenta não está no algoritmo matemático de cálculo, mas na **ergonomia da interface**, justificando a priorização da Ação de Melhoria.
+Os dois comandos retornam Inconclusivo e código 2 nesta coleta, conforme a cobertura disponível. Para avançar, obter inventário verificável de componentes/versões e credenciais que isolem expiração, papel insuficiente e revogação. A documentação mantém essas lacunas explícitas.
 
 ---
 
@@ -135,3 +100,7 @@ A integração dos achados operacionais com as medições de Adequação Funcion
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Análise detalhada dos resultados, cálculo das 5 métricas operacionais e julgamento das hipóteses H-OP-01 e H-OP-02 | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Identificação dos resultados anteriores como pendentes de revalidação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ampliação da análise, respostas GQM e síntese dos julgamentos | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Explicitação das metas nas tabelas de resultados e avaliação | 15/11 | Não commitado |

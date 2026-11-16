@@ -1,0 +1,46 @@
+{
+  "metrica": "MET-OP-02b",
+  "ged_c": 3,
+  "status": "Não conforme",
+  "estados": [
+    "E0-antes-reimportacao",
+    "E1-apos-importacao",
+    "E2-apos-plano"
+  ],
+  "chaves": [
+    {
+      "origem": "https://no-fluxo.crianex.com",
+      "mecanismo": "cookies",
+      "chave": "sb-auth-token.0",
+      "campos_pessoais_legiveis": [
+        "email",
+        "full_name",
+        "user_id",
+        "phone",
+        "identities"
+      ]
+    },
+    {
+      "origem": "https://no-fluxo.crianex.com",
+      "mecanismo": "cookies",
+      "chave": "sb-auth-token.1",
+      "campos_pessoais_legiveis": [
+        "email",
+        "full_name"
+      ]
+    },
+    {
+      "origem": "https://no-fluxo.crianex.com",
+      "mecanismo": "localStorage",
+      "chave": "nofluxo_user",
+      "campos_pessoais_legiveis": [
+        "email",
+        "nomeCompleto",
+        "dadosFluxograma"
+      ]
+    }
+  ],
+  "criterio": "União por origem/mecanismo/chave entre três estados; cada fragmento de cookie é uma chave distinta. Base64 foi decodificada com alinhamento entre fragmentos; não houve exportação de valores.",
+  "linha_de_base": "Sessão inicial já continha H0; E0 é antes da reimportação do mesmo PDF, sem limpeza de storage.",
+  "limite": "Resultado de armazenamento do cliente observado; não conclui conformidade legal nem segurança integral."
+}

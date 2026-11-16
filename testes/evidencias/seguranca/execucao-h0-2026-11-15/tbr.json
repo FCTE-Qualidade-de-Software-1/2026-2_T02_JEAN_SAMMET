@@ -1,0 +1,75 @@
+{
+  "protecao_exigida": true,
+  "fonte_requisito": "api/requisito.md",
+  "url": "https://api-nofluxo.crianex.com/planejamento/gerar-plano",
+  "metodo": "POST",
+  "payload_validado": true,
+  "controle_positivo": {
+    "status_http": 200,
+    "operacao_confirmada": true,
+    "evidencia": "api/controle-positivo.json"
+  },
+  "casos_planejados": [
+    "REQ-01",
+    "REQ-02",
+    "REQ-03",
+    "REQ-04",
+    "REQ-05",
+    "REQ-06",
+    "REQ-07",
+    "REQ-08",
+    "REQ-09",
+    "REQ-10"
+  ],
+  "casos": [
+    {
+      "id": "REQ-01",
+      "status_http": 401,
+      "condicao_validada": true,
+      "evidencia": "api/REQ-01.json",
+      "execucao_indevida_comprovada": false
+    },
+    {
+      "id": "REQ-02",
+      "status_http": 401,
+      "condicao_validada": true,
+      "evidencia": "api/REQ-02.json",
+      "execucao_indevida_comprovada": false
+    },
+    {
+      "id": "REQ-03",
+      "status_http": 401,
+      "condicao_validada": true,
+      "evidencia": "api/REQ-03.json",
+      "execucao_indevida_comprovada": false
+    },
+    {
+      "id": "REQ-04",
+      "status_http": 401,
+      "condicao_validada": true,
+      "evidencia": "api/REQ-04.json",
+      "execucao_indevida_comprovada": false
+    },
+    {
+      "id": "REQ-05",
+      "status_http": 401,
+      "condicao_validada": true,
+      "evidencia": "api/REQ-05.json",
+      "execucao_indevida_comprovada": false
+    },
+    {
+      "id": "REQ-06",
+      "status_http": 401,
+      "condicao_validada": true,
+      "evidencia": "api/REQ-06.json",
+      "execucao_indevida_comprovada": false
+    },
+    {
+      "id": "REQ-08",
+      "status_http": 401,
+      "condicao_validada": true,
+      "evidencia": "api/REQ-08.json",
+      "execucao_indevida_comprovada": false
+    }
+  ]
+}

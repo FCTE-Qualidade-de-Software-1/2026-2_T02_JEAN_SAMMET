@@ -1,0 +1,602 @@
+[
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/OA8UcISh.js",
+    "arquivo": "OA8UcISh.js",
+    "bytes": 644,
+    "sha256": "41ff9c8eb86bbc65675cfb094c40020b4212961942765447f80a818df5c0d6c3"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/PPVm8Dsz.js",
+    "arquivo": "PPVm8Dsz.js",
+    "bytes": 1232,
+    "sha256": "0bcb72f8ec0d95f592f3a84b3554b9ef5a5325ff5416a9114d6913e03c1c9eb4"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Vto6JWZd.js",
+    "arquivo": "Vto6JWZd.js",
+    "bytes": 38993,
+    "sha256": "6668ba5b76a6954267c97f72dd344d53127760523cb5a50edb7d2f2fd1ed2ea1"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/OJwYmOTT.js",
+    "arquivo": "OJwYmOTT.js",
+    "bytes": 403,
+    "sha256": "f14cfde2b60b85d7ec69e8737f66bb7c29db529de3b3584e2aaade8760c7d407"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CHAH-ebq.js",
+    "arquivo": "CHAH-ebq.js",
+    "bytes": 367,
+    "sha256": "9d716c10d31fa86eced8744052f833801dfcc4a1932c188ca2b5bc0ff7ae4b4d"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DsnmJJEf.js",
+    "arquivo": "DsnmJJEf.js",
+    "bytes": 66,
+    "sha256": "46cda377122e2fc4f29f307c56e4d6b61c84226e18b5afff348cdd4f92b4bcea"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BoX_ZiEQ.js",
+    "arquivo": "BoX_ZiEQ.js",
+    "bytes": 8035,
+    "sha256": "e56a8604c61d098c5c316471943b5433e5583a3493f95633d69d6f1e3df051b5"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/5wIbKVq_.js",
+    "arquivo": "5wIbKVq_.js",
+    "bytes": 443,
+    "sha256": "d28af83c0188b3e07a3580bc7f8c73517cde66569aa1c2077e9708ce96ae34b2"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/pUeXDUzj.js",
+    "arquivo": "pUeXDUzj.js",
+    "bytes": 578,
+    "sha256": "cf20bfe28dd2726ab6fd30bd597cdf2462895958685bf5f6b022135573567def"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/khZlT1kR.js",
+    "arquivo": "khZlT1kR.js",
+    "bytes": 298,
+    "sha256": "4a9275e028c4f9a94979a0c1e22961f81ad75018968dd3527f987d37c8378011"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DrWgopzw.js",
+    "arquivo": "DrWgopzw.js",
+    "bytes": 3964,
+    "sha256": "f2e5f03481d89bfe864bcc4e0bc7fb549cb5a283db9bff1910a205ef8c18e845"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Cgq7NZzQ.js",
+    "arquivo": "Cgq7NZzQ.js",
+    "bytes": 422,
+    "sha256": "73cb3f77ee81f732c81eb979598d6b5b16fc8fb04ea6ae6b3c53eff75bfbacd8"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DmBIIL1t.js",
+    "arquivo": "DmBIIL1t.js",
+    "bytes": 1080,
+    "sha256": "47452526cc8feaf944377b455d3e42debea3862dd9ef25edb7f7a517aba45256"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BVO_8g4b.js",
+    "arquivo": "BVO_8g4b.js",
+    "bytes": 444,
+    "sha256": "48d2964212fb1651c2dd640453936786386179c1c762a53556fa309902573f29"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/AYO4zefb.js",
+    "arquivo": "AYO4zefb.js",
+    "bytes": 1539,
+    "sha256": "c864f52768756f34399b518c43bef724553ffdc1312d6a5c2e059b9cf08dac25"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CTTObRV6.js",
+    "arquivo": "CTTObRV6.js",
+    "bytes": 640,
+    "sha256": "68ec943316210a5c8ab3cd2a2d3809a243da0df4aec01ea59d4a1477613da6bb"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CLwmGsCt.js",
+    "arquivo": "CLwmGsCt.js",
+    "bytes": 1410,
+    "sha256": "a85b207afca64d814e9e1ff87166ff4be9faadb546d4201a27386c3beeec9aab"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BqpQ5psu.js",
+    "arquivo": "BqpQ5psu.js",
+    "bytes": 507,
+    "sha256": "17821a032d0db590e2d926dab8e67a9f16e0ce11147fac6cb61d765f01a97c5c"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DL8ZwyEH.js",
+    "arquivo": "DL8ZwyEH.js",
+    "bytes": 451,
+    "sha256": "2561462cae305ea01c50dde35d3c450ae9bcaf4b2a9c7aaf88ee50833bccd5d4"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/TzLcgPqZ.js",
+    "arquivo": "TzLcgPqZ.js",
+    "bytes": 446,
+    "sha256": "834400fb408b9d1b441e5fb1092335d74b64b3c0148e30c5eabe60b9b43e1dfc"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DSskq-t4.js",
+    "arquivo": "DSskq-t4.js",
+    "bytes": 471,
+    "sha256": "eb2c83bfef2466cbca44e950202e74ea83ccb3fd1961555fc2bec505d88808e5"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BS3WkE6r.js",
+    "arquivo": "BS3WkE6r.js",
+    "bytes": 40,
+    "sha256": "0fb5aa36ccf6cc6a3e422ed8c6687902ea20cc67a3a30a51aa7a214e408a0bd9"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/9gXkIpRk.js",
+    "arquivo": "9gXkIpRk.js",
+    "bytes": 2932,
+    "sha256": "c6564293c4ed57f32c8be88c680bae1fceeb765335defa35736b23a13d6a7650"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DlUZFCma.js",
+    "arquivo": "DlUZFCma.js",
+    "bytes": 1506,
+    "sha256": "91d02e878e3c90ac7b4a1cb17981147c2de0c0f4f045451acc87f886b8b092a8"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CVHS-CPx.js",
+    "arquivo": "CVHS-CPx.js",
+    "bytes": 7114,
+    "sha256": "21828ed5e56ba860e2c62b446cc335d06db87fe45e77e2ae209f23242626a1c7"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/mcTlOv3A.js",
+    "arquivo": "mcTlOv3A.js",
+    "bytes": 618,
+    "sha256": "3e3178a1aa5b496f883da38d54a3f030704d6f3c000ee3332d67fe9a7e4357c1"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BkmPjwyO.js",
+    "arquivo": "BkmPjwyO.js",
+    "bytes": 2588,
+    "sha256": "867650b0f59de646a16344da8e2d8496131e9510bf8f083fff56c0af1fd5073d"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CrfrUkzC.js",
+    "arquivo": "CrfrUkzC.js",
+    "bytes": 4299,
+    "sha256": "7cf06f2f8bb473d196e6121f571447f2a7adeeabc8a603b75c677f59bd51ea9a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/WEUvG0pf.js",
+    "arquivo": "WEUvG0pf.js",
+    "bytes": 186,
+    "sha256": "1efa57c8ef16a2044996a90244f5119e4d316931d35cc0bd4c6242fbf3290d87"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DbPo3JNd.js",
+    "arquivo": "DbPo3JNd.js",
+    "bytes": 522,
+    "sha256": "6d95da487ae945556da3e8b746669de9945ca345d794557b06459f0be87c7f84"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CmwlJo73.js",
+    "arquivo": "CmwlJo73.js",
+    "bytes": 649,
+    "sha256": "f26013542058aa850685ba741941e0f097a10bb8200d649951b1c5de322db199"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CBdbVLxx.js",
+    "arquivo": "CBdbVLxx.js",
+    "bytes": 563,
+    "sha256": "5a10ab48cbb974597334e239d333ff506f5c8d4f85a734943c8534c827bc9e81"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/D2grdhfn.js",
+    "arquivo": "D2grdhfn.js",
+    "bytes": 2429,
+    "sha256": "86f1fc0c8a76f9549acbce72b49550ed6e26738abd8e9ae4a3b7fc0bce393963"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Dr0UTSVU.js",
+    "arquivo": "Dr0UTSVU.js",
+    "bytes": 141,
+    "sha256": "06c02f12e570bd76a3ce24295dc51fad0f2747f8e8fb2d520dccaf716a54f918"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BhBhOR0I.js",
+    "arquivo": "BhBhOR0I.js",
+    "bytes": 1144,
+    "sha256": "6451987a1398ac04aa65612af6d92577f145db7255376f452dec83203b6fb433"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/C496JMo7.js",
+    "arquivo": "C496JMo7.js",
+    "bytes": 2886,
+    "sha256": "c05b169d0c27f3f094adf2d0302d5c4c6380082fa57f8a01d2c946ebf7398122"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/K5JJFb2x.js",
+    "arquivo": "K5JJFb2x.js",
+    "bytes": 14608,
+    "sha256": "bc4d80d93be0d2db2b7c8fc98116ba63223d56d6d396b09417f587f50abb2ad8"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CVtkRDfq.js",
+    "arquivo": "CVtkRDfq.js",
+    "bytes": 4070,
+    "sha256": "06ac56ba68442053025102ce0d57d345eb730667573888a19e73f6b45bbeb4a2"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DvkVcoVE.js",
+    "arquivo": "DvkVcoVE.js",
+    "bytes": 32125,
+    "sha256": "d715ccaa3193c185b17ac629c858665b88935a4bc1496db84b4a374fe4913fe1"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BT6lKFFJ.js",
+    "arquivo": "BT6lKFFJ.js",
+    "bytes": 582,
+    "sha256": "f41b51789a619f2cde232a0a54c11e4eb82aaf49766b5a95aa85ba68f33eea62"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/B7Idz3ih.js",
+    "arquivo": "B7Idz3ih.js",
+    "bytes": 27580,
+    "sha256": "f110232cdb9329b80073766b5eacd01f7b4d4dec9f896c24d1bef6a8d7ae2da9"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Drr_BJSs.js",
+    "arquivo": "Drr_BJSs.js",
+    "bytes": 523,
+    "sha256": "8ef548f949781f16e31c0372ae373a169b2cd29b7473349518896cde0372561f"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BK4r--Tz.js",
+    "arquivo": "BK4r--Tz.js",
+    "bytes": 627,
+    "sha256": "5fb306a321f160a7935b2dc04e1dced2e70c1f7616475a9730dd55ecc6e55d7f"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CfQDgWZR.js",
+    "arquivo": "CfQDgWZR.js",
+    "bytes": 3969,
+    "sha256": "882c323f8fed355b32e3e448bc4becdbb2907c1c93c60d168e494fc929480d43"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CsYvLI8c.js",
+    "arquivo": "CsYvLI8c.js",
+    "bytes": 261,
+    "sha256": "e5893157e24e75d9ed930fbc11fb00a2d5495d64b293f0d5621f836067204ac8"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/C0BC05Nj.js",
+    "arquivo": "C0BC05Nj.js",
+    "bytes": 524,
+    "sha256": "d4882bc35e5038e56fee7fca13731e1e98e0f1246ae203cddb13a93946906c20"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DzRt3tCU.js",
+    "arquivo": "DzRt3tCU.js",
+    "bytes": 8258,
+    "sha256": "cbc1b03adf45b3f5690fb977b3b299c1c3728fb0306e6836c3d38431fdf6d674"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CN6jCSwG.js",
+    "arquivo": "CN6jCSwG.js",
+    "bytes": 626,
+    "sha256": "5d0c57e857e944bd0742cf7d6239295af921e50ffe21539c730c085698ca85c5"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/oYdzu2EX.js",
+    "arquivo": "oYdzu2EX.js",
+    "bytes": 1752,
+    "sha256": "f8ea5a68a34606f9d10920946ed76166c71bd01f0320a081988420538bb525c4"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BRVrOoOW.js",
+    "arquivo": "BRVrOoOW.js",
+    "bytes": 1169,
+    "sha256": "c887a4e44b3e17eaad76cfc04070ecbb2458befee0da760a826b114ffbc1d9ec"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CQNq_q-p.js",
+    "arquivo": "CQNq_q-p.js",
+    "bytes": 559,
+    "sha256": "992fb4378d9d2f2b94d1916b456efc7612ec4ab19d641fd6a1f6d2be6477e34a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Bdn-9Gij.js",
+    "arquivo": "Bdn-9Gij.js",
+    "bytes": 1269,
+    "sha256": "97117322bdc583232b7f451f9fcff91b8a520dd51ee74c7a880f261cd5dac062"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CNUPWQUw.js",
+    "arquivo": "CNUPWQUw.js",
+    "bytes": 14599,
+    "sha256": "03d194f019df07df8d5d10290a8bf0d1475d2c2b7186e50f7054e2acbef0bb0a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CQ_hNjsB.js",
+    "arquivo": "CQ_hNjsB.js",
+    "bytes": 464,
+    "sha256": "9ada2de9608070c4a3aec1784383a8648ec9287f863647c87aa70c40a83c995e"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DoFeLKqy.js",
+    "arquivo": "DoFeLKqy.js",
+    "bytes": 4529,
+    "sha256": "eb4599b54c19ce5b1ca233acb5bb7212f966aa36a223c4847e0b650339adc4a6"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CLefTA8T.js",
+    "arquivo": "CLefTA8T.js",
+    "bytes": 2116,
+    "sha256": "74f9bd9a3df8a9a6078209c6d601f0d7d6440926d9801d3611788a31bd96c4ed"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Con79PKX.js",
+    "arquivo": "Con79PKX.js",
+    "bytes": 1454,
+    "sha256": "19c4b679a50a97585fe0b662f824890f7e4c7854257e4410a07d247b94118303"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BtgOq1YG.js",
+    "arquivo": "BtgOq1YG.js",
+    "bytes": 775,
+    "sha256": "ba3e15ee77114e17cc8695542706176a724b152435dd60a396c34cee7c111ee9"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Cftb4YDA.js",
+    "arquivo": "Cftb4YDA.js",
+    "bytes": 35913,
+    "sha256": "5ec7b77a4f42874a72a5f5a1bddfcc9f3ef57b2e5a6b214745456b8e4f1c6a67"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BBlglGX7.js",
+    "arquivo": "BBlglGX7.js",
+    "bytes": 2053,
+    "sha256": "3d84589f732016a828a6cf94881153a92b00dcee2a29fe97c6804d911c2933b0"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DutkwbLR.js",
+    "arquivo": "DutkwbLR.js",
+    "bytes": 40479,
+    "sha256": "e6ee929401bcb4af91108988650aead421c49c615fa6486b5995ecdc2d9bf73c"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DQxIEHZt.js",
+    "arquivo": "DQxIEHZt.js",
+    "bytes": 65078,
+    "sha256": "00d0c8e26031cf7af039a4731a2be752ea1cc2d8c760b1c93d5908cda01e912a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Bu4XXbwU.js",
+    "arquivo": "Bu4XXbwU.js",
+    "bytes": 236126,
+    "sha256": "b54da482aaad9caddc5a0da3c9b3f11b4c5248f6c180a3c3709118bd5fd1be9a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/entry/start.l8Wm0lcy.js",
+    "arquivo": "start.l8Wm0lcy.js",
+    "bytes": 83,
+    "sha256": "2ca27961bad2cd8b3ad792709221eede852f08ee02e2b5dfff4f17c1aee32911"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/entry/app.kSjN2uGm.js",
+    "arquivo": "app.kSjN2uGm.js",
+    "bytes": 17574,
+    "sha256": "c9ff9ec8c06d9ddbe46ab1349ff0e2a7904752c89a9bc32c56fcdbc7d8c4b24d"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CnAAzOcA.js",
+    "arquivo": "CnAAzOcA.js",
+    "bytes": 28522,
+    "sha256": "296bdb58cdfb793cb2d24fd389bc27347071bb719b9b4795700f722b2fafebb2"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CKnCwT5a.js",
+    "arquivo": "CKnCwT5a.js",
+    "bytes": 2057,
+    "sha256": "80a68498c060416b3bb695bf7c2c108b48a61bd4d3951d11fa84fdef93fdbf9f"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/rwLNBlna.js",
+    "arquivo": "rwLNBlna.js",
+    "bytes": 287,
+    "sha256": "ebe297e52bb5d351935e6979ffdb35e4b5980a9700275717b1ef80082b64892a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/nodes/0.Bp7l_v7d.js",
+    "arquivo": "0.Bp7l_v7d.js",
+    "bytes": 55288,
+    "sha256": "2c8145034436c36ecedb19e33e1d75903963a8f35fd2eed618cf4c0ee7d4c26f"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CV7goIJ8.js",
+    "arquivo": "CV7goIJ8.js",
+    "bytes": 583,
+    "sha256": "6ae9381095a29047da81b762848f1c6209d5c0f459a6283e94d4f51f3c350a10"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BmsstBsy.js",
+    "arquivo": "BmsstBsy.js",
+    "bytes": 602,
+    "sha256": "48fdeecff5ed27471482d7a4f3ee7e942915eeea28429ad6e34894f19faa4f0c"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Dk1JTR26.js",
+    "arquivo": "Dk1JTR26.js",
+    "bytes": 472,
+    "sha256": "952f9d11372d32e691eb695863de4234cff6ed4045eb8e56af2e7d1e82526503"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/C7mdbu4t.js",
+    "arquivo": "C7mdbu4t.js",
+    "bytes": 4894,
+    "sha256": "bbf177ba8d67192006cd5a6bad8a5b4b2ba3ae7854c7a244daafe30d0b13a37d"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Cx1q3_uo.js",
+    "arquivo": "Cx1q3_uo.js",
+    "bytes": 21314,
+    "sha256": "bd99c3942fbd5944651c2e6e042a78abb3a28f2f308c237d6974becaecc1a5a3"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/mWn8df3F.js",
+    "arquivo": "mWn8df3F.js",
+    "bytes": 38609,
+    "sha256": "586046e3dc9db586a2706a1e9a9a31bcb17c8b33b1e9c16b6c8feb2394d5276c"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/nodes/1.DXascBAf.js",
+    "arquivo": "1.DXascBAf.js",
+    "bytes": 2544,
+    "sha256": "8929eccbaee52f1319a0ce4a654e22b65077574f388df5f9903e5eee759a0195"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CU4Mv64z.js",
+    "arquivo": "CU4Mv64z.js",
+    "bytes": 1737,
+    "sha256": "977cd071996a46271fccd809d812382b3a190c22bb506dcf11809beeaee0381b"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DI0usWEN.js",
+    "arquivo": "DI0usWEN.js",
+    "bytes": 260,
+    "sha256": "396f2f8bce6695f2d5f366a1747b3230c22c50c9e3e0d3a47248ef54647855cf"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BCu04N84.js",
+    "arquivo": "BCu04N84.js",
+    "bytes": 563,
+    "sha256": "055cd22b4e506653f6aa8064d617c5b1880a6fb2ed9aaa38df0edd473ef5a1c4"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BnVNM5UB.js",
+    "arquivo": "BnVNM5UB.js",
+    "bytes": 3637,
+    "sha256": "c85bdd6f13211c18408e805505e856e6f0bd9aa35e5bfe536b0be2b31dff9b7a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/uJJYOkLv.js",
+    "arquivo": "uJJYOkLv.js",
+    "bytes": 1542,
+    "sha256": "171a0ba069e2364e0d8f0fc2ff7d3c9a7dc17b1f43d439452d727d5033902797"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BOpIqf9u.js",
+    "arquivo": "BOpIqf9u.js",
+    "bytes": 22297,
+    "sha256": "b3115319b7eb51f71220e96299f65ed31502d65eaac54294d9e468b567feadaf"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/nodes/2.BIwhW_OU.js",
+    "arquivo": "2.BIwhW_OU.js",
+    "bytes": 432,
+    "sha256": "db2154f1265c1eb6ebac5b87bb118b3f9cb7da8977fc8f3cfe0a44bf8a125a9d"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BZ1MsESc.js",
+    "arquivo": "BZ1MsESc.js",
+    "bytes": 10942,
+    "sha256": "309d7f1ab85a4d257e875d7f1cd62dd197056335e05a213d849dfd77d4078f12"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DWwWef4h.js",
+    "arquivo": "DWwWef4h.js",
+    "bytes": 1317,
+    "sha256": "b0978cc540beb871f591142c6d496f0d5628d6f0bdbed1edf6a97cceec639b9b"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Cw4LHAzl.js",
+    "arquivo": "Cw4LHAzl.js",
+    "bytes": 1086,
+    "sha256": "f57609887f9f6d977b1ce362c69df0e01eb0a1064ebde2aa06fd5fd1bd9aaef0"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/QzhNx2OL.js",
+    "arquivo": "QzhNx2OL.js",
+    "bytes": 476,
+    "sha256": "2f197187d392d521efd9e2f985176c24461e8a5dfc678d65fb31805dfafc71e7"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BUJAzu3H.js",
+    "arquivo": "BUJAzu3H.js",
+    "bytes": 450,
+    "sha256": "6027e57892704b4f6a795a35dd577c980dfafdb5505834833f650f7dddf6b354"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/C3Wo9PYt.js",
+    "arquivo": "C3Wo9PYt.js",
+    "bytes": 513,
+    "sha256": "68b4cf8126b45937b15ae08758ec100b113a99c10941e01d7c9b9b28546fa902"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CVVPzzuo.js",
+    "arquivo": "CVVPzzuo.js",
+    "bytes": 1759,
+    "sha256": "0f94bab398980dddaa628c27e965747ffbf99669c093bc9439b5c1838fd049b9"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DbwYs1Xx.js",
+    "arquivo": "DbwYs1Xx.js",
+    "bytes": 116,
+    "sha256": "a778b937ece686057cabc56976aa5eb9d2ae55be8f93e5ee45734beb8aa549f5"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/Dk4rKkhy.js",
+    "arquivo": "Dk4rKkhy.js",
+    "bytes": 617,
+    "sha256": "384ab2866a15b9d0e4ac6f5a053323c4349e9e0de3663c22f7ba9be69489398b"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/4GUmfzWP.js",
+    "arquivo": "4GUmfzWP.js",
+    "bytes": 794,
+    "sha256": "517f2927a83a7957ba63c44106657a703e5606ab5b777979079a97b6ac55928b"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/C0hUYJSj.js",
+    "arquivo": "C0hUYJSj.js",
+    "bytes": 1046,
+    "sha256": "307d9e223dac14c59fee586d7edebbf5ba4cdfc88d21b0a87ecfc0f0f48b4cd9"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/DWBu78G_.js",
+    "arquivo": "DWBu78G_.js",
+    "bytes": 582,
+    "sha256": "8cdfa4b9a50fd43539107b46c34e9d4d614dd86051eaf5f17a3feaac234d070a"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/CiwsM7-a.js",
+    "arquivo": "CiwsM7-a.js",
+    "bytes": 440,
+    "sha256": "300c1d2cd74ccc4ba009489dcddb2a899f496610f76173e55908b3efaa086bf4"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BoXOcYiW.js",
+    "arquivo": "BoXOcYiW.js",
+    "bytes": 26687,
+    "sha256": "2cf1becf44bc23dbd381535317e60be03c8a8e0265ef2cacf49b3f69602c71a0"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/cN5yVuCE.js",
+    "arquivo": "cN5yVuCE.js",
+    "bytes": 177022,
+    "sha256": "e607acb2e8b20b987bf4759950bcad55abedd29cfe87b2691b1861be406bae52"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/chunks/BwsXAf2P.js",
+    "arquivo": "BwsXAf2P.js",
+    "bytes": 211856,
+    "sha256": "f88e692ce375804c43e8e02a8afae0f9de6b35f3b0e00e50d17060008fc6089f"
+  },
+  {
+    "url": "https://no-fluxo.crianex.com/_app/immutable/nodes/11.DuqvXFtr.js",
+    "arquivo": "11.DuqvXFtr.js",
+    "bytes": 40795,
+    "sha256": "2815bd4294b19e27d390d5c44b4755f0be115efc4ef453aee3140e1c67d1d25e"
+  }
+]

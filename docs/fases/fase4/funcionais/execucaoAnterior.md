@@ -62,4 +62,4 @@ As capturas podem orientar os testes de H0 e sustentar observações limitadas a
 | Nome do Membro | Contribuição | Data | Commit |
 |---|---|---|---|
 | [Gabriel Mota](https://github.com/Gabro-MO) | Capturas dos casos funcionais | 15/11 | [289a2a0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/289a2a02674594fc05aed55ad7c8177ca8154bdd) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Organização das capturas e identificação da entrada e das limitações | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Organização das capturas e identificação da entrada e das limitações | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |

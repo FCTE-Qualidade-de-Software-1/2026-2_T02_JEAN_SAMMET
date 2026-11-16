@@ -1,0 +1,114 @@
+{
+  "tipo_coleta": "definitiva",
+  "entrada_id": "H0",
+  "cenario_id": "C0-CT02-par",
+  "data_hora_utc": "2026-11-16T00:23:47.863Z",
+  "selecionadas": [
+    "FGA0072",
+    "FGA0074"
+  ],
+  "metodo_selecao": "Escolher com Darcy AI; solicitação dos códigos e confirmação Adicionar mesmo assim",
+  "registros_academicos_inalterados": {
+    "total": 44,
+    "APR": 37,
+    "MATR": 7,
+    "registros_manuais": 0
+  },
+  "posicoes": [
+    {
+      "codigo": "CEM0051",
+      "horas": 60,
+      "semestre": "2026.2"
+    },
+    {
+      "codigo": "FGA0124",
+      "horas": 60,
+      "semestre": "2026.2"
+    },
+    {
+      "codigo": "FGA0170",
+      "horas": 60,
+      "semestre": "2026.2"
+    },
+    {
+      "codigo": "FGA0208",
+      "horas": 60,
+      "semestre": "2026.2"
+    },
+    {
+      "codigo": "FGA0274",
+      "horas": 60,
+      "semestre": "2026.2"
+    },
+    {
+      "codigo": "FGA0150",
+      "horas": 60,
+      "semestre": "2026.2"
+    },
+    {
+      "codigo": "FGA0278",
+      "horas": 60,
+      "semestre": "2026.2"
+    },
+    {
+      "codigo": "FGA0072",
+      "horas": 30,
+      "semestre": "2027.1"
+    },
+    {
+      "codigo": "FGA0074",
+      "horas": 60,
+      "semestre": "2027.1"
+    },
+    {
+      "codigo": "FGA0211",
+      "horas": 60,
+      "semestre": "2027.1"
+    },
+    {
+      "codigo": "FGA0060",
+      "horas": 60,
+      "semestre": "2027.1"
+    },
+    {
+      "codigo": "FGA0109",
+      "horas": 60,
+      "semestre": "2027.1"
+    },
+    {
+      "codigo": "FGA0210",
+      "horas": 60,
+      "semestre": "2027.1"
+    },
+    {
+      "codigo": "FGA0244",
+      "horas": 60,
+      "semestre": "2027.2"
+    },
+    {
+      "codigo": "FGA0240",
+      "horas": 60,
+      "semestre": "2027.2"
+    },
+    {
+      "codigo": "FGA0250",
+      "horas": 90,
+      "semestre": "2027.2"
+    },
+    {
+      "codigo": "FGA0021",
+      "horas": 210,
+      "semestre": "2027.2"
+    },
+    {
+      "codigo": "FGA0009",
+      "horas": 60,
+      "semestre": "2027.2"
+    },
+    {
+      "codigo": "FGA0011",
+      "horas": 90,
+      "semestre": "2028.1"
+    }
+  ]
+}

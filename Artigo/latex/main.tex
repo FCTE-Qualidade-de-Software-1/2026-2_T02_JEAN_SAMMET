@@ -8,6 +8,7 @@
 \usepackage{array}
 \usepackage{tikz}
 \usetikzlibrary{babel}
+\usepackage[above,below]{placeins}
 
 \sloppy
 
@@ -15,7 +16,7 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \title{Avaliação da Qualidade do Planejamento de Formatura do No Fluxo UnB:
-Requisitos e Especificação segundo a ISO/IEC 25040}
+Requisitos, Especificação, Projeto e Execução segundo a ISO/IEC 25040}
 
 \author{Ana Beatriz Souza Araujo\inst{1}, Giovani De Oliveira Teodoro Coelho\inst{1},\\
   Yasmim de Souza Santos\inst{1}, Gabriel Mota Oliveira\inst{1},\\
@@ -32,25 +33,36 @@ Requisitos e Especificação segundo a ISO/IEC 25040}
 \maketitle
 
 \begin{abstract}
-This experience report describes the first stage of a quality evaluation of the
+This experience report describes the quality evaluation of the
 graduation planning flow of No Fluxo UnB, a web tool that helps University of
 Brasília (UnB) students plan the courses they still need to take. Following the
 ISO/IEC 25040 evaluation process and the Goal-Question-Metric (GQM) method, the team
 defined the evaluation requirements, adapted the ISO/IEC 25010 quality model to
 Functional Suitability, Security and Usability, recorded points of the planning
 engine to be tested, and specified two measurement goals, nine questions and twelve
-metrics with judgment criteria.
+metrics with judgment criteria. The team then planned and executed the evaluation
+with an authorized academic transcript: the plan omitted one of the 15 pending
+mandatory courses and met five of seven onboarding expectations, and the browser kept
+three keys with readable personal data, although all ten unauthorized requests were
+blocked. An interface improvement raised heuristic conformance from 80\% to 100\%. The
+flow did not receive full quality approval.
 \end{abstract}
 
 \begin{resumo}
-Este relato de experiência descreve a primeira etapa da avaliação da qualidade do
+Este relato de experiência descreve a avaliação da qualidade do
 fluxo de planejamento de formatura do No Fluxo UnB, ferramenta web que ajuda
 estudantes da Universidade de Brasília (UnB) a planejar as disciplinas que ainda
 precisam cursar. Seguindo o processo da ISO/IEC 25040 e o método Goal-Question-Metric
 (GQM), a equipe definiu os requisitos da avaliação, adaptou o modelo de qualidade da
 ISO/IEC 25010 para Adequação Funcional, Segurança e Usabilidade, registrou pontos do
 motor de planejamento a serem testados e especificou dois objetivos de medição, nove
-questões e doze métricas com critérios de julgamento.
+questões e doze métricas com critérios de julgamento. Depois, planejou e executou a
+avaliação com um histórico acadêmico autorizado: o plano omitiu uma das 15
+obrigatórias pendentes e atendeu a cinco de sete expectativas do \textit{onboarding},
+e o navegador manteve três chaves com dados pessoais legíveis, embora as dez
+requisições não autorizadas tenham sido bloqueadas. Uma melhoria de interface elevou a
+conformidade heurística de 80\% para 100\%. O fluxo não recebeu aprovação integral de
+qualidade.
 \end{resumo}
 
 \section{Introdução}\label{sec:introducao}
@@ -69,8 +81,8 @@ O objetivo geral é avaliar a qualidade desse fluxo segundo a Adequação Funcio
 Segurança e a Usabilidade da ISO/IEC 25010 \cite{iso25010}. Os objetivos específicos
 são: (i) estabelecer os requisitos da avaliação; (ii) especificá-la com objetivos,
 questões, hipóteses, métricas e critérios de julgamento; (iii) projetá-la e
-executá-la; e (iv) executar ao menos uma ação de melhoria. Esta versão cobre (i) e
-(ii), que correspondem às Fases 1 e 2.
+executá-la; e (iv) executar ao menos uma ação de melhoria. Esta versão cobre os
+quatro objetivos, que correspondem às Fases 1 a 4.
 
 Este artigo é um relato de experiência sobre como a equipe conduziu a avaliação, com
 o processo da ISO/IEC 25040 \cite{iso25040} e o método GQM \cite{basili1994gqm}, e
@@ -80,8 +92,8 @@ e na página de
 documentação\footnote{\url{https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/}}
 da equipe. A Seção~\ref{sec:referencial} apresenta o referencial teórico e os
 trabalhos relacionados; a Seção~\ref{sec:metodologia}, a metodologia; a
-Seção~\ref{sec:resultados}, os resultados; a Seção~\ref{sec:conclusao}, as
-considerações parciais; e o Apêndice~\ref{ap:contribuicao}, a contribuição de cada
+Seção~\ref{sec:resultados}, os resultados das quatro fases; a
+Seção~\ref{sec:conclusao}, a conclusão; e o Apêndice~\ref{ap:contribuicao}, a contribuição de cada
 integrante.
 
 \section{Referencial Teórico e Trabalhos Relacionados}\label{sec:referencial}
@@ -106,13 +118,14 @@ usabilidade do módulo de alunos do SIGAA com um questionário e as heurísticas
 Nielsen e encontrou muitas violações. Este trabalho também combina a ISO/IEC 25010,
 o GQM e as heurísticas de Nielsen em um sistema acadêmico, mas avalia uma ferramenta
 de planejamento de formatura, trata as três características no mesmo processo e mede
-a adequação funcional com casos de teste, e não pela percepção dos usuários.
+a adequação funcional com casos de teste, e não pela percepção dos usuários, e
+executa uma ação de melhoria com comparação antes e depois.
 
 \section{Metodologia}\label{sec:metodologia}
 
 A avaliação segue o processo da ISO/IEC 25040 \cite{iso25040}, organizado na
 disciplina em quatro fases, e usa o GQM \cite{basili1994gqm}, que desdobra objetivos
-de medição em questões e métricas. As Fases 1 e 2 compõem a Entrega 1, relatada aqui,
+de medição em questões e métricas. As Fases 1 e 2 compõem a Entrega 1,
 e as Fases 3 e 4, a Entrega 2. O detalhamento completo de cada fase está no
 repositório Git do projeto.
 
@@ -122,14 +135,20 @@ da ISO/IEC 25010 com apoio da ISO/IEC 25030, priorizou as características por i
 e risco e delimitou o escopo. Na Fase 2, aplicou o GQM, com a ISO/IEC 25023 e a
 ISO/IEC 25020 como referência, em métricas funcionais e operacionais, cada uma com
 ficha (definição, cálculo, fonte, coleta e critério de interpretação) e protocolo de
-coleta. Na Fase 3 será elaborado o plano de avaliação e, na Fase 4, as medições serão
-executadas e ao menos uma ação de melhoria será realizada.
+coleta. Na Fase 3, elaborou o plano de avaliação, com a entrada de teste, os cenários,
+o roteiro de cada caso, os métodos operacionais, o ambiente, o cronograma e uma
+matriz de rastreabilidade das métricas aos procedimentos. Na Fase 4, executou a
+avaliação, calculou as métricas, respondeu às questões, julgou as hipóteses e realizou
+e reavaliou uma ação de melhoria.
 
 A equipe usou o GitHub, o MkDocs Material para a página de documentação, o Mermaid
 para os diagramas e o LaTeX no Overleaf para o artigo. Os protocolos preveem
 históricos sintéticos, o Google Chrome e suas ferramentas de desenvolvedor, o
 \texttt{npm audit}, requisições com \texttt{curl} ou Postman e um \textit{checklist}
-das heurísticas de Nielsen, sempre com verificações não invasivas.
+das heurísticas de Nielsen, sempre com verificações não invasivas. Na coleta, a
+equipe também usou o Retire.js, para verificar as dependências carregadas pelo
+navegador, e \textit{scripts} em Python, que recalculam as métricas a partir dos
+registros do repositório.
 
 \section{Resultados}\label{sec:resultados}
 
@@ -392,23 +411,192 @@ TBR & $TBR = 100\%$ & Não se aplica: o bloqueio é obrigatório (OWASP A01) & $
 \end{tabular}
 \end{table}
 
-\section{Considerações Parciais}\label{sec:conclusao}
+\subsection{Fase 3: projeto da avaliação}\label{sec:fase3}
+
+O PDF sintético preparado para os testes foi rejeitado pelo importador do No Fluxo
+UnB (Figura~\ref{fig:rejeicao}), que orienta usar o histórico gerado pelo SIGAA. Por
+isso, a equipe passou a usar um histórico oficial autorizado, mantido fora do
+repositório, com 44 registros acadêmicos, 15 disciplinas obrigatórias pendentes e
+oito equivalências. Sobre esse histórico, a equipe definiu seis cenários de uso, que
+mudam apenas as opções da tela, como a carga de créditos, o trabalho ou estágio e o
+objetivo, e não representam estudantes diferentes. As regras usadas como referência,
+como os pré-requisitos e os co-requisitos das disciplinas, foram conferidas na
+matriz 6360/1 do SIGAA (Figura~\ref{fig:sigaa}).
+
+\begin{figure}[!ht]
+\centering
+\captionsetup{margin=0pt,format=plain,indention=0pt,justification=centering}
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{figuras/rejeicao-pdf-teste.png}
+\caption{Rejeição do PDF sintético pelo importador do No Fluxo UnB. Fonte: captura
+de tela, novembro de 2026.}
+\label{fig:rejeicao}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{figuras/regra-correquisito.png}
+\caption{Pré e co-requisitos de FGA0072 no SIGAA, usados como referência. Fonte:
+SIGAA/UnB, consulta em 15/11/2026.}
+\label{fig:sigaa}
+\end{minipage}
+\end{figure}
+
+Para a Adequação Funcional, a equipe escreveu um roteiro para cada um dos sete casos
+de teste, com a entrada, a regra, os passos e o resultado esperado. Para a
+Usabilidade, definiu que dois avaliadores da equipe percorreriam, cada um por conta
+própria, as tarefas de localizar a previsão de formatura, interpretar as matérias
+críticas e ajustar os créditos, e depois chegariam a um consenso. Para a Segurança,
+definiu que as dependências seriam verificadas nos arquivos carregados pelo
+navegador, que o armazenamento do navegador seria inspecionado no início do uso,
+depois da importação do histórico e depois da geração do plano, e que seriam
+enviadas ao serviço dez requisições sem permissão válida, além de uma requisição
+autorizada para comparação. Quando faltasse uma regra ou um dado para julgar um caso,
+o resultado seria registrado como pendente, sem ser contado como aprovado.
+
+Antes da coleta, a equipe testou esses procedimentos em uma rodada inicial e
+registrou o ambiente usado; não foi possível identificar a versão do sistema em
+produção. O cronograma distribuiu a preparação, a coleta, a análise, a melhoria e a
+revisão final até 22/11/2026, e uma matriz de rastreabilidade ligou cada métrica ao
+seu procedimento e à sua meta.
+
+\FloatBarrier
+\subsection{Fase 4: execução e conclusão da avaliação}\label{sec:fase4}
+
+A equipe aplicou o plano em 15/11/2026, e os registros e as evidências da coleta,
+sem dados pessoais, estão no repositório. A Tabela~\ref{tab:resultados} resume os
+resultados das doze métricas, incluindo os de usabilidade depois da ação de
+melhoria M-01.
+
+\begin{table}[!ht]
+\centering
+\caption{Resultados das métricas da avaliação. Fonte: elaboração da equipe.}
+\label{tab:resultados}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|L{1.3cm}|L{4.8cm}|L{3.2cm}|L{4.2cm}|}
+\hline
+\textbf{Métrica} & \textbf{Resultado} & \textbf{Meta} & \textbf{Julgamento} \\ \hline
+TVP & $0/1 = 0\%$ & 0\% & Conforme nos casos testados \\ \hline
+TVC & $0/2 = 0\%$ & 0\% & Conforme no par verificado \\ \hline
+CDO & $14/15 = 93{,}33\%$ & 100\% & Não conforme \\ \hline
+TDH & $0/44 = 0\%$ & 0\% & Conforme nos casos testados \\ \hline
+TAE & $0/8 = 0\%$ & 0\% & Conforme nos casos testados \\ \hline
+COO & $5/7 = 71{,}43\%$ & 100\% & Não conforme \\ \hline
+TVS & Carga: $0/23 = 0\%$; oferta: $1/10 = 10\%$; calendário: $1/3 = 33{,}33\%$ & 0\% por tipo & Não conforme em oferta e calendário \\ \hline
+TCH & $8/10 = 80\%$; após M-01, $100\%$ & $\geq 85\%$ & Aceitável; Excelente após M-01 \\ \hline
+ISVH & $2 \times 2 = 4$; após M-01, $0$ & $\leq 5$, sem maior ou catastrófica & Excelente \\ \hline
+IRP & $2 \times 1 + 1 \times 1 = 3$ & $\leq 5$, sem crítica ou alta & Excelente nas dependências verificadas \\ \hline
+GED-C & 3 chaves & 0 & Não conforme \\ \hline
+TBR & $10/10 = 100\%$ & 100\% & Conforme nos casos testados \\ \hline
+\end{tabular}
+\end{table}
+
+Na Adequação Funcional, o plano respeitou o pré-requisito e o par de co-requisitos
+verificados, manteve corretamente os 44 registros do histórico e aplicou bem as oito
+equivalências. Por outro lado, a equipe encontrou quatro problemas. Uma das 15
+disciplinas obrigatórias pendentes, FGA0206, ficou fora do plano e também não
+apareceu na lista de disciplinas não alocadas (Figura~\ref{fig:fga0206}). Duas das
+sete opções do \textit{onboarding} não tiveram o efeito esperado: ao marcar trabalho
+ou estágio, a sugestão continuou em 24 créditos, e não em 20; ao escolher
+velocidade, o plano continuou com três semestres, e não com dois. Uma disciplina,
+FGA0244, foi alocada em 2027.2, fora da oferta de turmas usada como referência
+(Figura~\ref{fig:ct07}), e, quando a consulta ao calendário falhou, o plano começou
+um semestre depois do esperado.
+
+Com isso, as questões sobre as obrigatórias pendentes, as opções do
+\textit{onboarding} e as restrições semestrais tiveram resposta negativa, e as
+hipóteses ligadas a esses três pontos se confirmaram. As demais hipóteses funcionais
+não se confirmaram nos casos testados, o que não prova que o produto esteja correto
+em todos os casos.
+
+\begin{figure}[!ht]
+\centering
+\captionsetup{margin=0pt,format=plain,indention=0pt,justification=centering}
+\begin{minipage}[t]{0.37\linewidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{figuras/ct03-fga0206.png}
+\caption{Trecho do plano gerado a partir do histórico autorizado, usado para
+investigar a ausência de FGA0206. Fonte: captura de tela da equipe, novembro de
+2026.}
+\label{fig:fga0206}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.59\linewidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{figuras/ct07-oferta.png}
+\caption{Trecho do plano com carga de 240h, em que FGA0244 aparece em 2027.2, fora
+da oferta usada como referência. Fonte: captura de tela da equipe, novembro de
+2026.}
+\label{fig:ct07}
+\end{minipage}
+\end{figure}
+
+Na Usabilidade, a primeira inspeção encontrou dois problemas menores: a tela não
+explicava os termos ``críticas'' e ``estratégicas'', e, quando o estudante digitava
+um número de créditos inválido, o valor era corrigido sem informar a faixa
+permitida. Com oito dos dez itens do \textit{checklist} atendidos, a usabilidade
+ficou no nível Aceitável, e a hipótese de que a tela tinha problemas relevantes se
+confirmou. Na Segurança, o serviço recusou as dez requisições sem permissão válida,
+e as dependências verificadas tiveram só um alerta moderado e um baixo. Porém, o
+navegador guardava três registros com dados pessoais que podiam ser lidos, e a equipe
+não considerou a codificação usada nesses registros como uma forma de proteção. Por
+isso, a resposta sobre segurança teve uma ressalva no armazenamento, e a hipótese de
+segurança se confirmou nesse ponto.
+
+A ação de melhoria, chamada de M-01 e prototipada em SvelteKit, tratou os dois
+problemas de usabilidade: acrescentou uma explicação dos termos ao lado do indicador
+de matérias críticas e uma mensagem que informa a faixa de 8 a 32 créditos quando o
+valor é ajustado. Na reavaliação, feita com o mesmo histórico e as mesmas tarefas,
+os dois itens passaram a ser atendidos, sem piora nos outros oito, e a usabilidade
+chegou ao nível Excelente. Por fim, a equipe recomendou, com prioridade alta, incluir
+FGA0206 no plano, rever os dados guardados no navegador e conferir o período e a
+oferta antes de alocar as disciplinas; com prioridade média, recomendou fazer as
+opções de trabalho e de objetivo produzirem o efeito definido e tratar os dois
+alertas das dependências.
+
+\FloatBarrier
+\section{Conclusão}\label{sec:conclusao}
 
 Nas Fases 1 e 2, a equipe definiu os requisitos da avaliação, adaptou a ISO/IEC 25010
 a três características, registrou seis pontos do Motor 2 que podem afetar a correção
-dos planos e especificou dois objetivos, nove questões e doze métricas. Na Entrega 2,
-a equipe elaborará o plano de avaliação, executará as medições, testará as hipóteses
-e realizará ao menos uma ação de melhoria.
+dos planos e especificou dois objetivos, nove questões e doze métricas. Nas Fases 3 e
+4, a equipe planejou e executou a avaliação, calculou as doze métricas, respondeu às
+nove questões, julgou as hipóteses e executou uma ação de melhoria. O fluxo não
+recebeu aprovação integral de qualidade: a Usabilidade chegou ao nível Excelente
+depois da melhoria, a Adequação Funcional ficou abaixo das metas em quatro pontos e a
+Segurança ficou com uma ressalva no armazenamento de dados no navegador.
+
+A equipe julgou cada característica separadamente e não calculou uma média entre as
+métricas, porque um bom resultado em uma não corrige um problema em outra: a
+explicação dos termos na tela não resolve a disciplina que ficou fora do plano, e o
+bloqueio das requisições não remove os dados pessoais guardados no navegador. A
+melhoria M-01 mudou apenas a usabilidade, sem alterar os resultados funcionais nem o
+armazenamento.
+
+Os resultados valem para o histórico usado e suas variações, e não para estudantes
+diferentes. A inspeção de usabilidade foi feita pela própria equipe, a verificação
+das dependências cobriu só os arquivos carregados no navegador e não foi possível
+saber qual versão do código estava em produção. Por isso, os resultados não podem
+ser estendidos a outras matrizes, históricos ou dispositivos. Como próximo passo, a
+equipe indica repetir a avaliação depois que as recomendações forem tratadas, para
+conferir se a disciplina omitida passa a constar do plano, se as opções do
+\textit{onboarding} passam a ter efeito, se o navegador deixa de guardar dados
+pessoais legíveis e se o período e a oferta passam a ser respeitados.
 
 \section*{Declaração de Uso de Inteligência Artificial}
 
 Ana Beatriz Souza Araujo usou o Gemini para formatar tabelas e revisar textos, e
 conferiu fórmulas e critérios na literatura. Gabriel Mota Oliveira usou o ChatGPT
 para esboçar textos e o código Mermaid do GQM, e removeu trechos sem embasamento.
-Giovani De Oliveira Teodoro Coelho usou o ChatGPT e o Gemini para estruturar as
-métricas operacionais e os protocolos de teste, e os ajustou à Fase 1, às normas e à
-LGPD. Gustavo Gomes Fornaciari usou o Claude para organizar o repositório e os textos
-da Fase 1, e desfez as pastas criadas sem necessidade. Vitor Lages Nogueira Araújo
+Giovani De Oliveira Teodoro Coelho usou o ChatGPT e o Gemini para estruturar e
+executar as métricas operacionais, os protocolos de teste e a ação de melhoria, e os
+ajustou à Fase 1, às normas e à LGPD. Gustavo Gomes Fornaciari usou o Claude para
+organizar o repositório e os textos e o Codex para apoiar a coleta dos testes, e
+desfez as pastas criadas sem necessidade. Vitor Lages Nogueira Araújo
 usou o Gemini para criar o cronograma e organizar as \textit{Issues}, e adaptou as
 sugestões ao escopo do projeto. Yasmim de Souza Santos usou o Claude para organizar o
 artigo e traduzi-lo de Markdown para LaTeX.
@@ -418,6 +606,8 @@ artigo e traduzi-lo de Markdown para LaTeX.
 Os documentos, os dados e os procedimentos de cálculo deste trabalho estão
 disponíveis no repositório da
 equipe\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET}}.
+Os registros da avaliação não contêm dados pessoais, e o histórico usado na avaliação
+não é publicado.
 
 \bibliographystyle{sbc}
 \bibliography{referencias}
@@ -429,20 +619,20 @@ equipe\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_
 
 \begin{table}[!ht]
 \centering
-\caption{Contribuição dos integrantes da equipe na Entrega 1, com o esforço dividido
-igualmente entre os seis integrantes (valores arredondados). Fonte: elaboração da
-equipe.}
+\caption{Contribuição dos integrantes nas Entregas 1 e 2, com esforço dividido
+igualmente (valores arredondados). Fonte: elaboração da equipe.}
 \label{tab:contribuicao}
 \footnotesize
-\begin{tabular}{|L{3.0cm}|p{1.6cm}|L{7.3cm}|>{\centering\arraybackslash}p{1.3cm}|}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|L{2.4cm}|p{1.6cm}|L{8.5cm}|>{\centering\arraybackslash}p{1.3cm}|}
 \hline
 \textbf{Integrante} & \textbf{Matrícula} & \textbf{Atividades realizadas} & \textbf{Esforço (\%)} \\ \hline
 Ana Beatriz Souza Araujo & 241025891 & Acompanhamento da gestão do projeto e documentação dessas informações. Também organizou a seção de gestão do projeto, incluindo o acompanhamento de \textit{Issues} e a atualização do histórico de versionamento. & 16,67 \\ \hline
-Giovani De Oliveira Teodoro Coelho & 241032500 & Elaboração e refinamento das métricas operacionais, com ajustes relacionados à usabilidade, segurança e adequação funcional. Também modularizou a documentação da Fase 2, padronizou referências bibliográficas e contribuiu para o registro do uso de IA. & 16,67 \\ \hline
-Yasmim de Souza Santos & 241040860 & Criação do \textit{template} do artigo científico e definição de uma estrutura inicial para sua elaboração. Também reuniu referências bibliográficas de base para orientar a produção do artigo do projeto. Depois, elaborou o artigo completo em LaTeX a partir da documentação do repositório, com os diagramas do modelo de qualidade, de contexto e do GQM, e o reestruturou conforme o retorno da professora, com trabalhos relacionados, metodologia e resultados das Fases 1 e 2. & 16,67 \\ \hline
-Gabriel Mota Oliveira & 241011081 & Elaboração inicial das perguntas GQM, das fichas de métricas funcionais e do protocolo de cenários de teste. Também estruturou e dividiu páginas da documentação, adicionou referências para as métricas funcionais e contribuiu para a documentação das métricas operacionais e dos critérios de avaliação da Fase 2. & 16,67 \\ \hline
-Gustavo Gomes Fornaciari & 241032519 & Organização e estruturação inicial do repositório, configuração do MkDocs e divisão da documentação em páginas. Responsável pela conclusão da Fase 1, incluindo a documentação do software escolhido, propósito e \textit{stakeholders}, escopo, modelo e características de qualidade, além da página de ODS e da manutenção dos critérios e históricos de versionamento. & 16,67 \\ \hline
-Vitor Lages Nogueira Araújo & 242025054 & Criação e organização de \textit{Issues} e \textit{Milestones} para acompanhar as atividades e o progresso do projeto. Também realizou atualizações no README, contribuindo para a identificação dos integrantes e a apresentação inicial do repositório. & 16,67 \\ \hline
+Giovani De Oliveira Teodoro Coelho & 241032500 & Elaboração e refinamento das métricas operacionais, com ajustes relacionados à usabilidade, segurança e adequação funcional. Também modularizou a documentação da Fase 2, padronizou referências bibliográficas e contribuiu para o registro do uso de IA. Nas Fases 3 e 4, especificou os métodos de usabilidade e segurança, calculou e julgou as métricas operacionais e elaborou a ação de melhoria, com protótipo em SvelteKit. & 16,67 \\ \hline
+Yasmim de Souza Santos & 241040860 & Criação do \textit{template} do artigo científico e definição de uma estrutura inicial para sua elaboração. Também reuniu referências bibliográficas de base para orientar a produção do artigo do projeto. Depois, elaborou o artigo completo em LaTeX a partir da documentação do repositório, com os diagramas do modelo de qualidade, de contexto e do GQM, e o reestruturou conforme o retorno da professora, com trabalhos relacionados, metodologia e resultados das Fases 1 e 2. Na Entrega 2, atualizou o artigo com as Fases 3 e 4. & 16,67 \\ \hline
+Gabriel Mota Oliveira & 241011081 & Elaboração inicial das perguntas GQM, das fichas de métricas funcionais e do protocolo de cenários de teste. Também estruturou e dividiu páginas da documentação, adicionou referências para as métricas funcionais e contribuiu para a documentação das métricas operacionais e dos critérios de avaliação da Fase 2. Nas Fases 3 e 4, criou o roteiro funcional, preparou o histórico de entrada, executou e consolidou os sete casos de teste funcionais, calculou as métricas funcionais, respondeu às questões GQM, criou \textit{scripts} de teste e participou da inspeção de usabilidade. & 16,67 \\ \hline
+Gustavo Gomes Fornaciari & 241032519 & Organização e estruturação inicial do repositório, configuração do MkDocs e divisão da documentação em páginas. Responsável pela conclusão da Fase 1, incluindo a documentação do software escolhido, propósito e \textit{stakeholders}, escopo, modelo e características de qualidade, além da página de ODS e da manutenção dos critérios e históricos de versionamento. Nas Fases 3 e 4, organizou o plano integrado, o cronograma e a rastreabilidade, padronizou o histórico de entrada, participou da inspeção de usabilidade, coordenou a coleta e a análise, consolidou a conclusão da avaliação e revisou as Fases 1 e 2 e os critérios. & 16,66 \\ \hline
+Vitor Lages Nogueira Araújo & 242025054 & Criação e organização de \textit{Issues} e \textit{Milestones} para acompanhar as atividades e o progresso do projeto. Também realizou atualizações no README, contribuindo para a identificação dos integrantes e a apresentação inicial do repositório. & 16,66 \\ \hline
 \textbf{Total} & & & \textbf{100} \\ \hline
 \end{tabular}
 \end{table}

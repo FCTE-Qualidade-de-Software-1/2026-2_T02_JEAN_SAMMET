@@ -12,6 +12,8 @@ def renderizar_calendario(resultado: ResultadoMarco, numero_figura: int, prefixo
             ["Issues planejadas (Nplanejado)", str(tct.planejadas)],
             ["Issues concluídas (Nconc)", str(tct.concluidas)],
             ["Issues adicionadas após a linha de base", adicionadas],
+            ["Escopo atual (planejadas + adicionadas)", str(tct.planejadas + tct.adicionadas)],
+            ["Pendentes no escopo atual", str(tct.planejadas + tct.adicionadas - tct.concluidas - tct.adicionadas_concluidas)],
             ["Taxa de Conclusão de Tarefas (TCT)", formatacao.percentual(tct.tct)],
             ["Situação da meta do grupo", resultado.situacao_tct],
         ],

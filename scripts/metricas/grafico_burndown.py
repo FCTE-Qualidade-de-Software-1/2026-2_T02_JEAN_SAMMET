@@ -25,7 +25,7 @@ def configurar_eixos(eixo, pontos) -> None:
     eixo.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
     eixo.yaxis.set_major_locator(MaxNLocator(integer=True))
     eixo.set_ylim(bottom=0)
-    eixo.set_ylabel("Issues restantes")
+    eixo.set_ylabel("Quantidade de issues")
     eixo.grid(axis="y", color=COR_GRADE, linewidth=0.8)
     eixo.set_axisbelow(True)
     for lado in ("top", "right"):
@@ -37,9 +37,9 @@ def desenhar_burndown(pontos, titulo: str, caminho: Path) -> None:
     dias_ideais, valores_ideais = separar(pontos, "ideal")
     dias_reais, valores_reais = separar(pontos, "restantes")
     if dias_ideais:
-        eixo.plot(dias_ideais, valores_ideais, linestyle="--", color=COR_IDEAL, label="Ideal")
+        eixo.plot(dias_ideais, valores_ideais, linestyle="--", color=COR_IDEAL, label="Ideal (linha de base)")
     if dias_reais:
-        eixo.plot(dias_reais, valores_reais, marker="o", color=COR_REAL, label="Real", clip_on=False)
+        eixo.plot(dias_reais, valores_reais, marker="o", color=COR_REAL, label="Issues restantes", clip_on=False)
     configurar_eixos(eixo, pontos)
     eixo.set_title(titulo, loc="left", fontsize=11)
     eixo.legend(frameon=False)

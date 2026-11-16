@@ -58,7 +58,7 @@ O custo é uma estimativa didática e não representa uma despesa financeira efe
 
 - O esforço realizado na Fase 1 foi consolidado ao final do Milestone por meio de **consenso retroativo da equipe**. Os integrantes revisaram as atividades executadas em cada Issue e registraram o tempo aproximado dedicado.
 - O valor de R$ 50,00 por hora é uma referência hipotética adotada para simular o cálculo do custo equivalente no contexto acadêmico.
-- A variação do esforço é calculada somente para tarefas concluídas, evitando que atividades ainda em andamento distorçam a comparação entre o planejamento e a execução.
+- A avaliação da precisão das estimativas compara tarefas concluídas de mesmo escopo. No [painel acumulado](painel.md), as 43h declaradas em 16/11 são comparadas às 21h da estimativa inicial: a diferença indica crescimento do esforço total e inclui atividades de entregas posteriores, não um desvio isolado da Entrega 1.
 - Os limites de 10% e 20% são critérios internos de acompanhamento definidos pela equipe. Eles não representam limites universais do PSM.
 - A faixa de equilíbrio individual permite observar diferenças de esforço entre os integrantes. Sua interpretação deve considerar a distribuição de responsabilidades e a complexidade das tarefas.
 
@@ -68,3 +68,4 @@ O custo é uma estimativa didática e não representa uma despesa financeira efe
 |---|---|---|---|
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
 | [Gustavo Fornaciaro](https://github.com/GUGOFO) | Declaração da origem da métrica | 25/10/2026 | [792b187](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/792b187ac98c876b47b42606e9c15a4f0e4ddf41) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Distinção entre esforço acumulado e comparação de estimativas por entrega | 16/11 | Não commitado |

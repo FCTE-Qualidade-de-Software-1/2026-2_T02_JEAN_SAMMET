@@ -21,7 +21,7 @@ Esta categoria acompanha o cumprimento do cronograma planejado e a conclusão da
 ## 3. Observações Metodológicas
 
 - A linha de base corresponde ao conjunto de Issues comprometidas no planejamento inicial do Milestone. Recomenda-se registrar esse conjunto no início do ciclo.
-- Novas Issues adicionadas durante o ciclo devem ser identificadas separadamente, evitando alterações retroativas no total planejado.
+- Novas Issues adicionadas durante o ciclo são identificadas separadamente e não alteram o denominador da TCT. No burndown, passam a integrar as pendências a partir da entrada no Milestone; a linha ideal mantém a referência inicial.
 - O cálculo pressupõe que Nplanejado > 0. Caso não existam tarefas planejadas, a TCT deverá ser registrada como não aplicável.
 - O critério de conclusão de uma Issue deve ser aplicado de maneira consistente.
 

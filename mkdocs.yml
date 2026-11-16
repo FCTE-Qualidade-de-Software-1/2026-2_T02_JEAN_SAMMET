@@ -36,6 +36,7 @@ nav:
             - Referências: fases/fase2/operacionais/referencias.md
     - Fase 3:
         - Plano Integrado: fases/fase3/planoAvaliacao.md
+        - Piloto e Prontidão: fases/fase3/piloto.md
         - Cronograma de Avaliação: fases/fase3/cronograma.md
         - Matriz de Rastreabilidade: fases/fase3/operacionais/rastreabilidade.md
         - Métricas Funcionais:
@@ -48,8 +49,8 @@ nav:
             - Recursos e Massa de Dados: fases/fase3/operacionais/ambienteERecursos.md
             - Roteiro do Avaliador: fases/fase3/operacionais/roteiroAvaliador.md
     - Fase 4:
-        - Rastreabilidade Completa: fases/fase4/rastreabilidade.md
         - Conclusão da Avaliação: fases/fase4/conclusao.md
+        - Matriz de Rastreabilidade: fases/fase4/rastreabilidade.md
         - Métricas Funcionais:
             - Sumário: fases/fase4/metricasFuncionais.md
             - Dados Brutos e Evidências: fases/fase4/funcionais/dadosBrutos.md

@@ -12,6 +12,7 @@ O plano prepara a coleta das sete métricas funcionais e cinco operacionais da [
 | [Fontes curriculares](funcionais/fontes.md) | Matriz 6360/1, regras verificadas e lacunas |
 | [Plano operacional](metricasOperacionais.md) | Usabilidade, dependências, armazenamento e acesso |
 | [Ambiente e dados](operacionais/ambienteERecursos.md) | Conta de teste, histórico autorizado e cenários planejados |
+| [Piloto e Prontidão](piloto.md) | Verificação inicial de H0, controles, ambiente e instrumentos de avaliação |
 | [Cronograma de avaliação](cronograma.md) | Datas-alvo, atividades, responsáveis e dependências até 22/11 |
 | [Matriz de rastreabilidade](operacionais/rastreabilidade.md) | Necessidades, questões, hipóteses, métricas, metas, procedimentos e registros previstos |
 
@@ -31,7 +32,7 @@ Não usar ausência de dados como zero. Preservar também falhas e repetições,
 
 ## 3. Prontidão para a coleta
 
-**Fase 3 concluída no escopo de preparação**, com viabilidade básica verificada: H0 aceito, planejamento acessível, cargas 20/24/32 créditos operáveis, base restaurada, ambiente registrado e instrumentos de segurança exercitados. A identificação da versão do servidor permanece desconhecida; o cliente tem inventário de URLs e hashes dos scripts observados.
+**Fase 3 concluída no escopo de preparação**, com viabilidade básica verificada no [piloto](piloto.md#2-condicoes-para-encerrar-o-preparo): H0 aceito, planejamento acessível, cargas 20/24/32 créditos operáveis, base restaurada, ambiente registrado e instrumentos de segurança exercitados. A identificação da versão do servidor permanece desconhecida; o cliente tem inventário de URLs e hashes dos scripts observados.
 
 O prazo é **22/11**. Gabriel executará os testes funcionais; Giovani, os de segurança; Gustavo fará a revisão/consolidação. Gustavo e Gabriel realizarão duas inspeções independentes de usabilidade. O acompanhamento do esforço realizado permanece no [PSM](../../gestaoProjeto/painel.md).
 
@@ -51,3 +52,4 @@ C0–C5 mantêm H0 fixo. As capturas de Gabriel, identificadas pela equipe como 
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização das referências após remoção do cronograma operacional | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização do acesso à matriz integrada de rastreabilidade da Fase 3 | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do cronograma de avaliação no plano integrado | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Restauração do acesso ao Piloto e Prontidão no plano integrado | 16/11 | Não commitado |

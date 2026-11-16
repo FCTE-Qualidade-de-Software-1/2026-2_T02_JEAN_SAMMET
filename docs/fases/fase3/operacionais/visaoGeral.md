@@ -11,7 +11,7 @@ A avaliação observa a interface `/plano-formatura`, os componentes cliente rec
 3. Dois avaliadores de usabilidade identificados e alinhados quanto ao checklist e à severidade.
 4. Ferramentas e evidências previstas por métrica. Para API, requisito, rota e chamada positiva validados.
 
-Critérios específicos podem liberar uma frente sem liberar as demais. As condições de execução estão em [Ambiente e dados](ambienteERecursos.md); os resultados estão na [Fase 4](../../fase4/conclusao.md).
+Critérios específicos podem liberar uma frente sem liberar as demais. A verificação inicial está em [Piloto e Prontidão](../piloto.md). As condições de execução estão em [Ambiente e dados](ambienteERecursos.md); os resultados estão na [Fase 4](../../fase4/conclusao.md).
 
 ## 3. Critérios de conclusão
 
@@ -33,3 +33,4 @@ Os modelos de registro estão em `testes/modelos_coleta/`. Na coleta definitiva,
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Criação da visão geral do plano de avaliação operacional, critérios de entrada/saída e governança | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Revisão do escopo e dos critérios operacionais de entrada e saída | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação dos critérios de entrada à página de piloto | 16/11 | Não commitado |

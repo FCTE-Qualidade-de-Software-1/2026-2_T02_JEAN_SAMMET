@@ -229,6 +229,30 @@ class TesteBurndownERegrasDeAvaliacao(unittest.TestCase):
         self.assertEqual(resultado[0].restantes, 2)
         self.assertEqual(resultado[-1].restantes, 1)
 
+    def test_burndown_inclui_adicionadas_so_a_partir_da_entrada(self):
+        inicial = issue(1)
+        adicionada = issue(2)  # Criada antes, mas vinculada depois ao marco.
+        resultado = calcular_burndown(
+            (inicial,), instante(15), instante(19), instante(18),
+            adicionadas=(adicionada,), entradas={2: instante(17)},
+        )
+        self.assertEqual([p.restantes for p in resultado[:4]], [1, 1, 2, 2])
+        self.assertEqual([p.escopo_total for p in resultado[:4]], [1, 1, 2, 2])
+        self.assertEqual(resultado[0].ideal, 1)
+        self.assertIsNone(resultado[-1].restantes)
+        self.assertIsNone(resultado[-1].escopo_total)
+        self.assertEqual(resultado[-1].ideal, 0)
+
+    def test_concluir_adicionada_reduz_pendencias_sem_reduzir_escopo(self):
+        inicial = issue(1, fechada=instante(16))
+        adicionada = issue(2, aberta=instante(17), fechada=instante(18))
+        resultado = calcular_burndown(
+            (inicial,), instante(15), instante(19), instante(19),
+            adicionadas=(adicionada,),
+        )
+        self.assertEqual([p.restantes for p in resultado], [1, 0, 1, 0, 0])
+        self.assertEqual([p.escopo_total for p in resultado], [1, 1, 2, 2, 2])
+
     def test_burndown_de_marco_encerrado_termina_no_prazo(self):
         tarefa = issue(1, aberta=instante(15), fechada=instante(20))
         resultado = calcular_burndown(

@@ -21,7 +21,7 @@ Esta categoria acompanha o cumprimento do cronograma planejado e a conclusão da
 ## 3. Observações Metodológicas
 
 - A linha de base corresponde ao conjunto de Issues comprometidas no planejamento inicial do Milestone. Recomenda-se registrar esse conjunto no início do ciclo.
-- Novas Issues adicionadas durante o ciclo são identificadas separadamente e não alteram o denominador da TCT. No burndown, passam a integrar as pendências a partir da entrada no Milestone; a linha de escopo total evidencia o crescimento, enquanto a linha ideal mantém a referência inicial.
+- Novas Issues adicionadas durante o ciclo são identificadas separadamente e não alteram o denominador da TCT. No burndown, passam a integrar as pendências a partir da entrada no Milestone; a linha ideal mantém a referência inicial.
 - O cálculo pressupõe que Nplanejado > 0. Caso não existam tarefas planejadas, a TCT deverá ser registrada como não aplicável.
 - O critério de conclusão de uma Issue deve ser aplicado de maneira consistente.
 
@@ -33,4 +33,3 @@ Os dados atuais do Milestone e o progresso das tarefas podem ser consultados na 
 | :--- | :--- | :--- | :--- |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
 | [Gustavo Fornaciaro](https://github.com/GUGOFO) | Declaracao da origem da métrica | 25/10/2026 | [792b187](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/792b187ac98c876b47b42606e9c15a4f0e4ddf41) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Representação das issues adicionadas e do escopo total no burndown | 16/11 | Não commitado |

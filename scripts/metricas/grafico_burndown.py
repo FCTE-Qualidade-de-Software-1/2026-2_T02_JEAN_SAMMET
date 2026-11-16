@@ -40,10 +40,6 @@ def desenhar_burndown(pontos, titulo: str, caminho: Path) -> None:
         eixo.plot(dias_ideais, valores_ideais, linestyle="--", color=COR_IDEAL, label="Ideal (linha de base)")
     if dias_reais:
         eixo.plot(dias_reais, valores_reais, marker="o", color=COR_REAL, label="Issues restantes", clip_on=False)
-    dias_escopo, valores_escopo = separar(pontos, "escopo_total")
-    if dias_escopo:
-        eixo.step(dias_escopo, valores_escopo, where="post", color="#2563eb",
-                  linewidth=1.8, label="Escopo total")
     configurar_eixos(eixo, pontos)
     eixo.set_title(titulo, loc="left", fontsize=11)
     eixo.legend(frameon=False)

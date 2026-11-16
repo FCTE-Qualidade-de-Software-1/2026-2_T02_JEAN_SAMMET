@@ -11,7 +11,7 @@ from .configuracao import (
     LIMITE_TSA_DIAS,
 )
 from .leitura_issues import listar_issues
-from .linha_de_base import definir_linha_de_base
+from .linha_de_base import definir_linha_de_base, instante_de_entrada
 from .modelos import Marco
 from .referencia import referencia_do_marco
 from .resultado_marco import ResultadoMarco
@@ -31,6 +31,8 @@ def processar_marco(cliente, repositorio: str, marco: Marco, agora: datetime) ->
         referencia,
         encerrado=marco.estado == "closed",
         data_fim=DATAS_FINAIS_BURNDOWN.get(marco.numero),
+        adicionadas=base.adicionadas,
+        entradas={issue.numero: instante_de_entrada(issue, marco) for issue in issues},
     )
     return ResultadoMarco(
         marco=marco,

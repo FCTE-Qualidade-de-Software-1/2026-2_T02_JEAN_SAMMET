@@ -39,31 +39,19 @@ Em que:
 
 | Métrica / Parâmetro | Valor Estimado | Valor Realizado |
 | :--- | :---: | :---: |
-| Esforço Total da Equipe | 21,0 horas | **20,0 horas** |
-| Média de Esforço por Integrante (6 membros) | 3,5 h/membro | **3,33 h/membro** |
-| Variação do Esforço (<code>V<sub>e</sub></code>) | - | **4,76%** (dentro do limite de 10%) |
+| Esforço Total da Equipe | 21,0 horas | **43,0 horas** |
+| Média de Esforço por Integrante (6 membros) | 3,5 h/membro | **7,17 h/membro** |
+| Variação do Esforço (<code>V<sub>e</sub></code>) | - | **104,76%** (acima do limite de 10%) |
 | Valor Didático da Hora Profissional (<code>V<sub>h</sub></code>) | R$ 50,00/hora | R$ 50,00/hora |
-| **Custo Financeiro Equivalente Total** | **R$ 1.050,00** | **R$ 1.000,00** |
+| **Custo Financeiro Equivalente Total** | **R$ 1.050,00** | **R$ 2.150,00** |
 
 **Análise e interpretação gerencial**
 
-O esforço estimado para a equipe foi de 21,0 horas, enquanto o esforço realizado foi de 20,0 horas. A diferença absoluta corresponde a uma variação de 4,76%, dentro do limite de 10% definido como critério de adequação.
+Em 16/11, a equipe atualizou o esforço total acumulado para **43,0 horas**. Esse total já inclui os registros anteriores e não deve ser somado novamente a eles. A estimativa inicial permanece em **21,0 horas**. A diferença é de **22,0 horas**, equivalente a **104,76%** da estimativa inicial, acima da referência de 10%.
 
-Considerando seis integrantes, o esforço médio foi de 3,5 horas por membro na estimativa e de aproximadamente 3,33 horas por membro na realização. Esses valores representam médias aritméticas e não necessariamente a distribuição efetiva das horas entre os integrantes.
+Como o total acumulado inclui trabalho posterior à Entrega 1, essa comparação indica o crescimento em relação à estimativa inicial; não mede isoladamente a precisão das estimativas de cada entrega. O registro histórico da Entrega 1 permanece preservado abaixo.
 
-Para fins exclusivamente didáticos, foi adotado o valor de R$ 50,00 por hora profissional. Com esse parâmetro, o custo financeiro equivalente estimado foi de R$ 1.050,00, enquanto o custo equivalente ao esforço realizado foi de R$ 1.000,00. Esses valores não representam necessariamente despesas financeiras efetivamente incorridas pelo grupo.
-
-## Esforço adicional — Fase 3 (em andamento)
-
-A estimativa inicial e o realizado da Entrega 1 acima permanecem preservados. Em 15/11, Gustavo informou aproximadamente **7,0h adicionais** dedicadas à análise, revisão e preparação da Fase 3. O apontamento é retrospectivo e parcial; não representa o total da equipe.
-
-| Registro | Integrante | Atividade / Issue | Horas adicionais realizadas | Custo didático equivalente | Fonte |
-|---|---|---|---|---|---|
-| F3-GUGOFO-20261115-01 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Preparação da Fase 3 / [#7](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/issues/7) | ≈ 7,0h | ≈ R$ 350,00 | Declaração do integrante em 15/11 |
-
-`Custo adicional = 7,0h × R$ 50,00/h = R$ 350,00`. É uma referência didática, sem despesa financeira efetiva. Os dados estruturados ficam em `scripts/metricas/registros_esforco.json` e esta seção é mantida manualmente no arquivo-fonte do painel; não há cálculo automático das horas pelo GitHub.
-
-As **23h** do cronograma da avaliação são uma estimativa proposta para atividades das Fases 3 e 4. Não são horas já realizadas, não substituem a linha de base inicial e não serão somadas às 7h como trabalho executado. A variação percentual da Fase 3 será julgada quando houver tarefas concluídas, estimativas comparáveis e apontamentos completos. Atualizar este registro cumulativo sem somá-lo novamente a cada revisão.
+A média aritmética é de **7,17 horas por integrante** (43 ÷ 6); não representa a distribuição individual efetiva. Ao valor didático de **R$ 50,00/h**, o custo equivalente realizado é **R$ 2.150,00**, frente aos **R$ 1.050,00** estimados. Esses valores não representam despesas financeiras efetivas. As horas são declaradas pela equipe e mantidas neste arquivo-fonte, sem inferência automática a partir das issues.
 
 ## Registro Histórico da Entrega 1 — Fase 1: Definição e Caracterização
 
@@ -116,3 +104,4 @@ Os resultados observados deverão ser interpretados considerando o planejamento,
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização do progresso das Issues | 18/10/2026 | [d2b77cf](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d2b77cf6bb91436494b004f225c771eed33ba46f) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Atualização da conclusão das Issues | 18/10/2026 | [0e35ba5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e35ba589c078941f61ef6b425882fe07b0e9dff) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro separado das horas adicionais da Fase 3 | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização do burndown com ampliação de escopo e consolidação do esforço em 43h | 16/11 | Não commitado |

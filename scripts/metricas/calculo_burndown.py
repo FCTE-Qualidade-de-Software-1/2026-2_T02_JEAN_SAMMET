@@ -11,6 +11,7 @@ class PontoBurndown:
     dia: date
     restantes: int | None
     ideal: float | None
+    escopo_total: int | None = None
 
 
 def ultimo_dia_do_grafico(
@@ -44,7 +45,7 @@ def contar_restantes(planejadas: tuple[Issue, ...], dia: date, referencia: datet
     if dia > dia_local(referencia):
         return None
     momento = min(fim_do_dia_local(dia), referencia)
-    return sum(1 for issue in planejadas if esta_aberta_em(issue, momento))
+    return sum(1 for issue in planejadas if issue.aberta_em <= momento and esta_aberta_em(issue, momento))
 
 
 def calcular_burndown(
@@ -54,6 +55,8 @@ def calcular_burndown(
     referencia: datetime,
     encerrado: bool = False,
     data_fim: date | None = None,
+    adicionadas: tuple[Issue, ...] = (),
+    entradas: dict[int, datetime] | None = None,
 ) -> tuple[PontoBurndown, ...]:
     if inicio is None or not planejadas:
         return ()
@@ -62,10 +65,21 @@ def calcular_burndown(
     dias = sequencia_de_dias(primeiro, ultimo)
     fim_planejado = data_fim or (dia_local(prazo) if prazo is not None else None)
     duracao = (fim_planejado - primeiro).days if fim_planejado is not None else None
+    todas = planejadas + adicionadas
+    entradas = entradas or {}
+
+    def escopo_no_dia(dia):
+        momento = min(fim_do_dia_local(dia), referencia)
+        return tuple(
+            issue for issue in todas
+            if max(issue.aberta_em, entradas.get(issue.numero, issue.aberta_em)) <= momento
+        )
+
     return tuple(
         PontoBurndown(
             dia=dia,
-            restantes=contar_restantes(planejadas, dia, referencia),
+            restantes=contar_restantes(escopo_no_dia(dia), dia, referencia),
+            escopo_total=len(escopo_no_dia(dia)) if dia <= dia_local(referencia) else None,
             ideal=valor_ideal(len(planejadas), (dia - primeiro).days, duracao),
         )
         for dia in dias

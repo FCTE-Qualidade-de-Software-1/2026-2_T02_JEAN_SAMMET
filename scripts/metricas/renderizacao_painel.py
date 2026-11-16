@@ -20,8 +20,11 @@ def renderizar_metodologia() -> str:
         for numero, data_fim in sorted(DATAS_FINAIS_BURNDOWN.items())
     )
     descricao_burndown = (
-        f"**Burndown:** data final configurada para {datas_finais}; a linha ideal segue até essa data, "
-        "enquanto a linha real é exibida até a data de referência da coleta. "
+        f"**Burndown:** data final configurada para {datas_finais}; a linha ideal segue até essa data. "
+        "A linha ideal preserva a quantidade da linha de base; as issues restantes incluem também "
+        "as adicionadas, somente a partir da entrada no Milestone. A linha de escopo total mostra "
+        "a quantidade de issues incluídas até cada dia, abertas ou concluídas. Aumentos representam "
+        "ampliação do escopo. As duas séries observadas terminam na referência da coleta, sem projetar resultados futuros. "
         "Nos demais Milestones encerrados, o gráfico termina no prazo ou, se o marco foi encerrado antes, na data do encerramento. "
         "Milestones ainda abertos sem data final específica continuam até o prazo ou a data de referência, o que for mais distante."
     )
@@ -42,6 +45,11 @@ def renderizar_metodologia() -> str:
         "`sem-atividade`, removido quando voltam a ter movimento.",
         "**Prazo:** fim do dia da data limite do Milestone, no horário de Brasília.",
         descricao_burndown,
+        "**Escopo e histórico:** a coleta considera as issues atualmente vinculadas a cada Milestone "
+        "e sua última entrada registrada (na ausência do evento, usa a abertura, limitada à criação do marco). "
+        "Issues removidas do Milestone não integram esta série; a linha de base é reconstruída a cada coleta, "
+        "não um snapshot imutável. A distinção entre escopo original e ampliação segue a "
+        "[documentação de burndown do Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/report/dashboards/configure-burndown-burnup-widgets?view=azure-devops).",
         "**Dados manuais:** esforço, custo equivalente, decisões e registros históricos são mantidos no "
         "arquivo-fonte `scripts/metricas/acompanhamento.md` e incorporados a esta página durante a geração.",
         "**Definições:** consulte [Gestão do Projeto](psm-cid.md), [Calendário e Progresso](calendario-progresso.md), "

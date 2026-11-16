@@ -71,6 +71,7 @@ A redução de IRP para zero é uma meta de tratamento dos dois achados existent
 
 | Resultado | Referência |
 | --- | --- |
+| Visão completa das nove questões e do encerramento | [Rastreabilidade da Fase 4](rastreabilidade.md) |
 | Sete métricas funcionais e metas | [Consolidado funcional](metricasFuncionais.md#resultados-consolidados) |
 | Questões e hipóteses funcionais | [Análise funcional](funcionais/analiseResultados.md) |
 | Cinco métricas operacionais e metas | [Consolidado operacional](metricasOperacionais.md#quadro-de-resumo) |
@@ -88,3 +89,4 @@ A redução de IRP para zero é uma meta de tratamento dos dois achados existent
 |---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Consolidação da avaliação, rastreabilidade e encerramento do estudo de caso | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação da conclusão à rastreabilidade completa da Fase 4 | 16/11 | Não commitado |

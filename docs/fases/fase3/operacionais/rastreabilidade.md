@@ -23,6 +23,8 @@ A matriz liga as necessidades da Fase 1 às perguntas e metas da Fase 2, aos pro
 
 A relação TAE também apoia Q-FUN-03, pois equivalências afetam a lista de pendências. A [análise funcional](../../fase4/funcionais/analiseResultados.md#4-julgamento-das-hipoteses-funcionais) e a [operacional](../../fase4/operacionais/analiseResultados.md#5-julgamento-das-hipoteses-operacionais) contêm todos os vereditos. O [encerramento](../../fase4/conclusao.md) responde ao propósito da Fase 1 e reúne as recomendações.
 
+A [rastreabilidade completa da Fase 4](../../fase4/rastreabilidade.md) reúne as nove respostas, os julgamentos e a conferência de encerramento em uma página de consulta.
+
 ---
 
 ## Histórico de versão
@@ -30,4 +32,4 @@ A relação TAE também apoia Q-FUN-03, pois equivalências afetam a lista de pe
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Criação da matriz de rastreabilidade bidirecional completa da Fase 1 à Fase 4 para métricas operacionais | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Rastreabilidade das doze métricas aos procedimentos e às evidências | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Rastreabilidade das doze métricas aos procedimentos e às evidências | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) || [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação do planejamento à página de rastreabilidade da Fase 4 | 16/11 | Não commitado |

@@ -67,6 +67,7 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | Fase 4 — Funcional | Sete métricas, respostas GQM e hipóteses | [Resultados funcionais](fases/fase4/metricasFuncionais.md) |
 | Fase 4 — Operacional | Usabilidade, segurança e julgamento integrado | [Resultados operacionais](fases/fase4/metricasOperacionais.md) |
 | Melhoria | Intervenção e comparação de TCH/ISVH | [Ação de melhoria](fases/fase4/operacionais/acaoMelhoria.md) |
+| Rastreabilidade da Fase 4 | Nove questões, metas, respostas e hipóteses em uma página | [Rastreabilidade completa](fases/fase4/rastreabilidade.md) |
 | Encerramento | Conclusão, recomendações e limites | [Conclusão da avaliação](fases/fase4/conclusao.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
@@ -81,4 +82,4 @@ A lista completa de integrantes está no [README do repositório](https://github
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Pagina inicial do trabalho | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Pagina inicial do trabalho | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) || [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do acesso à rastreabilidade completa da Fase 4 | 16/11 | Não commitado |

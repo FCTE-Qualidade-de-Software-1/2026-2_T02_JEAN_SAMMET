@@ -12,7 +12,7 @@
 | F1-C6 | Escopo, profundidade e objetos de avaliação | Delimitar o que será avaliado e excluído, justificando os cortes e explicando os limites de validade dos resultados. | Documentado | [Escopo, exclusões e limites](../fases/fase1/escopo.md) |
 | F1-C7 | ODS, metas e indicadores | Relacionar o projeto a ODS e metas pertinentes, explicando a relação e distinguindo indicadores oficiais de indicadores internos. | Documentado | [ODS, metas e indicadores internos](../fases/fase1/ODS.md) |
 | F1-C8 | Organização lógica do relatório | Ter navegação e hierarquia consistentes, narrativa clara e referências cruzadas úteis. | Documentado | [Página inicial](../index.md) |
-| F1-C9 | Português, estilo e padronização | Apresentar redação revisada, referências completas e corretas e figuras/tabelas numeradas, legendadas, citadas e com fonte. | Parcial | [Referências](../referencias/fase1.md) |
+| F1-C9 | Português, estilo e padronização | Apresentar redação revisada, referências completas e corretas e figuras/tabelas numeradas, legendadas, citadas e com fonte. | Documentado | [Referências](../referencias/fase1.md) |
 | F1-C10 | Uso de IA | Declarar a ferramenta, a tarefa e como a equipe conferiu e ajustou o conteúdo, sem ícones ou figuras decorativas de IA. | Documentado | [Declaração por integrante](../usoDeIA/IA.md) |
 | F1-C11 | GitPage da equipe | Disponibilizar página atualizada, navegável e rastreável, com seção da Fase 1, versão/data, links funcionais, release e acessibilidade básica. | Documentado | [GitPage](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/) · [Conferência](index.md#3-confirmacao-das-entregas) |
 
@@ -28,4 +28,4 @@
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao da tabela | 16/10 | [516cc9f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/516cc9fb50634d1729db19c96a2c9883c676f5bd) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização dos critérios e links para evidências | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Conferência e atualização dos critérios conforme o documento do trabalho final | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
-| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Padronização dos critérios, situações e links de verificação | 16/11 | Não commitado |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Padronização dos critérios, situações e links de verificação | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |

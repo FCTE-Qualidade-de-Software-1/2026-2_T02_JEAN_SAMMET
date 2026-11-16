@@ -32,4 +32,4 @@ A conferência de publicação, releases e Moodle foi confirmada por Gustavo em 
 
 | Nome do Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do cronograma de avaliação com atividades, responsáveis e dependências | 16/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do cronograma de avaliação com atividades, responsáveis e dependências | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |

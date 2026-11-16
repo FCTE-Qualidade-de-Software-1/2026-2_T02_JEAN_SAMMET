@@ -8,9 +8,9 @@
 | :----- | :----------- | :----------------------- | :----------- | :-------------------- |
 | P1 | Características de qualidade | Selecionar três a quatro características, indicar a norma, justificar e discutir suas relações ao concluir. | Documentado | [Modelo](../fases/fase1/modeloDeQualidade.md) · [conclusão](../fases/fase4/conclusao.md#2-julgamento-integrado) |
 | P2 | Métricas GQM | Ligar objetivos, questões e métricas; registrar definição, cálculo, fonte, coleta e interpretação. | Documentado | [GQM funcional](../fases/fase2/funcionais/GQM.md) · [métricas operacionais](../fases/fase2/metricasOperacionais.md) |
-| P3 | Gestão PSM/CID | Medir Desempenho dos Processos, Calendário e Progresso, Recursos e Custos; registrar interpretação e decisões. | Parcial | [PSM/CID](../gestaoProjeto/psm-cid.md) · [acompanhamento](../gestaoProjeto/painel.md) |
+| P3 | Gestão PSM/CID | Medir Desempenho dos Processos, Calendário e Progresso, Recursos e Custos; registrar interpretação e decisões. | Documentado | [PSM/CID](../gestaoProjeto/psm-cid.md) · [acompanhamento](../gestaoProjeto/painel.md) |
 | P4 | Repositório da disciplina | Manter documentos, dados e demais registros pertinentes no Git durante o desenvolvimento. | Documentado | [Repositório](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET) |
-| P5 | Rastreabilidade dos dados | Disponibilizar dados de coleta/consolidação e procedimentos de tratamento/cálculo; proteger participantes. | Parcial | [Rastreabilidade da Fase 4](../fases/fase4/rastreabilidade.md) · [dados funcionais](../fases/fase4/funcionais/dadosBrutos.md) · [operacionais](../fases/fase4/operacionais/dadosBrutos.md) |
+| P5 | Rastreabilidade dos dados | Disponibilizar dados de coleta/consolidação e procedimentos de tratamento/cálculo; proteger participantes. | Documentado | [Rastreabilidade da Fase 4](../fases/fase4/rastreabilidade.md) · [dados funcionais](../fases/fase4/funcionais/dadosBrutos.md) · [operacionais](../fases/fase4/operacionais/dadosBrutos.md) |
 | P6 | Entrevistas | Gravar entrevistas mediante consentimento quando elas integrarem a avaliação. | Documentado | [Método de usabilidade](../fases/fase2/operacionais/protocolo.md#3-protocolo-de-inspecao-heuristica-teste-da-hipotese-h-op-01-met-op-01-e-met-op-01b) |
 | P7 | Formato do artigo | Usar LaTeX e modelo SBC, ACM ou IEEE, preservando sua formatação. | Documentado | [LaTeX](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/blob/main/Artigo/latex/main.tex) · [Modelo SBC](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/blob/main/Artigo/latex/sbc-template.sty) |
 | P8 | Conteúdo do artigo | Permitir compreender problema, objetivos, metodologia e avaliação. | Parcial | [Artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/blob/main/Artigo/latex/main.tex) |
@@ -50,7 +50,7 @@ O PDF admite protótipo de alta fidelidade, implementação parcial/completa, te
 
 | **ID** | **Critério** | **Alvo Excelente** | **Situação** | **Verificação** |
 | :----- | :----------- | :----------------------- | :----------- | :-------------------- |
-| M-01 | Ação de melhoria | Executar pelo menos uma melhoria justificada pela avaliação e disponibilizar a entrega técnica. | Parcial | [Melhoria M-01](../fases/fase4/operacionais/acaoMelhoria.md) · [Requisito](documentos/trabalho-final-v1.pdf#page=3) |
+| M-01 | Ação de melhoria | Executar pelo menos uma melhoria justificada pela avaliação e disponibilizar a entrega técnica. | Documentado | [Melhoria M-01](../fases/fase4/operacionais/acaoMelhoria.md) · [Requisito](documentos/trabalho-final-v1.pdf#page=3) |
 
 *Fonte: documento do trabalho final e conferência documental da equipe.*
 
@@ -63,4 +63,4 @@ O PDF admite protótipo de alta fidelidade, implementação parcial/completa, te
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da página de critérios | 16/10 | [353f46e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/353f46ecd1a408d3474ea0dfa157aba62daabd70) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao da tabela | 16/10 | [516cc9f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/516cc9fb50634d1729db19c96a2c9883c676f5bd) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Conferência e atualização dos critérios conforme o documento do trabalho final | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
-| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Padronização dos critérios, situações e links de verificação | 16/11 | Não commitado |
+| [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Padronização dos critérios, situações e links de verificação | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |

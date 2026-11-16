@@ -42,9 +42,12 @@ Referências técnicas, metodológicas e normativas utilizadas na elaboração d
 - UNIVERSIDADE DE BRASÍLIA. **SIGAA — Estruturas curriculares de Engenharia de Software**, matriz 6360/1 — 2017.1. [Consulta pública](https://sigaa.unb.br/sigaa/public/curso/curriculo.jsf?id=414924&lc=pt_BR). Acesso em: 15 nov. 2026. Nos detalhes, consultar os componentes FGA0211, MAT0026 e IFD0173 e seus históricos de vigência.
 - UNIVERSIDADE DE BRASÍLIA. **Relatório da estrutura curricular 6360/1**. Emitido em 15/11/2026, fornecido pelo usuário. Transcrição dos dados usados e hash do documento em `testes/referencias/estrutura_6360_1.json`; não inclui o histórico pessoal.
 
+---
+
 ## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Compilação e estruturação das referências bibliográficas da Fase 3 | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Compilação e estruturação das referências bibliográficas da Fase 3 | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão das fontes curriculares consultadas | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |

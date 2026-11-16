@@ -1,0 +1,30 @@
+{
+  "tipo_coleta": "piloto",
+  "entrada_id": "H0",
+  "data_hora_utc": "2026-11-15T20:51:13.262Z",
+  "url": "https://api-nofluxo.crianex.com/planejamento/gerar-plano",
+  "metodo": "POST",
+  "campos_payload": [
+    "curriculo_completo",
+    "codigos_concluidos",
+    "semestre_atual",
+    "limite_creditos"
+  ],
+  "cabecalhos_relevantes": [
+    "Authorization",
+    "Content-Type",
+    "User-ID"
+  ],
+  "autenticacao_observada": "token direto em Authorization, sem prefixo Bearer",
+  "controle_positivo": {
+    "status_http": 200,
+    "plano_observado": true
+  },
+  "verificacao_sem_authorization": {
+    "status_http": 401,
+    "mesmo_metodo": true,
+    "mesmo_payload": true,
+    "user_id_preservado": true
+  },
+  "limitacao": "Uma verificação-piloto; não constitui a bateria de TBR nem comprova segurança global."
+}

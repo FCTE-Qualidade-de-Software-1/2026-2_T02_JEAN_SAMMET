@@ -1,11 +1,9 @@
 # Evidências funcionais — H0
 
-O histórico oficial autorizado H0 é a entrada única. O original fica fora do repositório.
+H0 é a entrada oficial autorizada; PDF e identificação ficam fora do Git. Os arquivos `h0_registros.csv`, `h0_obrigacoes_pendentes.csv` e `h0_equivalencias.csv` são referências, e `unidades_esperadas_h0.csv` é o checklist de preparação.
 
-- `h0_registros.csv`: 44 registros, 37 aprovados e 7 matriculados; código e período identificam a ocorrência.
-- `h0_obrigacoes_pendentes.csv`: 15 obrigatórias, duas cadeias e ENADE.
-- `h0_equivalencias.csv`: seis relações concluídas e duas em andamento.
-- `unidades_esperadas_h0.csv`: checklist de preparação, sem resultado observado.
-- `execucoes.csv` e `verificacoes_funcionais.csv`: arquivos preparados, sem resultados pré-preenchidos.
+A coleta está em `execucao-h0-2026-11-15/`. `execucoes.csv` registra o contexto e `verificacoes_funcionais.csv` contém 102 comparações, incluindo condições pendentes com classificação explícita. Não usar os registros da execução anterior como resultados deste H0.
 
-Executar `python3 scripts/metricas_funcionais.py` pela raiz. Sem coleta, percentuais permanecem pendentes. Sanitizar evidências antes de publicar.
+Na conferência de status, o código cursado pode ser representado pelo destino da equivalência oficial; período e status continuam identificando a ocorrência. O registro de referência mantém o código original. As 44 ocorrências foram preservadas.
+
+Reprocessar pela raiz com `python3 scripts/metricas_funcionais.py --json`. CT-03/04/05 exigem 15/44/8 unidades válidas; CT-06/07 têm partes sem especificação/fonte e não autorizam aprovação global. O plano do par de CT-02 usa H0 com seleção futura das duas optativas, sem alterar os registros acadêmicos.

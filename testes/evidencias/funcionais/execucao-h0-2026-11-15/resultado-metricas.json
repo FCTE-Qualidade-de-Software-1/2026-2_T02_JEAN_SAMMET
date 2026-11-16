@@ -1,0 +1,217 @@
+{
+  "fonte": "/Users/gustavo/UnB/2026-2_T02_JEAN_SAMMET/testes/evidencias/funcionais/verificacoes_funcionais.csv",
+  "total_registros_lidos": 102,
+  "registros_ignorados": 0,
+  "metricas": {
+    "MET-FUN-01": {
+      "metrica": "MET-FUN-01",
+      "nome": "Violações de pré-requisitos (TVP)",
+      "formula": "(NVP / NRP) × 100",
+      "meta": "0%",
+      "casos": "CT-01",
+      "registros_recebidos": 1,
+      "verificacoes_validas": 1,
+      "registros_sem_classificacao": 0,
+      "valor_percentual": 0.0,
+      "numerador": 0,
+      "denominador": 1,
+      "status": "Conforme"
+    },
+    "MET-FUN-02": {
+      "metrica": "MET-FUN-02",
+      "nome": "Violações de co-requisitos (TVC)",
+      "formula": "(NVC / NRC) × 100",
+      "meta": "0%",
+      "casos": "CT-02",
+      "registros_recebidos": 2,
+      "verificacoes_validas": 2,
+      "registros_sem_classificacao": 0,
+      "valor_percentual": 0.0,
+      "numerador": 0,
+      "denominador": 2,
+      "status": "Conforme"
+    },
+    "MET-FUN-03": {
+      "metrica": "MET-FUN-03",
+      "nome": "Cobertura de obrigatórias pendentes (CDO)",
+      "formula": "(DPC / DOP) × 100",
+      "meta": "100%",
+      "casos": "CT-03",
+      "registros_recebidos": 15,
+      "verificacoes_validas": 15,
+      "registros_sem_classificacao": 0,
+      "valor_percentual": 93.3333,
+      "numerador": 14,
+      "denominador": 15,
+      "status": "Não conforme",
+      "unidades_referencia": 15,
+      "unidades_observadas": 15,
+      "unidades_ausentes": [],
+      "unidades_duplicadas": [],
+      "unidades_sem_classificacao": [],
+      "cobertura_referencia_percentual": 100.0
+    },
+    "MET-FUN-04": {
+      "metrica": "MET-FUN-04",
+      "nome": "Divergências no tratamento do histórico (TDH)",
+      "formula": "(NDH / NVH) × 100",
+      "meta": "0%",
+      "casos": "CT-04",
+      "registros_recebidos": 44,
+      "verificacoes_validas": 44,
+      "registros_sem_classificacao": 0,
+      "valor_percentual": 0.0,
+      "numerador": 0,
+      "denominador": 44,
+      "status": "Conforme",
+      "unidades_referencia": 44,
+      "unidades_observadas": 44,
+      "unidades_ausentes": [],
+      "unidades_duplicadas": [],
+      "unidades_sem_classificacao": [],
+      "cobertura_referencia_percentual": 100.0
+    },
+    "MET-FUN-05": {
+      "metrica": "MET-FUN-05",
+      "nome": "Aplicação incorreta de equivalências (TAE)",
+      "formula": "(NEI / NRE) × 100",
+      "meta": "0%",
+      "casos": "CT-05",
+      "registros_recebidos": 8,
+      "verificacoes_validas": 8,
+      "registros_sem_classificacao": 0,
+      "valor_percentual": 0.0,
+      "numerador": 0,
+      "denominador": 8,
+      "status": "Conforme",
+      "unidades_referencia": 8,
+      "unidades_observadas": 8,
+      "unidades_ausentes": [],
+      "unidades_duplicadas": [],
+      "unidades_sem_classificacao": [],
+      "cobertura_referencia_percentual": 100.0
+    },
+    "MET-FUN-06": {
+      "metrica": "MET-FUN-06",
+      "nome": "Conformidade das opções do onboarding (COO)",
+      "formula": "(NEC / NEV) × 100",
+      "meta": "100%",
+      "casos": "CT-06",
+      "registros_recebidos": 7,
+      "verificacoes_validas": 5,
+      "registros_sem_classificacao": 2,
+      "valor_percentual": 100.0,
+      "numerador": 5,
+      "denominador": 5,
+      "status": "Conforme — cobertura parcial"
+    },
+    "MET-FUN-07": {
+      "metrica": "MET-FUN-07",
+      "nome": "Violações de restrições semestrais (TVS)",
+      "formula": "(NVS / NRS) × 100, por tipo de restrição",
+      "meta": "0% por tipo",
+      "casos": "CT-07",
+      "status": "Pendente — cobertura incompleta",
+      "por_tipo": {
+        "carga_sugerida": {
+          "metrica": "MET-FUN-07",
+          "nome": "Violações de restrições semestrais (TVS)",
+          "formula": "(NVS / NRS) × 100, por tipo de restrição",
+          "meta": "0% por tipo",
+          "casos": "CT-07",
+          "registros_recebidos": 1,
+          "verificacoes_validas": 0,
+          "registros_sem_classificacao": 1,
+          "valor_percentual": null,
+          "numerador": null,
+          "denominador": 0,
+          "status": "Pendente de execução"
+        },
+        "maximo_curricular_480h": {
+          "metrica": "MET-FUN-07",
+          "nome": "Violações de restrições semestrais (TVS)",
+          "formula": "(NVS / NRS) × 100, por tipo de restrição",
+          "meta": "0% por tipo",
+          "casos": "CT-07",
+          "registros_recebidos": 23,
+          "verificacoes_validas": 23,
+          "registros_sem_classificacao": 0,
+          "valor_percentual": 0.0,
+          "numerador": 0,
+          "denominador": 23,
+          "status": "Conforme"
+        },
+        "oferta_calendario": {
+          "metrica": "MET-FUN-07",
+          "nome": "Violações de restrições semestrais (TVS)",
+          "formula": "(NVS / NRS) × 100, por tipo de restrição",
+          "meta": "0% por tipo",
+          "casos": "CT-07",
+          "registros_recebidos": 1,
+          "verificacoes_validas": 0,
+          "registros_sem_classificacao": 1,
+          "valor_percentual": null,
+          "numerador": null,
+          "denominador": 0,
+          "status": "Pendente de execução"
+        }
+      },
+      "valor_percentual": null,
+      "numerador": null,
+      "denominador": null
+    }
+  },
+  "questoes": {
+    "Q-FUN-01": {
+      "metricas": [
+        "MET-FUN-01"
+      ],
+      "status": "Conforme",
+      "resposta_formal": "As métricas aplicáveis atendem às metas registradas."
+    },
+    "Q-FUN-02": {
+      "metricas": [
+        "MET-FUN-02"
+      ],
+      "status": "Conforme",
+      "resposta_formal": "As métricas aplicáveis atendem às metas registradas."
+    },
+    "Q-FUN-03": {
+      "metricas": [
+        "MET-FUN-03",
+        "MET-FUN-05"
+      ],
+      "status": "Não conforme",
+      "resposta_formal": "Não é possível concluir favoravelmente com a cobertura disponível; consultar os registros pendentes e as evidências por métrica."
+    },
+    "Q-FUN-04": {
+      "metricas": [
+        "MET-FUN-04"
+      ],
+      "status": "Conforme",
+      "resposta_formal": "As métricas aplicáveis atendem às metas registradas."
+    },
+    "Q-FUN-05": {
+      "metricas": [
+        "MET-FUN-05"
+      ],
+      "status": "Conforme",
+      "resposta_formal": "As métricas aplicáveis atendem às metas registradas."
+    },
+    "Q-FUN-06": {
+      "metricas": [
+        "MET-FUN-06"
+      ],
+      "status": "Conforme — cobertura parcial",
+      "resposta_formal": "Não é possível concluir favoravelmente com a cobertura disponível; consultar os registros pendentes e as evidências por métrica."
+    },
+    "Q-FUN-07": {
+      "metricas": [
+        "MET-FUN-07"
+      ],
+      "status": "Pendente — cobertura/execução incompleta",
+      "resposta_formal": "Não é possível concluir favoravelmente com a cobertura disponível; consultar os registros pendentes e as evidências por métrica."
+    }
+  },
+  "avisos": []
+}

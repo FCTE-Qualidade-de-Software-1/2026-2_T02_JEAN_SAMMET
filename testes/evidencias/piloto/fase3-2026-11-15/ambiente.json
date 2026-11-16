@@ -1,0 +1,30 @@
+{
+  "tipo_coleta": "piloto",
+  "data": "2026-11-15",
+  "fuso": "America/Sao_Paulo",
+  "instancia": "https://no-fluxo.crianex.com",
+  "matriz": "6360/1 — 2017.1",
+  "hardware": "Apple M5, 16 GB, Mac17,3",
+  "sistema": "macOS 27.0.1 arm64",
+  "chrome_instalado": "157.0.8103.52",
+  "viewport_css": {
+    "largura": 1470,
+    "altura": 779
+  },
+  "screen_css": {
+    "largura": 1470,
+    "altura": 956
+  },
+  "dpr": 2,
+  "zoom": 1,
+  "rede_reportada_navegador": {
+    "online": true,
+    "effectiveType": "4g",
+    "rtt_ms": 100,
+    "downlink_mbps": 10
+  },
+  "nota_rede": "Estimativa do navegador; não é identificação de operadora, teste de velocidade ou comprovação de rede móvel.",
+  "sessao": "Normal autenticada; H0 carregado; extensão ChatGPT ativa. Outras interferências não quantificadas.",
+  "versao_servidor": "Não identificada; não associada a commit do projeto.",
+  "identificacao_cliente": "URLs e SHA-256 dos 129 scripts em inventario-scripts.json."
+}

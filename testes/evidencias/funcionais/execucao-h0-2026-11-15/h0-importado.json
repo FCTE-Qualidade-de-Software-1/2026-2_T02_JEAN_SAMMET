@@ -1,0 +1,472 @@
+{
+  "matriz": "6360/1 - 2017.1",
+  "semestreAtual": 6,
+  "registros": [
+    {
+      "codigo": "CIC0004",
+      "status": "APR",
+      "periodo": "2024.1",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 6,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0163",
+      "status": "APR",
+      "periodo": "2024.1",
+      "equivalente": null,
+      "nivel": 1,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0168",
+      "status": "APR",
+      "periodo": "2024.1",
+      "equivalente": null,
+      "nivel": 1,
+      "nivelDestino": null,
+      "creditos": 6,
+      "isManual": false
+    },
+    {
+      "codigo": "MAT0025",
+      "status": "APR",
+      "periodo": "2024.1",
+      "equivalente": null,
+      "nivel": 1,
+      "nivelDestino": null,
+      "creditos": 6,
+      "isManual": false
+    },
+    {
+      "codigo": "DSC0172",
+      "status": "APR",
+      "periodo": "2024.2",
+      "equivalente": null,
+      "nivel": null,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0157",
+      "status": "APR",
+      "periodo": "2024.2",
+      "equivalente": null,
+      "nivel": 2,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0166",
+      "status": "APR",
+      "periodo": "2024.2",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "IFD0171",
+      "status": "APR",
+      "periodo": "2024.2",
+      "equivalente": null,
+      "nivel": 2,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "IFD0173",
+      "status": "APR",
+      "periodo": "2024.2",
+      "equivalente": null,
+      "nivel": 2,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "MAT0026",
+      "status": "APR",
+      "periodo": "2024.2",
+      "equivalente": null,
+      "nivel": 2,
+      "nivelDestino": null,
+      "creditos": 6,
+      "isManual": false
+    },
+    {
+      "codigo": "MAT0031",
+      "status": "APR",
+      "periodo": "2024.2",
+      "equivalente": null,
+      "nivel": 2,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0085",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0133",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": null,
+      "nivel": 3,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0158",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": null,
+      "nivel": 3,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0160",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": null,
+      "nivel": 3,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0164",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": null,
+      "nivel": 3,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0161",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": "FGA0302",
+      "nivel": 1,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "MAT0027",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 6,
+      "isManual": false
+    },
+    {
+      "codigo": "MAT0374",
+      "status": "APR",
+      "periodo": "2025.1",
+      "equivalente": null,
+      "nivel": null,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0034",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0071",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0073",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0108",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": null,
+      "nivel": 4,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0147",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": "FGA0146",
+      "nivel": 4,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0265",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0184",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": "FGA0307",
+      "nivel": 4,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0138",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": "FGA0312",
+      "nivel": 4,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0413",
+      "status": "APR",
+      "periodo": "2025.2",
+      "equivalente": null,
+      "nivel": null,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "DSC0172",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": null,
+      "nivel": null,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0003",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": null,
+      "nivel": 5,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0030",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": null,
+      "nivel": 5,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0137",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": null,
+      "nivel": 5,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0142",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": null,
+      "nivel": 4,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0173",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": null,
+      "nivel": 5,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0172",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": "FGA0313",
+      "nivel": 5,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0238",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": "FGA0314",
+      "nivel": 6,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0413",
+      "status": "APR",
+      "periodo": "2026.1",
+      "equivalente": null,
+      "nivel": null,
+      "nivelDestino": null,
+      "creditos": 2,
+      "isManual": false
+    },
+    {
+      "codigo": "CEM0051",
+      "status": "MATR",
+      "periodo": "2026.2",
+      "equivalente": null,
+      "nivel": null,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0124",
+      "status": "MATR",
+      "periodo": "2026.2",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0170",
+      "status": "MATR",
+      "periodo": "2026.2",
+      "equivalente": null,
+      "nivel": 5,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0208",
+      "status": "MATR",
+      "periodo": "2026.2",
+      "equivalente": null,
+      "nivel": 6,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0274",
+      "status": "MATR",
+      "periodo": "2026.2",
+      "equivalente": null,
+      "nivel": 0,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0150",
+      "status": "MATR",
+      "periodo": "2026.2",
+      "equivalente": null,
+      "nivel": 4,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    },
+    {
+      "codigo": "FGA0278",
+      "status": "MATR",
+      "periodo": "2026.2",
+      "equivalente": null,
+      "nivel": 6,
+      "nivelDestino": null,
+      "creditos": 4,
+      "isManual": false
+    }
+  ],
+  "equivalencias": [
+    {
+      "cumpriu": "FGA0161",
+      "atravesDe": "FGA0302"
+    },
+    {
+      "cumpriu": "FGA0184",
+      "atravesDe": "FGA0307"
+    },
+    {
+      "cumpriu": "FGA0147",
+      "atravesDe": "FGA0146"
+    },
+    {
+      "cumpriu": "FGA0138",
+      "atravesDe": "FGA0312"
+    },
+    {
+      "cumpriu": "FGA0172",
+      "atravesDe": "FGA0313"
+    },
+    {
+      "cumpriu": "FGA0238",
+      "atravesDe": "FGA0314"
+    }
+  ]
+}

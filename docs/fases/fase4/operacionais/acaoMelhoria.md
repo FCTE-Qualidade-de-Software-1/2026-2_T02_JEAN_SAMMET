@@ -1,94 +1,56 @@
-# Ação de Melhoria — Métricas Operacionais (Fase 4)
+# Ação de melhoria — Clareza do planejamento
 
-> **Registros anteriores, pendentes de revalidação.** Esta página foi elaborada antes do plano revisado. Seus resultados e conclusões não demonstram execução dos cenários H0/C0–C5. Reaplicar os [critérios da Fase 2](../../fase2/operacionais/seguranca.md) e conferir as [pendências do piloto](../../fase3/piloto.md): HTTP 405 não prova acesso indevido; contagens zero não demonstram cobertura nem conformidade legal. A melhoria descrita precisa ter sua implementação verificada.
+## 1. Problema e objetivo
 
-Este documento especifica a **Ação de Melhoria concreta** decorrente da avaliação prática de qualidade segundo o processo **ISO/IEC 25040:2011/2024**, priorizada a partir dos dados brutos e do julgamento das métricas operacionais na Fase 4.
+A inspeção de Gustavo e Gabriel identificou dois problemas menores: **item 2**, falta de explicação dos termos críticas/estratégicas; **item 9**, ajuste de créditos inválidos sem explicar motivo e faixa. A intervenção M-01 tratou esses dois pontos, mantendo H0 e as tarefas T1–T3.
 
----
+**Objetivo:** aumentar TCH de 80% para pelo menos 85% e reduzir ISVH, sem introduzir problemas maiores/catastróficos. O conjunto de disciplinas e os critérios de segurança ficaram fora da intervenção.
 
-## 1. Justificativa e Origem da Melhoria
+## 2. Intervenção M-01
 
-A análise comparativa na Fase 4 demonstrou que, embora a aplicação alcance o nível Aceitável de usabilidade ($TCH = 70{,}0\%$), a principal fricção ergonômica reside no **Item 3 do Checklist de Nielsen (Controle e Liberdade do Usuário)**, classificado com **Severidade 3 (Maior)**:
+**Tabela 1 — Intervenção M-01.**
 
-> **Problema Diagnosticado:** Ao alterar os parâmetros de créditos por semestre na tela `/plano-formatura`, a interface recalcula a projeção curricular sem oferecer ao estudante uma forma direta de reverter a ação. Para retornar ao plano original de formatura, o usuário é obrigado a recarregar a página inteira (`F5`) ou lembrar mentalmente o valor padrão anterior.
+| Problema | Alteração executada | Critério de aceitação |
+| --- | --- | --- |
+| Termos sem explicação | Inserimos uma explicação acessível junto ao indicador de matérias críticas/estratégicas | Avaliadores conseguem consultar o significado no ponto de uso, por teclado ou ponteiro |
+| Ajuste silencioso de créditos | Incluímos mensagem: “Informe de 8 a 32 créditos. O valor foi ajustado para a faixa permitida.” | Valores inválidos são ajustados e o motivo/faixa é informado |
 
-Esse atrito viola o princípio ergonômico da "saída de emergência" (ISO 9241-11 e Nielsen), gerando insegurança na exploração de diferentes cenários de formatura.
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
 
----
+A explicação dos termos orienta a leitura do plano; não afirma que uma matéria destacada já foi aprovada. A faixa 8–32 corresponde ao controle examinado. Ela não deve ser confundida com a sugestão de 4/6/8 matérias nem com o limite curricular de 480h.
 
-## 2. Especificação Técnica da Melhoria Proposta
+## 3. Reavaliação
 
-A proposta consiste em introduzir um **mecanismo reativo de reversão de estado (*Reset / Undo*)** diretamente no painel de controle de créditos da tela de planejamento.
+Repetimos T1–T3 e o checklist com Gustavo e Gabriel. Os dois avaliadores concordaram nas dez notas finais. Itens 2 e 9 passaram a conformes; os demais permaneceram conformes. Os dois problemas menores foram encerrados.
 
-```mermaid
-flowchart LR
-    A["Estado Padrão<br/>(24 créditos)"] -->|"Usuário altera para 16 créditos"| B["Estado Customizado<br/>(Plano Recalculado)"]
-    B -->|"Botão 'Restaurar Padrão' ativado"| C["Clique em 'Restaurar Padrão'"]
-    C -->|"Restaura Store Svelte"| A
-```
+**Tabela 2 — Reavaliação.**
 
-### 2.1 Especificação do Componente no Frontend (SvelteKit)
+| Item / verificação | Antes | Depois | Meta | Resultado |
+| --- | --- | --- | --- | --- |
+| Item 2 — Correspondência dos termos | Nota 0; severidade 2 | Nota 1; problema resolvido | Nota 1 | **Atendido** |
+| Item 9 — Tratamento de erros | Nota 0; severidade 2 | Nota 1; problema resolvido | Nota 1 | **Atendido** |
+| Demais oito itens | Notas 1 | Notas 1 | Manter conformidade | **Sem regressão no checklist** |
 
-No componente de controle de parâmetros da tela `/plano-formatura`, sugere-se a adição de um botão de ação com escuta reativa:
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
 
-```svelte
-<!-- Componente: ControleCreditos.svelte -->
-<script lang="ts">
-  import { RotateCcw } from 'lucide-svelte';
-  
-  export let limiteCreditosPadrao: number = 24;
-  export let limiteCreditosAtual: number;
-  export let onRestaurarPadrao: () => void;
+## 4. Comparação das métricas
 
-  $: foiModificado = limiteCreditosAtual !== limiteCreditosPadrao;
-</script>
+**Tabela 3 — Comparação das métricas.**
 
-<div class="flex items-center gap-4 p-3 bg-card rounded-lg border">
-  <div class="flex-1">
-    <label for="creditos" class="text-sm font-medium">
-      Limite de Créditos por Semestre
-    </label>
-    <input 
-      id="creditos" 
-      type="number" 
-      bind:value={limiteCreditosAtual}
-      min="4" 
-      max="36"
-      class="input input-bordered w-full mt-1"
-    />
-  </div>
+| Métrica | Antes | Depois | Meta | Variação | Julgamento após intervenção |
+| --- | --- | --- | --- | --- | --- |
+| **TCH** | 8/10 = **80%** | 10/10 = **100%** | ≥ 85% | **+20 pontos percentuais** | **Excelente** |
+| **ISVH** | 2+2 = **4** | **0** | ≤ 5, sem maior/catastrófico | **−4 pontos** | **Excelente** |
+| **Q-OP-01** | Aceitável | **Excelente** | Pior nível entre TCH/ISVH | Melhoria de nível | **Meta atingida** |
+| **H-OP-01** | Corroborada | **Não corroborada no recorte reavaliado** | TCH ≥ 85% e sem maior/catastrófico | Dois problemas resolvidos | Diagnóstico inicial preservado |
 
-  {#if foiModificado}
-    <button 
-      type="button"
-      class="btn btn-outline btn-sm flex items-center gap-1.5 self-end"
-      on:click={onRestaurarPadrao}
-      title="Restaurar valor padrão inicial (24 créditos)"
-    >
-      <RotateCcw class="w-4 h-4" />
-      <span>Restaurar Padrão</span>
-    </button>
-  {/if}
-</div>
-```
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
 
----
+## 5. Alcance e recomendações
 
-## 3. Impacto Estimado nas Métricas de Usabilidade
+A intervenção M-01 encerra a ação de melhoria de EC-01. A melhoria de usabilidade não resolve FGA0206, as preferências, oferta/calendário nem GED-C=3. Esses achados permanecem nas recomendações do [encerramento](../conclusao.md).
 
-A implementação desta melhoria simples e não intrusiva eleva substancialmente a qualidade ergonômica da funcionalidade:
-
-| Métrica de Usabilidade | Valor Atual (Antes da Melhoria) | Valor Projetado (Após a Melhoria) | Ganho Qualitativo Obtido |
-| :--- | :---: | :---: | :--- |
-| **`MET-OP-01` (TCH)** | **`70,0%`** (Aceitável) | **`80,0%`** (Aceitável Elevado) | O Item 3 passa de 0 para 1 (+1 item conforme no checklist). |
-| **`MET-OP-01b` (ISVH)** | **`6 pontos`** (Aceitável) | **`3 pontos`** (**`EXCELENTE`**) | **Eliminação de 100% das falhas maiores ($N_{\text{maior}} = 0$)**, promovendo o índice $ISVH$ para a faixa de **Excelência** ($\le 5$). |
-| **Hipótese $H\text{-}OP\text{-}01$** | Confirmada com severidade maior | Risco ergonômico mitigado | Elimina a principal causa de atrito de navegação relatada pelos discentes. |
-
----
-
-## 4. Rastreabilidade com o Artigo Científico e Entregas
-
-Esta Ação de Melhoria cumpre diretamente os requisitos da **ISO/IEC 25040 (Atividade 4: Concluir a Avaliação)** e da **Entrega 2 da disciplina**, compondo a seção de **Discussão de Melhorias e Trabalhos Futuros** da versão final do artigo científico.
+O resultado após M-01 é específico do checklist, de H0 e do ambiente desktop. Não representa validação de acessibilidade completa, estudo com estudantes externos ou nova avaliação de toda a segurança.
 
 ---
 
@@ -96,5 +58,8 @@ Esta Ação de Melhoria cumpre diretamente os requisitos da **ISO/IEC 25040 (Ati
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da ação de melhoria de usabilidade, prototipação em SvelteKit e projeção de impacto nas métricas | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da ação de melhoria de usabilidade, prototipação em SvelteKit e projeção de impacto nas métricas | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Identificação dos resultados anteriores como pendentes de revalidação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Detalhamento dos critérios de verificação das melhorias propostas | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |

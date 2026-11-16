@@ -1,0 +1,17 @@
+{
+  "tipo_coleta": "definitiva",
+  "url": "https://api-nofluxo.crianex.com/planejamento/gerar-plano",
+  "metodo": "POST",
+  "status_http": 200,
+  "operacao_confirmada": true,
+  "payload_validado": true,
+  "payload_sha256": "c8ca36b7a346d64fd0b70429546049b59955016ff6abcb4797048d486b8601d8",
+  "campos_payload": [
+    "curriculo_completo",
+    "codigos_concluidos",
+    "semestre_atual",
+    "limite_creditos"
+  ],
+  "autenticacao": "Authorization com token direto; valor não exportado",
+  "resultado": "Plano com semestres e disciplinas devolvido e exibido; C0 com 24 créditos."
+}

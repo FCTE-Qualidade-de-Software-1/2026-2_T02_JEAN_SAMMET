@@ -14,6 +14,8 @@ Protocolo de medição e registro das condições experimentais para as métrica
 
 ## 2. Ficha de Registro de Ambiente
 
+**Tabela 1 — Ficha de Registro de Ambiente.**
+
 | Parâmetro | Especificação / Valor de Referência |
 | :--- | :--- |
 | **Data e Horário** | Registrar data e faixa horária (horário de Brasília) |
@@ -25,6 +27,8 @@ Protocolo de medição e registro das condições experimentais para as métrica
 | **Rede** | Banda larga fixa (registrar ping e taxas de download/upload) |
 | **Avaliador** | Registrar responsável por execução; usabilidade exige dois avaliadores e consenso |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ---
 
 ## 3. Protocolo de Inspeção Heurística — Teste da Hipótese `H-OP-01` (`MET-OP-01` e `MET-OP-01b`)
@@ -32,6 +36,7 @@ Protocolo de medição e registro das condições experimentais para as métrica
 A inspeção é realizada diretamente pela equipe avaliadora, dispensando o recrutamento de voluntários externos. Os avaliadores aplicam o checklist ergonômico de 10 itens baseado nas Heurísticas de Nielsen e consolidam consensualmente os resultados.
 
 ### 3.1 Procedimento de Inspeção Interna
+
 1. **Preparação:** Abrir a aplicação No Fluxo UnB no ambiente controlado com o histórico autorizado carregado.
 2. **Inspeção Individual:** Cada avaliador percorre a tela `/plano-formatura` executando as tarefas de referência (`T1`: localizar previsão, `T2`: interpretar críticas, `T3`: ajustar créditos).
 3. **Avaliação por Item:** Para cada um dos 10 itens do checklist, registrar:
@@ -40,6 +45,8 @@ A inspeção é realizada diretamente pela equipe avaliadora, dispensando o recr
 4. **Sessão de Consenso:** Os avaliadores debatem divergências e fecham as pontuações consolidadas da `MET-OP-01` (`TCH`) e `MET-OP-01b` (`ISVH`).
 
 ### 3.2 Planilha de Registro de Inspeção Heurística
+
+**Tabela 2 — Planilha de Registro de Inspeção Heurística.**
 
 | Item (#) | Heurística Avaliada | Tarefa | Conforme? (1/0) | Severidade (1–4) | Problema Identificado / Evidência `H-OP-01` |
 | :---: | :--- | :---: | :---: | :---: | :--- |
@@ -54,6 +61,8 @@ A inspeção é realizada diretamente pela equipe avaliadora, dispensando o recr
 | **09** | Auxílio no diagnóstico e correção de erros | `T3` | [1 / 0] | [— / 1–4] | [Alertas de incompatibilidade curricular] |
 | **10** | Ajuda e documentação | `T2` | [1 / 0] | [— / 1–4] | [Tooltips explicativos sobre regras do plano] |
 | **Consolidado** | **Taxa `TCH` e Índice `ISVH`** | — | **[Total]/10** | **Soma `ISVH`** | **Status: [Excelente / Aceitável / Crítico]** |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ---
 
@@ -76,19 +85,23 @@ Retire.js cobre as bibliotecas reconhecidas no cliente; não substitui a auditor
 
 ### 4.2 Registro da coleta
 
+**Tabela 3 — Registro da coleta.**
+
 | Campo | Registro obrigatório |
-|---|---|
+| --- | --- |
 | Alvo e versão | URL/data da instância ou commit do manifesto |
 | Ferramenta e base | Nome, versão, comando e data da base de vulnerabilidades |
 | Cobertura | Arquivos, componentes e versões reconhecidos; partes não examinadas |
 | Achados | Componente, versão, aviso, severidade e produção/desenvolvimento |
 | Evidência e resultado | Caminho do relatório bruto, contagens por severidade, IRP e classificação |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ## 5. Armazenamento e acesso (`MET-OP-02b` e `MET-OP-02c`)
 
 ### 5.1 Armazenamento no cliente
 
-1. Em sessão limpa, carregar o histórico autorizado e gerar o plano; autenticar se o fluxo exigir.
+1. Registrar o estado inicial da sessão, inclusive dados já persistidos; carregar ou reimportar o histórico autorizado e gerar o plano. Autenticar se o fluxo exigir. Não presumir que o estado inicial esteja vazio.
 2. Inspecionar `localStorage`, `sessionStorage` e cookies em **DevTools > Application**.
 3. Registrar origem, mecanismo, chaves e tipo de conteúdo com evidências sanitizadas; não publicar valores pessoais ou tokens. Verificar `HttpOnly` e `Secure` no painel de cookies; não usar `document.cookie` para concluir sobre cookies HttpOnly.
 4. Contar as chaves com dados pessoais ou acadêmicos em claro. Se o fluxo ou a inspeção estiver incompleto, registrar Inconclusivo.

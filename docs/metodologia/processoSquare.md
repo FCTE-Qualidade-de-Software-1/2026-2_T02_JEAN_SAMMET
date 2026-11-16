@@ -4,7 +4,7 @@ O projeto segue o processo de avaliação de produto da ISO/IEC 25040, organizad
 
 ## 1. Fases do processo
 
-A ISO/IEC 25040 define cinco atividades: estabelecer os requisitos, especificar, projetar, executar e concluir a avaliação. A disciplina agrupa a conclusão junto com a execução, o que resulta em quatro fases. As atividades de cada fase abaixo foram descritas com base na ISO/IEC 25040 e na aula de Processo de Avaliação de Produto da disciplina. A Figura 2 mostra as fases e o que cada uma entrega para a seguinte.
+A ISO/IEC 25040 define cinco atividades: estabelecer os requisitos, especificar, projetar, executar e concluir a avaliação. A disciplina agrupa a conclusão junto com a execução, o que resulta em quatro fases. As atividades de cada fase abaixo foram descritas com base na ISO/IEC 25040 e na aula de Processo de Avaliação de Produto da disciplina. A Figura 1 mostra as fases e o que cada uma entrega para a seguinte.
 
 ```mermaid
 graph TD
@@ -19,7 +19,7 @@ graph TD
     F4 -->|"medidas, julgamento,<br/>ação de melhoria e relatório"| R["Artigo final e GitPage"]
 ```
 
-*Figura 2 - Fases do processo de avaliação e produtos que passam de uma fase para a outra. Fonte: elaboração da equipe com base na ISO/IEC 25040 e no material da disciplina.*
+*Figura 1 — Fases do processo de avaliação e produtos que passam de uma fase para a outra. Fonte: elaboração da equipe com base na ISO/IEC 25040 e no material da disciplina.*
 
 ## 2. Detalhamento por fase
 
@@ -41,19 +41,19 @@ Na Fase 2, a equipe segue algumas regras. Todo objetivo GQM deriva de uma caract
 
 ### 2.3 Fase 3 - Projetar a avaliação
 
-A Fase 3 trata do que caracteriza um plano de avaliação bem estruturado e de como ele liga a especificação à execução. Sua atividade é planejar a avaliação, o que resulta em um plano com o método de avaliação, as instruções passo a passo para o avaliador, os recursos e o ambiente (hardware, software, navegador e massa de dados sintética) e o cronograma alinhado à Fase 4. Cada método e recurso do plano deve ser rastreável a uma métrica e a um critério de julgamento da Fase 2. A página da Fase 3 será publicada em `fases/fase3/` na Entrega 2.
+A Fase 3 trata do que caracteriza um plano de avaliação bem estruturado e de como ele liga a especificação à execução. Sua atividade é planejar a avaliação, o que resulta em um plano com o método de avaliação, as instruções passo a passo para o avaliador, os recursos e o ambiente (hardware, software, navegador e massa de dados sintética) e o cronograma alinhado à Fase 4. Cada método e recurso do plano deve ser rastreável a uma métrica e a um critério de julgamento da Fase 2. O [plano integrado da Fase 3](../fases/fase3/planoAvaliacao.md) reúne os procedimentos e a rastreabilidade.
 
 ### 2.4 Fase 4 - Executar e concluir a avaliação
 
 A Fase 4 trata de quais dados tornam possível transformar a coleta em julgamento de qualidade. Primeiro são realizadas as medições, gerando dados brutos (planilhas, registros, capturas de tela e gravações com consentimento) versionados no repositório. Os valores das métricas são então comparados aos níveis de pontuação da Fase 2, e os critérios de decisão da avaliação são aplicados para responder às questões e aos objetivos GQM, com apoio de gráficos e tabelas.
 
-A conclusão da avaliação inclui revisar o resultado e elaborar o relatório, que é o artigo final, com julgamento coerente com o propósito da Fase 1. Também inclui dar retorno sobre a avaliação, apontando oportunidades de melhoria e executando ao menos uma ação de melhoria, e tratar os dados da avaliação, definindo as condições de acesso aos dados de participantes. A página da Fase 4 será publicada em `fases/fase4/` na Entrega 2.
+A conclusão da avaliação inclui revisar o resultado e elaborar o relatório, que é o artigo final, com julgamento coerente com o propósito da Fase 1. Também inclui dar retorno sobre a avaliação, apontando oportunidades de melhoria e executando ao menos uma ação de melhoria, e tratar os dados da avaliação, definindo as condições de acesso aos dados de participantes. A [conclusão da Fase 4](../fases/fase4/conclusao.md) reúne os resultados e o julgamento final.
 
 ## 3. Calendário e estado atual
 
 A Entrega 1, em 26/10/2026, reúne as Fases 1 e 2 e inclui a GitPage atualizada até a Fase 2, a 1ª versão do artigo, a tabela de contribuição e a release E1. Depois dela há o ponto de controle, com as correções indicadas pela professora. A Entrega 2, na data do cronograma da disciplina, reúne as Fases 3 e 4 e inclui a GitPage até a Fase 4, a 2ª versão do artigo, a ação de melhoria, a tabela de contribuição e a release E2.
 
-No momento, as Fases 1 e 2 estão documentadas, a primeira em [Fase 1](../fases/fase1/propositoEStakeholders.md) e a segunda em [Métricas Funcionais](../fases/fase2/funcionais/visaoGeral.md) e [Métricas Operacionais](../fases/fase2/metricasOperacionais.md). As Fases 3 e 4 estão previstas para a Entrega 2. O progresso de cada entrega é acompanhado pelas medições de [Calendário e Progresso](../gestaoProjeto/calendario-progresso.md).
+No momento, as Fases 1 e 2 estão documentadas, a primeira em [Fase 1](../fases/fase1/propositoEStakeholders.md) e a segunda em [Métricas Funcionais](../fases/fase2/funcionais/visaoGeral.md) e [Métricas Operacionais](../fases/fase2/metricasOperacionais.md). As [Fases 3](../fases/fase3/planoAvaliacao.md) e [4](../fases/fase4/conclusao.md) estão documentadas para a Entrega 2, com prazo de 22/11 informado pela equipe. O progresso de cada entrega é acompanhado pelas medições de [Calendário e Progresso](../gestaoProjeto/calendario-progresso.md).
 
 ---
 
@@ -61,4 +61,5 @@ No momento, as Fases 1 e 2 estão documentadas, a primeira em [Fase 1](../fases/
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Criação da página do processo de avaliação SQuaRE | 18/10/2026 | [Preencher]() |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Consolidação da avaliação, rastreabilidade e encerramento do estudo de caso | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |

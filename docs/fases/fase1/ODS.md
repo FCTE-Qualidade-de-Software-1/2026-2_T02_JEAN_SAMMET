@@ -2,9 +2,13 @@
 
 ## 1. ODS relacionado ao projeto
 
+**Tabela 1 — ODS relacionado ao projeto.**
+
 | ODS | Objetivo |
 | :---: | :--- |
 | **ODS 4** | Educação de Qualidade |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ## 2. Relação com o No Fluxo UnB
 
@@ -18,11 +22,15 @@ A **Meta 4.4**, voltada ao aumento de competências técnicas e profissionais re
 
 Os itens abaixo são **indicadores internos da avaliação do produto**, não indicadores oficiais da ONU:
 
+**Tabela 2 — Indicadores usados nesta avaliação.**
+
 | Característica | Indicadores internos | Definições na Fase 2 |
-|---|---|---|
+| --- | --- | --- |
 | **Adequação Funcional** | Violações de regras curriculares, cobertura de obrigatórias, tratamento do histórico, equivalências e opções do onboarding (`MET-FUN-01` a `07`). | [GQM funcional](../fase2/funcionais/GQM.md) |
 | **Usabilidade** | Conformidade do checklist heurístico (TCH) e severidade dos problemas encontrados pela equipe (ISVH). | [Usabilidade](../fase2/operacionais/usabilidade.md) |
 | **Segurança** | Vulnerabilidades conhecidas nas dependências examinadas (IRP), chaves com dados pessoais em claro (GED-C) e bloqueio de chamadas de teste ao serviço (TBR). | [Segurança](../fase2/operacionais/seguranca.md) |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 Esses indicadores avaliam aspectos do produto, não o progresso oficial do ODS 4. Seus resultados se restringem à cobertura e às condições dos testes.
 

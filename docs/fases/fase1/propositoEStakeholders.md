@@ -17,11 +17,15 @@ A avaliação não certificará o software nem substituirá a conferência das r
 
 ### 1.3 Como os resultados serão usados
 
+**Tabela 1 — Como os resultados serão usados.**
+
 | Decisão a apoiar | Quem utilizará os resultados | Evidência esperada |
 | :--- | :--- | :--- |
 | Identificar divergências funcionais que merecem correção ou investigação | Equipe avaliadora e, se compartilhado, mantenedores | Casos de teste, resultados esperados e observados |
 | Identificar problemas observáveis de acesso ou exposição de dados | Equipe avaliadora e, se compartilhado, mantenedores | Lista de verificações não invasivas com evidências e limitações |
 | Identificar possíveis dificuldades no uso do fluxo escolhido | Equipe avaliadora e, se compartilhado, mantenedores | Checklist heurístico preenchido, descrição dos problemas, severidades e evidências das situações observadas |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 A [inspeção heurística da equipe](../fase2/operacionais/usabilidade.md) apoiará recomendações de interface, sem medir diretamente a aprendizagem ou o desempenho dos estudantes.
 
@@ -29,15 +33,21 @@ A [inspeção heurística da equipe](../fase2/operacionais/usabilidade.md) apoia
 
 ### 2.1 Perfis de usuários considerados
 
+**Tabela 2 — Perfis de usuários considerados.**
+
 | Perfil | Necessidade relevante para esta avaliação |
 | :--- | :--- |
 | Estudante que está conhecendo a matriz curricular | Entender as informações e localizar as disciplinas relevantes |
 | Estudante que já cursou parte da matriz | Distinguir o que já foi concluído e o que ainda precisa planejar |
 | Estudante com disciplinas pendentes ou equivalências | Interpretar as informações apresentadas sem assumir que o sistema substitui a confirmação oficial |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 Esses perfis são cenários de avaliação, não uma afirmação de que todos foram entrevistados ou participaram dos testes.
 
 ### 2.2 Partes interessadas
+
+**Tabela 3 — Partes interessadas.**
 
 | Stakeholder | Papel | Necessidades/expectativas | Influência na avaliação |
 | :--- | :--- | :--- | :--- |
@@ -46,6 +56,7 @@ Esses perfis são cenários de avaliação, não uma afirmação de que todos fo
 | Profa. Cristiane Ramos | Requisitante e avaliadora acadêmica | Processo documentado, justificativas e rastreabilidade | Define os critérios acadêmicos a cumprir |
 | Equipe avaliadora | Planeja e executa a avaliação | Procedimentos viáveis, dados rastreáveis e conclusões justificadas | Define amostra, método e limites de execução |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ---
 

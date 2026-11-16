@@ -1,0 +1,144 @@
+{
+  "tipo_coleta": "definitiva",
+  "entrada_id": "H0",
+  "cenario_id": "C0-restaurado",
+  "data_hora_utc": "2026-11-15T23:53:08.965Z",
+  "configuracao": {
+    "trabalha": false,
+    "objetivo": "equilibrio",
+    "quantidade_materias": 6
+  },
+  "limite_creditos_enviado": 24,
+  "status_http": 200,
+  "observado": {
+    "semestreAtual": {
+      "tipo": "em_curso",
+      "materias": [
+        {
+          "codigo": "CEM0051",
+          "status": "MATR",
+          "creditos": 4
+        },
+        {
+          "codigo": "FGA0124",
+          "status": "MATR",
+          "creditos": 4
+        },
+        {
+          "codigo": "FGA0170",
+          "status": "MATR",
+          "creditos": 4
+        },
+        {
+          "codigo": "FGA0208",
+          "status": "MATR",
+          "creditos": 4
+        },
+        {
+          "codigo": "FGA0274",
+          "status": "MATR",
+          "creditos": 4
+        },
+        {
+          "codigo": "FGA0150",
+          "status": "MATR",
+          "creditos": 4
+        },
+        {
+          "codigo": "FGA0278",
+          "status": "MATR",
+          "creditos": 4
+        }
+      ]
+    },
+    "semestresRestantes": 3,
+    "formaturaEstimada": "2028.1",
+    "plano": [
+      {
+        "indice": 0,
+        "tipo": "recomendado",
+        "semestre": "2027.1",
+        "creditos": 24,
+        "horas": 360,
+        "materias": [
+          {
+            "codigo": "FGA0211",
+            "creditos": 4,
+            "critica": true
+          },
+          {
+            "codigo": "FGA0060",
+            "creditos": 4,
+            "critica": false
+          },
+          {
+            "codigo": "FGA0109",
+            "creditos": 4,
+            "critica": false
+          },
+          {
+            "codigo": "FGA0210",
+            "creditos": 4,
+            "critica": false
+          },
+          {
+            "codigo": "FGA0240",
+            "creditos": 4,
+            "critica": false
+          },
+          {
+            "codigo": "FGA0009",
+            "creditos": 4,
+            "critica": true
+          }
+        ]
+      },
+      {
+        "indice": 1,
+        "tipo": "estimado",
+        "semestre": "2027.2",
+        "creditos": 24,
+        "horas": 360,
+        "materias": [
+          {
+            "codigo": "FGA0244",
+            "creditos": 4,
+            "critica": true
+          },
+          {
+            "codigo": "FGA0250",
+            "creditos": 6,
+            "critica": true
+          },
+          {
+            "codigo": "FGA0021",
+            "creditos": 14,
+            "critica": true
+          }
+        ]
+      },
+      {
+        "indice": 2,
+        "tipo": "estimado",
+        "semestre": "2028.1",
+        "creditos": 10,
+        "horas": 150,
+        "materias": [
+          {
+            "codigo": "FGA0011",
+            "creditos": 6,
+            "critica": true
+          },
+          {
+            "tipo": "optativa_slot",
+            "ch": 60,
+            "descricao": "Slot de Optativa (~60h)"
+          }
+        ]
+      }
+    ],
+    "materiasNaoAlocadas": [],
+    "chObrigatoriaFaltante": 60,
+    "chOptativaFaltante": 0
+  }
+}

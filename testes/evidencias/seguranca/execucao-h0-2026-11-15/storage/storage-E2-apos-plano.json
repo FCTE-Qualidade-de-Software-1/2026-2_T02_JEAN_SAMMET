@@ -1,0 +1,112 @@
+{
+  "tipo_coleta": "definitiva",
+  "entrada_id": "H0",
+  "estado": "E2-apos-plano",
+  "data_hora_utc": "2026-11-16T00:05:11.067Z",
+  "origem": "https://no-fluxo.crianex.com",
+  "storage": [
+    {
+      "mecanismo": "localStorage",
+      "itens": [
+        {
+          "chave": "nofluxo_user",
+          "tipo": "objeto",
+          "campos": [
+            "idUser",
+            "email",
+            "nomeCompleto",
+            "dadosFluxograma",
+            "optativasManuais",
+            "cargaHorariaIntegralizada",
+            "token",
+            "isAdmin",
+            "adminRole",
+            "adminScopes"
+          ],
+          "campos_pessoais": [
+            "email",
+            "nomeCompleto",
+            "dadosFluxograma"
+          ],
+          "dado_em_claro": true
+        },
+        {
+          "chave": "nofluxo:release-vista:55",
+          "tipo": "outro",
+          "campos": [],
+          "campos_pessoais": [],
+          "dado_em_claro": false
+        }
+      ]
+    },
+    {
+      "mecanismo": "sessionStorage",
+      "itens": [
+        {
+          "chave": "sveltekit:snapshot",
+          "tipo": "objeto",
+          "campos_pessoais": [],
+          "dado_em_claro": false
+        },
+        {
+          "chave": "sveltekit:scroll",
+          "tipo": "objeto",
+          "campos_pessoais": [],
+          "dado_em_claro": false
+        }
+      ]
+    }
+  ],
+  "cookies": [
+    {
+      "chave": "sb-auth-token.0",
+      "mecanismo": "cookies",
+      "tipo": "fragmento de sessão codificado em base64",
+      "campos_pessoais": [
+        "email",
+        "full_name",
+        "user_id",
+        "phone",
+        "identities"
+      ],
+      "dado_em_claro": true,
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    },
+    {
+      "chave": "sb-auth-token.1",
+      "mecanismo": "cookies",
+      "tipo": "fragmento de sessão codificado em base64",
+      "campos_pessoais": [
+        "email",
+        "full_name"
+      ],
+      "dado_em_claro": true,
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    },
+    {
+      "chave": "sb-auth-token-flow-[id]-code-verifier",
+      "mecanismo": "cookies",
+      "tipo": "verificador de fluxo de autenticação",
+      "campos_pessoais": [],
+      "dado_em_claro": false,
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    },
+    {
+      "chave": "sb-auth-token-flows-code-verifier",
+      "mecanismo": "cookies",
+      "tipo": "verificador de fluxo de autenticação",
+      "campos_pessoais": [],
+      "dado_em_claro": false,
+      "secure": true,
+      "httpOnly": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "nota": "Nenhum valor exportado. Cookies fragmentados decodificados com alinhamento base64; somente nomes de campos."
+}

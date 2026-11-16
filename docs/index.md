@@ -82,4 +82,4 @@ A lista completa de integrantes está no [README do repositório](https://github
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Pagina inicial do trabalho | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) || [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do acesso à rastreabilidade completa da Fase 4 | 16/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Pagina inicial do trabalho | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) || [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do acesso à rastreabilidade completa da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |

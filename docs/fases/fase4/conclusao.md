@@ -89,4 +89,4 @@ A redução de IRP para zero é uma meta de tratamento dos dois achados existent
 |---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Consolidação da avaliação, rastreabilidade e encerramento do estudo de caso | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação da conclusão à rastreabilidade completa da Fase 4 | 16/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação da conclusão à rastreabilidade completa da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |

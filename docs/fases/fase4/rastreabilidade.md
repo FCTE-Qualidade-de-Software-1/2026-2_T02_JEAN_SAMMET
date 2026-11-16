@@ -249,5 +249,5 @@ A Tabela 11 reúne os produtos da Fase 4 e seus pontos de consulta.
 
 | Nome do Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Rastreabilidade completa das questões, métricas, hipóteses e produtos da Fase 4 | 16/11 | Não commitado |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção das orientações de apresentação da rastreabilidade | 16/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Rastreabilidade completa das questões, métricas, hipóteses e produtos da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção das orientações de apresentação da rastreabilidade | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |

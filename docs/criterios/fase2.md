@@ -1,5 +1,7 @@
 # Fase 2
 
+**Tabela 1 — Fase 2.**
+
 | ID | Critério | O que fazer para ser excelente | Status atual |
 | :--- | :--- | :--- | :---: |
 | F2-C1 | Definição de objetivos de medição | Objetivos perfeitamente definidos no template estruturado do GQM. | **Concluído** |
@@ -14,6 +16,8 @@
 | F2-C10 | GitPage da equipe | Narrativa para leitor externo, seção da Fase 1, versão e data no rodapé, acessibilidade básica e crosslinks. | **Concluído** |
 | F2-C11 | Consistência entre as Fases 1 e 2 | Objetivos de medição (foco de qualidade e ponto de vista) derivados das características e dos stakeholders da Fase 1, com a consistência explicitada. | **Concluído** |
 | F2-C12 | Relevância e adaptação da terminologia | Terminologia e conceitos totalmente relevantes e adaptados ao trabalho, sem jargão externo ao escopo. | **Concluído** |
+
+*Fonte: critérios da disciplina, organizados pela equipe.*
 
 ---
 

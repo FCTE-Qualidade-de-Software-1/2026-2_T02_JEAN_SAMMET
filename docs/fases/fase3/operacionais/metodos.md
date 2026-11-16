@@ -1,5 +1,7 @@
 # Métodos de avaliação operacional
 
+A execução encerrada e seus julgamentos estão em [EC-01](../../fase4/conclusao.md). Os procedimentos abaixo definem as condições de cada método; os registros do piloto permanecem separados da consolidação.
+
 ## 1. Usabilidade — TCH e ISVH
 
 Gustavo e Gabriel percorrem T1–T3 independentemente, com a mesma entrada autorizada e ambiente, e preenchem os dez itens do [checklist da Fase 2](../../fase2/operacionais/usabilidade.md). Para cada violação, registrar descrição, tarefa, severidade 1–4 e evidência. Depois, consolidar em consenso, preservando notas individuais e justificativas de divergência.
@@ -28,8 +30,10 @@ O piloto confirmou `POST https://api-nofluxo.crianex.com/planejamento/gerar-plan
 
 Na coleta formal, observar novamente a chamada real usada ao gerar o plano. Confirmar a operação protegida, domínio, método, payload e chamada positiva autorizada. Somente depois executar os casos negativos, com a conta autorizada. Se a operação exigir dados acadêmicos, restringir o payload ao mínimo necessário já autorizado e não publicar seus valores.
 
+**Tabela 1 — Acesso — TBR.**
+
 | Caso | Condição | Cuidados para validar o teste |
-|---|---|---|
+| --- | --- | --- |
 | REQ-01 | Sem Authorization | Preservar método e payload válidos |
 | REQ-02 | Authorization vazio | Diferenciar header vazio de ausente |
 | REQ-03 | Prefixo inesperado, como Basic | Serviço observado recebe token direto em Authorization |
@@ -41,7 +45,9 @@ Na coleta formal, observar novamente a chamada real usada ao gerar o plano. Conf
 | REQ-09 | Papel insuficiente | Usuário de teste autenticado sem a permissão necessária |
 | REQ-10 | Token revogado | Credencial de teste revogada; se o fluxo não existir, substituir por caso aplicável, antes da coleta |
 
-A bateria acima é proposta. Antes da coleta, confirmar o contrato do mecanismo, incluindo a aceitação de Bearer: o piloto observou token direto, mas não provou que esse seja o único formato aceito. Preparar tokens controlados para REQ-06/07/08/10 e usuário/papel apropriado para REQ-09. Sem essas condições, registrar Sem cobertura/Inconclusivo, sem simular validade ou completar dez casos artificialmente. Credenciais necessárias ainda devem ser preparadas. Não fabricar uma assinatura e apresentar o teste como validação de permissões. Enviar `Origin` em Python, por si só, não testa a aplicação de CORS pelo navegador.
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
+A bateria acima é proposta. Antes da coleta, confirmar o contrato do mecanismo, incluindo a aceitação de Bearer: o piloto observou token direto, mas não provou que esse seja o único formato aceito. Preparar tokens controlados para REQ-06/07/08/10 e usuário/papel apropriado para REQ-09. Sem essas condições, registrar Sem cobertura/Inconclusivo, sem simular validade ou completar dez casos artificialmente. Preparar as credenciais adequadas é pré-condição de cada caso, não uma atividade em aberto do encerramento. Os dez resultados de EC-01 estão na [bateria consolidada](../../fase4/operacionais/dadosBrutos.md#5-controle-de-acesso-bateria-de-dez-condicoes). Não fabricar uma assinatura e apresentar o teste como validação de permissões. Enviar `Origin` em Python, por si só, não testa a aplicação de CORS pelo navegador.
 
 `TBR = bloqueios 401/403 / chamadas negativas válidas × 100`. Informar bateria planejada, válida e inconclusiva. HTTP 404/405, falha de conexão ou HTTP 500 sem prova de acesso não demonstram falha de autenticação. Sem operação protegida no recorte, registrar Não aplicável com fonte. Aplicar os [critérios completos](../../fase2/operacionais/seguranca.md).
 
@@ -51,7 +57,6 @@ A bateria acima é proposta. Antes da coleta, confirmar o contrato do mecanismo,
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Especificação detalhada dos métodos de Usabilidade (Nielsen) e Segurança (SCA, Storage e Matriz de 10 testes de API) | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Especificação detalhada dos métodos de Usabilidade (Nielsen) e Segurança (SCA, Storage e Matriz de 10 testes de API) | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento dos métodos aos critérios e à validade das coletas | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro da viabilidade de SCA/storage/API e adequação da bateria ao token observado | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Adequação do caso sem token à bateria executada | 15/11 | Não commitado |

@@ -2,6 +2,8 @@
 
 Situação dos critérios da Fase 1 e links para as evidências.
 
+**Tabela 1 — Fase 1.**
+
 | ID | Critério | O que fazer para ser excelente | Status atual |
 | :--- | :--- | :--- | :--- |
 | F1-C1 | Propósito da avaliação e uso pretendido | Explicar por que avaliar, para quem e como os resultados apoiarão decisões específicas, identificando quem as tomará. | **Concluído** — [Propósito e uso pretendido](../fases/fase1/propositoEStakeholders.md#1-proposito-da-avaliacao). |
@@ -15,6 +17,8 @@ Situação dos critérios da Fase 1 e links para as evidências.
 | F1-C9 | Português, estilo e padronização | Apresentar redação revisada, referências completas e corretas e figuras/tabelas numeradas, legendadas, citadas e com fonte. | **Em revisão** — [Referências atualizadas](../referencias/fase1.md); validação editorial da equipe pendente. |
 | F1-C10 | Uso de IA | Declarar a ferramenta, a tarefa e como a equipe conferiu e ajustou o conteúdo, sem ícones ou figuras decorativas de IA. | **Documentado** — [Declaração por integrante](../usoDeIA/IA.md). |
 | F1-C11 | GitPage da equipe | Disponibilizar página atualizada, navegável e rastreável, com seção da Fase 1, versão/data, links funcionais, release e acessibilidade básica. | **Concluído na E1** — [GitPage](https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/) e [release](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/releases/tag/Release). Revisão atual ainda não publicada. |
+
+*Fonte: critérios da disciplina, organizados pela equipe.*
 
 ---
 

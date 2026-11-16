@@ -8,25 +8,35 @@ Adotamos como referência o modelo de qualidade de produto da **ISO/IEC 25010:20
 
 As subcaracterísticas abaixo detalham o que será observado dentro de cada característica escolhida. Elas não são características principais adicionais.
 
+**Tabela 1 — Aplicação ao No Fluxo UnB.**
+
 | Característica | Subcaracterísticas em foco | Aplicação ao fluxo “Planejar formatura” |
-|---|---|---|
+| --- | --- | --- |
 | **Adequação Funcional** | Completude funcional e correção funcional | Verificar se o plano contempla as disciplinas esperadas e se a sequência é consistente com as regras curriculares usadas como referência. Isso atende à necessidade do estudante de planejar sua trajetória acadêmica. |
 | **Usabilidade** | Apreensibilidade e operabilidade | Inspecionar, com heurísticas de usabilidade, possíveis dificuldades para entender as informações e operar a tela de planejamento, incluindo semestres previstos e matérias críticas. |
 | **Segurança** | Confidencialidade e autenticidade | Inspecionar o armazenamento do histórico, a identificação e o acesso ao fluxo. Examinar dependências como evidência complementar de riscos aos dados e serviços. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ### 2.1 Verificações associadas ao modelo
 
+**Tabela 2 — Verificações associadas ao modelo.**
+
 | Verificação | Relação com o modelo | Evidência prevista |
-|---|---|---|
+| --- | --- | --- |
 | Armazenamento no navegador (`MET-OP-02b`) | Confidencialidade dos dados acadêmicos. | Chaves e valores inspecionados em `localStorage`, `sessionStorage` e cookies. |
 | Identificação e acesso (`MET-OP-02c`) | Autenticidade e verificação das permissões exigidas pelo serviço. | Respostas da rota e do método validados antes do teste. |
 | Dependências (`MET-OP-02`) | Evidência complementar de riscos aos dados e serviços. | Relatório SCA com componentes, versões, ferramenta e cobertura. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 “Integridade da cadeia de dependências” é um recorte da equipe, não uma subcaracterística adicional da norma. A análise se limita aos componentes examinados.
 
 A inspeção heurística identifica possíveis problemas de uso; não mede diretamente a aprendizagem ou o desempenho dos estudantes. Os métodos e critérios estão nas fichas de [Usabilidade](../fase2/operacionais/usabilidade.md) e [Segurança](../fase2/operacionais/seguranca.md).
 
 ## 3. Representação gráfica
+
+A Figura 1 apresenta o diagrama desta seção.
 
 ```mermaid
 graph TD
@@ -47,7 +57,7 @@ graph TD
     S -.-> V3["SCA de dependências<br/>MET-OP-02 — evidência complementar"]
 ```
 
-*Figura 6 — Modelo adaptado ao fluxo “Planejar formatura”. A ligação tracejada indica evidência complementar. Fonte: equipe, com base na ISO/IEC 25010:2011.*
+*Figura 1 — Modelo adaptado ao fluxo “Planejar formatura”. A ligação tracejada indica evidência complementar. Fonte: equipe, com base na ISO/IEC 25010:2011.*
 
 A seleção e a priorização das três características estão explicadas em [Características de Qualidade](caracteristicasDeQualidade.md). Os limites práticos da avaliação estão descritos em [Escopo](escopo.md).
 

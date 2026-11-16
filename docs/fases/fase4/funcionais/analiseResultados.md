@@ -1,38 +1,46 @@
 # Análise e julgamento — Métricas funcionais
 
-Resultados derivados dos CSVs e das [evidências de H0](dadosBrutos.md), conforme as fichas da [Fase 2](../../fase2/funcionais/GQM.md). A coleta está disponível para revisão da equipe.
-
-A [tabela de resultados consolidados](../metricasFuncionais.md#resultados-consolidados) reúne cálculo, resultado, meta e julgamento para consulta rápida.
+A execução **EC-01** aplica as fórmulas e metas do [GQM da Fase 2](../../fase2/funcionais/GQM.md) ao histórico H0. A referência contém **44 registros, 15 obrigatórias pendentes e oito equivalências**. Código e período preservam ocorrências distintas. Os [dados e capturas](dadosBrutos.md) identificam o registro de cada caso.
 
 ## 1. Métricas e cobertura
 
-| Métrica | Cálculo | Resultado | Meta | Julgamento e alcance |
-|---|---|---|---|---|
-| TVP — pré-requisitos | 0/1 | **0%** | 0% | Conforme na relação FGA0170→FGA0211; projeção condicionada à aprovação |
-| TVC — co-requisitos | 0/2 | **0%** | 0% | Conforme no par FGA0072/FGA0074 explicitamente selecionado |
-| CDO — obrigatórias | 14/15 | **93,33%** | 100% | **Não conforme:** FGA0206 omitida |
-| TDH — histórico | 0/44 | **0%** | 0% | Conforme nos registros/status, com normalização das equivalências oficiais |
-| TAE — aplicações incorretas de equivalências | 0/8 | **0%** | 0% | Conforme nas seis concluídas e duas em andamento |
-| COO — onboarding | 5/5 expectativas válidas | **100% no recorte** | 100% | Representação de carga conforme; efeitos algorítmicos de C3/C4 pendentes |
-| TVS — restrições | Máximo curricular: 0/23 | **0% nesse tipo** | 0% por tipo de restrição | Oferta/calendário e semântica do teto sugerido pendentes; sem percentual global |
+**Tabela 1 — Métricas e cobertura.**
 
-Ausência de fonte ou de expectativa obrigatória não foi convertida em aprovação ou defeito.
+| Métrica | Cálculo | Resultado | Meta | Julgamento |
+| --- | --- | --- | --- | --- |
+| **MET-FUN-01 — TVP** · pré-requisitos | 0/1 × 100 | **0,00%** | **0%** | **Conforme no recorte** |
+| **MET-FUN-02 — TVC** · co-requisitos | 0/2 × 100 | **0,00%** | **0%** | **Conforme no par consolidado** |
+| **MET-FUN-03 — CDO** · obrigatórias | 14/15 × 100 | **93,33%** | **100%** | **Não conforme** |
+| **MET-FUN-04 — TDH** · histórico | 0/44 × 100 | **0,00%** | **0%** | **Conforme no recorte** |
+| **MET-FUN-05 — TAE** · equivalências | 0/8 × 100 | **0,00%** | **0%** | **Conforme no recorte** |
+| **MET-FUN-06 — COO** · onboarding | 5/7 × 100 | **71,43%** | **100%** | **Não conforme** |
+| **MET-FUN-07 — TVS** · restrições | Máximo: 0/23; oferta: 1/10; calendário: 1/3 | **0,00%; 10,00%; 33,33%**, respectivamente | **0% por tipo** | **Não conforme em oferta e calendário** |
 
-## 2. Evidências determinantes
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
 
-**Obrigatórias:** FGA0206 consta no quadro de pendências de H0 e não aparece no plano-base completo. A resposta também contém `materiasNaoAlocadas=[]`. A ausência da disciplina, e não essa lista isolada, fundamenta CDO=14/15.
+Os julgamentos são relativos ao recorte. A aprovação projetada de uma disciplina em curso não modifica seu status acadêmico MATR. Os valores de TVS permanecem separados por tipo de restrição.
 
-**Co-requisitos:** após seleção pelo recurso de optativas, os cartões de FGA0072 (30h) e FGA0074 (60h) apareceram em **2027.1**. Cada direção foi conferida; os registros acadêmicos permaneceram em 37 APR/7 MATR. O texto do assistente não foi usado como única prova.
+## 2. Interpretação dos resultados
 
-![Par de optativas no mesmo semestre](img/h0/ct02-par-2027-1.jpg)
+**Tabela 2 — Interpretação dos resultados.**
 
-*Figura 1 — Cartões de FGA0072/FGA0074 na coluna 2027.1. Fonte: No Fluxo, coleta de 15/11. Recorte sem identificação; cenário C0 com seleção explícita do par.*
+| Caso | Esperado | Observado | Consequência |
+| --- | --- | --- | --- |
+| CT-01 | FGA0211 após o cumprimento projetado de FGA0170 | FGA0170 em 2026.2; FGA0211 em 2027.1 | Relação respeitada |
+| CT-02 | Par consolidado alocado simultaneamente | FGA0072/FGA0074 em 2027.1 | Duas direções conformes |
+| CT-03 | 15 obrigatórias contempladas | 14; FGA0206 ausente, inclusive da lista de não alocadas | Falha de completude |
+| CT-04 | 44 ocorrências com período/status preservados | Nenhuma divergência confirmada | Fidelidade atendida no recorte |
+| CT-05 | Seis equivalências concluídas e duas em andamento | Destinos e estados compatíveis | Nenhuma aplicação incorreta |
+| CT-06 | Sete expectativas de carga e preferência atendidas | Cinco atendidas; trabalho e objetivo sem efeito exigido | Falha no contrato de preferências |
+| CT-07 | Nenhuma violação por tipo | Sem excesso de 480h; uma oferta e um calendário divergentes | Falha em duas restrições |
 
-**Cargas:** C0 gerou 360/360/150h; C1, 300/420/150h; C2, 480/390h. C5-4 gerou 240/240/300/90h; C5-6, 360/360/150h; C5-8, 480/390h. As somas incluem reservas identificadas. Há saídas acima da sugestão escolhida, mas nenhuma acima de 480h nas 23 verificações planejadas. Não se confirmou regra que torne toda sugestão um teto rígido.
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
+
+**Carga não é uma unidade única de julgamento.** Os planos de C0 foram 360/360/150h; C1, 300/420/150h; C2, 480/390h. As reservas explícitas de optativas entram na soma. A sugestão de carga não foi transformada em teto rígido: o limite obrigatório verificado foi **480h**. Os contratos de trabalho/objetivo são avaliados separadamente, em CT-06.
+
+**Capturas distintas não são a mesma execução.** O registro de Gabriel mostra uma distribuição do par diferente da alocação consolidada. A avaliação preserva os dois registros em [CT-02](dadosBrutos.md#ct-02-co-requisitos), sem usar a imagem de uma execução para provar o resultado da outra.
 
 ## 3. Respostas formais às questões GQM
-
-As respostas seguem as perguntas e regras de decisão da [Fase 2](../../fase2/funcionais/GQM.md). Um resultado favorável descreve as unidades verificadas; não comprova correção de toda a matriz ou de todos os históricos.
 
 ### Q-FUN-01 — O plano respeita os pré-requisitos oficiais?
 
@@ -66,41 +74,45 @@ O julgamento cobre as relações documentadas para H0. Não valida automaticamen
 
 ### Q-FUN-06 — O onboarding produz o comportamento documentado ou prometido?
 
-**Resposta: parcialmente demonstrado.** As cinco expectativas verificáveis de representação da carga foram atendidas: `COO = 5/5 × 100 = 100% no recorte`. Os valores enviados e representados foram compatíveis com as configurações de carga examinadas.
+**Resposta: não integralmente.** Foram atendidas cinco das sete expectativas: as representações de 20/32 créditos e as sugestões de 4/6/8 matérias. Os contratos de trabalho e objetivo não foram atendidos. Portanto, `COO = 5/7 × 100 = 71,43%`, abaixo da meta de 100%.
 
-As duas expectativas sobre trabalho/estágio e objetivo do planejamento continuam **pendentes de especificação**. Os planos observados não bastam para decidir que essas opções necessariamente deveriam alterar a seleção de disciplinas. Portanto, o percentual favorável não encerra a questão: o julgamento permanece **Conforme no recorte, com cobertura parcial**.
+Em C3, o contrato exige sugestão de 20 créditos ao ativar trabalho/estágio; a configuração permaneceu em 24. Em C4, o contrato exige horizonte de dois semestres futuros para a opção velocidade, mas foram mantidos três. Os contratos e a comparação estão em [Dados brutos](dadosBrutos.md#ct-06-onboarding). Esses valores são critérios do cenário de aceitação; não são apresentados como exigências curriculares da UnB.
 
 ### Q-FUN-07 — O plano respeita oferta, semestre inicial e limites de carga verificáveis?
 
-**Resposta: o máximo curricular foi respeitado; a resposta global permanece pendente.** Nenhuma das 23 verificações de carga futura ultrapassou 480h, incluindo as reservas explícitas de optativas: `TVS máximo curricular = 0/23 × 100 = 0%`.
+**Resposta: não em todos os tipos examinados.** O máximo de 480h foi respeitado em 23 verificações (`0/23 = 0%`). Na oferta, uma de dez alocações divergiu do quadro de referência (`1/10 = 10%`). No calendário, um de três casos usou semestre inicial diferente do esperado (`1/3 = 33,33%`). A meta de cada tipo é 0%.
 
-Faltam referências suficientes para julgar oferta/calendário e para estabelecer se a carga sugerida deve funcionar como teto rígido. Uma saída acima da sugestão escolhida não foi classificada como defeito sem essa regra. As restrições são apuradas por tipo, sem somar unidades de naturezas distintas em um percentual global.
+No caso de falha de consulta do período, o controle CAL-01 estabelece 2027.1, enquanto a execução inicia em 2027.2. Essa diferença sustenta o julgamento da hipótese de calendário. O resultado favorável de carga não elimina os dois tipos não conformes.
 
 ## 4. Julgamento das hipóteses funcionais
 
-| Hipótese | Julgamento | Fundamentação e alcance |
-|---|---|---|
-| **H-FUN-01 — Violação de pré-requisitos** | **Não corroborada na relação testada** | FGA0170→FGA0211 respeitada na projeção condicionada à aprovação; TVP=0/1. Outras relações não foram integralmente avaliadas. |
-| **H-FUN-02 — Violação de co-requisitos** | **Não corroborada no par testado** | FGA0072/FGA0074 alocadas em 2027.1; TVC=0/2. |
-| **H-FUN-03 — Omissão de obrigatórias pendentes** | **Corroborada** | FGA0206 ausente; CDO=14/15, inferior à meta de 100%. |
-| **H-FUN-04 — Tratamento indevido de disciplinas em andamento** | **Não corroborada no recorte** | TDH=0/44; status acadêmico MATR separado da aprovação projetada. |
-| **H-FUN-05 — Equivalências ignorando relações ou vigência** | **Não corroborada nas relações verificadas** | TAE=0/8, sem erro confirmado de reconhecimento, status ou efeito nas pendências. Não abrange cadeias fora de H0. |
-| **H-FUN-06 — Opções do onboarding sem o efeito prometido** | **Inconclusiva para a hipótese completa** | Cinco expectativas de carga atendidas; efeitos obrigatórios de trabalho/estágio e objetivo ainda não especificados. |
-| **H-FUN-07 — Divergência do semestre estimado em relação ao calendário oficial** | **Inconclusiva** | A ausência de violação do máximo de 480h não verifica a hipótese sobre calendário/falha de consulta do período. Falta a referência e a condição correspondente. |
+**Tabela 3 — Julgamento das hipóteses funcionais.**
 
-“Não corroborada” significa que o problema não foi observado no recorte; não representa prova de inexistência em todo o produto.
+| Hipótese | Julgamento | Fundamentação |
+| --- | --- | --- |
+| **H-FUN-01 — Violação de pré-requisitos** | **Não corroborada no recorte** | FGA0170→FGA0211 respeitada na projeção; TVP=0/1. |
+| **H-FUN-02 — Violação de co-requisitos** | **Não corroborada na execução consolidada** | Par em 2027.1; TVC=0/2. O registro distinto de Gabriel não é misturado ao denominador. |
+| **H-FUN-03 — Omissão de obrigatórias** | **Corroborada** | FGA0206 ausente; CDO=14/15. |
+| **H-FUN-04 — Tratamento indevido de matrícula** | **Não corroborada no recorte** | TDH=0/44; matrícula e projeção diferenciadas. |
+| **H-FUN-05 — Equivalências sem respeito a relações/vigência** | **Não corroborada nas oito relações** | TAE=0/8; seis concluídas e duas em andamento tratadas corretamente. |
+| **H-FUN-06 — Preferências sem o efeito prometido** | **Corroborada nos contratos de C3/C4** | Duas expectativas não atendidas; COO=5/7. |
+| **H-FUN-07 — Semestre estimado divergente do calendário** | **Corroborada no caso de falha de consulta** | Um início em 2027.2 quando CAL-01 exige 2027.1. |
+
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
+
+“Não corroborada” descreve a ausência de falha no recorte; não significa prova de correção para todo o produto. A conclusão principal utiliza a execução consolidada e mantém as capturas com seus identificadores.
 
 ## 5. Síntese do julgamento da qualidade funcional
 
-O plano preservou os registros de H0, aplicou corretamente as equivalências verificadas e respeitou as relações de pré/co-requisito examinadas. Esses resultados demonstram atendimento às metas nesses recortes de correção funcional.
+**A adequação funcional não atende integralmente às metas.** Há falha de completude, desconformidade nas preferências e divergências de oferta/calendário. Ao mesmo tempo, os registros acadêmicos, as equivalências e as relações curriculares selecionadas apresentaram resultados favoráveis no recorte consolidado.
 
-Entretanto, **a completude funcional não atingiu a meta**, pois uma obrigatória pendente foi omitida. Um plano aparentemente válido por semestre pode continuar incompleto; por isso, a lista vazia de disciplinas não alocadas não deve ser tomada como garantia de cobertura curricular.
+As prioridades são contemplar FGA0206, implementar os efeitos definidos para trabalho/objetivo e validar oferta e período antes da alocação. As métricas não são somadas em uma nota média: percentuais de erros, cobertura e expectativas têm unidades diferentes.
 
-A avaliação funcional é, portanto, **favorável nos recortes conformes, com falha comprovada de completude e cobertura ainda parcial em onboarding e restrições**. Não foi calculada uma média das sete métricas: seus numeradores, metas e unidades representam aspectos diferentes. A prioridade funcional é investigar FGA0206 e repetir CT-03, conferindo também relações e equivalências após a correção.
+## 6. Limites da conclusão
 
-## 6. Limitações
+A entrada é H0 e os cenários são variações desse histórico, não estudantes independentes. TCC 1/2 e outras relações apenas ilustradas nas capturas não ampliam automaticamente o denominador de pré-requisitos. O commit público não identifica a versão implantada. Não se extrapolam os resultados para todas as matrizes, dispositivos ou condições de uso.
 
-Um único histórico e configurações pareadas não representam todos os alunos. A versão do servidor não foi identificada; datas e respostas foram preservadas por execução. A aprovação do semestre atual é projetada condicionalmente, sem modificar o status acadêmico MATR. Os resultados devem ser repetidos se houver mudança relevante no produto.
+As recomendações funcionais permanecem no [encerramento](../conclusao.md); a intervenção de interface e sua comparação estão na [ação de melhoria](../operacionais/acaoMelhoria.md).
 
 ---
 
@@ -112,7 +124,7 @@ Um único histórico e configurações pareadas não representam todos os alunos
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da avaliação pelo histórico oficial H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
 | [Gabriel Mota](https://github.com/Gabro-MO) | Recuperação das observações e capturas funcionais | 15/11 | [289a2a0](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/289a2a02674594fc05aed55ad7c8177ca8154bdd) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento ao H0 e preservação das evidências anteriores com cobertura identificada | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | Não commitado |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação com a tabela de resultados consolidados da avaliação funcional | 15/11 | Não commitado |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ampliação da análise, respostas GQM e síntese dos julgamentos | 15/11 | Não commitado |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Explicitação das metas nas tabelas de resultados e avaliação | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação com a tabela de resultados consolidados da avaliação funcional | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Ampliação da análise, respostas GQM e síntese dos julgamentos | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Explicitação das metas nas tabelas de resultados e avaliação | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |

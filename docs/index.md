@@ -10,9 +10,11 @@ Documentação do projeto final da disciplina **FGA0315 - Qualidade de Software 
 
 ## Resumo do projeto
 
-O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o fluxograma do curso e a planejar a formatura a partir do histórico acadêmico. A equipe avalia a qualidade da funcionalidade "Planejar formatura", que indica o semestre previsto de formatura, as matérias críticas e a sequência de disciplinas, e entregará recomendações e ao menos uma ação de melhoria.
+O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o fluxograma do curso e a planejar a formatura a partir do histórico acadêmico. A equipe avalia a qualidade da funcionalidade "Planejar formatura", que indica o semestre previsto de formatura, as matérias críticas e a sequência de disciplinas, e apresenta resultados, recomendações e uma ação de melhoria com comparação antes/depois.
 
 ## Metodologia
+
+**Tabela 1 — Metodologia.**
 
 | Tema | Página |
 | :--- | :--- |
@@ -21,7 +23,11 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | Ciclo de trabalho, convenções e tratamento dos dados | [Organização e Fluxo de Trabalho](metodologia/fluxoDeTrabalho.md) |
 | Estrutura e produção do artigo | [Elaboração do Artigo](metodologia/elaboracaoArtigo.md) |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ## Fase 1 - Estabelecer os requisitos da avaliação
+
+**Tabela 2 — Fase 1 - Estabelecer os requisitos da avaliação.**
 
 | Tema | Página |
 | :--- | :--- |
@@ -34,7 +40,11 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | Declaração de uso de IA | [Uso de IA](usoDeIA/IA.md) |
 | Referências | [Referências](referencias/fase1.md) |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ## Fase 2 - Especificar a avaliação (GQM)
+
+**Tabela 3 — Fase 2 - Especificar a avaliação (GQM).**
 
 | Tema | Página |
 | :--- | :--- |
@@ -45,9 +55,21 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 | ↳ Segurança | [Segurança](fases/fase2/operacionais/seguranca.md) |
 | ↳ Protocolo de Coleta e Teste | [Protocolo de Coleta e Teste](fases/fase2/operacionais/protocolo.md) |
 
-## Fases seguintes
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
-As Fases 3 (projeto da avaliação) e 4 (execução e conclusão) serão publicadas neste site conforme forem concluídas.
+## Fases 3 e 4 — Avaliação concluída
+
+**Tabela 4 — Fases 3 e 4 — Avaliação concluída.**
+
+| Parte | Conteúdo | Página |
+| --- | --- | --- |
+| Fase 3 | Procedimentos, H0, cenários e critérios de execução | [Plano integrado](fases/fase3/planoAvaliacao.md) |
+| Fase 4 — Funcional | Sete métricas, respostas GQM e hipóteses | [Resultados funcionais](fases/fase4/metricasFuncionais.md) |
+| Fase 4 — Operacional | Usabilidade, segurança e julgamento integrado | [Resultados operacionais](fases/fase4/metricasOperacionais.md) |
+| Melhoria | Intervenção e comparação de TCH/ISVH | [Ação de melhoria](fases/fase4/operacionais/acaoMelhoria.md) |
+| Encerramento | Conclusão, recomendações e limites | [Conclusão da avaliação](fases/fase4/conclusao.md) |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ## Equipe
 
@@ -59,4 +81,4 @@ A lista completa de integrantes está no [README do repositório](https://github
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação da pagina de Uso de IA | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Pagina inicial do trabalho | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |

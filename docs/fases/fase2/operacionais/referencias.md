@@ -1,4 +1,4 @@
-## Referências
+# Referências
 
 VAN SOLINGEN, Rini; BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **Goal Question Metric (GQM) Approach**. In: *Encyclopedia of Software Engineering*. Wiley, 2002. DOI: [https://doi.org/10.1002/0471028959.sof142](https://doi.org/10.1002/0471028959.sof142). Acesso em: 18 out. 2026.
 
@@ -38,4 +38,4 @@ UNIVERSIDADE DE BRASÍLIA (UnB). **Projeto Pedagógico do Curso de Bacharelado e
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Adição das referências bibliográficas para as métricas operacionais | 18/10/2026 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Adição das referências bibliográficas para as métricas operacionais | 18/10 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |

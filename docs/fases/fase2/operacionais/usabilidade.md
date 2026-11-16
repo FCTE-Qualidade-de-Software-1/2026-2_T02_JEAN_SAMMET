@@ -22,17 +22,23 @@ Especificação de perguntas, hipóteses e métricas de **Usabilidade** para a f
 
 A inspeção heurística orienta-se pela verificação das 10 Heurísticas de Nielsen durante o percurso das três tarefas centrais do fluxo ([Software Escolhido](../../fase1/softwareEscolhido.md#31-fluxo-de-uso-avaliado)):
 
+**Tabela 1 — Tarefas de Referência para a Inspeção.**
+
 | ID | Tarefa Inspecionada | Foco da Inspeção Heurística | Heurísticas-Chave |
 | :---: | :--- | :--- | :---: |
 | **T1** | Localizar Previsão de Formatura | Visibilidade e destaque das informações essenciais (semestre previsto e semestres restantes) sem sobrecarga cognitiva. | #1 (Status do sistema)<br>#8 (Design minimalista) |
 | **T2** | Interpretar Matérias Críticas | Clareza conceitual e affordance visual dos nós destacados como críticos e sua relação no grafo/painel. | #2 (Mundo real)<br>#6 (Reconhecimento) |
 | **T3** | Ajustar Limite de Créditos | Eficiência do controle interativo, feedback ao recalcular o plano e facilidade de desfazer ou redefinir. | #1 (Feedback)<br>#3 (Liberdade)<br>#5 (Prevenção de erros) |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ---
 
 ## 4. Fichas das Métricas de Usabilidade
 
 ### `MET-OP-01` — Taxa de Conformidade Heurística (TCH)
+
+**Tabela 2 — MET-OP-01 — Taxa de Conformidade Heurística (TCH).**
 
 | Campo | Especificação |
 | :--- | :--- |
@@ -47,9 +53,13 @@ A inspeção heurística orienta-se pela verificação das 10 Heurísticas de Ni
 | **Coleta** | 1. Executar a aplicação com histórico autorizado carregado.<br>2. Dois ou mais avaliadores inspecionam a interface executando os fluxos `T1`, `T2` e `T3`.<br>3. Avaliar cada item do checklist como Conforme (1) ou Não Conforme (0).<br>4. Consolidar os resultados em sessão de alinhamento e calcular a taxa final. |
 | **Níveis de Julgamento** | - **Excelente:** `TCH ≥ 85%`.<br>- **Aceitável:** `70% ≤ TCH < 85%` (interface operável, com fricções pontuais de design).<br>- **Crítico:** `TCH < 70%`. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ---
 
 ### `MET-OP-01b` — Índice de Severidade de Violações Heurísticas (ISVH)
+
+**Tabela 3 — MET-OP-01b — Índice de Severidade de Violações Heurísticas (ISVH).**
 
 | Campo | Especificação |
 | :--- | :--- |
@@ -64,11 +74,15 @@ A inspeção heurística orienta-se pela verificação das 10 Heurísticas de Ni
 | **Coleta** | Para cada item não conforme na `MET-OP-01`, a equipe classifica a gravidade:<br>- **1 (Cosmético):** não atrapalha a execução (ex.: detalhe visual).<br>- **2 (Menor):** causa leve lentidão ou dúvida temporária.<br>- **3 (Maior):** dificulta consideravelmente a realização da tarefa.<br>- **4 (Catastrófico):** impede a conclusão ou induz o usuário ao erro crítico. |
 | **Níveis de Julgamento** | - **Excelente:** `Ncatastrofico = 0`, `Nmaior = 0` e `ISVH ≤ 5`.<br>- **Aceitável:** `Ncatastrofico = 0`, `Nmaior ≤ 1` e `ISVH ≤ 12`.<br>- **Crítico:** `Ncatastrofico ≥ 1` ou `Nmaior > 1` ou `ISVH > 12`. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ---
 
 As faixas são critérios da equipe. No ISVH, aplicar Excelente primeiro; depois Aceitável, se não atender à primeira faixa; os demais valores válidos são Críticos. O julgamento de Q-OP-01 usa o pior nível entre TCH e ISVH, conforme a [regra conjunta](visaoGeral.md#22-regra-de-julgamento-conjunto). Uma métrica isolada não refuta a hipótese. Sem coleta completa e consenso previstos, registrar Inconclusivo.
 
 ## 5. Checklist Heurístico Padronizado (Nielsen)
+
+**Tabela 4 — Checklist Heurístico Padronizado (Nielsen).**
 
 | # | Heurística de Referência | Item de Verificação na Interface `/plano-formatura` | Foco |
 | :---: | :--- | :--- | :---: |
@@ -82,6 +96,8 @@ As faixas são critérios da equipe. No ISVH, aplicar Excelente primeiro; depois
 | **8** | Design minimalista (#8) | O layout evita acúmulo excessivo de nós e rótulos sobrepostos que concorram pela atenção visual? | `T1, T2` |
 | **9** | Tratamento de erros (#9) | Mensagens de aviso e restrições curriculares são descritivas e orientam como resolver o problema? | `T3` |
 | **10** | Ajuda e documentação (#10) | Existem legendas, tooltips explicativos ou orientações contextuais sobre o funcionamento do plano? | `T2` |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ---
 

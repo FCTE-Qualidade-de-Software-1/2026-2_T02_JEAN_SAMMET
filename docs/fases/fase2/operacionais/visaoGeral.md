@@ -26,10 +26,14 @@ As métricas operacionais derivam das definições da Fase 1:
 
 Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](../../fase1/softwareEscolhido.md#8-limitacoes-conhecidas)):
 
+**Tabela 1 — Hipóteses Operacionais e Matriz de Validação.**
+
 | ID | Característica | Hipótese Documentada | Questão GQM | Métricas de Teste | Critério de Validação da Hipótese |
 | :---: | :--- | :--- | :---: | :--- | :--- |
 | **H-OP-01** | Usabilidade | A interface apresenta violações heurísticas relevantes nas tarefas avaliadas. | `Q-OP-01` | TCH e ISVH | Confirmada no recorte se `TCH < 85%` ou houver violação maior/catastrófica; caso contrário, não corroborada, com coleta completa. |
 | **H-OP-02** | Segurança | Dependências vulneráveis, retenção de dados em claro ou falhas de controle de acesso podem comprometer os dados e serviços examinados. | `Q-OP-02` | IRP, GED-C e TBR | Julgar os componentes separadamente e aplicar a regra conjunta abaixo. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ### 2.1 Qualidade dos dados
 
@@ -37,10 +41,14 @@ Dados ausentes, erros de coleta e testes que não alcançam o serviço esperado 
 
 ### 2.2 Regra de julgamento conjunto
 
+**Tabela 2 — Regra de julgamento conjunto.**
+
 | Questão | Regra de resposta |
-|---|---|
+| --- | --- |
 | **Q-OP-01** | Classificar TCH e ISVH pelas fichas e adotar o pior nível. Usar Inconclusivo se a coleta não cumprir o protocolo. H-OP-01 pode ser confirmada mesmo no nível Aceitável, pois seu limiar é mais exigente. |
 | **Q-OP-02** | Há ressalva de segurança se algum componente estiver fora da meta; indicar qual. Só responder favoravelmente quando todos os componentes aplicáveis tiverem dados válidos e atenderem às metas: IRP Excelente, GED-C Conforme e TBR Conforme. Se houver componentes inconclusivos, a resposta global permanece parcial. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 H-OP-02 é confirmada no componente com IRP válido acima de 5 ou classificado Crítico, GED-C não conforme ou acesso indevido comprovado. Os demais componentes continuam com seus próprios estados. Sem esses achados e com cobertura completa, registrar **não corroborada no escopo avaliado**; com lacunas, registrar **inconclusiva**. Não usar uma medida favorável para refutar toda a hipótese.
 
@@ -50,6 +58,8 @@ H-OP-02 é confirmada no componente com IRP válido acima de 5 ou classificado C
 
 ### 3.1 Objetivo Geral de Medição (Nível Conceitual)
 
+**Tabela 3 — Objetivo Geral de Medição (Nível Conceitual).**
+
 | Elemento GQM | Especificação Formal |
 | :--- | :--- |
 | **Objeto** | A funcionalidade _Planejar formatura_ (interface web, armazenamento cliente e dependências) do No Fluxo UnB. |
@@ -58,12 +68,16 @@ H-OP-02 é confirmada no componente com IRP válido acima de 5 ou classificado C
 | **Ponto de Vista** | **equipe de desenvolvedores**. |
 | **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, histórico oficial autorizado e inspeção dos componentes disponíveis. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ### 3.2 Questões de Medição (Nível Operacional)
 
 - **`Q-OP-01` (Usabilidade):** A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?
 - **`Q-OP-02` (Segurança):** O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado?
 
 ### 3.3 Árvore GQM com Hipóteses Operacionais
+
+A Figura 1 apresenta o diagrama desta seção.
 
 ```mermaid
 graph TD
@@ -83,16 +97,22 @@ graph TD
     Q2 --> M2c["MET-OP-02c: Taxa de Bloqueio em Rotas Não Autenticadas (TBR)<br/><i>Segurança / Controle de Acesso</i>"]
 ```
 
+*Figura 1 — Árvore GQM com Hipóteses Operacionais. Fonte: elaboração da equipe, conforme as referências desta página.*
+
 ---
 
 ## 4. Organização das Páginas Operacionais
 
+**Tabela 4 — Organização das Páginas Operacionais.**
+
 | Seção / Página | Foco e Conteúdo Principal | Hipótese | Métricas |
 | :--- | :--- | :---: | :---: |
-| **[1. Métricas de Usabilidade](usabilidade.md)** | Checklist heurístico (Nielsen), tarefas de referência ($T_1, T_2, T_3$), operabilidade e apreensibilidade. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
+| **[1. Métricas de Usabilidade](usabilidade.md)** | Checklist heurístico (Nielsen), tarefas de referência (`T1`, `T2` e `T3`), operabilidade e apreensibilidade. | `H-OP-01` | `MET-OP-01`<br>`MET-OP-01b` |
 | **[2. Métricas de Segurança](seguranca.md)** | Auditoria SCA, persistência no cliente, controle de acesso e referências OWASP e proteção de dados. | `H-OP-02` | `MET-OP-02`<br>`MET-OP-02b`<br>`MET-OP-02c` |
 | **[3. Protocolo de Coleta e Teste](protocolo.md)** | Roteiro de inspeção heurística da equipe, fichas de ambiente, storage e SCA. | `H-OP-01`<br>`H-OP-02` | Todas |
 | **[4. Referências](referencias.md)** | Referências metodológicas, normas técnicas (ISO/IEC e ISO 9241), OWASP e LGPD. | — | Todas |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ---
 
@@ -100,12 +120,16 @@ graph TD
 
 A avaliação adota abordagem holística, cruzando dados operacionais e funcionais ([Métricas Funcionais](../funcionais/visaoGeral.md)):
 
+A Figura 2 apresenta o diagrama desta seção.
+
 ```mermaid
 graph LR
     OP["Métricas Operacionais<br/>Usabilidade e Segurança"] <-->|"Validação Cruzada"| FN["Métricas Funcionais<br/>Regras Curriculares e Algoritmo"]
     OP --> DEC["Decisões de Melhoria (Fase 4)<br/>Interface intuitiva, dados seguros e planos válidos"]
     FN --> DEC
 ```
+
+*Figura 2 — Integração com as Métricas Funcionais. Fonte: elaboração da equipe, conforme as referências desta página.*
 
 - **Usabilidade × Adequação Funcional:** Interface intuitiva não compensa planos curriculares incorretos; da mesma forma, um plano correto não tem utilidade se a interface for incompreensível.
 - **Segurança × Confiabilidade:** Relacionar achados de dependências e acesso aos riscos do fluxo, sem inferir confiabilidade ou conformidade legal apenas dessas medidas.

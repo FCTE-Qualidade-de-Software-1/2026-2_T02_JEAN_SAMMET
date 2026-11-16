@@ -2,13 +2,17 @@
 
 ## 1. Identificação
 
+**Tabela 1 — Identificação.**
+
 | Item | Descrição |
-|---|---|
+| --- | --- |
 | **Nome** | No Fluxo UnB / NoFluxoUNB |
 | **Tipo de produto** | Aplicação web de apoio ao planejamento acadêmico |
 | **Site** | [no-fluxo.crianex.com](https://no-fluxo.crianex.com) |
 | **Repositório analisado** | [unb-mds/2025-1-NoFluxoUNB](https://github.com/unb-mds/2025-1-NoFluxoUNB) |
 | **Finalidade** | Apresentar a matriz curricular em um fluxograma interativo e apoiar o estudante na visualização das disciplinas cursadas e no planejamento até a formatura. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 O No Fluxo UnB é acessado pelo navegador. O estudante seleciona o curso, informa seu histórico acadêmico por PDF ou manualmente, visualiza o fluxograma e pode solicitar um plano de formatura. Esta avaliação se concentra nesse fluxo, principalmente no resultado da opção **“Planejar formatura”**. A descrição funcional geral é compatível com o README público do projeto; a organização do repositório também apresenta diretórios para frontend, backend, agente, scripts e migrações do Supabase ([repositório oficial](https://github.com/unb-mds/2025-1-NoFluxoUNB)).
 
@@ -28,28 +32,38 @@ O estudante interage pela interface web. O frontend apresenta o fluxograma e os 
 
 ### 3.2 Módulos
 
+**Tabela 2 — Módulos.**
+
 | Módulo identificado no repositório | Responsabilidade geral | Relação com a avaliação |
-|---|---|---|
+| --- | --- | --- |
 | **Frontend web** ([`frontend/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/frontend)) | Interface no navegador para seleção de curso, entrada do histórico, visualização do fluxograma e planejamento. | Principal ponto de observação nos testes de usabilidade e nas verificações funcionais. |
 | **Backend** ([`backend/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/backend)) | Serviços e regras utilizados pela interface para processar solicitações. A documentação da equipe o identifica como backend TypeScript/Node.js. | Pode auxiliar na investigação de divergências do plano, quando o código relevante estiver disponível. |
 | **Dados e autenticação** ([`supabase/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/supabase)) | Migrações e estrutura relacionada aos serviços de dados do Supabase. | Pertinente à inspeção não invasiva de controles de acesso e tratamento de dados; não será feita exploração de segurança. |
 | **Agente/integrações auxiliares** ([`mcp_agent/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/mcp_agent)) | Componentes auxiliares associados a recursos de agente/IA. | Fora do foco central, exceto quando uma dependência for necessária para compreender um comportamento observado. |
 | **Scripts** ([`scripts/`](https://github.com/unb-mds/2025-1-NoFluxoUNB/tree/main/scripts)) | Rotinas de apoio, incluindo processamento ou atualização de dados conforme a implementação pública. | Os dados curriculares usados nos testes precisam ter origem e referência conhecidas. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 A tabela descreve os diretórios e as responsabilidades gerais visíveis no repositório; não afirma que todos os módulos participam de cada execução do planejamento.
 
 ### 3.3 Interfaces e dependências
 
+**Tabela 3 — Interfaces e dependências.**
+
 | Interface ou dependência | Interação | Limite relevante |
-|---|---|---|
+| --- | --- | --- |
 | **Navegador ↔ frontend** | O estudante envia ou informa o histórico, navega pelo fluxograma e solicita o plano. | É a interface principal para observar as tarefas e os resultados. |
 | **Frontend ↔ serviços de aplicação** | A interface envia solicitações e apresenta as respostas recebidas. | A avaliação externa consegue observar entradas e saídas, mas não inferir todos os estados internos apenas pela interface. |
 | **Serviços ↔ dados curriculares e persistência** | O planejamento depende de informações curriculares e, em funções pertinentes, de serviços de dados/autenticação. | Os resultados serão comparados apenas com dados de referência definidos pela equipe. |
 | **Recursos de IA e serviços externos** | Podem oferecer funcionalidades auxiliares do produto. | A avaliação da qualidade das respostas de IA e de serviços externos não faz parte do escopo. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ## 4. Diagrama de contexto
 
 O diagrama mostra o produto como uma caixa única e suas principais interações externas. As conexões representam o contexto funcional da avaliação, não um mapa completo de tráfego ou implantação.
+
+A Figura 1 apresenta o diagrama desta seção.
 
 ```mermaid
 flowchart LR
@@ -64,11 +78,13 @@ flowchart LR
     N -.->|"Quando acionados"| IA
 ```
 
-*Figura 4 — Diagrama de contexto do No Fluxo UnB. Fonte: elaboração da equipe com base no fluxo observado e na documentação pública do projeto.*
+*Figura 1 — Diagrama de contexto do No Fluxo UnB. Fonte: elaboração da equipe com base no fluxo observado e na documentação pública do projeto.*
 
 ## 5. Diagrama de arquitetura lógica
 
 A arquitetura abaixo organiza os componentes documentados por responsabilidade. As setas indicam relações conceituais; não devem ser interpretadas como confirmação da topologia de produção ou de todas as chamadas realizadas pelo sistema.
+
+A Figura 2 apresenta o diagrama desta seção.
 
 ```mermaid
 flowchart TB
@@ -94,20 +110,24 @@ flowchart TB
     AG -.-> EXT
 ```
 
-*Figura 5 — Visão lógica simplificada dos componentes. Fonte: elaboração da equipe a partir da estrutura pública do repositório; relações internas devem ser confirmadas para a versão efetivamente executada.*
+*Figura 2 — Visão lógica simplificada dos componentes. Fonte: elaboração da equipe a partir da estrutura pública do repositório; relações internas devem ser confirmadas para a versão efetivamente executada.*
 
 ## 6. Implicações para a avaliação
 
+**Tabela 4 — Implicações para a avaliação.**
+
 | Característica | O que é possível observar | O que não será possível concluir com este recorte |
-|---|---|---|
+| --- | --- | --- |
 | **Adequação Funcional** | Comparar planos gerados para cenários controlados com uma matriz curricular e resultados esperados definidos previamente. | Que todos os planos, cursos, históricos ou combinações possíveis estão corretos. |
 | **Usabilidade** | Inspecionar possíveis dificuldades de operação e compreensão nas tarefas de referência, aplicando o checklist heurístico da equipe. | Que a inspeção mede diretamente o desempenho ou a aprendizagem de estudantes, ou que os resultados representam todos os usuários e dispositivos. |
 | **Segurança** | Fazer inspeção não invasiva do fluxo e dos controles observáveis, usando histórico autorizado, evidências sanitizadas e código público quando disponível. | Que o sistema está livre de vulnerabilidades ou que passou por uma auditoria de segurança. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ## 7. Restrições de execução
 
 - A equipe usará dados sintéticos ou dados de teste autorizados, sem expor históricos de terceiros.
-- Não serão realizados testes de invasão, tentativas de contornar autenticação ou testes de carga na aplicação em produção.
+- Não serão realizados testes de invasão, exploração ou carga em produção. As verificações de autenticação se limitam à rejeição controlada de credenciais na conta e na operação autorizadas.
 - O código público pode diferir do site. Serão registrados URL, data/hora, ambiente e commit examinado. Se a versão implantada não puder ser confirmada, essa limitação será declarada.
 
 ## 8. Limitações conhecidas

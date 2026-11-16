@@ -2,17 +2,23 @@
 
 ## 1. Objetivo da avaliação
 
+**Tabela 1 — Objetivo da avaliação.**
+
 | Elemento | Especificação |
-|---|---|
+| --- | --- |
 | **Objeto** | Funcionalidade *Planejar formatura* do No Fluxo UnB, com foco no Motor 2 e na interface de planejamento. |
 | **Propósito** | Avaliar a adequação funcional dos planos gerados. |
 | **Foco** | Correção e completude funcional. |
 | **Ponto de vista** | Estudantes e equipe responsável pelo produto. |
 | **Contexto** | Aplicação web, matriz de Engenharia de Software da FGA/UnB e histórico oficial autorizado, mantido fora do repositório, com regras curriculares oficiais como referência. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 ## 2. Diagrama GQM
 
 O diagrama explicita a relação entre o objetivo, as hipóteses que orientam a avaliação, as perguntas e as métricas usadas para respondê-las.
+
+A Figura 1 apresenta o diagrama desta seção.
 
 ```mermaid
 flowchart TD
@@ -45,12 +51,16 @@ flowchart TD
     Q07 --> M07["MET-FUN-07: violações de restrições semestrais"]
 ```
 
+*Figura 1 — Diagrama GQM. Fonte: elaboração da equipe, conforme as referências desta página.*
+
 As hipóteses são riscos a verificar, não defeitos confirmados. Os resultados devem ser julgados com base em regras curriculares identificáveis e no comportamento esperado documentado. `H-FUN-05` relaciona-se a `Q-FUN-03` e `Q-FUN-05`, pois uma equivalência inválida ou incompleta pode afetar tanto a lista de pendências quanto a aplicação da regra.
 
 ## 3. Hipóteses, perguntas e métricas
 
+**Tabela 2 — Hipóteses, perguntas e métricas.**
+
 | Pergunta | Hipótese associada | Métrica(s) |
-|---|---|---|
+| --- | --- | --- |
 | `Q-FUN-01` — O plano respeita os pré-requisitos oficiais? | `H-FUN-01`: o plano pode posicionar uma disciplina antes de o pré-requisito ser satisfeito segundo a fonte oficial. | `MET-FUN-01` |
 | `Q-FUN-02` — O plano respeita os co-requisitos oficiais? | `H-FUN-02`: disciplinas co-requisitadas podem ser distribuídas sem atender à regra de satisfação simultânea ou prévia aplicável. | `MET-FUN-02` |
 | `Q-FUN-03` — Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas? | `H-FUN-03`: o plano pode omitir obrigatórias pendentes mesmo quando a lista de disciplinas não alocadas está vazia. `H-FUN-05` também se aplica, pois equivalências afetam as pendências. | `MET-FUN-03`, `MET-FUN-05` |
@@ -59,16 +69,22 @@ As hipóteses são riscos a verificar, não defeitos confirmados. Os resultados 
 | `Q-FUN-06` — O onboarding produz o comportamento documentado ou prometido? | `H-FUN-06`: as opções de trabalho/estágio e objetivo podem não produzir o efeito especificado. A expectativa precisa ser confirmada antes de classificar isso como falha. | `MET-FUN-06` |
 | `Q-FUN-07` — O plano respeita oferta, semestre inicial e limites de carga verificáveis? | `H-FUN-07`: se a consulta do período letivo falhar, o semestre estimado pela data do sistema pode divergir do calendário oficial e afetar o plano. | `MET-FUN-07` |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 As hipóteses devem ser verificadas pelos cenários `CT-01` a `CT-07`, respectivamente. Para `H-FUN-05`, considerar também as evidências coletadas em `CT-03`. Quando a regra oficial ou o comportamento esperado não estiver documentado, registrar a lacuna de especificação, sem presumir sucesso ou defeito.
 
 ### 3.1 Regras de referência e julgamento
 
+**Tabela 3 — Regras de referência e julgamento.**
+
 | Verificação | Referência necessária antes da coleta |
-|---|---|
+| --- | --- |
 | Pré/co-requisitos e obrigatórias | Documento curricular aplicável, matriz, vigência e trecho com a regra da disciplina. |
 | Histórico e equivalências | Regra dos status e tabela oficial de equivalências, com vigência e disciplinas envolvidas. |
 | Onboarding | Texto da interface ou requisito que descreva o efeito esperado de cada opção; identificar a versão. O código ajuda a explicar o observado, mas não define sozinho o comportamento correto. |
 | Restrições semestrais | Calendário e oferta oficiais, limite documentado e conversão entre créditos e horas, quando necessária. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 No plano da Fase 3, cada CT deve apontar a fonte, a regra e o resultado esperado antes da execução. Sem referência suficiente, registrar **Pendente de especificação**, sem presumir sucesso ou defeito.
 
@@ -125,12 +141,14 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Dados e coleta:** calendário e oferta oficiais, limite informado, histórico e plano; comparar cada alocação com a regra aplicável (`CT-07`). Se a consulta ao período letivo falhar, conferir o semestre estimado contra o calendário oficial.
 - **Meta e condições:** `TVS = 0%`. Confirmar a fonte e a forma de aferição da carga. Créditos e horas não são equivalentes sem conversão documentada; se `NRS = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1.
 
+---
+
 ## Histórico de versão
 
 | Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| [Gabriel Mota](https://github.com/Gabro-MO) | Perguntas GQM, métricas e cenários iniciais. | 16/10/2026 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Consistência do foco GQM e revisão de referências a papéis da equipe. | 16/10/2026 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
-| [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10/2026 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Perguntas GQM, métricas e cenários iniciais. | 16/10 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Consistência do foco GQM e revisão de referências a papéis da equipe. | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção do objetivo duplicado e definição das referências para julgamento | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da entrada autorizada e das condições de avaliação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |

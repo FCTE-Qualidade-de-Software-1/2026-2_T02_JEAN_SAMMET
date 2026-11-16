@@ -10,6 +10,8 @@ Para selecionar as características, será utilizada uma matriz de **impacto × 
 
 ## 2. Avaliação das candidatas
 
+**Tabela 1 — Avaliação das candidatas.**
+
 | Característica (ISO/IEC 25010) | Impacto (1–5) | Risco (1–5) | Pontuação | Selecionada |
 | :--- | :---: | :---: | :---: | :---: |
 | Adequação funcional | 5 | 4 | 20 | Sim |
@@ -20,15 +22,21 @@ Para selecionar as características, será utilizada uma matriz de **impacto × 
 | Compatibilidade | 2 | 2 | 4 | Não |
 | Manutenibilidade | 3 | 1 | 3 | Não |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 As pontuações são uma priorização preliminar da equipe e não resultados medidos. A escolha considera o risco de o estudante interpretar incorretamente um plano acadêmico, a presença de dados pessoais no fluxo de uso e a necessidade de compreender e operar a interface sem dificuldade excessiva.
 
 ## 3. Características selecionadas
+
+**Tabela 2 — Características selecionadas.**
 
 | Prioridade | Característica | Norma de referência | Justificativa |
 | :---: | :--- | :--- | :--- |
 | 1 | Adequação funcional | ISO/IEC 25010 | O No Fluxo UnB auxilia o estudante a visualizar a estrutura curricular e organizar disciplinas futuras. A avaliação verificará se as informações e funções do fluxo selecionado correspondem aos dados de entrada e às regras curriculares usadas como referência. Um resultado incorreto pode levar a decisões acadêmicas inadequadas. |
 | 2 | Segurança | ISO/IEC 25010 | O fluxo pode envolver autenticação e dados acadêmicos pessoais. A avaliação será limitada a verificações não invasivas e à inspeção do comportamento observável e da documentação/código público, sem tentativa de invasão, exploração de vulnerabilidades ou acesso a dados de terceiros. |
 | 3 | Usabilidade | ISO/IEC 25010 | O estudante precisa localizar informações, compreender os estados das disciplinas e concluir tarefas do fluxo de planejamento. A avaliação inspecionará se as tarefas predefinidas atendem a critérios ergonômicos e heurísticas de usabilidade, pela equipe avaliadora. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ## 4. Trade-offs e características não selecionadas
 

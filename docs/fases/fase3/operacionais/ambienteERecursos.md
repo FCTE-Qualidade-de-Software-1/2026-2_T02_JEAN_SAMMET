@@ -2,8 +2,10 @@
 
 ## 1. Ambiente exploratório
 
+**Tabela 1 — Ambiente exploratório.**
+
 | Item | Registro de 15/11 |
-|---|---|
+| --- | --- |
 | Instância | `https://no-fluxo.crianex.com` |
 | Matriz | 6360/1 — 2017.1 |
 | Navegador instalado | Google Chrome 157.0.8103.52 |
@@ -17,11 +19,13 @@
 | Identificação do cliente | Inventário de 129 scripts estáticos com URL e SHA-256 no piloto |
 | Versão do servidor | Não identificada; não associar automaticamente a um commit |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 Esta ficha registra as condições observadas no piloto. Cada avaliador deve registrar seu próprio ambiente antes da coleta formal. Manter as mesmas condições nos cenários pareados; qualquer mudança deve constar no registro.
 
 ## 2. Dados para a avaliação
 
-O PDF sintético preparado para o piloto foi rejeitado pelo importador, conforme [evidência do piloto](../piloto.md#4-rejeicao-do-pdf-de-teste). Os dois PDFs de teste foram retirados. O sistema orienta utilizar o histórico gerado pelo SIGAA/UnB.
+O PDF sintético preparado para o piloto foi rejeitado pelo importador, conforme a [captura de rejeição](../img/rejeicao-pdf-teste.png). Os dois PDFs de teste foram retirados. O sistema orienta utilizar o histórico gerado pelo SIGAA/UnB.
 
 A entrada prevista passa a ser o **histórico oficial já fornecido e autorizado pelo usuário**, mantido fora do repositório. Publicar apenas verificações e evidências sanitizadas. Os antigos perfis fictícios foram substituídos por H0, o histórico autorizado, e C0–C5, configurações de uso do mesmo histórico. A especificação fica em `testes/cenarios_avaliacao.json`, sem dados pessoais.
 
@@ -47,7 +51,7 @@ Os instrumentos `testes/analisador_sca_irp.py` e `testes/teste_controle_acesso_t
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Especificação de hardware, software, isolamento, massa sintética LGPD e matriz de papéis | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Especificação de hardware, software, isolamento, massa sintética LGPD e matriz de papéis | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro do ambiente observado e preparação dos perfis sintéticos | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Substituição da massa fictícia por entrada autorizada e configurações de uso | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |

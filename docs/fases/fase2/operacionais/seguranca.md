@@ -13,8 +13,10 @@ Confidencialidade e autenticidade são as subcaracterísticas em foco. A inspeç
 
 ### `MET-OP-02` — Índice de Risco Ponderado de Dependências (IRP)
 
+**Tabela 1 — MET-OP-02 — Índice de Risco Ponderado de Dependências (IRP).**
+
 | Campo | Especificação |
-|---|---|
+| --- | --- |
 | **Característica** | Segurança — evidência complementar de riscos nos componentes. |
 | **Questão e hipótese** | `Q-OP-02` e `H-OP-02`, componente dependências. |
 | **Definição e unidade** | Soma ponderada dos achados de vulnerabilidade por severidade; unidade: pontos. |
@@ -26,12 +28,16 @@ Confidencialidade e autenticidade são as subcaracterísticas em foco. A inspeç
 | **Crítico** | Demais resultados válidos, incluindo crítica, alta em produção, mais de duas altas ou `IRP > 20`. |
 | **Inconclusivo** | Relatório ausente, erro de ferramenta, cobertura não demonstrada ou dados insuficientes para aplicar as faixas. Nunca assumir zero por ausência de arquivo. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 As faixas e os pesos são critérios da equipe. Aplicar as faixas na ordem apresentada. Componentes não examinados, inclusive o backend em uma coleta apenas do cliente, permanecem sem avaliação. Achados de alta severidade sem classificação verificável de produção/desenvolvimento não permitem declarar a faixa Aceitável.
 
 ### `MET-OP-02b` — Grau de Exposição de Dados no Cliente (GED-C)
 
+**Tabela 2 — MET-OP-02b — Grau de Exposição de Dados no Cliente (GED-C).**
+
 | Campo | Especificação |
-|---|---|
+| --- | --- |
 | **Característica** | Segurança — confidencialidade. |
 | **Questão e hipótese** | `Q-OP-02` e `H-OP-02`, componente armazenamento. |
 | **Definição e unidade** | Número de chaves com identificadores ou dados acadêmicos em texto claro nos mecanismos inspecionados; unidade: chaves. |
@@ -42,12 +48,16 @@ As faixas e os pesos são critérios da equipe. Aplicar as faixas na ordem apres
 | **Não conforme** | `GED-C ≥ 1`, com conteúdo e estado do fluxo comprovados. |
 | **Inconclusivo** | Fluxo não concluído, mecanismos não inspecionados ou evidência insuficiente. |
 
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
 O resultado descreve o armazenamento observado; não comprova confidencialidade integral nem conformidade legal.
 
 ### `MET-OP-02c` — Taxa de Bloqueio de Requisições Não Autorizadas (TBR)
 
+**Tabela 3 — MET-OP-02c — Taxa de Bloqueio de Requisições Não Autorizadas (TBR).**
+
 | Campo | Especificação |
-|---|---|
+| --- | --- |
 | **Característica** | Segurança — autenticidade e controle de acesso. |
 | **Questão e hipótese** | `Q-OP-02` e `H-OP-02`, componente acesso. |
 | **Definição e unidade** | Percentual de chamadas negativas válidas bloqueadas com HTTP 401/403; unidade: percentual. |
@@ -58,6 +68,8 @@ O resultado descreve o armazenamento observado; não comprova confidencialidade 
 | **Não conforme** | Pelo menos uma chamada válida executa ação ou acessa dado que exigia autorização, sem a permissão necessária. Um HTTP 200 isolado não comprova esse acesso. |
 | **Inconclusivo** | HTTP 404/405, erro de conexão, HTTP 500 sem evidência de acesso ou outro retorno que não permita avaliar o controle. `TBR = 100%` em apenas parte da bateria não autoriza aprovação global. |
 | **Não aplicável** | O requisito documentado permite acesso público ao serviço e não há operação protegida no recorte. Justificar. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ## 3. Resposta à questão e julgamento da hipótese
 
@@ -74,5 +86,4 @@ As verificações usam OWASP Top 10:2021 como referência: A01 para controle de 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da especificação de segurança, fichas MET-OP-02, MET-OP-02b e MET-OP-02c e alinhamento com OWASP/LGPD | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo coerência com ISO 25010, OWASP e LGPD | 24/10 | [corrente] |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Correção das métricas, faixas e resultados inconclusivos de segurança | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |

@@ -14,8 +14,10 @@ NO FLUXO UNB. **2025-1-NoFluxoUnB: código-fonte do No Fluxo UnB**. GitHub, 2026
 
 NO FLUXO UNB. **No Fluxo UnB**. Crianex, [s. d.]. Disponível em: [no-fluxo.crianex.com](https://no-fluxo.crianex.com). Acesso em: 18 out. 2026.
 
+---
+
 ## Histórico de versão
 
 | Membro | Contribuição | Data | Commit |
 |---|---|---|---|
-| [Gabriel Mota](https://github.com/Gabro-MO) | Inclusão das referências das métricas funcionais. | 18/10/2026 | [4501889](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/4501889183c10315ccbd9137c958afcbaf5b7767) |
+| [Gabriel Mota](https://github.com/Gabro-MO) | Inclusão das referências das métricas funcionais. | 18/10 | [4501889](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/4501889183c10315ccbd9137c958afcbaf5b7767) |

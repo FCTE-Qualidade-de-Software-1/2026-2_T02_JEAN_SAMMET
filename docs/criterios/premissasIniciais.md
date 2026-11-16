@@ -1,5 +1,7 @@
 # Premissas Iniciais
 
+**Tabela 1 — Premissas Iniciais.**
+
 | ID | Critério | O que fazer para ser excelente | Status atual |
 | :--- | :--- | :--- | :---: |
 | P1 | Seleção das características de qualidade | Escolher 3 a 4 características, indicar a norma SQuaRE e justificar. Ao concluir, discutir as relações entre elas, com evidências, limitações e os casos sem dados suficientes. | **Concluído** |
@@ -19,6 +21,8 @@
 | E1-2 | Entrega 1: artigo | Primeira versão com Introdução, Referencial teórico, Metodologia, Fase 1 e Fase 2. | **A fazer** |
 | E1-3 | Entrega 1: tabela de contribuição | Tabela de contribuição da equipe. | **Concluído** |
 | E1-4 | Entrega 1: release | Release E1, conforme data e hora definidas no Moodle. | **A fazer** |
+
+*Fonte: critérios da disciplina, organizados pela equipe.*
 
 ---
 

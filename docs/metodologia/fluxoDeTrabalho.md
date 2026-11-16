@@ -42,4 +42,4 @@ Testes de usabilidade e entrevistas só são gravados com consentimento. Os part
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Criação da página de organização e fluxo de trabalho | 18/10/2026 | [Preencher]() |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |

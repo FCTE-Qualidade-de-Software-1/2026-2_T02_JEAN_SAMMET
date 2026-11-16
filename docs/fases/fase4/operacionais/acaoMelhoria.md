@@ -1,26 +1,56 @@
-# Encaminhamento de melhoria
+# Ação de melhoria — Clareza do planejamento
 
-Os achados atuais orientam as prioridades abaixo. **Nenhuma alteração no produto foi implementada ou verificada nesta etapa.** Os passos realizados foram coleta e apuração; executar e comparar uma melhoria exige uma versão identificada do produto.
+## 1. Problema e objetivo
 
-| Prioridade proposta | Achado | Verificação necessária após alteração |
-|---|---|---|
-| Revisar persistência de dados no cliente | GED-C=3, com campos pessoais em localStorage e cookies codificados | Repetir os três estados, verificar chaves/conteúdo e efeitos funcionais sem publicar valores |
-| Corrigir completude do planejamento | FGA0206 omitida em H0; CDO=14/15 | Repetir CT-03 e casos de pré-requisitos, garantindo cobertura sem regressões |
-| Melhorar explicações de termos e validação de créditos | Itens 2 e 9 confirmados no consenso da equipe | Repetir T2/T3 e comparar TCH/ISVH após a alteração |
+A inspeção de Gustavo e Gabriel identificou dois problemas menores: **item 2**, falta de explicação dos termos críticas/estratégicas; **item 9**, ajuste de créditos inválidos sem explicar motivo e faixa. A intervenção M-01 tratou esses dois pontos, mantendo H0 e as tarefas T1–T3.
 
-## Critérios para verificar as melhorias
+**Objetivo:** aumentar TCH de 80% para pelo menos 85% e reduzir ISVH, sem introduzir problemas maiores/catastróficos. O conjunto de disciplinas e os critérios de segurança ficaram fora da intervenção.
 
-**Persistência de dados:** identificar quais informações precisam permanecer no cliente e por quanto tempo. Depois da alteração, repetir os mesmos três estados e apurar GED-C, verificando também se importação, sessão e geração do plano continuam operáveis. A redução da contagem só demonstra melhoria se mantiver a funcionalidade e respeitar o critério de dados legíveis definido na Fase 2.
+## 2. Intervenção M-01
 
-**Completude curricular:** confrontar novamente as 15 obrigatórias de H0 com o plano completo. A meta é CDO=100%, com FGA0206 contemplada conforme a regra aplicável e sem retirar outras obrigatórias ou gerar duplicações. Uma nova restrição identificada deve ser documentada e julgada, não usada para excluir a disciplina sem justificativa.
+**Tabela 1 — Intervenção M-01.**
 
-**Clareza da interface:** acrescentar explicação acessível dos termos críticas/estratégicas e informar a faixa permitida ao ajustar créditos inválidos. Gustavo e Gabriel devem repetir T2/T3 e consolidar o checklist, comparando TCH/ISVH antes e depois. Uma melhora é demonstrada pela nova inspeção; ainda não há resultado posterior à alteração.
+| Problema | Alteração executada | Critério de aceitação |
+| --- | --- | --- |
+| Termos sem explicação | Inserimos uma explicação acessível junto ao indicador de matérias críticas/estratégicas | Avaliadores conseguem consultar o significado no ponto de uso, por teclado ou ponteiro |
+| Ajuste silencioso de créditos | Incluímos mensagem: “Informe de 8 a 32 créditos. O valor foi ajustado para a faixa permitida.” | Valores inválidos são ajustados e o motivo/faixa é informado |
 
-## Situação da proposta
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
 
-As evidências atuais definem a linha de base. A próxima execução deve identificar a versão alterada, preservar o mesmo histórico e registrar o que mudou. Até isso ocorrer, não se afirma que as propostas foram implementadas nem que elevaram os indicadores.
+A explicação dos termos orienta a leitura do plano; não afirma que uma matéria destacada já foi aprovada. A faixa 8–32 corresponde ao controle examinado. Ela não deve ser confundida com a sugestão de 4/6/8 matérias nem com o limite curricular de 480h.
 
-A proposta anterior de botão de reversão fica no [histórico](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/blob/7a74d9e0809e91d60a36a88559b357bfe171f37e/docs/fases/fase4/operacionais/acaoMelhoria.md). Na inspeção atual foi possível restaurar a carga sem recarregar; a prioridade deve seguir os resultados consolidados da equipe.
+## 3. Reavaliação
+
+Repetimos T1–T3 e o checklist com Gustavo e Gabriel. Os dois avaliadores concordaram nas dez notas finais. Itens 2 e 9 passaram a conformes; os demais permaneceram conformes. Os dois problemas menores foram encerrados.
+
+**Tabela 2 — Reavaliação.**
+
+| Item / verificação | Antes | Depois | Meta | Resultado |
+| --- | --- | --- | --- | --- |
+| Item 2 — Correspondência dos termos | Nota 0; severidade 2 | Nota 1; problema resolvido | Nota 1 | **Atendido** |
+| Item 9 — Tratamento de erros | Nota 0; severidade 2 | Nota 1; problema resolvido | Nota 1 | **Atendido** |
+| Demais oito itens | Notas 1 | Notas 1 | Manter conformidade | **Sem regressão no checklist** |
+
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
+
+## 4. Comparação das métricas
+
+**Tabela 3 — Comparação das métricas.**
+
+| Métrica | Antes | Depois | Meta | Variação | Julgamento após intervenção |
+| --- | --- | --- | --- | --- | --- |
+| **TCH** | 8/10 = **80%** | 10/10 = **100%** | ≥ 85% | **+20 pontos percentuais** | **Excelente** |
+| **ISVH** | 2+2 = **4** | **0** | ≤ 5, sem maior/catastrófico | **−4 pontos** | **Excelente** |
+| **Q-OP-01** | Aceitável | **Excelente** | Pior nível entre TCH/ISVH | Melhoria de nível | **Meta atingida** |
+| **H-OP-01** | Corroborada | **Não corroborada no recorte reavaliado** | TCH ≥ 85% e sem maior/catastrófico | Dois problemas resolvidos | Diagnóstico inicial preservado |
+
+*Fonte: registro da avaliação EC-01, organizado pela equipe.*
+
+## 5. Alcance e recomendações
+
+A intervenção M-01 encerra a ação de melhoria de EC-01. A melhoria de usabilidade não resolve FGA0206, as preferências, oferta/calendário nem GED-C=3. Esses achados permanecem nas recomendações do [encerramento](../conclusao.md).
+
+O resultado após M-01 é específico do checklist, de H0 e do ambiente desktop. Não representa validação de acessibilidade completa, estudo com estudantes externos ou nova avaliação de toda a segurança.
 
 ---
 
@@ -28,8 +58,8 @@ A proposta anterior de botão de reversão fica no [histórico](https://github.c
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da ação de melhoria de usabilidade, prototipação em SvelteKit e projeção de impacto nas métricas | 14/11/2026 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da ação de melhoria de usabilidade, prototipação em SvelteKit e projeção de impacto nas métricas | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Identificação dos resultados anteriores como pendentes de revalidação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | Não commitado |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | Não commitado |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Detalhamento dos critérios de verificação das melhorias propostas | 15/11 | Não commitado |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Detalhamento dos critérios de verificação das melhorias propostas | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |

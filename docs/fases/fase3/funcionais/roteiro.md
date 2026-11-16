@@ -14,14 +14,18 @@ As 15 obrigatórias pendentes somam 1.110h. Os universos de CT-03/04/05 são **1
 
 Todos os cenários mantêm H0 fixo. Somente a configuração da interface muda.
 
+**Tabela 1 — Cenários controlados.**
+
 | Cenário | Configuração | Finalidade |
-|---|---|---|
+| --- | --- | --- |
 | C0 — Base | H0, alvo de 24 créditos/360h; registrar trabalho, objetivo e período selecionados | Conferir importação do histórico, regras e plano inicial |
 | C1 — Carga menor | H0, alvo de 20 créditos/300h; demais escolhas iguais a C0 | Conferir a configuração de carga e o recálculo |
 | C2 — Carga maior | H0, alvo de 32 créditos/480h; demais escolhas iguais a C0 | Conferir limite curricular e recálculo |
 | C3 — Trabalho/estágio | H0; alternar somente essa resposta em relação a C0 | Conferir representação e efeito apenas se especificado |
 | C4 — Objetivo | H0; alternar velocidade/equilíbrio em relação a C0 | Conferir representação e efeito apenas se especificado |
 | C5 — Quantidade de matérias | H0; comparar 4, 6 e 8 matérias, mantendo trabalho e objetivo fixos | Conferir as cargas sugeridas exibidas no onboarding: 240/360/480h |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 C0–C2 usam cargas-alvo e não pressupõem que o valor esteja selecionado por padrão. C1/C2 tiveram os valores aceitos no piloto, com recálculo e restauração de C0; isso não julga a correção de todas as alocações. C3/C4 não pressupõem efeito algorítmico não documentado. C5 permite conferir a associação exibida no onboarding, mas o comportamento do plano exige saída observável.
 
@@ -76,17 +80,19 @@ C0–C2 usam cargas-alvo e não pressupõem que o valor esteja selecionado por p
 
 - **Entrada:** H0 fixo; C0 e variações C1–C5.
 - **Passos:** variar um controle por vez e registrar seleção, texto da interface e plano. Conferir 4/6/8 matérias e as sugestões de 240/360/480h.
-- **Esperado:** efeito correspondente ao comportamento prometido. Sugestão não é automaticamente limite rígido.
+- **Esperado:** efeito correspondente ao comportamento prometido. Em EC-01, CA-C3 exige sugestão de 20 créditos ao ativar trabalho/estágio; CA-C4 exige horizonte de dois semestres para velocidade. Sugestão geral não é automaticamente teto rígido.
 - **Registro:** `COO = expectativas atendidas / expectativas válidas × 100`. Sem efeito obrigatório especificado, manter essa parte pendente de especificação.
 
 ### CT-07 — Restrições semestrais (`MET-FUN-07`)
 
 - **Entrada:** H0 fixo; C0/C1/C2 e variações C5 com configuração registrada.
-- **Passos:** somar cargas futuras e comparar com o limite prometido e o máximo curricular de 480h. Incluir reservas identificadas e separar semestre em curso de futuro.
+- **Passos:** somar cargas futuras e comparar com o máximo curricular de 480h. Incluir reservas identificadas e separar semestre em curso de futuro. Conferir as dez alocações de OC-01 e as três condições de CAL-01.
 - **Esperado:** atender às restrições verificáveis. Conferir oferta/calendário somente com fonte do período e interpretar exceções antes de julgar.
 - **Registro:** `TVS = violações / verificações válidas × 100`, por tipo. Oferta, sugestão e máximo curricular não compartilham julgamento único.
 
 ## 4. Encerramento
+
+A execução e o julgamento estão concluídos em [EC-01](../../fase4/conclusao.md). A configuração-base de 24 créditos foi restaurada conforme confirmação de Gustavo.
 
 Os cenários usam o mesmo histórico e não representam estudantes independentes. Concluir cálculos somente com referências, evidências e cobertura suficientes. A [Fase 4](../../fase4/metricasFuncionais.md) registra os resultados do produto separadamente da preparação.
 

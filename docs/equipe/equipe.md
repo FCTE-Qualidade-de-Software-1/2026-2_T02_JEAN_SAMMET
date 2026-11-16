@@ -1,13 +1,37 @@
-| Nome | Matrícula | Tarefa realizada | Contribuição Porcentual |
-|---|---|---|---|
-| [Ana Beatriz Souza Araujo](https://github.com/AnnaBeatrizAraujo) | 241025891 | Definição de métricas de DSM, acompanhamento da gestão do projeto e documentação dessas informações. Também organizou a seção de gestão do projeto, incluindo métricas PSM/CID, acompanhamento de Issues e atualização do histórico de versionamento. | 16.66% |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | 241032500 | Elaboração e refinamento das métricas operacionais, com ajustes relacionados à usabilidade, segurança e adequação funcional. Também modularizou a documentação da Fase 2, padronizou referências bibliográficas e contribuiu para o registro do uso de IA. | 16.66% |
-| [Yasmim de Souza Santos](https://github.com/eii-yahs) | 241040860 | Criação do template do artigo científico e definição de uma estrutura inicial para sua elaboração. Também reuniu referências bibliográficas de base para orientar a produção do artigo do projeto. | 16.66% |
-| [Gabriel Mota Oliveira](https://github.com/Gabro-MO) | 241011081 | Elaboração inicial das perguntas GQM, das fichas de métricas funcionais e do protocolo de cenários de teste. Também estruturou e dividiu páginas da documentação, adicionou referências para as métricas funcionais e contribuiu para a documentação das métricas operacionais e dos critérios de avaliação da Fase 2. | 16.66% |
-| [Gustavo Gomes Fornaciari](https://github.com/gugofo) | 241032519 | Organização e estruturação inicial do repositório, configuração do MkDocs e divisão da documentação em páginas. Responsável pela conclusão da Fase 1, incluindo a documentação do software escolhido, propósito e stakeholders, escopo, modelo e características de qualidade, além da página de ODS e da manutenção dos critérios e históricos de versionamento. | 16.66% |
-| [Vitor Lages Nogueira Araújo](https://github.com/VitorlagesNA) | 242025054 | Criação e organização de Issues e Milestones para acompanhar as atividades e o progresso do projeto. Também realizou atualizações no README, contribuindo para a identificação dos integrantes e a apresentação inicial do repositório. | 16.66% |
+# Equipe
 
-## Historico de Versão
+## Integrantes
+
+**Tabela 1 — Integrantes.**
+
+| Integrante | Matrícula | Contribuição percentual |
+| --- | --- | ---: |
+| [Ana Beatriz Souza Araujo](https://github.com/AnnaBeatrizAraujo) | 241025891 | 16,66% |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | 241032500 | 16,66% |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | 241040860 | 16,66% |
+| [Gabriel Mota Oliveira](https://github.com/Gabro-MO) | 241011081 | 16,66% |
+| [Gustavo Gomes Fornaciari](https://github.com/gugofo) | 241032519 | 16,66% |
+| [Vitor Lages Nogueira Araújo](https://github.com/VitorlagesNA) | 242025054 | 16,66% |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
+
+## Contribuições registradas
+
+**Ana Beatriz Souza Araujo.** Definição de métricas de PSM/CID, acompanhamento da gestão do projeto e documentação dessas informações. Também organizou a seção de gestão do projeto, incluindo métricas PSM/CID, acompanhamento de Issues e atualização do histórico de versionamento.
+
+**Giovani De Oliveira Teodoro Coelho.** Elaboração e refinamento das métricas operacionais, com ajustes relacionados à usabilidade, segurança e adequação funcional. Também modularizou a documentação da Fase 2, padronizou referências bibliográficas e contribuiu para o registro do uso de IA.
+
+**Yasmim de Souza Santos.** Criação do template do artigo científico e definição de uma estrutura inicial para sua elaboração. Também reuniu referências bibliográficas de base para orientar a produção do artigo do projeto.
+
+**Gabriel Mota Oliveira.** Elaboração inicial das perguntas GQM, das fichas de métricas funcionais e do protocolo de cenários de teste. Também estruturou e dividiu páginas da documentação, adicionou referências para as métricas funcionais e contribuiu para a documentação das métricas operacionais e dos critérios de avaliação da Fase 2.
+
+**Gustavo Gomes Fornaciari.** Organização e estruturação inicial do repositório, configuração do MkDocs e divisão da documentação em páginas. Responsável pela conclusão da Fase 1, incluindo a documentação do software escolhido, propósito e stakeholders, escopo, modelo e características de qualidade, além da página de ODS e da manutenção dos critérios e históricos de versionamento.
+
+**Vitor Lages Nogueira Araújo.** Criação e organização de Issues e Milestones para acompanhar as atividades e o progresso do projeto. Também realizou atualizações no README, contribuindo para a identificação dos integrantes e a apresentação inicial do repositório.
+
+---
+
+## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |

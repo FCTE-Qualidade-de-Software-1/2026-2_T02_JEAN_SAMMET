@@ -20,25 +20,33 @@ A avaliação se concentrará no fluxo de planejamento de formatura do No Fluxo 
 
 ## O que será avaliado
 
+**Tabela 1 — O que será avaliado.**
+
 | Característica | Objeto e profundidade da avaliação |
-|---|---|
+| --- | --- |
 | **Adequação Funcional** | Para cenários predefinidos e uma matriz curricular de referência, comparar o plano gerado com os resultados esperados e verificar se as disciplinas e a sequência respeitam as regras consideradas no teste. O envio do histórico e o fluxograma serão usados para preparar e conferir as entradas. |
 | **Usabilidade** | A equipe aplicará o checklist heurístico nas tarefas de localizar a previsão de formatura, interpretar matérias críticas e ajustar créditos. Serão registrados problemas, severidades e evidências, conforme o protocolo da Fase 2. |
 | **Segurança** | Inspecionar armazenamento no navegador, identificação, acesso e dependências. Verificações sem credencial válida ficam restritas a ambiente autorizado, com rota, método e requisito de proteção identificados, sem exploração nem acesso a dados de terceiros. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 O foco funcional será um conjunto pequeno de casos controlados para o curso de Engenharia de Software, que aparece nas capturas de tela. A avaliação não pretende cobrir exaustivamente todos os cursos ou históricos possíveis. O ambiente, a versão e os dados usados serão registrados para que os resultados possam ser interpretados.
 
 ## O que fica fora — e por quê
 
+**Tabela 2 — O que fica fora — e por quê.**
+
 | Exclusão | Justificativa |
-|---|---|
-| **Testes de penetração, exploração de vulnerabilidades ou tentativa de contornar autenticação** | A equipe não dispõe de autorização explícita para realizar ataques. Essas ações podem comprometer dados ou a disponibilidade do serviço; serão feitas apenas observações e inspeções não invasivas. |
+| --- | --- |
+| **Testes de penetração, exploração de vulnerabilidades ou tentativa de contornar autenticação** | Exploração, invasão e acesso a dados de terceiros ficam excluídos. O recorte permite testes controlados de rejeição de credenciais, na conta e operação autorizadas, preservando a disponibilidade do serviço. |
 | **Testes de carga ou estresse na aplicação em produção** | O ambiente é utilizado por terceiros e a equipe não controla sua infraestrutura. Cargas artificiais podem afetar usuários reais; portanto, esses testes não são necessários para responder às perguntas centrais. |
 | **Todos os cursos, matrizes e combinações de histórico** | A quantidade de combinações é ampla para o prazo do trabalho. Uma matriz, histórico autorizado e cenários de uso selecionados permitem uma avaliação repetível, mas limitam a generalização dos resultados. |
 | **Todos os navegadores, dispositivos e condições de rede** | Uma avaliação multiplataforma extensa ampliaria o esforço e dificultaria controlar as condições. Os resultados se restringirão ao ambiente registrado durante os testes. |
 | **Qualidade das respostas do chatbot e de outras funções de IA** | São funcionalidades auxiliares, dependem de componentes externos e não são necessárias para avaliar o planejamento de formatura escolhido como foco. |
-| **Históricos reais de terceiros e dados pessoais sem autorização** | O uso não é necessário para os testes e criaria riscos de privacidade. Serão usados históricos sintéticos ou dados de teste autorizados. |
+| **Históricos reais de terceiros e dados pessoais sem autorização** | O uso não é necessário para os testes e criaria riscos de privacidade. A entrada acadêmica adotada é somente H0, autorizada pela equipe. |
 | **Auditoria formal, certificação ou conclusão de conformidade legal** | O trabalho é uma avaliação acadêmica limitada, não uma auditoria especializada; seus métodos e resultados não sustentam uma certificação. |
+
+*Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ## Limites de validade dos resultados
 

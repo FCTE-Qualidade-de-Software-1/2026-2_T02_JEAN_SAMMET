@@ -39,7 +39,6 @@ nav:
         - Métricas Funcionais:
             - Roteiro de Avaliação: fases/fase3/funcionais/roteiro.md
             - Fontes e Regras: fases/fase3/funcionais/fontes.md
-        - Piloto e Prontidão: fases/fase3/piloto.md
         - Métricas Operacionais:
             - Sumário: fases/fase3/metricasOperacionais.md
             - Visão Geral: fases/fase3/operacionais/visaoGeral.md
@@ -48,11 +47,11 @@ nav:
             - Roteiro do Avaliador: fases/fase3/operacionais/roteiroAvaliador.md
             - Rastreabilidade: fases/fase3/operacionais/rastreabilidade.md
     - Fase 4:
+        - Conclusão da Avaliação: fases/fase4/conclusao.md
         - Métricas Funcionais:
             - Sumário: fases/fase4/metricasFuncionais.md
             - Dados Brutos e Evidências: fases/fase4/funcionais/dadosBrutos.md
             - Análise e Julgamento: fases/fase4/funcionais/analiseResultados.md
-            - Evidências da Execução Anterior: fases/fase4/funcionais/execucaoAnterior.md
         - Métricas Operacionais:
             - Sumário: fases/fase4/metricasOperacionais.md
             - Dados Brutos e Evidências: fases/fase4/operacionais/dadosBrutos.md

@@ -1,0 +1,3733 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação Grupo 5 Jean Sammet">
+      
+      
+        <meta name="author" content="Grupo 05">
+      
+      
+        <link rel="canonical" href="https://fcte-qualidade-de-software-1.github.io/2026-2_T02_JEAN_SAMMET/fases/fase4/funcionais/analiseResultados/">
+      
+      
+        <link rel="prev" href="../dadosBrutos/">
+      
+      
+        <link rel="next" href="../../metricasOperacionais/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Análise e Julgamento - Jean Sammet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analise-e-julgamento-metricas-funcionais" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Jean Sammet" class="md-header__button md-logo" aria-label="Jean Sammet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jean Sammet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Análise e Julgamento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Modo Noturno"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo Noturno" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Modo Claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo Claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jean Sammet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../metodologia/visaoGeral/" class="md-tabs__link">
+          
+  
+  
+  Metodologia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../fase1/propositoEStakeholders/" class="md-tabs__link">
+          
+  
+  
+  Fases
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../gestaoProjeto/psm-cid/" class="md-tabs__link">
+          
+  
+  
+  Gestão do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../criterios/" class="md-tabs__link">
+          
+  
+  
+  Critérios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../equipe/equipe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Equipe
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../usoDeIA/IA/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Uso de IA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../referencias/fase1/" class="md-tabs__link">
+          
+  
+  
+  Referências
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Jean Sammet" class="md-nav__button md-logo" aria-label="Jean Sammet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jean Sammet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jean Sammet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodologia
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metodologia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/visaoGeral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/processoSquare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processo de Avaliação (SQuaRE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/fluxoDeTrabalho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização e Fluxo de Trabalho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metodologia/elaboracaoArtigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elaboração do Artigo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/propositoEStakeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito e Stakeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/softwareEscolhido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Escolhido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/modeloDeQualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/caracteristicasDeQualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Características de Qualidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/escopo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/ODS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ODS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Funcionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Funcionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/funcionais/visaoGeral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/funcionais/GQM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral (GQM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/funcionais/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo de Coleta e Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/funcionais/referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/metricasOperacionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/operacionais/visaoGeral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral (GQM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/operacionais/usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/operacionais/seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/operacionais/protocolo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo de Coleta e Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/operacionais/referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/planoAvaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/piloto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piloto e Prontidão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma de Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/operacionais/rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de Rastreabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Funcionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Funcionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/funcionais/roteiro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roteiro de Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/funcionais/fontes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fontes e Regras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/metricasOperacionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/operacionais/visaoGeral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/operacionais/metodos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos de Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/operacionais/ambienteERecursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos e Massa de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/operacionais/roteiroAvaliador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roteiro do Avaliador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusão da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rastreabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de Rastreabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Funcionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Funcionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metricasFuncionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dadosBrutos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dados Brutos e Evidências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise e Julgamento
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise e Julgamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-metricas-e-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Métricas e cobertura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-interpretacao-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Interpretação dos resultados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-respostas-formais-as-questoes-gqm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Respostas formais às questões GQM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Respostas formais às questões GQM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-01-o-plano-respeita-os-pre-requisitos-oficiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-01 — O plano respeita os pré-requisitos oficiais?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-02-o-plano-respeita-os-co-requisitos-oficiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-02 — O plano respeita os co-requisitos oficiais?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-03-todas-as-disciplinas-obrigatorias-pendentes-aplicaveis-sao-contempladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-03 — Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-04-o-historico-e-os-status-sao-interpretados-conforme-as-regras-documentadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-04 — O histórico e os status são interpretados conforme as regras documentadas?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-05-as-equivalencias-respeitam-a-fonte-curricular-e-sua-vigencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-05 — As equivalências respeitam a fonte curricular e sua vigência?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-06-o-onboarding-produz-o-comportamento-documentado-ou-prometido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-06 — O onboarding produz o comportamento documentado ou prometido?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-07-o-plano-respeita-oferta-semestre-inicial-e-limites-de-carga-verificaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-07 — O plano respeita oferta, semestre inicial e limites de carga verificáveis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-julgamento-das-hipoteses-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Julgamento das hipóteses funcionais
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sintese-do-julgamento-da-qualidade-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Síntese do julgamento da qualidade funcional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-limites-da-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Limites da conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_4" id="__nav_3_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métricas Operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Métricas Operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metricasOperacionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sumário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operacionais/dadosBrutos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dados Brutos e Evidências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operacionais/analiseResultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise e Julgamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operacionais/avaliacaoUsabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação de Usabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operacionais/acaoMelhoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ação de Melhoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão do Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão do Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/psm-cid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/calendario-progresso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calendário e Progresso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/recursos-custos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos e Custos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/desempenho-processo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desempenho do Processo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gestaoProjeto/painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acompanhamento do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critérios
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Critérios
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/premissasIniciais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Premissas e Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/fase4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../criterios/gerais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../equipe/equipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../usoDeIA/IA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referências
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referências
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../referencias/fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../referencias/fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../referencias/fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../referencias/psm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-metricas-e-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Métricas e cobertura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-interpretacao-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Interpretação dos resultados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-respostas-formais-as-questoes-gqm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Respostas formais às questões GQM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Respostas formais às questões GQM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-01-o-plano-respeita-os-pre-requisitos-oficiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-01 — O plano respeita os pré-requisitos oficiais?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-02-o-plano-respeita-os-co-requisitos-oficiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-02 — O plano respeita os co-requisitos oficiais?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-03-todas-as-disciplinas-obrigatorias-pendentes-aplicaveis-sao-contempladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-03 — Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-04-o-historico-e-os-status-sao-interpretados-conforme-as-regras-documentadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-04 — O histórico e os status são interpretados conforme as regras documentadas?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-05-as-equivalencias-respeitam-a-fonte-curricular-e-sua-vigencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-05 — As equivalências respeitam a fonte curricular e sua vigência?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-06-o-onboarding-produz-o-comportamento-documentado-ou-prometido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-06 — O onboarding produz o comportamento documentado ou prometido?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-fun-07-o-plano-respeita-oferta-semestre-inicial-e-limites-de-carga-verificaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q-FUN-07 — O plano respeita oferta, semestre inicial e limites de carga verificáveis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-julgamento-das-hipoteses-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Julgamento das hipóteses funcionais
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sintese-do-julgamento-da-qualidade-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Síntese do julgamento da qualidade funcional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-limites-da-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Limites da conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="analise-e-julgamento-metricas-funcionais">Análise e julgamento — Métricas funcionais<a class="headerlink" href="#analise-e-julgamento-metricas-funcionais" title="Permanent link">&para;</a></h1>
+<p>A execução <strong>EC-01</strong> aplica as fórmulas e metas do <a href="../../../fase2/funcionais/GQM/">GQM da Fase 2</a> ao histórico H0. A referência contém <strong>44 registros, 15 obrigatórias pendentes e oito equivalências</strong>. Código e período preservam ocorrências distintas. Os <a href="../dadosBrutos/">dados e capturas</a> identificam o registro de cada caso.</p>
+<h2 id="1-metricas-e-cobertura">1. Métricas e cobertura<a class="headerlink" href="#1-metricas-e-cobertura" title="Permanent link">&para;</a></h2>
+<p><strong>Tabela 1 — Métricas e cobertura.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Cálculo</th>
+<th>Resultado</th>
+<th>Meta</th>
+<th>Julgamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MET-FUN-01 — TVP</strong> · pré-requisitos</td>
+<td>0/1 × 100</td>
+<td><strong>0,00%</strong></td>
+<td><strong>0%</strong></td>
+<td><strong>Conforme no recorte</strong></td>
+</tr>
+<tr>
+<td><strong>MET-FUN-02 — TVC</strong> · co-requisitos</td>
+<td>0/2 × 100</td>
+<td><strong>0,00%</strong></td>
+<td><strong>0%</strong></td>
+<td><strong>Conforme no par consolidado</strong></td>
+</tr>
+<tr>
+<td><strong>MET-FUN-03 — CDO</strong> · obrigatórias</td>
+<td>14/15 × 100</td>
+<td><strong>93,33%</strong></td>
+<td><strong>100%</strong></td>
+<td><strong>Não conforme</strong></td>
+</tr>
+<tr>
+<td><strong>MET-FUN-04 — TDH</strong> · histórico</td>
+<td>0/44 × 100</td>
+<td><strong>0,00%</strong></td>
+<td><strong>0%</strong></td>
+<td><strong>Conforme no recorte</strong></td>
+</tr>
+<tr>
+<td><strong>MET-FUN-05 — TAE</strong> · equivalências</td>
+<td>0/8 × 100</td>
+<td><strong>0,00%</strong></td>
+<td><strong>0%</strong></td>
+<td><strong>Conforme no recorte</strong></td>
+</tr>
+<tr>
+<td><strong>MET-FUN-06 — COO</strong> · onboarding</td>
+<td>5/7 × 100</td>
+<td><strong>71,43%</strong></td>
+<td><strong>100%</strong></td>
+<td><strong>Não conforme</strong></td>
+</tr>
+<tr>
+<td><strong>MET-FUN-07 — TVS</strong> · restrições</td>
+<td>Máximo: 0/23; oferta: 1/10; calendário: 1/3</td>
+<td><strong>0,00%; 10,00%; 33,33%</strong>, respectivamente</td>
+<td><strong>0% por tipo</strong></td>
+<td><strong>Não conforme em oferta e calendário</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Fonte: registro da avaliação EC-01, organizado pela equipe.</em></p>
+<p>Os julgamentos são relativos ao recorte. A aprovação projetada de uma disciplina em curso não modifica seu status acadêmico MATR. Os valores de TVS permanecem separados por tipo de restrição.</p>
+<h2 id="2-interpretacao-dos-resultados">2. Interpretação dos resultados<a class="headerlink" href="#2-interpretacao-dos-resultados" title="Permanent link">&para;</a></h2>
+<p><strong>Tabela 2 — Interpretação dos resultados.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>Esperado</th>
+<th>Observado</th>
+<th>Consequência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CT-01</td>
+<td>FGA0211 após o cumprimento projetado de FGA0170</td>
+<td>FGA0170 em 2026.2; FGA0211 em 2027.1</td>
+<td>Relação respeitada</td>
+</tr>
+<tr>
+<td>CT-02</td>
+<td>Par consolidado alocado simultaneamente</td>
+<td>FGA0072/FGA0074 em 2027.1</td>
+<td>Duas direções conformes</td>
+</tr>
+<tr>
+<td>CT-03</td>
+<td>15 obrigatórias contempladas</td>
+<td>14; FGA0206 ausente, inclusive da lista de não alocadas</td>
+<td>Falha de completude</td>
+</tr>
+<tr>
+<td>CT-04</td>
+<td>44 ocorrências com período/status preservados</td>
+<td>Nenhuma divergência confirmada</td>
+<td>Fidelidade atendida no recorte</td>
+</tr>
+<tr>
+<td>CT-05</td>
+<td>Seis equivalências concluídas e duas em andamento</td>
+<td>Destinos e estados compatíveis</td>
+<td>Nenhuma aplicação incorreta</td>
+</tr>
+<tr>
+<td>CT-06</td>
+<td>Sete expectativas de carga e preferência atendidas</td>
+<td>Cinco atendidas; trabalho e objetivo sem efeito exigido</td>
+<td>Falha no contrato de preferências</td>
+</tr>
+<tr>
+<td>CT-07</td>
+<td>Nenhuma violação por tipo</td>
+<td>Sem excesso de 480h; uma oferta e um calendário divergentes</td>
+<td>Falha em duas restrições</td>
+</tr>
+</tbody>
+</table>
+<p><em>Fonte: registro da avaliação EC-01, organizado pela equipe.</em></p>
+<p><strong>Carga não é uma unidade única de julgamento.</strong> Os planos de C0 foram 360/360/150h; C1, 300/420/150h; C2, 480/390h. As reservas explícitas de optativas entram na soma. A sugestão de carga não foi transformada em teto rígido: o limite obrigatório verificado foi <strong>480h</strong>. Os contratos de trabalho/objetivo são avaliados separadamente, em CT-06.</p>
+<p><strong>Capturas distintas não são a mesma execução.</strong> O registro de Gabriel mostra uma distribuição do par diferente da alocação consolidada. A avaliação preserva os dois registros em <a href="../dadosBrutos/#ct-02-co-requisitos">CT-02</a>, sem usar a imagem de uma execução para provar o resultado da outra.</p>
+<h2 id="3-respostas-formais-as-questoes-gqm">3. Respostas formais às questões GQM<a class="headerlink" href="#3-respostas-formais-as-questoes-gqm" title="Permanent link">&para;</a></h2>
+<h3 id="q-fun-01-o-plano-respeita-os-pre-requisitos-oficiais">Q-FUN-01 — O plano respeita os pré-requisitos oficiais?<a class="headerlink" href="#q-fun-01-o-plano-respeita-os-pre-requisitos-oficiais" title="Permanent link">&para;</a></h3>
+<p><strong>Resposta: sim, na relação avaliada.</strong> FGA0170 permanece matriculada no semestre 2026.2 e FGA0211 foi posicionada em 2027.1. A interface distingue o semestre em curso da projeção condicionada à aprovação. Assim, a dependente não antecede a conclusão projetada do pré-requisito: <code>TVP = 0/1 × 100 = 0%</code>, atendendo à meta de zero violações.</p>
+<p>O resultado não afirma que FGA0170 já foi aprovada. A sequência de TCC 1/2 ficou fora do cálculo porque não havia fonte oficial com vigência anexada para julgá-la nesta execução.</p>
+<h3 id="q-fun-02-o-plano-respeita-os-co-requisitos-oficiais">Q-FUN-02 — O plano respeita os co-requisitos oficiais?<a class="headerlink" href="#q-fun-02-o-plano-respeita-os-co-requisitos-oficiais" title="Permanent link">&para;</a></h3>
+<p><strong>Resposta: sim, no par explicitamente selecionado.</strong> FGA0072 e FGA0074 apareceram na mesma coluna, 2027.1. As duas direções da relação recíproca foram verificadas e nenhuma foi violada: <code>TVC = 0/2 × 100 = 0%</code>.</p>
+<p>A seleção das optativas não alterou os 44 registros acadêmicos de H0. O julgamento foi sustentado pela posição dos cartões, pelo registro do grafo e pela captura, e não apenas pelo texto de confirmação do recurso de seleção.</p>
+<h3 id="q-fun-03-todas-as-disciplinas-obrigatorias-pendentes-aplicaveis-sao-contempladas">Q-FUN-03 — Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas?<a class="headerlink" href="#q-fun-03-todas-as-disciplinas-obrigatorias-pendentes-aplicaveis-sao-contempladas" title="Permanent link">&para;</a></h3>
+<p><strong>Resposta: não.</strong> Das 15 obrigatórias pendentes de H0, 14 aparecem no plano-base completo: <code>CDO = 14/15 × 100 = 93,33%</code>, abaixo da meta de 100%. <strong>FGA0206 foi omitida</strong>, sem indicação na lista de disciplinas não alocadas.</p>
+<p>A questão também utiliza TAE, pois equivalências incorretas poderiam alterar as pendências. As oito relações verificadas foram tratadas corretamente, mas esse resultado não compensa a omissão. Como uma das métricas aplicáveis não atende à meta, Q-FUN-03 é <strong>Não conforme</strong>.</p>
+<h3 id="q-fun-04-o-historico-e-os-status-sao-interpretados-conforme-as-regras-documentadas">Q-FUN-04 — O histórico e os status são interpretados conforme as regras documentadas?<a class="headerlink" href="#q-fun-04-o-historico-e-os-status-sao-interpretados-conforme-as-regras-documentadas" title="Permanent link">&para;</a></h3>
+<p><strong>Resposta: sim, nos 44 registros conferidos.</strong> Foram preservados os 37 registros APR e os sete MATR, com suas ocorrências por código e período. Não houve divergência confirmada: <code>TDH = 0/44 × 100 = 0%</code>.</p>
+<p>A comparação considera a representação de equivalências pelo código de destino oficial. Isso não elimina os registros originais da referência nem permite tratar uma disciplina matriculada como concluída. A projeção de aprovação no plano futuro foi distinguida do estado acadêmico real.</p>
+<h3 id="q-fun-05-as-equivalencias-respeitam-a-fonte-curricular-e-sua-vigencia">Q-FUN-05 — As equivalências respeitam a fonte curricular e sua vigência?<a class="headerlink" href="#q-fun-05-as-equivalencias-respeitam-a-fonte-curricular-e-sua-vigencia" title="Permanent link">&para;</a></h3>
+<p><strong>Resposta: sim, nas oito relações aplicáveis verificadas.</strong> Seis equivalências concluídas foram reconhecidas como satisfeitas, sem duplicação indevida nas pendências futuras; as duas em andamento mantiveram a condição de matrícula. O resultado foi <code>TAE = 0/8 × 100 = 0%</code>, atendendo à meta.</p>
+<p>O julgamento cobre as relações documentadas para H0. Não valida automaticamente outras matrizes, cadeias de equivalência ou vigências que não fizeram parte da referência.</p>
+<h3 id="q-fun-06-o-onboarding-produz-o-comportamento-documentado-ou-prometido">Q-FUN-06 — O onboarding produz o comportamento documentado ou prometido?<a class="headerlink" href="#q-fun-06-o-onboarding-produz-o-comportamento-documentado-ou-prometido" title="Permanent link">&para;</a></h3>
+<p><strong>Resposta: não integralmente.</strong> Foram atendidas cinco das sete expectativas: as representações de 20/32 créditos e as sugestões de 4/6/8 matérias. Os contratos de trabalho e objetivo não foram atendidos. Portanto, <code>COO = 5/7 × 100 = 71,43%</code>, abaixo da meta de 100%.</p>
+<p>Em C3, o contrato exige sugestão de 20 créditos ao ativar trabalho/estágio; a configuração permaneceu em 24. Em C4, o contrato exige horizonte de dois semestres futuros para a opção velocidade, mas foram mantidos três. Os contratos e a comparação estão em <a href="../dadosBrutos/#ct-06-onboarding">Dados brutos</a>. Esses valores são critérios do cenário de aceitação; não são apresentados como exigências curriculares da UnB.</p>
+<h3 id="q-fun-07-o-plano-respeita-oferta-semestre-inicial-e-limites-de-carga-verificaveis">Q-FUN-07 — O plano respeita oferta, semestre inicial e limites de carga verificáveis?<a class="headerlink" href="#q-fun-07-o-plano-respeita-oferta-semestre-inicial-e-limites-de-carga-verificaveis" title="Permanent link">&para;</a></h3>
+<p><strong>Resposta: não em todos os tipos examinados.</strong> O máximo de 480h foi respeitado em 23 verificações (<code>0/23 = 0%</code>). Na oferta, uma de dez alocações divergiu do quadro de referência (<code>1/10 = 10%</code>). No calendário, um de três casos usou semestre inicial diferente do esperado (<code>1/3 = 33,33%</code>). A meta de cada tipo é 0%.</p>
+<p>No caso de falha de consulta do período, o controle CAL-01 estabelece 2027.1, enquanto a execução inicia em 2027.2. Essa diferença sustenta o julgamento da hipótese de calendário. O resultado favorável de carga não elimina os dois tipos não conformes.</p>
+<h2 id="4-julgamento-das-hipoteses-funcionais">4. Julgamento das hipóteses funcionais<a class="headerlink" href="#4-julgamento-das-hipoteses-funcionais" title="Permanent link">&para;</a></h2>
+<p><strong>Tabela 3 — Julgamento das hipóteses funcionais.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Hipótese</th>
+<th>Julgamento</th>
+<th>Fundamentação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H-FUN-01 — Violação de pré-requisitos</strong></td>
+<td><strong>Não corroborada no recorte</strong></td>
+<td>FGA0170→FGA0211 respeitada na projeção; TVP=0/1.</td>
+</tr>
+<tr>
+<td><strong>H-FUN-02 — Violação de co-requisitos</strong></td>
+<td><strong>Não corroborada na execução consolidada</strong></td>
+<td>Par em 2027.1; TVC=0/2. O registro distinto de Gabriel não é misturado ao denominador.</td>
+</tr>
+<tr>
+<td><strong>H-FUN-03 — Omissão de obrigatórias</strong></td>
+<td><strong>Corroborada</strong></td>
+<td>FGA0206 ausente; CDO=14/15.</td>
+</tr>
+<tr>
+<td><strong>H-FUN-04 — Tratamento indevido de matrícula</strong></td>
+<td><strong>Não corroborada no recorte</strong></td>
+<td>TDH=0/44; matrícula e projeção diferenciadas.</td>
+</tr>
+<tr>
+<td><strong>H-FUN-05 — Equivalências sem respeito a relações/vigência</strong></td>
+<td><strong>Não corroborada nas oito relações</strong></td>
+<td>TAE=0/8; seis concluídas e duas em andamento tratadas corretamente.</td>
+</tr>
+<tr>
+<td><strong>H-FUN-06 — Preferências sem o efeito prometido</strong></td>
+<td><strong>Corroborada nos contratos de C3/C4</strong></td>
+<td>Duas expectativas não atendidas; COO=5/7.</td>
+</tr>
+<tr>
+<td><strong>H-FUN-07 — Semestre estimado divergente do calendário</strong></td>
+<td><strong>Corroborada no caso de falha de consulta</strong></td>
+<td>Um início em 2027.2 quando CAL-01 exige 2027.1.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Fonte: registro da avaliação EC-01, organizado pela equipe.</em></p>
+<p>“Não corroborada” descreve a ausência de falha no recorte; não significa prova de correção para todo o produto. A conclusão principal utiliza a execução consolidada e mantém as capturas com seus identificadores.</p>
+<h2 id="5-sintese-do-julgamento-da-qualidade-funcional">5. Síntese do julgamento da qualidade funcional<a class="headerlink" href="#5-sintese-do-julgamento-da-qualidade-funcional" title="Permanent link">&para;</a></h2>
+<p><strong>A adequação funcional não atende integralmente às metas.</strong> Há falha de completude, desconformidade nas preferências e divergências de oferta/calendário. Ao mesmo tempo, os registros acadêmicos, as equivalências e as relações curriculares selecionadas apresentaram resultados favoráveis no recorte consolidado.</p>
+<p>As prioridades são contemplar FGA0206, implementar os efeitos definidos para trabalho/objetivo e validar oferta e período antes da alocação. As métricas não são somadas em uma nota média: percentuais de erros, cobertura e expectativas têm unidades diferentes.</p>
+<h2 id="6-limites-da-conclusao">6. Limites da conclusão<a class="headerlink" href="#6-limites-da-conclusao" title="Permanent link">&para;</a></h2>
+<p>A entrada é H0 e os cenários são variações desse histórico, não estudantes independentes. TCC 1/2 e outras relações apenas ilustradas nas capturas não ampliam automaticamente o denominador de pré-requisitos. O commit público não identifica a versão implantada. Não se extrapolam os resultados para todas as matrizes, dispositivos ou condições de uso.</p>
+<p>As recomendações funcionais permanecem no <a href="../../conclusao/">encerramento</a>; a intervenção de interface e sua comparação estão na <a href="../../operacionais/acaoMelhoria/">ação de melhoria</a>.</p>
+<hr />
+<h2 id="historico-de-versao">Histórico de versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Membro</th>
+<th>Contribuição</th>
+<th>Data</th>
+<th>Commit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gabriel Mota</td>
+<td>Consolidação das observações CT-01 a CT-07, cálculo e respostas GQM</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/1bc6acac9640bf2f81bd53039c24ab5507f88b92">1bc6aca</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/GUGOFO">Gustavo Fornaciari</a></td>
+<td>Padronização da avaliação pelo histórico oficial H0</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086">f454d2c</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Gabro-MO">Gabriel Mota</a></td>
+<td>Recuperação das observações e capturas funcionais</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/289a2a02674594fc05aed55ad7c8177ca8154bdd">289a2a0</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/GUGOFO">Gustavo Fornaciari</a></td>
+<td>Alinhamento ao H0 e preservação das evidências anteriores com cobertura identificada</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e">7a74d9e</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/GUGOFO">Gustavo Fornaciari</a></td>
+<td>Coleta assistida com H0, apuração e julgamento com cobertura identificada</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5">f5e77d5</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/GUGOFO">Gustavo Fornaciari</a></td>
+<td>Ligação com a tabela de resultados consolidados da avaliação funcional</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5">f5e77d5</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/GUGOFO">Gustavo Fornaciari</a></td>
+<td>Ampliação da análise, respostas GQM e síntese dos julgamentos</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5">f5e77d5</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/GUGOFO">Gustavo Fornaciari</a></td>
+<td>Explicitação das metas nas tabelas de resultados e avaliação</td>
+<td>15/11</td>
+<td><a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5">f5e77d5</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

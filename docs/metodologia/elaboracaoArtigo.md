@@ -40,6 +40,16 @@ Quanto ao português e à padronização, toda figura e tabela tem número, lege
 
 A declaração de uso de IA informa, por integrante, a ferramenta, a tarefa e como a saída foi conferida ou ajustada, e nenhum trecho gerado por IA entra no artigo sem revisão contra as fontes e os dados do projeto. Por fim, a tabela de contribuição descreve as atividades de cada integrante e o percentual de esforço, com total de 100%.
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../referencias/fase1.md), [Referências — Fase 2](../referencias/fase2.md) e [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25000:2014: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Guide to SQuaRE**. Genebra: ISO, 2014. Disponível em: [ficha da ISO/IEC 25000:2014](https://www.iso.org/standard/64764.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25010:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25040:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25040:2011](https://www.iso.org/standard/35765.html). Acesso em: 15 nov. 2026.
+- RAMOS, Cristiane Soares. **FGA0315 — Qualidade de Software 1: Projeto Final da Disciplina e Materiais Didáticos de PSM**. Brasília: Universidade de Brasília, Faculdade do Gama (UnB/FGA), 2º sem. 2026.
+
 ---
 
 ## Histórico de versão
@@ -48,3 +58,4 @@ A declaração de uso de IA informa, por integrante, a ferramenta, a tarefa e co
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Atualização da estrutura do artigo para a versão final, com as Fases 3 e 4 e a apresentação dos resultados pelo GQM | 21/11 | Não commitado |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

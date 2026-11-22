@@ -76,10 +76,23 @@ O No Fluxo UnB é uma aplicação web que ajuda alunos da UnB a visualizar o flu
 
 A lista completa de integrantes está no [README do repositório](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET#equipe).
 
+## Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](referencias/fase1.md), [Referências — Fase 2](referencias/fase2.md) e [Referências — Gestão de Projeto](referencias/psm.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25000:2014: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Guide to SQuaRE**. Genebra: ISO, 2014. Disponível em: [ficha da ISO/IEC 25000:2014](https://www.iso.org/standard/64764.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25040:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25040:2011](https://www.iso.org/standard/35765.html). Acesso em: 15 nov. 2026.
+- NO FLUXO UNB. **2025-1-NoFluxoUNB: código-fonte do No Fluxo UnB**. GitHub, [s. d.]. Disponível em: [repositório do No Fluxo UnB](https://github.com/unb-mds/2025-1-NoFluxoUNB). Acesso em: 15 out. 2026. Commit de referência: `87b5475`; não comprova a versão implantada no site.
+- NO FLUXO UNB. **No Fluxo UnB**. Crianex, [s. d.]. Disponível em: [aplicação No Fluxo UnB](https://no-fluxo.crianex.com). Acesso em: 15 out. 2026.
+- RAMOS, Cristiane Soares. **FGA0315 — Qualidade de Software 1: Projeto Final da Disciplina e Materiais Didáticos de PSM**. Brasília: Universidade de Brasília, Faculdade do Gama (UnB/FGA), 2º sem. 2026.
+
 ---
 
 ## Histórico de versão
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Pagina inicial do trabalho | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) || [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do acesso à rastreabilidade completa da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Pagina inicial do trabalho | 15/10 | [b74f29f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b74f29f4f5c3b8f017d27f4a7416f1f4715f454f) |
+| [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do acesso à rastreabilidade completa da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

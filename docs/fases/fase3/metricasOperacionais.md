@@ -16,6 +16,12 @@ Esta frente cobre TCH, ISVH, IRP, GED-C e TBR. O [plano integrado](planoAvaliaca
 
 O plano segue os critérios da [Fase 2](../fase2/operacionais/visaoGeral.md). Os resultados serão limitados ao ambiente, à versão conhecida e à cobertura registrada. O commit `87b5475` não comprova a versão em produção.
 
+## Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../../referencias/fase1.md).
+
+- NO FLUXO UNB. **2025-1-NoFluxoUNB: código-fonte do No Fluxo UnB**. GitHub, [s. d.]. Disponível em: [repositório do No Fluxo UnB](https://github.com/unb-mds/2025-1-NoFluxoUNB). Acesso em: 15 out. 2026. Commit de referência: `87b5475`; não comprova a versão implantada no site.
+
 ---
 
 ## Histórico de versão
@@ -25,3 +31,4 @@ O plano segue os critérios da [Fase 2](../fase2/operacionais/visaoGeral.md). Os
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Estruturação da página principal da Fase 3 para métricas operacionais e modularização do plano | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento do sumário ao plano integrado e aos critérios revisados | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação do plano operacional à matriz de rastreabilidade da Fase 3 | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

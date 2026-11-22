@@ -141,6 +141,12 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Dados e coleta:** calendário e oferta oficiais, limite informado, histórico e plano; comparar cada alocação com a regra aplicável (`CT-07`). Se a consulta ao período letivo falhar, conferir o semestre estimado contra o calendário oficial.
 - **Meta e condições:** `TVS = 0%`. Confirmar a fonte e a forma de aferição da carga. Créditos e horas não são equivalentes sem conversão documentada; se `NRS = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1.
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+
 ---
 
 ## Histórico de versão
@@ -152,3 +158,4 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 | [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção do objetivo duplicado e definição das referências para julgamento | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da entrada autorizada e das condições de avaliação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

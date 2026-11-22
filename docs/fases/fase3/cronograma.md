@@ -26,6 +26,12 @@ O [plano integrado](planoAvaliacao.md) define o escopo e os responsáveis. A [ma
 
 A conferência de publicação, releases e Moodle foi confirmada por Gustavo em 16/11, conforme o [registro da equipe](../../criterios/index.md#3-confirmacao-das-entregas). As datas-alvo não substituem os registros efetivos de conclusão. As horas e medições do PSM permanecem nas páginas próprias, sem alteração neste cronograma.
 
+## 3. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 3](../../referencias/fase3.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, v. 1, p. 528-532, 1994.
+
 ---
 
 ## Histórico de versão
@@ -33,3 +39,4 @@ A conferência de publicação, releases e Moodle foi confirmada por Gustavo em 
 | Nome do Membro | Contribuição | Data | Commit |
 |---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do cronograma de avaliação com atividades, responsáveis e dependências | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

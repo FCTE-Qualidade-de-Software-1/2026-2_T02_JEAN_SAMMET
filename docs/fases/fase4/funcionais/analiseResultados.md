@@ -114,6 +114,12 @@ A entrada é H0 e os cenários são variações desse histórico, não estudante
 
 As recomendações funcionais permanecem no [encerramento](../conclusao.md); a intervenção de interface e sua comparação estão na [ação de melhoria](../operacionais/acaoMelhoria.md).
 
+## 7. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 3](../../../referencias/fase3.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, v. 1, p. 528-532, 1994.
+
 ---
 
 ## Histórico de versão
@@ -128,3 +134,4 @@ As recomendações funcionais permanecem no [encerramento](../conclusao.md); a i
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação com a tabela de resultados consolidados da avaliação funcional | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ampliação da análise, respostas GQM e síntese dos julgamentos | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Explicitação das metas nas tabelas de resultados e avaliação | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

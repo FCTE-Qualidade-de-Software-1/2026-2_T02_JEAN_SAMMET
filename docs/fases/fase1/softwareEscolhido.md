@@ -137,6 +137,14 @@ flowchart TB
 3. **Visibilidade interna:** a observação pela interface não revela todos os cálculos e estados internos; conclusões sobre o algoritmo exigem evidência adicional no código ou em testes controlados.
 4. **Segurança:** uma inspeção limitada identifica apenas aspectos observáveis e não substitui teste de penetração ou auditoria especializada.
 
+## 9. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../../referencias/fase1.md) e [Referências — Fase 2](../../referencias/fase2.md).
+
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NO FLUXO UNB. **2025-1-NoFluxoUNB: código-fonte do No Fluxo UnB**. GitHub, [s. d.]. Disponível em: [repositório do No Fluxo UnB](https://github.com/unb-mds/2025-1-NoFluxoUNB). Acesso em: 15 out. 2026. Commit de referência: `87b5475`; não comprova a versão implantada no site.
+- NO FLUXO UNB. **No Fluxo UnB**. Crianex, [s. d.]. Disponível em: [aplicação No Fluxo UnB](https://no-fluxo.crianex.com). Acesso em: 15 out. 2026.
+
 ---
 
 ## Histórico de versão
@@ -147,3 +155,4 @@ flowchart TB
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Preenchimento com os dados do No Fluxo UnB | 15/10 | [559e7a9](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/559e7a94f159c2caeb4dc9d5996ba9392d0862ac) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da usabilidade e do registro da versão | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

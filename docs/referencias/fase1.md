@@ -4,9 +4,13 @@
 
 Edições adotadas na Fase 1 e no artigo da Entrega 1, conforme a [metodologia](../metodologia/visaoGeral.md).
 
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25000:2014: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Guide to SQuaRE**. Genebra: ISO, 2014. Disponível em: [ficha da ISO/IEC 25000:2014](https://www.iso.org/standard/64764.html). Acesso em: 22 nov. 2026.
 - INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25010:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25020:2019: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality measurement framework**. Genebra: ISO, 2019. Disponível em: [ficha da ISO/IEC 25020:2019](https://www.iso.org/standard/72117.html). Acesso em: 22 nov. 2026.
 - INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25023:2016: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality**. Genebra: ISO, 2016. Disponível em: [ficha da ISO/IEC 25023:2016](https://www.iso.org/standard/35747.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25030:2019: Systems and software engineering — Systems and software quality requirements and evaluation (SQuaRE) — Quality requirements framework**. Genebra: ISO, 2019. Disponível em: [ficha da ISO/IEC 25030:2019](https://www.iso.org/standard/72116.html). Acesso em: 22 nov. 2026.
 - INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25040:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25040:2011](https://www.iso.org/standard/35765.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25041:2012: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation guide for developers, acquirers and independent evaluators**. Genebra: ISO, 2012. Disponível em: [ficha da ISO/IEC 25041:2012](https://www.iso.org/standard/35766.html). Acesso em: 22 nov. 2026.
 
 ## Software escolhido
 
@@ -28,3 +32,4 @@ Edições adotadas na Fase 1 e no artigo da Entrega 1, conforme a [metodologia](
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Referencias da ODS | 16/10 | [755c71b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/755c71b53dd286fc04ae51b4d6c55bfdbc8231b0) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Revisão das edições e referências utilizadas | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das ISO/IEC 25000, 25020, 25030 e 25041, citadas na metodologia | 22/11 | Não commitado |

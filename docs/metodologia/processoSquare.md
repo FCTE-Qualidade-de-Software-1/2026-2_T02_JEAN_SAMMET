@@ -55,6 +55,20 @@ A Entrega 1, em 26/10/2026, reúne as Fases 1 e 2 e inclui a GitPage atualizada 
 
 No momento, as Fases 1 e 2 estão documentadas, a primeira em [Fase 1](../fases/fase1/propositoEStakeholders.md) e a segunda em [Métricas Funcionais](../fases/fase2/funcionais/visaoGeral.md) e [Métricas Operacionais](../fases/fase2/metricasOperacionais.md). As [Fases 3](../fases/fase3/planoAvaliacao.md) e [4](../fases/fase4/conclusao.md) estão documentadas para a Entrega 2, com prazo de 22/11 informado pela equipe. O progresso de cada entrega é acompanhado pelas medições de [Calendário e Progresso](../gestaoProjeto/calendario-progresso.md).
 
+## 4. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../referencias/fase1.md), [Referências — Fase 2](../referencias/fase2.md) e [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25000:2014: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Guide to SQuaRE**. Genebra: ISO, 2014. Disponível em: [ficha da ISO/IEC 25000:2014](https://www.iso.org/standard/64764.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25010:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25020:2019: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality measurement framework**. Genebra: ISO, 2019. Disponível em: [ficha da ISO/IEC 25020:2019](https://www.iso.org/standard/72117.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25023:2016: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality**. Genebra: ISO, 2016. Disponível em: [ficha da ISO/IEC 25023:2016](https://www.iso.org/standard/35747.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25030:2019: Systems and software engineering — Systems and software quality requirements and evaluation (SQuaRE) — Quality requirements framework**. Genebra: ISO, 2019. Disponível em: [ficha da ISO/IEC 25030:2019](https://www.iso.org/standard/72116.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25040:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25040:2011](https://www.iso.org/standard/35765.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25041:2012: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation guide for developers, acquirers and independent evaluators**. Genebra: ISO, 2012. Disponível em: [ficha da ISO/IEC 25041:2012](https://www.iso.org/standard/35766.html). Acesso em: 22 nov. 2026.
+- RAMOS, Cristiane Soares. **FGA0315 — Qualidade de Software 1: Projeto Final da Disciplina e Materiais Didáticos de PSM**. Brasília: Universidade de Brasília, Faculdade do Gama (UnB/FGA), 2º sem. 2026.
+
 ---
 
 ## Histórico de versão
@@ -63,3 +77,4 @@ No momento, as Fases 1 e 2 estão documentadas, a primeira em [Fase 1](../fases/
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Consolidação da avaliação, rastreabilidade e encerramento do estudo de caso | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

@@ -54,6 +54,16 @@ O PDF admite protótipo de alta fidelidade, implementação parcial/completa, te
 
 *Fonte: documento do trabalho final e conferência documental da equipe.*
 
+## 4. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../referencias/fase1.md), [Referências — Fase 2](../referencias/fase2.md), [Referências — Fase 3](../referencias/fase3.md) e [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25040:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25040:2011](https://www.iso.org/standard/35765.html). Acesso em: 15 nov. 2026.
+- McGARRY, John et al. **Practical Software Measurement: Objective Information for Decision Makers**. Boston: Addison-Wesley, 2001.
+- PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT (PSM); NDIA; INCOSE. **Practical Software and Systems Measurement: Continuous Iterative Development (CID) Measurement Framework**. Version 2.1. [S.l.]: PSM Working Group, 2021. Parts 1–3.
+- RAMOS, Cristiane Soares. **FGA0315 — Qualidade de Software 1: Projeto Final da Disciplina e Materiais Didáticos de PSM**. Brasília: Universidade de Brasília, Faculdade do Gama (UnB/FGA), 2º sem. 2026.
+
 ---
 
 ## Histórico de versão
@@ -64,3 +74,4 @@ O PDF admite protótipo de alta fidelidade, implementação parcial/completa, te
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualizacao da tabela | 16/10 | [516cc9f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/516cc9fb50634d1729db19c96a2c9883c676f5bd) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Conferência e atualização dos critérios conforme o documento do trabalho final | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Padronização dos critérios, situações e links de verificação | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

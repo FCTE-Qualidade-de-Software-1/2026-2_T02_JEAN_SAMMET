@@ -33,7 +33,15 @@ A análise permite verificar se as demandas estão sendo resolvidas dentro do te
 
 A amostra das Issues e suas datas de abertura e conclusão está disponível na página [Acompanhamento do Projeto](painel.md).
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- MCGARRY, John et al. **Practical Software Measurement: Objective Information for Decision Makers**. Boston: Addison-Wesley Professional, 2001.
+- PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT (PSM); NDIA; INCOSE. **Practical Software and Systems Measurement: Continuous Iterative Development (CID) Measurement Framework**. Version 2.1. [S.l.]: PSM Working Group, 2021. Parts 1–3.
+
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
 | [Gustavo Fornaciaro](https://github.com/GUGOFO) | Declaracao da origem da métrica | 25/10/2026 | [792b187](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/792b187ac98c876b47b42606e9c15a4f0e4ddf41) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

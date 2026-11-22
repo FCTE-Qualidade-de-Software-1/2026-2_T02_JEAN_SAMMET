@@ -45,6 +45,14 @@ Chrome/extensão e inspeção técnica para interface, tráfego e storage; Retir
 
 Os instrumentos `testes/analisador_sca_irp.py` e `testes/teste_controle_acesso_tbr.py` foram corrigidos e verificados com testes locais. Ambos apuram relatórios revisados; não executam scanner nem requisições. Usar os modelos `sca.json` e `tbr.json` em `testes/modelos_coleta/`. A cobertura, o relatório bruto e as evidências devem existir antes do cálculo. Dados ausentes produzem Inconclusivo; a TBR exige controle positivo e não interpreta HTTP 405 como acesso indevido. Essas verificações do instrumento não são resultados do No Fluxo.
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../../../referencias/fase1.md), [Referências — Fase 2](../../../referencias/fase2.md) e [Referências — Fase 3](../../../referencias/fase3.md).
+
+- NO FLUXO UNB. **No Fluxo UnB**. Crianex, [s. d.]. Disponível em: [aplicação No Fluxo UnB](https://no-fluxo.crianex.com). Acesso em: 15 out. 2026.
+- NPM, INC. **npm-audit**: documentation and command-line security auditing for Node.js packages. npm Docs, 2026. Disponível em: <https://docs.npmjs.com/cli/commands/npm-audit>.
+- UNIVERSIDADE DE BRASÍLIA. **SIGAA — Estruturas curriculares de Engenharia de Software**, matriz 6360/1 — 2017.1. [Consulta pública](https://sigaa.unb.br/sigaa/public/curso/curriculo.jsf?id=414924&lc=pt_BR). Acesso em: 15 nov. 2026. Nos detalhes, consultar os componentes FGA0211, MAT0026 e IFD0173 e seus históricos de vigência.
+
 ---
 
 ## Histórico de versão
@@ -56,3 +64,4 @@ Os instrumentos `testes/analisador_sca_irp.py` e `testes/teste_controle_acesso_t
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Substituição da massa fictícia por entrada autorizada e configurações de uso | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Consolidação do preparo com H0, piloto e rastreabilidade das evidências | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

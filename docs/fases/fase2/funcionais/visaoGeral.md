@@ -37,6 +37,14 @@ Os itens a seguir são hipóteses registradas na Fase 1, não defeitos confirmad
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
+## 3. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+- NOFLUXO UNB. **2025-1-NoFluxoUnB**: serviço de planejamento de formatura (`backend/src/services/plano_formatura.service.ts` — Motor 2). GitHub, 2026. Commit de referência `87b5475`. Disponível em: <https://github.com/unb-mds/2025-1-NoFluxoUnB>.
+- UNIVERSIDADE DE BRASÍLIA (UnB). **Projeto Pedagógico do Curso de Bacharelado em Engenharia de Software**. Faculdade UnB Gama (FGA). Matriz Curricular 6360/1 (Fluxo 2017.1), pré-requisitos, co-requisitos e regras de integralização curricular. Brasília: UnB/FGA, 2017.
+
 ---
 
 ## Histórico de versão
@@ -46,3 +54,4 @@ Os itens a seguir são hipóteses registradas na Fase 1, não defeitos confirmad
 | [Gabriel Mota](https://github.com/Gabro-MO) | Perguntas GQM, fichas de métricas e cenários iniciais. | 16/10 | [9306147](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9306147e05a3017e02f9bedaf2c75a8287ef1c8b) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Revisão do foco GQM e dos papéis da equipe. | 16/10 | [81912ba](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/81912bac5e02d7429e2d05446544ec9636891f5e) |
 | [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

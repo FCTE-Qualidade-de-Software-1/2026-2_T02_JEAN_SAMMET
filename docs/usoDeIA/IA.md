@@ -17,6 +17,16 @@ Declaração de uso de inteligência artificial por integrante, com ferramenta, 
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
+## Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../referencias/fase1.md), [Referências — Fase 2](../referencias/fase2.md), [Referências — Fase 3](../referencias/fase3.md) e [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- BRASIL. **Lei nº 13.709, de 14 de agosto de 2018**. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, p. 59, 15 ago. 2018.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO 9241-11:2018**: Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts. Genebra: ISO, 2018.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25023:2016: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality**. Genebra: ISO, 2016. Disponível em: [ficha da ISO/IEC 25023:2016](https://www.iso.org/standard/35747.html). Acesso em: 15 nov. 2026.
+- McGARRY, John et al. **Practical Software Measurement: Objective Information for Decision Makers**. Boston: Addison-Wesley, 2001.
+- PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT (PSM); NDIA; INCOSE. **Practical Software and Systems Measurement: Continuous Iterative Development (CID) Measurement Framework**. Version 2.1. [S.l.]: PSM Working Group, 2021. Parts 1–3.
+
 ---
 
 ## Histórico de versão
@@ -31,3 +41,4 @@ Declaração de uso de inteligência artificial por integrante, com ferramenta, 
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da declaração de uso de IA | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta e apuração assistidas por IA | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

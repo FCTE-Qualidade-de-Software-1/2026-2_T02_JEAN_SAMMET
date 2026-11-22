@@ -115,6 +115,16 @@ Retire.js cobre as bibliotecas reconhecidas no cliente; não substitui a auditor
 
 As regras completas estão na [ficha da TBR](seguranca.md#met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autorizadas-tbr). Registrar Não aplicável se o requisito permitir acesso público e não houver operação protegida no recorte.
 
+## 6. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md) e [Referências — Fase 3](../../../referencias/fase3.md).
+
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25040:2011**: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process. Genebra: ISO, 2011.
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Heuristic Evaluation**. In: NIELSEN, Jakob; MACK, Robert L. (Org.). *Usability Inspection Methods*. Nova York: John Wiley & Sons, 1994. p. 25-62.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+- NPM, INC. **npm-audit**: documentation and command-line security auditing for Node.js packages. npm Docs, 2026. Disponível em: <https://docs.npmjs.com/cli/commands/npm-audit>.
+
 ---
 
 ## Histórico de versão
@@ -126,3 +136,4 @@ As regras completas estão na [ficha da TBR](seguranca.md#met-op-02c-taxa-de-blo
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Simplificação textual e concisão mantendo fidelidade ao protocolo experimental ISO 25040 | 24/10 | [b31d87e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/b31d87e) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Substituição do protocolo com voluntários externos por Inspeção Heurística interna de Nielsen | 25/10 | [8330fa6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8330fa6ce8a670d083d8718eada13606616f064c) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da cobertura SCA e da validade dos testes de acesso | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

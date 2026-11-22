@@ -58,6 +58,14 @@ As métricas operacionais complementam diretamente as métricas de adequação f
 
 As referências metodológicas, normativas técnicas (ISO/IEC e ISO 9241), diretrizes de segurança (OWASP) e legislação de proteção de dados (LGPD) que fundamentam a especificação destas métricas encontram-se detalhadas em [Referências das Métricas Operacionais](operacionais/referencias.md) e consolidadas na página geral de [Referências da Fase 2](../../referencias/fase2.md).
 
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+- BRASIL. **Lei nº 13.709, de 14 de agosto de 2018**. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, p. 59, 15 ago. 2018.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO 9241-11:2018**: Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts. Genebra: ISO, 2018.
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Heuristic Evaluation**. In: NIELSEN, Jakob; MACK, Robert L. (Org.). *Usability Inspection Methods*. Nova York: John Wiley & Sons, 1994. p. 25-62.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+- OWASP FOUNDATION. **OWASP Top 10: 2021** — The Ten Most Critical Web Application Security Risks. OWASP, 2021. Disponível em: <https://owasp.org/Top10/>.
+
 ---
 
 ## Histórico de versão
@@ -69,3 +77,4 @@ As referências metodológicas, normativas técnicas (ISO/IEC e ISO 9241), diret
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ajuste do sumário de métricas operacionais para Usabilidade e Segurança | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Remoção de emojis nos títulos, correção de links relativos e inclusão das referências operacionais | 18/10 | [acadb8d](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/acadb8d) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização do IRP e atualização da síntese operacional | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

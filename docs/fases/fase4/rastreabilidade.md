@@ -243,6 +243,14 @@ A Tabela 11 reúne os produtos da Fase 4 e seus pontos de consulta.
 
 *Fonte: registro da avaliação EC-01, organizado pela equipe, conforme as metas e regras de decisão da Fase 2.*
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../referencias/fase2.md) e [Referências — Fase 3](../../referencias/fase3.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, v. 1, p. 528-532, 1994.
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+
 ---
 
 ## Histórico de versão
@@ -251,3 +259,4 @@ A Tabela 11 reúne os produtos da Fase 4 e seus pontos de consulta.
 |---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Rastreabilidade completa das questões, métricas, hipóteses e produtos da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção das orientações de apresentação da rastreabilidade | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

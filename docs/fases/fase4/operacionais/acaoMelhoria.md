@@ -52,6 +52,13 @@ A intervenção M-01 encerra a ação de melhoria de EC-01. A melhoria de usabil
 
 O resultado após M-01 é específico do checklist, de H0 e do ambiente desktop. Não representa validação de acessibilidade completa, estudo com estudantes externos ou nova avaliação de toda a segurança.
 
+## 6. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md) e [Referências — Fase 3](../../../referencias/fase3.md).
+
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+
 ---
 
 ## Histórico de versão
@@ -63,3 +70,4 @@ O resultado após M-01 é específico do checklist, de H0 e do ambiente desktop.
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Detalhamento dos critérios de verificação das melhorias propostas | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

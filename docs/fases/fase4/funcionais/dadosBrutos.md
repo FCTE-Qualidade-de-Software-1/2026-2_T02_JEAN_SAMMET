@@ -193,6 +193,12 @@ A configuração-base de 24 créditos foi restaurada, conforme confirmação de 
 
 O processador `python3 scripts/metricas_funcionais.py` continua reprocessando os CSVs da coleta técnica. A consolidação EC-01 inclui os contratos e quadros de avaliação desta página; seu resultado não deve ser confundido com a saída daquele recorte de coleta.
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 3](../../../referencias/fase3.md).
+
+- UNIVERSIDADE DE BRASÍLIA. **SIGAA — Estruturas curriculares de Engenharia de Software**, matriz 6360/1 — 2017.1. [Consulta pública](https://sigaa.unb.br/sigaa/public/curso/curriculo.jsf?id=414924&lc=pt_BR). Acesso em: 15 nov. 2026. Nos detalhes, consultar os componentes FGA0211, MAT0026 e IFD0173 e seus históricos de vigência.
+
 ---
 
 ## Histórico de versão
@@ -206,3 +212,4 @@ O processador `python3 scripts/metricas_funcionais.py` continua reprocessando os
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ampliação da análise, respostas GQM e síntese dos julgamentos | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Explicitação das metas nas tabelas de resultados e avaliação | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

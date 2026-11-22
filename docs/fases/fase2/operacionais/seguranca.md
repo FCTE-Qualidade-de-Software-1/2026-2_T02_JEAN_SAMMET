@@ -79,6 +79,14 @@ Aplicar a [regra conjunta](visaoGeral.md#22-regra-de-julgamento-conjunto). Um re
 
 As verificações usam OWASP Top 10:2021 como referência: A01 para controle de acesso e A06 para componentes vulneráveis. Os cuidados com dados pessoais seguem os limites do [escopo](../../fase1/escopo.md). As definições e fontes estão nas [referências operacionais](referencias.md); os testes não constituem auditoria de conformidade legal.
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md).
+
+- NOFLUXO UNB. **2025-1-NoFluxoUnB**: repositório do código-fonte público. GitHub, 2026. Disponível em: <https://github.com/unb-mds/2025-1-NoFluxoUnB>. Commit `87b5475`.
+- NPM, INC. **npm-audit**: documentation and command-line security auditing for Node.js packages. npm Docs, 2026. Disponível em: <https://docs.npmjs.com/cli/commands/npm-audit>.
+- OWASP FOUNDATION. **OWASP Top 10: 2021** — The Ten Most Critical Web Application Security Risks. OWASP, 2021. Disponível em: <https://owasp.org/Top10/>.
+
 ---
 
 ## Histórico de versão
@@ -87,3 +95,4 @@ As verificações usam OWASP Top 10:2021 como referência: A01 para controle de 
 | :--- | :--- | :--- | :--- |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração da especificação de segurança, fichas MET-OP-02, MET-OP-02b e MET-OP-02c e alinhamento com OWASP/LGPD | 16/10 | [3584382](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/3584382ccfb17e27db841b011ce415fa1503cbbc) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Correção das métricas, faixas e resultados inconclusivos de segurança | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

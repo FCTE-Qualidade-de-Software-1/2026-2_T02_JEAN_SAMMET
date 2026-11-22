@@ -38,6 +38,12 @@ A [regra de julgamento do GQM](GQM.md#31-regras-de-referencia-e-julgamento) defi
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
+## 3. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+
 ---
 
 ## Histórico de versão
@@ -49,3 +55,4 @@ A [regra de julgamento do GQM](GQM.md#31-regras-de-referencia-e-julgamento) defi
 | [Gabriel Mota](https://github.com/Gabro-MO) | Divisão do documento em páginas. | 16/10 | [e60f42c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e60f42cea76bd6f39f2c6069ecdbce438b4e941a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento dos estados de execução às regras do GQM | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da entrada autorizada e das condições de avaliação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

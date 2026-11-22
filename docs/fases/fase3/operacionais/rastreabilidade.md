@@ -79,6 +79,15 @@ A Tabela 4 resume a cobertura prevista e identifica a documentação de execuç�
 
 **Critério de prontidão:** cada métrica deve ter entrada, regra ou contrato, procedimento, meta e registro definidos. A existência dessa matriz demonstra a ligação do planejamento; os percentuais obtidos e os julgamentos são apresentados na Fase 4, sem antecipar resultados nesta etapa.
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md) e [Referências — Fase 3](../../../referencias/fase3.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, v. 1, p. 528-532, 1994.
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+- UNIVERSIDADE DE BRASÍLIA. **SIGAA — Estruturas curriculares de Engenharia de Software**, matriz 6360/1 — 2017.1. [Consulta pública](https://sigaa.unb.br/sigaa/public/curso/curriculo.jsf?id=414924&lc=pt_BR). Acesso em: 15 nov. 2026. Nos detalhes, consultar os componentes FGA0211, MAT0026 e IFD0173 e seus históricos de vigência.
+
 ---
 
 ## Histórico de versão
@@ -90,3 +99,4 @@ A Tabela 4 resume a cobertura prevista e identifica a documentação de execuç�
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação do planejamento à página de rastreabilidade da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Organização da matriz de planejamento funcional e operacional da Fase 3 | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação da matriz ao cronograma de avaliação | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

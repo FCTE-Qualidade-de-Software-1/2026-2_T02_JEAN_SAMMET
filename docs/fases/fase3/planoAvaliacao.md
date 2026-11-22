@@ -40,6 +40,12 @@ A coleta completa, os percentuais e as respostas GQM ficam na Fase 4. Cada caso 
 
 C0–C5 mantêm H0 fixo. As capturas de Gabriel, identificadas pela equipe como H0, foram integradas aos [registros funcionais](../fase4/funcionais/dadosBrutos.md). PDF, identificação, credenciais e planos individuais completos ficam fora do repositório; publicar somente referências e evidências sanitizadas.
 
+## 4. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 3](../../referencias/fase3.md).
+
+- NIELSEN, Jakob. **Heuristic Evaluation**. In: NIELSEN, Jakob; MACK, Robert L. (Org.). *Usability Inspection Methods*. Nova York: John Wiley & Sons, 1994. p. 25-62.
+
 ---
 
 ## Histórico de versão
@@ -53,3 +59,4 @@ C0–C5 mantêm H0 fixo. As capturas de Gabriel, identificadas pela equipe como 
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização do acesso à matriz integrada de rastreabilidade da Fase 3 | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do cronograma de avaliação no plano integrado | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Restauração do acesso ao Piloto e Prontidão no plano integrado | 16/11 | Não commitado |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

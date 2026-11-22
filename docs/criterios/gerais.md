@@ -12,6 +12,12 @@
 
 *Fonte: [documento do trabalho final, seção 6.1.5, página 9](documentos/trabalho-final-v1.pdf#page=9), e conferência documental da equipe.*
 
+## Referências
+
+Referências usadas nesta página, conforme [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- RAMOS, Cristiane Soares. **FGA0315 — Qualidade de Software 1: Projeto Final da Disciplina e Materiais Didáticos de PSM**. Brasília: Universidade de Brasília, Faculdade do Gama (UnB/FGA), 2º sem. 2026.
+
 ---
 
 ## Histórico de versão
@@ -19,3 +25,4 @@
 | Nome do Membro | Contribuição | Data | Commit |
 |---|---|---|---|
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de critérios de avaliação geral no padrão das tabelas de critérios | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

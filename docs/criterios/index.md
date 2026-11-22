@@ -30,6 +30,12 @@ Em **16/11**, Gustavo confirmou que as publicações, as releases e o Moodle for
 - [Rastreabilidade da Fase 4](../fases/fase4/rastreabilidade.md).
 - [Conclusão e recomendações](../fases/fase4/conclusao.md).
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- RAMOS, Cristiane Soares. **FGA0315 — Qualidade de Software 1: Projeto Final da Disciplina e Materiais Didáticos de PSM**. Brasília: Universidade de Brasília, Faculdade do Gama (UnB/FGA), 2º sem. 2026.
+
 ---
 
 ## Histórico de versão
@@ -38,3 +44,4 @@ Em **16/11**, Gustavo confirmou que as publicações, as releases e o Moodle for
 |---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Conferência e atualização dos critérios conforme o documento do trabalho final | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Padronização dos critérios, situações e links de verificação | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

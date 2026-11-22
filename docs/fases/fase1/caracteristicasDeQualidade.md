@@ -45,6 +45,13 @@ As pontuações são uma priorização preliminar da equipe e não resultados me
 - **Compatibilidade:** testes extensivos em múltiplos navegadores, sistemas operacionais e dispositivos aumentariam o esforço. O estudo ficará restrito ao ambiente de teste declarado no plano de avaliação.
 - **Manutenibilidade:** análise aprofundada de arquitetura e cobertura de código não é necessária para responder às perguntas centrais desta avaliação.
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../../referencias/fase1.md) e [Referências — Fase 2](../../referencias/fase2.md).
+
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25010:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html). Acesso em: 15 nov. 2026.
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+
 ---
 
 ## Histórico de versão
@@ -54,3 +61,4 @@ As pontuações são uma priorização preliminar da equipe e não resultados me
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do molde da página | 15/10 | [828688f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/828688feb645eebfcd428e11b4b9f87585253b9b) |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Pontuação impacto × risco, justificativas e seleção das características | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

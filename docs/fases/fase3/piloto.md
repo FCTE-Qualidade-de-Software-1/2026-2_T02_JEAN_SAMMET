@@ -63,6 +63,15 @@ O PDF sintético enviado no teste relatado por Gustavo foi rejeitado. O importad
 
 *Figura 5 — Captura fornecida por Gustavo. Comprova a rejeição dessa entrada, sem gerar nota para as métricas.*
 
+## 5. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../../referencias/fase1.md), [Referências — Fase 2](../../referencias/fase2.md) e [Referências — Fase 3](../../referencias/fase3.md).
+
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Heuristic Evaluation**. In: NIELSEN, Jakob; MACK, Robert L. (Org.). *Usability Inspection Methods*. Nova York: John Wiley & Sons, 1994. p. 25-62.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+- NO FLUXO UNB. **No Fluxo UnB**. Crianex, [s. d.]. Disponível em: [aplicação No Fluxo UnB](https://no-fluxo.crianex.com). Acesso em: 15 out. 2026.
+
 ---
 
 ## Histórico de versão
@@ -72,3 +81,4 @@ O PDF sintético enviado no teste relatado por Gustavo foi rejeitado. O importad
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro da exploração do fluxo e das pendências do piloto sintético | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro do piloto com H0, responsáveis e condições restantes de prontidão | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

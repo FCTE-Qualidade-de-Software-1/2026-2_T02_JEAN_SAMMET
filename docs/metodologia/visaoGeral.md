@@ -67,6 +67,23 @@ A combinação das três abordagens não foi validada como metodologia independe
 
 O GQM é aplicado pela própria equipe avaliadora. Os pontos de vista dos estudantes e dos mantenedores são representados pela equipe, sem presumir a participação direta dos mantenedores, conforme descrito em [Propósito e Stakeholders](../fases/fase1/propositoEStakeholders.md).
 
+## 7. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../referencias/fase1.md), [Referências — Fase 2](../referencias/fase2.md), [Referências — Fase 3](../referencias/fase3.md) e [Referências — Gestão de Projeto](../referencias/psm.md).
+
+- BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. **The Goal Question Metric Approach**. *Encyclopedia of Software Engineering*, John Wiley & Sons, v. 2, p. 528-532, 1994. Disponível em: <https://ntrs.nasa.gov/citations/19940026214>.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25000:2014: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Guide to SQuaRE**. Genebra: ISO, 2014. Disponível em: [ficha da ISO/IEC 25000:2014](https://www.iso.org/standard/64764.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25010:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25010:2011](https://www.iso.org/standard/35733.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25020:2019: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality measurement framework**. Genebra: ISO, 2019. Disponível em: [ficha da ISO/IEC 25020:2019](https://www.iso.org/standard/72117.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25023:2016: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of system and software product quality**. Genebra: ISO, 2016. Disponível em: [ficha da ISO/IEC 25023:2016](https://www.iso.org/standard/35747.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25030:2019: Systems and software engineering — Systems and software quality requirements and evaluation (SQuaRE) — Quality requirements framework**. Genebra: ISO, 2019. Disponível em: [ficha da ISO/IEC 25030:2019](https://www.iso.org/standard/72116.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25040:2011: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process**. Genebra: ISO, 2011. Disponível em: [ficha da ISO/IEC 25040:2011](https://www.iso.org/standard/35765.html). Acesso em: 15 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC 25041:2012: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation guide for developers, acquirers and independent evaluators**. Genebra: ISO, 2012. Disponível em: [ficha da ISO/IEC 25041:2012](https://www.iso.org/standard/35766.html). Acesso em: 22 nov. 2026.
+- INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. **ISO/IEC/IEEE 15939:2017**: Systems and software engineering — Measurement process. Genebra: ISO, 2017.
+- McGARRY, John et al. **Practical Software Measurement: Objective Information for Decision Makers**. Boston: Addison-Wesley, 2001.
+- PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT (PSM); NDIA; INCOSE. **Practical Software and Systems Measurement: Continuous Iterative Development (CID) Measurement Framework**. Version 2.1. [S.l.]: PSM Working Group, 2021. Parts 1–3.
+- RAMOS, Cristiane Soares. **FGA0315 — Qualidade de Software 1: Projeto Final da Disciplina e Materiais Didáticos de PSM**. Brasília: Universidade de Brasília, Faculdade do Gama (UnB/FGA), 2º sem. 2026.
+
 ---
 
 ## Histórico de versão
@@ -74,3 +91,4 @@ O GQM é aplicado pela própria equipe avaliadora. Os pontos de vista dos estuda
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

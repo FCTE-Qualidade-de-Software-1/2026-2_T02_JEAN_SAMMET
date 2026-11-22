@@ -59,6 +59,14 @@ Os procedimentos detalhados devem respeitar essas fronteiras e manter a ligaçã
 
 **Premissas de execução:** serão utilizados históricos sintéticos ou autorizados; as tarefas e os resultados esperados serão definidos antes dos testes; e toda verificação será realizada em ambiente e funcionalidades de acesso autorizado.
 
+## Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../../referencias/fase1.md), [Referências — Fase 2](../../referencias/fase2.md) e [Referências — Fase 3](../../referencias/fase3.md).
+
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+- NO FLUXO UNB. **2025-1-NoFluxoUNB: código-fonte do No Fluxo UnB**. GitHub, [s. d.]. Disponível em: [repositório do No Fluxo UnB](https://github.com/unb-mds/2025-1-NoFluxoUNB). Acesso em: 15 out. 2026. Commit de referência: `87b5475`; não comprova a versão implantada no site.
+
 ---
 
 ## Histórico de versão
@@ -69,3 +77,4 @@ Os procedimentos detalhados devem respeitar essas fronteiras e manter a ligaçã
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Detalhamento inicial do escopo operacional, exclusões, limites e premissas | 16/10 | [106ddd5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/106ddd54ca773213a62318d809bc06db010d8232) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização do método e dos limites da avaliação | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

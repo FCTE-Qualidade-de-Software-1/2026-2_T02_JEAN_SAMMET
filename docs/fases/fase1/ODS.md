@@ -34,6 +34,15 @@ Os itens abaixo são **indicadores internos da avaliação do produto**, não in
 
 Esses indicadores avaliam aspectos do produto, não o progresso oficial do ODS 4. Seus resultados se restringem à cobertura e às condições dos testes.
 
+## 4. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 1](../../referencias/fase1.md), [Referências — Fase 2](../../referencias/fase2.md) e [Referências — Fase 3](../../referencias/fase3.md).
+
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+- ORGANIZAÇÃO DAS NAÇÕES UNIDAS. **Transformando nosso mundo: a Agenda 2030 para o Desenvolvimento Sustentável**. 2015. Disponível em: [Agenda 2030 — Nações Unidas no Brasil](https://brasil.un.org/pt-br/91863-agenda-2030-para-o-desenvolvimento-sustent%C3%A1vel). Acesso em: 15 nov. 2026.
+- UNITED NATIONS STATISTICS DIVISION. **SDG Indicators Metadata Repository — Goal 4, Target 4.3**. [s. d.]. Disponível em: [metadados dos indicadores do ODS 4, meta 4.3](https://unstats.un.org/sdgs/metadata/?Goal=4&Target=4.3). Acesso em: 15 nov. 2026.
+
 ---
 
 ## Histórico de versão
@@ -44,3 +53,4 @@ Esses indicadores avaliam aspectos do produto, não o progresso oficial do ODS 4
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Adicionando 2 ODSs | 16/10 | [755c71b](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/755c71b53dd286fc04ae51b4d6c55bfdbc8231b0) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Atualização da pagina | 16/10 | [a6af5fc](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/a6af5fc9dd7113834f334660210ce67b31465d0a) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento dos indicadores ao GQM | 15/11 | [9c58043](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/9c580430791d8e1652c081bcd5a51ddf6a349110) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

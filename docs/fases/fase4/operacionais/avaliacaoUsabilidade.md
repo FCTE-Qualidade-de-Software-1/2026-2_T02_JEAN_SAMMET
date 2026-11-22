@@ -54,6 +54,14 @@ O consenso inicial acima é a linha de base e foi preservado nos CSVs. Após as 
 
 O julgamento se restringe a H0, ao ambiente desktop e às tarefas examinadas. Não demonstra ausência de problemas em outros históricos, dispositivos ou condições de erro. Os registros foram transcritos conforme os resultados das avaliações e do consenso informados por Gustavo.
 
+## 6. Referências
+
+Referências usadas nesta página, conforme [Referências — Fase 2](../../../referencias/fase2.md) e [Referências — Fase 3](../../../referencias/fase3.md).
+
+- NIELSEN, Jakob. **10 Usability Heuristics for User Interface Design**. Nielsen Norman Group, 1994. Disponível em: <https://www.nngroup.com/articles/ten-usability-heuristics/>.
+- NIELSEN, Jakob. **Heuristic Evaluation**. In: NIELSEN, Jakob; MACK, Robert L. (Org.). *Usability Inspection Methods*. Nova York: John Wiley & Sons, 1994. p. 25-62.
+- NIELSEN, Jakob. **Severity Ratings for Usability Problems**. Nielsen Norman Group, 1995. Disponível em: <https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/>. Acesso em: 14 nov. 2026.
+
 ---
 
 ## Histórico de versão
@@ -63,3 +71,4 @@ O julgamento se restringe a H0, ao ambiente desktop e às tarefas examinadas. N�
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações de Gustavo e Gabriel, consenso e apuração da usabilidade | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Consolidação da avaliação de Gustavo e Gabriel em página única | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Explicitação das metas nas tabelas de resultados e avaliação | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

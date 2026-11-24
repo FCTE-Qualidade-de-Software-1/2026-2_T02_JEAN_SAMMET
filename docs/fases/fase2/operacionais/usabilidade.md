@@ -15,6 +15,9 @@ Especificação de perguntas, hipóteses e métricas de **Usabilidade** para a f
 
 - **Questão `Q-OP-01`:** A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?
 - **Hipótese `H-OP-01`:** A interface apresenta violações heurísticas relevantes nas tarefas avaliadas.
+- **Objetivo associado:** [`OBJ-OP`](visaoGeral.md#31-objetivo-geral-de-medicao-nivel-conceitual)
+- **Métricas associadas:** [`MET-OP-01` (TCH)](#met-op-01-taxa-de-conformidade-heuristica-tch) · [`MET-OP-01b` (ISVH)](#met-op-01b-indice-de-severidade-de-violacoes-heuristicas-isvh)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ---
 
@@ -52,6 +55,10 @@ A inspeção heurística orienta-se pela verificação das 10 Heurísticas de Ni
 | **Fonte** | Checklist padronizado de inspeção heurística preenchido consensualmente pelos avaliadores da equipe. |
 | **Coleta** | 1. Executar a aplicação com histórico autorizado carregado.<br>2. Dois ou mais avaliadores inspecionam a interface executando os fluxos `T1`, `T2` e `T3`.<br>3. Avaliar cada item do checklist como Conforme (1) ou Não Conforme (0).<br>4. Consolidar os resultados em sessão de alinhamento e calcular a taxa final. |
 | **Níveis de Julgamento** | - **Excelente:** `TCH ≥ 85%`.<br>- **Aceitável:** `70% ≤ TCH < 85%` (interface operável, com fricções pontuais de design).<br>- **Crítico:** `TCH < 70%`. |
+| **Questão associada** | [`Q-OP-01`](visaoGeral.md#32-questoes-de-medicao-nivel-operacional) |
+| **Hipótese associada** | [`H-OP-01`](visaoGeral.md#2-hipoteses-operacionais-e-matriz-de-validacao) |
+| **Objetivo associado** | [`OBJ-OP`](visaoGeral.md#31-objetivo-geral-de-medicao-nivel-conceitual) |
+| **Matriz de rastreabilidade** | [Matriz Geral](../../../rastreabilidade.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
@@ -73,6 +80,10 @@ A inspeção heurística orienta-se pela verificação das 10 Heurísticas de Ni
 | **Fonte** | Planilha de registro de problemas heurísticos e severidades atribuídas pelos avaliadores. |
 | **Coleta** | Para cada item não conforme na `MET-OP-01`, a equipe classifica a gravidade:<br>- **1 (Cosmético):** não atrapalha a execução (ex.: detalhe visual).<br>- **2 (Menor):** causa leve lentidão ou dúvida temporária.<br>- **3 (Maior):** dificulta consideravelmente a realização da tarefa.<br>- **4 (Catastrófico):** impede a conclusão ou induz o usuário ao erro crítico. |
 | **Níveis de Julgamento** | - **Excelente:** `Ncatastrofico = 0`, `Nmaior = 0` e `ISVH ≤ 5`.<br>- **Aceitável:** `Ncatastrofico = 0`, `Nmaior ≤ 1` e `ISVH ≤ 12`.<br>- **Crítico:** `Ncatastrofico ≥ 1` ou `Nmaior > 1` ou `ISVH > 12`. |
+| **Questão associada** | [`Q-OP-01`](visaoGeral.md#32-questoes-de-medicao-nivel-operacional) |
+| **Hipótese associada** | [`H-OP-01`](visaoGeral.md#2-hipoteses-operacionais-e-matriz-de-validacao) |
+| **Objetivo associado** | [`OBJ-OP`](visaoGeral.md#31-objetivo-geral-de-medicao-nivel-conceitual) |
+| **Matriz de rastreabilidade** | [Matriz Geral](../../../rastreabilidade.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 

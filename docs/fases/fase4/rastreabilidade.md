@@ -2,7 +2,7 @@
 
 **9/9 questões respondidas · 9/9 hipóteses julgadas · 12/12 métricas com resultado · 1/1 melhoria comparada.**
 
-Esta página reúne o fechamento de **EC-01**: o que precisava ser respondido, como foi avaliado, qual resultado foi obtido e onde conferir. A rastreabilidade segue **necessidade → questão/hipótese → procedimento → métrica/meta → resposta → decisão**. A [matriz da Fase 3](../fase3/operacionais/rastreabilidade.md) documenta o planejamento; aqui está o fechamento.
+Esta página reúne o fechamento de **EC-01**: o que precisava ser respondido, como foi avaliado, qual resultado foi obtido e onde conferir. Para a visão tabular unificada de todos os identificadores GQM entre as Fases 1 e 4, consulte a [Matriz Geral de Rastreabilidade](../../rastreabilidade.md). A rastreabilidade segue **necessidade → questão/hipótese → procedimento → métrica/meta → resposta → decisão**. A [tabela de planejamento da Fase 3](../fase3/operacionais/rastreabilidade.md) documenta o plano; aqui está o fechamento.
 
 **“Respondida” não significa “Conforme”.** Uma questão está encerrada quando tem resultado, interpretação e julgamento, inclusive quando a meta não foi atendida.
 

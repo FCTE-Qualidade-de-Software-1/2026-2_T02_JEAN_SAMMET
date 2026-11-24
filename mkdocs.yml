@@ -38,7 +38,7 @@ nav:
         - Plano Integrado: fases/fase3/planoAvaliacao.md
         - Piloto e Prontidão: fases/fase3/piloto.md
         - Cronograma de Avaliação: fases/fase3/cronograma.md
-        - Matriz de Rastreabilidade: fases/fase3/operacionais/rastreabilidade.md
+        - Planejamento e Cobertura: fases/fase3/operacionais/rastreabilidade.md
         - Métricas Funcionais:
             - Roteiro de Avaliação: fases/fase3/funcionais/roteiro.md
             - Fontes e Regras: fases/fase3/funcionais/fontes.md
@@ -50,7 +50,7 @@ nav:
             - Roteiro do Avaliador: fases/fase3/operacionais/roteiroAvaliador.md
     - Fase 4:
         - Conclusão da Avaliação: fases/fase4/conclusao.md
-        - Matriz de Rastreabilidade: fases/fase4/rastreabilidade.md
+        - Consolidação das Respostas: fases/fase4/rastreabilidade.md
         - Métricas Funcionais:
             - Sumário: fases/fase4/metricasFuncionais.md
             - Dados Brutos e Evidências: fases/fase4/funcionais/dadosBrutos.md
@@ -62,6 +62,7 @@ nav:
             - Avaliação de Usabilidade: fases/fase4/operacionais/avaliacaoUsabilidade.md
             - Ação de Melhoria: fases/fase4/operacionais/acaoMelhoria.md
 
+  - Matriz de Rastreabilidade: rastreabilidade.md
   - Gestão do Projeto:
     - Visão Geral: gestaoProjeto/psm-cid.md
     - Calendário e Progresso: gestaoProjeto/calendario-progresso.md

@@ -2,7 +2,7 @@
 
 A matriz mostra **como cada necessidade será avaliada**: característica da Fase 1 → questão e hipótese da Fase 2 → métrica e meta → entrada, procedimento e registro da Fase 3. São **nove questões, nove hipóteses e doze métricas**.
 
-Esta página registra o **planejamento da avaliação**. Os valores obtidos, as respostas e os julgamentos ficam na [rastreabilidade da Fase 4](../../fase4/rastreabilidade.md).
+Esta página registra o **planejamento da avaliação**. Para a navegação consolidada por todos os identificadores GQM (Fases 1 a 4), consulte a [Matriz Geral de Rastreabilidade](../../../rastreabilidade.md). Os valores obtidos, as respostas e os julgamentos ficam na [consolidação da Fase 4](../../fase4/rastreabilidade.md).
 
 ## 1. Preparação comum
 

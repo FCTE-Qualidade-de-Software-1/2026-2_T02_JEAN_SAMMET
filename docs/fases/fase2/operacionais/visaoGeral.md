@@ -30,8 +30,8 @@ Formuladas a partir das limitações levantadas na Fase 1 ([Software Escolhido](
 
 | ID | Característica | Hipótese Documentada | Questão GQM | Métricas de Teste | Critério de Validação da Hipótese |
 | :---: | :--- | :--- | :---: | :--- | :--- |
-| **H-OP-01** | Usabilidade | A interface apresenta violações heurísticas relevantes nas tarefas avaliadas. | `Q-OP-01` | TCH e ISVH | Confirmada no recorte se `TCH < 85%` ou houver violação maior/catastrófica; caso contrário, não corroborada, com coleta completa. |
-| **H-OP-02** | Segurança | Dependências vulneráveis, retenção de dados em claro ou falhas de controle de acesso podem comprometer os dados e serviços examinados. | `Q-OP-02` | IRP, GED-C e TBR | Julgar os componentes separadamente e aplicar a regra conjunta abaixo. |
+| **H-OP-01** | Usabilidade | A interface apresenta violações heurísticas relevantes nas tarefas avaliadas. | [`Q-OP-01`](#32-questoes-de-medicao-nivel-operacional) | [TCH](usabilidade.md#met-op-01-taxa-de-conformidade-heuristica-tch) e [ISVH](usabilidade.md#met-op-01b-indice-de-severidade-de-violacoes-heuristicas-isvh) | Confirmada no recorte se `TCH < 85%` ou houver violação maior/catastrófica; caso contrário, não corroborada, com coleta completa. |
+| **H-OP-02** | Segurança | Dependências vulneráveis, retenção de dados em claro ou falhas de controle de acesso podem comprometer os dados e serviços examinados. | [`Q-OP-02`](#32-questoes-de-medicao-nivel-operacional) | [IRP](seguranca.md#met-op-02-indice-de-risco-ponderado-de-dependencias-irp), [GED-C](seguranca.md#met-op-02b-grau-de-exposicao-de-dados-no-cliente-ged-c) e [TBR](seguranca.md#met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autorizadas-tbr) | Julgar os componentes separadamente e aplicar a regra conjunta abaixo. |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
@@ -67,13 +67,18 @@ H-OP-02 é confirmada no componente com IRP válido acima de 5 ou classificado C
 | **Foco de Qualidade** | **Usabilidade** e **Segurança** (ISO/IEC 25010). |
 | **Ponto de Vista** | **equipe de desenvolvedores**. |
 | **Contexto** | Ambiente web desktop controlado, currículo de Engenharia de Software da FGA/UnB, histórico oficial autorizado e inspeção dos componentes disponíveis. |
+| **Questões associadas** | [`Q-OP-01` (Usabilidade) e `Q-OP-02` (Segurança)](#32-questoes-de-medicao-nivel-operacional) |
+| **Características associadas** | [Usabilidade e Segurança (Fase 1)](../../fase1/modeloDeQualidade.md) |
+| **Matriz de rastreabilidade** | [Matriz Geral](../../../rastreabilidade.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
 ### 3.2 Questões de Medição (Nível Operacional)
 
-- **`Q-OP-01` (Usabilidade):** A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma?
-- **`Q-OP-02` (Segurança):** O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado?
+| Objetivo associado | Questão | Enunciado | Hipótese associada | Métricas associadas |
+| :---: | :---: | :--- | :---: | :--- |
+| [`OBJ-OP`](#31-objetivo-geral-de-medicao-nivel-conceitual) | `Q-OP-01` | A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma? | [`H-OP-01`](#2-hipoteses-operacionais-e-matriz-de-validacao) | [`MET-OP-01` (TCH)](usabilidade.md#met-op-01-taxa-de-conformidade-heuristica-tch) · [`MET-OP-01b` (ISVH)](usabilidade.md#met-op-01b-indice-de-severidade-de-violacoes-heuristicas-isvh) |
+| [`OBJ-OP`](#31-objetivo-geral-de-medicao-nivel-conceitual) | `Q-OP-02` | O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado? | [`H-OP-02`](#2-hipoteses-operacionais-e-matriz-de-validacao) | [`MET-OP-02` (IRP)](seguranca.md#met-op-02-indice-de-risco-ponderado-de-dependencias-irp) · [`MET-OP-02b` (GED-C)](seguranca.md#met-op-02b-grau-de-exposicao-de-dados-no-cliente-ged-c) · [`MET-OP-02c` (TBR)](seguranca.md#met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autorizadas-tbr) |
 
 ### 3.3 Árvore GQM com Hipóteses Operacionais
 

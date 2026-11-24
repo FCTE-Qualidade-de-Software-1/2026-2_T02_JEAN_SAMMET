@@ -6,6 +6,9 @@ Avaliação do armazenamento de dados acadêmicos, da identificação e do acess
 
 - **Q-OP-02:** O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado?
 - **H-OP-02:** Dependências vulneráveis, retenção de dados em claro ou falhas de controle de acesso podem comprometer os dados e serviços examinados.
+- **Objetivo associado:** [`OBJ-OP`](visaoGeral.md#31-objetivo-geral-de-medicao-nivel-conceitual)
+- **Métricas associadas:** [`MET-OP-02` (IRP)](#met-op-02-indice-de-risco-ponderado-de-dependencias-irp) · [`MET-OP-02b` (GED-C)](#met-op-02b-grau-de-exposicao-de-dados-no-cliente-ged-c) · [`MET-OP-02c` (TBR)](#met-op-02c-taxa-de-bloqueio-de-requisicoes-nao-autorizadas-tbr)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 Confidencialidade e autenticidade são as subcaracterísticas em foco. A inspeção de dependências é evidência complementar; não constitui uma subcaracterística adicional.
 
@@ -27,6 +30,10 @@ Confidencialidade e autenticidade são as subcaracterísticas em foco. A inspeç
 | **Aceitável** | Fora da faixa Excelente: nenhuma crítica, até duas altas exclusivamente de desenvolvimento e `IRP ≤ 20`. |
 | **Crítico** | Demais resultados válidos, incluindo crítica, alta em produção, mais de duas altas ou `IRP > 20`. |
 | **Inconclusivo** | Relatório ausente, erro de ferramenta, cobertura não demonstrada ou dados insuficientes para aplicar as faixas. Nunca assumir zero por ausência de arquivo. |
+| **Questão associada** | [`Q-OP-02`](visaoGeral.md#32-questoes-de-medicao-nivel-operacional) |
+| **Hipótese associada** | [`H-OP-02`](visaoGeral.md#2-hipoteses-operacionais-e-matriz-de-validacao) |
+| **Objetivo associado** | [`OBJ-OP`](visaoGeral.md#31-objetivo-geral-de-medicao-nivel-conceitual) |
+| **Matriz de rastreabilidade** | [Matriz Geral](../../../rastreabilidade.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
@@ -47,6 +54,10 @@ As faixas e os pesos são critérios da equipe. Aplicar as faixas na ordem apres
 | **Conforme** | `GED-C = 0`, com inspeção completa dos mecanismos previstos. |
 | **Não conforme** | `GED-C ≥ 1`, com conteúdo e estado do fluxo comprovados. |
 | **Inconclusivo** | Fluxo não concluído, mecanismos não inspecionados ou evidência insuficiente. |
+| **Questão associada** | [`Q-OP-02`](visaoGeral.md#32-questoes-de-medicao-nivel-operacional) |
+| **Hipótese associada** | [`H-OP-02`](visaoGeral.md#2-hipoteses-operacionais-e-matriz-de-validacao) |
+| **Objetivo associado** | [`OBJ-OP`](visaoGeral.md#31-objetivo-geral-de-medicao-nivel-conceitual) |
+| **Matriz de rastreabilidade** | [Matriz Geral](../../../rastreabilidade.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
@@ -68,6 +79,10 @@ O resultado descreve o armazenamento observado; não comprova confidencialidade 
 | **Não conforme** | Pelo menos uma chamada válida executa ação ou acessa dado que exigia autorização, sem a permissão necessária. Um HTTP 200 isolado não comprova esse acesso. |
 | **Inconclusivo** | HTTP 404/405, erro de conexão, HTTP 500 sem evidência de acesso ou outro retorno que não permita avaliar o controle. `TBR = 100%` em apenas parte da bateria não autoriza aprovação global. |
 | **Não aplicável** | O requisito documentado permite acesso público ao serviço e não há operação protegida no recorte. Justificar. |
+| **Questão associada** | [`Q-OP-02`](visaoGeral.md#32-questoes-de-medicao-nivel-operacional) |
+| **Hipótese associada** | [`H-OP-02`](visaoGeral.md#2-hipoteses-operacionais-e-matriz-de-validacao) |
+| **Objetivo associado** | [`OBJ-OP`](visaoGeral.md#31-objetivo-geral-de-medicao-nivel-conceitual) |
+| **Matriz de rastreabilidade** | [Matriz Geral](../../../rastreabilidade.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 

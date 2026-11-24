@@ -1,5 +1,7 @@
 # Ação de melhoria — Clareza do planejamento
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ## 1. Problema e objetivo
 
 A inspeção de Gustavo e Gabriel identificou dois problemas menores: **item 2**, falta de explicação dos termos críticas/estratégicas; **item 9**, ajuste de créditos inválidos sem explicar motivo e faixa. A intervenção M-01 tratou esses dois pontos, mantendo H0 e as tarefas T1–T3.

@@ -1,5 +1,7 @@
 # Cronograma de avaliação — Fase 3
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 O cronograma distribui as atividades de preparação, execução, análise e encerramento até **22/11/2026**, prazo informado pela equipe. As datas são **metas do planejamento**, não apontamentos de horas. Uma atividade pode ser concluída antes da data-alvo; seus resultados ficam registrados na Fase 4.
 
 ## 1. Sequência das atividades

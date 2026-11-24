@@ -1,5 +1,7 @@
 # Avaliação operacional — Fase 4
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 **EC-01 · Cinco métricas julgadas.** A usabilidade inicial é Aceitável, o armazenamento não atende à meta e o controle de acesso bloqueou as dez condições da bateria. O inventário de três componentes apresentou IRP=3. A melhoria de interface elevou TCH a 100% e reduziu ISVH a zero.
 
 ## Quadro de resumo

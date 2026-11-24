@@ -1,5 +1,7 @@
 # Referências para os testes funcionais
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ## 1. Matriz de referência
 
 Foi conferida a estrutura **6360/1 — 2017.1**, no [SIGAA público](https://sigaa.unb.br/sigaa/public/curso/curriculo.jsf?id=414924&lc=pt_BR), em 15/11. Na lista, escolher 6360/1 e **Visualizar Estrutura Curricular**. A matriz estar inativa para novos ingressos não invalida seu uso como recorte da avaliação.

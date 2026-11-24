@@ -1,5 +1,7 @@
 # Escopo da Avaliação
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 A avaliação se concentrará no fluxo de planejamento de formatura do No Fluxo UnB, composto por três etapas:
 
 1. **Enviar o histórico (Figura 1):** o estudante envia o PDF do histórico oficial da UnB ou preenche os dados manualmente.

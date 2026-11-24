@@ -1,5 +1,7 @@
 # Dados brutos e registros — Métricas operacionais
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ## 1. Organização
 
 A avaliação operacional **EC-01** abrange usabilidade, dependências, armazenamento e controle de acesso. H0 é a entrada comum. Os arquivos técnicos existentes em `testes/evidencias/` foram preservados; as tabelas desta página consolidam o registro de avaliação. Não foram produzidos novos arquivos de tráfego, relatórios de scanner ou imagens para representar a complementação de casos.

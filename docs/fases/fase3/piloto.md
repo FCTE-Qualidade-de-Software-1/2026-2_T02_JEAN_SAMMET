@@ -1,5 +1,7 @@
 # Piloto e Prontidão
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 Esta página registra a preparação verificada, antes do encerramento de EC-01. O piloto confirma a viabilidade dos procedimentos; os cálculos e julgamentos consolidados estão na [Fase 4](../fase4/conclusao.md).
 
 ## 1. Entrada e fluxo verificados

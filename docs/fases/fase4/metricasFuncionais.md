@@ -1,5 +1,7 @@
 # Avaliação funcional — Fase 4
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 **EC-01 · Entrada H0 · Sete métricas julgadas.** A avaliação identificou omissão de uma obrigatória, duas expectativas de onboarding não atendidas e divergências de oferta/calendário. Histórico, equivalências, relação de pré-requisito, par consolidado de co-requisitos e máximo de 480h atenderam às metas no recorte.
 
 ## Resultados consolidados

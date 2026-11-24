@@ -1,5 +1,7 @@
 # Análise e julgamento — Métricas funcionais
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 A execução **EC-01** aplica as fórmulas e metas do [GQM da Fase 2](../../fase2/funcionais/GQM.md) ao histórico H0. A referência contém **44 registros, 15 obrigatórias pendentes e oito equivalências**. Código e período preservam ocorrências distintas. Os [dados e capturas](dadosBrutos.md) identificam o registro de cada caso.
 
 ## 1. Métricas e cobertura
@@ -16,7 +18,7 @@ A execução **EC-01** aplica as fórmulas e metas do [GQM da Fase 2](../../fase
 | **MET-FUN-06 — COO** · onboarding | 5/7 × 100 | **71,43%** | **100%** | **Não conforme** |
 | **MET-FUN-07 — TVS** · restrições | Máximo: 0/23; oferta: 1/10; calendário: 1/3 | **0,00%; 10,00%; 33,33%**, respectivamente | **0% por tipo** | **Não conforme em oferta e calendário** |
 
-*Fonte: registro da avaliação EC-01, organizado pela equipe.*
+*Fonte: registro da avaliação EC-01, organizado pela equipe.* · [Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)
 
 Os julgamentos são relativos ao recorte. A aprovação projetada de uma disciplina em curso não modifica seu status acadêmico MATR. Os valores de TVS permanecem separados por tipo de restrição.
 
@@ -48,11 +50,15 @@ Os julgamentos são relativos ao recorte. A aprovação projetada de uma discipl
 
 O resultado não afirma que FGA0170 já foi aprovada. A sequência de TCC 1/2 ficou fora do cálculo porque não havia fonte oficial com vigência anexada para julgá-la nesta execução.
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ### Q-FUN-02 — O plano respeita os co-requisitos oficiais?
 
 **Resposta: sim, no par explicitamente selecionado.** FGA0072 e FGA0074 apareceram na mesma coluna, 2027.1. As duas direções da relação recíproca foram verificadas e nenhuma foi violada: `TVC = 0/2 × 100 = 0%`.
 
 A seleção das optativas não alterou os 44 registros acadêmicos de H0. O julgamento foi sustentado pela posição dos cartões, pelo registro do grafo e pela captura, e não apenas pelo texto de confirmação do recurso de seleção.
+
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ### Q-FUN-03 — Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas?
 
@@ -60,11 +66,15 @@ A seleção das optativas não alterou os 44 registros acadêmicos de H0. O julg
 
 A questão também utiliza TAE, pois equivalências incorretas poderiam alterar as pendências. As oito relações verificadas foram tratadas corretamente, mas esse resultado não compensa a omissão. Como uma das métricas aplicáveis não atende à meta, Q-FUN-03 é **Não conforme**.
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ### Q-FUN-04 — O histórico e os status são interpretados conforme as regras documentadas?
 
 **Resposta: sim, nos 44 registros conferidos.** Foram preservados os 37 registros APR e os sete MATR, com suas ocorrências por código e período. Não houve divergência confirmada: `TDH = 0/44 × 100 = 0%`.
 
 A comparação considera a representação de equivalências pelo código de destino oficial. Isso não elimina os registros originais da referência nem permite tratar uma disciplina matriculada como concluída. A projeção de aprovação no plano futuro foi distinguida do estado acadêmico real.
+
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ### Q-FUN-05 — As equivalências respeitam a fonte curricular e sua vigência?
 
@@ -72,17 +82,23 @@ A comparação considera a representação de equivalências pelo código de des
 
 O julgamento cobre as relações documentadas para H0. Não valida automaticamente outras matrizes, cadeias de equivalência ou vigências que não fizeram parte da referência.
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ### Q-FUN-06 — O onboarding produz o comportamento documentado ou prometido?
 
 **Resposta: não integralmente.** Foram atendidas cinco das sete expectativas: as representações de 20/32 créditos e as sugestões de 4/6/8 matérias. Os contratos de trabalho e objetivo não foram atendidos. Portanto, `COO = 5/7 × 100 = 71,43%`, abaixo da meta de 100%.
 
 Em C3, o contrato exige sugestão de 20 créditos ao ativar trabalho/estágio; a configuração permaneceu em 24. Em C4, o contrato exige horizonte de dois semestres futuros para a opção velocidade, mas foram mantidos três. Os contratos e a comparação estão em [Dados brutos](dadosBrutos.md#ct-06-onboarding). Esses valores são critérios do cenário de aceitação; não são apresentados como exigências curriculares da UnB.
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ### Q-FUN-07 — O plano respeita oferta, semestre inicial e limites de carga verificáveis?
 
 **Resposta: não em todos os tipos examinados.** O máximo de 480h foi respeitado em 23 verificações (`0/23 = 0%`). Na oferta, uma de dez alocações divergiu do quadro de referência (`1/10 = 10%`). No calendário, um de três casos usou semestre inicial diferente do esperado (`1/3 = 33,33%`). A meta de cada tipo é 0%.
 
 No caso de falha de consulta do período, o controle CAL-01 estabelece 2027.1, enquanto a execução inicia em 2027.2. Essa diferença sustenta o julgamento da hipótese de calendário. O resultado favorável de carga não elimina os dois tipos não conformes.
+
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ## 4. Julgamento das hipóteses funcionais
 

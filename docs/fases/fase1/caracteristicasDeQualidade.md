@@ -1,5 +1,7 @@
 # Características de Qualidade
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 ## 1. Método de priorização
 
 Para selecionar as características, será utilizada uma matriz de **impacto × risco**. Cada característica recebe uma nota de 1 a 5 em cada eixo, e a prioridade é calculada pelo produto das notas.

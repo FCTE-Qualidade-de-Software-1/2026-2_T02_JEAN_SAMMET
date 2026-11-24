@@ -1,5 +1,7 @@
 # Roteiro de avaliação funcional
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 Aplicar as [métricas da Fase 2](../../fase2/funcionais/GQM.md) ao histórico oficial autorizado **H0**. O original fica fora do repositório; os dados normalizados estão em `testes/referencias/h0_sanitizado.json`.
 
 ## 1. Entrada e cenários

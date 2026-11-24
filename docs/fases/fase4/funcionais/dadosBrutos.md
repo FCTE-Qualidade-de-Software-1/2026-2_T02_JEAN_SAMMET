@@ -1,5 +1,7 @@
 # Dados brutos e evidências — Métricas funcionais
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ## 1. Entrada e organização
 
 A entrada única é **H0**, matriz 6360/1 — 2017.1: **44 registros (37 APR e sete MATR), 15 obrigatórias pendentes e oito equivalências**. C0–C5 alteram somente a configuração de uso. Os originais acadêmicos e os identificadores pessoais permanecem fora da documentação pública.

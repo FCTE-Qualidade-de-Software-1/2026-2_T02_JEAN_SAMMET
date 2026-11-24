@@ -1,5 +1,7 @@
 # Conclusão da avaliação
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 ## 1. Situação da entrega
 
 **EC-01 concluída no escopo documentado:** sete métricas funcionais e cinco operacionais calculadas e julgadas, nove questões GQM respondidas, nove hipóteses julgadas e uma ação de melhoria com comparação antes/depois.

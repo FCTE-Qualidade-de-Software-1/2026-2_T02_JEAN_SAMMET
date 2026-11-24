@@ -1,5 +1,7 @@
 # Fase 3 — Plano de avaliação
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 O plano prepara a coleta das sete métricas funcionais e cinco operacionais da [Fase 2](../fase2/funcionais/GQM.md). A coleta completa, o cálculo e o julgamento pertencem à Fase 4. A preparação verifica a viabilidade dos procedimentos e permanece separada dos resultados definitivos.
 
 ## 1. Organização

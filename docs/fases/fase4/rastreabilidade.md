@@ -48,7 +48,7 @@ As sete questões funcionais verificam a correção e a completude do plano de H
 
 **Hipótese H-FUN-01:** O plano pode alocar uma dependente antes do cumprimento válido do pré-requisito. **Julgamento: Não corroborada no recorte.**
 
-**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-01-o-plano-respeita-os-pre-requisitos-oficiais) · [registro da avaliação](funcionais/dadosBrutos.md#ct-01-pre-requisitos).
+**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-01-o-plano-respeita-os-pre-requisitos-oficiais) · [registro da avaliação](funcionais/dadosBrutos.md#ct-01-pre-requisitos) · [Matriz Geral](../../rastreabilidade.md).
 
 ### Q-FUN-02 — Co-requisitos
 
@@ -68,7 +68,7 @@ As sete questões funcionais verificam a correção e a completude do plano de H
 
 **Hipótese H-FUN-02:** O plano pode distribuir disciplinas co-requisitadas sem atender à satisfação simultânea ou prévia aplicável. **Julgamento: Não corroborada no par consolidado.**
 
-**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-02-o-plano-respeita-os-co-requisitos-oficiais) · [registro da avaliação](funcionais/dadosBrutos.md#ct-02-co-requisitos).
+**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-02-o-plano-respeita-os-co-requisitos-oficiais) · [registro da avaliação](funcionais/dadosBrutos.md#ct-02-co-requisitos) · [Matriz Geral](../../rastreabilidade.md).
 
 ### Q-FUN-03 — Cobertura de obrigatórias
 
@@ -89,7 +89,7 @@ As sete questões funcionais verificam a correção e a completude do plano de H
 
 **Hipótese H-FUN-03:** O plano pode omitir obrigatórias mesmo com a lista de disciplinas não alocadas vazia. **Julgamento: Corroborada.**
 
-**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-03-todas-as-disciplinas-obrigatorias-pendentes-aplicaveis-sao-contempladas) · [registro da avaliação](funcionais/dadosBrutos.md#ct-03-obrigatorias-pendentes).
+**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-03-todas-as-disciplinas-obrigatorias-pendentes-aplicaveis-sao-contempladas) · [registro da avaliação](funcionais/dadosBrutos.md#ct-03-obrigatorias-pendentes) · [Matriz Geral](../../rastreabilidade.md).
 
 ### Q-FUN-04 — Interpretação do histórico
 
@@ -109,7 +109,7 @@ As sete questões funcionais verificam a correção e a completude do plano de H
 
 **Hipótese H-FUN-04:** Disciplinas em andamento podem ser tratadas como aprovadas indevidamente. **Julgamento: Não corroborada no recorte.**
 
-**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-04-o-historico-e-os-status-sao-interpretados-conforme-as-regras-documentadas) · [registro da avaliação](funcionais/dadosBrutos.md#ct-04-tratamento-do-historico).
+**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-04-o-historico-e-os-status-sao-interpretados-conforme-as-regras-documentadas) · [registro da avaliação](funcionais/dadosBrutos.md#ct-04-tratamento-do-historico) · [Matriz Geral](../../rastreabilidade.md).
 
 ### Q-FUN-05 — Equivalências
 
@@ -129,7 +129,7 @@ As sete questões funcionais verificam a correção e a completude do plano de H
 
 **Hipótese H-FUN-05:** A aplicação das equivalências pode ignorar as relações ou a vigência pertinente. **Julgamento: Não corroborada nas oito relações.**
 
-**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-05-as-equivalencias-respeitam-a-fonte-curricular-e-sua-vigencia) · [registro da avaliação](funcionais/dadosBrutos.md#ct-05-equivalencias).
+**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-05-as-equivalencias-respeitam-a-fonte-curricular-e-sua-vigencia) · [registro da avaliação](funcionais/dadosBrutos.md#ct-05-equivalencias) · [Matriz Geral](../../rastreabilidade.md).
 
 ### Q-FUN-06 — Preferências do onboarding
 
@@ -149,7 +149,7 @@ As sete questões funcionais verificam a correção e a completude do plano de H
 
 **Hipótese H-FUN-06:** Trabalho/estágio e objetivo podem não produzir o efeito definido para o cenário. **Julgamento: Corroborada em C3/C4.**
 
-**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-06-o-onboarding-produz-o-comportamento-documentado-ou-prometido) · [registro da avaliação](funcionais/dadosBrutos.md#ct-06-onboarding).
+**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-06-o-onboarding-produz-o-comportamento-documentado-ou-prometido) · [registro da avaliação](funcionais/dadosBrutos.md#ct-06-onboarding) · [Matriz Geral](../../rastreabilidade.md).
 
 ### Q-FUN-07 — Carga, oferta e calendário
 
@@ -171,7 +171,7 @@ As sete questões funcionais verificam a correção e a completude do plano de H
 
 **Hipótese H-FUN-07:** A falha na consulta do período pode levar a um semestre estimado divergente do calendário de referência. **Julgamento: Corroborada no caso de calendário.**
 
-**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-07-o-plano-respeita-oferta-semestre-inicial-e-limites-de-carga-verificaveis) · [registro da avaliação](funcionais/dadosBrutos.md#ct-07-restricoes-semestrais).
+**Onde conferir:** [resposta formal](funcionais/analiseResultados.md#q-fun-07-o-plano-respeita-oferta-semestre-inicial-e-limites-de-carga-verificaveis) · [registro da avaliação](funcionais/dadosBrutos.md#ct-07-restricoes-semestrais) · [Matriz Geral](../../rastreabilidade.md).
 
 ## 3. Questões operacionais
 
@@ -196,7 +196,7 @@ As duas questões operacionais abrangem cinco métricas. A especificação e a r
 
 **Hipótese H-OP-01:** A interface pode apresentar violações heurísticas relevantes nas tarefas avaliadas. **Julgamento: Corroborada antes; não corroborada no checklist após M-01.**
 
-**Onde conferir:** [resposta formal](operacionais/analiseResultados.md#q-op-01-a-interface-da-tela-de-planejamento-atende-as-heuristicas-ergonomicas-de-usabilidade-essenciais-para-operacao-e-apreensao-autonoma) · [registro da avaliação](operacionais/dadosBrutos.md#2-usabilidade).
+**Onde conferir:** [resposta formal](operacionais/analiseResultados.md#q-op-01-a-interface-da-tela-de-planejamento-atende-as-heuristicas-ergonomicas-de-usabilidade-essenciais-para-operacao-e-apreensao-autonoma) · [registro da avaliação](operacionais/dadosBrutos.md#2-usabilidade) · [Matriz Geral](../../rastreabilidade.md).
 
 **Comparação da melhoria:** [M-01 e resultados antes/depois](operacionais/acaoMelhoria.md#4-comparacao-das-metricas).
 
@@ -220,7 +220,7 @@ As duas questões operacionais abrangem cinco métricas. A especificação e a r
 
 **Hipótese H-OP-02:** Dependências, persistência em claro ou falhas de acesso podem comprometer os dados e serviços examinados. **Julgamento: Corroborada no componente de armazenamento.**
 
-**Onde conferir:** [resposta formal](operacionais/analiseResultados.md#q-op-02-o-sistema-protege-os-dados-academicos-e-os-servicos-examinados-contra-exposicao-no-cliente-vulnerabilidades-conhecidas-e-acesso-nao-autorizado) · [registro da avaliação](operacionais/dadosBrutos.md#4-armazenamento-ged-c).
+**Onde conferir:** [resposta formal](operacionais/analiseResultados.md#q-op-02-o-sistema-protege-os-dados-academicos-e-os-servicos-examinados-contra-exposicao-no-cliente-vulnerabilidades-conhecidas-e-acesso-nao-autorizado) · [registro da avaliação](operacionais/dadosBrutos.md#4-armazenamento-ged-c) · [Matriz Geral](../../rastreabilidade.md).
 
 **Registros complementares:** [INV-01](operacionais/dadosBrutos.md#3-dependencias-inventario-inv-01) · [dez condições de acesso](operacionais/dadosBrutos.md#5-controle-de-acesso-bateria-de-dez-condicoes).
 
@@ -261,3 +261,4 @@ Referências usadas nesta página, conforme [Referências — Fase 2](../../refe
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção das orientações de apresentação da rastreabilidade | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ligação da página à Matriz Geral de Rastreabilidade unificada | 23/11 | [0b37cf6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0b37cf68e64f7e1d9021604848841415f141a2ae) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de links de retorno para a Matriz Geral de Rastreabilidade na página, resultados e respostas GQM | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

@@ -1,5 +1,7 @@
 # Cronograma de avaliação — Fase 3
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 O cronograma distribui as atividades de preparação, execução, análise e encerramento até **22/11/2026**, prazo informado pela equipe. As datas são **metas do planejamento**, não apontamentos de horas. Uma atividade pode ser concluída antes da data-alvo; seus resultados ficam registrados na Fase 4.
 
 ## 1. Sequência das atividades
@@ -40,3 +42,4 @@ Referências usadas nesta página, conforme [Referências — Fase 3](../../refe
 |---|---|---|---|
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Criação do cronograma de avaliação com atividades, responsáveis e dependências | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de link de retorno para a Matriz Geral de Rastreabilidade | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

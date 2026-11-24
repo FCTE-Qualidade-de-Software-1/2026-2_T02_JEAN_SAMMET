@@ -1,32 +1,34 @@
 # Análise dos resultados e julgamento da qualidade — Métricas operacionais
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 A execução **EC-01** aplica as fichas e a regra conjunta da [Fase 2](../../fase2/operacionais/visaoGeral.md). Os [registros](dadosBrutos.md) identificam universos, contratos e resultados. A avaliação inicial e a reavaliação de interface são julgadas separadamente.
 
 ## 1. Julgamento das métricas de usabilidade
 
 ### 1.1 TCH — Taxa de Conformidade Heurística
 
-**Antes: TCH=8/10×100=80%, Aceitável.** A meta de excelência é pelo menos 85%; a faixa Aceitável vai de 70% a menos de 85%. Os itens 2 e 9 apresentaram problemas na explicação de termos e no ajuste de créditos inválidos. As tarefas T1–T3 permaneceram executáveis.
+**Antes: TCH=8/10×100=80%, Aceitável.** A meta de excelência é pelo menos 85%; a faixa Aceitável vai de 70% a menos de 85%. Os itens 2 e 9 apresentaram problemas na explicação de termos e no ajuste de créditos inválidos. As tarefas T1–T3 permaneceram executáveis. *[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ### 1.2 ISVH — Índice de Severidade de Violações Heurísticas
 
 **Antes: ISVH=4×0+3×0+2×2+1×0=4, Excelente.** Foram dois problemas menores, sem problemas maiores ou catastróficos. Cada problema é contado uma vez no consenso, não uma vez por avaliador.
 
-O julgamento conjunto inicial é **Aceitável**, pelo pior nível entre TCH e ISVH. Após a [melhoria](acaoMelhoria.md), os valores foram TCH=100% e ISVH=0, ambos Excelentes.
+O julgamento conjunto inicial é **Aceitável**, pelo pior nível entre TCH e ISVH. Após a [melhoria](acaoMelhoria.md), os valores foram TCH=100% e ISVH=0, ambos Excelentes. *[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ## 2. Julgamento das métricas de segurança
 
 ### 2.1 IRP — Índice de Risco Ponderado de Dependências
 
-INV-01 contém três componentes de referência e dois achados únicos: um moderado e um baixo. **IRP=10×0+5×0+2×1+1×1=3 pontos, Excelente**, pois não há crítica/alta e o valor é menor ou igual a 5. A classificação se restringe ao inventário; não equivale a aprovação de todos os componentes ou do backend.
+INV-01 contém três componentes de referência e dois achados únicos: um moderado e um baixo. **IRP=10×0+5×0+2×1+1×1=3 pontos, Excelente**, pois não há crítica/alta e o valor é menor ou igual a 5. A classificação se restringe ao inventário; não equivale a aprovação de todos os componentes ou do backend. *[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ### 2.2 GED-C — Grau de Exposição de Dados no Cliente
 
-A união dos estados E0–E2 contém **três chaves com dados pessoais legíveis**. Como a meta é zero, **GED-C=3, Não conforme**. Codificação base64 e flags de cookie não foram tratadas como cifragem. O achado não estabelece, isoladamente, conclusão de conformidade legal.
+A união dos estados E0–E2 contém **três chaves com dados pessoais legíveis**. Como a meta é zero, **GED-C=3, Não conforme**. Codificação base64 e flags de cookie não foram tratadas como cifragem. O achado não estabelece, isoladamente, conclusão de conformidade legal. *[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ### 2.3 TBR — Taxa de Bloqueio de Requisições Não Autorizadas
 
-O controle positivo retornou 200; as dez condições negativas foram bloqueadas com 401/403. **TBR=10/10×100=100%, Conforme no recorte.** O contrato distingue token inválido, expirado, revogado e credencial válida sem o papel necessário. Um erro 404/405 não seria contado como bloqueio válido.
+O controle positivo retornou 200; as dez condições negativas foram bloqueadas com 401/403. **TBR=10/10×100=100%, Conforme no recorte.** O contrato distingue token inválido, expirado, revogado e credencial válida sem o papel necessário. Um erro 404/405 não seria contado como bloqueio válido. *[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ## 3. Quadro de resumo
 
@@ -52,11 +54,15 @@ As metas de TCH, ISVH e IRP correspondem à faixa Excelente da Fase 2. Aceitáve
 
 **Após a intervenção: Excelente no checklist.** Os itens 2 e 9 passaram a conformes, sem regressão nos outros oito: TCH=100%, ISVH=0. A melhoria foi julgada no mesmo H0 e nas mesmas tarefas; não se extrapola o resultado para outros perfis ou dispositivos.
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ### Q-OP-02 — O sistema protege os dados acadêmicos e os serviços examinados contra exposição no cliente, vulnerabilidades conhecidas e acesso não autorizado?
 
 **Resposta: há uma ressalva de segurança por armazenamento.** TBR atende à meta nas dez condições; INV-01 obtém IRP=3, nível Excelente no inventário. Entretanto, GED-C=3 não atende à meta de zero. Pela regra conjunta, o resultado favorável de acesso e dependências não compensa a exposição observada.
 
 A conclusão é **segurança com ressalva no componente de armazenamento**, e não aprovação global. Os achados moderado/baixo também devem receber tratamento, embora o índice esteja na faixa Excelente.
+
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
 
 ## 5. Julgamento das hipóteses operacionais
 
@@ -109,3 +115,4 @@ Referências usadas nesta página, conforme [Referências — Fase 2](../../../r
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de links de retorno para a Matriz Geral de Rastreabilidade na página, resultados e respostas GQM | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

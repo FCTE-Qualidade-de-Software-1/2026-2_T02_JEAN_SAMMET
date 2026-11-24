@@ -1,5 +1,7 @@
 # Fase 3 — Plano de avaliação
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 O plano prepara a coleta das sete métricas funcionais e cinco operacionais da [Fase 2](../fase2/funcionais/GQM.md). A coleta completa, o cálculo e o julgamento pertencem à Fase 4. A preparação verifica a viabilidade dos procedimentos e permanece separada dos resultados definitivos.
 
 ## 1. Organização
@@ -60,3 +62,4 @@ Referências usadas nesta página, conforme [Referências — Fase 3](../../refe
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão do cronograma de avaliação no plano integrado | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Restauração do acesso ao Piloto e Prontidão no plano integrado | 16/11 | Não commitado |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de link de retorno para a Matriz Geral de Rastreabilidade | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

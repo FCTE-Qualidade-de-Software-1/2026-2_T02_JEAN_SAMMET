@@ -8,6 +8,8 @@ A inspeção de Gustavo e Gabriel identificou dois problemas menores: **item 2**
 
 ## 2. Intervenção M-01
 
+O protótipo interativo comparativo (Antes vs. Depois) das melhorias propostas — contemplando a intervenção M-01 de usabilidade e as melhorias de adequação funcional — está publicado em [Protótipo Interativo — Jean Sammet](https://gotc2607.github.io/Prot-tipo-JEAN-SAMMET/) ([repositório do protótipo](https://github.com/Gotc2607/Prot-tipo-JEAN-SAMMET)).
+
 **Tabela 1 — Intervenção M-01.**
 
 | Problema | Alteração executada | Critério de aceitação |

@@ -50,7 +50,7 @@ O PDF admite protótipo de alta fidelidade, implementação parcial/completa, te
 
 | **ID** | **Critério** | **Alvo Excelente** | **Situação** | **Verificação** |
 | :----- | :----------- | :----------------------- | :----------- | :-------------------- |
-| M-01 | Ação de melhoria | Executar pelo menos uma melhoria justificada pela avaliação e disponibilizar a entrega técnica. | Documentado | [Melhoria M-01](../fases/fase4/operacionais/acaoMelhoria.md) · [Requisito](documentos/trabalho-final-v1.pdf#page=3) |
+| M-01 | Ação de melhoria | Executar pelo menos uma melhoria justificada pela avaliação e disponibilizar a entrega técnica. | Documentado | [Melhoria M-01](../fases/fase4/operacionais/acaoMelhoria.md) · [Protótipo interativo](https://gotc2607.github.io/Prot-tipo-JEAN-SAMMET/) · [Requisito](documentos/trabalho-final-v1.pdf#page=3) |
 
 *Fonte: documento do trabalho final e conferência documental da equipe.*
 

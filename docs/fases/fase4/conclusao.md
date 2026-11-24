@@ -76,7 +76,7 @@ A redução de IRP para zero é uma meta de tratamento dos dois achados existent
 | Questões e hipóteses funcionais | [Análise funcional](funcionais/analiseResultados.md) |
 | Cinco métricas operacionais e metas | [Consolidado operacional](metricasOperacionais.md#quadro-de-resumo) |
 | Questões e hipóteses operacionais | [Análise operacional](operacionais/analiseResultados.md) |
-| Antes/depois da intervenção | [M-01](operacionais/acaoMelhoria.md) |
+| Antes/depois da intervenção | [M-01](operacionais/acaoMelhoria.md) · [Protótipo interativo](https://gotc2607.github.io/Prot-tipo-JEAN-SAMMET/) |
 | Ligação com as fases anteriores | [Rastreabilidade](../fase3/operacionais/rastreabilidade.md) |
 
 *Fonte: registro da avaliação EC-01, organizado pela equipe.*

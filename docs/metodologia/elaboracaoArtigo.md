@@ -57,5 +57,4 @@ Referências usadas nesta página, conforme [Referências — Fase 1](../referen
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
-| [Yasmim de Souza Santos](https://github.com/eii-yahs) | Atualização da estrutura do artigo para a versão final, com as Fases 3 e 4 e a apresentação dos resultados pelo GQM | 21/11 | Não commitado |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

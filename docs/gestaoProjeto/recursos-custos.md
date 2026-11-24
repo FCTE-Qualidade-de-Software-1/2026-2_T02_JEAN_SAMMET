@@ -74,5 +74,4 @@ Referências usadas nesta página, conforme [Referências — Gestão de Projeto
 |---|---|---|---|
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Criação da página de Gestão do Projeto | 15/10/2026 | [e372470](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/e372470367e2d110094e26eaac1220c5a3bd2fe9) |
 | [Gustavo Fornaciaro](https://github.com/GUGOFO) | Declaração da origem da métrica | 25/10/2026 | [792b187](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/792b187ac98c876b47b42606e9c15a4f0e4ddf41) |
-| [Gustavo Fornaciari](https://github.com/GUGOFO) | Distinção entre esforço acumulado e comparação de estimativas por entrega | 16/11 | Não commitado |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |

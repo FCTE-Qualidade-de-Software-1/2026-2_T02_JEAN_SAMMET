@@ -11,6 +11,9 @@
 | **Foco** | Correção e completude funcional. |
 | **Ponto de vista** | Estudantes e equipe responsável pelo produto. |
 | **Contexto** | Aplicação web, matriz de Engenharia de Software da FGA/UnB e histórico oficial autorizado, mantido fora do repositório, com regras curriculares oficiais como referência. |
+| **Questões associadas** | [`Q-FUN-01` a `Q-FUN-07`](#3-hipoteses-perguntas-e-metricas) |
+| **Característica associada** | [Adequação Funcional (Fase 1)](../../fase1/modeloDeQualidade.md) |
+| **Matriz de rastreabilidade** | [Matriz Geral](../../../rastreabilidade.md) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
@@ -59,15 +62,15 @@ As hipóteses são riscos a verificar, não defeitos confirmados. Os resultados 
 
 **Tabela 2 — Hipóteses, perguntas e métricas.**
 
-| Pergunta | Hipótese associada | Métrica(s) |
-| --- | --- | --- |
-| `Q-FUN-01` — O plano respeita os pré-requisitos oficiais? | `H-FUN-01`: o plano pode posicionar uma disciplina antes de o pré-requisito ser satisfeito segundo a fonte oficial. | `MET-FUN-01` |
-| `Q-FUN-02` — O plano respeita os co-requisitos oficiais? | `H-FUN-02`: disciplinas co-requisitadas podem ser distribuídas sem atender à regra de satisfação simultânea ou prévia aplicável. | `MET-FUN-02` |
-| `Q-FUN-03` — Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas? | `H-FUN-03`: o plano pode omitir obrigatórias pendentes mesmo quando a lista de disciplinas não alocadas está vazia. `H-FUN-05` também se aplica, pois equivalências afetam as pendências. | `MET-FUN-03`, `MET-FUN-05` |
-| `Q-FUN-04` — O histórico e os status são interpretados conforme as regras documentadas? | `H-FUN-04`: o motor pode tratar disciplinas em andamento como aprovadas no planejamento futuro; é necessário verificar se essa interpretação corresponde à regra definida para o cenário. | `MET-FUN-04` |
-| `Q-FUN-05` — As equivalências respeitam a fonte curricular e sua vigência? | `H-FUN-05`: a expansão das equivalências pode ignorar relações encadeadas ou a vigência aplicável. | `MET-FUN-05` |
-| `Q-FUN-06` — O onboarding produz o comportamento documentado ou prometido? | `H-FUN-06`: as opções de trabalho/estágio e objetivo podem não produzir o efeito especificado. A expectativa precisa ser confirmada antes de classificar isso como falha. | `MET-FUN-06` |
-| `Q-FUN-07` — O plano respeita oferta, semestre inicial e limites de carga verificáveis? | `H-FUN-07`: se a consulta do período letivo falhar, o semestre estimado pela data do sistema pode divergir do calendário oficial e afetar o plano. | `MET-FUN-07` |
+| Objetivo associado | Questão | Hipótese associada | Métrica(s) associada(s) |
+| :---: | --- | --- | --- |
+| [`OBJ-FUN`](#1-objetivo-da-avaliacao) | `Q-FUN-01` — O plano respeita os pré-requisitos oficiais? | `H-FUN-01`: o plano pode posicionar uma disciplina antes de o pré-requisito ser satisfeito segundo a fonte oficial. | [`MET-FUN-01` (TVP)](#met-fun-01-violacoes-de-pre-requisitos) |
+| [`OBJ-FUN`](#1-objetivo-da-avaliacao) | `Q-FUN-02` — O plano respeita os co-requisitos oficiais? | `H-FUN-02`: disciplinas co-requisitadas podem ser distribuídas sem atender à regra de satisfação simultânea ou prévia aplicável. | [`MET-FUN-02` (TVC)](#met-fun-02-violacoes-de-co-requisitos) |
+| [`OBJ-FUN`](#1-objetivo-da-avaliacao) | `Q-FUN-03` — Todas as disciplinas obrigatórias pendentes aplicáveis são contempladas? | `H-FUN-03`: o plano pode omitir obrigatórias pendentes mesmo quando a lista de disciplinas não alocadas está vazia. `H-FUN-05` também se aplica, pois equivalências afetam as pendências. | [`MET-FUN-03` (CDO)](#met-fun-03-cobertura-de-disciplinas-obrigatorias-pendentes), [`MET-FUN-05` (TAE)](#met-fun-05-aplicacao-incorreta-de-equivalencias) |
+| [`OBJ-FUN`](#1-objetivo-da-avaliacao) | `Q-FUN-04` — O histórico e os status são interpretados conforme as regras documentadas? | `H-FUN-04`: o motor pode tratar disciplinas em andamento como aprovadas no planejamento futuro; é necessário verificar se essa interpretação corresponde à regra definida para o cenário. | [`MET-FUN-04` (TDH)](#met-fun-04-divergencias-no-tratamento-do-historico) |
+| [`OBJ-FUN`](#1-objetivo-da-avaliacao) | `Q-FUN-05` — As equivalências respeitam a fonte curricular e sua vigência? | `H-FUN-05`: a expansão das equivalências pode ignorar relações encadeadas ou a vigência aplicável. | [`MET-FUN-05` (TAE)](#met-fun-05-aplicacao-incorreta-de-equivalencias) |
+| [`OBJ-FUN`](#1-objetivo-da-avaliacao) | `Q-FUN-06` — O onboarding produz o comportamento documentado ou prometido? | `H-FUN-06`: as opções de trabalho/estágio e objetivo podem não produzir o efeito especificado. A expectativa precisa ser confirmada antes de classificar isso como falha. | [`MET-FUN-06` (COO)](#met-fun-06-conformidade-das-opcoes-do-onboarding) |
+| [`OBJ-FUN`](#1-objetivo-da-avaliacao) | `Q-FUN-07` — O plano respeita oferta, semestre inicial e limites de carga verificáveis? | `H-FUN-07`: se a consulta do período letivo falhar, o semestre estimado pela data do sistema pode divergir do calendário oficial e afetar o plano. | [`MET-FUN-07` (TVS)](#met-fun-07-violacoes-de-restricoes-semestrais) |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
 
@@ -98,6 +101,10 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Cálculo:** `TVP = (NVP / NRP) × 100`. `NVP` = relações violadas; `NRP` = relações aplicáveis verificadas. Registrar também `NVP`.
 - **Dados e coleta:** matriz oficial versionada, regras, histórico autorizado e plano gerado. Comparar a situação do pré-requisito com o semestre da disciplina dependente (`CT-01`).
 - **Meta e condições:** `TVP = 0%`. Só avaliar relações respaldadas por fonte identificável; se `NRP = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1.
+- **Questão associada:** [`Q-FUN-01`](#3-hipoteses-perguntas-e-metricas)
+- **Hipótese associada:** [`H-FUN-01`](#3-hipoteses-perguntas-e-metricas)
+- **Objetivo associado:** [`OBJ-FUN`](#1-objetivo-da-avaliacao)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ### `MET-FUN-02` — Violações de co-requisitos
 
@@ -105,6 +112,10 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Cálculo:** `TVC = (NVC / NRC) × 100`. `NVC` = relações violadas; `NRC` = relações aplicáveis verificadas. Registrar também `NVC`.
 - **Dados e coleta:** co-requisitos da matriz oficial, histórico autorizado e plano por semestre; testar pares pendentes e, quando aplicável, casos em que uma disciplina já foi concluída (`CT-02`).
 - **Meta e condições:** `TVC = 0%`. A regra deve vir de fonte oficial; se `NRC = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1. A hipótese de falha documentada ainda precisa ser testada.
+- **Questão associada:** [`Q-FUN-02`](#3-hipoteses-perguntas-e-metricas)
+- **Hipótese associada:** [`H-FUN-02`](#3-hipoteses-perguntas-e-metricas)
+- **Objetivo associado:** [`OBJ-FUN`](#1-objetivo-da-avaliacao)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ### `MET-FUN-03` — Cobertura de disciplinas obrigatórias pendentes
 
@@ -112,6 +123,10 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Cálculo:** `CDO = (DPC / DOP) × 100`. `DPC` = disciplinas pendentes contempladas; `DOP` = total de obrigatórias pendentes aplicáveis.
 - **Dados e coleta:** cruzar a lista esperada, derivada da matriz e do histórico, com o plano completo; registrar omissões e justificativas (`CT-03`). A lista de “não alocadas”, isoladamente, não comprova completude.
 - **Meta e condições:** `CDO = 100%`. Definir antes da coleta como tratar disciplinas sem oferta; se `DOP = 0`, registrar como não aplicável.
+- **Questão associada:** [`Q-FUN-03`](#3-hipoteses-perguntas-e-metricas)
+- **Hipótese associada:** [`H-FUN-03`](#3-hipoteses-perguntas-e-metricas)
+- **Objetivo associado:** [`OBJ-FUN`](#1-objetivo-da-avaliacao)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ### `MET-FUN-04` — Divergências no tratamento do histórico
 
@@ -119,6 +134,10 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Cálculo:** `TDH = (NDH / NVH) × 100`. `NDH` = divergências confirmadas; `NVH` = verificações válidas de status.
 - **Dados e coleta:** histórico autorizado, regras documentadas e plano/interface; comparar o estado esperado e o observado (`CT-04`).
 - **Meta e condições:** `TDH = 0%` de divergências não justificadas. Confirmar a política de projeção de disciplinas em andamento antes do julgamento; não confundir aprovação projetada com aprovação acadêmica real nem presumir defeito sem regra identificada. Se `NVH = 0`, registrar como não aplicável.
+- **Questão associada:** [`Q-FUN-04`](#3-hipoteses-perguntas-e-metricas)
+- **Hipótese associada:** [`H-FUN-04`](#3-hipoteses-perguntas-e-metricas)
+- **Objetivo associado:** [`OBJ-FUN`](#1-objetivo-da-avaliacao)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ### `MET-FUN-05` — Aplicação incorreta de equivalências
 
@@ -126,6 +145,10 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Cálculo:** `TAE = (NEI / NRE) × 100`. `NEI` = aplicações incorretas; `NRE` = relações aplicáveis verificadas.
 - **Dados e coleta:** fonte oficial de equivalências, matriz/vigência, histórico e plano; testar casos diretos e casos encadeados ou entre matrizes apenas quando houver respaldo documental (`CT-05`).
 - **Meta e condições:** `TAE = 0%`. Sem fonte oficial versionada, a avaliação fica pendente de especificação; se `NRE = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1. A hipótese de expansão em uma única passagem orienta os testes, mas não substitui a regra oficial.
+- **Questões associadas:** [`Q-FUN-03`](#3-hipoteses-perguntas-e-metricas) e [`Q-FUN-05`](#3-hipoteses-perguntas-e-metricas)
+- **Hipótese associada:** [`H-FUN-05`](#3-hipoteses-perguntas-e-metricas)
+- **Objetivo associado:** [`OBJ-FUN`](#1-objetivo-da-avaliacao)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ### `MET-FUN-06` — Conformidade das opções do onboarding
 
@@ -133,6 +156,10 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Cálculo:** `COO = (NEC / NEV) × 100`. `NEC` = expectativas atendidas; `NEV` = expectativas previamente especificadas e testadas.
 - **Dados e coleta:** requisitos e textos da interface, código da versão avaliada e planos de cenários pareados. Manter o histórico fixo e alterar uma opção por vez (`CT-06`).
 - **Meta e condições:** `COO = 100%`. Não presumir que toda opção deva alterar as disciplinas selecionadas; comparar o efeito documentado. Não comparar diretamente créditos com o limite interno de 480 horas por semestre. Campo sem comportamento esperado é lacuna de especificação; se `NEV = 0`, manter a métrica pendente.
+- **Questão associada:** [`Q-FUN-06`](#3-hipoteses-perguntas-e-metricas)
+- **Hipótese associada:** [`H-FUN-06`](#3-hipoteses-perguntas-e-metricas)
+- **Objetivo associado:** [`OBJ-FUN`](#1-objetivo-da-avaliacao)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ### `MET-FUN-07` — Violações de restrições semestrais
 
@@ -140,6 +167,10 @@ Com dados válidos, classificar como Conforme quando a meta da ficha for atendid
 - **Cálculo:** `TVS = (NVS / NRS) × 100`. `NVS` = violações confirmadas; `NRS` = verificações válidas. Calcular por tipo de restrição quando as unidades ou fontes diferirem.
 - **Dados e coleta:** calendário e oferta oficiais, limite informado, histórico e plano; comparar cada alocação com a regra aplicável (`CT-07`). Se a consulta ao período letivo falhar, conferir o semestre estimado contra o calendário oficial.
 - **Meta e condições:** `TVS = 0%`. Confirmar a fonte e a forma de aferição da carga. Créditos e horas não são equivalentes sem conversão documentada; se `NRS = 0`, não calcular a taxa e justificar a situação conforme a seção 3.1.
+- **Questão associada:** [`Q-FUN-07`](#3-hipoteses-perguntas-e-metricas)
+- **Hipótese associada:** [`H-FUN-07`](#3-hipoteses-perguntas-e-metricas)
+- **Objetivo associado:** [`OBJ-FUN`](#1-objetivo-da-avaliacao)
+- **Matriz de rastreabilidade:** [Matriz Geral](../../../rastreabilidade.md)
 
 ## 5. Referências
 
@@ -159,3 +190,4 @@ Referências usadas nesta página, conforme [Referências — Fase 2](../../../r
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Remoção do objetivo duplicado e definição das referências para julgamento | 15/11 | [8d625c1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8d625c1a87436bf186efb0abffb6682e1916a3d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento da entrada autorizada e das condições de avaliação | 15/11 | [0e38da3](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0e38da3eac882c62bf7c6f9e1bda97a8b744ef2e) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de links bidirecionais de rastreabilidade nos objetivos, questões e fichas das métricas funcionais | 23/11 | [0b37cf6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0b37cf68e64f7e1d9021604848841415f141a2ae) |

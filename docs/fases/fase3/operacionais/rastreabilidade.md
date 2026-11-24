@@ -2,7 +2,7 @@
 
 A matriz mostra **como cada necessidade será avaliada**: característica da Fase 1 → questão e hipótese da Fase 2 → métrica e meta → entrada, procedimento e registro da Fase 3. São **nove questões, nove hipóteses e doze métricas**.
 
-Esta página registra o **planejamento da avaliação**. Os valores obtidos, as respostas e os julgamentos ficam na [rastreabilidade da Fase 4](../../fase4/rastreabilidade.md).
+Esta página registra o **planejamento da avaliação**. Para a navegação consolidada por todos os identificadores GQM (Fases 1 a 4), consulte a [Matriz Geral de Rastreabilidade](../../../rastreabilidade.md). Os valores obtidos, as respostas e os julgamentos ficam na [consolidação da Fase 4](../../fase4/rastreabilidade.md).
 
 ## 1. Preparação comum
 
@@ -100,3 +100,4 @@ Referências usadas nesta página, conforme [Referências — Fase 2](../../../r
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Organização da matriz de planejamento funcional e operacional da Fase 3 | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação da matriz ao cronograma de avaliação | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Ligação da página à Matriz Geral de Rastreabilidade unificada | 23/11 | [0b37cf6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0b37cf68e64f7e1d9021604848841415f141a2ae) |

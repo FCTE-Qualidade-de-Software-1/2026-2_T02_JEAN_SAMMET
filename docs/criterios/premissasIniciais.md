@@ -50,7 +50,7 @@ O PDF admite protótipo de alta fidelidade, implementação parcial/completa, te
 
 | **ID** | **Critério** | **Alvo Excelente** | **Situação** | **Verificação** |
 | :----- | :----------- | :----------------------- | :----------- | :-------------------- |
-| M-01 | Ação de melhoria | Executar pelo menos uma melhoria justificada pela avaliação e disponibilizar a entrega técnica. | Documentado | [Melhoria M-01](../fases/fase4/operacionais/acaoMelhoria.md) · [Requisito](documentos/trabalho-final-v1.pdf#page=3) |
+| M-01 | Ação de melhoria | Executar pelo menos uma melhoria justificada pela avaliação e disponibilizar a entrega técnica. | Documentado | [Melhoria M-01](../fases/fase4/operacionais/acaoMelhoria.md) · [Protótipo interativo](https://gotc2607.github.io/Prot-tipo-JEAN-SAMMET/) · [Requisito](documentos/trabalho-final-v1.pdf#page=3) |
 
 *Fonte: documento do trabalho final e conferência documental da equipe.*
 
@@ -75,3 +75,4 @@ Referências usadas nesta página, conforme [Referências — Fase 1](../referen
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Conferência e atualização dos critérios conforme o documento do trabalho final | 16/11 | [2c27c5f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/2c27c5f7e47663e993ffdc4c3abeb0411eac1c3e) |
 | [Ana Beatriz](https://github.com/AnnaBeatrizAraujo) | Padronização dos critérios, situações e links de verificação | 16/11 | [6d11323](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6d113238dd362d70e6f821ff3e4dad670239bf95) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão do link do protótipo interativo como evidência técnica da ação de melhoria M-01 | 23/11 | [0ac2041](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0ac2041a2ea30b37f9e4afc2ade46f5a1564c37b) |

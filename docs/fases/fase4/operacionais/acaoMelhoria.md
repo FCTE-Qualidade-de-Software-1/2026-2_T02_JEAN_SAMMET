@@ -8,6 +8,8 @@ A inspeção de Gustavo e Gabriel identificou dois problemas menores: **item 2**
 
 ## 2. Intervenção M-01
 
+O protótipo interativo comparativo (Antes vs. Depois) das melhorias propostas — contemplando a intervenção M-01 de usabilidade e as melhorias de adequação funcional — está publicado em [Protótipo Interativo — Jean Sammet](https://gotc2607.github.io/Prot-tipo-JEAN-SAMMET/) ([repositório do protótipo](https://github.com/Gotc2607/Prot-tipo-JEAN-SAMMET)).
+
 **Tabela 1 — Intervenção M-01.**
 
 | Problema | Alteração executada | Critério de aceitação |
@@ -71,3 +73,4 @@ Referências usadas nesta página, conforme [Referências — Fase 2](../../../r
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro das avaliações da equipe e atualização do julgamento de usabilidade | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Detalhamento dos critérios de verificação das melhorias propostas | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão do link do protótipo interativo publicado e do seu repositório na intervenção M-01 | 23/11 | [0ac2041](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0ac2041a2ea30b37f9e4afc2ade46f5a1564c37b) |

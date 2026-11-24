@@ -270,7 +270,7 @@ testes com participantes para uma inspeção heurística da equipe.
 \footnotesize
 \begin{tabular}{|L{2.0cm}|L{5.5cm}|L{5.5cm}|}
 \hline
-\textbf{Elemento} & \textbf{Objetivo funcional} & \textbf{Objetivo operacional} \\ \hline
+\textbf{Elemento} & \textbf{Objetivo funcional (OBJ-FUN)} & \textbf{Objetivo operacional (OBJ-OP)} \\ \hline
 Objeto & Funcionalidade ``Planejar formatura'' (Motor 2 e interface de planejamento) & Funcionalidade ``Planejar formatura'' (interface web, armazenamento no cliente e dependências) \\ \hline
 Propósito & Avaliar & Avaliar \\ \hline
 Foco de qualidade & Adequação Funcional & Usabilidade e Segurança \\ \hline
@@ -475,7 +475,9 @@ sem dados pessoais, estão no repositório. Os resultados seguem a estrutura do 
 em cada objetivo, cada questão foi respondida pelas suas métricas, comparadas às metas
 da Fase 2, e a hipótese associada foi julgada (Tabela~\ref{tab:resultados}). Uma
 questão respondida não significa que a meta foi atendida, e uma hipótese não
-confirmada indica apenas que o problema não apareceu nos casos testados.
+confirmada indica apenas que o problema não apareceu nos casos testados. Na
+documentação, uma matriz geral de rastreabilidade liga cada característica, objetivo,
+hipótese, questão e métrica ao procedimento, à evidência, ao resultado e à resposta.
 
 \begin{table}[!ht]
 \centering
@@ -559,7 +561,24 @@ críticas e uma mensagem que informa a faixa de 8 a 32 créditos quando o valor 
 ajustado. Na reavaliação, feita com o mesmo histórico e as mesmas tarefas, os dois
 itens passaram a ser atendidos, sem piora nos outros oito, e a usabilidade chegou ao
 nível Excelente. Assim, a H-OP-01 não se confirmou depois da melhoria, sem apagar o
-resultado da primeira inspeção.
+resultado da primeira inspeção. O protótipo interativo, que compara a tela antes e
+depois das melhorias propostas (Figura~\ref{fig:prototipo}), está publicado na
+web\footnote{\url{https://gotc2607.github.io/Prot-tipo-JEAN-SAMMET/}}. Além da
+M-01, ele mostra as melhorias propostas para a Adequação Funcional, que não foram
+reavaliadas.
+
+\begin{figure}[!ht]
+\centering
+{\footnotesize\sffamily\bfseries (a) Antes: tela atual}\\[2pt]
+\includegraphics[width=0.9\linewidth]{figuras/prototipo-antes.png}\\[4pt]
+{\footnotesize\sffamily\bfseries (b) Depois: com a melhoria M-01}\\[2pt]
+\includegraphics[width=0.9\linewidth]{figuras/prototipo-depois.png}
+\caption{Protótipo interativo após digitar 40 créditos: (a) na tela atual, o valor é
+corrigido para 32 sem aviso e o termo ``Críticas'' não tem explicação; (b) com a
+M-01, aparecem a mensagem da faixa de 8 a 32 créditos e a explicação do termo.
+Fonte: captura de tela do protótipo da equipe, novembro de 2026.}
+\label{fig:prototipo}
+\end{figure}
 
 Na Q-OP-02, sobre a segurança, o serviço recusou as dez requisições sem permissão
 válida, e as dependências verificadas tiveram só um alerta moderado e um baixo.
@@ -628,7 +647,8 @@ Os documentos, os dados e os procedimentos de cálculo deste trabalho estão
 disponíveis no repositório da
 equipe\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET}}.
 Os registros da avaliação não contêm dados pessoais, e o histórico usado na avaliação
-não é publicado.
+não é publicado. O código do protótipo da melhoria está em um repositório
+próprio\footnote{\url{https://github.com/Gotc2607/Prot-tipo-JEAN-SAMMET}}.
 
 \bibliographystyle{sbc}
 \bibliography{referencias}
@@ -648,7 +668,7 @@ não é publicado.
 \begin{tabular}{|L{2.2cm}|p{1.6cm}|L{7.8cm}|>{\centering\arraybackslash}p{0.95cm}|>{\centering\arraybackslash}p{1.2cm}|}
 \hline
 \textbf{Integrante} & \textbf{Matrícula} & \textbf{Atividades realizadas (horas)} & \textbf{Horas} & \textbf{Esforço (\%)} \\ \hline
-Ana Beatriz Souza Araujo & 241025891 & Entrega 1: criação e organização da seção de gestão do projeto e de suas métricas (2,5h); acompanhamento das \textit{Issues} e dos \textit{Milestones}, com atualização do progresso e dos históricos de versionamento (2h); recursos e custos e referências da gestão (1h); revisão de \textit{pull requests} e declaração de uso de IA (1h). & 6,5 & 15,12 \\ \hline
+Ana Beatriz Souza Araujo & 241025891 & Entrega 1: criação e organização da seção de gestão do projeto e de suas métricas (2,5h); recursos e custos e referências da gestão (1h). Entrega 2: acompanhamento das \textit{Issues} e dos \textit{Milestones}, com atualização do progresso e dos históricos de versionamento (2h); revisão de \textit{pull requests} e declaração de uso de IA (1h). & 6,5 & 15,12 \\ \hline
 Giovani De Oliveira Teodoro Coelho & 241032500 & Entrega 1: métricas operacionais e modularização da Fase 2 (1h); ajuste de escopo para as três características e padronização das referências (1h). Entrega 2: ajustes apontados pela professora e troca da usabilidade para o \textit{checklist} de Nielsen (1h); projeto e execução das métricas operacionais nas Fases 3 e 4 (2,5h); ação de melhoria M-01, com protótipo em SvelteKit, e respostas às questões operacionais (1,5h). & 7 & 16,28 \\ \hline
 Yasmim de Souza Santos & 241040860 & Entrega 1: \textit{template} do artigo e referências de base (0,5h); páginas de metodologia da GitPage (0,5h); primeira versão do artigo em LaTeX (0,5h). Entrega 2: reestruturação do artigo conforme o retorno da professora (2h); ajuste das hipóteses, das questões GQM e da tabela de níveis (0,5h); atualização do artigo com as Fases 3 e 4 e organização dos resultados pelo GQM (2,5h). & 6,5 & 15,11 \\ \hline
 Gabriel Mota Oliveira & 241011081 & Entrega 1: perguntas GQM, fichas das métricas funcionais e protocolo de cenários de teste (1,5h); divisão da documentação em páginas, referências das métricas funcionais e critérios da Fase 2 (1h). Entrega 2: correções após a primeira apresentação (0,5h); roteiro funcional e normalização do histórico de entrada (1,5h); execução dos casos CT-01 a CT-07, cálculo das métricas funcionais e respostas GQM (1,5h); testes e \textit{scripts} das métricas funcionais e inspeção de usabilidade (1,5h). & 7,5 & 17,44 \\ \hline

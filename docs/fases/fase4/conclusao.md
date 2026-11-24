@@ -99,3 +99,4 @@ Referências usadas nesta página, conforme [Referências — Fase 2](../../refe
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização visual e editorial da documentação | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Ligação da conclusão à rastreabilidade completa da Fase 4 | 16/11 | [d9d7c15](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/d9d7c1591b6995089cd520a3cca24091f2566c13) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão do link do protótipo interativo na seção Onde conferir | 23/11 | [0ac2041](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0ac2041a2ea30b37f9e4afc2ade46f5a1564c37b) |

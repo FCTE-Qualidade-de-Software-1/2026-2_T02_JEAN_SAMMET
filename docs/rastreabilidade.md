@@ -84,5 +84,6 @@ A Tabela 2 reúne os documentos estruturantes que dão suporte ao conjunto das 1
 
 | Nome do Membro | Contribuição | Data | Commit |
 | :--- | :--- | :--- | :--- |
-| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Criação da Matriz Geral de Rastreabilidade unificada para toda a estrutura GQM e SQuaRE | 23/11 | — |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Criação da Matriz Geral de Rastreabilidade unificada para toda a estrutura GQM e SQuaRE | 23/11 | [0b37cf6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0b37cf68e64f7e1d9021604848841415f141a2ae) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão do link do protótipo interativo nos artefatos transversais da Fase 4 | 23/11 | [0ac2041](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/0ac2041a2ea30b37f9e4afc2ade46f5a1564c37b) |
 

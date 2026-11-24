@@ -1,5 +1,7 @@
 # Roteiro do avaliador operacional
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 ## 1. Preparação
 
 Conferir [ambiente e massa](ambienteERecursos.md), registrar responsável e execução e copiar os modelos de `testes/modelos_coleta/`. A coleta começa somente nas frentes com pré-condições atendidas.
@@ -39,3 +41,4 @@ Referências usadas nesta página, conforme [Referências — Fase 2](../../../r
 | [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Elaboração do roteiro passo a passo do avaliador para Usabilidade e Segurança | 14/11 | [6594e5c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/6594e5c2349ee5fc4dc632f07b97bc8191357819) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Simplificação do roteiro e preparação das evidências operacionais | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de link de retorno para a Matriz Geral de Rastreabilidade | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

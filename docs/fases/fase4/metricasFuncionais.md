@@ -1,5 +1,7 @@
 # Avaliação funcional — Fase 4
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 **EC-01 · Entrada H0 · Sete métricas julgadas.** A avaliação identificou omissão de uma obrigatória, duas expectativas de onboarding não atendidas e divergências de oferta/calendário. Histórico, equivalências, relação de pré-requisito, par consolidado de co-requisitos e máximo de 480h atenderam às metas no recorte.
 
 ## Resultados consolidados
@@ -59,3 +61,4 @@
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento ao H0 e preservação das evidências anteriores com cobertura identificada | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Coleta assistida com H0, apuração e julgamento com cobertura identificada | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Inclusão da tabela de resultados consolidados com metas, julgamentos e cobertura | 15/11 | [f5e77d5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f5e77d5) |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de link de retorno para a Matriz Geral de Rastreabilidade | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

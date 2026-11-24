@@ -1,5 +1,7 @@
 # Métodos de avaliação operacional
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../../rastreabilidade.md)*
+
 A execução encerrada e seus julgamentos estão em [EC-01](../../fase4/conclusao.md). Os procedimentos abaixo definem as condições de cada método; os registros do piloto permanecem separados da consolidação.
 
 ## 1. Usabilidade — TCH e ISVH
@@ -70,3 +72,4 @@ Referências usadas nesta página, conforme [Referências — Fase 1](../../../r
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Alinhamento dos métodos aos critérios e à validade das coletas | 15/11 | [aa0c61f](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/aa0c61fac5e9d2db19adec76fd052a2bb6b04b90) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro da viabilidade de SCA/storage/API e adequação da bateria ao token observado | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de link de retorno para a Matriz Geral de Rastreabilidade | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

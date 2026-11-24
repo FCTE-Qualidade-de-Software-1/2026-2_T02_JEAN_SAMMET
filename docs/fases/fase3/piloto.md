@@ -1,5 +1,7 @@
 # Piloto e Prontidão
 
+*[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
+
 Esta página registra a preparação verificada, antes do encerramento de EC-01. O piloto confirma a viabilidade dos procedimentos; os cálculos e julgamentos consolidados estão na [Fase 4](../fase4/conclusao.md).
 
 ## 1. Entrada e fluxo verificados
@@ -82,3 +84,4 @@ Referências usadas nesta página, conforme [Referências — Fase 1](../../refe
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Padronização da entrada H0 | 15/11 | [f454d2c](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/f454d2c099e16a6dd593b92420b541a18262b086) |
 | [Gustavo Fornaciari](https://github.com/GUGOFO) | Registro do piloto com H0, responsáveis e condições restantes de prontidão | 15/11 | [7a74d9e](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/7a74d9e0809e91d60a36a88559b357bfe171f37e) |
 | [Yasmim de Souza Santos](https://github.com/eii-yahs) | Inclusão das referências utilizadas na página | 22/11 | Não commitado |
+| [Giovani De Oliveira Teodoro Coelho](https://github.com/Gotc2607) | Inclusão de link de retorno para a Matriz Geral de Rastreabilidade | 24/11 | [8f30292](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET/commit/8f302921912ed18ed6f6a18507c2bbab654f3366) |

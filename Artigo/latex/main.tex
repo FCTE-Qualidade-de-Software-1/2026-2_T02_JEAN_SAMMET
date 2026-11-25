@@ -38,7 +38,7 @@ graduation planning flow of No Fluxo UnB, a web tool that helps University of
 Brasília (UnB) students plan the courses they still need to take. Following the
 ISO/IEC 25040 evaluation process and the Goal-Question-Metric (GQM) method, the team
 defined the evaluation requirements, adapted the ISO/IEC 25010 quality model to
-Functional Suitability, Security and Usability, recorded points of the planning
+Functional Suitability, Security and Interaction Capability, recorded points of the planning
 engine to be tested, and specified two measurement goals, nine questions and twelve
 metrics with judgment criteria. The team then planned and executed the evaluation
 with an authorized academic transcript: the plan omitted one of the 15 pending
@@ -54,7 +54,7 @@ fluxo de planejamento de formatura do No Fluxo UnB, ferramenta web que ajuda
 estudantes da Universidade de Brasília (UnB) a planejar as disciplinas que ainda
 precisam cursar. Seguindo o processo da ISO/IEC 25040 e o método Goal-Question-Metric
 (GQM), a equipe definiu os requisitos da avaliação, adaptou o modelo de qualidade da
-ISO/IEC 25010 para Adequação Funcional, Segurança e Usabilidade, registrou pontos do
+ISO/IEC 25010 para Adequação Funcional, Segurança e Capacidade de Interação, registrou pontos do
 motor de planejamento a serem testados e especificou dois objetivos de medição, nove
 questões e doze métricas com critérios de julgamento. Depois, planejou e executou a
 avaliação com um histórico acadêmico autorizado: o plano omitiu uma das 15
@@ -78,7 +78,7 @@ fluxograma e pela tela ``Planejar formatura'', objeto central da avaliação, qu
 as disciplinas por semestre e uma previsão de formatura.
 
 O objetivo geral é avaliar a qualidade desse fluxo segundo a Adequação Funcional, a
-Segurança e a Usabilidade da ISO/IEC 25010 \cite{iso25010}. Os objetivos específicos
+Segurança e a Capacidade de Interação da ISO/IEC 25010 \cite{iso25010}. Os objetivos específicos
 são: (i) estabelecer os requisitos da avaliação; (ii) especificá-la com objetivos,
 questões, hipóteses, métricas e critérios de julgamento; (iii) projetá-la e
 executá-la; e (iv) executar ao menos uma ação de melhoria. Esta versão cobre os
@@ -107,7 +107,8 @@ e a ISO/IEC 25023 tratam da medição \cite{iso25030,iso25020,iso25023} e a ISO/
 25010:2011 \cite{iso25010}, três interessam aqui: a Adequação Funcional, que trata de
 as funções atenderem às necessidades declaradas e implícitas; a Segurança, que trata
 da proteção de informações e dados conforme o nível de autorização; e a Usabilidade,
-que trata do uso do produto com eficácia, eficiência e satisfação.
+chamada de Capacidade de Interação na edição de 2023 \cite{iso25010v2023} e neste
+artigo, que trata do uso do produto com eficácia, eficiência e satisfação.
 
 \cite{puspaningrum2017functional} mediram a adequação funcional de um sistema
 acadêmico com a ISO/IEC 25010 e o GQM, do ponto de vista dos docentes, e obtiveram
@@ -155,7 +156,7 @@ registros do repositório.
 \subsection{Fase 1: requisitos da avaliação}\label{sec:fase1}
 
 O propósito definido foi produzir evidências sobre a adequação funcional, a
-segurança observável e a usabilidade do fluxo, para identificar divergências
+segurança observável e a capacidade de interação do fluxo, para identificar divergências
 funcionais, problemas de acesso ou de exposição de dados e dificuldades de uso, sem
 certificar o software. Foram identificadas quatro partes interessadas: os estudantes
 da UnB, usuários finais; os mantenedores do No Fluxo UnB; a professora da disciplina,
@@ -215,7 +216,7 @@ estimado pela data do sistema.
 Na priorização por impacto e risco, cada característica recebeu notas de 1 a 5, e a
 prioridade foi o produto das notas. A Adequação Funcional ficou em primeiro lugar,
 porque um plano incorreto pode levar a decisões acadêmicas inadequadas, seguida da
-Segurança e da Usabilidade. O modelo adaptado restringe a ISO/IEC 25010:2011 a essas
+Segurança e da Capacidade de Interação. O modelo adaptado restringe a ISO/IEC 25010:2011 a essas
 três características e às subcaracterísticas observadas (Figura~\ref{fig:modelo}).
 
 \begin{figure}[!ht]
@@ -230,7 +231,7 @@ três características e às subcaracterísticas observadas (Figura~\ref{fig:mod
   child {node[font=\footnotesize\bfseries] {Adequação Funcional}
     child {node[text width=2.1cm] {Completude funcional\\\textit{disciplinas esperadas}}}
     child {node[text width=2.1cm] {Correção funcional\\\textit{regras curriculares}}}}
-  child {node[font=\footnotesize\bfseries] {Usabilidade}
+  child {node[font=\footnotesize\bfseries] {Capacidade de Interação}
     child {node[text width=2.1cm] {Apreensibilidade\\\textit{entender o plano}}}
     child {node[text width=2.1cm] {Operabilidade\\\textit{usar a tela}}}}
   child {node[font=\footnotesize\bfseries] {Segurança}
@@ -252,15 +253,15 @@ ambiente registrados.
 
 A Fase 2 resultou em dois objetivos de medição, derivados das características e das
 partes interessadas da Fase 1 (Tabela~\ref{tab:objetivos}): um de Adequação
-Funcional, sobre o Motor 2, e um de Usabilidade e Segurança, sobre a interface, o
+Funcional, sobre o Motor 2, e um de Capacidade de Interação e Segurança, sobre a interface, o
 armazenamento no navegador e as dependências. Eles se desdobram em nove questões e
 doze métricas (Figura~\ref{fig:gqm}). As sete questões funcionais verificam se o plano
 respeita as regras curriculares, contempla as obrigatórias pendentes, interpreta
 corretamente o histórico e as equivalências e segue as opções do \textit{onboarding}
-e as restrições semestrais; as duas operacionais verificam a usabilidade da tela e a
+e as restrições semestrais; as duas operacionais verificam a capacidade de interação da tela e a
 proteção dos dados e dos serviços. Durante a fase, as métricas operacionais,
-esboçadas também para desempenho e manutenibilidade, foram ajustadas para Usabilidade
-e Segurança e, após os ajustes apontados pela professora, a Usabilidade passou de
+esboçadas também para desempenho e manutenibilidade, foram ajustadas para Capacidade de
+Interação e Segurança e, após os ajustes apontados pela professora, a primeira passou de
 testes com participantes para uma inspeção heurística da equipe.
 
 \begin{table}[!ht]
@@ -270,10 +271,10 @@ testes com participantes para uma inspeção heurística da equipe.
 \footnotesize
 \begin{tabular}{|L{2.0cm}|L{5.5cm}|L{5.5cm}|}
 \hline
-\textbf{Elemento} & \textbf{Objetivo funcional} & \textbf{Objetivo operacional} \\ \hline
+\textbf{Elemento} & \textbf{Objetivo funcional (OBJ-FUN)} & \textbf{Objetivo operacional (OBJ-OP)} \\ \hline
 Objeto & Funcionalidade ``Planejar formatura'' (Motor 2 e interface de planejamento) & Funcionalidade ``Planejar formatura'' (interface web, armazenamento no cliente e dependências) \\ \hline
 Propósito & Avaliar & Avaliar \\ \hline
-Foco de qualidade & Adequação Funcional & Usabilidade e Segurança \\ \hline
+Foco de qualidade & Adequação Funcional & Capacidade de Interação e Segurança \\ \hline
 Ponto de vista & Estudantes de graduação da UnB e mantenedores do No Fluxo UnB & Equipe de desenvolvedores (mantenedores do No Fluxo UnB) \\ \hline
 Contexto & Ambiente web \textit{desktop}, dados curriculares de Engenharia de Software da FGA/UnB e histórico sintético & Ambiente web \textit{desktop} controlado, currículo de Engenharia de Software da FGA/UnB, históricos sintéticos e auditoria estática de código \\ \hline
 \end{tabular}
@@ -308,8 +309,8 @@ Contexto & Ambiente web \textit{desktop}, dados curriculares de Engenharia de So
 \node[m] (mf6) at (9.9,-2.75) {MET-FUN-06: opções do \textit{onboarding} (COO)};
 \node[m] (mf7) at (9.9,-3.3) {MET-FUN-07: violações semestrais (TVS)};
 
-\node[goal] (go) at (0,-5.3) {Objetivo operacional\\Usabilidade e Segurança};
-\node[q] (qo1) at (4.0,-4.475) {Q-OP-01: heurísticas de usabilidade};
+\node[goal] (go) at (0,-5.3) {Objetivo operacional\\Capacidade de Interação e Segurança};
+\node[q] (qo1) at (4.0,-4.475) {Q-OP-01: heurísticas de Nielsen};
 \node[q] (qo2) at (4.0,-5.85) {Q-OP-02: confidencialidade e acesso};
 \node[m] (mo1) at (9.9,-4.2) {MET-OP-01: conformidade heurística (TCH)};
 \node[m] (mo1b) at (9.9,-4.75) {MET-OP-01b: severidade das violações (ISVH)};
@@ -347,7 +348,7 @@ Q-FUN-04 & O histórico e os status são interpretados conforme as regras docume
 Q-FUN-05 & As equivalências respeitam a fonte curricular e sua vigência? & H-FUN-05: a expansão das equivalências pode ignorar relações encadeadas ou a vigência aplicável. \\ \hline
 Q-FUN-06 & O \textit{onboarding} produz o comportamento documentado ou prometido? & H-FUN-06: as opções de trabalho ou estágio e de objetivo podem não produzir o efeito especificado. \\ \hline
 Q-FUN-07 & O plano respeita oferta, semestre inicial e limites de carga verificáveis? & H-FUN-07: se a consulta do período letivo falhar, o semestre estimado pela data do sistema pode divergir do calendário oficial e afetar o plano. \\ \hline
-Q-OP-01 & A interface da tela de planejamento atende às heurísticas ergonômicas de usabilidade essenciais para operação e apreensão autônoma? & H-OP-01: a tela concentra violações heurísticas (densidade excessiva de nós, \textit{feedback} insuficiente de recálculo e terminologia ambígua), comprometendo a facilidade de uso e a apreensão das saídas. \\ \hline
+Q-OP-01 & A interface da tela de planejamento atende às heurísticas ergonômicas essenciais para operação e apreensão autônoma? & H-OP-01: a tela concentra violações heurísticas (densidade excessiva de nós, \textit{feedback} insuficiente de recálculo e terminologia ambígua), comprometendo a facilidade de uso e a apreensão das saídas. \\ \hline
 Q-OP-02 & O sistema resguarda a confidencialidade dos dados acadêmicos e restringe o acesso aos serviços contra vulnerabilidades conhecidas e chamadas não autenticadas? & H-OP-02: o processamento no navegador com retenção em \texttt{localStorage} e dependências desatualizadas pode expor dados sensíveis e vulnerabilidades conhecidas. \\ \hline
 \end{tabular}
 \end{table}
@@ -382,7 +383,7 @@ MET-OP-02c & Q-OP-02 & Taxa de Bloqueio em Rotas Não Autenticadas (TBR) & Auten
 \end{table}
 
 Os dados funcionais virão de sete casos de teste com históricos sintéticos e
-resultado esperado definido antes da execução. Na Usabilidade, dois ou mais
+resultado esperado definido antes da execução. Na Capacidade de Interação, dois ou mais
 avaliadores aplicam um \textit{checklist} de dez itens baseado nas heurísticas de
 Nielsen e na ISO 9241-11 \cite{nielsen1994heuristics,iso9241} em três tarefas da
 tela, com severidade de 1 a 4. Na Segurança, as dependências são auditadas com
@@ -451,7 +452,7 @@ SIGAA/UnB, consulta em 15/11/2026.}
 Para a Adequação Funcional, a equipe escreveu um roteiro para cada um dos sete casos
 de teste, um por questão funcional, com a entrada, a regra, os passos e o resultado
 esperado. Para a
-Usabilidade, definiu que dois avaliadores da equipe percorreriam, cada um por conta
+Capacidade de Interação, definiu que dois avaliadores da equipe percorreriam, cada um por conta
 própria, as tarefas de localizar a previsão de formatura, interpretar as matérias
 críticas e ajustar os créditos, e depois chegariam a um consenso. Para a Segurança,
 definiu que as dependências seriam verificadas nos arquivos carregados pelo
@@ -475,7 +476,9 @@ sem dados pessoais, estão no repositório. Os resultados seguem a estrutura do 
 em cada objetivo, cada questão foi respondida pelas suas métricas, comparadas às metas
 da Fase 2, e a hipótese associada foi julgada (Tabela~\ref{tab:resultados}). Uma
 questão respondida não significa que a meta foi atendida, e uma hipótese não
-confirmada indica apenas que o problema não apareceu nos casos testados.
+confirmada indica apenas que o problema não apareceu nos casos testados. Na
+documentação, uma matriz geral de rastreabilidade liga cada característica, objetivo,
+hipótese, questão e métrica ao procedimento, à evidência, ao resultado e à resposta.
 
 \begin{table}[!ht]
 \centering
@@ -544,9 +547,9 @@ da oferta usada como referência. Fonte: captura de tela da equipe, novembro de
 \end{minipage}
 \end{figure}
 
-\subsubsection{Objetivo operacional: Usabilidade e Segurança}
+\subsubsection{Objetivo operacional: Capacidade de Interação e Segurança}
 
-Na Q-OP-01, sobre a usabilidade, a primeira inspeção encontrou dois problemas
+Na Q-OP-01, sobre a capacidade de interação, a primeira inspeção encontrou dois problemas
 menores: a tela não explicava os termos ``críticas'' e ``estratégicas'', e, quando o
 estudante digitava um número de créditos inválido, o valor era corrigido sem informar
 a faixa permitida. Com oito dos dez itens do \textit{checklist} atendidos, a resposta
@@ -557,9 +560,26 @@ A ação de melhoria, chamada de M-01 e prototipada em SvelteKit, tratou esses d
 problemas: acrescentou uma explicação dos termos ao lado do indicador de matérias
 críticas e uma mensagem que informa a faixa de 8 a 32 créditos quando o valor é
 ajustado. Na reavaliação, feita com o mesmo histórico e as mesmas tarefas, os dois
-itens passaram a ser atendidos, sem piora nos outros oito, e a usabilidade chegou ao
+itens passaram a ser atendidos, sem piora nos outros oito, e a capacidade de interação chegou ao
 nível Excelente. Assim, a H-OP-01 não se confirmou depois da melhoria, sem apagar o
-resultado da primeira inspeção.
+resultado da primeira inspeção. O protótipo interativo, que compara a tela antes e
+depois das melhorias propostas (Figura~\ref{fig:prototipo}), está publicado na
+web\footnote{\url{https://gotc2607.github.io/Prot-tipo-JEAN-SAMMET/}}. Além da
+M-01, ele mostra as melhorias propostas para a Adequação Funcional, que não foram
+reavaliadas.
+
+\begin{figure}[!ht]
+\centering
+{\footnotesize\sffamily\bfseries (a) Antes: tela atual}\\[2pt]
+\includegraphics[width=0.9\linewidth]{figuras/prototipo-antes.png}\\[4pt]
+{\footnotesize\sffamily\bfseries (b) Depois: com a melhoria M-01}\\[2pt]
+\includegraphics[width=0.9\linewidth]{figuras/prototipo-depois.png}
+\caption{Protótipo interativo após digitar 40 créditos: (a) na tela atual, o valor é
+corrigido para 32 sem aviso e o termo ``Críticas'' não tem explicação; (b) com a
+M-01, aparecem o aviso da faixa de 8 a 32 créditos e a explicação do termo.
+Fonte: captura de tela do protótipo, novembro de 2026.}
+\label{fig:prototipo}
+\end{figure}
 
 Na Q-OP-02, sobre a segurança, o serviço recusou as dez requisições sem permissão
 válida, e as dependências verificadas tiveram só um alerta moderado e um baixo.
@@ -580,7 +600,7 @@ nove questões, julgou as hipóteses e executou uma ação de melhoria. Das nove
 cinco tiveram resposta positiva, três tiveram resposta negativa e a de segurança teve
 uma ressalva; das nove hipóteses, cinco se confirmaram, ao menos em parte, e quatro
 não se confirmaram nos casos testados. O fluxo não
-recebeu aprovação integral de qualidade: a Usabilidade chegou ao nível Excelente
+recebeu aprovação integral de qualidade: a Capacidade de Interação chegou ao nível Excelente
 depois da melhoria, a Adequação Funcional ficou abaixo das metas em quatro pontos e a
 Segurança ficou com uma ressalva no armazenamento de dados no navegador.
 
@@ -588,11 +608,11 @@ A equipe julgou cada característica separadamente e não calculou uma média en
 métricas, porque um bom resultado em uma não corrige um problema em outra: a
 explicação dos termos na tela não resolve a disciplina que ficou fora do plano, e o
 bloqueio das requisições não remove os dados pessoais guardados no navegador. A
-melhoria M-01 mudou apenas a usabilidade, sem alterar os resultados funcionais nem o
+M-01 mudou apenas a capacidade de interação, e não os resultados funcionais nem o
 armazenamento.
 
 Os resultados valem para o histórico usado e suas variações, e não para estudantes
-diferentes. A inspeção de usabilidade foi feita pela própria equipe, a verificação
+diferentes. A inspeção heurística foi feita pela própria equipe, a verificação
 das dependências cobriu só os arquivos carregados no navegador e não foi possível
 saber qual versão do código estava em produção. Por isso, os resultados não podem
 ser estendidos a outras matrizes, históricos ou dispositivos.
@@ -628,7 +648,7 @@ Os documentos, os dados e os procedimentos de cálculo deste trabalho estão
 disponíveis no repositório da
 equipe\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_JEAN_SAMMET}}.
 Os registros da avaliação não contêm dados pessoais, e o histórico usado na avaliação
-não é publicado.
+não é publicado. O protótipo tem repositório próprio\footnote{\url{https://github.com/Gotc2607/Prot-tipo-JEAN-SAMMET}}.
 
 \bibliographystyle{sbc}
 \bibliography{referencias}
@@ -648,11 +668,11 @@ não é publicado.
 \begin{tabular}{|L{2.2cm}|p{1.6cm}|L{7.8cm}|>{\centering\arraybackslash}p{0.95cm}|>{\centering\arraybackslash}p{1.2cm}|}
 \hline
 \textbf{Integrante} & \textbf{Matrícula} & \textbf{Atividades realizadas (horas)} & \textbf{Horas} & \textbf{Esforço (\%)} \\ \hline
-Ana Beatriz Souza Araujo & 241025891 & Entrega 1: criação e organização da seção de gestão do projeto e de suas métricas (2,5h); acompanhamento das \textit{Issues} e dos \textit{Milestones}, com atualização do progresso e dos históricos de versionamento (2h); recursos e custos e referências da gestão (1h); revisão de \textit{pull requests} e declaração de uso de IA (1h). & 6,5 & 15,12 \\ \hline
-Giovani De Oliveira Teodoro Coelho & 241032500 & Entrega 1: métricas operacionais e modularização da Fase 2 (1h); ajuste de escopo para as três características e padronização das referências (1h). Entrega 2: ajustes apontados pela professora e troca da usabilidade para o \textit{checklist} de Nielsen (1h); projeto e execução das métricas operacionais nas Fases 3 e 4 (2,5h); ação de melhoria M-01, com protótipo em SvelteKit, e respostas às questões operacionais (1,5h). & 7 & 16,28 \\ \hline
+Ana Beatriz Souza Araujo & 241025891 & Entrega 1: criação e organização da seção de gestão do projeto e de suas métricas (2,5h); recursos e custos e referências da gestão (1h). Entrega 2: acompanhamento das \textit{Issues} e dos \textit{Milestones}, com atualização do progresso e dos históricos de versionamento (2h); revisão de \textit{pull requests} e declaração de uso de IA (1h). & 6,5 & 15,12 \\ \hline
+Giovani De Oliveira Teodoro Coelho & 241032500 & Entrega 1: métricas operacionais e modularização da Fase 2 (1h); ajuste de escopo para as três características e padronização das referências (1h). Entrega 2: ajustes apontados pela professora e troca da capacidade de interação para o \textit{checklist} de Nielsen (1h); projeto e execução das métricas operacionais nas Fases 3 e 4 (2,5h); ação de melhoria M-01, com protótipo em SvelteKit, e respostas às questões operacionais (1,5h). & 7 & 16,28 \\ \hline
 Yasmim de Souza Santos & 241040860 & Entrega 1: \textit{template} do artigo e referências de base (0,5h); páginas de metodologia da GitPage (0,5h); primeira versão do artigo em LaTeX (0,5h). Entrega 2: reestruturação do artigo conforme o retorno da professora (2h); ajuste das hipóteses, das questões GQM e da tabela de níveis (0,5h); atualização do artigo com as Fases 3 e 4 e organização dos resultados pelo GQM (2,5h). & 6,5 & 15,11 \\ \hline
-Gabriel Mota Oliveira & 241011081 & Entrega 1: perguntas GQM, fichas das métricas funcionais e protocolo de cenários de teste (1,5h); divisão da documentação em páginas, referências das métricas funcionais e critérios da Fase 2 (1h). Entrega 2: correções após a primeira apresentação (0,5h); roteiro funcional e normalização do histórico de entrada (1,5h); execução dos casos CT-01 a CT-07, cálculo das métricas funcionais e respostas GQM (1,5h); testes e \textit{scripts} das métricas funcionais e inspeção de usabilidade (1,5h). & 7,5 & 17,44 \\ \hline
-Gustavo Gomes Fornaciari & 241032519 & Entrega 1: estrutura do repositório e configuração do MkDocs (0,5h); documentação da Fase 1, páginas de ODS e de critérios, tabela da Entrega 1, uso de IA e históricos de versionamento (1h). Entrega 2: revisão das Fases 1 e 2 e preparação da Fase 3, com o plano integrado e o piloto (7h); consolidação da Fase 4, com inspeção de usabilidade, cronograma, rastreabilidade e conclusão, e automação do acompanhamento do projeto (0,5h). & 9 & 20,93 \\ \hline
+Gabriel Mota Oliveira & 241011081 & Entrega 1: perguntas GQM, fichas das métricas funcionais e protocolo de cenários de teste (1,5h); divisão da documentação em páginas, referências das métricas funcionais e critérios da Fase 2 (1h). Entrega 2: correções após a primeira apresentação (0,5h); roteiro funcional e normalização do histórico de entrada (1,5h); execução dos casos CT-01 a CT-07, cálculo das métricas funcionais e respostas GQM (1,5h); testes e \textit{scripts} das métricas funcionais e inspeção heurística (1,5h). & 7,5 & 17,44 \\ \hline
+Gustavo Gomes Fornaciari & 241032519 & Entrega 1: estrutura do repositório e configuração do MkDocs (0,5h); documentação da Fase 1, páginas de ODS e de critérios, tabela da Entrega 1, uso de IA e históricos de versionamento (1h). Entrega 2: revisão das Fases 1 e 2 e preparação da Fase 3, com o plano integrado e o piloto (7h); consolidação da Fase 4, com inspeção heurística, cronograma, rastreabilidade e conclusão, e automação do acompanhamento do projeto (0,5h). & 9 & 20,93 \\ \hline
 Vitor Lages Nogueira Araújo & 242025054 & Entrega 1: criação dos \textit{Milestones} das duas entregas e das \textit{Issues} \#1 a \#12 (2,5h); configuração da gestão do projeto, com apoio ao cronograma (2h); atualização do README com os integrantes e as contribuições (1,5h). Entrega 2: criação das \textit{Issues} \#26 a \#29 (0,5h). & 6,5 & 15,12 \\ \hline
 \textbf{Total} & & & \textbf{43} & \textbf{100} \\ \hline
 \end{tabular}

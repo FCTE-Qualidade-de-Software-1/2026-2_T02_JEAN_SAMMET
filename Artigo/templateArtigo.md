@@ -66,7 +66,7 @@ Uma subseção por fase. A Fase 4 segue a estrutura do GQM: objetivo, questão, 
 
 ### 4.2 Fase 2: especificação da avaliação
 
-- Objetivos (tabela), gráfico GQM e o que as questões funcionais e operacionais verificam
+- Objetivos OBJ-FUN e OBJ-OP (tabela), gráfico GQM e o que as questões funcionais e operacionais verificam
 - Questões e hipóteses (tabela), com uma hipótese associada a cada questão
 - Métricas com a questão de cada uma (tabela)
 - Coleta prevista e critérios de julgamento (tabela de níveis)
@@ -77,15 +77,15 @@ Uma subseção por fase. A Fase 4 segue a estrutura do GQM: objetivo, questão, 
 
 - Rejeição do PDF sintético e adoção do histórico oficial autorizado (44 registros, 15 obrigatórias pendentes e oito equivalências), com figura
 - Cenários de uso sobre o mesmo histórico e regras de referência conferidas no SIGAA, com figura
-- Procedimentos por característica: um caso de teste por questão funcional, inspeção de usabilidade por dois avaliadores e verificações de segurança
+- Procedimentos por característica: um caso de teste por questão funcional, inspeção heurística por dois avaliadores e verificações de segurança
 - Rodada inicial, cronograma e matriz de rastreabilidade, que liga cada questão e sua hipótese à métrica, à meta e ao procedimento
 - Origem: [Plano Integrado](../docs/fases/fase3/planoAvaliacao.md), [Piloto e Prontidão](../docs/fases/fase3/piloto.md), [Roteiro funcional](../docs/fases/fase3/funcionais/roteiro.md), [Métodos operacionais](../docs/fases/fase3/operacionais/metodos.md) e [Matriz de Rastreabilidade](../docs/fases/fase3/operacionais/rastreabilidade.md)
 
 ### 4.4 Fase 4: execução e conclusão da avaliação
 
-- Tabela com as nove questões: métrica, resultado e meta, resposta e julgamento da hipótese
+- Tabela com as nove questões: métrica, resultado e meta, resposta e julgamento da hipótese, e menção à matriz geral de rastreabilidade da documentação
 - 4.4.1 Objetivo funcional: Q-FUN-01 a Q-FUN-07 e H-FUN-01 a H-FUN-07, primeiro as questões com resposta positiva e depois as com resposta negativa, com figuras dos achados
-- 4.4.2 Objetivo operacional: Q-OP-01 e H-OP-01 antes e depois da ação de melhoria M-01; Q-OP-02 e H-OP-02
+- 4.4.2 Objetivo operacional: Q-OP-01 e H-OP-01 antes e depois da ação de melhoria M-01, com o link e uma figura do protótipo interativo (antes e depois); Q-OP-02 e H-OP-02
 - Origem: [Rastreabilidade Completa](../docs/fases/fase4/rastreabilidade.md), [Análise funcional](../docs/fases/fase4/funcionais/analiseResultados.md), [Análise operacional](../docs/fases/fase4/operacionais/analiseResultados.md) e [Ação de Melhoria](../docs/fases/fase4/operacionais/acaoMelhoria.md)
 
 ## 5. Conclusão
@@ -104,7 +104,7 @@ Uma subseção por fase. A Fase 4 segue a estrutura do GQM: objetivo, questão, 
 
 ## Disponibilidade dos Dados
 
-- Link do repositório; registros da avaliação sem dados pessoais e histórico usado não publicado
+- Link do repositório; registros da avaliação sem dados pessoais e histórico usado não publicado; link do repositório do protótipo
 
 ## Referências
 

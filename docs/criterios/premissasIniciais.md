@@ -24,7 +24,7 @@
 
 ## 2. Produtos das entregas
 
-E1: **26/10/2026**, conforme o PDF. E2: **22/11**, conforme atualização do prazo informada pela equipe.
+E1: **26/10/2026**, conforme o PDF. E2: **25/11**, conforme atualização do prazo informada pela equipe.
 
 **Tabela 2 — Produtos de E1 e E2.**
 

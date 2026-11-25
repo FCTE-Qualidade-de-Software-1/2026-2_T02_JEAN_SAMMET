@@ -15,7 +15,7 @@ O plano prepara a coleta das sete métricas funcionais e cinco operacionais da [
 | [Plano operacional](metricasOperacionais.md) | Usabilidade, dependências, armazenamento e acesso |
 | [Ambiente e dados](operacionais/ambienteERecursos.md) | Conta de teste, histórico autorizado e cenários planejados |
 | [Piloto e Prontidão](piloto.md) | Verificação inicial de H0, controles, ambiente e instrumentos de avaliação |
-| [Cronograma de avaliação](cronograma.md) | Datas-alvo, atividades, responsáveis e dependências até 22/11 |
+| [Cronograma de avaliação](cronograma.md) | Datas-alvo, atividades, responsáveis e dependências até 25/11 |
 | [Matriz de rastreabilidade](operacionais/rastreabilidade.md) | Necessidades, questões, hipóteses, métricas, metas, procedimentos e registros previstos |
 
 *Fonte: elaboração da equipe, conforme os registros e referências desta página.*
@@ -36,7 +36,7 @@ Não usar ausência de dados como zero. Preservar também falhas e repetições,
 
 **Fase 3 concluída no escopo de preparação**, com viabilidade básica verificada no [piloto](piloto.md#2-condicoes-para-encerrar-o-preparo): H0 aceito, planejamento acessível, cargas 20/24/32 créditos operáveis, base restaurada, ambiente registrado e instrumentos de segurança exercitados. A identificação da versão do servidor permanece desconhecida; o cliente tem inventário de URLs e hashes dos scripts observados.
 
-O prazo é **22/11**. Gabriel executará os testes funcionais; Giovani, os de segurança; Gustavo fará a revisão/consolidação. Gustavo e Gabriel realizarão duas inspeções independentes de usabilidade. O acompanhamento do esforço realizado permanece no [PSM](../../gestaoProjeto/painel.md).
+O prazo é **25/11**. Gabriel executará os testes funcionais; Giovani, os de segurança; Gustavo fará a revisão/consolidação. Gustavo e Gabriel realizarão duas inspeções independentes de usabilidade. O acompanhamento do esforço realizado permanece no [PSM](../../gestaoProjeto/painel.md).
 
 A coleta completa, os percentuais e as respostas GQM ficam na Fase 4. Cada caso exige sua regra, entrada e evidência; dados ou credenciais indisponíveis significam cobertura limitada, sem fabricar casos ou resultados. A SCA fica restrita aos componentes efetivamente reconhecidos; storage exige três estados; TBR exige casos negativos válidos além do controle positivo.
 

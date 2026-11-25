@@ -42,7 +42,8 @@ def renderizar_metodologia() -> str:
         "Sem eventos, vale a data de abertura da Issue.",
         f"**Alerta de tarefa parada:** Issues abertas acima de {limite} dias sem atividade recebem o rótulo "
         "`sem-atividade`, removido quando voltam a ter movimento.",
-        "**Prazo:** fim do dia da data limite do Milestone, no horário de Brasília.",
+        f"**Prazo:** fim do dia, no horário de Brasília. Para {datas_finais}, prevalece o prazo "
+        "informado pela equipe; nos demais, vale a data limite do Milestone no GitHub.",
         descricao_burndown,
         "**Escopo e histórico:** a coleta considera as issues atualmente vinculadas a cada Milestone "
         "e sua última entrada registrada (na ausência do evento, usa a abertura, limitada à criação do marco). "

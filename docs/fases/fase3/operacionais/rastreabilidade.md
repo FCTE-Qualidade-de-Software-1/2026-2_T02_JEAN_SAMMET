@@ -59,7 +59,7 @@ A Tabela 3 relaciona as duas questões operacionais às cinco métricas de usabi
 
 Em usabilidade, o julgamento conjunto usa o **pior nível entre TCH e ISVH**. Em segurança, dependências, armazenamento e acesso são julgados separadamente; uma medida favorável não compensa outra fora da meta. Os limites indicados para TCH, ISVH e IRP são os da faixa Excelente; as demais faixas continuam nas fichas.
 
-O [cronograma de avaliação](../cronograma.md) distribui as atividades, responsáveis e dependências até 22/11.
+O [cronograma de avaliação](../cronograma.md) distribui as atividades, responsáveis e dependências até 25/11.
 
 ## 4. Cobertura do plano e passagem para a Fase 4
 

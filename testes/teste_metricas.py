@@ -17,6 +17,7 @@ from scripts.metricas.estado_issue import esta_aberta_em, concluida_em
 from scripts.metricas.formatacao import decimal, percentual, dias, data
 from scripts.metricas.linha_de_base import definir_linha_de_base
 from scripts.metricas.leitura_issues import converter_issue
+from scripts.metricas.leitura_marcos import converter_marco
 from scripts.metricas.modelos import Evento, Issue, Marco
 from scripts.metricas.renderizacao_issues import renderizar_issues
 from scripts.metricas.renderizacao_painel import ordenar_marcos, renderizar_painel
@@ -208,8 +209,21 @@ class TesteEstadoEIndicadores(unittest.TestCase):
 
 
 class TesteBurndownERegrasDeAvaliacao(unittest.TestCase):
-    def test_data_final_configurada_da_entrega_2_e_22_de_novembro(self):
-        self.assertEqual(DATAS_FINAIS_BURNDOWN, {2: date(2026, 11, 22)})
+    def test_data_final_configurada_da_entrega_2_e_25_de_novembro(self):
+        self.assertEqual(DATAS_FINAIS_BURNDOWN, {2: date(2026, 11, 25)})
+
+    def test_prazo_da_entrega_2_prevalece_sobre_milestone_desatualizado(self):
+        bruto = {
+            "number": 2, "title": "Entrega 2", "state": "open",
+            "html_url": "https://github.com/exemplo/repo/milestone/2",
+            "created_at": "2026-10-15T12:00:00Z", "closed_at": None,
+            "due_on": "2026-11-18T00:00:00Z",
+        }
+        convertido = converter_marco(bruto)
+        self.assertEqual(convertido.prazo, datetime(2026, 11, 26, 2, 59, 59, tzinfo=UTC))
+        self.assertEqual(dia_local(convertido.prazo), date(2026, 11, 25))
+        bruto["number"] = 1
+        self.assertEqual(dia_local(converter_marco(bruto).prazo), date(2026, 11, 18))
 
     def test_valor_ideal_comeca_no_total_e_termina_em_zero(self):
         self.assertEqual(valor_ideal(6, 0, 3), 6)

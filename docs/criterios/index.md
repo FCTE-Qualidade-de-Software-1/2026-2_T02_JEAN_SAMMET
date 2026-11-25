@@ -25,7 +25,7 @@ Em **16/11**, Gustavo confirmou que as publicações, as releases e o Moodle for
 
 ## 4. Referências de fechamento
 
-- [Cronograma de avaliação da Fase 3](../fases/fase3/cronograma.md), com prazo até **22/11**.
+- [Cronograma de avaliação da Fase 3](../fases/fase3/cronograma.md), com prazo até **25/11**.
 - [Contribuição dos integrantes](../equipe/equipe.md), com percentuais totalizando **100%**.
 - [Rastreabilidade da Fase 4](../fases/fase4/rastreabilidade.md).
 - [Conclusão e recomendações](../fases/fase4/conclusao.md).

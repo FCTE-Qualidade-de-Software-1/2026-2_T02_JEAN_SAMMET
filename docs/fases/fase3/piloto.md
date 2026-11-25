@@ -43,7 +43,7 @@ O fluxo **Visualizar fluxograma → Planejar formatura → Preferências** foi a
 
 **Fase 3 concluída no escopo de preparação:** procedimentos, recursos, responsáveis e viabilidade básica verificados. A conclusão não significa aprovação das métricas nem cobertura integral dos casos. Condições ausentes permanecem Sem cobertura/Inconclusivo na Fase 4; não preencher resultados automaticamente.
 
-O prazo é **22/11**. A sequência de atividades está no [cronograma de avaliação](cronograma.md); o esforço realizado permanece nos registros próprios do PSM, sem alteração por este piloto.
+O prazo é **25/11**. A sequência de atividades está no [cronograma de avaliação](cronograma.md); o esforço realizado permanece nos registros próprios do PSM, sem alteração por este piloto.
 
 ## 3. Evidências e limites
 

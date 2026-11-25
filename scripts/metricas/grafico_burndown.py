@@ -1,3 +1,4 @@
+from math import ceil
 from pathlib import Path
 
 import matplotlib
@@ -20,8 +21,14 @@ def separar(pontos, atributo: str):
 
 
 def configurar_eixos(eixo, pontos) -> None:
-    passo = max(1, len(pontos) // DIAS_MAXIMOS_NO_EIXO)
-    eixo.xaxis.set_major_locator(mdates.DayLocator(interval=passo))
+    passo = max(1, ceil((len(pontos) - 1) / (DIAS_MAXIMOS_NO_EIXO - 1)))
+    dias = [ponto.dia for ponto in pontos]
+    marcas = dias[::passo]
+    if marcas[-1] != dias[-1]:
+        marcas.append(dias[-1])
+    eixo.set_xticks(marcas)
+    if len(dias) > 1:
+        eixo.set_xlim(dias[0], dias[-1])
     eixo.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
     eixo.yaxis.set_major_locator(MaxNLocator(integer=True))
     eixo.set_ylim(bottom=0)

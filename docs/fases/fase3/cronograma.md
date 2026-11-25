@@ -2,7 +2,7 @@
 
 *[Voltar para a Matriz Geral de Rastreabilidade](../../rastreabilidade.md)*
 
-O cronograma distribui as atividades de preparação, execução, análise e encerramento até **22/11/2026**, prazo informado pela equipe. As datas são **metas do planejamento**, não apontamentos de horas. Uma atividade pode ser concluída antes da data-alvo; seus resultados ficam registrados na Fase 4.
+O cronograma distribui as atividades de preparação, execução, análise e encerramento até **25/11/2026**, prazo informado pela equipe. As datas são **metas do planejamento**, não apontamentos de horas. Uma atividade pode ser concluída antes da data-alvo; seus resultados ficam registrados na Fase 4.
 
 ## 1. Sequência das atividades
 
@@ -18,9 +18,9 @@ A Tabela 1 relaciona atividades, responsáveis, dependências e produtos de ence
 | AV-04 | 17–18/11 | Apurar métricas, responder GQM e julgar hipóteses | Gustavo, com revisão de Gabriel e Giovani | AV-03 | Resultados comparados às metas e questões respondidas |
 | AV-05 | 18–19/11 | Desenvolver a melhoria M-01 e comparar antes/depois | Gustavo e Gabriel, com revisão da equipe | AV-04 | Entrega técnica vinculada à intervenção e reavaliação registrada |
 | AV-06 | 20–21/11 | Consolidar documentação e artigo; conferir critérios e referências | Gustavo: GitPage; Yasmim: artigo; equipe: revisão | AV-04 e AV-05 | Documentos coerentes, versão revisada e PDF final conferido |
-| AV-07 | Até 22/11 | Conferir publicação, release e envio no Moodle | Equipe; conferência por Gustavo | AV-06 | Versão de entrega identificada e submissão conferida |
+| AV-07 | Até 25/11 | Conferir publicação, release e envio no Moodle | Equipe; conferência por Gustavo | AV-06 | Versão de entrega identificada e submissão conferida |
 
-*Fonte: planejamento da equipe para as Fases 3 e 4; datas-alvo até 22/11.*
+*Fonte: planejamento da equipe para as Fases 3 e 4; datas-alvo até 25/11.*
 
 ## 2. Acompanhamento
 

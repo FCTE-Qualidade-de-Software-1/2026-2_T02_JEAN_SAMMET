@@ -53,7 +53,7 @@ A conclusão da avaliação inclui revisar o resultado e elaborar o relatório, 
 
 A Entrega 1, em 26/10/2026, reúne as Fases 1 e 2 e inclui a GitPage atualizada até a Fase 2, a 1ª versão do artigo, a tabela de contribuição e a release E1. Depois dela há o ponto de controle, com as correções indicadas pela professora. A Entrega 2, na data do cronograma da disciplina, reúne as Fases 3 e 4 e inclui a GitPage até a Fase 4, a 2ª versão do artigo, a ação de melhoria, a tabela de contribuição e a release E2.
 
-No momento, as Fases 1 e 2 estão documentadas, a primeira em [Fase 1](../fases/fase1/propositoEStakeholders.md) e a segunda em [Métricas Funcionais](../fases/fase2/funcionais/visaoGeral.md) e [Métricas Operacionais](../fases/fase2/metricasOperacionais.md). As [Fases 3](../fases/fase3/planoAvaliacao.md) e [4](../fases/fase4/conclusao.md) estão documentadas para a Entrega 2, com prazo de 22/11 informado pela equipe. O progresso de cada entrega é acompanhado pelas medições de [Calendário e Progresso](../gestaoProjeto/calendario-progresso.md).
+No momento, as Fases 1 e 2 estão documentadas, a primeira em [Fase 1](../fases/fase1/propositoEStakeholders.md) e a segunda em [Métricas Funcionais](../fases/fase2/funcionais/visaoGeral.md) e [Métricas Operacionais](../fases/fase2/metricasOperacionais.md). As [Fases 3](../fases/fase3/planoAvaliacao.md) e [4](../fases/fase4/conclusao.md) estão documentadas para a Entrega 2, com prazo de 25/11 informado pela equipe. O progresso de cada entrega é acompanhado pelas medições de [Calendário e Progresso](../gestaoProjeto/calendario-progresso.md).
 
 ## 4. Referências
 

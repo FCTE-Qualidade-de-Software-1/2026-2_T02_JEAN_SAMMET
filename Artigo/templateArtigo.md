@@ -77,7 +77,7 @@ Uma subseção por fase. A Fase 4 segue a estrutura do GQM: objetivo, questão, 
 
 - Rejeição do PDF sintético e adoção do histórico oficial autorizado (44 registros, 15 obrigatórias pendentes e oito equivalências), com figura
 - Cenários de uso sobre o mesmo histórico e regras de referência conferidas no SIGAA, com figura
-- Procedimentos por característica: um caso de teste por questão funcional, inspeção de usabilidade por dois avaliadores e verificações de segurança
+- Procedimentos por característica: um caso de teste por questão funcional, inspeção heurística por dois avaliadores e verificações de segurança
 - Rodada inicial, cronograma e matriz de rastreabilidade, que liga cada questão e sua hipótese à métrica, à meta e ao procedimento
 - Origem: [Plano Integrado](../docs/fases/fase3/planoAvaliacao.md), [Piloto e Prontidão](../docs/fases/fase3/piloto.md), [Roteiro funcional](../docs/fases/fase3/funcionais/roteiro.md), [Métodos operacionais](../docs/fases/fase3/operacionais/metodos.md) e [Matriz de Rastreabilidade](../docs/fases/fase3/operacionais/rastreabilidade.md)
 

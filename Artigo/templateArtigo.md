@@ -104,7 +104,7 @@ Uma subseção por fase. A Fase 4 segue a estrutura do GQM: objetivo, questão, 
 
 ## Disponibilidade dos Dados
 
-- Link do repositório; registros da avaliação sem dados pessoais e histórico usado não publicado; link do repositório do protótipo
+- Link e versão (Release-Final) do repositório da equipe; registros da avaliação sem dados pessoais e histórico usado não publicado; link e *commit* do repositório do protótipo
 
 ## Referências
 
